@@ -12,21 +12,25 @@ import LandingAboutInCTF from "../src/components/landing/About";
 import LandingStatsBar from "../src/components/landing/StatsCounter";
 import LandingHowItWorks from "../src/components/landing/HowItWorks";
 import LandingContactsBar from "../src/components/landing/ContactsBar";
+import TopBar from "../src/components/shared/TopBar";
 
 export default () => {
 
     return <Base>
-        <LandingHeader />
-        <LandingQuickInfo />
-        <LandingAboutInCTF />
-        <LandingTestimonials />
-        <LandingHowItWorks />
-        <LandingReasonsToParticipate />
-        <CTAReg />
-        <LandingSponsorship />
-        <LandingStatsBar />
-        <LandingOrganizers />
-        <LandingContactsBar />
+        <div style={{ overflowX: 'hidden' }} id="landing-page">
+            <TopBar />
+            <LandingHeader />
+            <LandingQuickInfo />
+            <LandingAboutInCTF />
+            <LandingTestimonials />
+            <LandingHowItWorks />
+            <LandingReasonsToParticipate />
+            <CTAReg />
+            <LandingSponsorship />
+            <LandingStatsBar />
+            <LandingOrganizers />
+            <LandingContactsBar />
+        </div>
     </Base>
 
 };

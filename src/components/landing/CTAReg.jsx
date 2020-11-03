@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
+import Fade from "react-reveal/Fade";
 
 const RegCTASection = styled.section`
    padding: 3vh 5vw;
@@ -29,13 +30,17 @@ const CTAReg = () => {
 
     return <RegCTASection>
         <div className="row mx-0">
-            <div className="col-md-9 d-flex align-items-center p-2">
-                <img className="d-none d-md-block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />
-                <h3>InCTF Jr is the perfect opportunity for your entry to cyber security & hacking, even before your'e at college.</h3>
-            </div>
-            <div className="col-md-3 d-flex align-items-center justify-content-center p-2">
-                <a href="/register">Register Now</a>
-            </div>
+            <Fade left>
+                <div className="col-md-9 d-flex align-items-center p-2">
+                    <img className="d-none d-md-block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />
+                    <h3>InCTF Jr is the perfect opportunity for your entry to cyber security & hacking, even before your'e at college.</h3>
+                </div>
+            </Fade>
+            <Fade right>
+                <div className="col-md-3 d-flex align-items-center justify-content-center p-2">
+                    <a href="/register">Register Now</a>
+                </div>
+            </Fade>
         </div>
     </RegCTASection>;
 

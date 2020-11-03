@@ -1,5 +1,8 @@
 import React from 'react';
 import Head from "next/head";
+import config from 'react-reveal/globals';
+
+config({ ssrFadeout: true });
 
 import '../../styles/styles.css';
 import '../../styles/bootstrap.min.css';

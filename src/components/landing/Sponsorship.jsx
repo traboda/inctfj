@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
+import Fade from 'react-reveal/Fade';
 
 const SponsorshipArea = styled.section`
     align-items: center;
@@ -85,34 +86,38 @@ const LandingSponsorship = ({ }) => {
     ]
 
     return <SponsorshipArea className="row mx-0">
-        <div className="col-md-6 p-1 p-lg-5 p-md-3">
-            <div className="mb-2">Not a Student?</div>
-            <h2>
-                Today You Can Help Us to
-                Make CyberSec Warriors of Tomorrow
-            </h2>
-            <p>
-                InCTFj is India's first & premier cyber security & CTF hacking contest for school students, having
-                helped over 1000 student participants from 21 states of India for the last 4 years.
-                We are offering a limited number of exclusive sponsorship opportunities to companies & organizations.
-                <div>Help us & take part in shaping cyber security warriors of tomorrow!</div>
-            </p>
-            <div>
-                <a className="sponsorship-brochure-button" href="/sponsor">Sponsorship Brochure</a>
-                <a className="contact-us-button" href="mailto:sponsorships@inctf.in">Contact Us</a>
-            </div>
+        <Fade left>
+            <div className="col-md-6 p-1 p-lg-5 p-md-3">
+                <div className="mb-2">Not a Student?</div>
+                <h2>
+                    Today You Can Help Us to
+                    Make CyberSec Warriors of Tomorrow
+                </h2>
+                <p>
+                    InCTFj is India's first & premier cyber security & CTF hacking contest for school students, having
+                    helped over 1000 student participants from 21 states of India for the last 4 years.
+                    We are offering a limited number of exclusive sponsorship opportunities to companies & organizations.
+                    <div>Help us & take part in shaping cyber security warriors of tomorrow!</div>
+                </p>
+                <div>
+                    <a className="sponsorship-brochure-button" href="/sponsor">Sponsorship Brochure</a>
+                    <a className="contact-us-button" href="mailto:sponsorships@inctf.in">Contact Us</a>
+                </div>
 
-        </div>
-        <div className="col-md-6 px-1">
-            <LogoWall className="row mx-0">
-                <h4 className="col-12 p-0 mt-3 mb-1 font-weight-bolder text-left text-uppercase">2019 Sponsors</h4>
-                {pastSponsors.map((s) =>
-                    <div className="col-lg-3 col-md-4 col-4 p-1">
-                        <img src={s.image} />
-                    </div>
-                )}
-            </LogoWall>
-        </div>
+            </div>
+        </Fade>
+        <Fade right>
+            <div className="col-md-6 px-1">
+                <LogoWall className="row mx-0">
+                    <h4 className="col-12 p-0 mt-3 mb-1 font-weight-bolder text-left text-uppercase">2019 Sponsors</h4>
+                    {pastSponsors.map((s) =>
+                        <div className="col-lg-3 col-md-4 col-4 p-1">
+                            <Fade><img src={s.image} /></Fade>
+                        </div>
+                    )}
+                </LogoWall>
+            </div>
+        </Fade>
     </SponsorshipArea>
 
 };

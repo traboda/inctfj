@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from "@emotion/styled";
+import Zoom from 'react-reveal/Zoom';
+import Tada from 'react-reveal/Tada';
 
 const AboutInCTFSection = styled.section`
     img {
@@ -57,45 +59,49 @@ const LandingAboutInCTF = () => {
     ]
 
     return <AboutInCTFSection>
-        <div className="row mx-0">
-            <div className="col-md-6 p-md-4 p-2">
-                <img alt="InCTF Jr Venue" src={require('../../assets/images/covers/inctf_mountains.jpg')} />
-            </div>
-            <div className="col-md-6 py-md-4 py-3 px-0 d-flex align-items-center">
-                <div>
-                    <div className="px-3">
-                        <h2>What's <span>InCTF Jr</span>?</h2>
-                        <p>
-                            Amrita InCTF Junior is a National level Cybersecurity contest for school students in India.
-                            Realizing the vital role cybersecurity plays now and in the future for a safer world,
-                            many countries are now introducing cybersecurity education at the school level to develop
-                            interest and nurture talent in this area. Participation in the contest is fully free and
-                            no prior knowledge is required for taking part.
-                        </p>
-                    </div>
-                    <div className="features-list py-2">
-                        <div className="row mx-0">
-                            {features.map((f) =>
-                                <div className="col-md-4 p-0">
-                                    <div className="row mx-0">
-                                        <div className="col-4 text-center col-md-12 px-1">
-                                            <img src={f.image} />
-                                        </div>
-                                        <div className="col-8 text-md-center d-flex align-items-center justify-content-md-center text-left col-md-12 px-1">
-                                            <h6 className="w-75">{f.title}</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
+        <Zoom up>
+            <div className="row mx-0">
+                <div className="col-md-6 p-md-4 p-2">
+                    <img alt="InCTF Jr Venue" src={require('../../assets/images/covers/inctf_mountains.jpg')} />
+                </div>
+                <div className="col-md-6 py-md-4 py-3 px-0 d-flex align-items-center">
+                    <div>
+                        <div className="px-3">
+                            <h2>What's <span>InCTF Jr</span>?</h2>
+                            <p>
+                                Amrita InCTF Junior is a National level Cybersecurity contest for school students in India.
+                                Realizing the vital role cybersecurity plays now and in the future for a safer world,
+                                many countries are now introducing cybersecurity education at the school level to develop
+                                interest and nurture talent in this area. Participation in the contest is fully free and
+                                no prior knowledge is required for taking part.
+                            </p>
                         </div>
-                    </div>
-                    <div className="d-flex px-2 mt-3 justify-content-center justify-content-md-start align-items-center">
-                        <a style={{ background: '#4A148C' }} href="/about">Learn More</a>
-                        <a  style={{ background: '#004D40' }} href="/faq">View FAQ</a>
+                        <div className="features-list py-2">
+                            <div className="row mx-0">
+                                {features.map((f) =>
+                                    <div className="col-md-4 p-0">
+                                        <Tada delay={500}>
+                                            <div className="row mx-0">
+                                                <div className="col-4 text-center col-md-12 px-1">
+                                                    <img src={f.image} />
+                                                </div>
+                                                <div className="col-8 text-md-center d-flex align-items-center justify-content-md-center text-left col-md-12 px-1">
+                                                    <h6 className="w-75">{f.title}</h6>
+                                                </div>
+                                            </div>
+                                        </Tada>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                        <div className="d-flex px-2 mt-3 justify-content-center justify-content-md-start align-items-center">
+                            <a style={{ background: '#4A148C' }} href="/about">Learn More</a>
+                            <a  style={{ background: '#004D40' }} href="/faq">View FAQ</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </Zoom>
     </AboutInCTFSection>
 
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { keyframes } from "@emotion/core";
 import styled from "@emotion/styled";
+import Zoom from "react-reveal/Zoom";
 
 const VideoRotationAnimation = keyframes`
   0%{ transform: rotateZ(1deg); }
@@ -74,11 +75,13 @@ const LandingReasonsToParticipate = () => {
             More reasons to not miss out
         </h2>
         <div className="row mx-0">
-        {reasons.map((r) =>
-            <div className="col-6 col-md-4 col-lg-3 text-center p-2">
-                <video autoPlay loop muted src={r.video} />
-                <h3>{r.title}</h3>
-            </div>
+        {reasons.map((r, index) =>
+            <Zoom up={index%2} left={!index%2}>
+                <div className="col-6 col-md-4 col-lg-3 text-center p-2">
+                    <video autoPlay loop muted src={r.video} />
+                    <h3>{r.title}</h3>
+                </div>
+            </Zoom>
         )}
         </div>
     </ReasonsSection>

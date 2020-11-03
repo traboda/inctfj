@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from "@emotion/styled";
+import Fade from 'react-reveal/Fade';
+import Pulse from 'react-reveal/Pulse';
 
 const TestimonialSection = styled.section`
     padding: 1rem;
@@ -56,14 +58,16 @@ const LandingTestimonials = () => {
     ]
 
     return <TestimonialSection >
-        <h5>
-            <img src={require('../../assets/images/icons/play_button.png')} alt="View Video Testimonials"/>
-            Hear it from the hacker's -
-        </h5>
+        <Pulse>
+            <h5>
+                <img src={require('../../assets/images/icons/play_button.png')} alt="View Video Testimonials"/>
+                Hear it from the hacker's -
+            </h5>
+        </Pulse>
         <div className="row mx-0">
-            {participants.map((p) =>
+            {participants.map((p, index) =>
                 <div className="col-6 col-lg-2 p-1">
-                    <img src={p.image} />
+                    <Fade delay={index*200}><img src={p.image} /></Fade>
                 </div>
             )}
         </div>

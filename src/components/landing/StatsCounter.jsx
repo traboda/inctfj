@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from "@emotion/styled";
+import CountUp from 'react-countup';
+import Zoom from 'react-reveal/Zoom';
+
 
 const StatsContainer = styled.section`
     h2 {
@@ -7,33 +10,30 @@ const StatsContainer = styled.section`
       margin-bottom: 0;
       line-height: 1;
     }
-    h4 {
-      font-size: calc(1rem + 0.5vw);
-    }
-    .col-6 {
-      margin-bottom: 1rem;
-    }
+    h4 { font-size: calc(1rem + 0.5vw); }
+    .col-6 { margin-bottom: 1rem; }
 `;
 
 const LandingStatsBar = () => {
 
+    const stats = [
+        { value: 4, title: "Successful Editions" },
+        { value: 1000, suffix:"+", title: "Successful Editions" },
+        { value: 8000, suffix:"+", title: "Participants" },
+        { value: 100, suffix:"+", title: "Workshops Organized" },
+    ]
+
     return <StatsContainer className="row py-5 text-center mx-0">
-        <div className="col-6 col-md-3">
-            <h2 className="text-primary font-weight-bold">4</h2>
-            <h4>Successful Editions</h4>
-        </div>
-        <div className="col-6 col-md-3">
-            <h2 className="text-primary font-weight-bold">1000+</h2>
-            <h4>Schools Participated</h4>
-        </div>
-        <div className="col-6 col-md-3">
-            <h2 className="text-primary font-weight-bold">8000+</h2>
-            <h4>Participants</h4>
-        </div>
-        <div className="col-6 col-md-3">
-            <h2 className="text-primary font-weight-bold">100+</h2>
-            <h4>Workshops Organized</h4>
-        </div>
+        {stats.map((s) =>
+            <div className="col-6 col-md-3">
+                <Zoom mountOnEnter effect="fadeInUp">
+                    <h2 className="text-primary font-weight-bold">
+                        <CountUp delay={0.5} duration={4.5} end={s.value} /> {s.suffix}
+                    </h2>
+                    <h4>{s.title}</h4>
+                </Zoom>
+            </div>
+        )}
     </StatsContainer>
 
 };
