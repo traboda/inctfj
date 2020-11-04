@@ -7,7 +7,6 @@ const DiscussionPortals = styled.a`
     padding: 2.5vh 5vw;
     display: flex;
     align-items: center;
-    justify-content: center;
     text-align: center;
     color: white!important;
     text-decoration: none!important;
@@ -18,6 +17,7 @@ const DiscussionPortals = styled.a`
         text-align: left;
     }
     @media (min-width: 768px){
+      justify-content: center;
       div {
           display: block!important;
           text-align: center;

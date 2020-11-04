@@ -19,7 +19,7 @@ export default () => {
 
     return <Base>
         <div style={{ overflowX: 'hidden' }} id="landing-page">
-            <TopBar />
+            <TopBar darkenOnSidebar includeSpace={false} />
             <LandingHeader />
             <LandingQuickInfo />
             <LandingAboutInCTF />

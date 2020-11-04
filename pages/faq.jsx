@@ -28,7 +28,7 @@ export default () => {
     const [openQ, setOpen] = useState(0);
 
     return <Base meta={{ title: "Frequently Asked Questions (FAQ)" }}>
-        <TopBar includeSpace={false} />
+        <TopBar darkenOnSidebar includeSpace={false} />
         <FAQSection>
             <h1 className="mx-2 top-0 sticky-top">
                 <img src={require('../src/assets/images/icons/faq.png')} />

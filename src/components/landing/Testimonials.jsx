@@ -26,10 +26,10 @@ const TestimonialSection = styled.section`
       border-radius: 8px;
       box-shadow: 3px 5px 8px rgba(0,0,0,0.3);
       filter: saturate(1.1) brightness(1.12);
-      transition: 1s all ease!important;
+      transition: 0.5s all ease!important;
       &:hover {
         transform: translateY(-15px)!important;
-        transition: 1s all ease!important;
+        transition: 0.5s all ease!important;
       }
     }
 `;
@@ -67,7 +67,7 @@ const LandingTestimonials = () => {
         <div className="row mx-0">
             {participants.map((p, index) =>
                 <div className="col-6 col-lg-2 p-1">
-                    <Fade delay={index*200}><img src={p.image} /></Fade>
+                    <Fade delay={index*200}><div><img src={p.image} /></div></Fade>
                 </div>
             )}
         </div>

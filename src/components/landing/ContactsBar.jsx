@@ -56,7 +56,7 @@ const LandingContactsBar = () => {
                 <a target="_blank" href="https://www.instagram.com/juniorinctf/"><img src={require('../../assets/images/icons/instagram.png')} /></a>
                 <a target="_blank" href="https://twitter.com/InCTFj"><img src={require('../../assets/images/icons/facebook.png')} /></a>
                 <a target="_blank" href="https://www.facebook.com/InCTFj/"><img src={require('../../assets/images/icons/twitter.png')} /></a>
-                <a href="#"><img src={require('../../assets/images/icons/play_button.png')} /></a>
+                <a target="_blank" href="https://www.youtube.com/channel/UC2upioDqOCMYnGvgJw7iOMA"><img src={require('../../assets/images/icons/play_button.png')} /></a>
             </div>
         </div>
     </ContactsBarSection>

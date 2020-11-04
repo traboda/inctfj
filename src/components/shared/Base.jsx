@@ -4,8 +4,8 @@ import config from 'react-reveal/globals';
 
 config({ ssrFadeout: true });
 
-import '../../styles/styles.css';
 import '../../styles/bootstrap.min.css';
+import '../../styles/styles.css';
 
 const seoTags = {
     "siteName": "InCTF Jr 5.0 - December 20, 2020",

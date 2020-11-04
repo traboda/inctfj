@@ -65,7 +65,7 @@ const LandingHowItWorks = () => {
             </>,
             "links": [
                 {
-                    "title": "watch how it is played (in 3mins)", "url": "https://www.youtube.com/watch?v=9Je6USf7CG0"
+                    "title": "watch how it is played", "url": "https://www.youtube.com/watch?v=9Je6USf7CG0"
                 }
             ]
         },
