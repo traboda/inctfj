@@ -37,17 +37,16 @@ const LandingHowItWorks = () => {
             <div className="col-md-4 px-3">
                 <div className="row mx-0">
                     <div className="col-md-12 d-flex align-items-center justify-content-center col-3 p-1 p-md-0">
-                        <img src={require('../../assets/images/icons/learn.png')} />
+                        <img alt="learn" src={require('../../assets/images/icons/learn.png')} />
                     </div>
                     <div className="col-md-12 col-9 text-left text-md-center p-2 p-md-0">
                         <h3>Learn</h3>
                     </div>
                     <div className="col-12 text-left text-md-center">
                         <p>
-                            Students are introduced to cyber security space through
-                            sessions conducted by team bi0s, and through lightening talks
-                            given by expert speakers at the event. Resources to learn
-                            hacking and personal mentors are also assigned.
+                            Students can dive into cyber security using the world class resources that
+                            team bi0s has made available. Learn new concepts using the bi0s wiki and
+                            our YouTube channel and practice them at the challenge archive!
                         </p>
                     </div>
                 </div>
@@ -57,16 +56,16 @@ const LandingHowItWorks = () => {
             <div className="col-md-4 px-3">
                 <div className="row mx-0">
                     <div className="col-md-12 order-2 order-md-1 d-flex align-items-center justify-content-center col-3 p-1 p-md-0">
-                        <img src={require('../../assets/images/icons/hack.png')} />
+                        <img alt="hack" src={require('../../assets/images/icons/hack.png')} />
                     </div>
                     <div className="col-md-12 col-9 order-1 order-md-2 text-right text-md-center p-2 p-md-0">
                         <h3>Hack</h3>
                     </div>
                     <div className="col-12 order-3 text-right text-md-center">
                         <p>
-                            Students now participate in real Capture The Flag contest,
-                            a gamified approach to learning cyber-security and try to
-                            collect as many flags solving each cyber security challenge.
+                            Students now participate in the Capture The Flag contest, a gamified approach to learning
+                            cyber-security. Start by solving simple challenges that test your knowledge and work up
+                            to real world situations where you will need a true hacker's skills to succeed!
                         </p>
                     </div>
                 </div>
@@ -76,17 +75,16 @@ const LandingHowItWorks = () => {
             <div className="col-md-4 px-3">
                 <div className="row mx-0">
                     <div className="col-md-12 d-flex align-items-center justify-content-center col-3 p-1 p-md-0">
-                        <img src={require('../../assets/images/icons/win.png')} />
+                        <img alt="win" src={require('../../assets/images/icons/win.png')} />
                     </div>
                     <div className="col-md-12 col-9 text-left text-md-center p-2 p-md-0">
                         <h3>Win</h3>
                     </div>
                     <div className="col-12 text-left text-md-center">
                         <p>
-                            Students finishing at top of the CTF leaderboard are awarded
-                            from a total cash prize pool of Rs. 1 Lakhs, and they also
-                            invited to exclusive cyber-security training following the contest.
-                            All other participants also receive certificates, and goodies.
+                            Students finishing at top of the CTF leaderboard will be awarded with exciting goodies
+                            and prizes, and they will also get access to exclusive online cyber-security training
+                            following the contest. All other participants will also receive certificates.
                         </p>
                     </div>
                 </div>

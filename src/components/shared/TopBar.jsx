@@ -62,8 +62,8 @@ const SideBarMenu = styled.div`
   width: 100%;
   max-width: 320px;
   z-index: 9000;
-  background: #222640;
-  color: white;
+  background: white;
+  color: black;
   box-shadow: -10px 3px 8px rgba(0, 0, 0, 0.3);
   img {
     max-height: 32px;
@@ -82,17 +82,18 @@ const SideBarMenu = styled.div`
     padding: 0.75rem 1rem;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
     a {
         text-decoration: none!important;
-        font-size: 20px;
-        color: white;
+        font-size: 18px;
+        color: black;
         img {
           margin-right: 8px;
-          max-height: 42px;
+          max-height: 40px;
         }
     }
     &:hover {
-      background: #FFD600;
+      background: #FFFF8D;
       a{ color: #333!important; }
     }   
   }
@@ -111,7 +112,16 @@ const TopBar = ({ includeSpace = true }) => {
     const onClose = () => {
         setShowMenu(false);
         clearAllBodyScrollLocks();
-    }
+    };
+
+
+    const sidebarLinks = [
+        { "icon": require('../../assets/images/icons/home.png'), "title": "Home", "href": "/" },
+        { "icon": require('../../assets/images/icons/star_glowing.png'), "title": "About", "href": "#" },
+        { "icon": require('../../assets/images/icons/books.png'), "title": "Learn", "href": "#" },
+        { "icon": require('../../assets/images/icons/test.png'), "title": "Practice", "href": "#" },
+        { "icon": require('../../assets/images/icons/faq.png'), "title": "FAQ", "href": "/faq" },
+    ]
 
     return <div>
         <TopbarContainer>
@@ -141,21 +151,16 @@ const TopBar = ({ includeSpace = true }) => {
                             </button>
                         </div>
                         <div className="text-center">
-                            <img alt="InCTFj" style={{ maxHeight: '130px', maxWidth: '100%' }} className="p-3" src={require('../../assets/images/logos/inctf_light.png')} />
+                            <img alt="InCTFj" style={{ maxHeight: '130px', maxWidth: '100%' }} className="p-3" src={require('../../assets/images/logos/inctf.png')} />
                         </div>
                         <div className="mt-3">
-                            <li>
-                                <a href="/">
-                                    <img src={require('../../assets/images/icons/home.png')} />
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/faq">
-                                    <img src={require('../../assets/images/icons/faq.png')} />
-                                    FAQ
-                                </a>
-                            </li>
+                            { sidebarLinks.map((l) =>
+                                <li>
+                                    <a href={l.href}>
+                                        <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
+                                    </a>
+                                </li>
+                            )}
                         </div>
                     </SideBarMenu>
                 </Slide>
