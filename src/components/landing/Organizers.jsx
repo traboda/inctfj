@@ -52,7 +52,9 @@ const LandingOrganizers = () => {
             <div className="row mx-0">
                 <Fade left>
                     <div className="col-md-6 order-md-1 order-2 text-right amrita">
-                        <img alt="Amrita Vishwa Vidyapeetham" src={require('../../assets/images/logos/amritapuri_dark.png')} />
+                        <a href="https://amrita.edu">
+                            <img alt="Amrita Vishwa Vidyapeetham" src={require('../../assets/images/logos/amritapuri_dark.png')} />
+                        </a>
                         <h5>India's No.1 Ranked Private University</h5>
                         <div className="d-flex justify-content-end">
                             <p>
@@ -66,7 +68,9 @@ const LandingOrganizers = () => {
                 </Fade>
                 <Fade right>
                     <div className="col-md-6 order-md-2 order-1">
-                        <img src={require('../../assets/images/logos/bi0s_dark.png')} />
+                        <a href="https://bi0s.in">
+                            <img alt="Team bi0s" src={require('../../assets/images/logos/bi0s_dark.png')} />
+                        </a>
                         <h5>India's No.1 Ranked CTF Hacking Team</h5>
                         <div className="d-flex">
                             <p>

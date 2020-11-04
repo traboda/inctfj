@@ -95,8 +95,8 @@ const LandingAboutInCTF = () => {
                             </div>
                         </div>
                         <div className="d-flex px-2 mt-3 justify-content-center justify-content-md-start align-items-center">
-                            <a style={{ background: '#4A148C' }} href="/about">Learn More</a>
-                            <a  style={{ background: '#004D40' }} href="/faq">View FAQ</a>
+                            <a style={{ background: '#E65100' }} href="/about">Learn More</a>
+                            <a  style={{ background: '#4A148C' }} href="/faq">View FAQ</a>
                         </div>
                     </div>
                 </div>

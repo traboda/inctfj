@@ -13,6 +13,7 @@ import LandingStatsBar from "../src/components/landing/StatsCounter";
 import LandingHowItWorks from "../src/components/landing/HowItWorks";
 import LandingContactsBar from "../src/components/landing/ContactsBar";
 import TopBar from "../src/components/shared/TopBar";
+import LandingJoinDiscussion from "../src/components/landing/JoinDiscussions";
 
 export default () => {
 
@@ -24,6 +25,7 @@ export default () => {
             <LandingAboutInCTF />
             <LandingTestimonials />
             <LandingHowItWorks />
+            <LandingJoinDiscussion />
             <LandingReasonsToParticipate />
             <CTAReg />
             <LandingSponsorship />
