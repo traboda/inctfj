@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from "@emotion/styled";
 import '../../styles/cyberpunk.css';
+import Pulse from "react-reveal/Pulse";
+import SimplePost from "../../utils/SimplePost";
 
 const AuthCardWindow = styled.div`
      background-color: black;
@@ -48,7 +50,7 @@ const AuthCardWindow = styled.div`
         }
      }
      .terminal-output {
-        font-size: 24px;
+        font-size: 22px;
         line-height: 1;
         margin-bottom: 0.5rem;
         color: #00C853;
@@ -59,27 +61,38 @@ const AuthCardWindow = styled.div`
            font-size: 85%;
         }
      }
+     img {
+        max-width: 100%;
+     }
      form {
         p {
             font-size: 18px;
             margin-bottom: 2px;
         }
         button {
-         margin-top: 1.35rem;
-         padding: 0.2rem 1.5rem;
-         font-size: 26px;
-         color: #00C853;
-         background: none!important;
-         border: 2px solid #00C853;
-         &:hover {
-            border-color: #1B5E20;
-            background: #1B5E20!important;
-            color: white;
-         }
-         @media (max-width: 768px) {
-            width: 100%;
+             margin-top: 1.35rem;
+             padding: 0.2rem 1.5rem;
+             font-size: 26px;
+             color: #00C853;
+             background: none!important;
+             border: 2px solid #00C853;
+             &:hover {
+                border-color: #1B5E20;
+                background: #1B5E20!important;
+                color: white;
+             }
+             @media (max-width: 768px) {
+                width: 100%;
+             }
          }
      }
+     .lucky-button {
+          border: 2px solid #FFD600!important;
+          background: none!important;
+          color: #FFD600;
+          font-size: 20px;
+          width: 100%;
+          padding: 0.5rem 1rem;
      }
 `;
 
@@ -116,9 +129,21 @@ const AuthCard = ({ }) => {
     const [isPasswordSet, isPassworded] = useState(false);
 
     const [isRegistering, setRegistering] = useState(false)
+    const [isRegistered, setRegistered] = useState(false);
 
     const handleRegister = () => {
         setRegistering(true);
+        SimplePost({
+            data: {
+                email: email, fullname: name,
+                pword1: password, pword2: password
+            },
+            endpoint: "http://35.238.193.206:5431/api/register"
+        }).then((resp) => {
+            console.log(resp);
+            setRegistering(false);
+            setRegistered(true);
+        })
     }
 
     const handleProceed = (e) => {
@@ -132,11 +157,25 @@ const AuthCard = ({ }) => {
     };
 
     return <AuthCardWindow>
-        <div className="auth-card-container font-punk">
-            {isRegistering ?
-            <div className="d-flex justify-content-center">
+        <div className="auth-card-container font-punk">{
+            isRegistered ? <div className="d-flex justify-content-center">
                 <div>
-                    <h3>Registering</h3>
+                    <div className="text-center">
+                        <img style={{ maxWidth: '65%' }} src={require('../../assets/images/gif/thanks.webp')} />
+                    </div>
+                    <Pulse forever><h3>You are Registered</h3></Pulse>
+                    <div className="terminal-output"> > You will shortly receive an email confirming this at {email}.</div>
+                    <div className="terminal-output"> > You now have access to InCTFj dashboard, where you shall find everything else.</div>
+                    <div className="terminal-output text-warning"> > Please note you need to fill in other details in your dashboard, to confirm your registration.</div>
+                    <button className="lucky-button mt-2">I am feeling lucky!</button>
+                </div>
+            </div> :
+            isRegistering ? <div className="d-flex justify-content-center">
+                <div>
+                    <div className="text-center">
+                        <img src={require('../../assets/images/gif/loading.webp')} />
+                    </div>
+                    <Pulse forever><h3>Registering</h3></Pulse>
                     <p className="terminal-output">> Registration initialized.</p>
                     {isNameSet && <div className="terminal-output">> Hi {name}!</div>}
                     {isEmailSet && <div className="terminal-output">> We will send you updates at {email}</div>}
@@ -152,7 +191,7 @@ const AuthCard = ({ }) => {
                     </div>
                 </> : <>
                     <h3>Collecting Data</h3>
-                    <p className="terminal-output">> Registration Initialized.</p>
+                    <p className="terminal-output">> Registration initialized.</p>
                     {isNameSet && <div className="terminal-output">
                         > Hi {name}!
                         <button onClick={() => isNamed(false)}>[edit]</button>
