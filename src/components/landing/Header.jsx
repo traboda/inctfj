@@ -17,9 +17,12 @@ const HeaderContainer = styled.section`
     p {
       max-width: 700px;
       font-size: 15px;
+      line-height: 1.35;
       span {
         display: inline-block;
-        font-size: 105%;
+        font-size: 108%;
+        color: #4A148C;
+        margin-top: 5px;
       }
       margin-bottom: 1.5rem;
     }
@@ -58,9 +61,9 @@ const LandingHeader = () => {
                     Participate in the 5th edition of India's First & Premier Hacking & Cyber Security Contest for High School Students,
                     organized by team bi0s, India's No.1 ranked CTF Team.
                     <span>
-                    Join the brightest young hackers in the learn & hack CTF contest,
-                    win exciting prizes & kick-start your cyber-security career.
-                </span>
+                        Join the brightest young hackers in the learn & hack CTF contest,
+                        win exciting prizes & kick-start your cyber-security career.
+                    </span>
                 </p>
             </Fade>
             <div>

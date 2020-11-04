@@ -162,6 +162,11 @@ const TopBar = ({ includeSpace = true }) => {
                                 </li>
                             )}
                         </div>
+                        <div className="m-3">
+                            <a href="/register">
+                                Register Now
+                            </a>
+                        </div>
                     </SideBarMenu>
                 </Slide>
             </TopbarWrap>

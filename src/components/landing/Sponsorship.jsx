@@ -100,7 +100,7 @@ const LandingSponsorship = ({ }) => {
                     <div>Help us & take part in shaping cyber security warriors of tomorrow!</div>
                 </p>
                 <div>
-                    <a className="sponsorship-brochure-button" href="/sponsor">Sponsorship Brochure</a>
+                    {/*<a className="sponsorship-brochure-button" href="/sponsor">Sponsorship Brochure</a>*/}
                     <a className="contact-us-button" href="mailto:sponsorships@inctf.in">Contact Us</a>
                 </div>
 

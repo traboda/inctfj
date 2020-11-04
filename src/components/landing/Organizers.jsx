@@ -26,10 +26,15 @@ const OrganizersSection = styled.section`
         }
         .amrita {
            @media (min-width: 700px){
-            border-right: 2px solid #999;
+              border-right: 2px solid #999;
            }
         }
-        .col-md-6 {
+        .cyber {
+           @media (min-width: 700px){
+              border-left: 2px solid #999;
+           }
+        }
+        .col-md-4 {
             padding: 1rem;
             p {
               font-size: 12px;
@@ -51,7 +56,7 @@ const LandingOrganizers = () => {
             <h4>Organzied By</h4>
             <div className="row mx-0">
                 <Fade left>
-                    <div className="col-md-6 order-md-1 order-2 text-right amrita">
+                    <div className="col-md-4 order-md-1 order-2 text-right amrita">
                         <a href="https://amrita.edu">
                             <img alt="Amrita Vishwa Vidyapeetham" src={require('../../assets/images/logos/amritapuri_dark.png')} />
                         </a>
@@ -66,8 +71,8 @@ const LandingOrganizers = () => {
                         </div>
                     </div>
                 </Fade>
-                <Fade right>
-                    <div className="col-md-6 order-md-2 order-1">
+                <Fade up>
+                    <div className="col-md-4 bi0s text-center order-md-2 order-1">
                         <a href="https://bi0s.in">
                             <img alt="Team bi0s" src={require('../../assets/images/logos/bi0s_dark.png')} />
                         </a>
@@ -79,6 +84,24 @@ const LandingOrganizers = () => {
                                 team bi0s has been consistently been the No.1 CTF team in India. The team
                                 members also actively involve in security research projects, organizing training
                                 programs & CTFs, and developing security tools.
+                            </p>
+                        </div>
+                    </div>
+                </Fade>
+                <Fade right>
+                    <div className="col-md-4 cyber order-md-2 order-1">
+                        <a href="https://www.amrita.edu/center/cyber-security">
+                            <img alt="Team bi0s" src={require('../../assets/images/logos/amrita_cyber.png')} />
+                        </a>
+                        <h5>India's Leading CyberSec. Researchers</h5>
+                        <div className="d-flex">
+                            <p>
+                                Amrita Center for Cyber Security Systems and Networks promote partnership between
+                                industry, academia and the government to foster innovative research and education
+                                in Cyber Security, thus enhancing knowledge, deriving solutions, benefiting society
+                                and mitigating risks. The Center is supported by the Government of India throught
+                                many of its Departments and Mission REACH programs. The Center has been designated
+                                as a Center of Relevance and Excellence (CORE) for Cyber security in India.
                             </p>
                         </div>
                     </div>
