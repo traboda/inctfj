@@ -66,7 +66,7 @@ const LandingJoinDiscussion = () => {
 
         </div>
         <div className="col-md-6 px-0">
-            <TelegramDiscussion href="https://t.me/joinchat/HLlPTRTqNlOcPDTHtlHLzg" target="_blank">
+            <TelegramDiscussion href="https://t.me/inctfjunior" target="_blank">
                 <Fade right>
                     <div>
                         <img src={require('../../assets/images/logos/telegram.png')} alt="Join Discord Server" />

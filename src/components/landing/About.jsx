@@ -2,6 +2,8 @@ import React from 'react';
 import styled from "@emotion/styled";
 import Zoom from 'react-reveal/Zoom';
 import Tada from 'react-reveal/Tada';
+import ReactPlayer from 'react-player/youtube'
+
 
 const AboutInCTFSection = styled.section`
     img {
@@ -12,7 +14,7 @@ const AboutInCTFSection = styled.section`
     }
     h2 {
         font-weight: 900;
-        font-size: calc(1.2rem + 2vw);
+        font-size: calc(1.5rem + 1.8vw);
         span {
           color: #E65100;
         }
@@ -38,6 +40,16 @@ const AboutInCTFSection = styled.section`
          box-shadow: none!important;
          padding: 0;
       }
+      .feature-card {
+          transition: all 2s ease;
+          &:hover{
+            img {
+               max-height: 200px;
+               width: 100px;
+            }
+            transition: all 2s ease;
+          }
+      }
    }
 `;
 
@@ -62,12 +74,12 @@ const LandingAboutInCTF = () => {
         <Zoom up>
             <div className="row mx-0">
                 <div className="col-md-6 p-md-4 p-2">
-                    <img alt="InCTF Jr Venue" src={require('../../assets/images/covers/inctf_mountains.jpg')} />
+                    <ReactPlayer url="https://www.youtube.com/watch?v=BXpEEnAeYD0" width="100%" height="60vmin" />
                 </div>
-                <div className="col-md-6 py-md-4 py-3 px-0 d-flex align-items-center">
+                <div className="col-md-6 py-md-4 py-3 px-0 d-flex">
                     <div>
                         <div className="px-3">
-                            <h2>What's <span>InCTF Jr</span>?</h2>
+                            <h2 className="mt-2">What's <span>InCTF Jr</span>?</h2>
                             <p>
                                 Amrita InCTF Junior is a National level Cybersecurity contest for school students in India.
                                 Realizing the vital role cybersecurity plays now and in the future for a safer world,
@@ -76,12 +88,16 @@ const LandingAboutInCTF = () => {
                                 no prior knowledge is required for taking part.
                             </p>
                         </div>
-                        <div className="features-list py-2">
+                        <div className="d-flex px-2 mt-3 justify-content-center justify-content-md-start align-items-center">
+                            <a style={{ background: '#E65100' }} href="/about">Learn More</a>
+                            <a  style={{ background: '#4A148C' }} href="/faq">View FAQ</a>
+                        </div>
+                        <div className="features-list mt-2 py-2">
                             <div className="row mx-0">
                                 {features.map((f) =>
                                     <div className="col-md-4 p-0">
                                         <Tada delay={500}>
-                                            <div className="row mx-0">
+                                            <div className="feature-card row mx-0">
                                                 <div className="col-4 text-center col-md-12 px-1">
                                                     <img src={f.image} />
                                                 </div>
@@ -94,10 +110,7 @@ const LandingAboutInCTF = () => {
                                 )}
                             </div>
                         </div>
-                        <div className="d-flex px-2 mt-3 justify-content-center justify-content-md-start align-items-center">
-                            <a style={{ background: '#E65100' }} href="/about">Learn More</a>
-                            <a  style={{ background: '#4A148C' }} href="/faq">View FAQ</a>
-                        </div>
+
                     </div>
                 </div>
             </div>
