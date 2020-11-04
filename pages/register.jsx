@@ -27,11 +27,11 @@ export default () => {
         <RegistrationPageWrapper>
             <div className="content-container">
                 <div className="row mx-0">
-                    <div className="col-md-6 px-2">
-
-                    </div>
                     <div className="col-md-6 h-100 d-flex pt-md-5 align-items-center justify-content-center px-2">
                         <AuthCard />
+                    </div>
+                    <div className="col-md-6 px-2">
+
                     </div>
                 </div>
             </div>

@@ -67,7 +67,7 @@ const LandingTestimonials = () => {
         <div className="row mx-0">
             {participants.map((p, index) =>
                 <div className="col-6 col-lg-2 p-1">
-                    <Fade delay={index*200}><div><img src={p.image} /></div></Fade>
+                    <Fade delay={index*200}><div><img draggable="false" src={p.image} /></div></Fade>
                 </div>
             )}
         </div>

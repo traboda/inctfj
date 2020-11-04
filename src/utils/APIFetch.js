@@ -24,10 +24,8 @@ const GraphQLFetch = async ({
                 return response.text().then(text => text);
             return response;
         }
-        console.log('cnt', response);
         throw response;
     }).catch((e) => {
-        console.log('fk');
         if(e.status === 500)
         {
             return  {

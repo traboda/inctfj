@@ -30,7 +30,8 @@ const AuthCardWindow = styled.div`
         color: #00C853;
         text-align: center;
         margin-top: 1rem;
-        margin-bottom: 0;
+        margin-bottom: 0.8rem;
+        line-height: 0.75;
      }
      p {
         font-size: 25px;
