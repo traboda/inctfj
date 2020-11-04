@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from "@emotion/styled";
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
-import Slide from "react-reveal/LightSpeed";
+import Slide from "react-reveal/Slide";
 
 const TopbarWrap = styled.div`
   position: fixed;
@@ -77,9 +77,28 @@ const SideBarMenu = styled.div`
         outline: none!important;
       }
   }
+  li {
+    list-style-type: none;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    a {
+        text-decoration: none!important;
+        font-size: 20px;
+        color: white;
+        img {
+          margin-right: 8px;
+          max-height: 42px;
+        }
+    }
+    &:hover {
+      background: #FFD600;
+      a{ color: #333!important; }
+    }   
+  }
 `;
 
-const TopBar = () => {
+const TopBar = ({ includeSpace = true }) => {
 
     const [showMenu, setShowMenu] = useState(false);
 
@@ -98,7 +117,9 @@ const TopBar = () => {
         <TopbarContainer>
             <div className="row mx-0"  >
                 <div className="col-4 col-md-3 col-lg-2 text-md-center border-right px-2">
-                    <img className="logo" src={require('../../assets/images/logos/inctf.png')} alt="InCTFj" />
+                    <a href="/">
+                        <img className="logo" src={require('../../assets/images/logos/inctf.png')} alt="InCTFj" />
+                    </a>
                 </div>
                 <div className="col-6 col-md-8 col-lg-9 px-0 border-right">
 
@@ -122,11 +143,25 @@ const TopBar = () => {
                         <div className="text-center">
                             <img alt="InCTFj" style={{ maxHeight: '130px', maxWidth: '100%' }} className="p-3" src={require('../../assets/images/logos/inctf_light.png')} />
                         </div>
+                        <div className="mt-3">
+                            <li>
+                                <a href="/">
+                                    <img src={require('../../assets/images/icons/home.png')} />
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/faq">
+                                    <img src={require('../../assets/images/icons/faq.png')} />
+                                    FAQ
+                                </a>
+                            </li>
+                        </div>
                     </SideBarMenu>
                 </Slide>
             </TopbarWrap>
         }
-        <div style={{ height: '60px'}} />
+        {includeSpace && <div style={{ height: '60px'}} />}
     </div>
 
 };

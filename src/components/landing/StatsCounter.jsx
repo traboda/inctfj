@@ -28,7 +28,7 @@ const LandingStatsBar = () => {
             <div className="col-6 col-md-3">
                 <Zoom mountOnEnter effect="fadeInUp">
                     <h2 className="text-primary font-weight-bold">
-                        <CountUp delay={0.5} duration={4.5} end={s.value} /> {s.suffix}
+                        <CountUp delay={0.5} duration={4.5} end={s.value} />{s.suffix}
                     </h2>
                     <h4>{s.title}</h4>
                 </Zoom>

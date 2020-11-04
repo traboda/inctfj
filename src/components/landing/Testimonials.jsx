@@ -26,10 +26,10 @@ const TestimonialSection = styled.section`
       border-radius: 8px;
       box-shadow: 3px 5px 8px rgba(0,0,0,0.3);
       filter: saturate(1.1) brightness(1.12);
-      transition: 1s all ease;
+      transition: 1s all ease!important;
       &:hover {
-        transform: translateY(-12px);
-        transition: 1s all ease;
+        transform: translateY(-15px)!important;
+        transition: 1s all ease!important;
       }
     }
 `;
