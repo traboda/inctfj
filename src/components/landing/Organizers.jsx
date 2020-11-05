@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import Fade from 'react-reveal/Fade';
 
 const OrganizersSection = styled.section`
-    background: #E0F2F1;
+    background: #E3F2FD;
     user-select: none;
     .content-container {
       padding: 5vh 5vw;

@@ -30,12 +30,16 @@ const Base = ({ children, meta }) => {
             {   meta && meta.image && <meta property="og:image" content={meta.image} /> }
             <meta name="viewport" content="width=device-width, minimum-scale=1, shrink-to-fit=no, initial-scale=1, user-scalable=no" />
             <link rel="manifest" href="/manifest.json" />
-            <link href='/images/icons/icon-16x16.png' rel='icon' type='image/png' sizes='16x16' />
-            <link href='/images/icons/icon-32x32.png' rel='icon' type='image/png' sizes='32x32' />
+            <link href='/images/icons/icon-72x72.png' rel='icon' type='image/png' sizes='72x72' />
+            <link href='/images/icons/icon-96x96.png' rel='icon' type='image/png' sizes='96x96' />
             <link href='/images/icons/icon-128x128.png' rel='icon' type='image/png' sizes='128x128' />
+            <link href='/images/icons/icon-152x152.png' rel='icon' type='image/png' sizes='144x144' />
+            <link href='/images/icons/icon-152x152.png' rel='icon' type='image/png' sizes='152x152' />
+            <link href='/images/icons/icon-192x192.png' rel='icon' type='image/png' sizes='192x192' />
+            <link href='/images/icons/icon-384x384.png' rel='icon' type='image/png' sizes='384x384' />
             <link rel='apple-touch-icon' href='/images/icons/icon-512x512.png' />
-            {   GoogleAnalyticsID &&
-            <React.Fragment>
+            <link rel="shortcut icon" href="../images/icons/icon-72x72.png" />
+            {   GoogleAnalyticsID && <React.Fragment>
                 <script rel="preconnect" async src={`https://www.googletagmanager.com/gtag/js?id=${GoogleAnalyticsID}`} />
                 <script dangerouslySetInnerHTML={{
                     __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${GoogleAnalyticsID}');`
