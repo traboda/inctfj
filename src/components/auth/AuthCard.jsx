@@ -124,10 +124,12 @@ const AuthCard = ({ }) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [pwd2, setPwd2] = useState('');
 
     const [isNameSet, isNamed] = useState(false);
     const [isEmailSet, isEmailed] = useState(false);
     const [isPasswordSet, isPassworded] = useState(false);
+    const [isPasswordConfirmed, isConfirmed] = useState(false);
 
     const [isRegistering, setRegistering] = useState(false)
     const [isRegistered, setRegistered] = useState(false);
@@ -136,14 +138,16 @@ const AuthCard = ({ }) => {
         setRegistering(true);
         SimplePost({
             data: {
-                email: email, fullname: name,
+                email: email, fullname: name, uname: email.split("@")[0],
                 pword1: password, pword2: password
             },
             endpoint: "https://play.inctf.in/junior/api/register"
         }).then((resp) => {
             console.log(resp);
-            setRegistering(false);
-            setRegistered(true);
+            setTimeout(() => {
+                setRegistering(false);
+                setRegistered(true);
+            }, 3000);
         })
     }
 
@@ -151,8 +155,9 @@ const AuthCard = ({ }) => {
         e.preventDefault();
         if(!isNameSet) isNamed(true);
         else if(!isEmailSet) isEmailed(true);
-        else if(!isPasswordSet) {
-            isPassworded(true);
+        else if(!isPasswordSet) isPassworded(true);
+        else if(!isPasswordConfirmed) {
+            isConfirmed(true);
             handleRegister();
         }
     };
@@ -180,7 +185,7 @@ const AuthCard = ({ }) => {
                     <p className="terminal-output">> Registration initialized.</p>
                     {isNameSet && <div className="terminal-output">> Hi {name}!</div>}
                     {isEmailSet && <div className="terminal-output">> We will send you updates at {email}</div>}
-                    {isPasswordSet && <div className="terminal-output">> Not echoing password. Remember it yourself ;) </div>}
+                    {isPasswordSet && <div className="terminal-output">> Password set. Requesting confirmation... </div>}
                     <div className="terminal-output">> Submitting your registration. Please wait a moment...</div>
                 </div>
             </div>
@@ -201,6 +206,7 @@ const AuthCard = ({ }) => {
                         > We will send you updates at {email}
                         <button onClick={() => isEmailed(false)}>[edit]</button>
                     </div>}
+                    {isPasswordSet && <div className="terminal-output">> Password set. Requesting confirmation... </div>}
                 </>}
                 <div className="mt-3">
                     <form onSubmit={handleProceed}>
@@ -226,8 +232,18 @@ const AuthCard = ({ }) => {
                                 value={password} onChange={(e) => { setPassword(e.currentTarget.value)}}
                             />
                         </div>}
+                        {(isPasswordSet && !isPasswordConfirmed) && <div>
+                            {pwd2.length > 0 && <p>> Reenter your password: </p>}
+                            <input
+                                type="password" placeholder="Reenter your Password" autoFocus
+                                value={pwd2} onChange={(e) => { setPwd2(e.currentTarget.value)}}
+                            />
+                        </div>}
                         <div className="d-flex align-items-center justify-content-center justify-content-md-end">
-                            <button type="submit">Proceed</button>
+                            {(isPasswordSet && !isPasswordConfirmed && pwd2 !== password) ?
+                                <div className="mt-2 text-warning">Passwords are not matching.</div> :
+                                <button type="submit">Proceed</button>
+                            }
                         </div>
                     </form>
                     {/*<div className="my-2">*/}

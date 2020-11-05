@@ -77,7 +77,7 @@ const LandingTestimonials = () => {
         <Pulse>
             <h5>
                 <img src={require('../../assets/images/icons/play_button.png')} alt="View Video Testimonials"/>
-                Hear it from the hacker's
+                Hear it from the hackers
             </h5>
         </Pulse>
         <div className="row mx-0">

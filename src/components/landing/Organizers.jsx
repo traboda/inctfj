@@ -12,7 +12,7 @@ const OrganizersSection = styled.section`
           font-weight: 700;
           font-size: 26px;
           text-transform: uppercase;
-          color: #00BFA5;
+          color: #E65100;
           margin-bottom: 2rem;
         }
         h5 {
@@ -53,7 +53,7 @@ const LandingOrganizers = () => {
 
     return <OrganizersSection>
         <div className="content-container">
-            <h4>Organzied By</h4>
+            <h4>Organized By</h4>
             <div className="row mx-0">
                 <Fade left>
                     <div className="col-md-4 order-md-1 order-2 text-right amrita">

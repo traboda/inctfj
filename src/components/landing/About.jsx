@@ -66,7 +66,7 @@ const LandingAboutInCTF = () => {
         },
         {
             "image": require('../../assets/images/icons/prize_bubble.png'),
-            "title": "Certificates & Goodies for All",
+            "title": "Certificates for All",
         }
     ]
 

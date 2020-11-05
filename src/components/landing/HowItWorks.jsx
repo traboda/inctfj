@@ -76,7 +76,12 @@ const LandingHowItWorks = () => {
                 Students finishing at top of the CTF leaderboard will be awarded with exciting goodies
                 and prizes, and they will also get access to exclusive online cyber-security training
                 following the contest. All other participants will also receive certificates.
-            </>
+            </>,
+            "links": [
+                {
+                    "title": "get started", "url": "/register"
+                }
+            ]
         }
     ]
 
