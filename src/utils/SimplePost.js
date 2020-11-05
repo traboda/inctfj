@@ -9,10 +9,8 @@ const SimplePost = async ({
     const APIConfig = {
         method: 'POST',
         credentials: 'include',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: data,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
     };
 
     return await fetch(endpoint, APIConfig).then((response) => {

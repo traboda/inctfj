@@ -139,7 +139,7 @@ const AuthCard = ({ }) => {
                 email: email, fullname: name,
                 pword1: password, pword2: password
             },
-            endpoint: "http://35.238.193.206:5431/api/register"
+            endpoint: "https://play.inctf.in/junior/api/register"
         }).then((resp) => {
             console.log(resp);
             setRegistering(false);
