@@ -72,7 +72,7 @@ const LandingReasonsToParticipate = () => {
             <div className="d-flex d-md-inline justify-content-center">
                 <img className="mr-2" style={{ width: '45px'}} alt="Why Participate?" src={require('../../assets/images/icons/heart.png')} />
             </div>
-            More reasons to not miss out
+            Don't Miss Out!
         </h2>
         <div className="row mx-0">
         {reasons.map((r, index) =>

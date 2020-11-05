@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from "@emotion/styled";
 import Fade from 'react-reveal/Fade';
 import Pulse from 'react-reveal/Pulse';
+import Modal from 'react-modal';
+import ReactPlayer from 'react-player/youtube';
+import {disableBodyScroll, clearAllBodyScrollLocks} from "body-scroll-lock";
 
 const TestimonialSection = styled.section`
     padding: 1rem;
@@ -34,6 +37,11 @@ const TestimonialSection = styled.section`
     }
 `;
 
+const CloseButton = styled.button`
+   background: none!important; top: 1rem; right: 1rem; position: absolute; padding: 0!important;
+   img { width: 32px; }
+`;
+
 const LandingTestimonials = () => {
 
     const participants = [
@@ -55,22 +63,51 @@ const LandingTestimonials = () => {
         {
             image: require('../../assets/images/covers/testimonials/prajwal_kl.png'),
         },
-    ]
+    ];
+
+    const [showPlayer, setShowPlayer] = useState(false);
+
+    const openVideo = () => {
+        const targetElement = document.querySelector(".app");
+        disableBodyScroll(targetElement);
+        setShowPlayer(true);
+    };
 
     return <TestimonialSection >
         <Pulse>
             <h5>
                 <img src={require('../../assets/images/icons/play_button.png')} alt="View Video Testimonials"/>
-                Hear it from the hacker's -
+                Hear it from the hacker's
             </h5>
         </Pulse>
         <div className="row mx-0">
-            {participants.map((p, index) =>
-                <div className="col-6 col-lg-2 p-1">
-                    <Fade delay={index*200}><div><img draggable="false" src={p.image} /></div></Fade>
-                </div>
-            )}
+            {participants.map((p, index) => <div className="col-6 col-lg-2 p-1">
+                <Fade delay={index*200}><a onClick={openVideo}><img draggable="false" src={p.image} /></a></Fade>
+            </div>)}
         </div>
+        <Modal
+            isOpen={showPlayer}
+            onRequestClose={() => { clearAllBodyScrollLocks(); setShowPlayer(false); }}
+            style={{
+                overlay: {
+                    zIndex: 9000, background: 'rgba(0,0,0,0.8)',
+                    height: '100vh',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                },
+                content: {
+                    position: 'unset', top: 0, left: 0, right: 0, padding: '5px',
+                    border: 'none', background: 'none',  width: '100%',
+                }
+            }}
+        >
+            <CloseButton
+                className="px-4 border-0 rounded"
+                onClick={() => { clearAllBodyScrollLocks(); setShowPlayer(false)}}
+            >
+                <img src={require('../../assets/images/icons/close.png')} />
+            </CloseButton>
+            <ReactPlayer url="https://www.youtube.com/watch?v=U5zVYdYJBwQ" autoplay width="100%" height="80vmin" />
+        </Modal>
     </TestimonialSection>
 };
 

@@ -33,7 +33,9 @@ const CTAReg = () => {
             <Fade left>
                 <div className="col-md-9 d-flex align-items-center p-2">
                     <img className="d-none d-md-block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />
-                    <h3>InCTF Jr is the perfect opportunity for your entry to cyber security & hacking, even before you're at college.</h3>
+                    <h3>
+                        InCTF Jr is your perfect entry to CyberSec & Hacking before college.
+                    </h3>
                 </div>
             </Fade>
             <Fade right>

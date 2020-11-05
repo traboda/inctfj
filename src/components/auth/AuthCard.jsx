@@ -168,7 +168,7 @@ const AuthCard = ({ }) => {
                     <div className="terminal-output"> > You will shortly receive an email confirming this at {email}.</div>
                     <div className="terminal-output"> > You now have access to InCTFj dashboard, where you shall find everything else.</div>
                     <div className="terminal-output text-warning"> > Please note you need to fill in other details in your dashboard, to confirm your registration.</div>
-                    <button className="lucky-button mt-2">I am feeling lucky!</button>
+                    {/*<button className="lucky-button mt-2">I am feeling lucky!</button>*/}
                 </div>
             </div> :
             isRegistering ? <div className="d-flex justify-content-center">
@@ -230,19 +230,19 @@ const AuthCard = ({ }) => {
                             <button type="submit">Proceed</button>
                         </div>
                     </form>
-                    <div className="my-2">
-                        <div className="text-center">
-                            <p style={{ fontSize: `16px!important` }}>like shortcuts?</p>
-                        </div>
-                        <SocialAuthButton>
-                            <img src={require('../../assets/images/icons/google_gradient_logo.png')} />
-                            Login with Google
-                        </SocialAuthButton>
-                        <SocialAuthButton>
-                            <img src={require('../../assets/images/icons/github_gradient_logo.png')} />
-                            Login with GitHub
-                        </SocialAuthButton>
-                    </div>
+                    {/*<div className="my-2">*/}
+                    {/*    <div className="text-center">*/}
+                    {/*        <p style={{ fontSize: `16px!important` }}>like shortcuts?</p>*/}
+                    {/*    </div>*/}
+                    {/*    <SocialAuthButton>*/}
+                    {/*        <img src={require('../../assets/images/icons/google_gradient_logo.png')} />*/}
+                    {/*        Login with Google*/}
+                    {/*    </SocialAuthButton>*/}
+                    {/*    <SocialAuthButton>*/}
+                    {/*        <img src={require('../../assets/images/icons/github_gradient_logo.png')} />*/}
+                    {/*        Login with GitHub*/}
+                    {/*    </SocialAuthButton>*/}
+                    {/*</div>*/}
                 </div>
             </div>}
         </div>

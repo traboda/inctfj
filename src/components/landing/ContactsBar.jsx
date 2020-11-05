@@ -50,13 +50,13 @@ const LandingContactsBar = () => {
                 </div>
             </Fade>
             <div className="col-md-8 text-center text-md-left h-100 d-flex align-items-center pt-4 px-2">
-                 <div>&copy; Amrita InCTF 2017-2020. All Rights Reserved.</div>
+                 <div>&copy; Amrita InCTF 2016-2020. All Rights Reserved.</div>
             </div>
             <div className="social-bar col-md-4 d-flex align-items-center justify-content-md-end justify-content-center p-2">
                 <a target="_blank" href="https://www.instagram.com/juniorinctf/"><img src={require('../../assets/images/icons/instagram.png')} /></a>
                 <a target="_blank" href="https://twitter.com/InCTFj"><img src={require('../../assets/images/icons/facebook.png')} /></a>
                 <a target="_blank" href="https://www.facebook.com/InCTFj/"><img src={require('../../assets/images/icons/twitter.png')} /></a>
-                <a target="_blank" href="https://www.youtube.com/channel/UC2upioDqOCMYnGvgJw7iOMA"><img src={require('../../assets/images/icons/play_button.png')} /></a>
+                <a target="_blank" href="https://www.youtube.com/c/InCTFj"><img src={require('../../assets/images/icons/play_button.png')} /></a>
             </div>
         </div>
     </ContactsBarSection>

@@ -28,7 +28,7 @@ const SideBarMenu = styled.div`
   .sidebar-container {
      height: 100vh;
      width: 100%;
-     background-color: rgba(0,0,0,0.35);
+     background-color: rgba(0,0,0,0.65);
   }
   img {
     max-height: 28px;
@@ -143,18 +143,16 @@ const SideBar = ({ onClose, darkenOnSidebar }) => {
                         <p>Let's get started, right away!</p>
                         <div className="d-flex w-100 align-items-center justify-content-center">
                             <a className="plain-link mr-1" href="/register">Register</a>
-                            <a className="plain-link" style={{ background: '#4A148C' }} href="/login">Login</a>
+                            <a className="plain-link" style={{ background: '#4A148C' }} href="https://play.inctf.in/junior/login.html">Login</a>
                         </div>
                     </OnBoardingCard>
-                    <div className="mt-3">
-                        { sidebarLinks.map((l) =>
-                            <li>
-                                <a href={l.href}>
-                                    <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
-                                </a>
-                            </li>
-                        )}
-                    </div>
+                    <div className="mt-3">{sidebarLinks.map((l) =>
+                        <li>
+                            <a href={l.href}>
+                                <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
+                            </a>
+                        </li>
+                    )}</div>
                     <div className="my-3 mx-2">
                         <RegisterFooterButton className="plain-link" href="/register">
                             Register Now
@@ -165,7 +163,7 @@ const SideBar = ({ onClose, darkenOnSidebar }) => {
                         <a target="_blank" href="https://www.instagram.com/juniorinctf/"><img src={require('../../assets/images/icons/instagram.png')} /></a>
                         <a target="_blank" href="https://twitter.com/InCTFj"><img src={require('../../assets/images/icons/facebook.png')} /></a>
                         <a target="_blank" href="https://www.facebook.com/InCTFj/"><img src={require('../../assets/images/icons/twitter.png')} /></a>
-                        <a target="_blank" href="https://www.youtube.com/channel/UC2upioDqOCMYnGvgJw7iOMA"><img src={require('../../assets/images/icons/play_button.png')} /></a>
+                        <a target="_blank" href="https://www.youtube.com/c/InCTFj"><img src={require('../../assets/images/icons/play_button.png')} /></a>
                     </SocialMediaLinks>
                 </div>
             </SideBarMenu>

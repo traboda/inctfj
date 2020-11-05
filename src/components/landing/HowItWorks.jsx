@@ -82,10 +82,10 @@ const LandingHowItWorks = () => {
 
     return <HowItWorksSection className="motto-cards row py-5 mx-0">
         <div className="col-12 d-flex p-0 mb-4">
-            <h1 className="px-md-4 px-2 py-2 rounded-right mt-4 mb-2 d-inline-block bg-primary text-light text-uppercase shadow font-weight-bold text-center mb-0">
+            <h2 className="px-md-3 px-1 py-2 rounded-right mt-4 mb-2 d-inline-block bg-primary text-light text-uppercase shadow font-weight-bold text-center mb-0">
                 <img draggable="false" alt="How it Works?" src={require('../../assets/images/icons/thinking.png')} className="mr-2 my-0 p-0 shadow-none" />
-                How it Works?
-            </h1>
+                How does it Work?
+            </h2>
         </div>
         {steps.map((s) =>
             <Fade left={s.left} right={s.right} top={s.top} delay={s.delay}>

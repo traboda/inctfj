@@ -74,12 +74,12 @@ const LandingAboutInCTF = () => {
         <Zoom up>
             <div className="row mx-0">
                 <div className="col-md-6 p-md-4 p-2">
-                    <ReactPlayer url="https://www.youtube.com/watch?v=BXpEEnAeYD0" width="100%" height="60vmin" />
+                    <ReactPlayer url="https://www.youtube.com/watch?v=dMkAulsFm4k" width="100%" height="60vmin" />
                 </div>
                 <div className="col-md-6 py-md-4 py-3 px-0 d-flex">
                     <div>
                         <div className="px-3">
-                            <h2 className="mt-2">What's <span>InCTF Jr</span>?</h2>
+                            <h2 className="mt-2">What is <span>InCTF Jr</span>?</h2>
                             <p>
                                 Amrita InCTF Junior is a National level Cybersecurity contest for school students in India.
                                 Realizing the vital role cybersecurity plays now and in the future for a safer world,
