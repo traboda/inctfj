@@ -12,7 +12,7 @@ const FAQSection = styled.section`
   width: 100%;
   min-height: 50vh;
   overflow-y: hidden;
-  background: #eee;
+  background-color: #eee;
   h1 {  
       font-weight: 900;
       font-size: 36px;

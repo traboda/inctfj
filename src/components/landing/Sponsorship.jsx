@@ -95,7 +95,7 @@ const LandingSponsorship = ({ }) => {
                 </h2>
                 <p>
                     InCTFj is India's first & premier cyber security & CTF hacking contest for school students, having
-                    helped over 1000 student participants from 21 states of India for the last 4 years.
+                    helped over 10000 student participants from 21 states of India for the last 4 years.
                     We are offering a limited number of exclusive sponsorship opportunities to companies & organizations.
                     <div>Help us & take part in shaping cyber security warriors of tomorrow!</div>
                 </p>

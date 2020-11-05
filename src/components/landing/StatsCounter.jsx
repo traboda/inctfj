@@ -18,8 +18,8 @@ const LandingStatsBar = () => {
 
     const stats = [
         { value: 4, title: "Successful Editions" },
-        { value: 1000, suffix:"+", title: "Successful Editions" },
-        { value: 8000, suffix:"+", title: "Participants" },
+        { value: 1000, suffix:"+", title: "Schools Participated" },
+        { value: 10000, suffix:"+", title: "Participants" },
         { value: 100, suffix:"+", title: "Workshops Organized" },
     ]
 
@@ -30,7 +30,7 @@ const LandingStatsBar = () => {
                     <h2 className="text-primary font-weight-bold">
                         <CountUp delay={0.5} duration={4.5} end={s.value} />{s.suffix}
                     </h2>
-                    <h4>{s.title}</h4>
+                    <h4 className="mb-0">{s.title}</h4>
                 </Zoom>
             </div>
         )}
