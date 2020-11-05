@@ -94,8 +94,9 @@ export default
     {
         "question": "What do I get if I win?",
         "answer": <>
-            <li>The winners will be given a cash pool prize worth Rs. 90,000.</li>
-            <li>You will be invited for a 2-day cybersecurity training followed by the final contest.</li>
+            Students finishing at top of the CTF leaderboard will be awarded with exciting goodies and prizes,
+            and they will also get access to exclusive online cyber-security training following the contest.
+            All other participants will also receive certificates.
         </>
     },
     {
@@ -125,20 +126,6 @@ export default
         "answer": <>
             There are a few CTF’s that are intended to help high school students gain some experience such as
             picoCTF, EasyCTF, HSCTF etc. You may try out the challenges from these CTF’s if available.
-        </>
-    },
-    {
-        "question": "What is the role of a mentor?",
-        "answer": <>
-            <p>
-                The mentor is a guardian who we can contact for any information regarding the student.
-                We prefer that the student's school computer science teacher be the mentor, since communications will
-                be much easier with someone who has the technical knowledge and aptitude.
-            </p>
-            <p>
-                The mentor will not have to actively guide you on the learning process. The student is instead
-                expected to solve all challenges without any outside help.
-            </p>
         </>
     },
     {
