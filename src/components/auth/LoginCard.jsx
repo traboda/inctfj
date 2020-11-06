@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/core";
 import '../../styles/cyberpunk.css';
 import SimplePost from "../../utils/SimplePost";
 
+const typeEffect = keyframes`
+   from{width: 0;}
+   to{width: 24em;}
+`;
+
+const blinkTextCursor = keyframes`
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+`;
 
 const AuthCardWindow = styled.div`
      background-color: black;
@@ -45,6 +55,10 @@ const AuthCardWindow = styled.div`
         &:focus, &:hover {
           outline: none!important;
         }
+     }
+     .anim-typewriter {
+          animation: ${typeEffect} 4s steps(44) 1s 1 normal both,
+                     ${blinkTextCursor} 500ms steps(44) infinite normal;
      }
      form {
         p {

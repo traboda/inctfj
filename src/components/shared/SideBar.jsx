@@ -143,7 +143,7 @@ const SideBar = ({ onClose, darkenOnSidebar }) => {
                         <p>Let's get started, right away!</p>
                         <div className="d-flex w-100 align-items-center justify-content-center">
                             <a className="plain-link mr-1" href="/register">Register</a>
-                            <a className="plain-link" style={{ background: '#4A148C' }} href="https://play.inctf.in/junior/login.html">Login</a>
+                            <a className="plain-link" style={{ background: '#4A148C' }} href="https://play.inctf.in/junior/login">Login</a>
                         </div>
                     </OnBoardingCard>
                     <div className="mt-3">{sidebarLinks.map((l) =>

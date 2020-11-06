@@ -184,7 +184,7 @@ const RegisterCard = ({ }) => {
                     </div>
                     <Pulse forever><h3>Registering</h3></Pulse>
                     <p className="terminal-output">> Registration initialized.</p>
-                    {isNameSet && <div className="terminal-output">> Hi {name}!</div>}
+                    {isNameSet && <div className="terminal-output" style={{ animationDelay: '4s' }}>> Hi {name}!</div>}
                     {isEmailSet && <div className="terminal-output">> We will send you updates at {email}</div>}
                     {isPasswordSet && <div className="terminal-output">> Password set. Requesting confirmation... </div>}
                     <div className="terminal-output">> Submitting your registration. Please wait a moment...</div>

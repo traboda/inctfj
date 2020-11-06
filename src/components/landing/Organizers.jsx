@@ -77,7 +77,7 @@ const LandingOrganizers = () => {
                             <img alt="Team bi0s" src={require('../../assets/images/logos/bi0s_dark.png')} />
                         </a>
                         <h5>India's No.1 Ranked CTF Hacking Team</h5>
-                        <div className="d-flex">
+                        <div className="d-flex justify-content-center">
                             <p>
                                 Team bi0s is a community of college student focusing on cyber security,
                                 and actively participating in CTF contests worldwide. For several years now,
