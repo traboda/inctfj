@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 import TopBar from "../src/components/shared/TopBar";
 import Base from "../src/components/shared/Base";
-import RegisterCard from "../src/components/auth/RegisterCard";
+import LoginCard from "../src/components/auth/LoginCard";
 
 const bgImage = require('../src/assets/images/backgrounds/cyberpunk_2.jpg');
 
@@ -22,7 +22,7 @@ const RegistrationPageWrapper = styled.section`
 
 export default () => {
 
-    return <Base meta={{ title: "Register for InCTF Jr. 2020" }}>
+    return <Base meta={{ title: "Login to InCTF Dashbboard" }}>
         <TopBar includeSpace={false} />
         <RegistrationPageWrapper>
             <div className="content-container">
@@ -31,7 +31,7 @@ export default () => {
 
                     </div>
                     <div className="col-md-6 h-100 d-flex pt-md-5 align-items-center justify-content-center px-2">
-                        <RegisterCard />
+                        <LoginCard />
                     </div>
                 </div>
             </div>

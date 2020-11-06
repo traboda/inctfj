@@ -13,6 +13,7 @@ const AuthCardWindow = styled.div`
      color: white;
      border-radius: 5px;
      box-shadow: 2px 3px 8px rgba(0,0,0,0.85);
+     user-select: none;
      .auth-card-container {
         min-height: 75vh;
         min-width: 350px;
@@ -119,7 +120,7 @@ const SocialAuthButton = styled.button`
     }
 `;
 
-const AuthCard = ({ }) => {
+const RegisterCard = ({ }) => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -149,7 +150,7 @@ const AuthCard = ({ }) => {
                 setRegistered(true);
             }, 3000);
         })
-    }
+    };
 
     const handleProceed = (e) => {
         e.preventDefault();
@@ -206,7 +207,10 @@ const AuthCard = ({ }) => {
                         > We will send you updates at {email}
                         <button onClick={() => isEmailed(false)}>[edit]</button>
                     </div>}
-                    {isPasswordSet && <div className="terminal-output">> Password set. Requesting confirmation... </div>}
+                    {isPasswordSet && <div className="terminal-output">
+                        > Password set. Requesting confirmation...
+                        <button onClick={() => isPassworded(false)}>[enter again]</button>
+                    </div>}
                 </>}
                 <div className="mt-3">
                     <form onSubmit={handleProceed}>
@@ -225,14 +229,14 @@ const AuthCard = ({ }) => {
                                 value={email} onChange={(e) => { setEmail(e.currentTarget.value)}}
                             />
                         </div>}
-                        {(isEmailSet && !isPasswordSet) && <div>
+                        {((isNameSet && isEmailSet) && !isPasswordSet) && <div>
                             {password.length > 0 && <p>> Your password: </p>}
                             <input
                                 type="password" placeholder="Enter Password" autoFocus
                                 value={password} onChange={(e) => { setPassword(e.currentTarget.value)}}
                             />
                         </div>}
-                        {(isPasswordSet && !isPasswordConfirmed) && <div>
+                        {((isNameSet && isEmailSet && isPasswordSet) && !isPasswordConfirmed) && <div>
                             {pwd2.length > 0 && <p>> Reenter your password: </p>}
                             <input
                                 type="password" placeholder="Reenter your Password" autoFocus
@@ -240,8 +244,8 @@ const AuthCard = ({ }) => {
                             />
                         </div>}
                         <div className="d-flex align-items-center justify-content-center justify-content-md-end">
-                            {(isPasswordSet && !isPasswordConfirmed && pwd2 !== password) ?
-                                <div className="mt-2 text-warning">Passwords are not matching.</div> :
+                            {((isNameSet && isEmailSet && isPasswordSet) && !isPasswordConfirmed && pwd2 !== password) ?
+                                <div className="mt-2 text-center w-100 text-warning">Passwords are not matching.</div> :
                                 <button type="submit">Proceed</button>
                             }
                         </div>
@@ -265,4 +269,4 @@ const AuthCard = ({ }) => {
     </AuthCardWindow>
 };
 
-export default AuthCard;
+export default RegisterCard;
