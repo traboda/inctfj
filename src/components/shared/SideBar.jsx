@@ -48,10 +48,11 @@ const SideBarMenu = styled.div`
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgba(255,255,255,0.25);
-    a {
+    a, button {
         text-decoration: none!important;
         font-size: 18px;
         color: white;
+        padding: 0;
         img {
           margin-right: 8px;
           max-height: 40px;
@@ -117,14 +118,19 @@ const SocialMediaLinks = styled.div`
     }
 `;
 
-const SideBar = ({ onClose, darkenOnSidebar }) => {
+const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
 
-    const sidebarLinks = [
+    const sidebarLinks = !isLoggedIn ? [
         { "icon": require('../../assets/images/icons/home.png'), "title": "Home", "href": "/" },
         { "icon": require('../../assets/images/icons/star_glowing.png'), "title": "About", "href": "/about" },
         { "icon": require('../../assets/images/icons/books.png'), "title": "Learn", "href": "https://wiki.bi0s.in/" },
         { "icon": require('../../assets/images/icons/test.png'), "title": "Practice", "href": "https://archive.bi0s.in/" },
         { "icon": require('../../assets/images/icons/faq.png'), "title": "FAQ", "href": "/faq" },
+    ] : [
+        { "icon": require('../../assets/images/icons/dashboard.png'), "title": "Dashboard", "href": "/dashboard" },
+        { "icon": require('../../assets/images/icons/books.png'), "title": "Learn", "href": "https://wiki.bi0s.in/" },
+        { "icon": require('../../assets/images/icons/test.png'), "title": "Practice", "href": "https://archive.bi0s.in/" },
+        { "icon": require('../../assets/images/icons/logout.png'), "title": "Logout", "onClick": onLogOut }
     ];
 
     return <TopbarWrap darken={darkenOnSidebar} onClick={onClose}>
@@ -139,25 +145,27 @@ const SideBar = ({ onClose, darkenOnSidebar }) => {
                     <div className="text-center pt-2">
                         <img alt="InCTFj" style={{ maxHeight: '15vh', maxWidth: '100%' }} className="p-3" src={require('../../assets/images/logos/inctf_light.png')} />
                     </div>
-                    <OnBoardingCard>
+                    {!isLoggedIn && <OnBoardingCard>
                         <p>Let's get started, right away!</p>
                         <div className="d-flex w-100 align-items-center justify-content-center">
                             <a className="plain-link mr-1" href="/register">Register</a>
                             <a className="plain-link" style={{ background: '#4A148C' }} href="https://play.inctf.in/junior/login">Login</a>
                         </div>
-                    </OnBoardingCard>
+                    </OnBoardingCard>}
                     <div className="mt-3">{sidebarLinks.map((l) =>
                         <li>
-                            <a href={l.href}>
+                            {l.href ? <a href={l.href}>
                                 <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
-                            </a>
+                            </a> : <button onClick={l.onClick}>
+                                <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
+                            </button>}
                         </li>
                     )}</div>
                     <div className="my-3 mx-2">
-                        <RegisterFooterButton className="plain-link" href="/register">
+                        {!isLoggedIn && <RegisterFooterButton className="plain-link" href="/register">
                             Register Now
                             <img alt="Register now" src={require('../../assets/images/icons/chevron_right.png')}/>
-                        </RegisterFooterButton>
+                        </RegisterFooterButton>}
                     </div>
                     <SocialMediaLinks>
                         <a target="_blank" href="https://www.instagram.com/juniorinctf/"><img src={require('../../assets/images/icons/instagram.png')} /></a>

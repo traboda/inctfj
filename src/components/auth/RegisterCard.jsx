@@ -134,6 +134,7 @@ const RegisterCard = ({ }) => {
 
     const [isRegistering, setRegistering] = useState(false)
     const [isRegistered, setRegistered] = useState(false);
+    const [hasErrors, setError] = useState(false);
 
     const handleRegister = () => {
         setRegistering(true);
@@ -144,10 +145,16 @@ const RegisterCard = ({ }) => {
             },
             endpoint: "https://play.inctf.in/junior/api/register"
         }).then((resp) => {
-            console.log(resp);
+            // credits to the backend team
             setTimeout(() => {
-                setRegistering(false);
-                setRegistered(true);
+                if(Object.prototype.hasOwnProperty.call(resp, 'Error')){
+                    setRegistering(false);
+                    if(resp['Error'] === 'Successful'){
+                        setRegistered(true);
+                    } else {
+                        setError(resp['Error']);
+                    }
+                }
             }, 3000);
         })
     };
@@ -163,8 +170,31 @@ const RegisterCard = ({ }) => {
         }
     };
 
+    const tryAgain = () => {
+        setEmail('');
+        setPassword('');
+        setPwd2('');
+
+        isEmailed(false);
+        isPassworded(false);
+        isConfirmed(false);
+        setRegistered(false);
+        setRegistering(false);
+        setError(false);
+    };
+
     return <AuthCardWindow>
         <div className="auth-card-container font-punk">{
+            hasErrors ? <div className="d-flex justify-content-center">
+                <div>
+                    <div className="text-center">
+                        <img style={{ maxWidth: '65%' }} src={require('../../assets/images/gif/error.webp')} />
+                    </div>
+                    <Pulse forever><h3>Did not work</h3></Pulse>
+                    <div>{hasErrors}</div>
+                    <button onClick={tryAgain} className="lucky-button mt-2">Try Again</button>
+                </div>
+            </div> :
             isRegistered ? <div className="d-flex justify-content-center">
                 <div>
                     <div className="text-center">

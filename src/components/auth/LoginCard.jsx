@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import styled from "@emotion/styled";
 import { keyframes } from "@emotion/core";
+import { useRouter } from 'next/router'
+
 import '../../styles/cyberpunk.css';
 import SimplePost from "../../utils/SimplePost";
+import Pulse from "react-reveal/Pulse";
+import {setUserInfo} from "../../states";
 
 const typeEffect = keyframes`
    from{width: 0;}
@@ -56,6 +60,17 @@ const AuthCardWindow = styled.div`
           outline: none!important;
         }
      }
+     img {
+        max-width: 100%;
+     }
+     .try-again-button {
+          border: 2px solid #FFD600!important;
+          background: none!important;
+          color: #FFD600;
+          font-size: 20px;
+          width: 100%;
+          padding: 0.5rem 1rem;
+     }
      .anim-typewriter {
           animation: ${typeEffect} 4s steps(44) 1s 1 normal both,
                      ${blinkTextCursor} 500ms steps(44) infinite normal;
@@ -92,6 +107,9 @@ const LoginCard = () => {
     const [password, setPassword] = useState('');
 
     const [isLoggingIn, setLoggingIn] = useState(false)
+    const [hasError, setError] = useState(false);
+
+    const router = useRouter();
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -100,40 +118,78 @@ const LoginCard = () => {
             data: {user: username, pass: password},
             endpoint: "https://play.inctf.in/junior/api/login"
         }).then((resp) => {
+            // credits to the backend team
             setTimeout(() => {
-                setLoggingIn(false);
-                console.log(resp);
-            }, 3000);
+                if(Object.prototype.hasOwnProperty.call(resp, 'Error')){
+                    setLoggingIn(false);
+                    if(resp['Error'] === 'ok'){
+                       // do something
+                        setUserInfo({ loggedIn: true });
+                        router.push('/dashboard');
+                        console.log(resp);
+                    } else {
+                        setError(resp['Error']);
+                    }
+                }
+            }, 500);
         })
+    };
+
+    const tryAgain = () => {
+        setUsername('');
+        setPassword('');
+        setError(false);
     };
 
     return <AuthCardWindow>
         <div className="auth-card-container font-punk">
-            <div>
-                <h3>Login</h3>
-                <form onSubmit={handleLogin}>
-                    <div className="my-3">
-                        {username.length > 0 && <p>> Your email:</p>}
-                        <input
-                            autoFocus
-                            placeholder="Enter Your Email/Username" aria-label="email or username of the student"
-                            value={username} onChange={(e) => { setUsername(e.currentTarget.value)}}
-                        />
+            {hasError ?
+            <div className="d-flex align-items-center">
+                <div>
+                    <div className="text-center">
+                        <img style={{ width: '100%', maxWidth: '100%' }} src={require('../../assets/images/gif/not_allowed.webp')} />
                     </div>
-                    <div className="my-3">
-                        {password.length > 0 && <p>> Your password: </p>}
-                        <input
-                            type="password" placeholder="Enter Password" autoFocus
-                            value={password} onChange={(e) => { setPassword(e.currentTarget.value)}}
-                        />
-                    </div>
-                    <button type="submit">Login</button>
-                </form>
-                <div className="my-3 text-center">
-                    <div className="mb-3">Not Registered Yet?</div>
-                    <a className="plain-link border rounded-0 px-3 py-2 h4" href="/register">Register Now</a>
+                    <Pulse forever><h3>That did not work</h3></Pulse>
+                    <div className="text-center">{hasError}</div>
+                    <button onClick={tryAgain} className="try-again-button mt-2">Try Again</button>
                 </div>
-            </div>
+            </div> :
+            isLoggingIn ?
+            <div className="d-flex align-items-center">
+                <div>
+                    <div className="text-center">
+                        <img style={{ maxWidth: '100%' }} src={require('../../assets/images/gif/logging_in.webp')} />
+                    </div>
+                    <Pulse forever><h3>Logging You In</h3></Pulse>
+                </div>
+            </div> :
+            <div>
+                    <h3>Login</h3>
+                    <form onSubmit={handleLogin}>
+                        <div className="my-3">
+                            {username.length > 0 && <p>> Your email:</p>}
+                            <input
+                                autoFocus
+                                placeholder="Enter Your Email/Username" aria-label="email or username of the student"
+                                value={username} onChange={(e) => { setUsername(e.currentTarget.value)}}
+                            />
+                        </div>
+                        <div className="my-3">
+                            {password.length > 0 && <p>> Your password: </p>}
+                            <input
+                                type="password" placeholder="Enter Password" autoFocus
+                                value={password} onChange={(e) => { setPassword(e.currentTarget.value)}}
+                            />
+                        </div>
+                        <button type="submit">Login</button>
+                    </form>
+                    <div className="my-3 text-center">
+                        <div className="mb-3">Not Registered Yet?</div>
+                        <a className="plain-link border rounded-0 px-3 py-2 h4" href="/register">Register Now</a>
+                    </div>
+                </div>
+            }
+
         </div>
     </AuthCardWindow>;
 

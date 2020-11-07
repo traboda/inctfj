@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from "@emotion/styled";
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import SideBar from "./SideBar";
+import {setUserInfo, useAuthState} from "../../states";
 
 const TopbarContainer = styled.nav`
   position: fixed;
@@ -78,6 +79,15 @@ const TopBar = ({ includeSpace = true, darkenOnSidebar = false }) => {
 
     const [showMenu, setShowMenu] = useState(false);
 
+    const [hasLoaded, setLoaded] = useState(false);
+    const [isLoggedIn] = useAuthState('isLoggedIn');
+
+    useEffect(() => { setLoaded(true); }, []);
+
+    const onLogOut = () => {
+        setUserInfo(null);
+    };
+
     const onOpen = () => {
         const targetElement = document.querySelector(".app");
         disableBodyScroll(targetElement);
@@ -119,7 +129,7 @@ const TopBar = ({ includeSpace = true, darkenOnSidebar = false }) => {
                                     <div>InCTF Jr 5.0</div>
                                     <h5>Dec. 20, 2020</h5>
                                 </div>
-                                <a href="/register">Register</a>
+                                {(hasLoaded && !isLoggedIn) && <a href="/register">Register</a>}
                             </TopbarInfoCard>
                         </div>
                     </div>
@@ -132,7 +142,7 @@ const TopBar = ({ includeSpace = true, darkenOnSidebar = false }) => {
             </div>
 
         </TopbarContainer>
-        {showMenu && <SideBar darkenOnSidebar={darkenOnSidebar} onClose={onClose} />}
+        {showMenu && <SideBar darkenOnSidebar={darkenOnSidebar} onClose={onClose} isLoggedIn={hasLoaded && isLoggedIn} onLogOut={onLogOut} />}
         {includeSpace && <div style={{ height: '60px'}} />}
     </div>
 
