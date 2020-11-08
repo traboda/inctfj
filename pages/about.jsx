@@ -12,7 +12,7 @@ const AboutPageCoverSection = styled.div`
     background-size: cover;
     background-position: center;
     min-height: 60vmin;
-`
+`;
 
 export default () => {
 
