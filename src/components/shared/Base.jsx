@@ -16,7 +16,7 @@ const seoTags = {
 const Base = ({ children, meta }) => {
 
     const title = `${meta && meta.title ? `${meta.title} |` : '' } ${seoTags.siteName} - ${seoTags.tagLine}`;
-    const GoogleAnalyticsID = null;
+    const GoogleAnalyticsID = 'G-XYWG82LV7L';
 
     return <React.Fragment>
         <Head>

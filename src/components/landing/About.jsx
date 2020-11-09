@@ -74,7 +74,7 @@ const LandingAboutInCTF = () => {
         <Zoom up>
             <div className="row mx-0">
                 <div className="col-md-6 p-md-4 p-2">
-                    <ReactPlayer url="https://www.youtube.com/watch?v=dMkAulsFm4k" width="100%" height="60vmin" />
+                    <ReactPlayer url="https://www.youtube.com/watch?v=sxRZ06Rbh_c" width="100%" height="60vmin" />
                 </div>
                 <div className="col-md-6 py-md-4 py-3 px-0 d-flex">
                     <div>

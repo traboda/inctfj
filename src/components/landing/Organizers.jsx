@@ -81,7 +81,7 @@ const LandingOrganizers = () => {
                             <p>
                                 Team bi0s is a community of college student focusing on cyber security,
                                 and actively participating in CTF contests worldwide. For several years now,
-                                team bi0s has been consistently been the No.1 CTF team in India. The team
+                                team bi0s has consistently been the No.1 CTF team in India. The team
                                 members also actively involve in security research projects, organizing training
                                 programs & CTFs, and developing security tools.
                             </p>
@@ -101,7 +101,7 @@ const LandingOrganizers = () => {
                                 in Cyber Security, thus enhancing knowledge, deriving solutions, benefiting society
                                 and mitigating risks. The Center is supported by the Government of India throught
                                 many of its Departments and Mission REACH programs. The Center has been designated
-                                as a Center of Relevance and Excellence (CORE) for Cyber security in India.
+                                as a Center of Relevance and Excellence (CORE) for Cyber Security in India.
                             </p>
                         </div>
                     </div>
