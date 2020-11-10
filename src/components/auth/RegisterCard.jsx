@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import styled from "@emotion/styled";
 import '../../styles/cyberpunk.css';
 import Pulse from "react-reveal/Pulse";
+import {useRouter} from "next/router";
+
 import SimplePost from "../../utils/SimplePost";
+import {setUserInfo} from "../../states";
 
 const AuthCardWindow = styled.div`
      background-color: black;
@@ -122,6 +125,8 @@ const SocialAuthButton = styled.button`
 
 const RegisterCard = ({ }) => {
 
+    const router = useRouter();
+
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -143,7 +148,7 @@ const RegisterCard = ({ }) => {
                 email: email, fullname: name, uname: email.split("@")[0],
                 pword1: password, pword2: password
             },
-            endpoint: "https://play.inctf.in/junior/api/register"
+            endpoint: "/api/register"
         }).then((resp) => {
             // credits to the backend team
             setTimeout(() => {
@@ -156,6 +161,26 @@ const RegisterCard = ({ }) => {
                     }
                 }
             }, 3000);
+        })
+    };
+
+    const handleLogin = () => {
+        SimplePost({
+            data: {user: email, pass: password},
+            endpoint: "/api/login"
+        }).then((resp) => {
+            // credits to the backend team
+            setTimeout(() => {
+                if(Object.prototype.hasOwnProperty.call(resp, 'Error')){
+                    if(resp['Error'] === 'ok'){
+                        setUserInfo({ loggedIn: true });
+                        router.push('/dashboard');
+                        console.log(resp);
+                    } else {
+                        setError(resp['Error']);
+                    }
+                }
+            }, 500);
         })
     };
 
@@ -204,7 +229,7 @@ const RegisterCard = ({ }) => {
                     <div className="terminal-output"> > You will shortly receive an email confirming this at {email}.</div>
                     <div className="terminal-output"> > You now have access to InCTFj dashboard, where you shall find everything else.</div>
                     <div className="terminal-output text-warning"> > Please note you need to fill in other details in your dashboard, to confirm your registration.</div>
-                    {/*<button className="lucky-button mt-2">I am feeling lucky!</button>*/}
+                    <button onClick={handleLogin} className="lucky-button mt-2">Open Dashboard</button>
                 </div>
             </div> :
             isRegistering ? <div className="d-flex justify-content-center">

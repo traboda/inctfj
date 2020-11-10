@@ -116,14 +116,13 @@ const LoginCard = () => {
         setLoggingIn(true);
         SimplePost({
             data: {user: username, pass: password},
-            endpoint: "https://play.inctf.in/junior/api/login"
+            endpoint: "/api/login"
         }).then((resp) => {
             // credits to the backend team
             setTimeout(() => {
                 if(Object.prototype.hasOwnProperty.call(resp, 'Error')){
                     setLoggingIn(false);
                     if(resp['Error'] === 'ok'){
-                       // do something
                         setUserInfo({ loggedIn: true });
                         router.push('/dashboard');
                         console.log(resp);
@@ -163,7 +162,8 @@ const LoginCard = () => {
                     <Pulse forever><h3>Logging You In</h3></Pulse>
                 </div>
             </div> :
-            <div>
+            <div className="d-flex align-items-center">
+                <div>
                     <h3>Login</h3>
                     <form onSubmit={handleLogin}>
                         <div className="my-3">
@@ -188,8 +188,7 @@ const LoginCard = () => {
                         <a className="plain-link border rounded-0 px-3 py-2 h4" href="/register">Register Now</a>
                     </div>
                 </div>
-            }
-
+            </div>}
         </div>
     </AuthCardWindow>;
 

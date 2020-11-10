@@ -43,7 +43,12 @@ const customConfig = {
                 },
             },
         ],
+    },
+
+    env: {
+        domain: 'https://play.inctf.in/junior',
     }
+
 };
 
 module.exports = withPlugins([

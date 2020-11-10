@@ -1,9 +1,10 @@
 import fetch from 'isomorphic-fetch';
 
-const ourEndpoint = 'http://35.238.193.206:5431/';
+
+const domain = process.env.domain || 'https://play.inctf.in/junior';
 
 const SimplePost = async ({
-    data, endpoint = ourEndpoint,
+    data, endpoint,
 }) => {
 
     const APIConfig = {
@@ -13,7 +14,7 @@ const SimplePost = async ({
         body: JSON.stringify(data),
     };
 
-    return await fetch(endpoint, APIConfig).then((response) => {
+    return await fetch(domain + endpoint, APIConfig).then((response) => {
         const contentType = response.headers.get('content-type');
         if (response.ok) {
             if (contentType && contentType.indexOf('application/json') !== -1)

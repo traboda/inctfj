@@ -1,6 +1,7 @@
 import fetch from 'isomorphic-fetch';
 
-const ourEndpoint = 'http://35.238.193.206:5431/';
+const domain = process.env.domain || 'https://play.inctf.in/junior';
+const queryURL = domain + '/query';
 
 const GraphQLFetch = async ({
     query, variables = null, endpoint,
@@ -41,7 +42,7 @@ const GraphQLFetch = async ({
 };
 
 export const APIFetch = async ({
-   query, variables = null, endpoint = ourEndpoint,
+   query, variables = null, endpoint = queryURL,
 }) => {
     return await GraphQLFetch({ query, variables, endpoint }).then(r => {
         if (r && !Object.prototype.hasOwnProperty.call(r, 'errors'))
