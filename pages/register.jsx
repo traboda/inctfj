@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import styled from "@emotion/styled";
+import {useRouter} from "next/router";
 
 import TopBar from "../src/components/shared/TopBar";
 import Base from "../src/components/shared/Base";
@@ -22,10 +23,18 @@ const RegistrationPageWrapper = styled.section`
 `;
 
 export default () => {
+    const router = useRouter();
+
     const [hasLoaded, setLoaded] = useState(false);
     const [isLoggedIn] = useAuthState('isLoggedIn');
 
     useEffect(() => { setLoaded(true); }, []);
+
+    useEffect(() => {
+        if(isLoggedIn && hasLoaded) {
+            router.push('/dashboard');
+        }
+    }, [hasLoaded]);
 
     return (hasLoaded && isLoggedIn) ?
         <Base meta={{ title: "Already Logged-In." }}>
