@@ -23,7 +23,7 @@ const FAQSection = styled.section`
   }
 `;
 
-export default () => {
+const FAQPage = () => {
 
     const [openQ, setOpen] = useState(0);
 
@@ -49,3 +49,5 @@ export default () => {
     </Base>
 
 };
+
+export default FAQPage;

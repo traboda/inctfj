@@ -145,7 +145,7 @@ const RegisterCard = ({ }) => {
         setRegistering(true);
         SimplePost({
             data: {
-                email: email, fullname: name, uname: email.split("@")[0],
+                email: email, fullname: name, uname: "",
                 pword1: password, pword2: password
             },
             endpoint: "/api/register"
@@ -235,7 +235,7 @@ const RegisterCard = ({ }) => {
             isRegistering ? <div className="d-flex justify-content-center">
                 <div>
                     <div className="text-center">
-                        <img src={require('../../assets/images/gif/loading.webp')} />
+                        <img alt="loading" src={require('../../assets/images/gif/loading.webp')} />
                     </div>
                     <Pulse forever><h3>Registering</h3></Pulse>
                     <p className="terminal-output">> Registration initialized.</p>

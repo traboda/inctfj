@@ -22,7 +22,7 @@ const RegistrationPageWrapper = styled.section`
     }
 `;
 
-export default () => {
+const RegisterPage = () => {
     const router = useRouter();
 
     const [hasLoaded, setLoaded] = useState(false);
@@ -64,3 +64,5 @@ export default () => {
     </Base>
 
 };
+
+export default RegisterPage;

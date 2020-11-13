@@ -7,7 +7,7 @@ import {useAuthState} from "../src/states";
 import UserDashboard from "../src/components/dashboard";
 
 
-export default () => {
+const DashboardPage = () => {
     const router = useRouter();
 
     const [hasLoaded, setLoaded] = useState(false);
@@ -30,3 +30,5 @@ export default () => {
     </Base> : <div className="min-vh-100 w-100" style={{ background: '#222' }} />;
 
 };
+
+export default DashboardPage;

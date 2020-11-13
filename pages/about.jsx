@@ -14,7 +14,7 @@ const AboutPageCoverSection = styled.div`
     min-height: 60vmin;
 `;
 
-export default () => {
+const AboutPage = () => {
 
     return <Base meta={{ title: "About InCTF Jr." }}>
         <TopBar includeSpace={false} />
@@ -25,3 +25,5 @@ export default () => {
     </Base>
 
 };
+
+export default AboutPage;

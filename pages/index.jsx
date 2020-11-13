@@ -15,7 +15,7 @@ import LandingContactsBar from "../src/components/landing/ContactsBar";
 import TopBar from "../src/components/shared/TopBar";
 import LandingJoinDiscussion from "../src/components/landing/JoinDiscussions";
 
-export default () => {
+const LandingPage = () => {
 
     return <Base>
         <div style={{ overflowX: 'hidden' }} id="landing-page">
@@ -36,3 +36,5 @@ export default () => {
     </Base>
 
 };
+
+export default LandingPage;

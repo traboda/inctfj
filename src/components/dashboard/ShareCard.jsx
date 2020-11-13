@@ -9,7 +9,7 @@ const ShareCardContainer = styled.div`
     h2 {
         margin-bottom: 2px;
     } 
-    a{
+    .whatsapp_share_button{
         border: 2px solid;
         padding: 5px 10px;
         font-size: 25px;
@@ -65,12 +65,17 @@ For more information & registrations, visit https://junior.inctf.in
         <div className="row w-100 mx-0">
             <div className="col-md-6 p-1">
                 <h2>Share with Your Friends!</h2>
-                <p>
+                <p className="mb-2">
                     Invite your friends to InCTF Jr 2020
                 </p>
+                <div className="d-flex text-dark align-items-center my-2 justify-content-center justify-content-md-start">
+                    <a className="plain-link px-3 py-2 btn text-dark btn-warning" style={{ fontSize: '20px' }}  href="/promote">
+                        View & Share Promotional Materials
+                    </a>
+                </div>
             </div>
-           <div className="col-md-6 d-flex align-items-center justify-content-end p-1">
-               <a target="_blank" href={getWhatsAppLink()}>
+           <div className="col-md-6 d-flex align-items-center justify-content-md-end justify-content-center p-1">
+               <a target="_blank" className="whatsapp_share_button" href={getWhatsAppLink()}>
                    <img alt="forward on whatsapp" src={require('../../assets/images/icons/whatsapp.png')} />
                    Forward on WhatsApp
                </a>
