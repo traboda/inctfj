@@ -31,24 +31,24 @@ const LandingContactsBar = () => {
                     </div>
                 </div>
             </Fade>
-            <Fade down>
-                <div className="col-md-4 p-2 d-flex align-items-center justify-content-md-center">
-                    <img alt="whatsapp" src={require('../../assets/images/icons/whatsapp.png')} />
-                    <div>
-                        <div>CHAT THROUGH WHATSAPP</div>
-                        <h5>(+91) 8129 42 6557</h5>
-                    </div>
-                </div>
-            </Fade>
-            <Fade up>
-                <div className="col-md-4 p-2 mb-2 d-flex align-items-center justify-content-md-center">
-                    <img src={require('../../assets/images/icons/telephone.png')} />
-                    <div>
-                        <div>ANYTHING ELSE? RING US UP.</div>
-                        <h5>0476 280 4525</h5>
-                    </div>
-                </div>
-            </Fade>
+            {/*<Fade down>*/}
+            {/*    <div className="col-md-4 p-2 d-flex align-items-center justify-content-md-center">*/}
+            {/*        <img alt="whatsapp" src={require('../../assets/images/icons/whatsapp.png')} />*/}
+            {/*        <div>*/}
+            {/*            <div>CHAT THROUGH WHATSAPP</div>*/}
+            {/*            <h5>(+91) 8129 42 6557</h5>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</Fade>*/}
+            {/*<Fade up>*/}
+            {/*    <div className="col-md-4 p-2 mb-2 d-flex align-items-center justify-content-md-center">*/}
+            {/*        <img src={require('../../assets/images/icons/telephone.png')} />*/}
+            {/*        <div>*/}
+            {/*            <div>ANYTHING ELSE? RING US UP.</div>*/}
+            {/*            <h5>0476 280 4525</h5>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</Fade>*/}
             <div className="col-md-8 text-center text-md-left h-100 d-flex align-items-center pt-4 px-2">
                  <div>&copy; Amrita InCTF 2016-2020. All Rights Reserved.</div>
             </div>
