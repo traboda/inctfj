@@ -88,6 +88,7 @@ const TopBar = ({ includeSpace = true, darkenOnSidebar = false }) => {
         setUserInfo(null);
     };
 
+
     const onOpen = () => {
         const targetElement = document.querySelector(".app");
         disableBodyScroll(targetElement);

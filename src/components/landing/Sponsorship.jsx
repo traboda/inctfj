@@ -101,7 +101,7 @@ const LandingSponsorship = ({ }) => {
                 </p>
                 <div>
                     {/*<a className="sponsorship-brochure-button" href="/sponsor">Sponsorship Brochure</a>*/}
-                    <a className="contact-us-button" href="mailto:sponsorships@inctf.in">Contact Us</a>
+                    <a className="contact-us-button" href="mailto:inctfj@am.amrita.edu">Contact Us</a>
                 </div>
 
             </div>

@@ -126,10 +126,12 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
         { "icon": require('../../assets/images/icons/books.png'), "title": "Learn", "href": "https://wiki.bi0s.in/" },
         { "icon": require('../../assets/images/icons/test.png'), "title": "Practice", "href": "https://archive.bi0s.in/" },
         { "icon": require('../../assets/images/icons/faq.png'), "title": "FAQ", "href": "/faq" },
+        { "icon": require('../../assets/images/icons/share.png'), "title": "Promote", "href": "/promote" },
     ] : [
         { "icon": require('../../assets/images/icons/dashboard.png'), "title": "Dashboard", "href": "/dashboard" },
         { "icon": require('../../assets/images/icons/books.png'), "title": "Learn", "href": "https://wiki.bi0s.in/" },
         { "icon": require('../../assets/images/icons/test.png'), "title": "Practice", "href": "https://archive.bi0s.in/" },
+        { "icon": require('../../assets/images/icons/share.png'), "title": "Promote", "href": "/promote" },
         { "icon": require('../../assets/images/icons/logout.png'), "title": "Logout", "onClick": onLogOut }
     ];
 
@@ -169,8 +171,8 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
                     </div>
                     <SocialMediaLinks>
                         <a target="_blank" href="https://www.instagram.com/juniorinctf/"><img src={require('../../assets/images/icons/instagram.png')} /></a>
-                        <a target="_blank" href="https://twitter.com/InCTFj"><img src={require('../../assets/images/icons/facebook.png')} /></a>
-                        <a target="_blank" href="https://www.facebook.com/InCTFj/"><img src={require('../../assets/images/icons/twitter.png')} /></a>
+                        <a target="_blank" href="https://twitter.com/InCTFj"><img src={require('../../assets/images/icons/twitter.png')} /></a>
+                        <a target="_blank" href="https://www.facebook.com/InCTFj/"><img src={require('../../assets/images/icons/facebook.png')} /></a>
                         <a target="_blank" href="https://www.youtube.com/c/InCTFj"><img src={require('../../assets/images/icons/play_button.png')} /></a>
                     </SocialMediaLinks>
                 </div>
