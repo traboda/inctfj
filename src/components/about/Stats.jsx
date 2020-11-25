@@ -26,8 +26,8 @@ const INCTFJStats = () => {
 
     const stats = [
         { value: 4, title: "Successful Editions" },
-        { value: 1000, suffix:"+", title: "Successful Editions" },
-        { value: 8000, suffix:"+", title: "Participants" },
+        { value: 1000, suffix:"+", title: "Schools Participated" },
+        { value: 10000, suffix:"+", title: "Participants" },
         { value: 100, suffix:"+", title: "Workshops Organized" },
     ]
 
