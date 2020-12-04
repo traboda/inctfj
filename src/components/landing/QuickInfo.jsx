@@ -38,7 +38,10 @@ const LandingQuickInfo = () => {
         },
         {
             image: require('../../assets/images/icons/calendar.png'), up: true,
-            question: "When?", answer: "December 20, 2020"
+            question: "When?", answer: <>
+                <div>09:00 AM, Dec. 20 to</div>
+                09:00 PM, Dec. 21 (36 Hrs)
+            </>
         },
         {
             image: require('../../assets/images/icons/backpack.png'), right: true,
