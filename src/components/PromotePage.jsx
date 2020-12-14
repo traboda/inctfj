@@ -119,14 +119,14 @@ const PromotePage = () => {
             </div>
             <ScrollContainer vertical className="scroll-container p-3 container d-flex w-100">
                 {posters.map((p) =>
-                    <div key={shortid.generate()} className="d-flex align-items-center justify-content-center p-1">
-                        <button onClick={() => handlePosterDownload(p)}>
-                            <img alt="download poster" className="inctf_poster" src={p} />
-                            <div className="download_icon">
-                                <img src={require('../assets/images/icons/download.png')} alt="download" />
-                            </div>
-                        </button>
-                    </div>)}
+                <div key={shortid.generate()} className="d-flex align-items-center justify-content-center p-1">
+                    <button onClick={() => handlePosterDownload(p)}>
+                        <img alt="download poster" className="inctf_poster" src={p} />
+                        <div className="download_icon">
+                            <img src={require('../assets/images/icons/download.png')} alt="download" />
+                        </div>
+                    </button>
+                </div>)}
             </ScrollContainer>
         </ShareSection>
         <ShareSection>

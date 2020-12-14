@@ -226,7 +226,6 @@ const RegisterCard = ({ }) => {
                         <img style={{ maxWidth: '65%' }} src={require('../../assets/images/gif/thanks.webp')} />
                     </div>
                     <Pulse forever><h3>You are Registered</h3></Pulse>
-                    <div className="terminal-output"> > You will shortly receive an email confirming this at {email}.</div>
                     <div className="terminal-output"> > You now have access to InCTFj dashboard, where you shall find everything else.</div>
                     <div className="terminal-output text-warning"> > Please note you need to fill in other details in your dashboard, to confirm your registration.</div>
                     <button onClick={handleLogin} className="lucky-button mt-2">Open Dashboard</button>
