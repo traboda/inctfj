@@ -8,7 +8,7 @@ import '../../styles/bootstrap.min.css';
 import '../../styles/styles.css';
 
 const seoTags = {
-    "siteName": "InCTF Jr 5.0 - December 20, 2020",
+    "siteName": "InCTF Jr 5.0 - December 28, 2020",
     "tagLine": "India's First & Premier CTF Hacking Contest for School Students",
     "description": "Participate in the 5th edition of India's First & Premier Hacking & Cyber Security Contest for High School Students, organized by team bi0s, India's No.1 ranked CTF Team."
 };

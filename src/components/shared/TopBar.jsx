@@ -128,7 +128,7 @@ const TopBar = ({ includeSpace = true, darkenOnSidebar = false }) => {
                             <TopbarInfoCard>
                                 <div>
                                     <div>InCTF Jr 5.0</div>
-                                    <h5>Dec. 20, 2020</h5>
+                                    <h5>Dec. 28, 2020</h5>
                                 </div>
                                 {(hasLoaded && !isLoggedIn) && <a href="/register">Register</a>}
                             </TopbarInfoCard>

@@ -39,8 +39,8 @@ const LandingQuickInfo = () => {
         {
             image: require('../../assets/images/icons/calendar.png'), up: true,
             question: "When?", answer: <>
-                <div>09:00 AM, Dec. 20 to</div>
-                09:00 PM, Dec. 21 (36 Hrs)
+                <div>09:00 AM, Dec. 28 to</div>
+                09:00 PM, Dec. 29 (36 Hrs)
             </>
         },
         {

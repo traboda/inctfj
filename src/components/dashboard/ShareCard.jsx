@@ -44,7 +44,7 @@ Even today, InCTF Jr continues to be the ONLY CTF contest held exclusively for s
 📜 Certificates for all ( + exciting prizes for winners!)
 
 🤔 What? Learn & Hack Capture The Flag Contest
-🗓 When? December 20, 2020
+🗓 When? December 28, 2020
 🤷🏻‍♀️For Whom? School Students (Grade 8-12)
 
 https://www.youtube.com/watch?v=AO4p6M4l-VA
