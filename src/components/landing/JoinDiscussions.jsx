@@ -66,14 +66,14 @@ const LandingJoinDiscussion = () => {
 
         </div>
         <div className="col-md-6 px-0">
-            <TelegramDiscussion href="https://t.me/inctfjunior" target="_blank">
+            <DiscordDiscussion href="https://discord.gg/rqF3ZkeTrY" target="_blank">
                 <Fade right>
                     <div>
-                        <img src={require('../../assets/images/logos/telegram.png')} alt="Join Discord Server" />
-                        <h5>Join the Telegram Group</h5>
+                        <img src={require('../../assets/images/logos/discord.png')} alt="Join Discord Server" />
+                        <h5>Join the Discord Server</h5>
                     </div>
                 </Fade>
-            </TelegramDiscussion>
+            </DiscordDiscussion>
         </div>
     </div>
 };

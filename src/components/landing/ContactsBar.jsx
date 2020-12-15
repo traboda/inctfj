@@ -27,16 +27,16 @@ const LandingContactsBar = () => {
                     <img alt="email" src={require('../../assets/images/icons/email.png')} />
                     <div>
                         <div>FOR GENERAL ENQUIRES</div>
-                        <h5>inctfj@am.amrita.edu</h5>
+                        <h5><a href="mailto:inctfj@am.amrita.edu" target="_blank" className="plain-link">inctfj@am.amrita.edu</a></h5>
                     </div>
                 </div>
             </Fade>
             <Fade down>
                 <div className="col-md-4 p-2 d-flex align-items-center justify-content-md-center">
-                    <img alt="telegram" src={require('../../assets/images/logos/telegram.png')} />
+                    <img alt="telegram" src={require('../../assets/images/logos/discord.png')} />
                     <div>
-                        <div>Join Our Telegram Group</div>
-                        <h5><a href="https://t.me/inctfjunior" className="plain-link">t.me/inctfjunior</a></h5>
+                        <div>Join Our Discord Server</div>
+                        <h5><a href="https://discord.gg/rqF3ZkeTrY" target="_blank" className="plain-link">discord.gg/rqF3ZkeTrY</a></h5>
                     </div>
                 </div>
             </Fade>
