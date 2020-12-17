@@ -73,10 +73,10 @@ const ShareSection = styled.section`
 const PromotePage = () => {
 
     const posters = [
-        require('../assets/images/posters/p1.jpg'),
-        require('../assets/images/posters/p2.jpg'),
-        require('../assets/images/posters/p3.jpg'),
-        require('../assets/images/posters/p4.jpg'),
+        require('../assets/images/posters/p1.JPG'),
+        require('../assets/images/posters/p2.JPG'),
+        require('../assets/images/posters/p3.JPG'),
+        require('../assets/images/posters/p4.JPG'),
         require('../assets/images/posters/1.jpg'),
         require('../assets/images/posters/2.jpg'),
         require('../assets/images/posters/3.jpg'),
