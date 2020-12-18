@@ -43,7 +43,7 @@ const TopbarContainer = styled.nav`
      box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.35);
   }
   .row {
-     background-color: rgba(0,0,0,0.65);
+     background-color: rgba(0,0,0,0.75);
      padding: 0.35rem;
      width: 100%;
   }
@@ -64,7 +64,7 @@ const TopbarInfoCard = styled.div`
     a {
       margin-left: 8px;
       display: block;
-      background: #E65100;
+      background: #F13F17;
       text-decoration: none!important;
       color: white!important;
       padding: 1rem;

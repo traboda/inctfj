@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
+import dynamic from 'next/dynamic'
 import styled from "@emotion/styled";
 import Fade from 'react-reveal/Fade';
 import Pulse from 'react-reveal/Pulse';
 import Modal from 'react-modal';
-import ReactPlayer from 'react-player/youtube';
+
+const ReactPlayer = dynamic(() => import('react-player/youtube'))
+
+
 import {disableBodyScroll, clearAllBodyScrollLocks} from "body-scroll-lock";
 
 const TestimonialSection = styled.section`
     padding: 1rem;
     background: #E1F5FE;
-    h5 {
+    .h5 {
       font-weight: 700;
       text-transform: uppercase;
       color: #555;
@@ -75,14 +79,14 @@ const LandingTestimonials = () => {
 
     return <TestimonialSection >
         <Pulse>
-            <h5>
+            <div className="h5">
                 <img src={require('../../assets/images/icons/play_button.png')} alt="View Video Testimonials"/>
                 Hear it from the hackers
-            </h5>
+            </div>
         </Pulse>
         <div className="row mx-0">
-            {participants.map((p, index) => <div className="col-6 col-lg-2 p-1">
-                <Fade delay={index*200}><a onClick={openVideo}><img draggable="false" src={p.image} /></a></Fade>
+            {participants.map((p, index) => <div className="col-6 col-md-4 col-lg-2 p-1">
+                <Fade delay={index*200}><a onClick={openVideo}><img alt="testimonial student" draggable="false" src={p.image} /></a></Fade>
             </div>)}
         </div>
         <Modal
@@ -104,9 +108,9 @@ const LandingTestimonials = () => {
                 className="px-4 border-0 rounded"
                 onClick={() => { clearAllBodyScrollLocks(); setShowPlayer(false)}}
             >
-                <img src={require('../../assets/images/icons/close.png')} />
+                <img alt="close" src={require('../../assets/images/icons/close.png')} />
             </CloseButton>
-            <ReactPlayer url="https://www.youtube.com/watch?v=U5zVYdYJBwQ" autoplay width="100%" height="80vmin" />
+            {showPlayer && <ReactPlayer url="https://www.youtube.com/watch?v=U5zVYdYJBwQ" autoplay width="100%" height="80vmin" />}
         </Modal>
     </TestimonialSection>
 };

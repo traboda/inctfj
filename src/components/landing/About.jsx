@@ -73,10 +73,10 @@ const LandingAboutInCTF = () => {
     return <AboutInCTFSection>
         <Zoom up>
             <div className="row mx-0">
-                <div className="col-md-6 p-md-4 p-2">
+                <div className="col-lg-6 p-md-4 p-2">
                     <ReactPlayer url="https://www.youtube.com/watch?v=sxRZ06Rbh_c" width="100%" height="60vmin" />
                 </div>
-                <div className="col-md-6 py-md-4 py-3 px-0 d-flex">
+                <div className="col-lg-6 py-md-4 py-3 px-md-3 px-lg-0 d-flex">
                     <div>
                         <div className="px-3">
                             <h2 className="mt-2">What is <span>InCTF Jr</span>?</h2>
@@ -89,8 +89,8 @@ const LandingAboutInCTF = () => {
                             </p>
                         </div>
                         <div className="d-flex px-2 mt-3 justify-content-center justify-content-md-start align-items-center">
-                            <a style={{ background: '#E65100' }} href="/about">Learn More</a>
-                            <a  style={{ background: '#4A148C' }} href="/faq">View FAQ</a>
+                            <a style={{ background: '#E65100' }} title="Learn more about InCTF Jr" href="/about">More About InCTF Jr.</a>
+                            <a  style={{ background: '#4A148C' }} title="View FAQ" href="/faq">View FAQ</a>
                         </div>
                         <div className="features-list mt-2 py-2">
                             <div className="row mx-0">
@@ -99,10 +99,10 @@ const LandingAboutInCTF = () => {
                                         <Tada delay={500}>
                                             <div className="feature-card row mx-0">
                                                 <div className="col-4 text-center col-md-12 px-1">
-                                                    <img src={f.image} />
+                                                    <img alt={f.title} src={f.image} />
                                                 </div>
                                                 <div className="col-8 text-md-center d-flex align-items-center justify-content-md-center text-left col-md-12 px-1">
-                                                    <h6 className="w-75">{f.title}</h6>
+                                                    <div className="h6 mb-0 w-75">{f.title}</div>
                                                 </div>
                                             </div>
                                         </Tada>

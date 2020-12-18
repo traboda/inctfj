@@ -41,7 +41,7 @@ const SponsorshipArea = styled.section`
 
 const LogoWall = styled.div`
     max-width: 700px;
-    h4 {
+    .h5 {
       color: #555;
       font-size: 18px;
     }
@@ -87,7 +87,7 @@ const LandingSponsorship = ({ }) => {
 
     return <SponsorshipArea className="row mx-0">
         <Fade left>
-            <div className="col-md-6 p-1 p-lg-5 p-md-3">
+            <div className="col-lg-6 p-1 p-lg-5 p-md-3">
                 <div className="mb-2">Not a Student?</div>
                 <h2>
                     Today You Can Help Us to
@@ -107,12 +107,12 @@ const LandingSponsorship = ({ }) => {
             </div>
         </Fade>
         <Fade right>
-            <div className="col-md-6 px-1">
+            <div className="col-lg-6 px-1">
                 <LogoWall className="row mx-0">
-                    <h4 className="col-12 p-0 mt-3 mb-1 font-weight-bolder text-left text-uppercase">2019 Sponsors</h4>
+                    <div className="h5 col-12 p-0 mt-3 mb-1 font-weight-bolder text-left text-uppercase">Past Sponsors</div>
                     {pastSponsors.map((s) =>
-                        <div className="col-lg-3 col-md-4 col-4 p-1">
-                            <Fade><img src={s.image} /></Fade>
+                        <div className="col-md-3 col-4 p-1">
+                            <Fade><img alt="Sponsor Logo" src={s.image} /></Fade>
                         </div>
                     )}
                 </LogoWall>

@@ -15,14 +15,14 @@ const QuickInfoSection = styled.section`
           max-height: 56px;
           margin-bottom: 12px;
       } 
-      h3 {
+      .qs {
           font-size: 18px;
           font-weight: 700;
           text-transform: uppercase;
           line-height: 1;
           margin-bottom: 0.5rem;
       }
-      h1 {
+      .ans {
         font-size: 20px;
         line-height: 1.1;
         font-weight: 300;
@@ -59,8 +59,8 @@ const LandingQuickInfo = () => {
                         </div>
                         <div className="col-9 d-flex align-items-center p-0">
                             <div>
-                                <h3>{l.question}</h3>
-                                <h1>{l.answer}</h1>
+                                <div className="qs">{l.question}</div>
+                                <div className="ans">{l.answer}</div>
                             </div>
                         </div>
                     </div>

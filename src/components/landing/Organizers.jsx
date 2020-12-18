@@ -7,7 +7,7 @@ const OrganizersSection = styled.section`
     user-select: none;
     .content-container {
       padding: 5vh 5vw;
-      h4 {
+      h3 {
           text-align: center;
           font-weight: 700;
           font-size: 26px;
@@ -15,7 +15,8 @@ const OrganizersSection = styled.section`
           color: #E65100;
           margin-bottom: 2rem;
         }
-        h5 {
+        h4 {
+          font-size: 18px;
           font-weight: 600;
           color: #444;
         }
@@ -26,12 +27,12 @@ const OrganizersSection = styled.section`
         }
         .amrita {
            @media (min-width: 700px){
-              border-right: 2px solid #999;
+              border-right: 1px solid #999;
            }
         }
         .cyber {
            @media (min-width: 700px){
-              border-left: 2px solid #999;
+              border-left: 1px solid #999;
            }
         }
         .col-md-4 {
@@ -53,14 +54,14 @@ const LandingOrganizers = () => {
 
     return <OrganizersSection>
         <div className="content-container">
-            <h4>Organized By</h4>
+            <h3>Organized By</h3>
             <div className="row mx-0">
                 <Fade left>
                     <div className="col-md-4 order-md-1 order-2 text-right amrita">
                         <a href="https://amrita.edu">
                             <img alt="Amrita Vishwa Vidyapeetham" src={require('../../assets/images/logos/amritapuri_dark.png')} />
                         </a>
-                        <h5>India's No.1 Ranked Private University</h5>
+                        <h4>India's No.1 Ranked Private University</h4>
                         <div className="d-flex justify-content-end">
                             <p>
                                 Amrita Vishwa Vidyapeetham, founded in 1994, within the next 2 decades has emerged among the
@@ -76,7 +77,7 @@ const LandingOrganizers = () => {
                         <a href="https://bi0s.in">
                             <img alt="Team bi0s" src={require('../../assets/images/logos/bi0s_dark.png')} />
                         </a>
-                        <h5>India's No.1 Ranked CTF Hacking Team</h5>
+                        <h4>India's No.1 Ranked CTF Hacking Team</h4>
                         <div className="d-flex justify-content-center">
                             <p>
                                 Team bi0s is a community of college student focusing on cyber security,
@@ -93,7 +94,7 @@ const LandingOrganizers = () => {
                         <a href="https://www.amrita.edu/center/cyber-security">
                             <img alt="Team bi0s" src={require('../../assets/images/logos/amrita_cyber.png')} />
                         </a>
-                        <h5>India's Leading CyberSec. Researchers</h5>
+                        <h4>India's Leading CyberSec. Researchers</h4>
                         <div className="d-flex">
                             <p>
                                 Amrita Center for Cyber Security Systems and Networks promote partnership between
@@ -108,7 +109,7 @@ const LandingOrganizers = () => {
                 </Fade>
             </div>
         </div>
-        <img draggable="false" src={require('../../assets/images/logos/amritapuri_vector.png')} />
+        <img alt="amritapuri vector illustration" draggable="false" src={require('../../assets/images/logos/amritapuri_vector.png')} />
     </OrganizersSection>;
 
 };

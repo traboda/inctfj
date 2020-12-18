@@ -53,7 +53,7 @@ const HeaderContainer = styled.section`
        text-align: center;
        max-width: 400px;
        margin-bottom: 0.5rem;
-       background: #E65100;
+       background: #F13F17;
        color: white;
        font-weight: 600;
        padding: 0.8rem 1.2rem;

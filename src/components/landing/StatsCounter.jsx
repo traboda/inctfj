@@ -27,10 +27,10 @@ const LandingStatsBar = () => {
         {stats.map((s) =>
             <div className="col-6 col-md-3">
                 <Zoom mountOnEnter effect="fadeInUp">
-                    <h2 className="text-primary font-weight-bold">
+                    <div className="text-primary h2 font-weight-bold">
                         <CountUp delay={0.5} duration={4.5} end={s.value} />{s.suffix}
-                    </h2>
-                    <h4 className="mb-0">{s.title}</h4>
+                    </div>
+                    <div className="h5 mb-0">{s.title}</div>
                 </Zoom>
             </div>
         )}

@@ -55,7 +55,7 @@ const LandingJoinDiscussion = () => {
 
     return <div className="row mx-0">
         <div className="col-md-6 px-0">
-            <TwitterDiscussion href="https://twitter.com/InCTFj" target="_blank">
+            <TwitterDiscussion href="https://twitter.com/InCTFj" rel="noopener noreferrer" target="_blank">
                 <Fade left>
                     <div>
                         <img src={require('../../assets/images/logos/twitter.png')} alt="Follow us on Twitter<" />
@@ -66,7 +66,7 @@ const LandingJoinDiscussion = () => {
 
         </div>
         <div className="col-md-6 px-0">
-            <DiscordDiscussion href="https://discord.gg/rqF3ZkeTrY" target="_blank">
+            <DiscordDiscussion href="https://discord.gg/rqF3ZkeTrY" rel="noopener noreferrer" target="_blank">
                 <Fade right>
                     <div>
                         <img src={require('../../assets/images/logos/discord.png')} alt="Join Discord Server" />

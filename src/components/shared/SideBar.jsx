@@ -154,7 +154,7 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
                             <a className="plain-link" style={{ background: '#4A148C' }} href="/login">Login</a>
                         </div>
                     </OnBoardingCard>}
-                    <div className="mt-3">{sidebarLinks.map((l) =>
+                    <ol className="pl-0 mt-3">{sidebarLinks.map((l) =>
                         <li>
                             {l.href ? <a href={l.href}>
                                 <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
@@ -162,7 +162,7 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
                                 <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
                             </button>}
                         </li>
-                    )}</div>
+                    )}</ol>
                     <div className="my-3 mx-2">
                         {!isLoggedIn && <RegisterFooterButton className="plain-link" href="/register">
                             Register Now
