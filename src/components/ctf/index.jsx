@@ -12,6 +12,8 @@ import CategoryIcons from "./elements/CategoryIcons";
 import FlagSubmitter from "./FlagSubmitter";
 import UserCard from "./UserCard";
 import BrandingView from "./branding";
+import NotificationsWindow from "./Notifications";
+import ScoreboardWindow from "./Leaderboard";
 
 
 
@@ -21,6 +23,7 @@ const CTFModuleWrap = styled.div`
     height: 100vh;
     width: 100%;
     overflow: hidden!important;
+    padding: 0.5rem;
     .bg-wrapper{
         background-color: rgba(0,0,0,0.5);
         width: 100%;
@@ -33,6 +36,39 @@ const CTFModule = () => {
 
     const [categories, setCategories] = useState([]);
     const [myProfile, setMyProfile] = useState(null);
+
+    const [firstPos, setFirstPos] = useState({ x: 120, y: -500, isSet: false });
+    const [windows, setWindows] = useState([
+        { type: 'notification', cardID: shortid.generate(), position: { x: 800, y: 100} },
+        { type: 'scoreboard', cardID: shortid.generate(), position: { x: 1080, y: -280 } },
+    ]);
+
+    const handleOpenWindow = (w) => {
+        const window = { ...w, cardID: shortid.generate(), position: firstPos };
+        if(windows.length > 0){
+            setWindows([...windows, window]);
+        } else {
+            setWindows([window]);
+        }
+    }
+
+    const handleOpenCategory = (c) => {
+        const category = {...c, type: 'category'}
+        handleOpenWindow(category);
+    }
+
+    const handleOpenChallenge = (c) => {
+        const challenge = {...c, type: 'challenge'};
+        handleOpenWindow(challenge)
+    };
+
+    const handleOpenNotification = async () => {
+        handleOpenWindow({ type: 'notification' })
+    }
+
+    const handleOpenScorecard = async () => {
+        handleOpenWindow({ type: 'scoreboard' })
+    }
 
     const fetchChallenges = () => {
         APIFetch({ query: challengesQuery }).then(({ success, data, errors}) => {
@@ -55,32 +91,8 @@ const CTFModule = () => {
 
     useEffect(fetchMyScore, []);
 
-
-    const [windows, setWindows] = useState([]);
-
-    const [firstPos, setFirstPos] = useState({ x: 150, y: 150 });
-
-    const handleOpenWindow = (w) => {
-        const window = { ...w, cardID: shortid.generate(), position: firstPos };
-        if(windows.length > 0){
-            setWindows([...windows, window]);
-        } else {
-            setWindows([window]);
-        }
-    }
-
-    const handleOpenCategory = (c) => {
-        const category = {...c, type: 'category'}
-        handleOpenWindow(category);
-    }
-
-    const handleOpenChallenge = (c) => {
-        const challenge = {...c, type: 'challenge'};
-       handleOpenWindow(challenge)
-    };
-
     const handleDragCard = (card) => {
-        setFirstPos({...card.position, x: card.position.x + 30 , y: card.position.y - 150 });
+        setFirstPos({...card.position, x: card.position.x -25, y: card.position.y - 60, isSet: true });
         const newList = windows.map((c) => {
             if(c.cardID !== card.cardID) return c;
             else return card;
@@ -93,27 +105,45 @@ const CTFModule = () => {
         setWindows([...newList]);
     };
 
-    return <CTFModuleWrap bg={require('../../assets/images/backgrounds/cyberpunk/platform.jpg')}>
+    return<CTFModuleWrap bg={require('../../assets/images/backgrounds/cyberpunk/platform.jpg')}>
         <BrandingView />
         <FlagSubmitter />
         {myProfile && <UserCard {...myProfile} />}
         <CategoryIcons categories={categories} onOpenCategory={handleOpenCategory} />
-        {windows.filter((c) => c.type === 'category').map((c) =>
-        <CategoryCard
-            key={c.cardID}
-            {...c}
-            onSelectChallenge={handleOpenChallenge}
-            onDrag={handleDragCard}
-            onClose={handleCloseCard}
-        />)}
-        {windows.filter((c) => c.type === 'challenge').map((c) =>
-        <ChallengeCard
-            id={c.id} {...c}
-            key={c.cardID}
-            onDrag={handleDragCard}
-            onClose={handleCloseCard}
-        />)}
-    </CTFModuleWrap>
+        {windows.map((c) => {
+            if(c.type === 'challenge') {
+                return <ChallengeCard
+                    id={c.id} {...c}
+                    key={c.cardID}
+                    onDrag={handleDragCard}
+                    onClose={handleCloseCard}
+                />
+            } else if(c.type === 'category') {
+                return <CategoryCard
+                    key={c.cardID}
+                    {...c}
+                    onSelectChallenge={handleOpenChallenge}
+                    onDrag={handleDragCard}
+                    onClose={handleCloseCard}
+                />
+            } else if(c.type === 'notification') {
+                return <NotificationsWindow
+                    key={c.cardID}
+                    {...c}
+                    onDrag={handleDragCard}
+                    onClose={handleCloseCard}
+                />
+            } else if(c.type === 'scoreboard') {
+                return <ScoreboardWindow
+                    key={c.cardID}
+                    {...c}
+                    onDrag={handleDragCard}
+                    onClose={handleCloseCard}
+                />
+            }
+        })}
+
+    </CTFModuleWrap>;
 
 };
 

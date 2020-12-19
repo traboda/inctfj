@@ -50,6 +50,10 @@ const Footer = styled.div`
             background: #fc0;
             border: none!important;
             padding: 3px 5px;
+            outline: none!important;
+            &:focus, &:hover {
+               color: #005cbf;
+            }
         }
     }
 `;

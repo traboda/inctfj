@@ -60,17 +60,18 @@ const FlagSubmitter = ({
 
     const [flag, setFlag] = useState('');
     const [isSubmitting, setSubmitting] = useState(false)
-    const [successful, setSuccessful] = useState(false);
+    const [successful, setSuccessful] = useState(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setSuccessful(null);
         setSubmitting(true);
         APIFetch({ query: SubmitFlagMutation, variables: { flag }}).then(({ success, data, errors}) => {
             if(success) {
                 setSubmitting(false);
                 if(data.flag_submit === "Congratulations on the solve"){
                     setSuccessful(true);
-                }
+                } else { setSuccessful(false) };
             }
         })
     };
@@ -79,7 +80,7 @@ const FlagSubmitter = ({
         <FlagContainer className="font-punk">
             <form onSubmit={handleSubmit}>
                 <div className="p-3">
-                    {successful && <div className="text-success">Flag was accepted</div>}
+                    {successful !== null && ( successful ? <div className="pb-2 px-2 text-success">Flag was accepted</div> : <div className="pb-2 px-2 text-danger">Flag Rejected</div>)}
                     <input
                         placeholder="Enter Your Flag"
                         value={flag}

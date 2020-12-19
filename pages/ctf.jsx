@@ -15,6 +15,7 @@ const DashboardPage = () => {
     const [hasLoaded, setLoaded] = useState(false);
     const [isLoggedIn] = useAuthState('isLoggedIn');
     const [CTFMode, setCTFMode] = useState(false);
+    const [statusFetched, setStatusFeteched] = useState(false);
 
     useEffect(() => { setLoaded(true); }, []);
 
@@ -29,7 +30,7 @@ const DashboardPage = () => {
             APIFetch({ query: statusFetchQuery }).then(
                 ({ success, data, errors }) => {
                     if(success){
-                        console.log(data);
+                        setStatusFeteched(true);
                         setCTFMode(data?.frontendmanagement?.status === 0);
                     }
                 }
@@ -41,7 +42,11 @@ const DashboardPage = () => {
 
     return hasLoaded ? isLoggedIn ?
     <Base meta={{ title: "CTF Arena" }}>
-        { CTFMode ? <CTFModule /> : <h1>CTF NOT STARTED</h1>}
+        { CTFMode ? <CTFModule /> :
+        <div className="bg-dark min-vh-100 d-flex align-items-center text-light justify-content-center">
+            {statusFetched ? <h1>CTF NOT STARTED</h1> : <h1>Loading CTF</h1>}
+        </div>
+        }
     </Base> : <Base meta={{ title: "Login required" }}>
         <TopBar includeSpace={false} />
         <h1>Login Required</h1>

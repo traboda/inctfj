@@ -57,11 +57,12 @@ const CategoryIconButton = styled.button`
         left: 0;
         padding: 14px 22px;
     }
-    &:hover {
+    &:hover, &:focus {
       .glitch {
         display: block;
         animation: ${innerGlitchAnimation} 2s infinite;
       }
+      outline: none!important;
     }
     img {
        width: 36px;

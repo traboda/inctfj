@@ -41,3 +41,23 @@ export const challengesQuery = `{
     file
   }
 }`;
+
+export const notificationsQuery = `
+{
+  notify
+  {
+    ID
+    name
+    description
+    timestamp
+  }
+}`;
+
+export const scoreboardQuery = `
+{
+  scoreboard{
+    username
+    score
+    lastsolve
+  }
+}`;

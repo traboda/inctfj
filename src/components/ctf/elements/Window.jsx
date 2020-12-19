@@ -14,6 +14,10 @@ const WindowContainer = styled.div`
     border-bottom: 5px solid #fc0;
     overflow: hidden;
     height: 100%;
+    p, h1, h2, h3, h4, h5, h6 {
+      cursor: auto;
+    }
+    cursor: move;
     .window-body {
        width: 100%;
        height: 100%;
@@ -62,12 +66,14 @@ const TopBar = styled.div`
         &:hover {
           background: #AA00FF;
           color: white;
+          outline: none!important;
         }
     }
 `;
 
 const Window = ({
     cardID, position, title, defaultWidth = '450px', defaultHeight = '180px',
+    hideCloseButton = false,
     children, onDrag = () => {}, onClose = () => {}
 }) => {
 
@@ -78,27 +84,32 @@ const Window = ({
         onDrag={onDrag}
         bounds="parent"
     >
-        <Resizable defaultSize={{ width: defaultWidth, height: defaultHeight }}>
-                <WindowContainer className="font-punk">
+        <Resizable
+            defaultSize={{ width: defaultWidth, height: defaultHeight }}
+            bounds="parent"
+        >
+                <WindowContainer className="font-punk handle">
                     <Fade style={{ height: '100%' }}>
-                    <TopBar className="handle">
+                    <TopBar>
                         <div className="glitch">
                             <div className="row mx-0">
                                 <div className="col-9 px-1 d-flex align-items-center">
                                     // {title}
                                 </div>
+                                {!hideCloseButton &&
                                 <div className="col-3 px-0 d-flex justify-content-end align-items-center">
                                     <button onClick={() => onClose(cardID)}>X</button>
-                                </div>
+                                </div>}
                             </div>
                         </div>
                         <div className="row mx-0">
                             <div className="col-9 px-1 d-flex align-items-center">
                                 // {title}
                             </div>
+                            {!hideCloseButton &&
                             <div className="col-3 px-0 d-flex justify-content-end align-items-center">
                                 <button onClick={() => onClose(cardID)}>X</button>
-                            </div>
+                            </div>}
                         </div>
                     </TopBar>
                     <div className="window-body">

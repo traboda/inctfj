@@ -1,6 +1,14 @@
 import React from 'react';
+import styled from "@emotion/styled";
+
 import Window from "./Window";
 
+const ChallengeCardWrap = styled.div`
+    font-family: 'Poppins', sans-serif!important;
+    p {
+       font-size: 13px;
+    }
+`
 
 const ChallengeCard = ({
     cardID, position, type,
@@ -15,26 +23,24 @@ const ChallengeCard = ({
     return <Window
         cardID={cardID}
         position={position}
-        title={`Challenge #{ID}`}
+        title={`Challenge #${ID}`}
         onClose={onClose}
         onDrag={handleDrag}
     >
-        <div className="p-3">
-            <h3>{name}</h3>
+        <ChallengeCardWrap className="p-3">
+            <h3 className="font-punk">{name}</h3>
             <div>
                 <p>{description}</p>
             </div>
             <div>
                 {(tags?.length > 0) &&
-                    <div>
+                    <div style={{ fontSize: '13px' }}>
                         <span><b>Tags: </b></span>
-                        {tags.map((t) =>
-                            <span>{t}</span>
-                        )}
+                        {tags}
                     </div>
                 }
             </div>
-        </div>
+        </ChallengeCardWrap>
     </Window>;
 
 };
