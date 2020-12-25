@@ -46,7 +46,7 @@ const customConfig = {
     },
 
     env: {
-        domain: 'https://play.inctf.in/junior',
+        domain: 'http://95.217.217.203/junior',
     }
 
 };
