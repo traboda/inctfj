@@ -11,7 +11,7 @@ const UserBadgeCard = styled.div`
     padding-left: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
-    min-width: 15vw;
+    min-width: 10vw;
     clip-path: polygon(1063px 0px, 98.01% 72px, 21px 98.57%, -39px 0px, 146px -18.82%, 22px -9px, 139px -20px, 10px -117.35%);
     user-select: none;
 `;
@@ -31,18 +31,12 @@ const RankView = styled.div`
 `
 
 const UserCard = ({
-    username, score, rank=1, total=50,
+    score
 }) => {
 
     return <UserBadgeCard>
         <div>
             <div className="row p-0 mx-0">
-                <div className="col-4 px-1">
-                    <RankView>
-                        <b>#{rank}</b>/{total}
-                        <span>My Rank</span>
-                    </RankView>
-                </div>
                 <div className="col-4 px-1">
                     <RankView>
                         <b>{score}</b>pts

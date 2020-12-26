@@ -40,7 +40,7 @@ const ChallengesLister = ({ currentChallengeID, onSelectChallenge }) => {
     const [categories, setCategories] = useState([]);
 
     const fetchChallenges = () => {
-        APIFetch({ query: challengesQuery }).then(({ success, data, errors}) => {
+        APIFetch({ query: challengesQuery }).then(({ success, data, errors }) => {
             if(success) {
                 const challenges = data.challenges;
                 setCategories(Object.entries(_.groupBy(challenges, 'categories')));

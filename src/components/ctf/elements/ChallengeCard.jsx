@@ -30,7 +30,18 @@ const ChallengeCard = ({
         <ChallengeCardWrap className="p-3">
             <h3 className="font-punk">{name}</h3>
             <div>
-                <p>{description}</p>
+                <div dangerouslySetInnerHTML={{ __html: description }} />
+            </div>
+            <div>
+                {(files?.length > 0) &&
+                <div style={{ fontSize: '13px' }}>
+                    <div><b>Files: </b></div>
+                    <div>
+                        {files.map((f) =>
+                            <a href={`https://play.inctf.in/junior/files/${ID}/${f}`}>{f}</a>
+                        )}
+                    </div>
+                </div>}
             </div>
             <div>
                 {(tags?.length > 0) &&

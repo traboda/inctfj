@@ -54,9 +54,7 @@ const TopBar = styled.div`
     }
 `;
 
-const FlagSubmitter = ({
-
-}) => {
+const FlagSubmitter = () => {
 
     const [flag, setFlag] = useState('');
     const [isSubmitting, setSubmitting] = useState(false)
