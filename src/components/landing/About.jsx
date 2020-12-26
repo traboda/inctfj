@@ -89,7 +89,7 @@ const LandingAboutInCTF = () => {
                             </p>
                         </div>
                         <div className="d-flex px-2 mt-3 justify-content-center justify-content-md-start align-items-center">
-                            <a style={{ background: '#E65100' }} title="Learn more about InCTF Jr" href="/about">More About InCTF Jr.</a>
+                            <a style={{ background: '#E65100' }} title="Learn more about InCTF Jr" href="/about">About InCTF Jr.</a>
                             <a  style={{ background: '#4A148C' }} title="View FAQ" href="/faq">View FAQ</a>
                         </div>
                         <div className="features-list mt-2 py-2">
