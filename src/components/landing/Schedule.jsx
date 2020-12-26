@@ -23,28 +23,30 @@ const Schedule = () => {
             "image": require('../../assets/images/photos/guests/dr_krishnasree.jpg')
         },
         {
-            "timing": "03:25 - 03:30 PM",
-            "event": "InCTF Contest Details",
-            "presenter": "Prof. Vipin Pavithran",
-            "desg": "Founder & Chief Mentor - team bi0s & InCTF",
-            "image": require('../../assets/images/photos/guests/prof_vipin.jpg')
-        },
-        {
-            "timing": "03:30 - 03:50 PM",
+            "timing": "03:25 - 03:45 PM",
             "event": "KeyNote Address",
             "presenter": "Dr. Biswajit Saha",
             "desg": "Director, Vocational Education & Skill Training, CBSE",
             "image": require('../../assets/images/photos/guests/dr_biswajit.jpg')
         },
         {
-            "timing": "03:55 - 04:00 PM",
+            "timing": "03:45 - 03:50 PM",
+            "event": "InCTF Contest Details",
+            "presenter": "Prof. Vipin Pavithran",
+            "desg": "Founder & Chief Mentor - team bi0s & InCTF",
+            "image": require('../../assets/images/photos/guests/prof_vipin.jpg')
+        },
+        {
+            "timing": "03:50 - 04:00 PM",
             "event": "Vote of Thanks",
+            "presenter": "Prof. Sumeet Bahl",
+            "desg": "Director, Amrita Center for Research Collaborations",
+            "image": require('../../assets/images/photos/guests/sumeet_bahl.jpeg')
         }
     ]
 
     return <div>
         <div className="container-lg px-3 py-5">
-            <h3 className="font-weight-bold">Event Schedule</h3>
             <div className="row mt-3 mb-4 px-1 mx-0">
                 <div className="col-md-4 d-flex align-items-center justify-content-center p-1 mb-3">
                     <Fade left>
@@ -80,6 +82,7 @@ const Schedule = () => {
                     </Fade>
                 </div>
             </div>
+            <h3 className="font-weight-bold">Event Schedule</h3>
             <h5 style={{ color: '#FF6F00' }}>Opening Ceremony</h5>
             <div className="row d-none d-md-flex font-weight-bold mx-0 py-2 border-bottom">
                 <div className="col-md-3  d-flex align-items-center p-1">
