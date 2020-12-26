@@ -46,7 +46,7 @@ const customConfig = {
     },
 
     env: {
-        domain: 'http://95.217.217.203/junior',
+        domain: 'http://play.az3z3l.ml/junior',
     }
 
 };
