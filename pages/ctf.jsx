@@ -44,7 +44,10 @@ const DashboardPage = () => {
     <Base meta={{ title: "CTF Arena" }}>
         { CTFMode ? <CTFModule /> :
         <div className="bg-dark min-vh-100 d-flex align-items-center text-light justify-content-center">
-            {statusFetched ? <h1>CTF NOT STARTED</h1> : <h1>Loading CTF</h1>}
+            {statusFetched ?
+                <h1>Checkout Traboda</h1> :
+                <h1>Loading CTF</h1>
+            }
         </div>
         }
     </Base> : <Base meta={{ title: "Login required" }}>
