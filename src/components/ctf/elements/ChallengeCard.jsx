@@ -1,5 +1,8 @@
 import React from 'react';
+import shortid from 'shortid';
 import styled from "@emotion/styled";
+import ReactMarkdown from 'react-markdown'
+const gfm = require('remark-gfm')
 
 import Window from "./Window";
 
@@ -12,12 +15,12 @@ const ChallengeCardWrap = styled.div`
 
 const ChallengeCard = ({
     cardID, position, type,
-    ID, name, description, tags, files,
+    ID, name, description, tags, file,
     onDrag = () => {}, onClose = () => {}
 }) => {
 
     const handleDrag = (e, position) => { onDrag({
-        cardID, type, position, ID, name, description, tags, files,
+        cardID, type, position, ID, name, description, tags, file,
     }); }
 
     return <Window
@@ -30,11 +33,22 @@ const ChallengeCard = ({
         <ChallengeCardWrap className="p-3">
             <h3 className="font-punk">{name}</h3>
             <div>
-                <p>{description}</p>
+                <ReactMarkdown plugins={[gfm]} children={description} />
             </div>
-            <div>
+            <div className="my-2">
+                {(file?.length > 0) &&
+                <div style={{ fontSize: '13px' }}>
+                    <div><b>Files: </b></div>
+                    <div>
+                        {file.map((f) =>
+                            <a key={shortid.generate()} className="d-block my-2" href={`https://play.inctf.in/junior/files/${ID}/${f}`}>{f}</a>
+                        )}
+                    </div>
+                </div>}
+            </div>
+            <div className="my-2">
                 {(tags?.length > 0) &&
-                    <div style={{ fontSize: '13px' }}>
+                    <div key={shortid.generate()} style={{ fontSize: '13px' }}>
                         <span><b>Tags: </b></span>
                         {tags}
                     </div>
