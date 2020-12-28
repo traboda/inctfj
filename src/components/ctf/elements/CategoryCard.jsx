@@ -5,7 +5,7 @@ import Window from "./Window";
 
 const CategoryCard = ({
     cardID, position, type,
-    name, slug, challenges,
+    name, slug, challenges, solvedChallenges,
     onSelectChallenge = () => {}, onDrag = () => {}, onClose = () => {}
 }) => {
 
@@ -28,7 +28,11 @@ const CategoryCard = ({
         <div className="row mx-0">
             {challenges.map((c) =>
                 <div key={shortid.generate()} className="col-6 p-2">
-                    <ChallengeItem {...c} onClick={() => onSelectChallenge(c)} />
+                    <ChallengeItem
+                        isSolved={solvedChallenges?.length > 0 ? solvedChallenges.includes(c.ID) : false}
+                        {...c}
+                        onClick={() => onSelectChallenge(c)}
+                    />
                 </div>
             )}
         </div>

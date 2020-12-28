@@ -36,6 +36,7 @@ const CTFModule = () => {
 
     const [categories, setCategories] = useState([]);
     const [myProfile, setMyProfile] = useState(null);
+    const [solvedChallenges, setSolvedChallenges] = useState([]);
 
     const [firstPos, setFirstPos] = useState({ x: 120, y: -500, isSet: false });
     const [windows, setWindows] = useState([
@@ -84,6 +85,14 @@ const CTFModule = () => {
     const fetchMyScore = () => {
         APIFetch({ query: myQuery }).then(({ success, data, errors}) => {
             if(success){
+                if(data?.me?.solved?.length > 0){
+                    let ids = []
+                    data.me.solved.map((c) => {
+                        ids.push(c.challenge.ID)
+                    });
+                    setSolvedChallenges([...ids]);
+                    console.log('solved challenges - ', ids);
+                }
                 setMyProfile(data.me);
             }
         })
@@ -117,7 +126,12 @@ const CTFModule = () => {
         {windows.map((c) => {
             if(c.type === 'challenge') {
                 return <ChallengeCard
-                    id={c.id} {...c}
+                    id={c.ID} {...c}
+                    isSolved={
+                        solvedChallenges?.length > 0 ?
+                            solvedChallenges.includes(c?.ID)
+                        : false
+                    }
                     key={c.cardID}
                     onDrag={handleDragCard}
                     onClose={handleCloseCard}
@@ -126,6 +140,7 @@ const CTFModule = () => {
                 return <CategoryCard
                     key={c.cardID}
                     {...c}
+                    solvedChallenges={solvedChallenges}
                     onSelectChallenge={handleOpenChallenge}
                     onDrag={handleDragCard}
                     onClose={handleCloseCard}

@@ -50,8 +50,8 @@ const DashboardPage = () => {
                     <h1>Loading CTF</h1>
                     <div className="mb-2">Not loading? Please report it to discord, to get help.</div>
                     <div>
-                        The CTF Arena may be slow to load due to high traffic at the moment.
-                        Know what never gets slow? Traboda, checkout after InCTF Jr!
+                        The CTF Arena may be slow to load due to high traffic at the moment. <br />
+                        Know what never gets slow? Traboda! checkout after InCTF Jr...
                     </div>
                 </div>
             }

@@ -46,7 +46,11 @@ const ChallengeItemContainer = styled.button`
     display: block;
     color: black;
     min-height: 10vh;
-    background: repeating-linear-gradient( -45deg, transparent 4px, #750 0, #750 6px, transparent 0, transparent 9px ), rgba(255, 214, 0, 0.9);
+    background: ${({isSolved}) => 
+        isSolved ?
+            `repeating-linear-gradient( -45deg, transparent 4px, #3A3 0, #3A3 6px, transparent 0, transparent 9px ), rgba(255, 214, 0, 0.9)` :
+            `repeating-linear-gradient( -45deg, transparent 4px, #750 0, #750 6px, transparent 0, transparent 9px ), rgba(255, 214, 0, 0.9)`
+    };
     background-size: 50% 12px;
     background-position: 99.6% calc(100% - 3px), 0 0;
     background-repeat: no-repeat;
@@ -91,15 +95,15 @@ const ChallengeItemContainer = styled.button`
 `;
 
 const ChallengeItem = ({
-    ID: id, name, points, solves, onClick = () => {}
+    ID: id, name, points, solves, onClick = () => {}, isSolved,
 }) => {
 
-    return <ChallengeItemContainer onClick={onClick}>
+    return <ChallengeItemContainer isSolved={isSolved} onClick={onClick}>
         <div className="glitch">
-            <h3>{name}</h3>
+            <h3>{name} {isSolved && `{Solved}`}</h3>
             <div className="mb-2">{points} Pts | {solves} Solves</div>
         </div>
-        <h3>{name}</h3>
+        <h3>{name} {isSolved && ' (Solved)'}</h3>
         <div className="mb-2">{points} Pts | {solves} Solves</div>
     </ChallengeItemContainer>
 

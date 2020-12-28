@@ -16,6 +16,7 @@ const ChallengeCardWrap = styled.div`
 const ChallengeCard = ({
     cardID, position, type,
     ID, name, description, tags, file,
+    isSolved,
     onDrag = () => {}, onClose = () => {}
 }) => {
 
@@ -31,7 +32,7 @@ const ChallengeCard = ({
         onDrag={handleDrag}
     >
         <ChallengeCardWrap className="p-3">
-            <h3 className="font-punk">{name}</h3>
+            <h3 className="font-punk">{name} {isSolved && ' (Solved)'}</h3>
             <div>
                 <ReactMarkdown plugins={[gfm]} children={description} />
             </div>
