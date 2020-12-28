@@ -119,18 +119,16 @@ const LoginCard = () => {
             endpoint: "/api/login"
         }).then((resp) => {
             // credits to the backend team
-            setTimeout(() => {
-                if(Object.prototype.hasOwnProperty.call(resp, 'Error')){
-                    setLoggingIn(false);
-                    if(resp['Error'] === 'ok'){
-                        setUserInfo({ loggedIn: true });
-                        router.push('/dashboard');
-                        console.log(resp);
-                    } else {
-                        setError(resp['Error']);
-                    }
+            if(Object.prototype.hasOwnProperty.call(resp, 'Error')){
+                setLoggingIn(false);
+                if(resp['Error'] === 'ok'){
+                    setUserInfo({ loggedIn: true });
+                    router.push('/dashboard');
+                    console.log(resp);
+                } else {
+                    setError(resp['Error']);
                 }
-            }, 500);
+            }
         })
     };
 
