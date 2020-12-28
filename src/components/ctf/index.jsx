@@ -107,7 +107,7 @@ const CTFModule = () => {
 
     return<CTFModuleWrap bg={require('../../assets/images/backgrounds/cyberpunk/platform_2.jpg')}>
         <BrandingView />
-        <FlagSubmitter />
+        <FlagSubmitter onAccept={fetchMyScore} />
         {myProfile && <UserCard {...myProfile} />}
         <CategoryIcons categories={categories} onOpenCategory={handleOpenCategory} />
         {windows.map((c) => {

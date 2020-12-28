@@ -54,7 +54,7 @@ const TopBar = styled.div`
     }
 `;
 
-const FlagSubmitter = () => {
+const FlagSubmitter = ({ onAccept = () => {} }) => {
 
     const [flag, setFlag] = useState('');
     const [isSubmitting, setSubmitting] = useState(false)
@@ -68,6 +68,7 @@ const FlagSubmitter = () => {
             if(success) {
                 setSubmitting(false);
                 if(data.flag_submit === "Congratulations on the solve"){
+                    onAccept();
                     setSuccessful(true);
                 } else { setSuccessful(false) };
             }

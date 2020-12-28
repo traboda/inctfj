@@ -35,14 +35,10 @@ const UserCard = ({
 
     return <UserBadgeCard>
         <div>
-            <div className="row p-0 mx-0">
-                <div className="col-4 px-1">
-                    <RankView>
-                        <div><b>{score}</b>pts</div>
-                        <div>My Score</div>
-                    </RankView>
-                </div>
-            </div>
+            <RankView>
+                <div><b>{score}</b>pts</div>
+                <div>My Score</div>
+            </RankView>
         </div>
     </UserBadgeCard>
 
