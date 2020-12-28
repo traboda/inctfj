@@ -46,11 +46,12 @@ const Footer = styled.div`
         right: 0;
         bottom: 0;
         clip-path: polygon(8px 100%, 8px 45%, 22px 1%, 100% 0%, 100% 100%);
-        button {
+        a {
             background: #fc0;
             border: none!important;
             padding: 3px 5px;
             outline: none!important;
+            text-decoration: none!important;
             &:focus, &:hover {
                color: #005cbf;
             }
@@ -88,8 +89,8 @@ const BrandingView = () => {
                 <div className="col-4 d-flex justify-content-end px-0">
                     <div className="footer-right-card">
                         <div className="px-3">
-                            <button> // Rules // </button>
-                            <button> // Help // </button>
+                            <a href="/rules" target="_blank"> // Rules // </a>
+                            <a href="https://discord.gg/rqF3ZkeTrY" target="_blank"> // Help // </a>
                         </div>
                     </div>
                 </div>
