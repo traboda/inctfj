@@ -26,7 +26,6 @@ const RankView = styled.div`
         font-size: 20px;
         font-weight: 600;
         line-height: 1;
-        padding: 0 2.5px;
     }
 `
 
@@ -39,8 +38,8 @@ const UserCard = ({
             <div className="row p-0 mx-0">
                 <div className="col-4 px-1">
                     <RankView>
-                        <b>{score}</b>pts
-                        <span>My Score</span>
+                        <div><b>{score}</b>pts</div>
+                        <div>My Score</div>
                     </RankView>
                 </div>
             </div>

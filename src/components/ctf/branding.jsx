@@ -47,7 +47,7 @@ const Footer = styled.div`
         bottom: 0;
         clip-path: polygon(8px 100%, 8px 45%, 22px 1%, 100% 0%, 100% 100%);
         a {
-            background: #fc0;
+            color: black!important;
             border: none!important;
             padding: 3px 5px;
             outline: none!important;
