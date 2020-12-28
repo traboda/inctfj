@@ -105,7 +105,11 @@ const CTFModule = () => {
         setWindows([...newList]);
     };
 
-    return<CTFModuleWrap bg={require('../../assets/images/backgrounds/cyberpunk/platform_2.jpg')}>
+    const randomIntFromInterval = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+    return<CTFModuleWrap
+        bg={require(`../../assets/images/backgrounds/cyberpunk/platform_${randomIntFromInterval(1,8)}.jpg`)}
+    >
         <BrandingView />
         <FlagSubmitter onAccept={fetchMyScore} />
         {myProfile && <UserCard {...myProfile} />}
