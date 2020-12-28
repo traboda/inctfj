@@ -28,11 +28,13 @@ const NotificationsWindow = ({
      onDrag = () => {}, onClose = () => {}
  }) => {
     const [data, setData] = useState(null);
+    const [isLoaded, setLoaded] = useState(false);
 
     const handleDrag = (e, position) => { onDrag({cardID, type, position}); }
 
     const fetchNotifications = () => {
         APIFetch({ query: notificationsQuery }).then(({ data, errors, success }) => {
+            setLoaded(true);
             if(success) {
                 setData(data.notify);
             }
@@ -53,7 +55,11 @@ const NotificationsWindow = ({
     >
         <div className="p-2">
             <h3>Notifications</h3>
-            {data?.length > 0 ?
+            {!isLoaded ?
+            <div>
+                <h5>Fetching Notifications</h5>
+            </div> :
+            data?.length > 0 ?
             <div>
                 {data.map((n) =>
                     <NotificationContainer key={shortid.generate()}>
@@ -61,14 +67,10 @@ const NotificationsWindow = ({
                         <p>{n.description}</p>
                     </NotificationContainer>
                 )}
-            </div> : data?.length === 0 ?
-                <div>
-                    <h5>No Notifications Found</h5>
-                </div> :
-                <div>
-                    <h5>Fetching Notifications</h5>
-                </div>
-            }
+            </div> :
+            <div>
+                <h5>No Notifications Found</h5>
+            </div>}
         </div>
     </Window>
 

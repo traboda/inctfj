@@ -18,7 +18,7 @@ import ScoreboardWindow from "./Leaderboard";
 
 
 const CTFModuleWrap = styled.div`
-    background: ${({bg}) => bg ? `url(${bg})` : null};
+    background: ${({bg}) => bg ? `url(${bg})` : '#000' };
     background-size: cover;
     height: 100vh;
     width: 100%;
