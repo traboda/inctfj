@@ -32,7 +32,7 @@ const LoginPage = () => {
 
     useEffect(() => {
         if(isLoggedIn && hasLoaded) {
-            router.push('/dashboard');
+            router.push('/ctf');
         }
     }, [hasLoaded]);
 

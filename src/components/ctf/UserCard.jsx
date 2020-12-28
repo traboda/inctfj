@@ -7,10 +7,7 @@ const UserBadgeCard = styled.div`
     top: 0;
     background: #fc0;
     text-align: right;
-    padding-right: 5px!important;
-    padding-left: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px 15px;
     min-width: 10vw;
     clip-path: polygon(1063px 0px, 98.01% 72px, 21px 98.57%, -39px 0px, 146px -18.82%, 22px -9px, 139px -20px, 10px -117.35%);
     user-select: none;
