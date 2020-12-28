@@ -105,7 +105,7 @@ const CTFModule = () => {
         setWindows([...newList]);
     };
 
-    return<CTFModuleWrap bg={require('../../assets/images/backgrounds/cyberpunk/platform.jpg')}>
+    return<CTFModuleWrap bg={require('../../assets/images/backgrounds/cyberpunk/platform_2.jpg')}>
         <BrandingView />
         <FlagSubmitter />
         {myProfile && <UserCard {...myProfile} />}
