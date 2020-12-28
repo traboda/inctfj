@@ -16,7 +16,7 @@ const RulePage = () => {
                     <li>Sharing flags or solutions during the CTF is prohibited.</li>
                     <li>If you have any queries regarding any challenge you can contact us on Discord - https://discord.gg/rqF3ZkeTrY</li>
                     <li>All updates and hints will be posted on the Announcements page and on our Twitter account @InCTF.</li>
-                    <li>The format of the flag is {`inctf{...}`} unless stated otherwise!</li>
+                    <li>The format of the flag is {`inctfj{...}`} unless stated otherwise!</li>
                     <li>If you are not sure if something is violating the rules, ask us on Discord.</li>
                     <li>The decision of organisers will be final.</li>
                     <li>By participating in the contest, you agree that you have read the above rules and fully agree to adhere to them. Any participant team violating any of the above rules will be disqualified from the contest.</li>

@@ -17,7 +17,6 @@ const WindowContainer = styled.div`
     p, h1, h2, h3, h4, h5, h6 {
       cursor: auto;
     }
-    cursor: move;
     .window-body {
        width: 100%;
        height: 100%;
@@ -88,9 +87,9 @@ const Window = ({
             defaultSize={{ width: defaultWidth, height: defaultHeight }}
             bounds="parent"
         >
-                <WindowContainer className="font-punk handle">
+                <WindowContainer className="font-punk">
                     <Fade style={{ height: '100%' }}>
-                    <TopBar>
+                    <TopBar className="handle">
                         <div className="glitch">
                             <div className="row mx-0">
                                 <div className="col-9 px-1 d-flex align-items-center">
