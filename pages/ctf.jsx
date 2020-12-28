@@ -47,11 +47,20 @@ const DashboardPage = () => {
             {statusFetched ?
                 <h1>Checkout Traboda</h1> :
                 <div className="text-center">
-                    <h1>Loading CTF</h1>
+                    <h1 className="mb-3">Loading CTF Arena</h1>
                     <div className="mb-2">Not loading? Please report it to discord, to get help.</div>
                     <div>
                         The CTF Arena may be slow to load due to high traffic at the moment. <br />
                         Know what never gets slow? <a className="text-warning" href="https://traboda.com/register/" target="_blank">Traboda</a>! (ps: checkout after InCTF Jr)
+                    </div>
+                    <div className="mt-5">
+                        <a className="text-warning" href="https://traboda.com/register/" target="_blank">
+                            <img
+                                src={require('../src/assets/images/logos/traboda_light.png')}
+                                style={{ width: '220px', maxWidth: '100%' }}
+                                alt="Traboda"
+                            />
+                        </a>
                     </div>
                 </div>
             }
