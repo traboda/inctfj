@@ -130,7 +130,7 @@ const TopBar = ({ includeSpace = true, darkenOnSidebar = false }) => {
                                     <div>InCTF Jr 5.0</div>
                                     <h5>Dec. 28, 2020</h5>
                                 </div>
-                                {(hasLoaded && !isLoggedIn) && <a href="/register">Register</a>}
+                                {/*{(hasLoaded && !isLoggedIn) && <a href="/register">Register</a>}*/}
                             </TopbarInfoCard>
                         </div>
                     </div>

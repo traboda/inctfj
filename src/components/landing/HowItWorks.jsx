@@ -77,11 +77,11 @@ const LandingHowItWorks = () => {
                 and prizes, and they will also get access to exclusive online cyber-security training
                 following the contest. All other participants will also receive certificates.
             </>,
-            "links": [
-                {
-                    "title": "get started", "url": "/register"
-                }
-            ]
+            // "links": [
+            //     {
+            //         "title": "get started", "url": "/register"
+            //     }
+            // ]
         }
     ]
 

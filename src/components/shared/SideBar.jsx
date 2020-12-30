@@ -151,7 +151,7 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
                     {!isLoggedIn && <OnBoardingCard>
                         <p>Let's get started, right away!</p>
                         <div className="d-flex w-100 align-items-center justify-content-center">
-                            <a className="plain-link mr-1" href="/register">Register</a>
+                            {/*<a className="plain-link mr-1" href="/register">Register</a>*/}
                             <a className="plain-link" style={{ background: '#4A148C' }} href="/login">Login</a>
                         </div>
                     </OnBoardingCard>}
@@ -164,12 +164,12 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
                             </button>}
                         </li>
                     )}</ol>
-                    <div className="my-3 mx-2">
-                        {!isLoggedIn && <RegisterFooterButton className="plain-link" href="/register">
-                            Register Now
-                            <img alt="Register now" src={require('../../assets/images/icons/chevron_right.png')}/>
-                        </RegisterFooterButton>}
-                    </div>
+                    {/*<div className="my-3 mx-2">*/}
+                    {/*    {!isLoggedIn && <RegisterFooterButton className="plain-link" href="/register">*/}
+                    {/*        Register Now*/}
+                    {/*        <img alt="Register now" src={require('../../assets/images/icons/chevron_right.png')}/>*/}
+                    {/*    </RegisterFooterButton>}*/}
+                    {/*</div>*/}
                     <SocialMediaLinks>
                         <a target="_blank" href="https://www.instagram.com/juniorinctf/"><img src={require('../../assets/images/icons/instagram.png')} /></a>
                         <a target="_blank" href="https://twitter.com/InCTFj"><img src={require('../../assets/images/icons/twitter.png')} /></a>

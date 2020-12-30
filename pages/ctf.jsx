@@ -25,6 +25,7 @@ const DashboardPage = () => {
         }
     }, [hasLoaded, isLoggedIn]);
 
+
     const fetchCTFStatus = () => {
         if(hasLoaded){
             APIFetch({ query: statusFetchQuery }).then(
