@@ -39,8 +39,7 @@ const LandingQuickInfo = () => {
         {
             image: require('../../assets/images/icons/calendar.png'), up: true,
             question: "When?", answer: <>
-                <div>09:00 AM, Dec. 28 to</div>
-                09:00 PM, Dec. 29 (36 Hrs)
+                2021 edition to be announced.
             </>
         },
         {

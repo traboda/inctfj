@@ -18,6 +18,19 @@ const ContactsBarSection = styled.section`
     }
 `;
 
+const FooterLinksBar = styled.nav`
+    a {
+       font-size: 13px;
+       color: #eee;
+       margin-right: 8px;
+       margin-bottom: 5px;
+       &:hover {
+         color: #fd7e14;
+         text-decoration: none;
+       }
+    }
+`
+
 const LandingContactsBar = () => {
 
     return <ContactsBarSection>
@@ -35,7 +48,7 @@ const LandingContactsBar = () => {
                 <div className="col-md-4 p-2 d-flex align-items-center justify-content-md-center">
                     <img alt="discord" src={require('../../assets/images/logos/discord.png')} />
                     <div>
-                        <div>Join Our Discord Server</div>
+                        <div>JOIN DISCORD COMMUNITY</div>
                         <h5><a href="https://discord.gg/rqF3ZkeTrY" rel="noopener noreferrer" target="_blank" className="plain-link">discord.gg/rqF3ZkeTrY</a></h5>
                     </div>
                 </div>
@@ -50,7 +63,14 @@ const LandingContactsBar = () => {
                 </div>
             </Fade>
             <div className="col-md-8 text-center text-md-left h-100 d-flex align-items-center pt-4 px-2">
-                 <div>&copy; Amrita InCTF 2016-2020. All Rights Reserved.</div>
+                <div>
+                    <div>&copy; Amrita InCTF 2016-2020. All Rights Reserved.</div>
+                    <FooterLinksBar>
+                        <a href="/branding">Brand Kit</a>
+                        <a href="/privacy">Privacy Policy</a>
+                        <a href="/rules">Rules</a>
+                    </FooterLinksBar>
+                </div>
             </div>
             <div className="social-bar col-md-4 d-flex align-items-center justify-content-md-end justify-content-center p-2">
                 <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/juniorinctf/"><img alt="instagram" src={require('../../assets/images/icons/instagram.png')} /></a>
