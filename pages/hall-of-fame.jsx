@@ -5,7 +5,7 @@ import Base from "../src/components/shared/Base";
 import TopBar from "../src/components/shared/TopBar";
 
 import leaderboard19 from '../src/data/hall-of-fame/2019';
-
+import leaderboard20 from '../src/data/hall-of-fame/2020';
 
 const Header = styled.section`
     min-height: 50vh;
@@ -40,67 +40,78 @@ const TabButton = styled.button`
 `;
 
 const FameCardWrap = styled.div`
-   background: white;
    height: 100%;
    box-shadow: 2px 3px 8px rgba(0,0,0,0.15);
-   position: relative;
+   font-size: 13px;
+   background: #111;
+   color: white;
+   border-radius: 3px;
    img {
       max-width: 100%;
       margin: 0;
       padding: 0;
    }
-   h3 {
-      font-size: 18px;
-      margin-bottom: 0;
-      font-weight: 600;
-      color: #005cbf;
-   }
    h4 { 
       font-size: 16px;
       margin-bottom: 0;
+      color: white;
+      img {
+         height: 32px;
+         margin-left: 5px;
+      }
    }
    span {
-      padding-right: 8px;
       font-size: 13px;
    }
-   .rank {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background: #E65100;
+   div {
+      line-height: 1.25;
+      color: #AAA;
+   }
+   b {
       color: white;
-      padding: 5px 12px;
-      display: flex;
-      font-weight: 600;
-      align-items: center;
-      justify-content: center;
-      z-index: 600;
+   }
+   .rank {
+      font-size: 36px;
+      line-height: 1;
+      color: white;
    }
 `;
 
 
 const FameCard = ({
-    rank, username, name, state, age, points, avatar
+    rank, username, name, state, age, points, school, city, isQueen
 }) => {
 
     return <FameCardWrap>
-        <div className="row mx-0">
-            <div className="rank">#{rank}</div>
-            <div className="col-4 px-0">
-                <img alt={username} src={avatar ? avatar : require('../src/data/hall-of-fame/photos/placeholder.png')} />
+        <div className="row mx-0 p-2">
+            <div className="col-2 text-right justify-content-center align-items-center d-flex p-2">
+                {
+                    rank === 1 ? <img src={require('../src/assets/images/icons/crown.png')} /> :
+                        rank === 2 ? <img src={require('../src/assets/images/icons/viking.png')} /> :
+                            rank === 3 ? <img src={require('../src/assets/images/icons/samurai.png')} /> :
+                                isQueen ? <img src={require('../src/assets/images/icons/queen.png')} />
+                                    : <div className="rank">{rank}. </div>
+                }
             </div>
-            <div className="col-8 p-2">
-                <h3>@{username}</h3>
-                <h4>{name}</h4>
-                {(age || state || points) &&
+            <div className="col-10 col-md-5 p-1">
+                <h4 className="font-weight-bold d-flex align-items-center mb-1">
+                    {name}
+
+                </h4>
+                <div className="mb-2">@{username}</div>
+                {(age || points) &&
                 <div>
-                    <span>{points} pts</span>
-                    {age && <span>{age} Yrs</span>}
-                    {state && <span>{state}</span>}
+                    <span className="pr-2"><b>{points}</b> pts</span>
+                    {age && <span><b>{age}</b> Yrs</span>}
                 </div>}
             </div>
+            <div className="col-md-5 d-flex align-items-center p-1">
+                <div>
+                    {school && <div style={{ fontSize: '15px' }} className="line-height-1 mb-1 text-warning">{school}</div>}
+                    {(city||state) && <div>{city}, {state}</div>}
+                </div>
+            </div>
         </div>
-
     </FameCardWrap>;
 
 };
@@ -110,7 +121,7 @@ const YearlyLeaderboard = ({ data }) => {
     return data.length > 0 ?
     <div className="row mx-0">
         {data.map((l) =>
-            <div className="col-md-6 col-lg-4 p-2">
+            <div className="col-md-6 p-1">
                 <FameCard {...l} />
             </div>
         )}
@@ -128,7 +139,7 @@ const HallOfFame = () => {
     const [year, setYear] = useState(2020);
 
     const editions = [
-        { "year": 2020, data: [] },
+        { "year": 2020, data: leaderboard20 },
         { "year": 2019, data: leaderboard19 },
         { "year": 2018, data: [] },
         { "year": 2017, data: [] },
@@ -144,7 +155,7 @@ const HallOfFame = () => {
             </div>
         </Header>
         <PageWrap>
-            <div className="container px-1 py-5">
+            <div className="container-lg px-1 py-5">
                 <div className="d-flex align-items-center">
                     {editions.map((y) =>
                         <TabButton isActive={y.year===year} onClick={() => setYear(y.year)}>{y.year}</TabButton>

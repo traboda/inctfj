@@ -5,7 +5,7 @@ export default [
         "name": "Pranav Krishna",
         "points": 1200,
         "age": 16,
-        "state": "Kerala"
+        "state": "Tamil Nadu"
     },
     {
         "rank": 2,

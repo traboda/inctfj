@@ -88,10 +88,10 @@ const LandingHeader = () => {
                     </span>
                     </p>
                 </Fade>
-                {/*<div>*/}
-                {/*    <a href="/register">REGISTER FOR InCTF Jr</a>*/}
-                {/*    <div className="limited-slots-warning">* limited slots left.</div>*/}
-                {/*</div>*/}
+                <div>
+                    <a href="/hall-of-fame">View Hall of Fame</a>
+                    {/*<div className="limited-slots-warning">* limited slots left.</div>*/}
+                </div>
             </div>
         </div>
     </HeaderContainer>;
