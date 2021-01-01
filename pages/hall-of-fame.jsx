@@ -6,6 +6,7 @@ import TopBar from "../src/components/shared/TopBar";
 
 import leaderboard19 from '../src/data/hall-of-fame/2019';
 import leaderboard20 from '../src/data/hall-of-fame/2020';
+import Select from "react-select";
 
 const Header = styled.section`
     min-height: 50vh;
@@ -77,14 +78,24 @@ const FameCardWrap = styled.div`
    }
 `;
 
+const IndianStates =
+[{"value":"IN-AN","label":"Andaman and Nicobar Islands"},{"value":"IN-AP","label":"Andhra Pradesh"},{"value":"IN-AR","label":"Arunachal Pradesh"},{"value":"IN-AS","label":"Assam"},{"value":"IN-BR","label":"Bihar"},{"value":"IN-CH","label":"Chandigarh"},{"value":"IN-CT","label":"Chhattisgarh"},{"value":"IN-DN","label":"Dadra and Nagar Haveli"},{"value":"IN-DD","label":"Daman and Diu"},{"value":"IN-DL","label":"Delhi"},{"value":"IN-GA","label":"Goa"},{"value":"IN-GJ","label":"Gujarat"},{"value":"IN-HR","label":"Haryana"},{"value":"IN-HP","label":"Himachal Pradesh"},{"value":"IN-JK","label":"Jammu and Kashmir"},{"value":"IN-JH","label":"Jharkhand"},{"value":"IN-KA","label":"Karnataka"},{"value":"IN-KL","label":"Kerala"},{"value":"IN-LA","label":"Ladakh"},{"value":"IN-LD","label":"Lakshadweep"},{"value":"IN-MP","label":"Madhya Pradesh"},{"value":"IN-MH","label":"Maharashtra"},{"value":"IN-MN","label":"Manipur"},{"value":"IN-ML","label":"Meghalaya"},{"value":"IN-MZ","label":"Mizoram"},{"value":"IN-NL","label":"Nagaland"},{"value":"IN-OR","label":"Odisha"},{"value":"IN-PY","label":"Puducherry"},{"value":"IN-PB","label":"Punjab"},{"value":"IN-RJ","label":"Rajasthan"},{"value":"IN-SK","label":"Sikkim"},{"value":"IN-TN","label":"Tamil Nadu"},{"value":"IN-TG","label":"Telangana"},{"value":"IN-TR","label":"Tripura"},{"value":"IN-UT","label":"Uttarakhand"},{"value":"IN-UP","label":"Uttar Pradesh"},{"value":"IN-WB","label":"West Bengal"}]
+
 
 const FameCard = ({
     rank, username, name, state, age, points, school, city, isQueen
 }) => {
 
+    const getStateName = () => {
+        if(IndianStates.filter((s) => s.value === state).length > 0){
+            return IndianStates.filter((s) => s.value === state)[0].label
+        }
+        return  state
+    }
+
     return <FameCardWrap>
         <div className="row mx-0 p-2">
-            <div className="col-2 text-right justify-content-center align-items-center d-flex p-2">
+            <div className="col-2 text-right justify-content-center align-items-center d-flex">
                 {
                     rank === 1 ? <img src={require('../src/assets/images/icons/crown.png')} /> :
                         rank === 2 ? <img src={require('../src/assets/images/icons/viking.png')} /> :
@@ -94,10 +105,7 @@ const FameCard = ({
                 }
             </div>
             <div className="col-10 col-md-5 p-1">
-                <h4 className="font-weight-bold d-flex align-items-center mb-1">
-                    {name}
-
-                </h4>
+                <h4 className="font-weight-bold">{name}</h4>
                 <div className="mb-2">@{username}</div>
                 {(age || points) &&
                 <div>
@@ -105,10 +113,10 @@ const FameCard = ({
                     {age && <span><b>{age}</b> Yrs</span>}
                 </div>}
             </div>
-            <div className="col-md-5 d-flex align-items-center p-1">
+            <div className="col-md-5 d-flex p-1">
                 <div>
                     {school && <div style={{ fontSize: '15px' }} className="line-height-1 mb-1 text-warning">{school}</div>}
-                    {(city||state) && <div>{city}, {state}</div>}
+                    {(city||state) && <div>{city}, {getStateName()}</div>}
                 </div>
             </div>
         </div>
@@ -118,9 +126,51 @@ const FameCard = ({
 
 const YearlyLeaderboard = ({ data }) => {
 
+    const [state, setState] = useState(null);
+
+    const applicableStates = () => {
+        let flags = [], output = [], l = data.length, i;
+        for( i=0; i<l; i++) {
+            if( flags[data[i].state]) continue;
+            flags[data[i].state] = true;
+            output.push(data[i].state);
+        }
+        return IndianStates.filter((s) => output.includes(s.value))
+    }
+
+    const getStateObj = () => {
+        let s = IndianStates.find((s) => s.value === state)
+        if(s) {
+            return s;
+        } else {
+            return null;
+        }
+    };
+
     return data.length > 0 ?
     <div className="row mx-0">
-        {data.map((l) =>
+        <div className="col-md-12 py-2 px-0">
+            <div className="row bg-white p-2 mx-0">
+                <div className="col-md-8">
+
+                </div>
+                <div className="col-md-4 px-0">
+                    <Select
+                        aria-label="user-state-selector"
+                        name="state"
+                        className="profile-editor-selector"
+                        classNamePrefix="profile-editor"
+                        options={[{ value: null, label: "All States/UT"}, ...applicableStates()]}
+                        menuPlacement="auto"
+                        placeholder="Filter by State/UT"
+                        noOptionsMessage={() => <div>No States/Provinces/UT could be found</div>}
+                        onChange={(s) => setState(s['value'])}
+                        value={getStateObj()}
+                    />
+                </div>
+            </div>
+        </div>
+        {data.filter((s) => state ? s.state === state : true ).map((l,index) =>
             <div className="col-md-6 p-1">
                 <FameCard {...l} />
             </div>
@@ -151,7 +201,7 @@ const HallOfFame = () => {
         <Header>
             <div className="mt-5">
                 <h1>Hall of Fame</h1>
-                <p>Past champions of InCTF Junior</p>
+                <p>Honouring past participants of InCTF Junior</p>
             </div>
         </Header>
         <PageWrap>

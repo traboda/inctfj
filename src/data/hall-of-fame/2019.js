@@ -5,7 +5,7 @@ export default [
         "name": "Pranav Krishna",
         "points": 1200,
         "age": 16,
-        "state": "Tamil Nadu"
+        "state": "IN-TN"
     },
     {
         "rank": 2,
@@ -13,7 +13,8 @@ export default [
         "name": "Nilabha Saha",
         "points": 1100,
         "age": "",
-        "state": "West Bengal"
+        "city": "Bengaluru",
+        "state": "IN-KA"
     },
     {
         "rank": 3,

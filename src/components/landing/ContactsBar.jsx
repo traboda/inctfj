@@ -64,7 +64,7 @@ const LandingContactsBar = () => {
             </Fade>
             <div className="col-md-8 text-center text-md-left h-100 d-flex align-items-center pt-4 px-2">
                 <div>
-                    <div>&copy; Amrita InCTF 2016-2020. All Rights Reserved.</div>
+                    <div>&copy; Amrita InCTF 2016-2021. All Rights Reserved.</div>
                     <FooterLinksBar>
                         <a href="/branding">Brand Kit</a>
                         <a href="/privacy">Privacy Policy</a>

@@ -6,7 +6,7 @@ export default [
         "age": 18,
         "points": 10125,
         "city": "Bhubaneshwar",
-        "state": "Odisha",
+        "state": "IN-OR",
         "school": "Kiit International School"
     },
     {
@@ -16,7 +16,7 @@ export default [
         "age": 17,
         "points": 9025,
         "city": "Bengaluru",
-        "state": "Karnataka",
+        "state": "IN-KA",
         "school": "Oxford Independent PU College"
     },
     {
@@ -26,7 +26,7 @@ export default [
         "age": 18,
         "points": 8425,
         "city": "Karaikal",
-        "state": "Puducherry",
+        "state": "IN-PY",
         "school": "Good Shepherd English School, Karaikal"
     },
     {
@@ -36,7 +36,7 @@ export default [
         "age": 15,
         "points": 8025,
         "city": "Chandigarh",
-        "state": "Chandigargh",
+        "state": "IN-CH",
         "school": "St. Stephen's School"
     },
     {
@@ -46,7 +46,7 @@ export default [
         "age": 17,
         "points": 7825,
         "city": "Bengaluru",
-        "state": "Karnataka",
+        "state": "IN-KA",
         "school": "Sri Jayachamrajendra Govt Polytechnic"
     },
     {
@@ -56,7 +56,7 @@ export default [
         "age": 15,
         "points": 7425,
         "city": "New Delhi",
-        "state": "NCT",
+        "state": "IN-DL",
         "school": "Hansraj Model School"
     },
     {
@@ -66,7 +66,7 @@ export default [
         "age": 17,
         "points": 7275,
         "city": "Chennai",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Amrita Vidyalayam, Chennai"
     },
     {
@@ -76,7 +76,7 @@ export default [
         "age": 16,
         "points": 7025,
         "city": "Kovaipudur",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "CS Academy"
     },
     {
@@ -86,7 +86,7 @@ export default [
         "age": 17,
         "points": 6975,
         "city": "Coimabtore",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Suguna PIP School"
     },
     {
@@ -96,7 +96,7 @@ export default [
         "age": 16,
         "points": 6825,
         "city": "Bengaluru",
-        "state": "Karnataka",
+        "state": "IN-KA",
         "school": "SSRVM Bangalore South"
     },
     {
@@ -106,7 +106,7 @@ export default [
         "age": 15,
         "points": 6575,
         "city": "Rajahmundry",
-        "state": "Andhra Pradesh",
+        "state": "IN-AP",
         "school": "open school"
     },
     {
@@ -116,7 +116,7 @@ export default [
         "age": 16,
         "points": 6375,
         "city": "Nagpur",
-        "state": "Maharashtra",
+        "state": "IN-MH",
         "school": "Scholars Convent"
     },
     {
@@ -126,7 +126,7 @@ export default [
         "age": 15,
         "points": 6275,
         "city": "Kochi",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Bhavans Vidya Mandir, Eroor"
     },
     {
@@ -136,7 +136,7 @@ export default [
         "age": 15,
         "points": 6225,
         "city": "Amritapuri",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Amrita Vidyalayam, Puthiyakavu"
     },
     {
@@ -146,7 +146,7 @@ export default [
         "age": 14,
         "points": 5875,
         "city": "Nagpur",
-        "state": "Maharashtra",
+        "state": "IN-MH",
         "school": "Scholars Convent"
     },
     {
@@ -156,7 +156,7 @@ export default [
         "age": 18,
         "points": 5875,
         "city": "Malappuram",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "GVHSS CHeruvannur"
     },
     {
@@ -166,7 +166,7 @@ export default [
         "age": 18,
         "points": 5750,
         "city": "Kolkata",
-        "state": "West Bengal",
+        "state": "IN-WB",
         "school": "Salt Lake School"
     },
     {
@@ -176,7 +176,7 @@ export default [
         "age": 16,
         "points": 5625,
         "city": "Palakkad",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Palghat Lions School"
     },
     {
@@ -186,7 +186,7 @@ export default [
         "age": 17,
         "points": 5425,
         "city": "Coimbatore",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Suguna PIP School"
     },
     {
@@ -196,7 +196,7 @@ export default [
         "age": 16,
         "points": 5075,
         "city": "Thiruvananthapuram",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Loyola School"
     },
     {
@@ -206,7 +206,7 @@ export default [
         "age": 17,
         "points": 5025,
         "city": "Coimbatore",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Suguna PIP School"
     },
     {
@@ -216,7 +216,7 @@ export default [
         "age": 16,
         "points": 4675,
         "city": "Trichy",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Amrita Vidyalayam"
     },
     {
@@ -226,7 +226,7 @@ export default [
         "age": 15,
         "points": 4550,
         "city": "Kochi",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Cochin Refineries School"
     },
     {
@@ -236,7 +236,7 @@ export default [
         "age": 16,
         "points": 4500,
         "city": "Thiruchendur",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "kamlavati senior secondary school"
     },
     {
@@ -246,7 +246,7 @@ export default [
         "age": 16,
         "points": 4350,
         "city": "Trichy",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Amrita Vidyalayam, Trichy"
     },
     {
@@ -256,7 +256,7 @@ export default [
         "age": 17,
         "points": 4275,
         "city": "Bharuch",
-        "state": "Gujarat",
+        "state": "IN-GJ",
         "school": "Amity School"
     },
     {
@@ -266,7 +266,7 @@ export default [
         "age": 17,
         "points": 4200,
         "city": "Rourkela",
-        "state": "Odisha",
+        "state": "IN-OR",
         "school": "St. Paul's School"
     },
     {
@@ -276,7 +276,7 @@ export default [
         "age": 16,
         "points": 4150,
         "city": "Kochi",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Cochin Refinaries School"
     },
     {
@@ -286,7 +286,7 @@ export default [
         "age": 15,
         "points": 3975,
         "city": "New Delhi",
-        "state": "NCT",
+        "state": "IN-DL",
         "school": "Amrita Vidyalayam"
     },
     {
@@ -296,7 +296,7 @@ export default [
         "age": 17,
         "points": 3925,
         "city": "Trichy",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Mount Litera Zee School, Trichy"
     },
     {
@@ -306,7 +306,7 @@ export default [
         "age": 17,
         "points": 3875,
         "city": "Karaikal",
-        "state": "Puducherry",
+        "state": "IN-PY",
         "school": "Kendriya Vidyalaya, Karaikal"
     },
     {
@@ -316,7 +316,7 @@ export default [
         "age": 16,
         "points": 3800,
         "city": "Kochi",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Cochin Refineries School"
     },
     {
@@ -326,7 +326,7 @@ export default [
         "age": 17,
         "points": 3600,
         "city": "Coimbatore",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Suguna PIP School"
     },
     {
@@ -336,7 +336,7 @@ export default [
         "age": 17,
         "points": 3550,
         "city": "Kumily",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "MES HSS"
     },
     {
@@ -346,7 +346,7 @@ export default [
         "age": 16,
         "points": 3225,
         "city": "Trichy",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Amrita Vidyalayam, Trichy"
     },
     {
@@ -356,7 +356,7 @@ export default [
         "age": 17,
         "points": 3150,
         "city": "Cuddalore",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Govt. Boys School,Tittagudi"
     },
     {
@@ -366,7 +366,7 @@ export default [
         "age": 16,
         "points": 3025,
         "city": "Palakkad",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Kendriya Vidyalaya ,Kanjikode"
     },
     {
@@ -376,7 +376,7 @@ export default [
         "age": 17,
         "points": 3025,
         "city": "Hyderabad",
-        "state": "Telangana",
+        "state": "IN-TG",
         "school": "The Hyderabad Public School, Begumpet"
     },
     {
@@ -386,7 +386,7 @@ export default [
         "age": 17,
         "points": 3000,
         "city": "Mandleshwar",
-        "state": "Madhya Pradesh",
+        "state": "IN-MP",
         "school": "Sandipani Academy"
     },
     {
@@ -396,7 +396,7 @@ export default [
         "age": 19,
         "points": 2925,
         "city": "Ranaghat",
-        "state": "West Bengal",
+        "state": "IN-WB",
         "school": "CJM"
     },
     {
@@ -406,7 +406,7 @@ export default [
         "age": 16,
         "points": 2825,
         "city": "Chennai",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Sri Sankara Senior Secondary School, Adyar"
     },
     {
@@ -416,7 +416,7 @@ export default [
         "age": 17,
         "points": 2650,
         "city": "Thane",
-        "state": "Maharashtra",
+        "state": "IN-MH",
         "school": "ANAND VISHWA GURUKUL AND JR. COLLEGE"
     },
     {
@@ -426,7 +426,7 @@ export default [
         "age": 15,
         "points": 2575,
         "city": "Gwalior",
-        "state": "Madhya Pradesh",
+        "state": "IN-MP",
         "school": "Delhi Public School, Airport Road, Gwalior"
     },
     {
@@ -436,7 +436,7 @@ export default [
         "age": 12,
         "points": 2500,
         "city": "Changanaserry",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "ST Therasa's High school"
     },
     {
@@ -446,7 +446,7 @@ export default [
         "age": 15,
         "points": 2475,
         "city": "Bengaluru",
-        "state": "Karnataka",
+        "state": "IN-KA",
         "school": "Yashasvi International School",
         "isQueen": true
     },
@@ -457,7 +457,7 @@ export default [
         "age": 16,
         "points": 2400,
         "city": "Bhubaneswar",
-        "state": "Odisha",
+        "state": "IN-OR",
         "school": "Rajdhani Higher Secondary School"
     },
     {
@@ -467,7 +467,7 @@ export default [
         "age": 14,
         "points": 2250,
         "city": "Pondicherry",
-        "state": "Puducherry",
+        "state": "IN-PY",
         "school": "Amrita Vidyalayam, Puducherry"
     },
     {
@@ -477,7 +477,7 @@ export default [
         "age": 14,
         "points": 2250,
         "city": "Ahmednagar",
-        "state": "Maharashtra",
+        "state": "IN-MH",
         "school": "Dr Vithal Rao Vikhe Patil English Medium School"
     },
     {
@@ -487,7 +487,7 @@ export default [
         "age": 17,
         "points": 2200,
         "city": "Kochi",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Cochin Refineries School"
     },
     {
@@ -497,7 +497,7 @@ export default [
         "age": 17,
         "points": 2100,
         "city": "vizianagaram",
-        "state": "Andhra Pradesh",
+        "state": "IN-AP",
         "school": "FIITJEE"
     },
     {
@@ -507,7 +507,7 @@ export default [
         "age": 16,
         "points": 2000,
         "city": "Kochi",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Amrita Vidyalayam"
     },
     {
@@ -517,7 +517,7 @@ export default [
         "age": 17,
         "points": 1950,
         "city": "Hyderabad",
-        "state": "Telangana",
+        "state": "IN-TG",
         "school": "FIITJEE"
     },
     {
@@ -527,7 +527,7 @@ export default [
         "age": 18,
         "points": 1950,
         "city": "Nagpur",
-        "state": "Maharashtra",
+        "state": "IN-MH",
         "school": "SFS"
     },
     {
@@ -537,7 +537,7 @@ export default [
         "age": 17,
         "points": 1900,
         "city": "Jodhpur",
-        "state": "Rajasthan",
+        "state": "IN-RJ",
         "school": "Central Academy"
     },
     {
@@ -547,7 +547,7 @@ export default [
         "age": 15,
         "points": 1875,
         "city": "Davangere",
-        "state": "Karnataka",
+        "state": "IN-KA",
         "school": "Amrita Vidyalayam"
     },
     {
@@ -557,7 +557,7 @@ export default [
         "age": 17,
         "points": 1875,
         "city": "Ahmedabad",
-        "state": "Gujarat",
+        "state": "IN-GJ",
         "school": "Amrita Vidyalayam, Ahmedabad"
     },
     {
@@ -567,7 +567,7 @@ export default [
         "age": 17,
         "points": 1850,
         "city": "Kolkata",
-        "state": "West Bengal",
+        "state": "IN-WB",
         "school": "Birla Bharati school"
     },
     {
@@ -577,7 +577,7 @@ export default [
         "age": 17,
         "points": 1800,
         "city": "Mainpuri",
-        "state": "Uttar Pradesh",
+        "state": "IN-UP",
         "school": "AVMD Institute Agra"
     },
     {
@@ -587,7 +587,7 @@ export default [
         "age": 16,
         "points": 1725,
         "city": "Kochi",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Bhavans Munshi Vidyashram, Thiruvankulam"
     },
     {
@@ -597,7 +597,7 @@ export default [
         "age": 16,
         "points": 1700,
         "city": "Trichy",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Amrita Vidyalayam, Trichy"
     },
     {
@@ -607,7 +607,7 @@ export default [
         "age": 16,
         "points": 1700,
         "city": "Trichy",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Amrita Vidyalayam, Trichy"
     },
     {
@@ -617,7 +617,7 @@ export default [
         "age": 17,
         "points": 1700,
         "city": "Trichy",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Amrita Vidyalayam, Trichy"
     },
     {
@@ -627,7 +627,7 @@ export default [
         "age": 16,
         "points": 1650,
         "city": "Ghaziabad",
-        "state": "Uttar Pradesh",
+        "state": "IN-UP",
         "school": "Ch. Chhabil Dass Public School"
     },
     {
@@ -637,7 +637,7 @@ export default [
         "age": 16,
         "points": 1650,
         "city": "Kochi",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Cochin Refineries School"
     },
     {
@@ -647,7 +647,7 @@ export default [
         "age": 16,
         "points": 1625,
         "city": "Chennai",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Sri Sankara Senior Secondary School"
     },
     {
@@ -657,7 +657,7 @@ export default [
         "age": 16,
         "points": 1600,
         "city": "Madurai",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "The TVS School, Madurai"
     },
     {
@@ -667,7 +667,7 @@ export default [
         "age": 16,
         "points": 1600,
         "city": "Madurai",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "The TVS School, Madurai"
     },
     {
@@ -677,7 +677,7 @@ export default [
         "age": 17,
         "points": 1600,
         "city": "Madurai",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "The TVS School, Madurai"
     },
     {
@@ -687,7 +687,7 @@ export default [
         "age": 16,
         "points": 1550,
         "city": "Bengaluru",
-        "state": "Karnataka",
+        "state": "IN-KA",
         "school": "Inventure Academy"
     },
     {
@@ -697,7 +697,7 @@ export default [
         "age": 18,
         "points": 1500,
         "city": "Chennai",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "SJCE"
     },
     {
@@ -707,7 +707,7 @@ export default [
         "age": 17,
         "points": 1425,
         "city": "Ahmedabad",
-        "state": "Gujarat",
+        "state": "IN-GJ",
         "school": "Amrita Vidyalayam, Ahmedabad"
     },
     {
@@ -717,7 +717,7 @@ export default [
         "age": 18,
         "points": 1400,
         "city": "Kochi",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "St.Mary's"
     },
     {
@@ -727,7 +727,7 @@ export default [
         "age": 14,
         "points": 1300,
         "city": "Belagavi",
-        "state": "Karnataka",
+        "state": "IN-KA",
         "school": "Amrita Vidyalayam"
     },
     {
@@ -737,7 +737,7 @@ export default [
         "age": 16,
         "points": 1275,
         "city": "Ahmedabad",
-        "state": "Gujarat",
+        "state": "IN-GJ",
         "school": "Amrita Vidyalayam, Ahmedabad"
     },
     {
@@ -747,7 +747,7 @@ export default [
         "age": 14,
         "points": 1200,
         "city": "Belagavi",
-        "state": "Karnataka",
+        "state": "IN-KA",
         "school": "Amrita Vidyalayam"
     },
     {
@@ -757,7 +757,7 @@ export default [
         "age": 17,
         "points": 1200,
         "city": "Madurai",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "SBOA Matric.Hr.Sec.School"
     },
     {
@@ -767,7 +767,7 @@ export default [
         "age": 14,
         "points": 1150,
         "city": "Delhi",
-        "state": "NCT",
+        "state": "IN-DL",
         "school": "DPS RK Puram"
     },
     {
@@ -777,7 +777,7 @@ export default [
         "age": 16,
         "points": 950,
         "city": "Madurai",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "SBOA MATRIC.HR.SEC SCHOOL"
     },
     {
@@ -787,7 +787,7 @@ export default [
         "age": 16,
         "points": 950,
         "city": "Madurai",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "The TVS School, Madurai"
     },
     {
@@ -797,7 +797,7 @@ export default [
         "age": 17,
         "points": 950,
         "city": "Ranebennur",
-        "state": "Karnataka",
+        "state": "IN-KA",
         "school": "GPT, HARIHAR"
     },
     {
@@ -807,7 +807,7 @@ export default [
         "age": 16,
         "points": 900,
         "city": "Kochi",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Cochin Refineries School"
     },
     {
@@ -817,7 +817,7 @@ export default [
         "age": 17,
         "points": 900,
         "city": "Kannur",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Amrita Vidyalayam"
     },
     {
@@ -827,7 +827,7 @@ export default [
         "age": 17,
         "points": 900,
         "city": "Thrissur",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Amrita Vidyalayam"
     },
     {
@@ -837,7 +837,7 @@ export default [
         "age": 17,
         "points": 900,
         "city": "Thrissur",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Amrita Vidyalayam"
     },
     {
@@ -847,7 +847,7 @@ export default [
         "age": 17,
         "points": 900,
         "city": "Manjeri",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "GBHSS, Manjeri"
     },
     {
@@ -857,7 +857,7 @@ export default [
         "age": 19,
         "points": 900,
         "city": "Vidyanagar",
-        "state": "Andhra Pradesh",
+        "state": "IN-AP",
         "school": "Amrita"
     },
     {
@@ -867,7 +867,7 @@ export default [
         "age": 15,
         "points": 850,
         "city": "Udaipur",
-        "state": "Rajasthan",
+        "state": "IN-RJ",
         "school": "Delhi Public School, Udaipur"
     },
     {
@@ -877,7 +877,7 @@ export default [
         "age": 16,
         "points": 750,
         "city": "Chennai",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "sri sankara"
     },
     {
@@ -887,7 +887,7 @@ export default [
         "age": 17,
         "points": 750,
         "city": "Delhi",
-        "state": "NCT",
+        "state": "IN-DL",
         "school": "Delhi public school, Dwarka"
     },
     {
@@ -897,7 +897,7 @@ export default [
         "age": 13,
         "points": 650,
         "city": "Jaipur",
-        "state": "Rajasthan",
+        "state": "IN-RJ",
         "school": "ModernSchool"
     },
     {
@@ -907,7 +907,7 @@ export default [
         "age": 16,
         "points": 650,
         "city": "Trichy",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Amrita Vidyalayam, Trichy"
     },
     {
@@ -917,7 +917,7 @@ export default [
         "age": 17,
         "points": 525,
         "city": "Chennai",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Swamy's Mat. Hr. Sec. School"
     },
     {
@@ -927,7 +927,7 @@ export default [
         "age": 13,
         "points": 500,
         "city": "Amritapuri",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Amrita Vidyalayam, Puthiyakavu"
     },
     {
@@ -937,7 +937,7 @@ export default [
         "age": 17,
         "points": 500,
         "city": "Thiruvalla",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Believers Church Residential School"
     },
     {
@@ -947,7 +947,7 @@ export default [
         "age": 11,
         "points": 450,
         "city": "Guntur",
-        "state": "Andhra Pradesh",
+        "state": "IN-AP",
         "school": "Narayana English Medium School"
     },
     {
@@ -957,7 +957,7 @@ export default [
         "age": 15,
         "points": 450,
         "city": "Coimbatore",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Amrita Vidyalayam Sr. Sec. School, Ettimadai"
     },
     {
@@ -967,7 +967,7 @@ export default [
         "age": 16,
         "points": 450,
         "city": "Aluva",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Cochin Refineries school"
     },
     {
@@ -977,7 +977,7 @@ export default [
         "age": 15,
         "points": 400,
         "city": "Thiruvananthapuram",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Sarvodaya Central Vidyalaya"
     },
     {
@@ -987,7 +987,7 @@ export default [
         "age": 15,
         "points": 350,
         "city": "Mavelikara",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Bishop Moore Vidyapith"
     },
     {
@@ -997,7 +997,7 @@ export default [
         "age": 16,
         "points": 350,
         "city": "Thoothukudi",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Amrita Vidyalayam"
     },
     {
@@ -1007,7 +1007,7 @@ export default [
         "age": 16,
         "points": 350,
         "city": "Ayiroor",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "MGM Model School"
     },
     {
@@ -1017,7 +1017,7 @@ export default [
         "age": 16,
         "points": 300,
         "city": "Kochi",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Kendriya Vidyalaya, Ernakulam"
     },
     {
@@ -1027,7 +1027,7 @@ export default [
         "age": 16,
         "points": 300,
         "city": "Kochi",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Naipunnya Public School"
     },
     {
@@ -1037,7 +1037,7 @@ export default [
         "age": 17,
         "points": 300,
         "city": "Adoni",
-        "state": "Andhra Pradesh",
+        "state": "IN-AP",
         "school": "Akshara Sree"
     },
     {
@@ -1047,7 +1047,7 @@ export default [
         "age": 17,
         "points": 300,
         "city": "Bengaluru",
-        "state": "Karnataka",
+        "state": "IN-KA",
         "school": "Deeksha Center for Learning PU college"
     },
     {
@@ -1057,7 +1057,7 @@ export default [
         "age": 15,
         "points": 250,
         "city": "Coimbatore",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Amrita Vidyalayam"
     },
     {
@@ -1067,7 +1067,7 @@ export default [
         "age": 17,
         "points": 250,
         "city": "Thiruvananthapuram",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "KAIRALI VIDYA BHAVAN"
     },
     {
@@ -1077,7 +1077,7 @@ export default [
         "age": 14,
         "points": 200,
         "city": "Amritapuri",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Amrita Vidyalayam"
     },
     {
@@ -1087,7 +1087,7 @@ export default [
         "age": 17,
         "points": 200,
         "city": "Kochi",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Cochin Refineries School"
     },
     {
@@ -1097,7 +1097,7 @@ export default [
         "age": 18,
         "points": 175,
         "city": "Kochi",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Amrita"
     },
     {
@@ -1107,7 +1107,7 @@ export default [
         "age": 14,
         "points": 150,
         "city": "Kochi",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Amrita Vidyalayam"
     },
     {
@@ -1117,7 +1117,7 @@ export default [
         "age": 16,
         "points": 150,
         "city": "Trichy",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Mount litera zee school ,trichy"
     },
     {
@@ -1127,7 +1127,7 @@ export default [
         "age": 17,
         "points": 150,
         "city": "Nagapattinam",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Amrita Vidyalayam"
     },
     {
@@ -1137,7 +1137,7 @@ export default [
         "age": 17,
         "points": 150,
         "city": "Kochi",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Cochin Refineries School"
     },
     {
@@ -1147,7 +1147,7 @@ export default [
         "age": 12,
         "points": 100,
         "city": "Amritapuri",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Amrita Vidyalayam"
     },
     {
@@ -1157,7 +1157,7 @@ export default [
         "age": 15,
         "points": 100,
         "city": "Puducherry",
-        "state": "Puducherry",
+        "state": "IN-PY",
         "school": "Amrita Vidyalayam, Puducherry"
     },
     {
@@ -1167,7 +1167,7 @@ export default [
         "age": 15,
         "points": 100,
         "city": "Villinur",
-        "state": "Puducherry",
+        "state": "IN-PY",
         "school": "Amrita Vidyalayam, Puducherry"
     },
     {
@@ -1177,7 +1177,7 @@ export default [
         "age": 15,
         "points": 100,
         "city": "Coimbatore",
-        "state": "Tamil Nadu",
+        "state": "IN-TN",
         "school": "Amrita Vidyalayam Sr. Sec. School, Ettimadai"
     },
     {
@@ -1187,7 +1187,7 @@ export default [
         "age": 15,
         "points": 100,
         "city": "Udaipur",
-        "state": "Rajasthan",
+        "state": "IN-RJ",
         "school": "Delhi Public School, Udaipur"
     },
     {
@@ -1197,7 +1197,7 @@ export default [
         "age": 16,
         "points": 100,
         "city": "Kollam",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Amrita Vidyalayam"
     },
     {
@@ -1207,7 +1207,7 @@ export default [
         "age": 16,
         "points": 100,
         "city": "New Delhi",
-        "state": "NCT",
+        "state": "IN-DL",
         "school": "Vishwa Bharati Public School"
     },
     {
@@ -1217,7 +1217,7 @@ export default [
         "age": 17,
         "points": 100,
         "city": "Palakkad",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Bhavans Vidya Mandir"
     },
     {
@@ -1227,7 +1227,7 @@ export default [
         "age": 15,
         "points": 50,
         "city": "Kolkata",
-        "state": "West Bengal",
+        "state": "IN-WB",
         "school": "Amrita Vidyalayam, Kolkata"
     },
     {
@@ -1237,7 +1237,7 @@ export default [
         "age": 15,
         "points": 50,
         "city": "Kolkata",
-        "state": "West Bengal",
+        "state": "IN-WB",
         "school": "Amrita Vidyalayam, Kolkata"
     },
     {
@@ -1247,7 +1247,7 @@ export default [
         "age": 15,
         "points": 50,
         "city": "Irinjalakuda",
-        "state": "Kerala",
+        "state": "IN-KL",
         "school": "Christ Vidyanikethan"
     },
     {
@@ -1257,7 +1257,7 @@ export default [
         "age": 16,
         "points": 50,
         "city": "Tarn Taran",
-        "state": "Punjab",
+        "state": "IN-PB",
         "school": "Mata Gujri Convent School"
     }
 ]
