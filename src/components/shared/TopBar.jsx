@@ -127,8 +127,8 @@ const TopBar = ({ includeSpace = true, darkenOnSidebar = false }) => {
                         <div className="d-none d-md-block">
                             <TopbarInfoCard>
                                 <div>
-                                    <div>InCTF Jr 5.0</div>
-                                    <h5>Dec. 28, 2020</h5>
+                                    <div>India' First & Only CTF Hacking Contest</div>
+                                    <h5>Exclusively for School Students</h5>
                                 </div>
                                 {/*{(hasLoaded && !isLoggedIn) && <a href="/register">Register</a>}*/}
                             </TopbarInfoCard>
