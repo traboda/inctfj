@@ -1,6 +1,7 @@
 import React from 'react';
 import Base from "../src/components/shared/Base";
 import TopBar from "../src/components/shared/TopBar";
+import Footer from "../src/components/shared/Footer";
 
 const RulePage = () => {
 
@@ -25,6 +26,7 @@ const RulePage = () => {
                 </ol>
             </div>
         </div>
+        <Footer />
     </Base>
 }
 

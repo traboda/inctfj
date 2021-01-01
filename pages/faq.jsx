@@ -7,6 +7,7 @@ import TopBar from "../src/components/shared/TopBar";
 
 import faq from '../src/data/faq';
 import QuestionCard from "../src/components/QuestionCard";
+import Footer from "../src/components/shared/Footer";
 
 const FAQSection = styled.section`
   width: 100%;
@@ -46,6 +47,7 @@ const FAQPage = () => {
                 </div>
             </div>
         </FAQSection>
+        <Footer />
     </Base>
 
 };

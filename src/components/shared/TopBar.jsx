@@ -14,6 +14,7 @@ const TopbarContainer = styled.header`
   z-index: 6000;
   box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.35);
   background: #222;
+  border-bottom: 2px solid #fd7e14;
   nav {
        a {
           font-size: 16px;

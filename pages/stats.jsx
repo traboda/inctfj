@@ -10,6 +10,7 @@ import schoolRank20 from '../src/data/school-rankings/20'
 
 
 import YearlyLeaderboard from "../src/components/HallOfFame/YearlyLeaderboard";
+import Footer from "../src/components/shared/Footer";
 
 const Header = styled.section`
     min-height: 50vh;
@@ -129,6 +130,7 @@ const Stats = () => {
                 )}
             </div>
         </PageWrap>
+        <Footer />
     </Base>;
 
 };
