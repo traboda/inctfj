@@ -1,30 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import styled from "@emotion/styled";
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import Fade from 'react-reveal/Fade';
+
 import SideBar from "./SideBar";
 import {setUserInfo, useAuthState} from "../../states";
 
-const TopbarContainer = styled.nav`
+const TopbarContainer = styled.header`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 6000;
-  display: flex;
-  justify-content: center;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.35);
+  background: #222;
+  nav {
+       a {
+          font-size: 16px;
+          color: #999;
+          padding: 8px 16px;
+          text-decoration: none!important;
+          &:hover {
+            color: #fd7e14;
+          }
+       }
+    }
   .logo{
     max-height: 56px;
   }
   img {
     max-height: 32px;
     max-width: 100%;
-  }
-  @media (min-width: 768px){
-      top: 1rem;
-      .topbar-container, .row {
-        max-width: 1200px;
-        border-radius: 0.5rem;
-      }
   }
   button {
       border: none;
@@ -36,17 +42,7 @@ const TopbarContainer = styled.nav`
         outline: none!important;
       }
   }
-  .topbar-container {
-     background-image: ${() => `url(${require('../../assets/images/backgrounds/cyberpunk_3.jpg')})`};
-     background-size: cover;
-     width: 100%;
-     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.35);
-  }
-  .row {
-     background-color: rgba(0,0,0,0.75);
-     padding: 0.35rem;
-     width: 100%;
-  }
+  padding: 0.35rem;
 `;
 
 
@@ -88,7 +84,6 @@ const TopBar = ({ includeSpace = true, darkenOnSidebar = false }) => {
         setUserInfo(null);
     };
 
-
     const onOpen = () => {
         const targetElement = document.querySelector(".app");
         disableBodyScroll(targetElement);
@@ -99,49 +94,64 @@ const TopBar = ({ includeSpace = true, darkenOnSidebar = false }) => {
         setShowMenu(false);
         clearAllBodyScrollLocks();
     };
-
-    const [scroll, setScroll] = useState(0)
-    const scrollListener = (e) => {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-        const scrolled = winScroll / height;
-        setScroll(scrolled);
-    }
-
-    useEffect(() => {
-        window.addEventListener('scroll', scrollListener)
-    }, [])
+    //
+    // const [scroll, setScroll] = useState(0)
+    // const scrollListener = (e) => {
+    //     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    //     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    //
+    //     const scrolled = winScroll / height;
+    //     setScroll(scrolled);
+    // }
+    //
+    // useEffect(() => {
+    //     window.addEventListener('scroll', scrollListener)
+    // }, [])
 
     return <div>
         <TopbarContainer>
-            <div className="topbar-container" style={{ backgroundPosition: `0 ${scroll*100}%` }}>
-                <div className="row mx-0">
-                    <div className="col-4 col-md-3 col-lg-2 text-md-center border-right px-2">
-                        <a href="/">
-                            <img className="logo" src={require('../../assets/images/logos/inctf_light.png')} alt="InCTFj" />
-                        </a>
-                    </div>
-                    <div className="col-6 col-md-8 col-lg-9 px-2 d-flex align-items-center text-right justify-content-end border-right">
-
-                        <div className="d-none d-md-block">
-                            <TopbarInfoCard>
-                                <div>
-                                    <div>India' First & Only CTF Hacking Contest</div>
-                                    <h5>Exclusively for School Students</h5>
-                                </div>
-                                {/*{(hasLoaded && !isLoggedIn) && <a href="/register">Register</a>}*/}
-                            </TopbarInfoCard>
+            <div className="topbar-container">
+                <div className="container px-0">
+                    <div className="row w-100 mx-0">
+                        <div className="col-4 col-md-3 col-lg-2 text-md-center d-flex align-items-center justify-content-md-end justify-content-center px-2">
+                            <a href="/">
+                                <img className="logo" src={require('../../assets/images/logos/inctf_light.png')} alt="InCTFj" />
+                            </a>
                         </div>
-                    </div>
-                    <div className="col-2 col-md-1 d-flex align-items-center justify-content-center px-1">
-                        <button onClick={onOpen}>
-                            <img alt="menu" src={require('../../assets/images/icons/hamburger.png')} />
-                        </button>
+                        <div className="col-6 col-md-8 col-lg-9 px-1 d-flex align-items-center">
+                            <div className="row mx-0 w-100 d-none d-md-flex">
+                                <div className="col-md-6 d-flex align-items-center px-1">
+                                    <nav>
+                                        <Fade delay={0}>
+                                            <a href="/about">About</a>
+                                        </Fade>
+                                        <Fade delay={200}>
+                                            <a href="/stats">Stats & Ranking</a>
+                                        </Fade>
+                                        <Fade delay={750}>
+                                            <a href="/faq">FAQ</a>
+                                        </Fade>
+                                    </nav>
+                                </div>
+                                <div className="col-md-6 d-flex justify-content-end text-right px-1">
+                                    <TopbarInfoCard>
+                                        <div>
+                                            <div>India' First & Only CTF Hacking Contest</div>
+                                            <h5>Exclusively for School Students</h5>
+                                        </div>
+                                        {/*{(hasLoaded && !isLoggedIn) && <a href="/register">Register</a>}*/}
+                                    </TopbarInfoCard>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-2 col-md-1 d-flex align-items-center justify-content-center px-1">
+                            <button onClick={onOpen}>
+                                <img alt="menu" src={require('../../assets/images/icons/hamburger.png')} />
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </TopbarContainer>
         {showMenu && <SideBar darkenOnSidebar={darkenOnSidebar} onClose={onClose} isLoggedIn={hasLoaded && isLoggedIn} onLogOut={onLogOut} />}
         {includeSpace && <div style={{ height: '60px'}} />}
