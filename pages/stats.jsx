@@ -27,7 +27,7 @@ const Header = styled.section`
 `;
 
 const PageWrap = styled.div`
-    background: rgb(32, 32, 48);
+    background: rgb(25, 25, 40);
     min-height: 50vh;
     color: #eee;
 `;
@@ -56,10 +56,50 @@ const Stats = () => {
                 totalStates: 16,
                 totalFinalists: 190,
             },
+            champions: [
+                {
+                    "name": "Rajvardhan Agarwal",
+                    "school": "Kiit International School",
+                    "place": "Bhubaneshwar, Odisha",
+                    "title": "Champion Hacker"
+                },
+                {
+                    "name": "Megha N Iyer",
+                    "school": "Yashasvi International School",
+                    "place": "Bengaluru, Karnataka",
+                    "title": "Women Hacker",
+                    "avatar": require('../src/assets/images/champions/megha.png')
+                },
+                {
+                    "name": "Nilabha Saha",
+                    "school": "Oxford Independent PU College",
+                    "place": "Bengaluru, Karnataka",
+                    "title": "Runner-Up",
+                    "avatar": require('../src/assets/images/champions/nilabha.png')
+                },
+                {
+                    "name": "Jones Martin",
+                    "school": "Good Shepherd English School",
+                    "place": "Karaikal, Puducherry",
+                    "title": "Second Runner-Up"
+                }
+            ],
             leaderboard: leaderboard20,
             schools: schoolRank20
         },
-        { "year": 2019, leaderboard: leaderboard19 },
+        {
+            year: 2019,
+            champions: [
+                {
+                    "name": "Pranav Krishna",
+                    "school": "CS Academy",
+                    "place": "Coimbatore, Tamil Nadu",
+                    "title": "Champion Hacker",
+                    "avatar": require('../src/assets/images/champions/pranavkrishna.jpg')
+                }
+            ],
+            leaderboard: leaderboard19
+        },
         // { "year": 2018, leaderboard: [] },
         // { "year": 2017, leaderboard: [] },
         // { "year": 2016, leaderboard: [] }

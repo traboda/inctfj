@@ -7,7 +7,7 @@ const FameCardWrap = styled.div`
    height: 100%;
    box-shadow: 2px 3px 8px rgba(0,0,0,0.15);
    font-size: 13px;
-   background: #111;
+   background: rgba(80,10,130,0.25);
    color: white;
    border-radius: 3px;
    img {

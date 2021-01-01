@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Select from "react-select";
 import styled from "@emotion/styled";
+import shortid from "shortid";
 
 import IndianStates from "../../data/indian-states";
 import FameCard from "./FameCard";
+import SchoolLeaderboard from "./SchoolLeaderboard";
 
 const SearchBar = styled.div`
     background: rgba(75, 20, 150, 0.25)!important;
@@ -62,9 +64,28 @@ const SearchBar = styled.div`
              }
         }
     }
+`;
+
+const ChampionCard = styled.div`
+   background: rgba(80,20,120,0.35);
+   height: 100%;
+   img {
+    width: 100%;
+   }
+   h5 {
+      font-weight: 600;
+      font-size: calc(1rem + 0.5vw);
+      margin-bottom: 5px;
+   }
+   .school-name {
+      color: #fd7e14;
+      line-height: 1.2;
+      margin-bottom: 3px;
+   }
+   font-size: 13px;
 `
 
-const YearlyLeaderboard = ({ year, leaderboard, schools }) => {
+const YearlyLeaderboard = ({ year, leaderboard, schools, champions }) => {
 
     const [state, setState] = useState(null);
     const [keyword, setKeyword] = useState(null);
@@ -89,49 +110,41 @@ const YearlyLeaderboard = ({ year, leaderboard, schools }) => {
     };
 
     return <div>
-    {schools?.length > 0 &&
+    {champions?.length > 0 &&
     <div className="py-3">
         <div className="p-2">
-            <h3 className="mb-1">Top 10 Schools</h3>
-            <p style={{ color: '#AAA' }} className="mb-3">Schools with most points for InCTF Jr. {year}</p>
-        </div>
-        <div style={{ maxWidth: '720px' }} className="px-0">
-            <div className="row font-weight-bold p-2 mb-2 mx-0" style={{ color: '#fd7e14', background: 'rgba(0,0,30,0.5)' }}>
-                <div className="col-6 col-lg-8 px-2">
-                    School
-                </div>
-                <div className="col-3 col-lg-2 text-right px-2">
-                   # of Scorers
-                </div>
-                <div className="col-3 col-lg-2 text-right px-2">
-                    Total Points
-                </div>
-            </div>
-            {schools.map((s, index) =>
-                <div className="row p-2 mb-2 mx-0" style={{ background: 'rgba(0,0,30,0.5)' }}>
-                    <div style={{ fontSize: 'calc(12px + 0.5vw)' }} className="col-6 col-lg-8 px-2">
-                        <b>{index+1}.</b> {s.name}
-                    </div>
-                    <div className="col-3 col-lg-2 text-center px-2">
-                        {s.participants}
-                    </div>
-                    <div className="col-3 col-lg-2 text-right px-2">
-                        {s.points}
-                    </div>
-                </div>
-            )}
-        </div>
-        <div style={{ color: '#999', fontSize: '11px' }} className="py-3 p-2">
-            <li>InCTF Jr. is an individual event, and the points for schools are calculated by adding up scores of all students from the school</li>
-            <li>Only Schools with minimum of 2 scoring participants are taken in consideration</li>
-            <li>Students who incorrectly gave information of the school, or whose profile is not verified are not accounted for.</li>
-        </div>
-    </div>}
-    <div className="py-3">
-        <div className="p-2">
-            <h3 className="mb-1">Leaderboards</h3>
+            <h3 style={{ color: '#fd7e14' }} className="mb-1">Champions</h3>
             <p style={{ color: '#AAA' }} className="mb-3">
-                InCTF Jr. {year} participants who earned most points by capturing the most number of flags in the lowest time ranked.
+               The InCTF Junior {year} champions
+            </p>
+        </div>
+        <div className="row mx-0">{champions.map((c) =>
+            <div className="col-md-6 col-lg-4 p-1" key={shortid.generate()}>
+                <ChampionCard>
+                    <div className="row h-100 w-100 mx-0">
+                        <div
+                            style={{ background: `url(${c.avatar})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                            className="col-4 px-2 px-md-0"
+                        />
+                        <div className="col-8 d-flex align-items-center p-2 p-md-3">
+                            <div>
+                                <div className="h6 text-uppercase mb-1">{c.title}</div>
+                                <h5 className="font-weight-bold">{c.name}</h5>
+                                <div className="school-name">{c.school}</div>
+                                <div>{c.place}</div>
+                            </div>
+                        </div>
+                    </div>
+                </ChampionCard>
+            </div>
+        )}</div>
+    </div>}
+    <SchoolLeaderboard schools={schools} />
+    <div className="py-3">
+        <div className="p-2">
+            <h3 style={{ color: '#fd7e14' }} className="mb-1">Leaderboards</h3>
+            <p style={{ color: '#AAA' }} className="mb-3">
+                Participant leaderboard ranked based on most points earned by capturing the most number of flags in the lowest time.
             </p>
         </div>
         {leaderboard?.length > 0 ?
@@ -168,7 +181,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools }) => {
                         (state ? s.state === state : true)
                     ).map((l,index) =>
                         <div className="col-md-6 p-1">
-                            <FameCard {...l} />
+                            <FameCard {...l} key={shortid.generate()} />
                         </div>
                     )}
                     <div style={{ color: '#999', fontSize: '11px' }} className="py-3 p-2">
