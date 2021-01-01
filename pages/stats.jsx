@@ -44,24 +44,33 @@ const TabButton = styled.button`
       }
 `;
 
-const HallOfFame = () => {
+const Stats = () => {
 
     const [year, setYear] = useState(2020);
 
     const editions = [
-        { "year": 2020, leaderboard: leaderboard20, schools: schoolRank20 },
+        {
+            year: 2020,
+            stats: {
+                totalRegistrations: 1587,
+                totalStates: 16,
+                totalFinalists: 190,
+            },
+            leaderboard: leaderboard20,
+            schools: schoolRank20
+        },
         { "year": 2019, leaderboard: leaderboard19 },
-        { "year": 2018, leaderboard: [] },
-        { "year": 2017, leaderboard: [] },
-        { "year": 2016, leaderboard: [] }
+        // { "year": 2018, leaderboard: [] },
+        // { "year": 2017, leaderboard: [] },
+        // { "year": 2016, leaderboard: [] }
     ]
 
-    return <Base meta={{ title: "Hall of Fame" }}>
+    return <Base meta={{ title: "Statistics & Rankings" }}>
         <TopBar darkenOnSidebar includeSpace={false} />
         <Header>
             <div className="mt-5">
-                <h1>Hall of Fame</h1>
-                <p>Honouring past participants of InCTF Junior</p>
+                <h1>InCTF Jr. Stats & Rankings</h1>
+                <p>Honouring past participants & schools of InCTF Junior</p>
             </div>
         </Header>
         <PageWrap>
@@ -82,4 +91,4 @@ const HallOfFame = () => {
 
 };
 
-export default HallOfFame;
+export default Stats;

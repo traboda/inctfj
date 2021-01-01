@@ -51,12 +51,12 @@ const HeaderContainer = styled.section`
        display: inline-block;
        width: 100%;
        text-align: center;
-       max-width: 400px;
+       max-width: 300px;
        margin-bottom: 0.5rem;
        background: #F13F17;
        color: white;
        font-weight: 600;
-       padding: 0.8rem 1.2rem;
+       padding: 0.75rem 1rem;
        text-decoration: none!important;
        border-radius: 8px;
        box-shadow: 2px 6px 12px rgba(0,0,0,0.3);
@@ -89,7 +89,7 @@ const LandingHeader = () => {
                     </p>
                 </Fade>
                 <div>
-                    <a href="/hall-of-fame">View Hall of Fame</a>
+                    <a href="/stats">View Stats & Rankings</a>
                     {/*<div className="limited-slots-warning">* limited slots left.</div>*/}
                 </div>
             </div>

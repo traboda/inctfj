@@ -123,14 +123,14 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
     const sidebarLinks = !isLoggedIn ? [
         { "icon": require('../../assets/images/icons/home.png'), "title": "Home", "href": "/" },
         { "icon": require('../../assets/images/icons/star_glowing.png'), "title": "About", "href": "/about" },
-        { "icon": require('../../assets/images/icons/shooting_star.png'), "title": "Hall of Fame", "href": "/hall-of-fame" },
+        { "icon": require('../../assets/images/icons/shooting_star.png'), "title": "Stats & Rankings", "href": "/stats" },
         { "icon": require('../../assets/images/icons/books.png'), "title": "Learn", "href": "https://wiki.bi0s.in/" },
         { "icon": require('../../assets/images/icons/test.png'), "title": "Practice", "href": "https://archive.bi0s.in/" },
         { "icon": require('../../assets/images/icons/faq.png'), "title": "FAQ", "href": "/faq" },
     ] : [
         { "icon": require('../../assets/images/icons/sword.png'), "title": "CTF Arena", "href": "/ctf" },
         { "icon": require('../../assets/images/icons/dashboard.png'), "title": "Dashboard", "href": "/dashboard" },
-        { "icon": require('../../assets/images/icons/shooting_star.png'), "title": "Hall of Fame", "href": "/hall-of-fame" },
+        { "icon": require('../../assets/images/icons/shooting_star.png'), "title": "Stats & Rankings", "href": "/stats" },
         { "icon": require('../../assets/images/icons/books.png'), "title": "Learn", "href": "https://wiki.bi0s.in/" },
         { "icon": require('../../assets/images/icons/test.png'), "title": "Practice", "href": "https://archive.bi0s.in/" },
         { "icon": require('../../assets/images/icons/logout.png'), "title": "Logout", "onClick": onLogOut }

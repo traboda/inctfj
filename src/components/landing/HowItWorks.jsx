@@ -79,7 +79,7 @@ const LandingHowItWorks = () => {
             </>,
             "links": [
                 {
-                    "title": "hall of fame", "url": "/hall-of-fame"
+                    "title": "stats & rankings", "url": "/stats"
                 }
             ]
         }

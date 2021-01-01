@@ -35,7 +35,7 @@ const FameCardWrap = styled.div`
       color: white;
    }
    .rank {
-      font-size: 36px;
+      font-size: calc(1.5rem + 1vw);
       line-height: 1;
       color: white;
    }

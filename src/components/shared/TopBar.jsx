@@ -59,7 +59,7 @@ const TopbarInfoCard = styled.div`
     h5 {
         font-size: 18px;
         margin: 0;
-        color: #FFD600;
+        color: #fd7e14;
     }
     a {
       margin-left: 8px;

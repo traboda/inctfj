@@ -44,7 +44,15 @@ const customConfig = {
             },
         ],
     },
-
+    async redirects() {
+        return [
+            {
+                source: '/hall-of-fame',
+                destination: '/stats',
+                permanent: true,
+            },
+        ]
+    },
     env: {
         domain: 'https://play.inctf.in/junior',
     }

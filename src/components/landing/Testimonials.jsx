@@ -29,6 +29,7 @@ const TestimonialSection = styled.section`
       }
     }
     img {
+      cursor: pointer;
       max-width: 100%;
       border-radius: 8px;
       box-shadow: 3px 5px 8px rgba(0,0,0,0.3);

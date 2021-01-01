@@ -15,6 +15,7 @@ const SearchBar = styled.div`
         padding: 0.5rem 0.75rem;
         border-radius: 0.25rem;
         color: #EEE;
+        width: 100%;
         &:focus {
           outline: none;
           border-color: #fd7e14;
@@ -63,7 +64,7 @@ const SearchBar = styled.div`
     }
 `
 
-const YearlyLeaderboard = ({ leaderboard, schools }) => {
+const YearlyLeaderboard = ({ year, leaderboard, schools }) => {
 
     const [state, setState] = useState(null);
     const [keyword, setKeyword] = useState(null);
@@ -90,51 +91,61 @@ const YearlyLeaderboard = ({ leaderboard, schools }) => {
     return <div>
     {schools?.length > 0 &&
     <div className="py-3">
-        <h3 className="mb-3">Top 10 Schools</h3>
+        <div className="p-2">
+            <h3 className="mb-1">Top 10 Schools</h3>
+            <p style={{ color: '#AAA' }} className="mb-3">Schools with most points for InCTF Jr. {year}</p>
+        </div>
         <div style={{ maxWidth: '720px' }} className="px-0">
-            <div className="row font-weight-bold text-warning p-2 mb-2 mx-0" style={{ background: 'rgba(0,0,30,0.5)' }}>
-                <div className="col-md-6 col-lg-8 px-2">
-                    Rank. School
+            <div className="row font-weight-bold p-2 mb-2 mx-0" style={{ color: '#fd7e14', background: 'rgba(0,0,30,0.5)' }}>
+                <div className="col-6 col-lg-8 px-2">
+                    School
                 </div>
-                <div className="col-md-3 col-lg-2 text-right px-2">
+                <div className="col-3 col-lg-2 text-right px-2">
                    # of Scorers
                 </div>
-                <div className="col-md-3 col-lg-2 text-right px-2">
+                <div className="col-3 col-lg-2 text-right px-2">
                     Total Points
                 </div>
             </div>
             {schools.map((s, index) =>
                 <div className="row p-2 mb-2 mx-0" style={{ background: 'rgba(0,0,30,0.5)' }}>
-                    <div className="col-md-6 col-lg-8 px-2">
-                        {index+1}. {s.name}
+                    <div style={{ fontSize: 'calc(12px + 0.5vw)' }} className="col-6 col-lg-8 px-2">
+                        <b>{index+1}.</b> {s.name}
                     </div>
-                    <div className="col-md-3 col-lg-2 text-center px-2">
+                    <div className="col-3 col-lg-2 text-center px-2">
                         {s.participants}
                     </div>
-                    <div className="col-md-3 col-lg-2 text-right px-2">
+                    <div className="col-3 col-lg-2 text-right px-2">
                         {s.points}
                     </div>
                 </div>
             )}
-            <div style={{ color: '#999' }} className="py-3 small">
-                <li>Only Schools with minimum of 2 scoring participants are taken in consideration</li>
-            </div>
+        </div>
+        <div style={{ color: '#999', fontSize: '11px' }} className="py-3 p-2">
+            <li>InCTF Jr. is an individual event, and the points for schools are calculated by adding up scores of all students from the school</li>
+            <li>Only Schools with minimum of 2 scoring participants are taken in consideration</li>
+            <li>Students who incorrectly gave information of the school, or whose profile is not verified are not accounted for.</li>
         </div>
     </div>}
     <div className="py-3">
-        <h3 className="mb-3">Leaderboards</h3>
-            {leaderboard?.length > 0 ?
+        <div className="p-2">
+            <h3 className="mb-1">Leaderboards</h3>
+            <p style={{ color: '#AAA' }} className="mb-3">
+                InCTF Jr. {year} participants who earned most points by capturing the most number of flags in the lowest time ranked.
+            </p>
+        </div>
+        {leaderboard?.length > 0 ?
                 <div className="row mx-0">
                     <div className="col-md-12 mb-2 px-0">
                         <SearchBar className="row bg-white p-2 mx-0">
-                            <div className="col-md-8 d-flex align-items-center">
+                            <div className="col-md-8 p-1 d-flex align-items-center">
                                 <input
                                     value={keyword}
                                     onChange={(e) => setKeyword(e.currentTarget.value)}
                                     placeholder="Search for names"
                                 />
                             </div>
-                            <div className="col-md-4 px-0 d-flex align-items-center">
+                            <div className="col-md-4 p-1 d-flex align-items-center">
                                 <div className="w-100">
                                     <Select
                                         aria-label="user-state-selector"
@@ -160,7 +171,7 @@ const YearlyLeaderboard = ({ leaderboard, schools }) => {
                             <FameCard {...l} />
                         </div>
                     )}
-                    <div style={{ color: '#999' }} className="py-4 small">
+                    <div style={{ color: '#999', fontSize: '11px' }} className="py-3 p-2">
                         <li>The leaderboard only includes participants who have earned at-least 1 point in the finale.</li>
                         <li>Participants with incomplete profile information, and who failed to verify their identity as a school student have been excluded from the listing.</li>
                         <li>Data before 4th edition may not be complete, or may have inaccuracies due to limitations of available data.</li>
