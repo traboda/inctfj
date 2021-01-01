@@ -4,12 +4,15 @@ import styled from "@emotion/styled";
 import shortid from "shortid";
 
 import IndianStates from "../../data/indian-states";
+
 import FameCard from "./FameCard";
 import SchoolLeaderboard from "./SchoolLeaderboard";
+import Fade from "react-reveal/Fade";
 
 const SearchBar = styled.div`
     background: rgba(75, 20, 150, 0.25)!important;
     color: white;
+    z-index: 6000;
     input {
         display: flex;
         background: rgba(0, 0, 30, 0.8);
@@ -118,24 +121,26 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions }) => {
                The InCTF Junior {year} champions
             </p>
         </div>
-        <div className="row mx-0">{champions.map((c) =>
-            <div className="col-md-6 col-lg-4 p-1" key={shortid.generate()}>
-                <ChampionCard>
-                    <div className="row h-100 w-100 mx-0">
-                        <div
-                            style={{ background: `url(${c.avatar})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-                            className="col-4 px-2 px-md-0"
-                        />
-                        <div className="col-8 d-flex align-items-center p-2 p-md-3">
-                            <div>
-                                <div className="h6 text-uppercase mb-1">{c.title}</div>
-                                <h5 className="font-weight-bold">{c.name}</h5>
-                                <div className="school-name">{c.school}</div>
-                                <div>{c.place}</div>
+        <div className="row mx-0">{champions.map((c, index) =>
+            <div className="col-md-6 p-1" key={shortid.generate()}>
+                <Fade up delay={index*250}>
+                    <ChampionCard>
+                        <div className="row h-100 w-100 mx-0">
+                            <div
+                                style={{ background: `url(${c.avatar})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                                className="col-4 col-lg-3 px-2 px-md-0"
+                            />
+                            <div className="col-8 col-lg-9 d-flex align-items-center p-2 p-md-3">
+                                <div>
+                                    <div className="h6 text-uppercase mb-1">{c.title}</div>
+                                    <h5 className="font-weight-bold">{c.name}</h5>
+                                    <div className="school-name">{c.school}</div>
+                                    <div>{c.place}</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </ChampionCard>
+                    </ChampionCard>
+                </Fade>
             </div>
         )}</div>
     </div>}
@@ -179,9 +184,11 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions }) => {
                     {leaderboard.filter((s) =>
                         (keyword ? (s.name.startsWith(keyword) || s.username.startsWith(keyword)) : true) &&
                         (state ? s.state === state : true)
-                    ).map((l,index) =>
+                    ).map((l) =>
                         <div className="col-md-6 p-1">
-                            <FameCard {...l} key={shortid.generate()} />
+                            <Fade>
+                                <FameCard {...l} key={shortid.generate()} />
+                            </Fade>
                         </div>
                     )}
                     <div style={{ color: '#999', fontSize: '11px' }} className="py-3 p-2">

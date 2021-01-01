@@ -1,10 +1,11 @@
 import React from 'react';
 import shortid from "shortid";
 import styled from "@emotion/styled";
+import Fade from "react-reveal/Fade";
 
 const LeaderRow = styled.div`
     background: rgba(80,10,120,0.25);
-`
+`;
 
 const SchoolLeaderboard = ({ schools }) => {
 
@@ -30,17 +31,19 @@ const SchoolLeaderboard = ({ schools }) => {
                 </div>
             </LeaderRow>
             {schools.map((s, index) =>
-                <LeaderRow key={shortid.generate()} className="row p-2 mb-2 mx-0">
-                    <div style={{ fontSize: 'calc(12px + 0.5vw)' }} className="col-6 col-lg-8 px-2">
-                        <b>{index+1}.</b> {s.name}
-                    </div>
-                    <div className="col-3 col-lg-2 text-center px-2">
-                        {s.participants}
-                    </div>
-                    <div className="col-3 col-lg-2 text-right px-2">
-                        {s.points}
-                    </div>
-                </LeaderRow>
+                <Fade up delay={index*250}>
+                    <LeaderRow key={shortid.generate()} className="row p-2 mb-2 mx-0">
+                        <div style={{ fontSize: 'calc(12px + 0.5vw)' }} className="col-6 col-lg-8 px-2">
+                            <b>{index+1}.</b> {s.name}
+                        </div>
+                        <div className="col-3 col-lg-2 text-center px-2">
+                            {s.participants}
+                        </div>
+                        <div className="col-3 col-lg-2 text-right px-2">
+                            {s.points}
+                        </div>
+                    </LeaderRow>
+                </Fade>
             )}
         </div>
         <div style={{ color: '#999', fontSize: '11px' }} className="py-3 p-2">

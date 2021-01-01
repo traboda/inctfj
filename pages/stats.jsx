@@ -61,7 +61,8 @@ const Stats = () => {
                     "name": "Rajvardhan Agarwal",
                     "school": "Kiit International School",
                     "place": "Bhubaneshwar, Odisha",
-                    "title": "Champion Hacker"
+                    "title": "Champion Hacker",
+                    "avatar": require('../src/assets/images/champions/rajvardhan.jpeg')
                 },
                 {
                     "name": "Megha N Iyer",
@@ -81,7 +82,8 @@ const Stats = () => {
                     "name": "Jones Martin",
                     "school": "Good Shepherd English School",
                     "place": "Karaikal, Puducherry",
-                    "title": "Second Runner-Up"
+                    "title": "Second Runner-Up",
+                    "avatar": require('../src/assets/images/champions/jones.jpg')
                 }
             ],
             leaderboard: leaderboard20,

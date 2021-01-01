@@ -24,7 +24,7 @@ const LandingPage = () => {
             <LandingHeader />
             <LandingQuickInfo />
             <LandingAboutInCTF />
-            <Schedule />
+            {/*<Schedule />*/}
             <LandingTestimonials />
             <LandingHowItWorks />
             <LandingJoinDiscussion />

@@ -11,6 +11,11 @@ const ContactsBarSection = styled.section`
       max-height: 64px;
       margin-right: 8px;
     }
+    a {
+      &:hover {
+         color: #fd7e14!important;
+      }
+    }
     .social-bar {
         img {
           max-height: 45px;
@@ -40,7 +45,7 @@ const LandingContactsBar = () => {
                     <img alt="email" src={require('../../assets/images/icons/email.png')} />
                     <div>
                         <div>FOR GENERAL ENQUIRES</div>
-                        <h5><a href="mailto:inctfj@am.amrita.edu" target="_blank" className="plain-link">inctfj@am.amrita.edu</a></h5>
+                        <a href="mailto:inctfj@am.amrita.edu" target="_blank" className="h5 mb-0 plain-link">inctfj@am.amrita.edu</a>
                     </div>
                 </div>
             </Fade>
@@ -49,7 +54,7 @@ const LandingContactsBar = () => {
                     <img alt="discord" src={require('../../assets/images/logos/discord.png')} />
                     <div>
                         <div>JOIN DISCORD COMMUNITY</div>
-                        <h5><a href="https://discord.gg/rqF3ZkeTrY" rel="noopener noreferrer" target="_blank" className="plain-link">discord.gg/rqF3ZkeTrY</a></h5>
+                        <a href="https://discord.gg/rqF3ZkeTrY" rel="noopener noreferrer" target="_blank" className="h5 mb-0 plain-link">discord.gg/rqF3ZkeTrY</a>
                     </div>
                 </div>
             </Fade>
