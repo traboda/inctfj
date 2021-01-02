@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 
 import Base from "../src/components/shared/Base";
 import TopBar from "../src/components/shared/TopBar";
+import Footer from "../src/components/shared/Footer";
 
 const Header = styled.section`
     min-height: 50vh;
@@ -46,7 +47,6 @@ const LogoWrap = styled.div`
 
 const BrandingPage = () => {
 
-
     return <Base meta={{ title: "Branding" }}>
         <TopBar darkenOnSidebar includeSpace={false} />
         <Header>
@@ -79,7 +79,8 @@ const BrandingPage = () => {
                 </div>
             </div>
         </div>
-    </Base>
+        <Footer />
+    </Base>;
 
 };
 

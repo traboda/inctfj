@@ -66,11 +66,11 @@ const Stats = () => {
                     "avatar": require('../src/assets/images/champions/rajvardhan.jpeg')
                 },
                 {
-                    "name": "Megha N Iyer",
-                    "school": "Yashasvi International School",
-                    "place": "Bengaluru, Karnataka",
+                    "name": "Shwetha S",
+                    "school": "Sri Shankara Senior Secondary Schoor, Adayar",
+                    "place": "Chennai, Tamil Nadu",
                     "title": "Women Hacker",
-                    "avatar": require('../src/assets/images/champions/megha.png')
+                    "avatar": require('../src/assets/images/champions/swetha.JPG')
                 },
                 {
                     "name": "Nilabha Saha",
@@ -87,6 +87,22 @@ const Stats = () => {
                     "avatar": require('../src/assets/images/champions/jones.jpg')
                 }
             ],
+            womenHackers: [
+                {
+                    "name": "Shwetha S",
+                    "school": "Sri Shankara Senior Secondary Schoor, Adayar",
+                    "place": "Chennai, Tamil Nadu",
+                    "points": 3250,
+                    "avatar": require('../src/assets/images/champions/swetha.JPG')
+                },
+                {
+                    "name": "Megha N Iyer",
+                    "school": "Yashasvi International School",
+                    "place": "Bengaluru, Karnataka",
+                    "points": 2475,
+                    "avatar": require('../src/assets/images/champions/megha.png')
+                }
+            ],
             leaderboard: leaderboard20,
             schools: schoolRank20
         },
@@ -99,7 +115,14 @@ const Stats = () => {
                     "place": "Coimbatore, Tamil Nadu",
                     "title": "Champion Hacker",
                     "avatar": require('../src/assets/images/champions/pranavkrishna.jpg')
-                }
+                },
+                {
+                    "name": "Nilabha Saha",
+                    "school": "Oxford Independent PU College",
+                    "place": "Bengaluru, Karnataka",
+                    "title": "Runner-Up",
+                    "avatar": require('../src/assets/images/champions/nilabha.png')
+                },
             ],
             leaderboard: leaderboard19
         },

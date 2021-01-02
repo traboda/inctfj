@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "@emotion/styled";
 import Zoom from 'react-reveal/Zoom';
-import Tada from 'react-reveal/Tada';
+import Fade from 'react-reveal/Fade';
 import ReactPlayer from 'react-player/youtube'
 
 
@@ -27,28 +27,18 @@ const AboutInCTFSection = styled.section`
        background: #E65100;
        color: white;
        font-weight: 600;
-       padding: 0.5rem 2rem;
+       padding: 0.5rem 1.2rem;
        text-decoration: none!important;
        border-radius: 8px;
        box-shadow: 2px 6px 8px rgba(0,0,0,0.3);
     }
-    .features-list {
+   .features-list {
       img {
          max-height: 180px;
          width: 90px;
          max-width: 100%;
          box-shadow: none!important;
          padding: 0;
-      }
-      .feature-card {
-          transition: all 2s ease;
-          &:hover{
-            img {
-               max-height: 200px;
-               width: 100px;
-            }
-            transition: all 2s ease;
-          }
       }
    }
 `;
@@ -96,7 +86,7 @@ const LandingAboutInCTF = () => {
                             <div className="row mx-0">
                                 {features.map((f) =>
                                     <div className="col-md-4 p-0">
-                                        <Tada delay={500}>
+                                        <Fade delay={500}>
                                             <div className="feature-card row mx-0">
                                                 <div className="col-4 text-center col-md-12 px-1">
                                                     <img alt={f.title} src={f.image} />
@@ -105,7 +95,7 @@ const LandingAboutInCTF = () => {
                                                     <div className="h6 mb-0 w-75">{f.title}</div>
                                                 </div>
                                             </div>
-                                        </Tada>
+                                        </Fade>
                                     </div>
                                 )}
                             </div>

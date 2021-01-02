@@ -11,13 +11,18 @@ export default [
     },
     {
         "name": "Amrita Vidyalayam, Trichy",
-        "participants": 6,
-        "points": 13325
+        "participants": 7,
+        "points": 18000
     },
     {
         "name": "Scholars Convent, Nagpur",
         "participants": 2,
         "points": 12250
+    },
+    {
+        "name": "Sri Sankara Senior Secondary School, Adyar",
+        "participants": 6,
+        "points": 10000
     },
     {
         "name": "Amrita Vidyalayam, Puthiyakavu",
@@ -30,11 +35,6 @@ export default [
         "points": 5750
     },
     {
-        "name": "Sri Sankara Senior Secondary School, Adyar",
-        "participants": 3,
-        "points": 5200
-    },
-    {
         "name": "Amrita Vidyalayam, Ahmedabad",
         "participants": 3,
         "points": 4575
@@ -43,5 +43,10 @@ export default [
         "name": "Mount Litera Zee School, Trichy",
         "participants": 2,
         "points": 4075
+    },
+    {
+        "name": "Amrita Vidyalayam, Belgaum",
+        "participants": 2,
+        "points": 2500
     }
-];
+]

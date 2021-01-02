@@ -131,8 +131,7 @@ export default
     {
         "question": "I have some doubts, where can I ask?",
         "answer": <>
-            You can contact us at our facebook page for priority reply or email us directly at contact@inctf.in
-            or call us at 8129426557.
+            You can contact us through our discord community or facebook page for priority reply or email us at inctfj@am.amrita.edu.
         </>
     }
 ];

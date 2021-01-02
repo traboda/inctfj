@@ -29,7 +29,7 @@ const SponsorshipArea = styled.section`
        text-decoration: none!important;
        border-radius: 8px;
        box-shadow: 2px 6px 12px rgba(0,0,0,0.3);
-       margin: 0.5rem;
+       margin: 0.5rem 0;
     }
     .sponsorship-brochure-button {
        background: #E65100;

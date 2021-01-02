@@ -2,7 +2,7 @@ export default [
     {
         "rank": 1,
         "username": "rajvardhan",
-        "name": "rajvardhan agarwal",
+        "name": "Rajvardhan Agarwal",
         "age": 18,
         "points": 10125,
         "city": "Bhubaneshwar",
@@ -22,7 +22,7 @@ export default [
     {
         "rank": 3,
         "username": "haxy",
-        "name": "jones martin",
+        "name": "Jones Martin",
         "age": 18,
         "points": 8425,
         "city": "Karaikal",
@@ -217,7 +217,7 @@ export default [
         "points": 4675,
         "city": "Trichy",
         "state": "IN-TN",
-        "school": "Amrita Vidyalayam"
+        "school": "Amrita Vidyalayam, Trichy"
     },
     {
         "rank": 23,
@@ -251,6 +251,16 @@ export default [
     },
     {
         "rank": 26,
+        "username": "BytesWarning",
+        "name": "Ansan Binoy",
+        "age": 16,
+        "points": 4275,
+        "city": "Idukki",
+        "state": "IN-KL",
+        "school": "GVHSS, Panikankudy"
+    },
+    {
+        "rank": 27,
         "username": "Wh0Ami?",
         "name": "Muhammed patel",
         "age": 17,
@@ -260,7 +270,7 @@ export default [
         "school": "Amity School"
     },
     {
-        "rank": 27,
+        "rank": 28,
         "username": "J.A.R.V.I.S",
         "name": "Ankit Choudhury",
         "age": 17,
@@ -270,7 +280,7 @@ export default [
         "school": "St. Paul's School"
     },
     {
-        "rank": 28,
+        "rank": 29,
         "username": "rohithp023",
         "name": "Rohith P",
         "age": 16,
@@ -280,7 +290,7 @@ export default [
         "school": "Cochin Refinaries School"
     },
     {
-        "rank": 29,
+        "rank": 30,
         "username": "H4ck3r_B0I",
         "name": "Eashaan Thakur",
         "age": 15,
@@ -290,7 +300,7 @@ export default [
         "school": "Amrita Vidyalayam"
     },
     {
-        "rank": 30,
+        "rank": 31,
         "username": "Monkey_.D._Luffy",
         "name": "Sai Narayana",
         "age": 17,
@@ -300,7 +310,7 @@ export default [
         "school": "Mount Litera Zee School, Trichy"
     },
     {
-        "rank": 31,
+        "rank": 32,
         "username": "4n0nym0u5u53r",
         "name": "Sri Ganesan M",
         "age": 17,
@@ -310,7 +320,7 @@ export default [
         "school": "Kendriya Vidyalaya, Karaikal"
     },
     {
-        "rank": 32,
+        "rank": 33,
         "username": "mikhaelstark22",
         "name": "Mikhael Sunil",
         "age": 16,
@@ -320,7 +330,7 @@ export default [
         "school": "Cochin Refineries School"
     },
     {
-        "rank": 33,
+        "rank": 34,
         "username": "nitinravi18",
         "name": "Nitin Ravi",
         "age": 17,
@@ -330,7 +340,7 @@ export default [
         "school": "Suguna PIP School"
     },
     {
-        "rank": 34,
+        "rank": 35,
         "username": "blackmarketer",
         "name": "Alan",
         "age": 17,
@@ -340,7 +350,17 @@ export default [
         "school": "MES HSS"
     },
     {
-        "rank": 35,
+        "rank": 36,
+        "username": "p3rplex3d",
+        "name": "Shwetha",
+        "age": 16,
+        "points": 3250,
+        "city": "Chennai",
+        "state": "IN-TN",
+        "school": "Sri Sankara Senior Secondary School, Adyar"
+    },
+    {
+        "rank": 37,
         "username": "ComputerGuy",
         "name": "Arjun",
         "age": 16,
@@ -350,7 +370,7 @@ export default [
         "school": "Amrita Vidyalayam, Trichy"
     },
     {
-        "rank": 36,
+        "rank": 38,
         "username": "arUndh4nU$h",
         "name": "Arunkumar",
         "age": 17,
@@ -360,7 +380,7 @@ export default [
         "school": "Govt. Boys School,Tittagudi"
     },
     {
-        "rank": 37,
+        "rank": 39,
         "username": "_sur4j",
         "name": "Suraj S",
         "age": 16,
@@ -370,7 +390,7 @@ export default [
         "school": "Kendriya Vidyalaya ,Kanjikode"
     },
     {
-        "rank": 38,
+        "rank": 40,
         "username": "shouk",
         "name": "shoukath siddiqui",
         "age": 17,
@@ -380,7 +400,7 @@ export default [
         "school": "The Hyderabad Public School, Begumpet"
     },
     {
-        "rank": 39,
+        "rank": 41,
         "username": "Unknown",
         "name": "Jay Patidar",
         "age": 17,
@@ -390,7 +410,7 @@ export default [
         "school": "Sandipani Academy"
     },
     {
-        "rank": 40,
+        "rank": 42,
         "username": "rey",
         "name": "Raja Majumdar",
         "age": 19,
@@ -400,7 +420,7 @@ export default [
         "school": "CJM"
     },
     {
-        "rank": 41,
+        "rank": 43,
         "username": "Nitish",
         "name": "Nitish",
         "age": 16,
@@ -410,7 +430,7 @@ export default [
         "school": "Sri Sankara Senior Secondary School, Adyar"
     },
     {
-        "rank": 42,
+        "rank": 44,
         "username": "ITACHI",
         "name": "ADITYA",
         "age": 17,
@@ -420,7 +440,7 @@ export default [
         "school": "ANAND VISHWA GURUKUL AND JR. COLLEGE"
     },
     {
-        "rank": 43,
+        "rank": 45,
         "username": "UTx10101",
         "name": "Utkrisht Singh Chauhan",
         "age": 15,
@@ -430,7 +450,7 @@ export default [
         "school": "Delhi Public School, Airport Road, Gwalior"
     },
     {
-        "rank": 44,
+        "rank": 46,
         "username": "v1sh4l",
         "name": "Vishal K",
         "age": 12,
@@ -440,18 +460,17 @@ export default [
         "school": "ST Therasa's High school"
     },
     {
-        "rank": 45,
+        "rank": 47,
         "username": "mega_robot",
         "name": "Megha N Iyer",
         "age": 15,
         "points": 2475,
         "city": "Bengaluru",
         "state": "IN-KA",
-        "school": "Yashasvi International School",
-        "isQueen": true
+        "school": "Yashasvi International School"
     },
     {
-        "rank": 46,
+        "rank": 48,
         "username": "Smruti.RN",
         "name": "Smruti Ranjan Nayak",
         "age": 16,
@@ -461,7 +480,7 @@ export default [
         "school": "Rajdhani Higher Secondary School"
     },
     {
-        "rank": 47,
+        "rank": 49,
         "username": "tarunjeeth",
         "name": "Tarunjeeth",
         "age": 14,
@@ -471,7 +490,7 @@ export default [
         "school": "Amrita Vidyalayam, Puducherry"
     },
     {
-        "rank": 48,
+        "rank": 50,
         "username": "h4ck3r_Nishant",
         "name": "Nishant Mahesh Pacharne",
         "age": 14,
@@ -481,7 +500,7 @@ export default [
         "school": "Dr Vithal Rao Vikhe Patil English Medium School"
     },
     {
-        "rank": 49,
+        "rank": 51,
         "username": "Mr.Stark",
         "name": "Adwaith A",
         "age": 17,
@@ -491,7 +510,7 @@ export default [
         "school": "Cochin Refineries School"
     },
     {
-        "rank": 50,
+        "rank": 52,
         "username": "spektre",
         "name": "Sanjay Vardhan",
         "age": 17,
@@ -501,7 +520,7 @@ export default [
         "school": "FIITJEE"
     },
     {
-        "rank": 51,
+        "rank": 53,
         "username": "aravindan",
         "name": "Aravind Suresh",
         "age": 16,
@@ -511,7 +530,7 @@ export default [
         "school": "Amrita Vidyalayam"
     },
     {
-        "rank": 52,
+        "rank": 54,
         "username": "rithviksai03",
         "name": "Sai Rithvik N",
         "age": 17,
@@ -521,7 +540,7 @@ export default [
         "school": "FIITJEE"
     },
     {
-        "rank": 53,
+        "rank": 55,
         "username": "NoOne",
         "name": "NoOne",
         "age": 18,
@@ -531,7 +550,7 @@ export default [
         "school": "SFS"
     },
     {
-        "rank": 54,
+        "rank": 56,
         "username": "Ashwa11hama",
         "name": "Purab Parihar",
         "age": 17,
@@ -541,7 +560,7 @@ export default [
         "school": "Central Academy"
     },
     {
-        "rank": 55,
+        "rank": 57,
         "username": "AdizHacker",
         "name": "Shreyas Kumara Adi",
         "age": 15,
@@ -551,7 +570,7 @@ export default [
         "school": "Amrita Vidyalayam"
     },
     {
-        "rank": 56,
+        "rank": 58,
         "username": "suh3ld3v",
         "name": "Shubham",
         "age": 17,
@@ -561,7 +580,7 @@ export default [
         "school": "Amrita Vidyalayam, Ahmedabad"
     },
     {
-        "rank": 57,
+        "rank": 59,
         "username": "SHUBHAM",
         "name": "Shubham Sahu",
         "age": 17,
@@ -571,7 +590,7 @@ export default [
         "school": "Birla Bharati school"
     },
     {
-        "rank": 58,
+        "rank": 60,
         "username": "hackxsaras",
         "name": "hackxsaras",
         "age": 17,
@@ -581,7 +600,7 @@ export default [
         "school": "AVMD Institute Agra"
     },
     {
-        "rank": 59,
+        "rank": 61,
         "username": "mr_nobody",
         "name": "vaishakh.s.nair",
         "age": 16,
@@ -591,7 +610,7 @@ export default [
         "school": "Bhavans Munshi Vidyashram, Thiruvankulam"
     },
     {
-        "rank": 60,
+        "rank": 62,
         "username": "Hanshika",
         "name": "Hanshika R",
         "age": 16,
@@ -601,7 +620,7 @@ export default [
         "school": "Amrita Vidyalayam, Trichy"
     },
     {
-        "rank": 61,
+        "rank": 63,
         "username": "Hermione",
         "name": "S.KAMALIGHA",
         "age": 16,
@@ -611,7 +630,7 @@ export default [
         "school": "Amrita Vidyalayam, Trichy"
     },
     {
-        "rank": 62,
+        "rank": 64,
         "username": "Athena_07",
         "name": "Amirtha Santhosh",
         "age": 17,
@@ -621,7 +640,7 @@ export default [
         "school": "Amrita Vidyalayam, Trichy"
     },
     {
-        "rank": 63,
+        "rank": 65,
         "username": "PARZIVAL",
         "name": "Akshit Tyagi",
         "age": 16,
@@ -631,7 +650,7 @@ export default [
         "school": "Ch. Chhabil Dass Public School"
     },
     {
-        "rank": 64,
+        "rank": 66,
         "username": "sh4d0w",
         "name": "Eugine",
         "age": 16,
@@ -641,17 +660,17 @@ export default [
         "school": "Cochin Refineries School"
     },
     {
-        "rank": 65,
+        "rank": 67,
         "username": "Gerda",
         "name": "Madhura Srishti Karthikeyan",
         "age": 16,
         "points": 1625,
         "city": "Chennai",
         "state": "IN-TN",
-        "school": "Sri Sankara Senior Secondary School"
+        "school": "Sri Sankara Senior Secondary School, Adyar"
     },
     {
-        "rank": 66,
+        "rank": 68,
         "username": "mohawk",
         "name": "Mohan R",
         "age": 16,
@@ -661,7 +680,7 @@ export default [
         "school": "The TVS School, Madurai"
     },
     {
-        "rank": 67,
+        "rank": 69,
         "username": "balasid",
         "name": "BALASIDARTHAN M",
         "age": 16,
@@ -671,7 +690,7 @@ export default [
         "school": "The TVS School, Madurai"
     },
     {
-        "rank": 68,
+        "rank": 70,
         "username": "EhdHraDhBcbtYUbN",
         "name": "M Sri Santh",
         "age": 17,
@@ -681,7 +700,7 @@ export default [
         "school": "The TVS School, Madurai"
     },
     {
-        "rank": 69,
+        "rank": 71,
         "username": "chiragm",
         "name": "Chirag Maheshwari",
         "age": 16,
@@ -691,7 +710,7 @@ export default [
         "school": "Inventure Academy"
     },
     {
-        "rank": 70,
+        "rank": 72,
         "username": "fastbyte",
         "name": "Aldeesh P Rayan",
         "age": 18,
@@ -701,7 +720,7 @@ export default [
         "school": "SJCE"
     },
     {
-        "rank": 71,
+        "rank": 73,
         "username": "_sc@1ar_",
         "name": "Yashodhan",
         "age": 17,
@@ -711,7 +730,7 @@ export default [
         "school": "Amrita Vidyalayam, Ahmedabad"
     },
     {
-        "rank": 72,
+        "rank": 74,
         "username": "cooper",
         "name": "Someone",
         "age": 18,
@@ -721,7 +740,7 @@ export default [
         "school": "St.Mary's"
     },
     {
-        "rank": 73,
+        "rank": 75,
         "username": "ShriVJ10",
         "name": "Shriharsh V Jammihal",
         "age": 14,
@@ -731,7 +750,7 @@ export default [
         "school": "Amrita Vidyalayam"
     },
     {
-        "rank": 74,
+        "rank": 76,
         "username": "Sir|Sn3h|Gupt4_",
         "name": "Sneh Gupta",
         "age": 16,
@@ -741,7 +760,7 @@ export default [
         "school": "Amrita Vidyalayam, Ahmedabad"
     },
     {
-        "rank": 75,
+        "rank": 77,
         "username": "Eternal Techie",
         "name": "Tejas",
         "age": 14,
@@ -751,7 +770,7 @@ export default [
         "school": "Amrita Vidyalayam"
     },
     {
-        "rank": 76,
+        "rank": 78,
         "username": "white devil",
         "name": "Bharathwaj M",
         "age": 17,
@@ -761,7 +780,7 @@ export default [
         "school": "SBOA Matric.Hr.Sec.School"
     },
     {
-        "rank": 77,
+        "rank": 79,
         "username": "imtnmyar",
         "name": "Tanmay Arora",
         "age": 14,
@@ -771,17 +790,17 @@ export default [
         "school": "DPS RK Puram"
     },
     {
-        "rank": 78,
+        "rank": 80,
         "username": "JOKER THE HACKER",
         "name": "ARIYAN A R",
         "age": 16,
         "points": 950,
         "city": "Madurai",
         "state": "IN-TN",
-        "school": "SBOA MATRIC.HR.SEC SCHOOL"
+        "school": "SBOA Matric.Hr.Sec.School"
     },
     {
-        "rank": 79,
+        "rank": 81,
         "username": "RTmkYKQoN02FmWnQ",
         "name": "SRIRAM E",
         "age": 16,
@@ -791,7 +810,7 @@ export default [
         "school": "The TVS School, Madurai"
     },
     {
-        "rank": 80,
+        "rank": 82,
         "username": "Mr.Binary_b0y",
         "name": "Swaroop.R.K",
         "age": 17,
@@ -801,7 +820,7 @@ export default [
         "school": "GPT, HARIHAR"
     },
     {
-        "rank": 81,
+        "rank": 83,
         "username": "shyam2167",
         "name": "shyam",
         "age": 16,
@@ -811,7 +830,7 @@ export default [
         "school": "Cochin Refineries School"
     },
     {
-        "rank": 82,
+        "rank": 84,
         "username": "oSiOW28O0opkkBE0",
         "name": "Devadathan A",
         "age": 17,
@@ -821,7 +840,7 @@ export default [
         "school": "Amrita Vidyalayam"
     },
     {
-        "rank": 83,
+        "rank": 85,
         "username": "Phoenix",
         "name": "Sagar Sajeev",
         "age": 17,
@@ -831,7 +850,7 @@ export default [
         "school": "Amrita Vidyalayam"
     },
     {
-        "rank": 84,
+        "rank": 86,
         "username": "ghostly",
         "name": "Abhimanyu P B",
         "age": 17,
@@ -841,7 +860,7 @@ export default [
         "school": "Amrita Vidyalayam"
     },
     {
-        "rank": 85,
+        "rank": 87,
         "username": "Avanthikaanand",
         "name": "Avanthika Anand",
         "age": 17,
@@ -851,7 +870,7 @@ export default [
         "school": "GBHSS, Manjeri"
     },
     {
-        "rank": 86,
+        "rank": 88,
         "username": "rithvik7",
         "name": "Rithvik",
         "age": 19,
@@ -861,7 +880,7 @@ export default [
         "school": "Amrita"
     },
     {
-        "rank": 87,
+        "rank": 89,
         "username": "VYXwYPpcDqWWWe1a",
         "name": "Suyash",
         "age": 15,
@@ -871,17 +890,27 @@ export default [
         "school": "Delhi Public School, Udaipur"
     },
     {
-        "rank": 88,
+        "rank": 90,
+        "username": "m3nt4llink",
+        "name": "Pranav Sridhar",
+        "age": 15,
+        "points": 850,
+        "city": "Chennai",
+        "state": "IN-TN",
+        "school": "Sri Sankara Senior Secondary School, Adyar"
+    },
+    {
+        "rank": 91,
         "username": "phantomM",
         "name": "Mihir SV",
         "age": 16,
         "points": 750,
         "city": "Chennai",
         "state": "IN-TN",
-        "school": "sri sankara"
+        "school": "Sri Sankara Senior Secondary School, Adyar"
     },
     {
-        "rank": 89,
+        "rank": 92,
         "username": "Najai",
         "name": "Nathan Jaipuria",
         "age": 17,
@@ -891,7 +920,17 @@ export default [
         "school": "Delhi public school, Dwarka"
     },
     {
-        "rank": 90,
+        "rank": 93,
+        "username": "4bh1mcr@j@",
+        "name": "Abhilash Chandrasekar M",
+        "age": 17,
+        "points": 700,
+        "city": "Chennai",
+        "state": "IN-TN",
+        "school": "Sri Sankara Senior Secondary School, Adyar"
+    },
+    {
+        "rank": 94,
         "username": "SamJain",
         "name": "SamyakJain",
         "age": 13,
@@ -901,7 +940,7 @@ export default [
         "school": "ModernSchool"
     },
     {
-        "rank": 91,
+        "rank": 95,
         "username": "Haashini",
         "name": "Haashini.A",
         "age": 16,
@@ -911,7 +950,7 @@ export default [
         "school": "Amrita Vidyalayam, Trichy"
     },
     {
-        "rank": 92,
+        "rank": 96,
         "username": "Ram01010010",
         "name": "Ram Solaiappan",
         "age": 17,
@@ -921,7 +960,7 @@ export default [
         "school": "Swamy's Mat. Hr. Sec. School"
     },
     {
-        "rank": 93,
+        "rank": 97,
         "username": "AnandRM",
         "name": "Anand Rodríguez Menon",
         "age": 13,
@@ -931,7 +970,7 @@ export default [
         "school": "Amrita Vidyalayam, Puthiyakavu"
     },
     {
-        "rank": 94,
+        "rank": 98,
         "username": "shiwaah.m",
         "name": "Shiva Manoj",
         "age": 17,
@@ -941,7 +980,7 @@ export default [
         "school": "Believers Church Residential School"
     },
     {
-        "rank": 95,
+        "rank": 99,
         "username": "joel",
         "name": "Kamala Joel Jaswanth",
         "age": 11,
@@ -951,7 +990,7 @@ export default [
         "school": "Narayana English Medium School"
     },
     {
-        "rank": 96,
+        "rank": 100,
         "username": "Swathipriya.N",
         "name": "Swathipriya.N",
         "age": 15,
@@ -961,17 +1000,17 @@ export default [
         "school": "Amrita Vidyalayam Sr. Sec. School, Ettimadai"
     },
     {
-        "rank": 97,
+        "rank": 101,
         "username": "s4sanaap",
         "name": "Sana AP",
         "age": 16,
         "points": 450,
         "city": "Aluva",
         "state": "IN-KL",
-        "school": "Cochin Refineries school"
+        "school": "Cochin Refineries School"
     },
     {
-        "rank": 98,
+        "rank": 102,
         "username": "lm31KscKJ0eeTkh1",
         "name": "Jagdeep P Nair",
         "age": 15,
@@ -981,7 +1020,7 @@ export default [
         "school": "Sarvodaya Central Vidyalaya"
     },
     {
-        "rank": 99,
+        "rank": 103,
         "username": "AkshayS",
         "name": "Akshay S",
         "age": 15,
@@ -991,7 +1030,7 @@ export default [
         "school": "Bishop Moore Vidyapith"
     },
     {
-        "rank": 100,
+        "rank": 104,
         "username": "swarnakamatchiramesh",
         "name": "Swarnakamatchi.R",
         "age": 16,
@@ -1001,7 +1040,7 @@ export default [
         "school": "Amrita Vidyalayam"
     },
     {
-        "rank": 101,
+        "rank": 105,
         "username": "NuclearNugget",
         "name": "Nafiz Muhammed R",
         "age": 16,
@@ -1011,7 +1050,17 @@ export default [
         "school": "MGM Model School"
     },
     {
-        "rank": 102,
+        "rank": 106,
+        "username": "mohammedazam435",
+        "name": "Mohammed Azam",
+        "age": 18,
+        "points": 350,
+        "city": "Navi Mumbai",
+        "state": "IN-MH",
+        "school": "New Horizon Public School, Airoli"
+    },
+    {
+        "rank": 107,
         "username": "Gr4y",
         "name": "Ashlin Nelson C",
         "age": 16,
@@ -1021,7 +1070,7 @@ export default [
         "school": "Kendriya Vidyalaya, Ernakulam"
     },
     {
-        "rank": 103,
+        "rank": 108,
         "username": "CodeKracker",
         "name": "Kristopher Paul",
         "age": 16,
@@ -1031,7 +1080,7 @@ export default [
         "school": "Naipunnya Public School"
     },
     {
-        "rank": 104,
+        "rank": 109,
         "username": "Ga4uda",
         "name": "Sandy V",
         "age": 17,
@@ -1041,7 +1090,7 @@ export default [
         "school": "Akshara Sree"
     },
     {
-        "rank": 105,
+        "rank": 110,
         "username": "went_hungry",
         "name": "Nikhil N Iyer",
         "age": 17,
@@ -1051,7 +1100,7 @@ export default [
         "school": "Deeksha Center for Learning PU college"
     },
     {
-        "rank": 106,
+        "rank": 111,
         "username": "aishu10",
         "name": "Aishwarya.PR",
         "age": 15,
@@ -1061,7 +1110,7 @@ export default [
         "school": "Amrita Vidyalayam"
     },
     {
-        "rank": 107,
+        "rank": 112,
         "username": "SOORYA!!",
         "name": "SOORYA",
         "age": 17,
@@ -1071,7 +1120,7 @@ export default [
         "school": "KAIRALI VIDYA BHAVAN"
     },
     {
-        "rank": 108,
+        "rank": 113,
         "username": "Oesidxs",
         "name": "Aneesh Arvind",
         "age": 14,
@@ -1081,7 +1130,7 @@ export default [
         "school": "Amrita Vidyalayam"
     },
     {
-        "rank": 109,
+        "rank": 114,
         "username": "feb.in",
         "name": "Febin Ani",
         "age": 17,
@@ -1091,7 +1140,7 @@ export default [
         "school": "Cochin Refineries School"
     },
     {
-        "rank": 110,
+        "rank": 115,
         "username": "chetanaditya.2110",
         "name": "Aditya",
         "age": 18,
@@ -1101,7 +1150,7 @@ export default [
         "school": "Amrita"
     },
     {
-        "rank": 111,
+        "rank": 116,
         "username": "Mr. Unknown",
         "name": "Nandu krishna",
         "age": 14,
@@ -1111,17 +1160,17 @@ export default [
         "school": "Amrita Vidyalayam"
     },
     {
-        "rank": 112,
+        "rank": 117,
         "username": "Kanish",
         "name": "Kanishkar.k",
         "age": 16,
         "points": 150,
         "city": "Trichy",
         "state": "IN-TN",
-        "school": "Mount litera zee school ,trichy"
+        "school": "Mount Litera Zee School, Trichy"
     },
     {
-        "rank": 113,
+        "rank": 118,
         "username": "vishallucky102",
         "name": "VISHAL",
         "age": 17,
@@ -1131,7 +1180,7 @@ export default [
         "school": "Amrita Vidyalayam"
     },
     {
-        "rank": 114,
+        "rank": 119,
         "username": "Kamuy_013",
         "name": "Arjun C Santhosh",
         "age": 17,
@@ -1141,7 +1190,7 @@ export default [
         "school": "Cochin Refineries School"
     },
     {
-        "rank": 115,
+        "rank": 120,
         "username": "falcon",
         "name": "Advaith Arvind",
         "age": 12,
@@ -1151,27 +1200,7 @@ export default [
         "school": "Amrita Vidyalayam"
     },
     {
-        "rank": 116,
-        "username": "Sriram",
-        "name": "Sriram",
-        "age": 15,
-        "points": 100,
-        "city": "Puducherry",
-        "state": "IN-PY",
-        "school": "Amrita Vidyalayam, Puducherry"
-    },
-    {
-        "rank": 117,
-        "username": "quantum02",
-        "name": "P.Dhivagar",
-        "age": 15,
-        "points": 100,
-        "city": "Villinur",
-        "state": "IN-PY",
-        "school": "Amrita Vidyalayam, Puducherry"
-    },
-    {
-        "rank": 118,
+        "rank": 121,
         "username": "Hari@05",
         "name": "Hareeshwar.N.K",
         "age": 15,
@@ -1181,7 +1210,27 @@ export default [
         "school": "Amrita Vidyalayam Sr. Sec. School, Ettimadai"
     },
     {
-        "rank": 119,
+        "rank": 122,
+        "username": "Sriram",
+        "name": "Sriram",
+        "age": 15,
+        "points": 100,
+        "city": "Puducherry",
+        "state": "IN-PY",
+        "school": "Amrita Vidyalayam, Puducherry"
+    },
+    {
+        "rank": 123,
+        "username": "quantum02",
+        "name": "P.Dhivagar",
+        "age": 15,
+        "points": 100,
+        "city": "Villinur",
+        "state": "IN-PY",
+        "school": "Amrita Vidyalayam, Puducherry"
+    },
+    {
+        "rank": 124,
         "username": "aY3kcgC1KmlyTIF0",
         "name": "Suyash",
         "age": 15,
@@ -1191,7 +1240,7 @@ export default [
         "school": "Delhi Public School, Udaipur"
     },
     {
-        "rank": 120,
+        "rank": 125,
         "username": "IndiraMam's Son",
         "name": "cout << \"Full Name\";",
         "age": 16,
@@ -1201,7 +1250,7 @@ export default [
         "school": "Amrita Vidyalayam"
     },
     {
-        "rank": 121,
+        "rank": 126,
         "username": "veds260",
         "name": "Vedaang Singh",
         "age": 16,
@@ -1211,7 +1260,7 @@ export default [
         "school": "Vishwa Bharati Public School"
     },
     {
-        "rank": 122,
+        "rank": 127,
         "username": "Abhiram_10",
         "name": "Abhiram N",
         "age": 17,
@@ -1221,7 +1270,7 @@ export default [
         "school": "Bhavans Vidya Mandir"
     },
     {
-        "rank": 123,
+        "rank": 128,
         "username": "sTyLLoZ_Knight",
         "name": "sTyLLoZ",
         "age": 15,
@@ -1231,7 +1280,7 @@ export default [
         "school": "Amrita Vidyalayam, Kolkata"
     },
     {
-        "rank": 124,
+        "rank": 129,
         "username": "LuCiFer",
         "name": "Anunoy Roy",
         "age": 15,
@@ -1241,7 +1290,7 @@ export default [
         "school": "Amrita Vidyalayam, Kolkata"
     },
     {
-        "rank": 125,
+        "rank": 130,
         "username": "Kalki_Manu",
         "name": "Manukrishna M",
         "age": 15,
@@ -1251,7 +1300,7 @@ export default [
         "school": "Christ Vidyanikethan"
     },
     {
-        "rank": 126,
+        "rank": 131,
         "username": "_akg101",
         "name": "Khushdeep Kaur",
         "age": 16,

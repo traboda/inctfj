@@ -13,7 +13,8 @@ const FAQSection = styled.section`
   width: 100%;
   min-height: 50vh;
   overflow-y: hidden;
-  background-color: #eee;
+  background: rgb(25, 25, 40);
+  color: #eee;
   h1 {  
       font-weight: 900;
       font-size: 36px;
@@ -32,7 +33,7 @@ const FAQPage = () => {
         <TopBar darkenOnSidebar includeSpace={false} />
         <FAQSection>
             <h1 className="mx-2 top-0 sticky-top">
-                <img src={require('../src/assets/images/icons/faq.png')} />
+                <img alt="FAQ" src={require('../src/assets/images/icons/faq.png')} />
                 <div>Frequently Asked Questions</div>
             </h1>
             <div className="container px-1">
@@ -42,8 +43,8 @@ const FAQPage = () => {
                     </Fade>
                 )}
                 <div className="my-5 text-center">
-                    <div className="text-dark">Did not find what you were looking for?</div>
-                    <div>Write to us at <a href="mailto:contact@inctfj.in">contact@inctf.in</a></div>
+                    <div style={{ color: '#EEE' }}>Did not find what you were looking for?</div>
+                    <div style={{ color: '#AAA' }}>Write to us at <a href="mailto:contact@inctfj.in">contact@inctf.in</a></div>
                 </div>
             </div>
         </FAQSection>

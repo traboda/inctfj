@@ -4,7 +4,7 @@ import Fade from "react-reveal/Fade";
 
 const QuickInfoSection = styled.section`
       background: #E3F2FD;
-      padding: 3.5vh 2vw;
+      padding: 2vh 2vw;
       user-select: none;
       .col-md-4 {
           display: flex;
@@ -12,7 +12,7 @@ const QuickInfoSection = styled.section`
           justify-content: center;
       }
       img {
-          max-height: 56px;
+          max-height: 64px;
           margin-bottom: 12px;
       } 
       .qs {
@@ -23,7 +23,7 @@ const QuickInfoSection = styled.section`
           margin-bottom: 0.5rem;
       }
       .ans {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 1.1;
         font-weight: 300;
       }

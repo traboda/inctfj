@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import styled from "@emotion/styled";
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import Fade from 'react-reveal/Fade';
@@ -81,6 +81,8 @@ const TopBar = ({ includeSpace = true, darkenOnSidebar = false }) => {
 
     useEffect(() => { setLoaded(true); }, []);
 
+    const topbarRef = useRef()
+
     const onLogOut = () => {
         setUserInfo(null);
     };
@@ -110,7 +112,7 @@ const TopBar = ({ includeSpace = true, darkenOnSidebar = false }) => {
     // }, [])
 
     return <div>
-        <TopbarContainer>
+        <TopbarContainer ref={topbarRef}>
             <div className="topbar-container">
                 <div className="container px-0">
                     <div className="row w-100 mx-0">
@@ -155,7 +157,7 @@ const TopBar = ({ includeSpace = true, darkenOnSidebar = false }) => {
             </div>
         </TopbarContainer>
         {showMenu && <SideBar darkenOnSidebar={darkenOnSidebar} onClose={onClose} isLoggedIn={hasLoaded && isLoggedIn} onLogOut={onLogOut} />}
-        {includeSpace && <div style={{ height: '60px'}} />}
+        <div style={{ height: topbarRef ? topbarRef?.current?.height : '72px'}} />
     </div>
 
 };

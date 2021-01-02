@@ -5,7 +5,7 @@ import Zoom from 'react-reveal/Zoom';
 
 
 const StatsContainer = styled.section`
-    h2 {
+    .h2 {
       font-size: calc(1.5rem + 2vw);
       margin-bottom: 0;
       line-height: 1;
@@ -17,10 +17,10 @@ const StatsContainer = styled.section`
 const LandingStatsBar = () => {
 
     const stats = [
-        { value: 4, title: "Successful Editions" },
-        { value: 1000, suffix:"+", title: "Schools Participated" },
-        { value: 10000, suffix:"+", title: "Participants" },
-        { value: 100, suffix:"+", title: "Workshops Organized" },
+        { value: 5, title: "Successful Editions" },
+        { value: 1568, suffix:"+", title: "Participants in 2020" },
+        { value: 12458, suffix:"+", title: "Total Participants" },
+        { value: 523, suffix:"+", title: "Schools Participated" },
     ]
 
     return <StatsContainer className="row py-5 text-center mx-0">

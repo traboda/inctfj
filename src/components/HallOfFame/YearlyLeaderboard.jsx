@@ -88,7 +88,7 @@ const ChampionCard = styled.div`
    font-size: 13px;
 `
 
-const YearlyLeaderboard = ({ year, leaderboard, schools, champions }) => {
+const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers }) => {
 
     const [state, setState] = useState(null);
     const [keyword, setKeyword] = useState(null);
@@ -101,7 +101,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions }) => {
             output.push(leaderboard[i].state);
         }
         return IndianStates.filter((s) => output.includes(s.value))
-    }
+    };
 
     const getStateObj = () => {
         let s = IndianStates.find((s) => s.value === state)
@@ -144,12 +144,43 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions }) => {
             </div>
         )}</div>
     </div>}
+    {womenHackers?.length > 0 &&
+    <div className="py-3">
+        <div className="p-2">
+            <h3 style={{ color: '#fd7e14' }} className="mb-1">Top Women Hackers</h3>
+            <p style={{ color: '#AAA' }} className="mb-3">
+                The top Women Hackers of InCTF Junior {year}
+            </p>
+        </div>
+        <div className="row mx-0">{womenHackers.map((c, index) =>
+            <div className="col-md-6 p-1" key={shortid.generate()}>
+                <Fade up delay={index*250}>
+                    <ChampionCard>
+                        <div className="row h-100 w-100 mx-0">
+                            <div
+                                style={{ background: `url(${c.avatar})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                                className="col-4 col-lg-3 px-2 px-md-0"
+                            />
+                            <div className="col-8 col-lg-9 d-flex align-items-center p-2 p-md-3">
+                                <div>
+                                    <h5 className="font-weight-bold">{c.name}</h5>
+                                    <div className="h6 mb-1">{c.points} Pts</div>
+                                    <div className="school-name">{c.school}</div>
+                                    <div>{c.place}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </ChampionCard>
+                </Fade>
+            </div>
+        )}</div>
+    </div>}
     <SchoolLeaderboard schools={schools} />
     <div className="py-3">
         <div className="p-2">
             <h3 style={{ color: '#fd7e14' }} className="mb-1">Leaderboards</h3>
             <p style={{ color: '#AAA' }} className="mb-3">
-                Participant leaderboard ranked based on most points earned by capturing the most number of flags in the lowest time.
+                Finalist leaderboard ranked based on most points earned by capturing the most number of flags in the lowest time.
             </p>
         </div>
         {leaderboard?.length > 0 ?

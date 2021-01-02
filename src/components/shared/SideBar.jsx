@@ -21,7 +21,7 @@ const SideBarMenu = styled.div`
   z-index: 9000;
   max-width: 320px;
   background-color: rgb(0,0,0);
-  background-image: ${() => `url(${require('../../assets/images/backgrounds/cyberpunk_vertical.jpg')})`};
+  background-image: #222;
   color: white;
   box-shadow: -10px 0 8px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
@@ -65,44 +65,44 @@ const SideBarMenu = styled.div`
   }
 `;
 
-const OnBoardingCard = styled.div`
-    padding: 0.5rem;
-    margin: 0.5rem;
-    border-radius: 0.35rem;
-    background: rgba(32,32,32,0.45);
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.55);
-    text-align: center;
-    p {
-       margin-bottom: 0.1rem;
-       font-size: 12px;
-    }
-    a {
-        background: #E65100;
-        color: white!important;
-        font-weight: 600;
-        border-radius: 5px;
-        margin-top: 0.25rem;
-        padding: 0.5rem 1rem;
-        width: 50%;
-    }
-`;
+// const OnBoardingCard = styled.div`
+//     padding: 0.5rem;
+//     margin: 0.5rem;
+//     border-radius: 0.35rem;
+//     background: rgba(32,32,32,0.45);
+//     box-shadow: 1px 2px 3px rgba(0,0,0,0.55);
+//     text-align: center;
+//     p {
+//        margin-bottom: 0.1rem;
+//        font-size: 12px;
+//     }
+//     a {
+//         background: #E65100;
+//         color: white!important;
+//         font-weight: 600;
+//         border-radius: 5px;
+//         margin-top: 0.25rem;
+//         padding: 0.5rem 1rem;
+//         width: 50%;
+//     }
+// `;
 
-const RegisterFooterButton = styled.a`
-    display: inline-flex;
-    align-items: center;
-    font-size: 16px;
-    padding: 6px 10px;
-    border-radius: 6px;
-    color: black!important;
-    background: #FFD600;
-    &:hover{
-      background: #FFAB00;
-    }
-    img {
-        width: 20px;
-        margin-left: 6px;
-    }
-`;
+// const RegisterFooterButton = styled.a`
+//     display: inline-flex;
+//     align-items: center;
+//     font-size: 16px;
+//     padding: 6px 10px;
+//     border-radius: 6px;
+//     color: black!important;
+//     background: #FFD600;
+//     &:hover{
+//       background: #FFAB00;
+//     }
+//     img {
+//         width: 20px;
+//         margin-left: 6px;
+//     }
+// `;
 
 const SocialMediaLinks = styled.div`
     display: flex;
@@ -111,9 +111,13 @@ const SocialMediaLinks = styled.div`
     padding: 1rem;
     a {
        display: block;
-       margin-right: 8px;
-       img {
-          max-height: 36px;
+       margin-right: 16px;
+       i {
+          font-size: 30px;
+          color: #EEE;
+          &:hover {
+            color: #fd7e14;
+          }
        }
     }
 `;
@@ -145,21 +149,21 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
                             <img alt="menu" src={require('../../assets/images/icons/close.png')} />
                         </button>
                     </div>
-                    <div className="text-center pt-2">
+                    <div className="text-center pt-5">
                         <img alt="InCTFj" style={{ maxHeight: '15vh', maxWidth: '100%' }} className="p-3" src={require('../../assets/images/logos/inctf_light.png')} />
                     </div>
-                    {!isLoggedIn && <OnBoardingCard>
-                        <p>Let's get started, right away!</p>
-                        <div className="d-flex w-100 align-items-center justify-content-center">
-                            {/*<a className="plain-link mr-1" href="/register">Register</a>*/}
-                            <a className="plain-link" style={{ background: '#4A148C' }} href="/login">Login</a>
-                        </div>
-                    </OnBoardingCard>}
+                    {/*{!isLoggedIn && <OnBoardingCard>*/}
+                    {/*    <p>Let's get started, right away!</p>*/}
+                    {/*    <div className="d-flex w-100 align-items-center justify-content-center">*/}
+                    {/*        /!*<a className="plain-link mr-1" href="/register">Register</a>*!/*/}
+                    {/*        <a className="plain-link" style={{ background: '#4A148C' }} href="/login">Login</a>*/}
+                    {/*    </div>*/}
+                    {/*</OnBoardingCard>}*/}
                     <ol className="pl-0 mt-3">{sidebarLinks.map((l) =>
                         <li>
-                            {l.href ? <a href={l.href}>
+                            {l.href ? <a href={l.href} className="w-100">
                                 <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
-                            </a> : <button onClick={l.onClick}>
+                            </a> : <button onClick={l.onClick} className="w-100">
                                 <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
                             </button>}
                         </li>
@@ -170,11 +174,19 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
                     {/*        <img alt="Register now" src={require('../../assets/images/icons/chevron_right.png')}/>*/}
                     {/*    </RegisterFooterButton>}*/}
                     {/*</div>*/}
-                    <SocialMediaLinks>
-                        <a target="_blank" href="https://www.instagram.com/juniorinctf/"><img src={require('../../assets/images/icons/instagram.png')} /></a>
-                        <a target="_blank" href="https://twitter.com/InCTFj"><img src={require('../../assets/images/icons/twitter.png')} /></a>
-                        <a target="_blank" href="https://www.facebook.com/InCTFj/"><img src={require('../../assets/images/icons/facebook.png')} /></a>
-                        <a target="_blank" href="https://www.youtube.com/c/InCTFj"><img src={require('../../assets/images/icons/play_button.png')} /></a>
+                    <SocialMediaLinks className="social-bar d-flex align-items-center justify-content-center pt-4 px-2">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/juniorinctf/">
+                            <i className="fab fa-instagram" />
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/InCTFj">
+                            <i className="fab fa-twitter" />
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/InCTFj/">
+                            <i className="fab fa-facebook" />
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/c/InCTFj">
+                            <i className="fab fa-youtube" />
+                        </a>
                     </SocialMediaLinks>
                 </div>
             </SideBarMenu>

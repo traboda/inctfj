@@ -19,7 +19,6 @@ const ReasonsSection = styled.section`
     font-weight: 700;
     margin-bottom: 2rem;
     text-align: center;
-    text-transform: uppercase;
     font-size: 28px;
   }
   video {
@@ -72,7 +71,7 @@ const LandingReasonsToParticipate = () => {
             <div className="d-flex d-md-inline justify-content-center">
                 <img className="mr-2" style={{ width: '45px'}} alt="Why Participate?" src={require('../../assets/images/icons/heart.png')} />
             </div>
-            Don't Miss Out!
+            Why Participate?
         </h2>
         <div className="row mx-0">
         {reasons.map((r, index) =>

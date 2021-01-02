@@ -80,12 +80,12 @@ const LandingHeader = () => {
                 </Pulse>
                 <Fade up>
                     <p>
-                        Participate in the 5th edition of India's First & Premier Hacking & Cyber Security Contest for High School Students,
+                        InCTF Junior is India's First & Premier Hacking & Cyber Security Contest for High School Students,
                         organized by team bi0s, India's No.1 ranked CTF Team.
                         <span>
-                        Join the brightest young hackers in the learn & hack CTF contest,
-                        win exciting prizes & kick-start your cyber-security career.
-                    </span>
+                            Every year the brightest young hackers from all across India participate in this the learn & hack CTF contest,
+                            win exciting prizes & kick-start their cyber-security career.
+                        </span>
                     </p>
                 </Fade>
                 <div>

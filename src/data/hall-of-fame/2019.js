@@ -5,6 +5,7 @@ export default [
         "name": "Pranav Krishna",
         "points": 1200,
         "age": 16,
+        "city": "Coimbatore",
         "state": "IN-TN"
     },
     {
@@ -12,7 +13,7 @@ export default [
         "username": "nilabha",
         "name": "Nilabha Saha",
         "points": 1100,
-        "age": "",
+        "age": 16,
         "city": "Bengaluru",
         "state": "IN-KA"
     },
@@ -30,7 +31,7 @@ export default [
         "name": "Adhithya Suresh Kumar",
         "points": 800,
         "age": 18,
-        "state": ""
+        "state": "IN-TN"
     },
     {
         "rank": 5,
