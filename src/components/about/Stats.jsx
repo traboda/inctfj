@@ -25,10 +25,10 @@ const StatsContainer = styled.section`
 const INCTFJStats = () => {
 
     const stats = [
-        { value: 4, title: "Successful Editions" },
-        { value: 1000, suffix:"+", title: "Schools Participated" },
-        { value: 10000, suffix:"+", title: "Participants" },
-        { value: 100, suffix:"+", title: "Workshops Organized" },
+        { value: 5, title: "Successful Editions" },
+        { value: 1568, suffix:"+", title: "Participants in 2020" },
+        { value: 5810, suffix:"+", title: "Total Participants" },
+        { value: 323, suffix:"+", title: "Schools Participated" },
     ]
 
     return <StatsSecion>

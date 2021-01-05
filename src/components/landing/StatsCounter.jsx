@@ -19,8 +19,8 @@ const LandingStatsBar = () => {
     const stats = [
         { value: 5, title: "Successful Editions" },
         { value: 1568, suffix:"+", title: "Participants in 2020" },
-        { value: 12458, suffix:"+", title: "Total Participants" },
-        { value: 523, suffix:"+", title: "Schools Participated" },
+        { value: 5810, suffix:"+", title: "Total Participants" },
+        { value: 323, suffix:"+", title: "Schools Participated" },
     ]
 
     return <StatsContainer className="row py-5 text-center mx-0">

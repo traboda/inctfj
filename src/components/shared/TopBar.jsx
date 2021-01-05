@@ -72,7 +72,7 @@ const TopbarInfoCard = styled.div`
 `;
 
 
-const TopBar = ({ includeSpace = true, darkenOnSidebar = false }) => {
+const TopBar = ({ darkenOnSidebar = false }) => {
 
     const [showMenu, setShowMenu] = useState(false);
 
@@ -157,7 +157,7 @@ const TopBar = ({ includeSpace = true, darkenOnSidebar = false }) => {
             </div>
         </TopbarContainer>
         {showMenu && <SideBar darkenOnSidebar={darkenOnSidebar} onClose={onClose} isLoggedIn={hasLoaded && isLoggedIn} onLogOut={onLogOut} />}
-        <div style={{ height: topbarRef ? topbarRef?.current?.height : '72px'}} />
+        <div style={{ height: topbarRef ? topbarRef?.current?.clientHeight : '72px'}} />
     </div>
 
 };

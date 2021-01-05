@@ -7,7 +7,16 @@ const withVideos = require('next-videos')
 
 const customConfig = {
     devIndicators: { autoPrerender: false },
-
+    target: 'serverless',
+    webpack: function (config) {
+        config.module.rules.push(
+            {
+                test: /\.ya?ml$/,
+                use: 'js-yaml-loader',
+            },
+        )
+        return config
+    },
     webpackDevMiddleware: config => {
         config.watchOptions = {
             poll: 1000,
@@ -16,7 +25,6 @@ const customConfig = {
         return config
 
     },
-
     generateInDevMode: false,
     workboxOpts: {
         cleanupOutdatedCaches: true,
@@ -51,7 +59,24 @@ const customConfig = {
                 destination: '/stats',
                 permanent: true,
             },
+
         ]
+    },
+    exportPathMap: async function(
+        defaultPathMap,
+        { dev, dir, outDir, distDir, buildId }
+    ) {
+        const posts = require('./src/data/posts');
+        return {
+            "/": { page: "/" },
+            "/blog": { page: "/blog" },
+            "/about": { page: "/about" },
+            "/stats": { page: "/stats" },
+            "/faq": { page: "/faq" },
+            "/rules": { page: "/rules" },
+            "/branding": { page: "/branding" },
+            ...posts
+        }
     },
     env: {
         domain: 'https://play.inctf.in/junior',

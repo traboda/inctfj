@@ -31,7 +31,7 @@ const SchoolLeaderboard = ({ schools }) => {
                 </div>
             </LeaderRow>
             {schools.map((s, index) =>
-                <Fade up delay={index*250}>
+                <Fade up>
                     <LeaderRow key={shortid.generate()} className="row p-2 mb-2 mx-0">
                         <div style={{ fontSize: 'calc(12px + 0.5vw)' }} className="col-6 col-lg-8 px-2">
                             <b>{index+1}.</b> {s.name}
