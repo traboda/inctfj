@@ -13,13 +13,13 @@ const TopbarContainer = styled.header`
   width: 100%;
   z-index: 6000;
   box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.35);
-  background: #222;
-  border-bottom: 2px solid #fd7e14;
+  background: linear-gradient(to right, #263238, #212121);
+  border-bottom: 2px solid #FF6F00;
   nav {
        a {
-          font-size: 16px;
-          color: #999;
-          padding: 8px 16px;
+          font-size: 17px;
+          color: #AAA;
+          padding: 8px 12px;
           text-decoration: none!important;
           &:hover {
             color: #fd7e14;
@@ -121,15 +121,18 @@ const TopBar = ({ darkenOnSidebar = false }) => {
                                 <img className="logo" src={require('../../assets/images/logos/inctf_light.png')} alt="InCTFj" />
                             </a>
                         </div>
-                        <div className="col-6 col-md-8 col-lg-9 px-1 d-flex align-items-center">
-                            <div className="row mx-0 w-100 d-none d-md-flex">
+                        <div className="col-md-9 col-lg-10 px-1 d-none d-md-flex align-items-center">
+                            <div className="row mx-0 w-100">
                                 <div className="col-md-6 d-flex align-items-center px-1">
                                     <nav>
                                         <Fade delay={0}>
                                             <a href="/about">About</a>
                                         </Fade>
                                         <Fade delay={200}>
-                                            <a href="/stats">Stats & Ranking</a>
+                                            <a href="/stats">Stats & Rankings</a>
+                                        </Fade>
+                                        <Fade delay={750}>
+                                            <a href="/blog">Blog</a>
                                         </Fade>
                                         <Fade delay={750}>
                                             <a href="/faq">FAQ</a>
@@ -147,7 +150,7 @@ const TopBar = ({ darkenOnSidebar = false }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-2 col-md-1 d-flex align-items-center justify-content-center px-1">
+                        <div className="col-8 d-flex d-md-none align-items-center justify-content-end px-1">
                             <button onClick={onOpen}>
                                 <img alt="menu" src={require('../../assets/images/icons/hamburger.png')} />
                             </button>

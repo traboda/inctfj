@@ -1,6 +1,7 @@
 import React from 'react';
 import Slide from "react-reveal/Slide";
 import styled from "@emotion/styled";
+import Fade from "react-reveal/Fade";
 
 const TopbarWrap = styled.div`
   position: fixed;
@@ -19,12 +20,11 @@ const SideBarMenu = styled.div`
   right: 0;
   width: 100%;
   z-index: 9000;
-  max-width: 320px;
-  background-color: rgb(0,0,0);
-  background-image: #222;
+  background: linear-gradient(45deg, rgba(0,0,0,0.4) 0%, rgba(46,0,37,0.8) 37%, rgba(254,0,100,0.4) 51%, rgba(0,0,0,0.9) 100%),linear-gradient(51deg, rgba(82,55,15,1) 0%, rgba(71,83,0,1) 40%, rgba(0,50,124,1) 100%);
   color: white;
   box-shadow: -10px 0 8px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
+  max-width: 400px;
   .sidebar-container {
      height: 100vh;
      width: 100%;
@@ -47,12 +47,16 @@ const SideBarMenu = styled.div`
     padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid rgba(255,255,255,0.25);
+    justify-content: center;
+
     a, button {
         text-decoration: none!important;
-        font-size: 18px;
-        color: white;
+        font-size: 30px;
+        color: #EEE;
+        font-weight: 600;
         padding: 0;
+        display: flex;
+        align-items: center;
         img {
           margin-right: 8px;
           max-height: 40px;
@@ -114,7 +118,7 @@ const SocialMediaLinks = styled.div`
        margin-right: 16px;
        i {
           font-size: 30px;
-          color: #EEE;
+          color: #AAA;
           &:hover {
             color: #fd7e14;
           }
@@ -127,16 +131,14 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
     const sidebarLinks = !isLoggedIn ? [
         { "icon": require('../../assets/images/icons/home.png'), "title": "Home", "href": "/" },
         { "icon": require('../../assets/images/icons/star_glowing.png'), "title": "About", "href": "/about" },
-        { "icon": require('../../assets/images/icons/shooting_star.png'), "title": "Stats & Rankings", "href": "/stats" },
-        { "icon": require('../../assets/images/icons/books.png'), "title": "Learn", "href": "https://wiki.bi0s.in/" },
-        { "icon": require('../../assets/images/icons/test.png'), "title": "Practice", "href": "https://archive.bi0s.in/" },
+        { "icon": require('../../assets/images/icons/trophy.png'), "title": "Stats & Rankings", "href": "/stats" },
+        { "icon": require('../../assets/images/icons/blog.png'), "title": "Blog", "href": "/blog" },
         { "icon": require('../../assets/images/icons/faq.png'), "title": "FAQ", "href": "/faq" },
     ] : [
         { "icon": require('../../assets/images/icons/sword.png'), "title": "CTF Arena", "href": "/ctf" },
         { "icon": require('../../assets/images/icons/dashboard.png'), "title": "Dashboard", "href": "/dashboard" },
         { "icon": require('../../assets/images/icons/shooting_star.png'), "title": "Stats & Rankings", "href": "/stats" },
-        { "icon": require('../../assets/images/icons/books.png'), "title": "Learn", "href": "https://wiki.bi0s.in/" },
-        { "icon": require('../../assets/images/icons/test.png'), "title": "Practice", "href": "https://archive.bi0s.in/" },
+        { "icon": require('../../assets/images/icons/blog.png'), "title": "Blog", "href": "/blog" },
         { "icon": require('../../assets/images/icons/logout.png'), "title": "Logout", "onClick": onLogOut }
     ];
 
@@ -150,7 +152,7 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
                         </button>
                     </div>
                     <div className="text-center pt-5">
-                        <img alt="InCTFj" style={{ maxHeight: '15vh', maxWidth: '100%' }} className="p-3" src={require('../../assets/images/logos/inctf_light.png')} />
+                        <img alt="InCTFj" style={{ maxHeight: '20vh', maxWidth: '100%' }} className="p-3" src={require('../../assets/images/logos/inctf_light.png')} />
                     </div>
                     {/*{!isLoggedIn && <OnBoardingCard>*/}
                     {/*    <p>Let's get started, right away!</p>*/}
@@ -159,14 +161,16 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
                     {/*        <a className="plain-link" style={{ background: '#4A148C' }} href="/login">Login</a>*/}
                     {/*    </div>*/}
                     {/*</OnBoardingCard>}*/}
-                    <ol className="pl-0 mt-3">{sidebarLinks.map((l) =>
-                        <li>
-                            {l.href ? <a href={l.href} className="w-100">
-                                <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
-                            </a> : <button onClick={l.onClick} className="w-100">
-                                <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
-                            </button>}
-                        </li>
+                    <ol className="pl-0 mt-3">{sidebarLinks.map((l, index) =>
+                        <Fade delay={index*250}>
+                            <li>
+                                {l.href ? <a href={l.href} className="w-100">
+                                    <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
+                                </a> : <button onClick={l.onClick} className="w-100">
+                                    <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
+                                </button>}
+                            </li>
+                        </Fade>
                     )}</ol>
                     {/*<div className="my-3 mx-2">*/}
                     {/*    {!isLoggedIn && <RegisterFooterButton className="plain-link" href="/register">*/}
@@ -174,19 +178,30 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
                     {/*        <img alt="Register now" src={require('../../assets/images/icons/chevron_right.png')}/>*/}
                     {/*    </RegisterFooterButton>}*/}
                     {/*</div>*/}
-                    <SocialMediaLinks className="social-bar d-flex align-items-center justify-content-center pt-4 px-2">
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/juniorinctf/">
-                            <i className="fab fa-instagram" />
-                        </a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/InCTFj">
-                            <i className="fab fa-twitter" />
-                        </a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/InCTFj/">
-                            <i className="fab fa-facebook" />
-                        </a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/c/InCTFj">
-                            <i className="fab fa-youtube" />
-                        </a>
+                    <div style={{ color: '#999' }} className="text-center pt-4">
+                        follow us on
+                    </div>
+                    <SocialMediaLinks className="social-bar d-flex align-items-center justify-content-center px-2">
+                        <Fade delay={50}>
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/juniorinctf/">
+                                <i className="fab fa-instagram" />
+                            </a>
+                        </Fade>
+                        <Fade delay={250}>
+                            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/InCTFj">
+                                <i className="fab fa-twitter" />
+                            </a>
+                        </Fade>
+                        <Fade delay={500}>
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/InCTFj/">
+                                <i className="fab fa-facebook" />
+                            </a>
+                        </Fade>
+                        <Fade delay={750}>
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/c/InCTFj">
+                                <i className="fab fa-youtube" />
+                            </a>
+                        </Fade>
                     </SocialMediaLinks>
                 </div>
             </SideBarMenu>
