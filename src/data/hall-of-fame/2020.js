@@ -202,7 +202,7 @@ export default [
     {
         "rank": 21,
         "username": "dedsec636",
-        "name": "Rakhul",
+        "name": "Rakhul KS",
         "age": 17,
         "points": 5025,
         "city": "Coimbatore",
