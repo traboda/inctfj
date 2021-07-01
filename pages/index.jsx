@@ -6,7 +6,7 @@ import LandingSponsorship from "../src/components/landing/Sponsorship";
 import LandingTestimonials from "../src/components/landing/Testimonials";
 import LandingOrganizers from "../src/components/landing/Organizers";
 import LandingReasonsToParticipate from "../src/components/landing/WhyParticipate";
-// import CTAReg from "../src/components/landing/CTAReg";
+import CTAReg from "../src/components/landing/CTAReg";
 import LandingQuickInfo from "../src/components/landing/QuickInfo";
 import LandingAboutInCTF from "../src/components/landing/About";
 import LandingStatsBar from "../src/components/landing/StatsCounter";
@@ -29,7 +29,7 @@ const LandingPage = () => {
             <LandingHowItWorks />
             <LandingJoinDiscussion />
             <LandingReasonsToParticipate />
-            {/*<CTAReg />*/}
+            <CTAReg />
             <LandingSponsorship />
             <LandingStatsBar />
             <LandingOrganizers />

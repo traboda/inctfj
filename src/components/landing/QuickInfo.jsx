@@ -39,7 +39,7 @@ const LandingQuickInfo = () => {
         {
             image: require('../../assets/images/icons/calendar.png'), up: true,
             question: "When?", answer: <>
-                2021 edition to be announced.
+                Learning Round Started, <br /> Finals December 2021
             </>
         },
         {

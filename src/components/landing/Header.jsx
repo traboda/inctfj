@@ -89,7 +89,7 @@ const LandingHeader = () => {
                     </p>
                 </Fade>
                 <div>
-                    <a href="/stats">View Stats & Rankings</a>
+                    <a href="https://traboda.com/contest/inctfj-21-lr">Register for Learning Round</a>
                     {/*<div className="limited-slots-warning">* limited slots left.</div>*/}
                 </div>
             </div>

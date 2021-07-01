@@ -40,7 +40,7 @@ const CTAReg = () => {
             </Fade>
             <Fade right>
                 <div className="col-md-3 d-flex align-items-center justify-content-center p-2">
-                    <a href="/register">Register Now</a>
+                    <a href="https://traboda.com/contest/inctfj-21-lr">Register Now</a>
                 </div>
             </Fade>
         </div>

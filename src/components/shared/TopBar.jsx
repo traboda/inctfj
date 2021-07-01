@@ -142,10 +142,10 @@ const TopBar = ({ darkenOnSidebar = false }) => {
                                 <div className="col-md-6 d-flex justify-content-end text-right px-1">
                                     <TopbarInfoCard>
                                         <div>
-                                            <div>India' First & Only CTF Hacking Contest</div>
+                                            <div>India's First & Only CTF Hacking Contest</div>
                                             <h5>Exclusively for School Students</h5>
                                         </div>
-                                        {/*{(hasLoaded && !isLoggedIn) && <a href="/register">Register</a>}*/}
+                                        <a href="https://traboda.com/contest/inctfj-21-lr">Register</a>
                                     </TopbarInfoCard>
                                 </div>
                             </div>
