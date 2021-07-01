@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import styled from "@emotion/styled";
-import { keyframes } from "@emotion/core";
+import { keyframes } from "@emotion/react";
 import { useRouter } from 'next/router'
 
-import '../../styles/cyberpunk.css';
+// import '../../styles/cyberpunk.css';
 import SimplePost from "../../utils/SimplePost";
 import Pulse from "react-reveal/Pulse";
 import {setUserInfo} from "../../states";

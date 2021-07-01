@@ -6,7 +6,7 @@ import Slide from "react-reveal/Slide";
 import {APIFetch} from "../../utils/APIFetch";
 import {queryMe} from "../../graphql/profile";
 import ProfileEditor from "./ProfileEditor";
-import '../../styles/cyberpunk.css';
+// import '../../styles/cyberpunk.css';
 import LandingJoinDiscussion from "../landing/JoinDiscussions";
 import ShareCard from "./ShareCard";
 import PromoLinks from "./promo";

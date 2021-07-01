@@ -4,9 +4,6 @@ import config from 'react-reveal/globals';
 
 config({ ssrFadeout: true });
 
-import '../../styles/bootstrap.min.css';
-import '../../styles/styles.css';
-
 const seoTags = {
     "siteName": "InCTF Jr",
     "tagLine": "India's First & Premier CTF Hacking Contest for School Students",

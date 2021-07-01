@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from "@emotion/styled";
-import '../../styles/cyberpunk.css';
+// import '../../styles/cyberpunk.css';
 import Pulse from "react-reveal/Pulse";
 import {useRouter} from "next/router";
 

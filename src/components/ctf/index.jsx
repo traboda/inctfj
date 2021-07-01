@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import shortid from 'shortid';
 const _ = require('lodash');
 
-import '../../styles/cyberpunk.css';
+// import '../../styles/cyberpunk.css';
 import ChallengeCard from "./elements/ChallengeCard";
 import CategoryCard from "./elements/CategoryCard";
 import {APIFetch} from "../../utils/APIFetch";
