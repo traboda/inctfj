@@ -74,6 +74,8 @@ const customConfig = {
             "/faq": { page: "/faq" },
             "/rules": { page: "/rules" },
             "/branding": { page: "/branding" },
+            "/promote": { page: "/promote" },
+            "/publicize": { page: "/publicize" },
             ...posts
         }
     },
