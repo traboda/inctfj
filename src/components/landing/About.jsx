@@ -39,6 +39,7 @@ const AboutInCTFSection = styled.section`
          max-width: 100%;
          box-shadow: none!important;
          padding: 0;
+        margin-bottom: 0.5rem;
       }
    }
 `;

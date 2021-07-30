@@ -141,7 +141,7 @@ const TopBar = ({ darkenOnSidebar = false }) => {
                                 </div>
                                 <div className="col-md-6 d-flex justify-content-end text-right px-1">
                                     <TopbarInfoCard>
-                                        <div>
+                                        <div className="mr-2">
                                             <div>India's First & Only CTF Hacking Contest</div>
                                             <h5>Exclusively for School Students</h5>
                                         </div>

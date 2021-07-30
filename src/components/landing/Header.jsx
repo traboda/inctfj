@@ -8,7 +8,7 @@ const HeaderContainer = styled.section`
     position: relative;
     background-position: center;
     background-size: cover;
-    background-image: ${() => `url(${require('../../assets/images/backgrounds/cyberpunk.jpg')})`};
+    background-image: ${() => `url(${require('../../assets/images/backgrounds/ctf_player_1.jpg')})`};
     .header-container {
         padding: 1.5rem;
         padding-top: 15vh;
@@ -33,7 +33,9 @@ const HeaderContainer = styled.section`
       font-weight: 700;
       line-height: 1.1;
       font-size: calc(1.8rem + 1.5vw);
-      text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.3)
+      text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.3);
+      margin-bottom: 1rem;
+      max-width: 800px;
     }
     p {
       max-width: 700px;
@@ -89,7 +91,9 @@ const LandingHeader = () => {
                     </p>
                 </Fade>
                 <div>
-                    <a href="https://traboda.com/contest/inctfj-21-lr">Register for Learning Round</a>
+                    <a href="https://traboda.com/contest/inctfj-21-lr">
+                        Register for Learning Round
+                    </a>
                     {/*<div className="limited-slots-warning">* limited slots left.</div>*/}
                 </div>
             </div>

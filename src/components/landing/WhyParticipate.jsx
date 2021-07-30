@@ -12,14 +12,14 @@ const VideoRotationAnimation = keyframes`
 `
 
 const ReasonsSection = styled.section`
-  padding: 5vh 2vw;
+  padding: 15vh 2vw;
   background: #E8EAF6;
   color: black;
   h2 {
     font-weight: 700;
     margin-bottom: 2rem;
     text-align: center;
-    font-size: 28px;
+    font-size: calc(1.5rem + 0.5vw);
   }
   video {
     max-width: 100%;
@@ -69,7 +69,7 @@ const LandingReasonsToParticipate = () => {
     return <ReasonsSection>
         <h2 className="text-center">
             <div className="d-flex d-md-inline justify-content-center">
-                <img className="mr-2" style={{ width: '45px'}} alt="Why Participate?" src={require('../../assets/images/icons/heart.png')} />
+                <img className="mr-2" style={{ width: '64px'}} alt="Why Participate?" src={require('../../assets/images/icons/heart.png')} />
             </div>
             Why Participate?
         </h2>

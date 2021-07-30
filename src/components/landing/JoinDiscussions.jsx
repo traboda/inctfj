@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import Fade from 'react-reveal/Fade';
 
 const DiscussionPortals = styled.a`
-    min-height: 25vmin;
+    min-height: 30vmin;
     padding: 2.5vh 5vw;
     display: flex;
     align-items: center;
@@ -27,7 +27,7 @@ const DiscussionPortals = styled.a`
       }
     }
     img {
-        height: 72px!important;
+        height: 120px!important;
         filter: drop-shadow(2px 3px 8px rgba(0,0,0,0.3));
         margin-bottom: 5px;
         margin-right: 10px;
@@ -66,7 +66,7 @@ const LandingJoinDiscussion = () => {
 
         </div>
         <div className="col-md-6 px-0">
-            <DiscordDiscussion href="https://discord.gg/rqF3ZkeTrY" rel="noopener noreferrer" target="_blank">
+            <DiscordDiscussion href="https://discord.gg/rkyDM6p3m2" rel="noopener noreferrer" target="_blank">
                 <Fade right>
                     <div>
                         <img src={require('../../assets/images/logos/discord.png')} alt="Join Discord Server" />

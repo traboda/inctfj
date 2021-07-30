@@ -12,19 +12,19 @@ const QuickInfoSection = styled.section`
           justify-content: center;
       }
       img {
-          max-height: 64px;
-          margin-bottom: 12px;
+          max-height: 90px;
+          max-width: 100%;
       } 
       .qs {
           font-size: 18px;
           font-weight: 700;
           text-transform: uppercase;
-          line-height: 1;
-          margin-bottom: 0.5rem;
+          line-height: 1.2;
+          margin-bottom: 0.25rem;
       }
       .ans {
         font-size: 18px;
-        line-height: 1.1;
+        line-height: 1.2;
         font-weight: 300;
       }
 `;

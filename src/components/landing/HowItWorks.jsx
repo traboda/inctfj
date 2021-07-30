@@ -5,8 +5,8 @@ import Fade from 'react-reveal/Fade';
 const HowItWorksSection = styled.section`
   text-align: center;
   img {
-     max-height: 90px;
      max-width: 100%;
+     width: 150px;
      box-shadow: none!important;
      padding: 0;
      margin-bottom: 10px;
@@ -50,7 +50,10 @@ const LandingHowItWorks = () => {
             </>,
             "links": [
                 {
-                    "title": "open bi0s wiki", "url": "https://wiki.bi0s.in/"
+                    "title": "learn from bi0s wiki", "url": "https://wiki.bi0s.in/"
+                },
+                {
+                    "title": "practice on Traboda", "url": "https://app.traboda.com/"
                 }
             ]
 
@@ -88,7 +91,13 @@ const LandingHowItWorks = () => {
     return <HowItWorksSection className="motto-cards row py-5 mx-0">
         <div className="col-12 d-flex p-0 mb-4">
             <h2 className="px-md-3 px-1 py-2 rounded-right mt-4 mb-2 d-md-flex d-inline-block align-items-center bg-primary text-light text-uppercase shadow font-weight-bold text-center mb-0">
-                <img draggable="false" alt="How it Works?" src={require('../../assets/images/icons/thinking.png')} className="mr-2 my-0 p-0 shadow-none" />
+                <img
+                    draggable="false"
+                    alt="How it Works?"
+                    src={require('../../assets/images/icons/thinking.png')}
+                    className="mr-2 my-0 p-0 shadow-none"
+                    style={{ width: '64px' }}
+                />
                 How does it Work?
             </h2>
         </div>
@@ -106,8 +115,13 @@ const LandingHowItWorks = () => {
                             <p>{s.content}</p>
                             {(s.links && s.links.length > 0) &&
                             <div className="w-100 mt-1 mb-4">{s.links.map((l) =>
-                                <a href={l.url}>
-                                    <img src={require('../../assets/images/icons/external_link.png')} alt="open link" />
+                                <a className="d-inline-block mx-2 mb-2" href={l.url}>
+                                    <img
+                                        src={require('../../assets/images/icons/external_link.png')}
+                                        style={{ width: '20px' }}
+                                        alt="open link"
+                                        draggable="false"
+                                    />
                                     {l.title}
                                 </a>
                             )}</div>}
