@@ -49,7 +49,7 @@ const HeaderContainer = styled.section`
       }
       margin-bottom: 1.5rem;
     }
-    a {
+    #header-register-button {
        display: inline-block;
        width: 100%;
        text-align: center;
@@ -62,10 +62,28 @@ const HeaderContainer = styled.section`
        text-decoration: none!important;
        border-radius: 8px;
        box-shadow: 2px 6px 12px rgba(0,0,0,0.3);
+       &:hover {
+          background: white;
+          color: #F13F17;
+       }
     }
     .limited-slots-warning {
         color: #FF9100;
         font-size: 13px;
+    }
+`;
+
+const PoweredByTraboda = styled('div')`
+    margin-top: 1rem;
+    font-size: 13px;
+    div {
+        opacity: 0.8;
+        margin-bottom: 0.5rem;
+    }
+    img {
+        position: inherit;
+        display: block;
+        max-height: 50px;
     }
 `;
 
@@ -91,11 +109,17 @@ const LandingHeader = () => {
                     </p>
                 </Fade>
                 <div>
-                    <a href="https://traboda.com/contest/inctfj-21-lr">
+                    <a id="header-register-button" href="https://traboda.com/contest/inctfj-21-lr">
                         Register for Learning Round
                     </a>
                     {/*<div className="limited-slots-warning">* limited slots left.</div>*/}
                 </div>
+                <PoweredByTraboda>
+                    <div>Powered by</div>
+                    <a href="https://app.traboda.com">
+                        <img src={require('../../assets/images/logos/traboda_light.png')} alt="traboda" draggable="false" />
+                    </a>
+                </PoweredByTraboda>
             </div>
         </div>
     </HeaderContainer>;

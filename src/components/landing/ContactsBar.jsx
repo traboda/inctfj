@@ -40,7 +40,20 @@ const FooterLinksBar = styled.nav`
          text-decoration: none;
        }
     }
-`
+`;
+
+const PoweredByTraboda = styled('div')`
+    font-size: 13px;
+    div {
+        opacity: 0.8;
+        margin-bottom: 0.5rem;
+    }
+    img {
+        position: inherit;
+        display: block;
+        max-height: 50px;
+    }
+`;
 
 const LandingContactsBar = () => {
 
@@ -66,11 +79,15 @@ const LandingContactsBar = () => {
             </Fade>
             <Fade up>
                 <div className="col-md-4 p-2 mb-2 d-flex align-items-center justify-content-md-center">
-                    {/*<img src={require('../../assets/images/icons/telephone.png')} />*/}
-                    {/*<div>*/}
-                    {/*    <div>ANYTHING ELSE? RING US UP.</div>*/}
-                    {/*    <h5>0476 280 4525</h5>*/}
-                    {/*</div>*/}
+                    <PoweredByTraboda>
+                        <div>Proudly Powered By Traboda.</div>
+                        <a href="https://app.traboda.com">
+                            <img
+                                src={require('../../assets/images/logos/traboda_light.png')}
+                                alt="Traboda" draggable="false"
+                            />
+                        </a>
+                    </PoweredByTraboda>
                 </div>
             </Fade>
             <div className="col-md-8 text-center text-md-left h-100 d-flex align-items-center pt-4 px-2">

@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from "next/head";
 import config from 'react-reveal/globals';
+import SupportDesk from "./Support";
 
 config({ ssrFadeout: true });
 
@@ -45,6 +46,7 @@ const Base = ({ children, meta }) => {
         </Head>
         <div className="app">
             {children}
+            <SupportDesk />
         </div>
     </React.Fragment>
 };
