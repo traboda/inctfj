@@ -14,6 +14,7 @@ import LandingHowItWorks from "../src/components/landing/HowItWorks";
 import LandingContactsBar from "../src/components/landing/ContactsBar";
 import TopBar from "../src/components/shared/TopBar";
 import LandingJoinDiscussion from "../src/components/landing/JoinDiscussions";
+import SponsorBar from "../src/components/landing/SponsorBar";
 // import Schedule from "../src/components/landing/Schedule";
 
 const LandingPage = () => {
@@ -24,6 +25,7 @@ const LandingPage = () => {
             <LandingHeader />
             <LandingQuickInfo />
             <LandingAboutInCTF />
+            <SponsorBar />
             {/*<Schedule />*/}
             <LandingTestimonials />
             <LandingHowItWorks />
