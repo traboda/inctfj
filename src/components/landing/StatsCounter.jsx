@@ -19,7 +19,7 @@ const LandingStatsBar = () => {
     const stats = [
         { value: 5, title: "Successful Editions" },
         { value: 1568, suffix:"+", title: "Participants in 2020" },
-        { value: 5810, suffix:"+", title: "Total Participants" },
+        { value: 8532, suffix:"+", title: "Total Participants" },
         { value: 323, suffix:"+", title: "Schools Participated" },
     ]
 
