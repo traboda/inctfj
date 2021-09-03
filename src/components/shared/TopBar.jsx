@@ -128,11 +128,11 @@ const TopBar = ({ darkenOnSidebar = false }) => {
                                         <Fade delay={0}>
                                             <a href="/about">About</a>
                                         </Fade>
+                                        <Fade delay={750}>
+                                            <a target="_blank" href="https://traboda.com/contest/inctfj-21-lr">Login</a>
+                                        </Fade>
                                         <Fade delay={200}>
                                             <a href="/stats">Stats & Rankings</a>
-                                        </Fade>
-                                        <Fade delay={750}>
-                                            <a href="/blog">Blog</a>
                                         </Fade>
                                         <Fade delay={750}>
                                             <a href="/faq">FAQ</a>

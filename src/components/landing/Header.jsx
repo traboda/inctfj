@@ -179,11 +179,14 @@ const LandingHeader = () => {
                     >
                         <img alt="close" src={require('../../assets/images/icons/close.png')} />
                     </CloseButton>
-                    {showPlayer && <ReactPlayer url="https://youtu.be/T8pEY4AR_Kg" autoplay width="100%" height="80vmin" />}
+                    {showPlayer && <ReactPlayer url="https://youtu.be/4gw5uDIH0rM" autoplay width="100%" height="80vmin" />}
                 </Modal>
-                <div>
-                    <a id="header-register-button" href="https://traboda.com/contest/inctfj-21-lr">
+                <div className="d-flex align-items-center">
+                    <a id="header-register-button" className="mr-2" href="https://traboda.com/contest/inctfj-21-lr">
                         Register for Learning Round
+                    </a>
+                    <a id="header-register-button" href="https://traboda.com/contest/inctfj-21-lr">
+                        Login to Dashboard
                     </a>
                 </div>
                 <div className="d-flex mt-3 align-items-center">
