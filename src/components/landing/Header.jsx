@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "@emotion/styled";
+import dynamic from 'next/dynamic'
 
 import Pulse from "react-reveal/Pulse";
 import Fade from 'react-reveal/Fade';
+import {clearAllBodyScrollLocks} from "body-scroll-lock";
+import Modal from "react-modal";
+
+const ReactPlayer = dynamic(() => import('react-player/youtube'));
+
 
 const HeaderContainer = styled.section`
     position: relative;
@@ -17,7 +23,7 @@ const HeaderContainer = styled.section`
         align-items: center;
         justify-content: center;
         width: 100%;
-        background: rgba(0,0,0,0.65);
+        background: rgba(0,0,0,0.5);
         color: white;
         div {
             max-width: 1200px;
@@ -54,7 +60,6 @@ const HeaderContainer = styled.section`
        width: 100%;
        text-align: center;
        max-width: 300px;
-       margin-bottom: 0.5rem;
        background: #F13F17;
        color: white;
        font-weight: 600;
@@ -74,7 +79,6 @@ const HeaderContainer = styled.section`
 `;
 
 const PoweredByTraboda = styled('div')`
-    margin-top: 1rem;
     font-size: 13px;
     div {
         opacity: 0.8;
@@ -87,7 +91,53 @@ const PoweredByTraboda = styled('div')`
     }
 `;
 
+const CloseButton = styled.button`
+   background: none!important; top: 1rem; right: 1rem; position: absolute; padding: 0!important;
+   img { width: 32px; }
+`;
+
+const HowToRegister = styled.a`
+    position: relative;
+    cursor: pointer;
+    display: block;
+    border: 3px solid rgba(100,250,100,0.6);
+    border-radius: 8px;
+    img {
+      position: unset!important;
+      height: 90px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .how_to_register_cover {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 90px;
+        overflow: hidden;
+        background: rgba(0,0,0,0.65);
+        img {
+            max-height: 30px;
+            box-shadow: none;
+        }
+        div {
+          color: white;
+          line-height: 1;
+        }
+    }
+    &:hover {
+        .how_to_register_cover {
+          background: rgba(50,150,50,0.75);
+        }
+    }
+`;
+
 const LandingHeader = () => {
+
+    const [showPlayer, setShowPlayer] = useState(false);
 
     return <HeaderContainer>
         <div className="header-container">
@@ -108,18 +158,62 @@ const LandingHeader = () => {
                         </span>
                     </p>
                 </Fade>
+                <Modal
+                    isOpen={showPlayer}
+                    onRequestClose={() => { clearAllBodyScrollLocks(); setShowPlayer(false); }}
+                    style={{
+                        overlay: {
+                            zIndex: 9000, background: 'rgba(0,0,0,0.8)',
+                            height: '100vh',
+                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        },
+                        content: {
+                            position: 'unset', top: 0, left: 0, right: 0, padding: '15px',
+                            border: 'none', background: 'none',  width: '100%', maxWidth: '800px'
+                        }
+                    }}
+                >
+                    <CloseButton
+                        className="px-4 border-0 rounded"
+                        onClick={() => { clearAllBodyScrollLocks(); setShowPlayer(false)}}
+                    >
+                        <img alt="close" src={require('../../assets/images/icons/close.png')} />
+                    </CloseButton>
+                    {showPlayer && <ReactPlayer url="https://youtu.be/T8pEY4AR_Kg" autoplay width="100%" height="80vmin" />}
+                </Modal>
                 <div>
                     <a id="header-register-button" href="https://traboda.com/contest/inctfj-21-lr">
                         Register for Learning Round
                     </a>
+                </div>
+                <div className="d-flex mt-3 align-items-center">
+                    <div className="mr-4">
+                        <HowToRegister onClick={() => setShowPlayer(true)}>
+                            <div className="how_to_register_cover">
+                                <div className="text-center">
+                                    <div>How to Register?</div>
+                                    <img
+                                        alt="Play Video"
+                                        draggable="false"
+                                        src={require('../../assets/images/icons/play_button.png')}
+                                    />
+                                </div>
+                            </div>
+                            <img
+                                alt="how to Register"
+                                draggable="false"
+                                src={require('../../assets/images/covers/how_to_register.JPG')}
+                            />
+                        </HowToRegister>
+                    </div>
+                    <PoweredByTraboda>
+                        <div>Powered by</div>
+                        <a href="https://app.traboda.com">
+                            <img src={require('../../assets/images/logos/traboda_light.png')} alt="traboda" draggable="false" />
+                        </a>
+                    </PoweredByTraboda>
                     {/*<div className="limited-slots-warning">* limited slots left.</div>*/}
                 </div>
-                <PoweredByTraboda>
-                    <div>Powered by</div>
-                    <a href="https://app.traboda.com">
-                        <img src={require('../../assets/images/logos/traboda_light.png')} alt="traboda" draggable="false" />
-                    </a>
-                </PoweredByTraboda>
             </div>
         </div>
     </HeaderContainer>;
