@@ -23,23 +23,38 @@ const SponsorsContainer = styled('div')`
 const SponsorBar = () => {
 
     return <section className="p-4">
-        <h4 className="text-center">Our Sponsors</h4>
-        <SponsorsContainer>
-            <a href="http://jnanamarga.in/" rel="nofollow noopener">
-                <img
-                    alt="Jnana Marga Technologies" draggable="false"
-                    src={require('../../assets/images/logos/jnanamarga_tech.jpg')}
-                />
-                <div>Silver Sponsor</div>
-            </a>
-            <a href="http://app.traboda.com/" rel="nofollow noopener">
-                <img
-                    alt="Traboda CyberLabs" draggable="false"
-                    src={require('../../assets/images/logos/traboda_dark.png')}
-                />
-                <div>Platform Sponsor</div>
-            </a>
-        </SponsorsContainer>
+        <div className="row">
+            <div className="col-md-8 p-2">
+                <h4 className="text-center">Our Sponsors</h4>
+                <SponsorsContainer>
+                    <a href="http://jnanamarga.in/" rel="nofollow noopener">
+                        <img
+                            alt="Jnana Marga Technologies" draggable="false"
+                            src={require('../../assets/images/logos/jnanamarga_tech.jpg')}
+                        />
+                        <div>Silver Sponsor</div>
+                    </a>
+                    <a href="http://app.traboda.com/" rel="nofollow noopener">
+                        <img
+                            alt="Traboda CyberLabs" draggable="false"
+                            src={require('../../assets/images/logos/traboda_dark.png')}
+                        />
+                        <div>Platform Sponsor</div>
+                    </a>
+                </SponsorsContainer>
+            </div>
+            <div className="col-md-4 p-2">
+                <h4 className="text-center">Our Partners</h4>
+                <SponsorsContainer>
+                    <a href="http://www.sciencesociety.in/" rel="nofollow noopener">
+                        <img
+                            alt="Jnana Marga Technologies" draggable="false"
+                            src={require('../../assets/images/logos/ssi_logo.jpg')}
+                        />
+                    </a>
+                </SponsorsContainer>
+            </div>
+        </div>
     </section>
 
 };
