@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import styled from "@emotion/styled";
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import Fade from 'react-reveal/Fade';
+import Modal from "react-modal";
 
 import SideBar from "./SideBar";
 import {setUserInfo, useAuthState} from "../../states";
@@ -58,7 +59,7 @@ const TopbarInfoCard = styled.div`
         margin: 0;
         color: #fd7e14;
     }
-    a {
+    button {
       margin-left: 8px;
       display: block;
       background: #F13F17;
@@ -71,11 +72,15 @@ const TopbarInfoCard = styled.div`
     }
 `;
 
+const CloseButton = styled.button`
+   background: none!important; top: 1rem; right: 1rem; position: absolute; padding: 0!important;
+   img { width: 32px; }
+`;
 
-const TopBar = ({ darkenOnSidebar = false }) => {
+const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
 
     const [showMenu, setShowMenu] = useState(false);
-
+    const [showRegCard, setShowRegCard] = useState(false);
     const [hasLoaded, setLoaded] = useState(false);
     const [isLoggedIn] = useAuthState('isLoggedIn');
 
@@ -128,9 +133,6 @@ const TopBar = ({ darkenOnSidebar = false }) => {
                                         <Fade delay={0}>
                                             <a href="/about">About</a>
                                         </Fade>
-                                        <Fade delay={750}>
-                                            <a target="_blank" href="https://traboda.com/contest/inctfj-21-lr">Login</a>
-                                        </Fade>
                                         <Fade delay={200}>
                                             <a href="/stats">Stats & Rankings</a>
                                         </Fade>
@@ -145,7 +147,7 @@ const TopBar = ({ darkenOnSidebar = false }) => {
                                             <div>India's First & Only CTF Hacking Contest</div>
                                             <h5>Exclusively for School Students</h5>
                                         </div>
-                                        <a href="https://traboda.com/contest/inctfj-21-lr">Register</a>
+                                        <button onClick={() => setShowRegCard(true)}>Register</button>
                                     </TopbarInfoCard>
                                 </div>
                             </div>
@@ -159,6 +161,36 @@ const TopBar = ({ darkenOnSidebar = false }) => {
                 </div>
             </div>
         </TopbarContainer>
+        <Modal
+            isOpen={showRegCard}
+            onRequestClose={() => { clearAllBodyScrollLocks(); setShowRegCard(false); }}
+            style={{
+                overlay: {
+                    zIndex: 9000, background: 'rgba(0,0,0,0.8)',
+                    height: '100vh',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                },
+                content: {
+                    position: 'unset', top: 0, left: 0, right: 0, padding: '15px',
+                    border: 'none', background: 'none',  width: '100%', maxWidth: '100vw'
+                }
+            }}
+        >
+            <CloseButton
+                className="px-4 border-0 rounded"
+                onClick={() => { clearAllBodyScrollLocks(); setShowRegCard(false)}}
+            >
+                <img alt="close" src={require('../../assets/images/icons/close.png')} />
+            </CloseButton>
+            {showRegCard &&
+            <div style={{ background: '#101219' }} className="d-flex align-items-center justify-content-center">
+                <iframe
+                    className="border-0"
+                    style={{ minHeight: '25vh', minWidth: '450px', height: '80vh', overflow: 'auto' }}
+                    src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame${UTMSource ? `?utm_source=${UTMSource}` : ''}`}
+                />
+            </div>}
+        </Modal>
         {showMenu && <SideBar darkenOnSidebar={darkenOnSidebar} onClose={onClose} isLoggedIn={hasLoaded && isLoggedIn} onLogOut={onLogOut} />}
         <div style={{ height: topbarRef ? topbarRef?.current?.clientHeight : '72px'}} />
     </div>

@@ -23,7 +23,7 @@ const SSILandingPage = () => {
     return <Base>
         <div style={{ overflowX: 'hidden' }} id="landing-page">
             <TopBar darkenOnSidebar includeSpace={false} />
-            <LandingBetaHeader />
+            <LandingBetaHeader UTMSource="ssi" />
             <LandingQuickInfo />
             <LandingAboutInCTF />
             <SponsorBar />
