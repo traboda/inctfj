@@ -126,6 +126,31 @@ const PoweredByTraboda = styled('div')`
 //     }
 // `;
 
+const IFrameContainer = styled('div')`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 25vh;
+  height: 100%;
+  max-height: 80vh;
+  overflow: auto;
+  width: 100%;
+`;
+
+const Iframe = styled('iframe')`
+  min-height: 600px;
+  width: 450px;
+  max-width: 100%;
+  border: none;
+  max-height: 100%;
+  html {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+  }
+`;
+
 const LandingBetaHeader = ({ UTMSource = null }) => {
 
     // const [showPlayer, setShowPlayer] = useState(false);
@@ -223,12 +248,12 @@ const LandingBetaHeader = ({ UTMSource = null }) => {
                                 Login to Dashboard
                             </a>
                         </div> :
-                        <iframe
-                            className="w-100 border-0"
-                            onError={() => setIframeError(true)}
-                            style={{ minHeight: '25vh', height: '80vh', overflow: 'auto' }}
-                            src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame${UTMSource ? `?utm_source=${UTMSource}` : ''}`}
-                        />}
+                        <IFrameContainer>
+                            <Iframe
+                                onError={() => setIframeError(true)}
+                                src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame${UTMSource ? `?utm_source=${UTMSource}` : ''}`}
+                            />
+                        </IFrameContainer>}
                     </div>
                 </div>
                 <div className="d-block d-md-none">
