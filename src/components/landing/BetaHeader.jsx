@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "@emotion/styled";
 // import dynamic from 'next/dynamic'
 
@@ -130,6 +130,8 @@ const LandingBetaHeader = ({ UTMSource = null }) => {
 
     // const [showPlayer, setShowPlayer] = useState(false);
 
+    const [iframeError, setIframeError] = useState(false);
+
     return <HeaderContainer>
         <div className="header-container">
             <div style={{ width: '100%' }}>
@@ -209,11 +211,24 @@ const LandingBetaHeader = ({ UTMSource = null }) => {
 
                     </div>
                     <div className="col-md-4 col-lg-5 p-1 d-flex align-items-center justify-content-center p-md-3">
+                        {iframeError ?
+                        <div>
+                            <p>
+                                Your browser had some issues loading the registration form. So kindly use the links below.
+                            </p>
+                            <a id="header-register-button" className="mr-2" href="https://traboda.com/contest/inctfj-21-lr">
+                                Register for Learning Round
+                            </a>
+                            <a id="header-register-button" href="https://traboda.com/contest/inctfj-21-lr">
+                                Login to Dashboard
+                            </a>
+                        </div> :
                         <iframe
                             className="w-100 border-0"
-                            style={{ minHeight: '25vh', height: '125%', overflow: 'auto' }}
+                            onError={() => setIframeError(true)}
+                            style={{ minHeight: '25vh', height: '80vh', overflow: 'auto' }}
                             src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame${UTMSource ? `?utm_source=${UTMSource}` : ''}`}
-                        />
+                        />}
                     </div>
                 </div>
                 <div className="d-block d-md-none">
