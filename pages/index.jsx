@@ -1,7 +1,7 @@
 import React from 'react';
 import Base from "../src/components/shared/Base";
 
-import LandingHeader from "../src/components/landing/Header";
+// import LandingHeader from "../src/components/landing/Header";
 import LandingSponsorship from "../src/components/landing/Sponsorship";
 import LandingTestimonials from "../src/components/landing/Testimonials";
 import LandingOrganizers from "../src/components/landing/Organizers";
@@ -16,6 +16,7 @@ import TopBar from "../src/components/shared/TopBar";
 import LandingJoinDiscussion from "../src/components/landing/JoinDiscussions";
 import SponsorBar from "../src/components/landing/SponsorBar";
 import CTAPartners from "../src/components/landing/CTAPartners";
+import LandingBetaHeader from "../src/components/landing/BetaHeader";
 // import Schedule from "../src/components/landing/Schedule";
 
 const LandingPage = () => {
@@ -23,7 +24,7 @@ const LandingPage = () => {
     return <Base>
         <div style={{ overflowX: 'hidden' }} id="landing-page">
             <TopBar darkenOnSidebar includeSpace={false} />
-            <LandingHeader />
+            <LandingBetaHeader />
             <LandingQuickInfo />
             <LandingAboutInCTF />
             <SponsorBar />
