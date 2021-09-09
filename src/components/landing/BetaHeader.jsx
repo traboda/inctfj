@@ -138,17 +138,11 @@ const IFrameContainer = styled('div')`
 `;
 
 const Iframe = styled('iframe')`
-  min-height: 600px;
+  min-height: 320px;
   width: 450px;
   max-width: 100%;
   border: none;
   max-height: 100%;
-  html {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-  }
 `;
 
 const LandingBetaHeader = ({ UTMSource = null }) => {
