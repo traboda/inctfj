@@ -172,7 +172,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 },
                 content: {
                     position: 'unset', top: 0, left: 0, right: 0, padding: '15px',
-                    border: 'none', background: 'none',  width: '100%', maxWidth: '100vw'
+                    border: 'none', background: 'none',  width: '500px', maxWidth: '100vw'
                 }
             }}
         >
@@ -183,10 +183,10 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 <img alt="close" src={require('../../assets/images/icons/close.png')} />
             </CloseButton>
             {showRegCard &&
-            <div style={{ background: '#101219' }} className="d-flex align-items-center justify-content-center">
+            <div style={{ background: '#101219' }} className="d-flex p-2 align-items-center justify-content-center">
                 <iframe
                     className="border-0"
-                    style={{ minHeight: '25vh', minWidth: '450px', height: '80vh', overflow: 'auto' }}
+                    style={{ width: '500px', maxWidth: '100vw', height: '180px', overflow: 'auto' }}
                     src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame${UTMSource ? `?utm_source=${UTMSource}` : ''}`}
                 />
             </div>}

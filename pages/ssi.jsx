@@ -32,7 +32,7 @@ const SSILandingPage = () => {
             <LandingHowItWorks />
             <LandingJoinDiscussion />
             <LandingReasonsToParticipate />
-            <CTAReg />
+            <CTAReg UTMSource="ssi" />
             <LandingSponsorship />
             <CTAPartners />
             <LandingStatsBar />

@@ -26,12 +26,11 @@ const RegCTASection = styled.section`
    }
 `
 
-const CTAReg = () => {
-
-    return <RegCTASection>
+const CTAReg = ({ UTMSource = null }) => (
+    <RegCTASection>
         <div className="row mx-0">
             <Fade left>
-                <div className="col-md-9 d-flex align-items-center p-2">
+                <div className="col-md-8 d-flex align-items-center p-2">
                     <img alt="star" className="d-none d-md-block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />
                     <h3>
                         InCTF Jr is your perfect entry to CyberSec & Hacking before college.
@@ -39,13 +38,16 @@ const CTAReg = () => {
                 </div>
             </Fade>
             <Fade right>
-                <div className="col-md-3 d-flex align-items-center justify-content-center p-2">
-                    <a href="https://traboda.com/contest/inctfj-21-lr">Register Now</a>
+                <div className="col-md-4 d-flex p-0 align-items-center justify-content-center">
+                    <iframe
+                        className="border-0"
+                        style={{ width: '400px', maxWidth: '100vw', height: '170px', overflow: 'auto' }}
+                        src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame?color=000&primary=F13F17&primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
+                    />
                 </div>
             </Fade>
         </div>
-    </RegCTASection>;
-
-};
+    </RegCTASection>
+);
 
 export default CTAReg;

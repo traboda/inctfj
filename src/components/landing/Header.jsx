@@ -20,9 +20,6 @@ const HeaderContainer = styled.section`
         width: 100%;
         background: rgba(0,0,0,0.5);
         color: white;
-        div {
-            max-width: 1200px;
-        }
     }
     img {
         bottom: 0;
@@ -36,7 +33,7 @@ const HeaderContainer = styled.section`
       font-size: calc(1.8rem + 1.5vw);
       text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.3);
       margin-bottom: 1rem;
-      max-width: 800px;
+      max-width: 900px;
     }
     p {
       max-width: 700px;
@@ -96,7 +93,7 @@ const IFrameContainer = styled('div')`
 `;
 
 const Iframe = styled('iframe')`
-  min-height: 320px;
+  height: 180px;
   width: 450px;
   max-width: 100%;
   border: none;
@@ -128,32 +125,32 @@ const LandingHeader = ({ UTMSource = null }) => {
                     </p>
                 </Fade>
                 <div className="d-flex align-items-center">
-                    {iframeError ?
                     <div>
-                        <p>
-                            Your browser had some issues loading the registration form. So kindly use the links below.
-                        </p>
-                        <a id="header-register-button" className="mr-2" href="https://traboda.com/contest/inctfj-21-lr">
-                            Register for Learning Round
-                        </a>
-                        <a id="header-register-button" href="https://traboda.com/contest/inctfj-21-lr">
-                            Login to Dashboard
-                        </a>
-                    </div> :
-                    <IFrameContainer>
-                        <Iframe
-                            onError={() => setIframeError(true)}
-                            src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame${UTMSource ? `?utm_source=${UTMSource}` : ''}`}
-                        />
-                    </IFrameContainer>}
-                </div>
-                <div className="d-flex mt-3 align-items-center">
-                    <PoweredByTraboda>
-                        <div>Powered by</div>
-                        <a href="https://app.traboda.com">
-                            <img src={require('../../assets/images/logos/traboda_light.png')} alt="traboda" draggable="false" />
-                        </a>
-                    </PoweredByTraboda>
+                        {iframeError ?
+                        <div>
+                            <p>
+                                Your browser had some issues loading the registration form. So kindly use the links below.
+                            </p>
+                            <a id="header-register-button" className="mr-2" href="https://traboda.com/contest/inctfj-21-lr">
+                                Register for Learning Round
+                            </a>
+                            <a id="header-register-button" href="https://traboda.com/contest/inctfj-21-lr">
+                                Login to Dashboard
+                            </a>
+                        </div> :
+                        <IFrameContainer>
+                            <Iframe
+                                onError={() => setIframeError(true)}
+                                src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame?color=fff&primary=F13F17&primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
+                            />
+                        </IFrameContainer>}
+                        <PoweredByTraboda>
+                            <div>Powered by</div>
+                            <a href="https://app.traboda.com" target="_blank">
+                                <img src={require('../../assets/images/logos/traboda_light.png')} alt="traboda" draggable="false" />
+                            </a>
+                        </PoweredByTraboda>
+                    </div>
                 </div>
             </div>
         </div>
