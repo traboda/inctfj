@@ -15,7 +15,7 @@ import TopBar from "../src/components/shared/TopBar";
 import LandingJoinDiscussion from "../src/components/landing/JoinDiscussions";
 import SponsorBar from "../src/components/landing/SponsorBar";
 import CTAPartners from "../src/components/landing/CTAPartners";
-import LandingBetaHeader from "../src/components/landing/BetaHeader";
+import LandingHeader from "../src/components/landing/Header";
 // import Schedule from "../src/components/landing/Schedule";
 
 const SSILandingPage = () => {
@@ -23,7 +23,7 @@ const SSILandingPage = () => {
     return <Base>
         <div style={{ overflowX: 'hidden' }} id="landing-page">
             <TopBar darkenOnSidebar includeSpace={false} />
-            <LandingBetaHeader UTMSource="ssi" />
+            <LandingHeader UTMSource="ssi" />
             <LandingQuickInfo />
             <LandingAboutInCTF />
             <SponsorBar />

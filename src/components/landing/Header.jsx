@@ -1,13 +1,8 @@
 import React, {useState} from 'react';
 import styled from "@emotion/styled";
-import dynamic from 'next/dynamic'
 
 import Pulse from "react-reveal/Pulse";
 import Fade from 'react-reveal/Fade';
-import {clearAllBodyScrollLocks} from "body-scroll-lock";
-import Modal from "react-modal";
-
-const ReactPlayer = dynamic(() => import('react-player/youtube'));
 
 
 const HeaderContainer = styled.section`
@@ -91,53 +86,27 @@ const PoweredByTraboda = styled('div')`
     }
 `;
 
-const CloseButton = styled.button`
-   background: none!important; top: 1rem; right: 1rem; position: absolute; padding: 0!important;
-   img { width: 32px; }
+const IFrameContainer = styled('div')`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-height: 80vh;
+  overflow: auto;
 `;
 
-const HowToRegister = styled.a`
-    position: relative;
-    cursor: pointer;
-    display: block;
-    border: 3px solid rgba(100,250,100,0.6);
-    border-radius: 8px;
-    img {
-      position: unset!important;
-      height: 90px;
-      overflow: hidden;
-      border-radius: 8px;
-    }
-    .how_to_register_cover {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 90px;
-        overflow: hidden;
-        background: rgba(0,0,0,0.65);
-        img {
-            max-height: 30px;
-            box-shadow: none;
-        }
-        div {
-          color: white;
-          line-height: 1;
-        }
-    }
-    &:hover {
-        .how_to_register_cover {
-          background: rgba(50,150,50,0.75);
-        }
-    }
+const Iframe = styled('iframe')`
+  min-height: 320px;
+  width: 450px;
+  max-width: 100%;
+  border: none;
+  max-height: 100%;
 `;
 
-const LandingHeader = () => {
 
-    const [showPlayer, setShowPlayer] = useState(false);
+const LandingHeader = ({ UTMSource = null }) => {
+
+    const [iframeError, setIframeError] = useState(false);
 
     return <HeaderContainer>
         <div className="header-container">
@@ -158,64 +127,33 @@ const LandingHeader = () => {
                         </span>
                     </p>
                 </Fade>
-                <Modal
-                    isOpen={showPlayer}
-                    onRequestClose={() => { clearAllBodyScrollLocks(); setShowPlayer(false); }}
-                    style={{
-                        overlay: {
-                            zIndex: 9000, background: 'rgba(0,0,0,0.8)',
-                            height: '100vh',
-                            display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        },
-                        content: {
-                            position: 'unset', top: 0, left: 0, right: 0, padding: '15px',
-                            border: 'none', background: 'none',  width: '100%', maxWidth: '800px'
-                        }
-                    }}
-                >
-                    <CloseButton
-                        className="px-4 border-0 rounded"
-                        onClick={() => { clearAllBodyScrollLocks(); setShowPlayer(false)}}
-                    >
-                        <img alt="close" src={require('../../assets/images/icons/close.png')} />
-                    </CloseButton>
-                    {showPlayer && <ReactPlayer url="https://youtu.be/4gw5uDIH0rM" autoplay width="100%" height="80vmin" />}
-                </Modal>
                 <div className="d-flex align-items-center">
-                    <a id="header-register-button" className="mr-2" href="https://traboda.com/contest/inctfj-21-lr">
-                        Register for Learning Round
-                    </a>
-                    <a id="header-register-button" href="https://traboda.com/contest/inctfj-21-lr">
-                        Login to Dashboard
-                    </a>
+                    {iframeError ?
+                    <div>
+                        <p>
+                            Your browser had some issues loading the registration form. So kindly use the links below.
+                        </p>
+                        <a id="header-register-button" className="mr-2" href="https://traboda.com/contest/inctfj-21-lr">
+                            Register for Learning Round
+                        </a>
+                        <a id="header-register-button" href="https://traboda.com/contest/inctfj-21-lr">
+                            Login to Dashboard
+                        </a>
+                    </div> :
+                    <IFrameContainer>
+                        <Iframe
+                            onError={() => setIframeError(true)}
+                            src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame${UTMSource ? `?utm_source=${UTMSource}` : ''}`}
+                        />
+                    </IFrameContainer>}
                 </div>
                 <div className="d-flex mt-3 align-items-center">
-                    <div className="mr-4">
-                        <HowToRegister onClick={() => setShowPlayer(true)}>
-                            <div className="how_to_register_cover">
-                                <div className="text-center">
-                                    <div>How to Register?</div>
-                                    <img
-                                        alt="Play Video"
-                                        draggable="false"
-                                        src={require('../../assets/images/icons/play_button.png')}
-                                    />
-                                </div>
-                            </div>
-                            <img
-                                alt="how to Register"
-                                draggable="false"
-                                src={require('../../assets/images/covers/how_to_register.JPG')}
-                            />
-                        </HowToRegister>
-                    </div>
                     <PoweredByTraboda>
                         <div>Powered by</div>
                         <a href="https://app.traboda.com">
                             <img src={require('../../assets/images/logos/traboda_light.png')} alt="traboda" draggable="false" />
                         </a>
                     </PoweredByTraboda>
-                    {/*<div className="limited-slots-warning">* limited slots left.</div>*/}
                 </div>
             </div>
         </div>
