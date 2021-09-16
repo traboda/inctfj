@@ -77,6 +77,7 @@ const customConfig = {
             "/promote": { page: "/promote" },
             "/publicize": { page: "/publicize" },
             "/ssi": { page: "/ssi" },
+            "/start": { page: "/start" },
             ...posts
         }
     },
