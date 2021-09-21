@@ -6,7 +6,7 @@ const RegCTASection = styled.section`
    padding: 3vh 5vw;
    background: #FFF59D;
    h3 {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 700;
       margin-bottom: 0;
    }
@@ -41,7 +41,7 @@ const CTAReg = ({ UTMSource = null }) => (
                 <div className="col-md-4 d-flex p-0 align-items-center justify-content-center">
                     <iframe
                         className="border-0"
-                        style={{ width: '400px', maxWidth: '100vw', height: '170px', overflow: 'auto' }}
+                        style={{ width: '400px', maxWidth: '100vw', height: '190px', overflow: 'auto' }}
                         src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame?color=000&primary=F13F17&primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
                     />
                 </div>

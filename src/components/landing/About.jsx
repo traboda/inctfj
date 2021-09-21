@@ -80,6 +80,9 @@ const LandingAboutInCTF = () => {
                             </p>
                         </div>
                         <div className="d-md-flex px-2 mt-3 justify-content-center justify-content-md-start align-items-center">
+                            <a style={{ background: '#FF1100' }} title="How to register" href="https://youtu.be/twS3pzPjRzA" target="_blank">
+                                Watch How to Get Started
+                            </a>
                             <a style={{ background: '#E65100' }} title="Learn more about InCTF Jr" href="/about">About InCTF Jr.</a>
                             <a  style={{ background: '#4A148C' }} title="View FAQ" href="/faq">View FAQ</a>
                         </div>

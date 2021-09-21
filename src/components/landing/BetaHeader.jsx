@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import styled from "@emotion/styled";
-// import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic'
 
 import Pulse from "react-reveal/Pulse";
 import Fade from 'react-reveal/Fade';
-// import {clearAllBodyScrollLocks} from "body-scroll-lock";
-// import Modal from "react-modal";
+import {clearAllBodyScrollLocks} from "body-scroll-lock";
+import Modal from "react-modal";
 
-// const ReactPlayer = dynamic(() => import('react-player/youtube'));
+const ReactPlayer = dynamic(() => import('react-player/youtube'));
 
 
 const HeaderContainer = styled.section`
@@ -82,49 +82,49 @@ const PoweredByTraboda = styled('div')`
     }
 `;
 
-// const CloseButton = styled.button`
-//    background: none!important; top: 1rem; right: 1rem; position: absolute; padding: 0!important;
-//    img { width: 32px; }
-// `;
+const CloseButton = styled.button`
+   background: none!important; top: 1rem; right: 1rem; position: absolute; padding: 0!important;
+   img { width: 32px; }
+`;
 
-// const HowToRegister = styled.a`
-//     position: relative;
-//     cursor: pointer;
-//     display: block;
-//     border: 3px solid rgba(100,250,100,0.6);
-//     border-radius: 8px;
-//     img {
-//       position: unset!important;
-//       height: 90px;
-//       overflow: hidden;
-//       border-radius: 8px;
-//     }
-//     .how_to_register_cover {
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         position: absolute;
-//         left: 0;
-//         right: 0;
-//         width: 100%;
-//         height: 90px;
-//         overflow: hidden;
-//         background: rgba(0,0,0,0.65);
-//         img {
-//             max-height: 30px;
-//             box-shadow: none;
-//         }
-//         div {
-//           color: white;
-//           line-height: 1;
-//         }
-//     }
-//     &:hover {
-//         .how_to_register_cover {
-//           background: rgba(50,150,50,0.75);
-//         }
-//     }
-// `;
+const HowToRegister = styled.a`
+    position: relative;
+    cursor: pointer;
+    display: block;
+    border: 3px solid rgba(100,250,100,0.6);
+    border-radius: 8px;
+    img {
+      position: unset!important;
+      height: 90px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .how_to_register_cover {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 90px;
+        overflow: hidden;
+        background: rgba(0,0,0,0.65);
+        img {
+            max-height: 30px;
+            box-shadow: none;
+        }
+        div {
+          color: white;
+          line-height: 1;
+        }
+    }
+    &:hover {
+        .how_to_register_cover {
+          background: rgba(50,150,50,0.75);
+        }
+    }
+`;
 
 const IFrameContainer = styled('div')`
   display: flex;
@@ -147,7 +147,7 @@ const Iframe = styled('iframe')`
 
 const LandingBetaHeader = ({ UTMSource = null }) => {
 
-    // const [showPlayer, setShowPlayer] = useState(false);
+    const [showPlayer, setShowPlayer] = useState(false);
 
     const [iframeError, setIframeError] = useState(false);
 
@@ -175,25 +175,25 @@ const LandingBetaHeader = ({ UTMSource = null }) => {
                             </Fade>
                             <div className="d-none d-md-block">
                                 <div className="d-flex mt-3 align-items-center">
-                                    {/*<div className="mr-4">*/}
-                                    {/*    <HowToRegister onClick={() => setShowPlayer(true)}>*/}
-                                    {/*        <div className="how_to_register_cover">*/}
-                                    {/*            <div className="text-center">*/}
-                                    {/*                <div>How to Register?</div>*/}
-                                    {/*                <img*/}
-                                    {/*                    alt="Play Video"*/}
-                                    {/*                    draggable="false"*/}
-                                    {/*                    src={require('../../assets/images/icons/play_button.png')}*/}
-                                    {/*                />*/}
-                                    {/*            </div>*/}
-                                    {/*        </div>*/}
-                                    {/*        <img*/}
-                                    {/*            alt="how to Register"*/}
-                                    {/*            draggable="false"*/}
-                                    {/*            src={require('../../assets/images/covers/how_to_register.JPG')}*/}
-                                    {/*        />*/}
-                                    {/*    </HowToRegister>*/}
-                                    {/*</div>*/}
+                                    <div className="mr-4">
+                                        <HowToRegister onClick={() => setShowPlayer(true)}>
+                                            <div className="how_to_register_cover">
+                                                <div className="text-center">
+                                                    <div>How to Register?</div>
+                                                    <img
+                                                        alt="Play Video"
+                                                        draggable="false"
+                                                        src={require('../../assets/images/icons/play_button.png')}
+                                                    />
+                                                </div>
+                                            </div>
+                                            <img
+                                                alt="how to Register"
+                                                draggable="false"
+                                                src={require('../../assets/images/covers/how_to_register.JPG')}
+                                            />
+                                        </HowToRegister>
+                                    </div>
                                     <PoweredByTraboda>
                                         <div>Powered by</div>
                                         <a href="https://app.traboda.com">
@@ -204,29 +204,29 @@ const LandingBetaHeader = ({ UTMSource = null }) => {
                             </div>
                         </div>
 
-                        {/*<Modal*/}
-                        {/*    isOpen={showPlayer}*/}
-                        {/*    onRequestClose={() => { clearAllBodyScrollLocks(); setShowPlayer(false); }}*/}
-                        {/*    style={{*/}
-                        {/*        overlay: {*/}
-                        {/*            zIndex: 9000, background: 'rgba(0,0,0,0.8)',*/}
-                        {/*            height: '100vh',*/}
-                        {/*            display: 'flex', alignItems: 'center', justifyContent: 'center',*/}
-                        {/*        },*/}
-                        {/*        content: {*/}
-                        {/*            position: 'unset', top: 0, left: 0, right: 0, padding: '15px',*/}
-                        {/*            border: 'none', background: 'none',  width: '100%', maxWidth: '800px'*/}
-                        {/*        }*/}
-                        {/*    }}*/}
-                        {/*>*/}
-                        {/*    <CloseButton*/}
-                        {/*        className="px-4 border-0 rounded"*/}
-                        {/*        onClick={() => { clearAllBodyScrollLocks(); setShowPlayer(false)}}*/}
-                        {/*    >*/}
-                        {/*        <img alt="close" src={require('../../assets/images/icons/close.png')} />*/}
-                        {/*    </CloseButton>*/}
-                        {/*    {showPlayer && <ReactPlayer url="https://youtu.be/4gw5uDIH0rM" autoplay width="100%" height="80vmin" />}*/}
-                        {/*</Modal>*/}
+                        <Modal
+                            isOpen={showPlayer}
+                            onRequestClose={() => { clearAllBodyScrollLocks(); setShowPlayer(false); }}
+                            style={{
+                                overlay: {
+                                    zIndex: 9000, background: 'rgba(0,0,0,0.8)',
+                                    height: '100vh',
+                                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                },
+                                content: {
+                                    position: 'unset', top: 0, left: 0, right: 0, padding: '15px',
+                                    border: 'none', background: 'none',  width: '100%', maxWidth: '800px'
+                                }
+                            }}
+                        >
+                            <CloseButton
+                                className="px-4 border-0 rounded"
+                                onClick={() => { clearAllBodyScrollLocks(); setShowPlayer(false)}}
+                            >
+                                <img alt="close" src={require('../../assets/images/icons/close.png')} />
+                            </CloseButton>
+                            {showPlayer && <ReactPlayer url="https://youtu.be/4gw5uDIH0rM" autoplay width="100%" height="80vmin" />}
+                        </Modal>
 
                     </div>
                     <div className="col-md-4 col-lg-5 p-1 d-flex align-items-center justify-content-center p-md-3">
@@ -252,25 +252,25 @@ const LandingBetaHeader = ({ UTMSource = null }) => {
                 </div>
                 <div className="d-block d-md-none">
                     <div className="d-flex p-3 my-3 align-items-center">
-                        {/*<div className="mr-4">*/}
-                        {/*    <HowToRegister onClick={() => setShowPlayer(true)}>*/}
-                        {/*        <div className="how_to_register_cover">*/}
-                        {/*            <div className="text-center">*/}
-                        {/*                <div>How to Register?</div>*/}
-                        {/*                <img*/}
-                        {/*                    alt="Play Video"*/}
-                        {/*                    draggable="false"*/}
-                        {/*                    src={require('../../assets/images/icons/play_button.png')}*/}
-                        {/*                />*/}
-                        {/*            </div>*/}
-                        {/*        </div>*/}
-                        {/*        <img*/}
-                        {/*            alt="how to Register"*/}
-                        {/*            draggable="false"*/}
-                        {/*            src={require('../../assets/images/covers/how_to_register.JPG')}*/}
-                        {/*        />*/}
-                        {/*    </HowToRegister>*/}
-                        {/*</div>*/}
+                        <div className="mr-4">
+                            <HowToRegister onClick={() => setShowPlayer(true)}>
+                                <div className="how_to_register_cover">
+                                    <div className="text-center">
+                                        <div>How to Register?</div>
+                                        <img
+                                            alt="Play Video"
+                                            draggable="false"
+                                            src={require('../../assets/images/icons/play_button.png')}
+                                        />
+                                    </div>
+                                </div>
+                                <img
+                                    alt="how to Register"
+                                    draggable="false"
+                                    src={require('../../assets/images/covers/how_to_register.JPG')}
+                                />
+                            </HowToRegister>
+                        </div>
                         <PoweredByTraboda>
                             <div>Powered by</div>
                             <a href="https://app.traboda.com">

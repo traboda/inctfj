@@ -23,7 +23,7 @@ const StartPage = () => {
     return <Base>
         <div style={{ overflowX: 'hidden' }} id="landing-page">
             <TopBar darkenOnSidebar includeSpace={false} />
-            <LandingHeader UTMSource="ssi" />
+            <LandingHeader UTMSource="start_page" />
             <LandingQuickInfo />
             <LandingAboutInCTF />
             <SponsorBar />
@@ -32,7 +32,7 @@ const StartPage = () => {
             <LandingHowItWorks />
             <LandingJoinDiscussion />
             <LandingReasonsToParticipate />
-            <CTAReg UTMSource="ssi" />
+            <CTAReg UTMSource="start_page" />
             <LandingSponsorship />
             <CTAPartners />
             <LandingStatsBar />
