@@ -12,8 +12,7 @@ const VideoRotationAnimation = keyframes`
 `
 
 const ReasonsSection = styled.section`
-  padding: 15vh 2vw;
-  background: #E8EAF6;
+  padding: 8vh 2vw;
   color: black;
   h2 {
     font-weight: 700;
@@ -36,13 +35,6 @@ const ReasonsSection = styled.section`
       transition: 1s all ease;
     }
   }
-  h3 {
-      font-size: calc(13px + 0.35vw);
-      line-height: 1.2;
-      font-weight: 500;
-      text-align: center;
-  }
-
 `;
 
 const LandingReasonsToParticipate = () => {
@@ -78,7 +70,7 @@ const LandingReasonsToParticipate = () => {
             <Zoom up={index%2} left={!index%2}>
                 <div className="w-1/2 lg:w-1/4 pr-4 pl-4 text-center p-2">
                     <video autoPlay loop muted src={r.video} />
-                    <h3>{r.title}</h3>
+                    <div>{r.title}</div>
                 </div>
             </Zoom>
         )}

@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 import Fade from "react-reveal/Fade";
 
 const QuickInfoSection = styled.section`
-      background: #E3F2FD;
       padding: 2vh 2vw;
       user-select: none;
       .col-md-4 {

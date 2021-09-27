@@ -11,8 +11,7 @@ const ReactPlayer = dynamic(() => import('react-player/youtube'))
 import {disableBodyScroll, clearAllBodyScrollLocks} from "body-scroll-lock";
 
 const TestimonialSection = styled.section`
-    padding: 1rem;
-    background: #E1F5FE;
+    padding: 8vh 1rem;
     .testimonial-title {
       font-weight: 700;
       text-transform: uppercase;

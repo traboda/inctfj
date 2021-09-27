@@ -16,26 +16,24 @@ import TopBar from "../src/components/shared/TopBar";
 import LandingJoinDiscussion from "../src/components/landing/JoinDiscussions";
 import SponsorBar from "../src/components/landing/SponsorBar";
 import CTAPartners from "../src/components/landing/CTAPartners";
-// import Schedule from "../src/components/landing/Schedule";
 
 const LandingPage = () => {
 
     return <Base>
-        <div style={{ overflowX: 'hidden' }} id="landing-page">
+        <div style={{ overflowX: 'hidden', background: '#FAFAFA' }} id="landing-page">
             <TopBar darkenOnSidebar includeSpace={false} />
             <LandingHeader />
             <LandingQuickInfo />
             <LandingAboutInCTF />
-            <SponsorBar />
-            {/*<Schedule />*/}
-            <LandingTestimonials />
-            <LandingHowItWorks />
-            <LandingJoinDiscussion />
+            <LandingStatsBar />
             <LandingReasonsToParticipate />
+            <LandingTestimonials />
             <CTAReg />
+            <SponsorBar />
+            <LandingHowItWorks />
             <LandingSponsorship />
             <CTAPartners />
-            <LandingStatsBar />
+            <LandingJoinDiscussion />
             <LandingOrganizers />
             <LandingContactsBar />
         </div>

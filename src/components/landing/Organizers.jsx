@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 import Fade from 'react-reveal/Fade';
 
 const OrganizersSection = styled.section`
-    background: #E3F2FD;
     user-select: none;
     .content-container {
       padding: 5vh 5vw;
@@ -24,16 +23,6 @@ const OrganizersSection = styled.section`
           max-height: 78px;
           max-width: 100%;
           margin-bottom: 1rem;
-        }
-        .amrita {
-           @media (min-width: 700px){
-              border-right: 1px solid #999;
-           }
-        }
-        .cyber {
-           @media (min-width: 700px){
-              border-left: 1px solid #999;
-           }
         }
         .md\\:w-1\\/3 {
             padding: 1rem;

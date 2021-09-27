@@ -115,13 +115,8 @@ const LandingHowItWorks = () => {
                             <p>{s.content}</p>
                             {(s.links && s.links.length > 0) &&
                             <div className="w-full mt-1 mb-4">{s.links.map((l) =>
-                                <a className="inline-block mx-2 mb-2" href={l.url}>
-                                    <img
-                                        src={require('../../assets/images/icons/external_link.png')}
-                                        style={{ width: '20px' }}
-                                        alt="open link"
-                                        draggable="false"
-                                    />
+                                <a className="inline-block mx-2 py-2 px-3 mb-2" target="_blank" href={l.url}>
+                                    <i className="fa fa-external-link mr-2" />
                                     {l.title}
                                 </a>
                             )}</div>}
