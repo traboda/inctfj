@@ -145,7 +145,7 @@ const LandingHeader = ({ UTMSource = null }) => {
     const [iframeError, setIframeError] = useState(false);
 
     return <HeaderContainer>
-        <div className="container header-container" style={{ width: '1200px', maxWidth: '80%' }}>
+        <div className="container header-container" style={{ width: '1200px', maxWidth: '100%' }}>
             <div>
                 <div className="px-3">
                     <Pulse>

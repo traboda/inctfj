@@ -10,7 +10,6 @@ const LandingPromoVideoSection = styled('section')`
     padding: 3.5vh 1rem;
     .promo-video-container {
         background: white;
-        padding: 0.5rem;
         border-radius: 1rem;
         width: 96vmin;
         height: 64vmin;
@@ -24,7 +23,7 @@ const LandingPromoVideoSection = styled('section')`
 
 const LandingPromoVideo = () => (
     <LandingPromoVideoSection>
-        <div className="promo-video-container">
+        <div className="promo-video-container p-0 md:p-3">
             <ReactPlayer url="https://www.youtube.com/watch?v=sxRZ06Rbh_c" width="100%" height="100%" />
         </div>
     </LandingPromoVideoSection>
