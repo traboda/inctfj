@@ -12,34 +12,33 @@ import LandingStatsBar from "../src/components/landing/StatsCounter";
 import LandingHowItWorks from "../src/components/landing/HowItWorks";
 import LandingContactsBar from "../src/components/landing/ContactsBar";
 import TopBar from "../src/components/shared/TopBar";
-import LandingJoinDiscussion from "../src/components/landing/JoinDiscussions";
 import SponsorBar from "../src/components/landing/SponsorBar";
 import CTAPartners from "../src/components/landing/CTAPartners";
 import LandingHeader from "../src/components/landing/Header";
+import LandingPromoVideo from "../src/components/landing/PromoVideo";
 // import Schedule from "../src/components/landing/Schedule";
 
 const SSILandingPage = () => {
 
     return <Base>
-        <div style={{ overflowX: 'hidden' }} id="landing-page">
+        <div style={{ overflowX: 'hidden', background: '#FAFAFA' }} id="landing-page">
             <TopBar darkenOnSidebar includeSpace={false} />
             <LandingHeader UTMSource="ssi" />
             <LandingQuickInfo />
             <LandingAboutInCTF />
-            <SponsorBar />
-            {/*<Schedule />*/}
-            <LandingTestimonials />
-            <LandingHowItWorks />
-            <LandingJoinDiscussion />
+            <LandingPromoVideo />
+            <LandingStatsBar />
             <LandingReasonsToParticipate />
+            <LandingTestimonials />
             <CTAReg UTMSource="ssi" />
+            <SponsorBar />
+            <LandingHowItWorks />
             <LandingSponsorship />
             <CTAPartners />
-            <LandingStatsBar />
             <LandingOrganizers />
             <LandingContactsBar />
         </div>
-    </Base>
+    </Base>;
 
 };
 

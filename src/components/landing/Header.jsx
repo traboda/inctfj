@@ -28,7 +28,7 @@ const HeaderContainer = styled.section`
     h1 {
       font-weight: 700;
       line-height: 1.25;
-      font-size: calc(1.8rem + 1.5vw);
+      font-size: calc(1.75rem + 1.25vw);
       margin-bottom: 1rem;
       max-width: 900px;
     }

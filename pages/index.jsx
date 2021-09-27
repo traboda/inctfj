@@ -35,7 +35,6 @@ const LandingPage = () => {
             <LandingHowItWorks />
             <LandingSponsorship />
             <CTAPartners />
-            <LandingJoinDiscussion />
             <LandingOrganizers />
             <LandingContactsBar />
         </div>

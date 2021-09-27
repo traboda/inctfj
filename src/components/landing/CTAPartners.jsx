@@ -4,7 +4,6 @@ import Fade from "react-reveal/Fade";
 
 const RegCTASection = styled.section`
    padding: 5vh 5vw;
-   background: #A5F5FF;
    h3 {
       font-size: 24px;
       font-weight: 700;
