@@ -46,9 +46,9 @@ const Schedule = () => {
     ]
 
     return <div>
-        <div className="container-lg px-3 py-5">
-            <div className="row mt-3 mb-4 px-1 mx-0">
-                <div className="col-md-4 d-flex align-items-center justify-content-center p-1 mb-3">
+        <div className="container min-w-lg mx-auto sm:px-4 px-3 py-5">
+            <div className="flex flex-wrap  mt-3 mb-4 px-1 mx-0">
+                <div className="md:w-1/3 pr-4 pl-4 flex items-center justify-center p-1 mb-3">
                     <Fade left>
                         <img
                             alt="Dr. Biswajit Saha" draggable="false"
@@ -57,11 +57,11 @@ const Schedule = () => {
                         />
                     </Fade>
                 </div>
-                <div className="col-md-8 d-flex align-items-center px-1">
+                <div className="md:w-2/3 pr-4 pl-4 flex items-center px-1">
                     <Fade right>
                         <div>
-                            <h5 className="font-weight-bold mb-0">Guest of Honour</h5>
-                            <h3 style={{ color: '#FF6F00' }} className="font-weight-bold mb-0">Dr. Biswajit Saha</h3>
+                            <h5 className="font-bold mb-0">Guest of Honour</h5>
+                            <h3 style={{ color: '#FF6F00' }} className="font-bold mb-0">Dr. Biswajit Saha</h3>
                             <div>Director, Central Board of Secondary Education</div>
                             <div className="mt-2 " style={{ fontSize: '13px' }}>
                                 <p className="mb-1">
@@ -82,30 +82,30 @@ const Schedule = () => {
                     </Fade>
                 </div>
             </div>
-            <h3 className="font-weight-bold">Event Schedule</h3>
+            <h3 className="font-bold">Event Schedule</h3>
             <h5 style={{ color: '#FF6F00' }}>Opening Ceremony</h5>
-            <div className="row d-none d-md-flex font-weight-bold mx-0 py-2 border-bottom">
-                <div className="col-md-3  d-flex align-items-center p-1">
+            <div className="flex flex-wrap  hidden md:flex font-bold mx-0 py-2 border-b">
+                <div className="md:w-1/4 pr-4 pl-4  flex items-center p-1">
                     Timing
                 </div>
-                <div className="col-md-4 d-flex align-items-center p-1">
+                <div className="md:w-1/3 pr-4 pl-4 flex items-center p-1">
                     Event
                 </div>
-                <div className="col-md-4 p-1">
+                <div className="md:w-1/3 pr-4 pl-4 p-1">
                     Presenter
                 </div>
             </div>
             {timeline.map((t, index) =>
                 <Fade delay={index*220}>
-                    <div className="row mx-0 py-2 border-bottom">
-                        <div className="col-md-3 d-flex align-items-center px-1">
+                    <div className="flex flex-wrap  mx-0 py-2 border-b">
+                        <div className="md:w-1/4 pr-4 pl-4 flex items-center px-1">
                             <span style={{ fontSize: '18px' }}>{t.timing}</span>
                         </div>
-                        <div className="col-md-4 d-flex align-items-center px-1 pb-1">
+                        <div className="md:w-1/3 pr-4 pl-4 flex items-center px-1 pb-1">
                             <span style={{ fontWeight: '600', color: '#4A148C'}}>{t.event}</span>
                         </div>
-                        {t?.presenter ? <div className="col-md-4 px-1">
-                            <div className="d-flex align-items-center">
+                        {t?.presenter ? <div className="md:w-1/3 pr-4 pl-4 px-1">
+                            <div className="flex items-center">
                                 <img
                                     draggable="false" alt={t.presenter}
                                     src={t.image}
@@ -116,11 +116,11 @@ const Schedule = () => {
                                     }}
                                 />
                                 <div>
-                                    <div className="h6 mb-1 font-weight-bold" style={{ color: '#FF6F00'}}>{t.presenter}</div>
+                                    <div className="h6 mb-1 font-bold" style={{ color: '#FF6F00'}}>{t.presenter}</div>
                                     <div style={{ fontSize: '12px' }}>{t.desg}</div>
                                 </div>
                             </div>
-                        </div> : <div className="d-none d-md-block"> - </div>}
+                        </div> : <div className="hidden md:block"> - </div>}
                     </div>
                 </Fade>
             )}

@@ -22,9 +22,9 @@ const SponsorsContainer = styled('div')`
 
 const SponsorBar = () => {
 
-    return <section className="p-4">
-        <div className="row">
-            <div className="col-md-6 p-2">
+    return <section className="p-6">
+        <div className="flex flex-wrap ">
+            <div className="md:w-1/2 pr-4 pl-4 p-2">
                 <h4 className="text-center">Our Sponsors</h4>
                 <SponsorsContainer>
                     <a href="http://jnanamarga.in/" target="_blank" rel="nofollow noopener">
@@ -43,7 +43,7 @@ const SponsorBar = () => {
                     </a>
                 </SponsorsContainer>
             </div>
-            <div className="col-md-6 d-flex align-items-center justify-content-center p-2">
+            <div className="md:w-1/2 pr-4 pl-4 flex items-center justify-center p-2">
                 <div>
                     <h4 className="text-center">Our Partners</h4>
                     <SponsorsContainer>

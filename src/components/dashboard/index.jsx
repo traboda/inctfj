@@ -61,18 +61,18 @@ const UserDashboard = () => {
     <DashboardContainer className="font-punk">
         <HeaderArea>
             <div className="dash-wrapper">
-                <div className="container">
+                <div className="container mx-auto sm:px-4">
                     <Fade down><h1>Hi @{me?.username}!</h1></Fade>
                     <Fade up><h4>InCTF Jr. 2020 will be live 09AM 28th Dec!</h4></Fade>
                 </div>
             </div>
         </HeaderArea>
-        <div className="container py-4 px-0">
+        <div className="container mx-auto sm:px-4 py-4 px-0">
             {/*<Slide left><ShareCard /></Slide>*/}
             <PromoLinks />
             {me && <Fade up><ProfileEditor me={me} /></Fade>}
             {/*<LandingJoinDiscussion />*/}
-            <div style={{ fontSize: '20px', color: "#bbb" }} className="py-3 m-4 text-center">
+            <div style={{ fontSize: '20px', color: "#bbb" }} className="py-3 m-6 text-center">
                 <div>Hint: inspect for passcode</div>
                 <div>For any support, questions, or complaints, please write to us at inctfj@am.amrita.edu</div>
             </div>

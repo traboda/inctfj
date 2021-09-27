@@ -29,10 +29,10 @@ const RegCTASection = styled.section`
 const CTAPartners = () => {
 
     return <RegCTASection>
-        <div className="row mx-0">
+        <div className="flex flex-wrap  mx-0">
             <Fade left>
-                <div className="col-md-9 d-flex align-items-center p-2">
-                    {/*<img alt="star" className="d-none d-md-block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />*/}
+                <div className="md:w-3/4 pr-4 pl-4 flex items-center p-2">
+                    {/*<img alt="star" className="hidden md:block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />*/}
                     <h3 style={{ maxWidth: '800px' }}>
                         InCTF Jr is looking for school partners for our National Level Cyber Security Talent Hunt and
                         International Conference.
@@ -40,7 +40,7 @@ const CTAPartners = () => {
                 </div>
             </Fade>
             <Fade right>
-                <div className="col-md-3 d-flex align-items-center justify-content-center p-2">
+                <div className="md:w-1/4 pr-4 pl-4 flex items-center justify-center p-2">
                     <a rel="nofollow noref" href="https://forms.gle/PvCLzE35ZFKEQ96D6">Register as School Partner</a>
                 </div>
             </Fade>

@@ -17,11 +17,11 @@ const InctfIntro = () => {
     ]
 
     return <IntroSectionWrap>
-        <div className="container-lg py-4 px-1">
-            <div className="row mx-0">
-                <div className="col-md-8 d-flex align-items-center p-3">
+        <div className="container min-w-lg mx-auto sm:px-4 py-4 px-1">
+            <div className="flex flex-wrap  mx-0">
+                <div className="md:w-2/3 pr-4 pl-4 flex items-center p-6">
                     <div>
-                        <Fade up><h1 className="font-weight-bold">Why InCTF Junior?</h1></Fade>
+                        <Fade up><h1 className="font-bold">Why InCTF Junior?</h1></Fade>
                         <Fade>
                             <p>
                                 A recent report has revealed that a miniscule 0.6% of graduate students are currently working in
@@ -43,10 +43,10 @@ const InctfIntro = () => {
                         </Fade>
                     </div>
                 </div>
-                <div className="col-md-4 p-2">
-                    <div className="row mx-0">{participantImages.map((i,index) =>
+                <div className="md:w-1/3 pr-4 pl-4 p-2">
+                    <div className="flex flex-wrap  mx-0">{participantImages.map((i,index) =>
                         <Fade delay={index*150}>
-                            <div className="col-6 p-1"><img draggable="false" style={{ maxWidth: '100%' }} src={i} alt="INCTF participant" /></div>
+                            <div className="w-1/2 p-1"><img draggable="false" style={{ maxWidth: '100%' }} src={i} alt="INCTF participant" /></div>
                         </Fade>
                     )}</div>
                 </div>

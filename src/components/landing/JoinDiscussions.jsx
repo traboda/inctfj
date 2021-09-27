@@ -29,8 +29,7 @@ const DiscussionPortals = styled.a`
     img {
         height: 120px!important;
         filter: drop-shadow(2px 3px 8px rgba(0,0,0,0.3));
-        margin-bottom: 5px;
-        margin-right: 10px;
+        margin: 5px auto;
     }
     &:hover {
       h5 {
@@ -53,8 +52,8 @@ const TwitterDiscussion = styled(DiscussionPortals)`
 
 const LandingJoinDiscussion = () => {
 
-    return <div className="row mx-0">
-        <div className="col-md-6 px-0">
+    return <div className="flex flex-wrap">
+        <div className="md:w-1/2 w-full">
             <TwitterDiscussion href="https://twitter.com/InCTFj" rel="noopener noreferrer" target="_blank">
                 <Fade left>
                     <div>
@@ -63,9 +62,9 @@ const LandingJoinDiscussion = () => {
                     </div>
                 </Fade>
             </TwitterDiscussion>
-
         </div>
-        <div className="col-md-6 px-0">
+
+        <div className="md:w-1/2 w-full">
             <DiscordDiscussion href="https://discord.gg/rkyDM6p3m2" rel="noopener noreferrer" target="_blank">
                 <Fade right>
                     <div>

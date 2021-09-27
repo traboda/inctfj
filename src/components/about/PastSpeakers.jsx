@@ -54,9 +54,9 @@ const PastINCTFSpeakers = () => {
             <h4>Talks & Sessions</h4>
             <h5>By Leading Professionals & Security Researchers</h5>
         </div>
-        <div className="row mx-0 speakers-list">
+        <div className="flex flex-wrap  mx-0 speakers-list">
             {speakers.map((s, index) =>
-                <div className="col-4 col-md-2 p-0">
+                <div className="w-1/3 md:w-1/5 pr-4 pl-4 p-0">
                     <Fade delay={index*150}><div>
                         <img
                             alt="Speaker" draggable="false" src={s.image}

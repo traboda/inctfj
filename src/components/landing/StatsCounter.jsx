@@ -23,11 +23,11 @@ const LandingStatsBar = () => {
         { value: 323, suffix:"+", title: "Schools Participated" },
     ]
 
-    return <StatsContainer className="row py-5 text-center mx-0">
+    return <StatsContainer className="flex flex-wrap py-8 text-center mx-0">
         {stats.map((s) =>
-            <div className="col-6 col-md-3">
+            <div className="w-1/2 md:w-1/4 pr-4 pl-4">
                 <Zoom mountOnEnter effect="fadeInUp">
-                    <div className="text-primary h2 font-weight-bold">
+                    <div className="text-blue-600 h2 font-bold">
                         <CountUp delay={0.5} duration={4.5} end={s.value} />{s.suffix}
                     </div>
                     <div className="h5 mb-0">{s.title}</div>

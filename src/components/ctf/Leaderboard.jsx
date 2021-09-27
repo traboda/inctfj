@@ -45,20 +45,20 @@ const ScoreboardWindow = ({
             <h3>Scoreboard</h3>
             {data?.length > 0 ?
                 <LeaderBoard>
-                    <div className="row mx-0 border-bottom mb-2">
-                        <div className="col-8 d-flex align-items-center px-1">
+                    <div className="flex flex-wrap  mx-0 border-b mb-2">
+                        <div className="w-2/3 flex items-center px-1">
                             #{`{Rank}`}. @{`{Username}`}
                         </div>
-                        <div className="col-4 text-right px-2">
+                        <div className="w-1/3 text-right px-2">
                             {`{Score}`}
                         </div>
                     </div>
                     {data.map((s, index) =>
-                        <div key={shortid.generate()} className="row mx-0 mb-2">
-                            <div className="col-8 d-flex align-items-center px-1">
+                        <div key={shortid.generate()} className="flex flex-wrap  mx-0 mb-2">
+                            <div className="w-2/3 flex items-center px-1">
                                 #{index+1}. @{s.username}
                             </div>
-                            <div className="col-4 text-right px-2">
+                            <div className="w-1/3 text-right px-2">
                                 {s.score}
                             </div>
                         </div>

@@ -141,7 +141,7 @@ const LoginCard = () => {
     return <AuthCardWindow>
         <div className="auth-card-container font-punk">
             {hasError ?
-            <div className="d-flex align-items-center">
+            <div className="flex items-center">
                 <div>
                     <div className="text-center">
                         <img style={{ width: '100%', maxWidth: '100%' }} src={require('../../assets/images/gif/not_allowed.webp')} />
@@ -152,7 +152,7 @@ const LoginCard = () => {
                 </div>
             </div> :
             isLoggingIn ?
-            <div className="d-flex align-items-center">
+            <div className="flex items-center">
                 <div>
                     <div className="text-center">
                         <img style={{ maxWidth: '100%' }} src={require('../../assets/images/gif/logging_in.webp')} />
@@ -160,7 +160,7 @@ const LoginCard = () => {
                     <Pulse forever><h3>Logging You In</h3></Pulse>
                 </div>
             </div> :
-            <div className="d-flex align-items-center">
+            <div className="flex items-center">
                 <div>
                     <h3>Login</h3>
                     <form onSubmit={handleLogin}>
@@ -183,7 +183,7 @@ const LoginCard = () => {
                     </form>
                     <div className="my-3 text-center">
                         <div className="mb-3">Not Registered Yet?</div>
-                        <a className="plain-link border rounded-0 px-3 py-2 h4" href="/register">Register Now</a>
+                        <a className="plain-link border rounded-none px-3 py-2 h4" href="/register">Register Now</a>
                     </div>
                 </div>
             </div>}

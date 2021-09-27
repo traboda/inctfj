@@ -58,9 +58,9 @@ const PoweredByTraboda = styled('div')`
 const LandingContactsBar = () => {
 
     return <ContactsBarSection>
-        <div className="row mx-0">
+        <div className="flex flex-wrap  mx-0">
             <Fade up>
-                <div className="col-md-4 p-2 d-flex align-items-center justify-content-md-center">
+                <div className="md:w-1/3 pr-4 pl-4 p-2 flex items-center md:justify-center">
                     <img alt="email" draggable="false" src={require('../../assets/images/icons/email.png')} />
                     <div>
                         <div>FOR GENERAL ENQUIRES</div>
@@ -69,7 +69,7 @@ const LandingContactsBar = () => {
                 </div>
             </Fade>
             <Fade down>
-                <div className="col-md-4 p-2 d-flex align-items-center justify-content-md-center">
+                <div className="md:w-1/3 pr-4 pl-4 p-2 flex items-center md:justify-center">
                     <img alt="discord" draggable="false" src={require('../../assets/images/logos/discord.png')} />
                     <div>
                         <div>JOIN DISCORD COMMUNITY</div>
@@ -78,7 +78,7 @@ const LandingContactsBar = () => {
                 </div>
             </Fade>
             <Fade up>
-                <div className="col-md-4 p-2 mb-2 d-flex align-items-center justify-content-md-center">
+                <div className="md:w-1/3 pr-4 pl-4 p-2 mb-2 flex items-center md:justify-center">
                     <PoweredByTraboda>
                         <div>Proudly Powered By Traboda.</div>
                         <a href="https://app.traboda.com">
@@ -90,7 +90,7 @@ const LandingContactsBar = () => {
                     </PoweredByTraboda>
                 </div>
             </Fade>
-            <div className="col-md-8 text-center text-md-left h-100 d-flex align-items-center pt-4 px-2">
+            <div className="md:w-2/3 pr-4 pl-4 text-center md:text-left h-full flex items-center pt-4 px-2">
                 <div>
                     <div>&copy; Amrita InCTF 2016-2021. All Rights Reserved.</div>
                     <FooterLinksBar>
@@ -100,7 +100,7 @@ const LandingContactsBar = () => {
                     </FooterLinksBar>
                 </div>
             </div>
-            <div className="social-bar col-md-4 d-flex align-items-center justify-content-md-end justify-content-center pt-4 px-2">
+            <div className="social-bar md:w-1/3 pr-4 pl-4 flex items-center md:justify-end justify-center pt-4 px-2">
                 <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/juniorinctf/">
                     <i className="fab fa-instagram" />
                 </a>

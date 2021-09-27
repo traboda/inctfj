@@ -210,7 +210,7 @@ const RegisterCard = ({ }) => {
 
     return <AuthCardWindow>
         <div className="auth-card-container font-punk">{
-            hasErrors ? <div className="d-flex justify-content-center">
+            hasErrors ? <div className="flex justify-center">
                 <div>
                     <div className="text-center">
                         <img style={{ maxWidth: '65%' }} src={require('../../assets/images/gif/error.webp')} />
@@ -220,18 +220,18 @@ const RegisterCard = ({ }) => {
                     <button onClick={tryAgain} className="lucky-button mt-2">Try Again</button>
                 </div>
             </div> :
-            isRegistered ? <div className="d-flex justify-content-center">
+            isRegistered ? <div className="flex justify-center">
                 <div>
                     <div className="text-center">
                         <img style={{ maxWidth: '65%' }} src={require('../../assets/images/gif/thanks.webp')} />
                     </div>
                     <Pulse forever><h3>You are Registered</h3></Pulse>
                     <div className="terminal-output"> > You now have access to InCTFj dashboard, where you shall find everything else.</div>
-                    <div className="terminal-output text-warning"> > Please note you need to fill in other details in your dashboard, to confirm your registration.</div>
+                    <div className="terminal-output text-yellow-500"> > Please note you need to fill in other details in your dashboard, to confirm your registration.</div>
                     <button onClick={handleLogin} className="lucky-button mt-2">Open Dashboard</button>
                 </div>
             </div> :
-            isRegistering ? <div className="d-flex justify-content-center">
+            isRegistering ? <div className="flex justify-center">
                 <div>
                     <div className="text-center">
                         <img alt="loading" src={require('../../assets/images/gif/loading.webp')} />
@@ -297,9 +297,9 @@ const RegisterCard = ({ }) => {
                                 value={pwd2} onChange={(e) => { setPwd2(e.currentTarget.value)}}
                             />
                         </div>}
-                        <div className="d-flex align-items-center justify-content-center justify-content-md-end">
+                        <div className="flex items-center justify-center md:justify-end">
                             {((isNameSet && isEmailSet && isPasswordSet) && !isPasswordConfirmed && pwd2 !== password) ?
-                                <div className="mt-2 text-center w-100 text-warning">Passwords are not matching.</div> :
+                                <div className="mt-2 text-center w-full text-yellow-500">Passwords are not matching.</div> :
                                 <button type="submit">Proceed</button>
                             }
                         </div>

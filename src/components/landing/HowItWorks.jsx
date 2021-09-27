@@ -88,14 +88,14 @@ const LandingHowItWorks = () => {
         }
     ]
 
-    return <HowItWorksSection className="motto-cards row py-5 mx-0">
-        <div className="col-12 d-flex p-0 mb-4">
-            <h2 className="px-md-3 px-1 py-2 rounded-right mt-4 mb-2 d-md-flex d-inline-block align-items-center bg-primary text-light text-uppercase shadow font-weight-bold text-center mb-0">
+    return <HowItWorksSection className="motto-cards flex flex-wrap py-5 mx-0">
+        <div className="w-full flex p-0 mb-4">
+            <h2 className="md:px-4 px-1 py-2 rounded-r mt-4 mb-2 md:flex inline-block items-center bg-blue-600 text-gray-100 uppercase shadow font-bold text-center mb-0">
                 <img
                     draggable="false"
                     alt="How it Works?"
                     src={require('../../assets/images/icons/thinking.png')}
-                    className="mr-2 my-0 p-0 shadow-none"
+                    className="mr-2 my-0 p-0 shadow-none inline-block"
                     style={{ width: '64px' }}
                 />
                 How does it Work?
@@ -103,19 +103,19 @@ const LandingHowItWorks = () => {
         </div>
         {steps.map((s) =>
             <Fade left={s.left} right={s.right} top={s.top} delay={s.delay}>
-                <div className="col-md-4 px-3">
-                    <div className="row mx-0">
-                        <div className="col-md-12 d-flex align-items-center justify-content-center col-3 p-1 p-md-0">
+                <div className="md:w-1/3 pr-4 pl-4 px-3">
+                    <div className="flex flex-wrap  mx-0">
+                        <div className="md:w-full pr-4 pl-4 flex items-center justify-center w-1/4 p-1 md:p-0">
                             <img draggable="false" alt={s.title} src={s.icon} />
                         </div>
-                        <div className="col-md-12 col-9 text-left text-md-center p-2 p-md-0">
+                        <div className="md:w-full pr-4 pl-4 w-3/4 text-left md:text-center p-2 md:p-0">
                             <h3>{s.title}</h3>
                         </div>
-                        <div className="col-12 text-left text-md-center">
+                        <div className="w-full text-left md:text-center">
                             <p>{s.content}</p>
                             {(s.links && s.links.length > 0) &&
-                            <div className="w-100 mt-1 mb-4">{s.links.map((l) =>
-                                <a className="d-inline-block mx-2 mb-2" href={l.url}>
+                            <div className="w-full mt-1 mb-4">{s.links.map((l) =>
+                                <a className="inline-block mx-2 mb-2" href={l.url}>
                                     <img
                                         src={require('../../assets/images/icons/external_link.png')}
                                         style={{ width: '20px' }}

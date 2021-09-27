@@ -112,15 +112,15 @@ const PromotePage = () => {
         <TopBar includeSpace={false} />
         <PageCover />
         <ShareSection>
-            <div className="d-flex justify-content-center text-center py-2">
+            <div className="flex justify-center text-center py-2">
                 <div>
                     <h3>Download Posters</h3>
                     <p>Click on the image to download the poster, and feel free to share them anywhere! (Drag to view more posters)</p>
                 </div>
             </div>
-            <ScrollContainer vertical className="scroll-container p-3 container d-flex w-100">
+            <ScrollContainer vertical className="scroll-container p-6 container mx-auto sm:px-4 flex w-full">
                 {posters.map((p) =>
-                <div key={shortid.generate()} className="d-flex align-items-center justify-content-center p-1">
+                <div key={shortid.generate()} className="flex items-center justify-center p-1">
                     <button onClick={() => handlePosterDownload(p)}>
                         <img alt="download poster" className="inctf_poster" src={p} />
                         <div className="download_icon">
@@ -131,14 +131,14 @@ const PromotePage = () => {
             </ScrollContainer>
         </ShareSection>
         <ShareSection>
-            <div className="d-flex align-items-center justify-content-center text-center">
+            <div className="flex items-center justify-center text-center">
                 <div>
                     <h3>Promotional Videos</h3>
                 </div>
             </div>
-            <ScrollContainer vertical className="scroll-container p-3 container d-flex w-100">
+            <ScrollContainer vertical className="scroll-container p-6 container mx-auto sm:px-4 flex w-full">
                 {videos.map(({ cover, link }) =>
-                    <div key={shortid.generate()} className="d-flex align-items-center justify-content-center p-1">
+                    <div key={shortid.generate()} className="flex items-center justify-center p-1">
                         <a href={link} target="_blank">
                             <img alt="download poster" className="inctf_video_cover" src={cover} />
                             <div className="youtube_icon">

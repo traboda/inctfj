@@ -91,22 +91,22 @@ const Window = ({
                     <Fade style={{ height: '100%' }}>
                     <TopBar className="handle">
                         <div className="glitch">
-                            <div className="row mx-0">
-                                <div className="col-9 px-1 d-flex align-items-center">
+                            <div className="flex flex-wrap  mx-0">
+                                <div className="w-3/4 px-1 flex items-center">
                                     // {title}
                                 </div>
                                 {!hideCloseButton &&
-                                <div className="col-3 px-0 d-flex justify-content-end align-items-center">
+                                <div className="w-1/4 px-0 flex justify-end items-center">
                                     <button onClick={() => onClose(cardID)}>X</button>
                                 </div>}
                             </div>
                         </div>
-                        <div className="row mx-0">
-                            <div className="col-9 px-1 d-flex align-items-center">
+                        <div className="flex flex-wrap  mx-0">
+                            <div className="w-3/4 px-1 flex items-center">
                                 // {title}
                             </div>
                             {!hideCloseButton &&
-                            <div className="col-3 px-0 d-flex justify-content-end align-items-center">
+                            <div className="w-1/4 px-0 flex justify-end items-center">
                                 <button onClick={() => onClose(cardID)}>X</button>
                             </div>}
                         </div>

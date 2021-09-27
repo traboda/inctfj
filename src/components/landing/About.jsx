@@ -63,11 +63,11 @@ const LandingAboutInCTF = () => {
 
     return <AboutInCTFSection>
         <Zoom up>
-            <div className="row mx-0">
-                <div className="col-lg-6 p-md-4 p-2">
+            <div className="flex flex-wrap  mx-0">
+                <div className="lg:w-1/2 pr-4 pl-4 md:p-6 p-2">
                     <ReactPlayer url="https://www.youtube.com/watch?v=sxRZ06Rbh_c" width="100%" height="60vmin" />
                 </div>
-                <div className="col-lg-6 py-md-4 py-3 px-md-3 px-lg-0 d-flex">
+                <div className="lg:w-1/2 pr-4 pl-4 md:py-6 py-3 md:px-4 lg:px-0 flex">
                     <div>
                         <div className="px-3">
                             <h2 className="mt-2">What is <span>InCTF Jr</span>?</h2>
@@ -79,7 +79,7 @@ const LandingAboutInCTF = () => {
                                 no prior knowledge is required for taking part.
                             </p>
                         </div>
-                        <div className="d-md-flex px-2 mt-3 justify-content-center justify-content-md-start align-items-center">
+                        <div className="md:flex px-2 mt-3 justify-center md:justify-start items-center">
                             <a style={{ background: '#FF1100' }} title="How to register" href="https://youtu.be/twS3pzPjRzA" target="_blank">
                                 Watch How to Get Started
                             </a>
@@ -87,16 +87,16 @@ const LandingAboutInCTF = () => {
                             <a  style={{ background: '#4A148C' }} title="View FAQ" href="/faq">View FAQ</a>
                         </div>
                         <div className="features-list mt-2 py-2">
-                            <div className="row mx-0">
+                            <div className="flex flex-wrap  mx-0">
                                 {features.map((f) =>
-                                    <div className="col-md-4 p-0">
+                                    <div className="md:w-1/3 pr-4 pl-4 p-0">
                                         <Fade delay={500}>
-                                            <div className="feature-card row mx-0">
-                                                <div className="col-4 text-center col-md-12 px-1">
+                                            <div className="feature-card flex flex-wrap  mx-0">
+                                                <div className="w-1/3 text-center md:w-full pr-4 pl-4 px-1">
                                                     <img alt={f.title} src={f.image} />
                                                 </div>
-                                                <div className="col-8 text-md-center d-flex align-items-center justify-content-md-center text-left col-md-12 px-1">
-                                                    <div className="h6 mb-0 w-75">{f.title}</div>
+                                                <div className="w-2/3 md:text-center flex items-center md:justify-center text-left md:w-full pr-4 pl-4 px-1">
+                                                    <div className="h6 mb-0 w-3/4">{f.title}</div>
                                                 </div>
                                             </div>
                                         </Fade>

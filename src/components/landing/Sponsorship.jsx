@@ -85,9 +85,9 @@ const LandingSponsorship = ({ }) => {
         }
     ]
 
-    return <SponsorshipArea className="row mx-0">
+    return <SponsorshipArea className="flex flex-wrap  mx-0">
         <Fade left>
-            <div className="col-lg-6 p-1 p-lg-5 p-md-3">
+            <div className="lg:w-1/2 pr-4 pl-4 p-1 lg:p-12 md:p-4">
                 <div className="mb-2">Not a Student?</div>
                 <h2>
                     Today You Can Help Us to
@@ -107,11 +107,11 @@ const LandingSponsorship = ({ }) => {
             </div>
         </Fade>
         <Fade right>
-            <div className="col-lg-6 px-1">
-                <LogoWall className="row mx-0">
-                    <div className="h5 col-12 p-0 mt-3 mb-1 font-weight-bolder text-left text-uppercase">Past Sponsors</div>
+            <div className="lg:w-1/2 pr-4 pl-4 px-1">
+                <LogoWall className="flex flex-wrap  mx-0">
+                    <div className="h5 w-full p-0 mt-3 mb-1 font-weight-bolder text-left uppercase">Past Sponsors</div>
                     {pastSponsors.map((s) =>
-                        <div className="col-md-3 col-4 p-1">
+                        <div className="md:w-1/4 pr-4 pl-4 w-1/3 p-1">
                             <Fade><img alt="Sponsor Logo" src={s.image} /></Fade>
                         </div>
                     )}

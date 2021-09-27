@@ -28,17 +28,17 @@ const RegCTASection = styled.section`
 
 const CTAReg = ({ UTMSource = null }) => (
     <RegCTASection>
-        <div className="row mx-0">
+        <div className="flex flex-wrap  mx-0">
             <Fade left>
-                <div className="col-md-8 d-flex align-items-center p-2">
-                    <img alt="star" className="d-none d-md-block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />
+                <div className="md:w-2/3 pr-4 pl-4 flex items-center p-2">
+                    <img alt="star" className="hidden md:block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />
                     <h3>
                         InCTF Jr is your perfect entry to CyberSec & Hacking before college.
                     </h3>
                 </div>
             </Fade>
             <Fade right>
-                <div className="col-md-4 d-flex p-0 align-items-center justify-content-center">
+                <div className="md:w-1/3 pr-4 pl-4 flex p-0 items-center justify-center w-full">
                     <iframe
                         className="border-0"
                         style={{ width: '400px', maxWidth: '100vw', height: '190px', overflow: 'auto' }}

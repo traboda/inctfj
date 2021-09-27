@@ -78,8 +78,8 @@ const FlagSubmitter = ({ onAccept = () => {} }) => {
     return <Bounce top>
         <FlagContainer className="font-punk">
             <form onSubmit={handleSubmit}>
-                <div className="p-3">
-                    {successful !== null && ( successful ? <div className="pb-2 px-2 text-success">Flag was accepted</div> : <div className="pb-2 px-2 text-danger">Flag Rejected</div>)}
+                <div className="p-6">
+                    {successful !== null && ( successful ? <div className="pb-2 px-2 text-green-500">Flag was accepted</div> : <div className="pb-2 px-2 text-red-600">Flag Rejected</div>)}
                     <input
                         placeholder="Enter Your Flag"
                         value={flag}

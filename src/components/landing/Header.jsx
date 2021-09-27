@@ -37,7 +37,6 @@ const HeaderContainer = styled.section`
         display: inline-block;
         font-size: 108%;
         color: #F13F17;
-        margin-top: 5px;
       }
       margin-bottom: 1.25rem;
     }
@@ -143,7 +142,7 @@ const LandingHeader = ({ UTMSource = null }) => {
     const [iframeError, setIframeError] = useState(false);
 
     return <HeaderContainer>
-        <div className="container px-0 header-container">
+        <div className="container mx-auto sm:px-4 px-0 header-container">
             <div>
                 <div className="px-3">
                     <Pulse>
@@ -156,15 +155,15 @@ const LandingHeader = ({ UTMSource = null }) => {
                         <p>
                             InCTF Junior is India's First & Premier Hacking & Cyber Security Contest for High School Students,
                             organized by team bi0s, India's No.1 ranked CTF Team.
-                            <span className="mt-4">
+                            <span className="mt-6">
                                 Every year the brightest young hackers from all across India participate in this the learn & hack CTF contest,
                                 win exciting prizes & kick-start their cyber-security career.
                             </span>
                         </p>
                     </Fade>
                 </div>
-                <div className="row mx-0">
-                    <div className="col-md-4 col-12 py-5 py-md-0 px-2">
+                <div className="flex flex-wrap  mx-0">
+                    <div className="md:w-1/3 pr-4 pl-4 w-full py-5 md:py-0 px-2">
                         <HowToRegister onClick={() => window.open('https://youtu.be/twS3pzPjRzA', '_blank')}>
                             <div className="how_to_register_cover">
                                 <div className="text-center">
@@ -183,7 +182,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                             />
                         </HowToRegister>
                     </div>
-                    <div className="col-md-8 col-12 px-2 py-4">
+                    <div className="md:w-2/3 pr-4 pl-4 w-full px-2 py-4">
                         {iframeError ?
                             <div>
                                 <p>

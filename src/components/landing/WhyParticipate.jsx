@@ -68,15 +68,15 @@ const LandingReasonsToParticipate = () => {
 
     return <ReasonsSection>
         <h2 className="text-center">
-            <div className="d-flex d-md-inline justify-content-center">
+            <div className="flex md:inline justify-center">
                 <img className="mr-2" style={{ width: '64px'}} alt="Why Participate?" src={require('../../assets/images/icons/heart.png')} />
             </div>
             Why Participate?
         </h2>
-        <div className="row mx-0">
+        <div className="flex flex-wrap  mx-0">
         {reasons.map((r, index) =>
             <Zoom up={index%2} left={!index%2}>
-                <div className="col-6 col-lg-3 text-center p-2">
+                <div className="w-1/2 lg:w-1/4 pr-4 pl-4 text-center p-2">
                     <video autoPlay loop muted src={r.video} />
                     <h3>{r.title}</h3>
                 </div>

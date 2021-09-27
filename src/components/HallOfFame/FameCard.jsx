@@ -53,8 +53,8 @@ const FameCard = ({
     }
 
     return <FameCardWrap>
-        <div className="row mx-0 p-2">
-            <div className="col-2 text-right justify-content-center align-items-center d-flex">
+        <div className="flex flex-wrap  mx-0 p-2">
+            <div className="w-1/5 text-right justify-center items-center flex">
                 {
                     rank === 1 ? <img src={require('../../assets/images/icons/crown.png')} /> :
                         rank === 2 ? <img src={require('../../assets/images/icons/viking.png')} /> :
@@ -63,8 +63,8 @@ const FameCard = ({
                                     : <div className="rank">{rank}. </div>
                 }
             </div>
-            <div className="col-10 col-md-5 p-1">
-                <h4 className="font-weight-bold">{name}</h4>
+            <div className="w-4/5 md:w-2/5 pr-4 pl-4 p-1">
+                <h4 className="font-bold">{name}</h4>
                 <div className="mb-2">@{username}</div>
                 {(age || points) &&
                 <div>
@@ -72,7 +72,7 @@ const FameCard = ({
                     {age && <span><b>{age}</b> Yrs</span>}
                 </div>}
             </div>
-            <div className="col-md-5 d-flex p-1">
+            <div className="md:w-2/5 pr-4 pl-4 flex p-1">
                 <div>
                     {school && <div style={{ fontSize: '15px', color: '#fd7e14' }} className="line-height-1 mb-1">{school}</div>}
                     {(city||state) && <div>{city}, {getStateName()}</div>}

@@ -40,13 +40,13 @@ const FooterLinksBar = styled.nav`
 const Footer = () => {
 
     return <FooterContainer>
-        <div className="container-lg px-1">
-            <div className="row mx-0">
-                <div className="col-md-8 order-2 order-md-1 text-center text-md-left px-1">
-                    <div className="d-md-flex align-items-center d-block">
+        <div className="container min-w-lg mx-auto sm:px-4 px-1">
+            <div className="flex flex-wrap  mx-0">
+                <div className="md:w-2/3 pr-4 pl-4 order-2 md:order-1 text-center md:text-left px-1">
+                    <div className="md:flex items-center block">
                         <img draggable="false" alt="Amrita InCTF Junior" src={require('../../assets/images/branding/light_version.png')} />
-                        <div className="ml-md-4">
-                            <div className="line-height-1 mt-2 mt-md-0 mb-1">&copy; Amrita InCTF Jr. 2016-2021. <span className="d-inline-block">All Rights Reserved.</span></div>
+                        <div className="md:ml-6">
+                            <div className="line-height-1 mt-2 md:mt-0 mb-1">&copy; Amrita InCTF Jr. 2016-2021. <span className="inline-block">All Rights Reserved.</span></div>
                             <FooterLinksBar>
                                 <a href="/branding">Brand Kit</a>
                                 <a href="/privacy">Privacy Policy</a>
@@ -55,8 +55,8 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="social-bar col-md-4 order-1 order-md-2 d-flex align-items-center justify-content-md-end justify-content-center px-1">
-                    <div className="d-flex align-items-center justify-content-md-end justify-content-center mb-md-0 mb-2 p-2">
+                <div className="social-bar md:w-1/3 pr-4 pl-4 order-1 md:order-2 flex items-center md:justify-end justify-center px-1">
+                    <div className="flex items-center md:justify-end justify-center md:mb-0 mb-2 p-2">
                         <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/juniorinctf/">
                             <i className="fab fa-instagram" />
                         </a>

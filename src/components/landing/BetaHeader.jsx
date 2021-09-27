@@ -154,8 +154,8 @@ const LandingBetaHeader = ({ UTMSource = null }) => {
     return <HeaderContainer>
         <div className="header-container">
             <div style={{ width: '100%' }}>
-                <div className="row mx-0">
-                    <div className="col-md-8 col-lg-7 d-flex align-items-center justify-content-center pl-4 py-5 mt-3 mt-md-0 p-md-5">
+                <div className="flex flex-wrap  mx-0">
+                    <div className="md:w-2/3 pr-4 pl-4 lg:w-3/5 pr-4 pl-4 flex items-center justify-center pl-4 py-5 mt-3 md:mt-0 md:p-12">
                         <div>
                             <Pulse>
                                 <h1>
@@ -173,8 +173,8 @@ const LandingBetaHeader = ({ UTMSource = null }) => {
                                 </span>
                                 </p>
                             </Fade>
-                            <div className="d-none d-md-block">
-                                <div className="d-flex mt-3 align-items-center">
+                            <div className="hidden md:block">
+                                <div className="flex mt-3 items-center">
                                     <div className="mr-4">
                                         <HowToRegister onClick={() => setShowPlayer(true)}>
                                             <div className="how_to_register_cover">
@@ -229,7 +229,7 @@ const LandingBetaHeader = ({ UTMSource = null }) => {
                         </Modal>
 
                     </div>
-                    <div className="col-md-4 col-lg-5 p-1 d-flex align-items-center justify-content-center p-md-3">
+                    <div className="md:w-1/3 pr-4 pl-4 lg:w-2/5 pr-4 pl-4 p-1 flex items-center justify-center md:p-4">
                         {iframeError ?
                         <div>
                             <p>
@@ -250,8 +250,8 @@ const LandingBetaHeader = ({ UTMSource = null }) => {
                         </IFrameContainer>}
                     </div>
                 </div>
-                <div className="d-block d-md-none">
-                    <div className="d-flex p-3 my-3 align-items-center">
+                <div className="block md:hidden">
+                    <div className="flex p-6 my-3 items-center">
                         <div className="mr-4">
                             <HowToRegister onClick={() => setShowPlayer(true)}>
                                 <div className="how_to_register_cover">

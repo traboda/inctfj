@@ -41,9 +41,9 @@ const SupportDesk = () => {
     return <SupportArea>
         {isDiscordOpen &&
         <div>
-            <div className="d-flex justify-content-end">
+            <div className="flex justify-end">
                 <CloseButton style={{  }} className="plain-button" onClick={() => setDiscordOpen(false)}>
-                    <i className="fa fa-times text-danger" />
+                    <i className="fa fa-times text-red-600" />
                 </CloseButton>
             </div>
             <WidgetBot

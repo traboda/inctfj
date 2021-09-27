@@ -62,19 +62,19 @@ For more information & registrations, visit https://junior.inctf.in
     };
 
     return <ShareCardContainer>
-        <div className="row w-100 mx-0">
-            <div className="col-md-6 p-1">
+        <div className="flex flex-wrap  w-full mx-0">
+            <div className="md:w-1/2 pr-4 pl-4 p-1">
                 <h2>Share with Your Friends!</h2>
                 <p className="mb-2">
                     Invite your friends to InCTF Jr 2020
                 </p>
-                <div className="d-flex text-dark align-items-center my-2 justify-content-center justify-content-md-start">
-                    <a className="plain-link px-3 py-2 btn text-dark btn-warning" style={{ fontSize: '20px' }}  href="/promote">
+                <div className="flex text-gray-900 items-center my-2 justify-center md:justify-start">
+                    <a className="plain-link px-3 py-2 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline text-gray-900 bg-orange-400 text-black hover:bg-orange-500" style={{ fontSize: '20px' }}  href="/promote">
                         View & Share Promotional Materials
                     </a>
                 </div>
             </div>
-           <div className="col-md-6 d-flex align-items-center justify-content-md-end justify-content-center p-1">
+           <div className="md:w-1/2 pr-4 pl-4 flex items-center md:justify-end justify-center p-1">
                <a target="_blank" className="whatsapp_share_button" href={getWhatsAppLink()}>
                    <img alt="forward on whatsapp" src={require('../../assets/images/icons/whatsapp.png')} />
                    Forward on WhatsApp

@@ -45,8 +45,8 @@ const TwitterDiscussion = styled(DiscussionPortals)`
 
 const PromoLinks = () => {
 
-    return <div className="row mx-0">
-        <div className="col-md-6 px-0">
+    return <div className="flex flex-wrap  mx-0">
+        <div className="md:w-1/2 pr-4 pl-4 px-0">
             <TwitterDiscussion href="/ctf">
                 <Fade left>
                     <div>
@@ -57,7 +57,7 @@ const PromoLinks = () => {
             </TwitterDiscussion>
 
         </div>
-        <div className="col-md-6 px-0">
+        <div className="md:w-1/2 pr-4 pl-4 px-0">
             <DiscordDiscussion href="https://traboda.com/register" rel="noopener noreferrer" >
                 <Fade right>
                     <div>

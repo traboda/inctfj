@@ -32,11 +32,11 @@ const INCTFJStats = () => {
     ]
 
     return <StatsSecion>
-         <StatsContainer className="row py-5 text-center mx-0">
+         <StatsContainer className="flex flex-wrap  py-5 text-center mx-0">
             {stats.map((s) =>
-                <div className="col-6 col-md-3">
+                <div className="w-1/2 md:w-1/4 pr-4 pl-4">
                     <Zoom mountOnEnter effect="fadeInUp">
-                        <h2 className="text-primary mb-0 font-weight-bold">
+                        <h2 className="text-blue-600 mb-0 font-bold">
                             <CountUp delay={0.5} duration={4.5} end={s.value} />{s.suffix}
                         </h2>
                         <h4 className="mb-0">{s.title}</h4>

@@ -23,9 +23,9 @@ const CategoryLister = ({ category, challenges, onSelectChallenge }) => {
         <div className="px-2 py-1">
             <h2 className="mb-0">{category}</h2>
         </div>
-        <div className="row mx-0">
+        <div className="flex flex-wrap  mx-0">
             {challenges.map((c) =>
-                <div key={shortid.generate()} className="col-6 p-2">
+                <div key={shortid.generate()} className="w-1/2 p-2">
                     <ChallengeItem {...c} onClick={() => onSelectChallenge(c)} />
                 </div>
             )}

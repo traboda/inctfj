@@ -119,16 +119,16 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
     return <div>
         <TopbarContainer ref={topbarRef}>
             <div className="topbar-container">
-                <div className="container px-0">
-                    <div className="row w-100 mx-0">
-                        <div className="col-4 col-md-3 col-lg-2 text-md-center d-flex align-items-center justify-content-md-end justify-content-center px-2">
+                <div className="container mx-auto sm:px-4 px-0">
+                    <div className="flex flex-wrap  w-full mx-0">
+                        <div className="w-1/3 md:w-1/4 pr-4 pl-4 lg:w-1/5 pr-4 pl-4 md:text-center flex items-center md:justify-end justify-center px-2">
                             <a href="/">
                                 <img className="logo" src={require('../../assets/images/logos/inctf_light.png')} alt="InCTFj" />
                             </a>
                         </div>
-                        <div className="col-md-9 col-lg-10 px-1 d-none d-md-flex align-items-center">
-                            <div className="row mx-0 w-100">
-                                <div className="col-md-6 d-flex align-items-center px-1">
+                        <div className="md:w-3/4 pr-4 pl-4 lg:w-4/5 pr-4 pl-4 px-1 hidden md:flex items-center">
+                            <div className="flex flex-wrap  mx-0 w-full">
+                                <div className="md:w-1/2 pr-4 pl-4 flex items-center px-1">
                                     <nav>
                                         <Fade delay={0}>
                                             <a href="/about">About</a>
@@ -141,7 +141,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                         </Fade>
                                     </nav>
                                 </div>
-                                <div className="col-md-6 d-flex justify-content-end text-right px-1">
+                                <div className="md:w-1/2 pr-4 pl-4 flex justify-end text-right px-1">
                                     <TopbarInfoCard>
                                         <div className="mr-2">
                                             <div>India's First & Only CTF Hacking Contest</div>
@@ -152,7 +152,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-8 d-flex d-md-none align-items-center justify-content-end px-1">
+                        <div className="w-2/3 flex md:hidden items-center justify-end px-1">
                             <button onClick={onOpen}>
                                 <img alt="menu" src={require('../../assets/images/icons/hamburger.png')} />
                             </button>
@@ -183,7 +183,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 <img alt="close" src={require('../../assets/images/icons/close.png')} />
             </CloseButton>
             {showRegCard &&
-            <div style={{ background: '#101219' }} className="d-flex p-2 align-items-center justify-content-center">
+            <div style={{ background: '#101219' }} className="flex p-2 items-center justify-center">
                 <iframe
                     className="border-0"
                     style={{ width: '500px', maxWidth: '100vw', height: '180px', overflow: 'auto' }}

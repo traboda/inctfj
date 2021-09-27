@@ -121,19 +121,19 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
                The InCTF Junior {year} champions
             </p>
         </div>
-        <div className="row mx-0">{champions.map((c, index) =>
-            <div className="col-md-6 p-1" key={shortid.generate()}>
+        <div className="flex flex-wrap  mx-0">{champions.map((c, index) =>
+            <div className="md:w-1/2 pr-4 pl-4 p-1" key={shortid.generate()}>
                 <Fade up delay={index*250}>
                     <ChampionCard>
-                        <div className="row h-100 w-100 mx-0">
+                        <div className="flex flex-wrap  h-full w-full mx-0">
                             <div
                                 style={{ background: `url(${c.avatar})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-                                className="col-4 col-lg-3 px-2 px-md-0"
+                                className="w-1/3 lg:w-1/4 pr-4 pl-4 px-2 md:px-0"
                             />
-                            <div className="col-8 col-lg-9 d-flex align-items-center p-2 p-md-3">
+                            <div className="w-2/3 lg:w-3/4 pr-4 pl-4 flex items-center p-2 md:p-4">
                                 <div>
-                                    <div className="h6 text-uppercase mb-1">{c.title}</div>
-                                    <h5 className="font-weight-bold">{c.name}</h5>
+                                    <div className="h6 uppercase mb-1">{c.title}</div>
+                                    <h5 className="font-bold">{c.name}</h5>
                                     <div className="school-name">{c.school}</div>
                                     <div>{c.place}</div>
                                 </div>
@@ -152,18 +152,18 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
                 The top Women Hackers of InCTF Junior {year}
             </p>
         </div>
-        <div className="row mx-0">{womenHackers.map((c, index) =>
-            <div className="col-md-6 p-1" key={shortid.generate()}>
+        <div className="flex flex-wrap  mx-0">{womenHackers.map((c, index) =>
+            <div className="md:w-1/2 pr-4 pl-4 p-1" key={shortid.generate()}>
                 <Fade up delay={index*250}>
                     <ChampionCard>
-                        <div className="row h-100 w-100 mx-0">
+                        <div className="flex flex-wrap  h-full w-full mx-0">
                             <div
                                 style={{ background: `url(${c.avatar})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-                                className="col-4 col-lg-3 px-2 px-md-0"
+                                className="w-1/3 lg:w-1/4 pr-4 pl-4 px-2 md:px-0"
                             />
-                            <div className="col-8 col-lg-9 d-flex align-items-center p-2 p-md-3">
+                            <div className="w-2/3 lg:w-3/4 pr-4 pl-4 flex items-center p-2 md:p-4">
                                 <div>
-                                    <h5 className="font-weight-bold">{c.name}</h5>
+                                    <h5 className="font-bold">{c.name}</h5>
                                     <div className="h6 mb-1">{c.points} Pts</div>
                                     <div className="school-name">{c.school}</div>
                                     <div>{c.place}</div>
@@ -184,18 +184,18 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
             </p>
         </div>
         {leaderboard?.length > 0 ?
-                <div className="row mx-0">
-                    <div className="col-md-12 mb-2 px-0">
-                        <SearchBar className="row bg-white p-2 mx-0">
-                            <div className="col-md-8 p-1 d-flex align-items-center">
+                <div className="flex flex-wrap  mx-0">
+                    <div className="md:w-full pr-4 pl-4 mb-2 px-0">
+                        <SearchBar className="flex flex-wrap  bg-white p-2 mx-0">
+                            <div className="md:w-2/3 pr-4 pl-4 p-1 flex items-center">
                                 <input
                                     value={keyword}
                                     onChange={(e) => setKeyword(e.currentTarget.value)}
                                     placeholder="Search for names"
                                 />
                             </div>
-                            <div className="col-md-4 p-1 d-flex align-items-center">
-                                <div className="w-100">
+                            <div className="md:w-1/3 pr-4 pl-4 p-1 flex items-center">
+                                <div className="w-full">
                                     <Select
                                         aria-label="user-state-selector"
                                         name="state"
@@ -216,7 +216,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
                         (keyword ? (s.name.startsWith(keyword) || s.username.startsWith(keyword)) : true) &&
                         (state ? s.state === state : true)
                     ).map((l) =>
-                        <div className="col-md-6 p-1">
+                        <div className="md:w-1/2 pr-4 pl-4 p-1">
                             <Fade>
                                 <FameCard {...l} key={shortid.generate()} />
                             </Fade>
@@ -228,9 +228,9 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
                         <li>Data before 4th edition may not be complete, or may have inaccuracies due to limitations of available data.</li>
                     </div>
                 </div> :
-                <div className="d-flex align-items-center justify-content-center">
+                <div className="flex items-center justify-center">
                     <div className="my-5 text-center">
-                        <h4 className="font-weight-bold text-danger">No Records Currently Available</h4>
+                        <h4 className="font-bold text-red-600">No Records Currently Available</h4>
                         <p style={{ fontSize: '13px' }}>We will shortly update the entries here, check back later</p>
                     </div>
                 </div>}

@@ -17,29 +17,29 @@ const SchoolLeaderboard = ({ schools }) => {
         </div>
         <div style={{ maxWidth: '720px' }} className="px-0">
             <LeaderRow
-                className="row font-weight-bold p-2 mb-2 mx-0"
+                className="flex flex-wrap  font-bold p-2 mb-2 mx-0"
                 style={{ color: '#fd7e14' }}
             >
-                <div className="col-6 col-lg-8 px-2">
+                <div className="w-1/2 lg:w-2/3 pr-4 pl-4 px-2">
                     School
                 </div>
-                <div className="col-3 col-lg-2 text-right px-2">
+                <div className="w-1/4 lg:w-1/5 pr-4 pl-4 text-right px-2">
                     # of Scorers
                 </div>
-                <div className="col-3 col-lg-2 text-right px-2">
+                <div className="w-1/4 lg:w-1/5 pr-4 pl-4 text-right px-2">
                     Total Points
                 </div>
             </LeaderRow>
             {schools.map((s, index) =>
                 <Fade up>
-                    <LeaderRow key={shortid.generate()} className="row p-2 mb-2 mx-0">
-                        <div style={{ fontSize: 'calc(12px + 0.5vw)' }} className="col-6 col-lg-8 px-2">
+                    <LeaderRow key={shortid.generate()} className="flex flex-wrap  p-2 mb-2 mx-0">
+                        <div style={{ fontSize: 'calc(12px + 0.5vw)' }} className="w-1/2 lg:w-2/3 pr-4 pl-4 px-2">
                             <b>{index+1}.</b> {s.name}
                         </div>
-                        <div className="col-3 col-lg-2 text-center px-2">
+                        <div className="w-1/4 lg:w-1/5 pr-4 pl-4 text-center px-2">
                             {s.participants}
                         </div>
-                        <div className="col-3 col-lg-2 text-right px-2">
+                        <div className="w-1/4 lg:w-1/5 pr-4 pl-4 text-right px-2">
                             {s.points}
                         </div>
                     </LeaderRow>

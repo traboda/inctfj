@@ -213,29 +213,29 @@ const ProfileEditor = ({ me }) => {
             </div>
         </SavingCard>}
         <div className="editor-container">
-            <div className="row py-2 mx-0">
-                <div className="col-9 d-flex align-items-center px-0">
+            <div className="flex flex-wrap  py-2 mx-0">
+                <div className="w-3/4 flex items-center px-0">
                     <div>
                         <h4>{isEditing && 'Edit '} My Profile</h4>
                         {(!isEditing) && ( !isProfileComplete ?
-                            <div className="text-danger">
+                            <div className="text-red-600">
                                 <p>Your profile is seems to be incomplete, please fill up your profile to complete your registration.</p>
                             </div> :
-                            <div className="text-success" style={{ maxWidth: '450px' }}>
+                            <div className="text-green-500" style={{ maxWidth: '450px' }}>
                                 <p>Your profile is complete! You can still make changes, please be sure you provide us the right information.</p>
                             </div>
                         )}
                     </div>
                 </div>
-                <div className="col-3 d-flex align-items-start justify-content-end px-1">
+                <div className="w-1/4 flex items-start justify-end px-1">
                     {!isEditing ?
                         <button onClick={() => setEditing(true)}>Edit</button> :
                         <button onClick={updateProfile}>Save</button>
                     }
                 </div>
             </div>
-            <div className="row mx-0">
-                <div className="col-md-6 col-lg-4 py-1 px-2">
+            <div className="flex flex-wrap  mx-0">
+                <div className="md:w-1/2 pr-4 pl-4 lg:w-1/3 pr-4 pl-4 py-1 px-2">
                     <h5>Basic Information</h5>
                     <TextInputEditor>
                         <label>> Username</label>
@@ -266,7 +266,7 @@ const ProfileEditor = ({ me }) => {
                         /> : <TextInput value={gender} disabled />}
                     </TextInputEditor>
                 </div>
-                <div className="col-md-6 col-lg-4 py-1 px-2">
+                <div className="md:w-1/2 pr-4 pl-4 lg:w-1/3 pr-4 pl-4 py-1 px-2">
                     <h5>School & Region</h5>
                     <TextInputEditor>
                         <label className={institution==="" ? 'text-danger' : null}>> School / Institution</label>
@@ -293,7 +293,7 @@ const ProfileEditor = ({ me }) => {
                         /> : <TextInput value={state && getStateObj() ?  getStateObj().label : " - "} disabled />}
                     </TextInputEditor>
                 </div>
-                <div className="col-md-6 col-lg-4 py-1 px-2">
+                <div className="md:w-1/2 pr-4 pl-4 lg:w-1/3 pr-4 pl-4 py-1 px-2">
                     <h5>Contact Information</h5>
                     <TextInputEditor>
                         <label className={contact==="" ? 'text-danger' : null}>> Mobile Number</label>
@@ -305,14 +305,14 @@ const ProfileEditor = ({ me }) => {
                     </TextInputEditor>
                 </div>
             </div>
-            <div className="row mx-0">
-                <div className="col-md-6 p-2">
+            <div className="flex flex-wrap  mx-0">
+                <div className="md:w-1/2 pr-4 pl-4 p-2">
                     {!isEditing ?
                         <button className="action-button" onClick={() => setEditing(true)}>Edit Profile</button> :
                         <button className="action-button" onClick={updateProfile}>Save</button>
                     }
                 </div>
-                <div className="col-md-6 p-2">
+                <div className="md:w-1/2 pr-4 pl-4 p-2">
 
                 </div>
             </div>

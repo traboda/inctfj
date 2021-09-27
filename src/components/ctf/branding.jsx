@@ -77,16 +77,16 @@ const BrandingView = () => {
             </div>
         </SponsorsContainer>
         <Footer className="font-punk">
-            <div className="row mx-0">
-                <div className="col-4 px-0">
+            <div className="flex flex-wrap  mx-0">
+                <div className="w-1/3 px-0">
 
                 </div>
-                <div className="col-4 d-flex justify-content-center align-items-end px-0">
+                <div className="w-1/3 flex justify-center items-end px-0">
                     <div className="footer-center-card">
                         Best viewed in 1920x1080p on Chrome.
                     </div>
                 </div>
-                <div className="col-4 d-flex justify-content-end px-0">
+                <div className="w-1/3 flex justify-end px-0">
                     <div className="footer-right-card">
                         <div className="px-3">
                             <a href="/rules" target="_blank"> // Rules // </a>

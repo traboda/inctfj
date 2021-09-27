@@ -85,8 +85,8 @@ const LandingTestimonials = () => {
                 Hear it from the hackers
             </div>
         </Pulse>
-        <div className="row mx-0">
-            {participants.map((p, index) => <div className="col-6 col-md-4 col-lg-2 p-1">
+        <div className="flex flex-wrap  mx-0">
+            {participants.map((p, index) => <div className="w-1/2 md:w-1/3 pr-4 pl-4 lg:w-1/5 pr-4 pl-4 p-1">
                 <Fade delay={index*200}><a onClick={openVideo}><img alt="testimonial student" draggable="false" src={p.image} /></a></Fade>
             </div>)}
         </div>

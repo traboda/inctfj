@@ -31,7 +31,7 @@ const ChallengeCard = ({
         onClose={onClose}
         onDrag={handleDrag}
     >
-        <ChallengeCardWrap className="p-3">
+        <ChallengeCardWrap className="p-6">
             <h3 className="font-punk">{name} {isSolved && ' (Solved)'}</h3>
             <div>
                 <ReactMarkdown plugins={[gfm]} children={description} />
@@ -42,7 +42,7 @@ const ChallengeCard = ({
                     <div><b>Files: </b></div>
                     <div>
                         {file.map((f) =>
-                            <a key={shortid.generate()} className="d-block my-2" href={`https://play.inctf.in/junior/files/${ID}/${f}`}>{f}</a>
+                            <a key={shortid.generate()} className="block my-2" href={`https://play.inctf.in/junior/files/${ID}/${f}`}>{f}</a>
                         )}
                     </div>
                 </div>}

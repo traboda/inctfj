@@ -152,11 +152,11 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
                         </button>
                     </div>
                     <div className="text-center pt-5">
-                        <img alt="InCTFj" style={{ maxHeight: '20vh', maxWidth: '100%' }} className="p-3" src={require('../../assets/images/logos/inctf_light.png')} />
+                        <img alt="InCTFj" style={{ maxHeight: '20vh', maxWidth: '100%' }} className="p-6" src={require('../../assets/images/logos/inctf_light.png')} />
                     </div>
                     {/*{!isLoggedIn && <OnBoardingCard>*/}
                     {/*    <p>Let's get started, right away!</p>*/}
-                    {/*    <div className="d-flex w-100 align-items-center justify-content-center">*/}
+                    {/*    <div className="flex w-full items-center justify-center">*/}
                     {/*        /!*<a className="plain-link mr-1" href="/register">Register</a>*!/*/}
                     {/*        <a className="plain-link" style={{ background: '#4A148C' }} href="/login">Login</a>*/}
                     {/*    </div>*/}
@@ -164,9 +164,9 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
                     <ol className="pl-0 mt-3">{sidebarLinks.map((l, index) =>
                         <Fade delay={index*250}>
                             <li>
-                                {l.href ? <a href={l.href} className="w-100">
+                                {l.href ? <a href={l.href} className="w-full">
                                     <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
-                                </a> : <button onClick={l.onClick} className="w-100">
+                                </a> : <button onClick={l.onClick} className="w-full">
                                     <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
                                 </button>}
                             </li>
@@ -181,7 +181,7 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
                     <div style={{ color: '#999' }} className="text-center pt-4">
                         follow us on
                     </div>
-                    <SocialMediaLinks className="social-bar d-flex align-items-center justify-content-center px-2">
+                    <SocialMediaLinks className="social-bar flex items-center justify-center px-2">
                         <Fade delay={50}>
                             <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/juniorinctf/">
                                 <i className="fab fa-instagram" />
