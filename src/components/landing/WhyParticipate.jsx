@@ -68,7 +68,7 @@ const LandingReasonsToParticipate = () => {
         <div className="flex flex-wrap  mx-0">
         {reasons.map((r, index) =>
             <Zoom up={index%2} left={!index%2}>
-                <div className="w-1/2 lg:w-1/4 pr-4 pl-4 text-center p-2">
+                <div className="w-full md:w-1/2 lg:w-1/4 text-center p-2">
                     <video autoPlay loop muted src={r.video} />
                     <div>{r.title}</div>
                 </div>

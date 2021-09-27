@@ -42,7 +42,7 @@ const Footer = () => {
     return <FooterContainer>
         <div className="container min-w-lg mx-auto sm:px-4 px-1">
             <div className="flex flex-wrap  mx-0">
-                <div className="md:w-2/3 pr-4 pl-4 order-2 md:order-1 text-center md:text-left px-1">
+                <div className="md:w-2/3 order-2 md:order-1 text-center md:text-left px-1">
                     <div className="md:flex items-center block">
                         <img draggable="false" alt="Amrita InCTF Junior" src={require('../../assets/images/branding/light_version.png')} />
                         <div className="md:ml-6">
@@ -55,7 +55,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="social-bar md:w-1/3 pr-4 pl-4 order-1 md:order-2 flex items-center md:justify-end justify-center px-1">
+                <div className="social-bar md:w-1/3 w-full order-1 md:order-2 flex items-center md:justify-end justify-center px-1">
                     <div className="flex items-center md:justify-end justify-center md:mb-0 mb-2 p-2">
                         <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/juniorinctf/">
                             <i className="fab fa-instagram" />

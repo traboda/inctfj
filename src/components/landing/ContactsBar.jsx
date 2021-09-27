@@ -31,10 +31,9 @@ const ContactsBarSection = styled.section`
 
 const FooterLinksBar = styled.nav`
     a {
-       font-size: 13px;
+       font-size: 14px;
        color: #AAA;
-       margin-right: 8px;
-       margin-bottom: 5px;
+       margin: 8px 5px;
        &:hover {
          color: #fd7e14;
          text-decoration: none;
@@ -60,7 +59,7 @@ const LandingContactsBar = () => {
     return <ContactsBarSection>
         <div className="flex flex-wrap  mx-0">
             <Fade up>
-                <div className="md:w-1/3 pr-4 pl-4 p-2 flex items-center md:justify-center">
+                <div className="md:w-1/3 w-full p-2 flex items-center justify-center">
                     <img alt="email" draggable="false" src={require('../../assets/images/icons/email.png')} />
                     <div>
                         <div>FOR GENERAL ENQUIRES</div>
@@ -69,7 +68,7 @@ const LandingContactsBar = () => {
                 </div>
             </Fade>
             <Fade down>
-                <div className="md:w-1/3 pr-4 pl-4 p-2 flex items-center md:justify-center">
+                <div className="md:w-1/3 w-full p-2 flex items-center justify-center">
                     <img alt="discord" draggable="false" src={require('../../assets/images/logos/discord.png')} />
                     <div>
                         <div>JOIN DISCORD COMMUNITY</div>
@@ -78,7 +77,7 @@ const LandingContactsBar = () => {
                 </div>
             </Fade>
             <Fade up>
-                <div className="md:w-1/3 pr-4 pl-4 p-2 mb-2 flex items-center md:justify-center">
+                <div className="md:w-1/3 w-full p-2 mb-2 flex items-center justify-center">
                     <PoweredByTraboda>
                         <div>Proudly Powered By Traboda.</div>
                         <a href="https://app.traboda.com">
@@ -90,7 +89,7 @@ const LandingContactsBar = () => {
                     </PoweredByTraboda>
                 </div>
             </Fade>
-            <div className="md:w-2/3 pr-4 pl-4 text-center md:text-left h-full flex items-center pt-4 px-2">
+            <div className="md:w-2/3 w-full text-center md:text-left h-full flex items-center pt-4 px-2">
                 <div>
                     <div>&copy; Amrita InCTF 2016-2021. All Rights Reserved.</div>
                     <FooterLinksBar>
@@ -100,7 +99,7 @@ const LandingContactsBar = () => {
                     </FooterLinksBar>
                 </div>
             </div>
-            <div className="social-bar md:w-1/3 pr-4 pl-4 flex items-center md:justify-end justify-center pt-4 px-2">
+            <div className="social-bar md:w-1/3 w-full flex items-center md:justify-end justify-center pt-4 px-2">
                 <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/juniorinctf/">
                     <i className="fab fa-instagram" />
                 </a>

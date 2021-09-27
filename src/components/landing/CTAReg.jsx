@@ -3,7 +3,9 @@ import styled from "@emotion/styled";
 import Fade from "react-reveal/Fade";
 
 const RegCTASection = styled.section`
-   padding: 3vh 5vw;
+   @media (min-width: 768px){
+     padding: 3vh 5vw;
+   }
    h3 {
       font-size: 22px;
       font-weight: 700;

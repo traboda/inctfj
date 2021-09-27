@@ -22,7 +22,7 @@ const SponsorsContainer = styled('div')`
 
 const SponsorBar = () => {
 
-    return <section className="p-6 bg-white">
+    return <section className="px-0 py-4 md:p-6 bg-white">
         <div className="flex flex-wrap ">
             <div className="md:w-1/2 pr-4 pl-4 p-2">
                 <h4 className="text-center">Our Sponsors</h4>
