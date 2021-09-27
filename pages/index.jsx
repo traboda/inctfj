@@ -16,6 +16,7 @@ import TopBar from "../src/components/shared/TopBar";
 import LandingJoinDiscussion from "../src/components/landing/JoinDiscussions";
 import SponsorBar from "../src/components/landing/SponsorBar";
 import CTAPartners from "../src/components/landing/CTAPartners";
+import LandingPromoVideo from "../src/components/landing/PromoVideo";
 
 const LandingPage = () => {
 
@@ -25,6 +26,7 @@ const LandingPage = () => {
             <LandingHeader />
             <LandingQuickInfo />
             <LandingAboutInCTF />
+            <LandingPromoVideo />
             <LandingStatsBar />
             <LandingReasonsToParticipate />
             <LandingTestimonials />

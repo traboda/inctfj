@@ -23,7 +23,7 @@ const ReasonsSection = styled.section`
   video {
     max-width: 100%;
     max-height: 300px;
-    border-radius: 2vw;
+    border-radius: 1rem;
     box-shadow: 3px 5px 8px rgba(0,0,0,0.5);
     margin-bottom: 1.5rem;
     transform: rotateZ(4deg);

@@ -5,6 +5,7 @@ import Zoom from 'react-reveal/Zoom';
 
 
 const StatsContainer = styled.section`
+    padding: 10vh 0;
     .h2 {
       font-size: calc(1.5rem + 2vw);
       margin-bottom: 0;
@@ -23,7 +24,7 @@ const LandingStatsBar = () => {
         { value: 323, suffix:"+", title: "Schools Participated" },
     ]
 
-    return <StatsContainer className="flex flex-wrap py-8 text-center mx-0">
+    return <StatsContainer className="flex flex-wrap text-center mx-0">
         {stats.map((s) =>
             <div className="w-1/2 md:w-1/4 pr-4 pl-4">
                 <Zoom mountOnEnter effect="fadeInUp">
