@@ -1,6 +1,5 @@
 const withPlugins = require('next-compose-plugins');
 const OptimizedImages = require('next-optimized-images');
-const withOffline = require('next-offline');
 const withVideos = require('next-videos')
 
 const customConfig = {
@@ -88,7 +87,6 @@ const customConfig = {
 };
 
 module.exports = withPlugins([
-    [withOffline],
     [withVideos],
     [OptimizedImages],
 ], customConfig);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Head from "next/head";
 import config from 'react-reveal/globals';
 // import SupportDesk from "./Support";
@@ -15,6 +15,14 @@ const Base = ({ children, meta }) => {
 
     const title = `${meta && meta.title ? `${meta.title} |` : '' } ${seoTags.siteName} - ${seoTags.tagLine}`;
     const GoogleAnalyticsID = 'G-XYWG82LV7L';
+
+    useEffect(() => {
+        navigator.serviceWorker.getRegistrations().then((registrations) => {
+            for(const reg of registrations) {
+                reg.unregister();
+            }
+        });
+    }, []);
 
     return <React.Fragment>
         <Head>
