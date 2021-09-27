@@ -13,12 +13,15 @@ import {disableBodyScroll, clearAllBodyScrollLocks} from "body-scroll-lock";
 const TestimonialSection = styled.section`
     padding: 1rem;
     background: #E1F5FE;
-    .h5 {
+    .testimonial-title {
       font-weight: 700;
       text-transform: uppercase;
       color: #555;
       padding: 0.5rem 1rem;
       line-height: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img {
         width: 36px;
         box-shadow: none!important;
@@ -80,14 +83,18 @@ const LandingTestimonials = () => {
 
     return <TestimonialSection >
         <Pulse>
-            <div className="h5">
+            <div className="testimonial-title mb-3">
                 <img src={require('../../assets/images/icons/play_button.png')} alt="View Video Testimonials"/>
                 Hear it from the hackers
             </div>
         </Pulse>
         <div className="flex flex-wrap  mx-0">
-            {participants.map((p, index) => <div className="w-1/2 md:w-1/3 pr-4 pl-4 lg:w-1/5 pr-4 pl-4 p-1">
-                <Fade delay={index*200}><a onClick={openVideo}><img alt="testimonial student" draggable="false" src={p.image} /></a></Fade>
+            {participants.map((p, index) => <div className="w-1/2 md:w-1/3 lg:w-1/6 p-1">
+                <Fade delay={index*200}>
+                    <a onClick={openVideo}>
+                        <img alt="testimonial student" draggable="false" src={p.image} />
+                    </a>
+                </Fade>
             </div>)}
         </div>
         <Modal

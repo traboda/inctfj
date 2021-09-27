@@ -7,6 +7,9 @@ import Fade from 'react-reveal/Fade';
 
 const HeaderContainer = styled.section`
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .header-container {
         padding-top: 7.5vh;
         min-height: 100vh;
@@ -142,7 +145,7 @@ const LandingHeader = ({ UTMSource = null }) => {
     const [iframeError, setIframeError] = useState(false);
 
     return <HeaderContainer>
-        <div className="container mx-auto sm:px-4 px-0 header-container">
+        <div className="container header-container" style={{ width: '1200px', maxWidth: '80%' }}>
             <div>
                 <div className="px-3">
                     <Pulse>

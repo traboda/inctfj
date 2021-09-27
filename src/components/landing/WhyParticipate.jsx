@@ -68,7 +68,7 @@ const LandingReasonsToParticipate = () => {
 
     return <ReasonsSection>
         <h2 className="text-center">
-            <div className="flex md:inline justify-center">
+            <div className="flex justify-center">
                 <img className="mr-2" style={{ width: '64px'}} alt="Why Participate?" src={require('../../assets/images/icons/heart.png')} />
             </div>
             Why Participate?
