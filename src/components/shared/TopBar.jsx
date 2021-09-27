@@ -23,10 +23,12 @@ const TopbarContainer = styled.header`
     background: white;
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.35);
     border-bottom: 2px solid #FF6F00;
+    padding-top: 0.5rem!important;
   }
   
   &.up, &.top {
     transform: none;
+    padding-top: 2rem;
   }
 
   nav {
@@ -57,6 +59,7 @@ const TopbarContainer = styled.header`
     padding: 0.5rem;
     border-radius: 5px;
     background: none;
+    color: #E65100;
 
     &:hover, &:focus {
       background: #E65100 !important;
@@ -193,7 +196,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                         </div>
                         <div className="w-2/3 flex md:hidden items-center justify-end px-1">
                             <button onClick={onOpen}>
-                                <img alt="menu" src={require('../../assets/images/icons/hamburger.png')}/>
+                                <i className="fa fa-bars text-3xl" />
                             </button>
                         </div>
                     </div>

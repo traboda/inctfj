@@ -173,7 +173,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                                     <div>How to Get Started?</div>
                                     <img
                                         alt="Play Video"
-                                        draggable="false"
+                                        draggable="false" className="inline-block"
                                         src={require('../../assets/images/icons/play_button.png')}
                                     />
                                 </div>

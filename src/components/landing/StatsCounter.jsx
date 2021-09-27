@@ -26,7 +26,7 @@ const LandingStatsBar = () => {
 
     return <StatsContainer className="flex flex-wrap text-center mx-0">
         {stats.map((s) =>
-            <div className="w-1/2 md:w-1/4 pr-4 pl-4">
+            <div className="w-1/2 md:w-1/4 p-4">
                 <Zoom mountOnEnter effect="fadeInUp">
                     <div className="text-blue-600 h2 font-bold">
                         <CountUp delay={0.5} duration={4.5} end={s.value} />{s.suffix}
