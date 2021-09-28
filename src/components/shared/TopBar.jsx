@@ -92,7 +92,6 @@ const TopbarInfoCard = styled.div`
     color: white !important;
     padding: 1rem;
     font-weight: 600;
-    text-transform: uppercase;
     border-radius: 10px;
   }
 `;

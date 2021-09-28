@@ -185,7 +185,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                             />
                         </HowToRegister>
                     </div>
-                    <div className="md:w-2/3 pr-4 pl-4 w-full px-2 py-4">
+                    <div className="md:w-2/3 w-full md:px-2 px-0 py-4">
                         {iframeError ?
                             <div>
                                 <p>
