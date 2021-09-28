@@ -56,21 +56,21 @@ const BrandingPage = () => {
             </div>
         </Header>
         <div style={{ background: '#eee', minHeight: '50vh' }}>
-            <div className="container-lg px-1 py-5">
-                <div className="row mx-0">
-                    <div className="col-md-4">
+            <div className="flex justify-center px-1 py-5">
+                <div className="flex flex-wrap mx-0" style={{ maxWidth: '900px' }}>
+                    <div className="md:col-4 p-2">
                         <LogoWrap>
                              <img src={require('../src/assets/images/branding/colorful.png')} alt="Colorful Logo" />
                              <a href={require('../src/assets/images/branding/colorful.png')}>PNG</a>
                         </LogoWrap>
                     </div>
-                    <div className="col-md-4">
+                    <div className="md:col-4 p-2">
                         <LogoWrap dark>
                             <img src={require('../src/assets/images/branding/light_version.png')} alt="Light Logo" />
                             <a href={require('../src/assets/images/branding/light_version.png')}>PNG</a>
                         </LogoWrap>
                     </div>
-                    <div className="col-md-4">
+                    <div className="md:col-4 p-2">
                         <LogoWrap>
                             <img src={require('../src/assets/images/branding/full_black.png')} alt="Colorful Logo" />
                             <a href={require('../src/assets/images/branding/full_black.png')}>PNG</a>
