@@ -195,6 +195,13 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                             </div>
                         </div>
                         <div className="w-2/3 flex md:hidden items-center justify-end px-1">
+                            <TopbarInfoCard className="mr-3">
+                                <button
+                                    onClick={() => setShowRegCard(true)}
+                                >
+                                    Register
+                                </button>
+                            </TopbarInfoCard>
                             <button onClick={onOpen}>
                                 <i className="fa fa-bars text-3xl" />
                             </button>
@@ -211,12 +218,12 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
             }}
             style={{
                 overlay: {
-                    zIndex: 9000, background: 'rgba(0,0,0,0.8)',
-                    height: '100vh',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    zIndex: 9000, background: 'rgba(0,0,0,0.5)',
+                    height: '100vh', width: '100%',
+                    display: 'flex', alignItems: 'flex-end', justifyContent: 'right',
                 },
                 content: {
-                    position: 'unset', top: 0, left: 0, right: 0, padding: '15px',
+                    position: 'unset', top: 0, left: 0, right: 0, padding: 0,
                     border: 'none', background: 'none', width: '500px', maxWidth: '100vw'
                 }
             }}
@@ -231,16 +238,21 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 <img alt="close" src={require('../../assets/images/icons/close.png')}/>
             </CloseButton>
             {showRegCard &&
-            <div style={{ background: '#101219' }} className="flex p-2 items-center justify-center">
+            <div className="flex bg-white md:p-4 pt-4 items-end rounded-t-2xl md:rounded-r-none md:rounded-bl-2xl justify-center">
                 <iframe
                     className="border-0"
-                    style={{ width: '500px', maxWidth: '100vw', height: '180px', overflow: 'auto' }}
-                    src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame${UTMSource ? `?utm_source=${UTMSource}` : ''}`}
+                    style={{ width: '500px', maxWidth: '100vw', height: '190px', overflow: 'auto' }}
+                    src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame?color=000&primary=F13F17&primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
                 />
             </div>}
         </Modal>
-        {showMenu && <SideBar darkenOnSidebar={darkenOnSidebar} onClose={onClose} isLoggedIn={hasLoaded && isLoggedIn}
-                              onLogOut={onLogOut}/>}
+        {showMenu &&
+        <SideBar
+            darkenOnSidebar={darkenOnSidebar}
+            onClose={onClose}
+            isLoggedIn={hasLoaded && isLoggedIn}
+            onLogOut={onLogOut}
+        />}
         <div style={{ height: topbarRef ? topbarRef?.current?.clientHeight : '72px' }}/>
     </div>
 

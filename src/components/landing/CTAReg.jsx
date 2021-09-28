@@ -39,7 +39,7 @@ const CTAReg = ({ UTMSource = null }) => (
                 </div>
             </Fade>
             <Fade right>
-                <div className="md:w-1/3 pr-4 pl-4 flex p-0 items-center justify-center w-full">
+                <div className="md:w-1/3 px-0 md:px-2 flex items-center justify-center w-full">
                     <iframe
                         className="border-0"
                         style={{ width: '400px', maxWidth: '100vw', height: '190px', overflow: 'auto' }}
