@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import styled from "@emotion/styled";
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import Fade from 'react-reveal/Fade';
@@ -18,17 +19,16 @@ const TopbarContainer = styled.header`
   box-shadow: none;
   transition: all 250ms ease-in-out;
   transform: translateY(-100%);
+  padding: 1rem 0.35rem;
   
   &.floating {
     background: white;
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.35);
     border-bottom: 2px solid #FF6F00;
-    padding-top: 0.5rem!important;
   }
   
   &.up, &.top {
     transform: none;
-    padding-top: 2rem;
   }
 
   nav {
@@ -66,8 +66,6 @@ const TopbarContainer = styled.header`
       outline: none !important;
     }
   }
-
-  padding: 0.35rem;
 `;
 
 
@@ -170,15 +168,26 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                         <div className="md:w-3/4 pr-4 pl-4 lg:w-4/5 pr-4 pl-4 px-1 hidden md:flex items-center">
                             <div className="flex flex-wrap  mx-0 w-full">
                                 <div className="md:w-1/2 pr-4 pl-4 flex items-center px-1">
-                                    <nav>
+                                    <nav className="flex">
                                         <Fade delay={0}>
-                                            <a href="/about">About</a>
+                                            <Link href="/about" passHref>
+                                                <a>About</a>
+                                            </Link>
                                         </Fade>
                                         <Fade delay={200}>
-                                            <a href="/stats">Stats & Rankings</a>
+                                            <Link href="/stats" passHref>
+                                                <a>Stats & Rankings</a>
+                                            </Link>
                                         </Fade>
-                                        <Fade delay={750}>
-                                            <a href="/faq">FAQ</a>
+                                        <Fade delay={400}>
+                                            <Link href="/faq" passHref>
+                                                <a>FAQ</a>
+                                            </Link>
+                                        </Fade>
+                                        <Fade delay={600}>
+                                            <Link href="/resources" passHref>
+                                                <a>Resources</a>
+                                            </Link>
                                         </Fade>
                                     </nav>
                                 </div>
@@ -201,8 +210,8 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                     Register
                                 </button>
                             </TopbarInfoCard>
-                            <button onClick={onOpen}>
-                                <i className="fa fa-bars text-3xl" />
+                            <button onClick={onOpen} className="transition">
+                                <i className="fa fa-bars text-3xl hover:text-white transition" />
                             </button>
                         </div>
                     </div>
