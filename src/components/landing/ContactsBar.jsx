@@ -72,7 +72,7 @@ const LandingContactsBar = () => {
                     <img alt="discord" draggable="false" src={require('../../assets/images/logos/discord.png')} />
                     <div>
                         <div>JOIN DISCORD COMMUNITY</div>
-                        <a href="https://discord.gg/rqF3ZkeTrY" rel="noopener noreferrer" target="_blank" className="h5 mb-0 plain-link">discord.gg/rqF3ZkeTrY</a>
+                        <a href="https://discord.gg/QVXewGh7sP" rel="noopener noreferrer" target="_blank" className="h5 mb-0 plain-link">discord.gg/QVXewGh7sPY</a>
                     </div>
                 </div>
             </Fade>

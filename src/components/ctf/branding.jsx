@@ -90,7 +90,7 @@ const BrandingView = () => {
                     <div className="footer-right-card">
                         <div className="px-3">
                             <a href="/rules" target="_blank"> // Rules // </a>
-                            <a href="https://discord.gg/rqF3ZkeTrY" target="_blank"> // Help // </a>
+                            <a href="https://discord.gg/QVXewGh7sP" target="_blank"> // Help // </a>
                         </div>
                     </div>
                 </div>

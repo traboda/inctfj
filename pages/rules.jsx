@@ -15,7 +15,7 @@ const RulePage = () => {
                     <li>Participants should not carry out any attacks on the CTF infrastructure.</li>
                     <li>No DoS, DDoS, automated scans or generating any large amount of traffic by any other means on any challenges and other contest infrastructure. It is not permitted and is never intended in any challenge.</li>
                     <li>Sharing flags or solutions during the CTF is prohibited.</li>
-                    <li>If you have any queries regarding any challenge you can contact us on Discord - https://discord.gg/rqF3ZkeTrY</li>
+                    <li>If you have any queries regarding any challenge you can contact us on Discord - https://discord.gg/QVXewGh7sP</li>
                     <li>All updates and hints will be posted on the Announcements page and on our Twitter account @InCTF.</li>
                     <li>The format of the flag is {`inctfj{...}`} unless stated otherwise!</li>
                     <li>If you are not sure if something is violating the rules, ask us on Discord.</li>
