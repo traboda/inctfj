@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Slide from "react-reveal/Slide";
 import styled from "@emotion/styled";
 import Fade from "react-reveal/Fade";
@@ -133,6 +134,7 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
         { "icon": require('../../assets/images/icons/star_glowing.png'), "title": "About", "href": "/about" },
         { "icon": require('../../assets/images/icons/trophy.png'), "title": "Stats & Rankings", "href": "/stats" },
         { "icon": require('../../assets/images/icons/faq.png'), "title": "FAQ", "href": "/faq" },
+        { "icon": require('../../assets/images/icons/learn.png'), "title": "Resources", "href": "/resources"}
     ] : [
         { "icon": require('../../assets/images/icons/sword.png'), "title": "CTF Arena", "href": "/ctf" },
         { "icon": require('../../assets/images/icons/dashboard.png'), "title": "Dashboard", "href": "/dashboard" },
@@ -163,9 +165,11 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
                     <ol className="pl-0 mt-3">{sidebarLinks.map((l, index) =>
                         <Fade delay={index*250}>
                             <li>
-                                {l.href ? <a href={l.href} className="w-full">
-                                    <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
-                                </a> : <button onClick={l.onClick} className="w-full">
+                                {l.href ? <Link href={l.href} passHref>
+                                    <a className="w-full">
+                                        <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
+                                    </a>
+                                </Link> : <button onClick={l.onClick} className="w-full">
                                     <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
                                 </button>}
                             </li>
