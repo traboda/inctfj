@@ -89,7 +89,7 @@ const LandingHowItWorks = () => {
     ]
 
     return <HowItWorksSection className="motto-cards flex flex-wrap py-5 mx-0">
-        <div className="w-full flex p-0 mb-4">
+        <div className="w-full flex p-0 mb-12">
             <h2 className="md:px-4 px-1 py-2 rounded-r mt-4 mb-2 md:flex inline-block items-center bg-blue-600 text-gray-100 uppercase shadow font-bold text-center mb-0">
                 <img
                     draggable="false"
