@@ -168,7 +168,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                 <div className="flex flex-wrap  mx-0">
                     <div className="w-full p-2">
                         <div className="mb-6">
-                            <div className="mb-3">In Association With</div>
+                            <div className="md:text-left text-center mb-3">In Association With</div>
                             <a target="_blank" href="http://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf">
                                 <img
                                     src={require('../../assets/images/logos/cbse_logo.png')}
