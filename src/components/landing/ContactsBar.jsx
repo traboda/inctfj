@@ -42,7 +42,7 @@ const FooterLinksBar = styled.nav`
 `;
 
 const PoweredByTraboda = styled('div')`
-    font-size: 13px;
+    font-size: 16px;
     div {
         opacity: 0.8;
         margin-bottom: 0.5rem;
@@ -50,47 +50,44 @@ const PoweredByTraboda = styled('div')`
     img {
         position: inherit;
         display: block;
-        max-height: 50px;
+        max-height: 64px;
     }
 `;
 
 const LandingContactsBar = () => {
 
     return <ContactsBarSection>
-        <div className="flex flex-wrap  mx-0">
-            <Fade up>
-                <div className="md:w-1/3 w-full p-2 flex items-center justify-center">
-                    <img alt="email" draggable="false" src={require('../../assets/images/icons/email.png')} />
-                    <div>
-                        <div>FOR GENERAL ENQUIRES</div>
-                        <a href="mailto:inctfj@am.amrita.edu" target="_blank" className="h5 mb-0 plain-link">inctfj@am.amrita.edu</a>
+        <div className="flex flex-wrap">
+            <div className="w-full flex justify-center flex-wrap">
+                <Fade left>
+                    <div className="p-2 mb-4 flex items-center justify-center mr-8 text-center">
+                        <PoweredByTraboda>
+                            <div>In association with CBSE</div>
+                            <a href="https://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf">
+                                <img
+                                    src={require('../../assets/images/logos/cbse_logo.png')}
+                                    alt="CBSE" draggable="false"
+                                />
+                            </a>
+                        </PoweredByTraboda>
                     </div>
-                </div>
-            </Fade>
-            <Fade down>
-                <div className="md:w-1/3 w-full p-2 flex items-center justify-center">
-                    <img alt="discord" draggable="false" src={require('../../assets/images/logos/discord.png')} />
-                    <div>
-                        <div>JOIN DISCORD COMMUNITY</div>
-                        <a href="https://discord.gg/QVXewGh7sP" rel="noopener noreferrer" target="_blank" className="h5 mb-0 plain-link">discord.gg/QVXewGh7sPY</a>
+                </Fade>
+                <Fade right>
+                    <div className="p-2 mb-4 flex items-center justify-center text-center">
+                        <PoweredByTraboda>
+                            <div>Powered By Traboda.</div>
+                            <a href="https://app.traboda.com">
+                                <img
+                                    src={require('../../assets/images/logos/traboda_light.png')}
+                                    alt="Traboda" draggable="false"
+                                />
+                            </a>
+                        </PoweredByTraboda>
                     </div>
-                </div>
-            </Fade>
-            <Fade up>
-                <div className="md:w-1/3 w-full p-2 mb-2 flex items-center justify-center">
-                    <PoweredByTraboda>
-                        <div>Proudly Powered By Traboda.</div>
-                        <a href="https://app.traboda.com">
-                            <img
-                                src={require('../../assets/images/logos/traboda_light.png')}
-                                alt="Traboda" draggable="false"
-                            />
-                        </a>
-                    </PoweredByTraboda>
-                </div>
-            </Fade>
+                </Fade>
+            </div>
             <div className="md:w-2/3 w-full text-center md:text-left h-full flex items-center pt-4 px-2">
-                <div>
+                <div className="w-full">
                     <div>&copy; Amrita InCTF 2016-2021. All Rights Reserved.</div>
                     <FooterLinksBar>
                         <a href="/branding">Brand Kit</a>
@@ -100,6 +97,9 @@ const LandingContactsBar = () => {
                 </div>
             </div>
             <div className="social-bar md:w-1/3 w-full flex items-center md:justify-end justify-center pt-4 px-2">
+                <a target="_blank" rel="noopener noreferrer" href="mailto:inctfj@am.amrita.edu">
+                    <i className="fas fa-envelope" />
+                </a>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/juniorinctf/">
                     <i className="fab fa-instagram" />
                 </a>
@@ -111,6 +111,9 @@ const LandingContactsBar = () => {
                 </a>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/c/InCTFj">
                     <i className="fab fa-youtube" />
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/QVXewGh7sP">
+                    <i className="fab fa-discord" />
                 </a>
             </div>
         </div>

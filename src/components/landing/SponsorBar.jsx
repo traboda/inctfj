@@ -24,17 +24,17 @@ const SponsorBar = () => {
 
     return <section className="px-0 py-4 md:p-6 bg-white">
         <div className="flex flex-wrap ">
-            <div className="md:w-1/2 pr-4 pl-4 p-2">
+            <div className="w-full md:w-1/2 pr-4 pl-4 p-2">
                 <h4 className="text-center">Our Sponsors</h4>
                 <SponsorsContainer>
-                    <a href="http://jnanamarga.in/" target="_blank" rel="nofollow noopener">
+                    <a href="https://jnanamarga.in/" target="_blank" rel="nofollow noopener">
                         <img
                             alt="Jnana Marga Technologies" draggable="false"
                             src={require('../../assets/images/logos/jnanamarga_tech.jpg')}
                         />
                         <div>Silver Sponsor</div>
                     </a>
-                    <a href="http://app.traboda.com/" target="_blank" rel="nofollow noopener">
+                    <a href="https://app.traboda.com/" target="_blank" rel="nofollow noopener">
                         <img
                             alt="Traboda CyberLabs" draggable="false"
                             src={require('../../assets/images/logos/traboda_dark.png')}
@@ -43,11 +43,17 @@ const SponsorBar = () => {
                     </a>
                 </SponsorsContainer>
             </div>
-            <div className="md:w-1/2 pr-4 pl-4 flex items-center justify-center p-2">
+            <div className="w-full md:w-1/2 pr-4 pl-4 flex items-center justify-center p-2">
                 <div>
                     <h4 className="text-center">Our Partners</h4>
                     <SponsorsContainer>
-                        <a href="http://www.sciencesociety.in/" target="_blank" rel="nofollow noopener">
+                        <a href="https://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf" target="_blank" rel="nofollow noopener">
+                            <img
+                                alt="CBSE" draggable="false"
+                                src={require('../../assets/images/logos/cbse_logo.png')}
+                            />
+                        </a>
+                        <a href="https://www.sciencesociety.in/" target="_blank" rel="nofollow noopener">
                             <img
                                 alt="Jnana Marga Technologies" draggable="false"
                                 src={require('../../assets/images/logos/ssi_logo.jpg')}

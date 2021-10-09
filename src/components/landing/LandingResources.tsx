@@ -6,15 +6,15 @@ const LandingResources = () => {
     return (
         <div style={{ padding: '4vh 1rem 8vh 1rem' }}>
             <Pulse>
-                <div className="flex mb-3 items-center text-center justify-center">
-                    <img src={require('../../assets/images/icons/learn.png')} alt="Video resources" width={26}/>
-                    <span className="ml-2 font-bold uppercase text-gray-800 text-lg">
+                <div className="mb-3 flex items-center justify-center">
+                    <img src={require('../../assets/images/icons/learn.png')} alt="Video resources" width={26} className="inline"/>
+                    <span className="inline ml-2 font-bold uppercase text-gray-800 text-lg">
                         These videos will help you get started easily
                     </span>
                 </div>
             </Pulse>
 
-            <div className="grid grid-cols-4 gap-8 mt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-4">
                 {resources.map((r, i) => (
                     <div key={i} className="relative" style={{ paddingTop: '56.25%' }}>
                         <Pulse delay={i * 200}>
