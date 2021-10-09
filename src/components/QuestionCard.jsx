@@ -4,8 +4,8 @@ import styled from "@emotion/styled";
 const QuestionContainer = styled.div`
     padding: 0.75rem 1rem;
     width: 100%;
-    background: rgba(75, 20, 150, 0.25)!important;
-    color: white!important;
+    background: white;
+    color: black;
     box-shadow: 2px 3px 8px rgba(0,0,0,0.25);
     border-radius: 5px;
     margin-bottom: 0.75rem;
