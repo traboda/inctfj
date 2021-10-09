@@ -13,8 +13,7 @@ const FAQSection = styled.section`
   width: 100%;
   min-height: 50vh;
   overflow-y: hidden;
-  background: rgb(25, 25, 40);
-  color: #eee;
+  color: #333;
   h1 {  
       font-weight: 900;
       font-size: 36px;
@@ -36,7 +35,7 @@ const FAQPage = () => {
                 <img alt="FAQ" className="d-inline-block" src={require('../src/assets/images/icons/faq.png')} />
                 <div>Frequently Asked Questions</div>
             </h1>
-            <div className="container px-1">
+            <div className="container px-6">
                 {faq.map((q, i) =>
                     <Fade delay={i*100}>
                         <QuestionCard {...q} isOpen={i===openQ} onClick={() => setOpen(i!==openQ ? i : null)} />
