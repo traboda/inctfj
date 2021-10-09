@@ -19,5 +19,14 @@ export default [
     },
     {
         url: 'https://www.youtube.com/embed/sOSXP5AoOqQ'
+    },
+    {
+        url: 'https://www.youtube.com/embed/m-cu6WoPRF8'
+    },
+    {
+        url: 'https://www.youtube.com/embed/TFRRIkJW0C8'
+    },
+    {
+        url: 'https://www.youtube.com/embed/JV5gvt29cXk'
     }
 ]
