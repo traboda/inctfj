@@ -26,12 +26,12 @@ const StartPage = () => {
             <TopBar darkenOnSidebar includeSpace={false} />
             <LandingHeader UTMSource="start_page" />
             <LandingQuickInfo />
+            <LandingResources />
             <LandingAboutInCTF />
             <SponsorBar />
             {/*<Schedule />*/}
             <LandingTestimonials />
             <LandingHowItWorks />
-            <LandingResources />
             <LandingJoinDiscussion />
             <LandingReasonsToParticipate />
             <CTAReg UTMSource="start_page" />
