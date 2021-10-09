@@ -77,6 +77,7 @@ const customConfig = {
             "/publicize": { page: "/publicize" },
             "/ssi": { page: "/ssi" },
             "/start": { page: "/start" },
+            "/resources": { page: "/resources" },
             ...posts
         }
     },
