@@ -42,8 +42,8 @@ const FAQPage = () => {
                     </Fade>
                 )}
                 <div className="my-5 text-center">
-                    <div style={{ color: '#EEE' }}>Did not find what you were looking for?</div>
-                    <div style={{ color: '#AAA' }}>Write to us at <a href="mailto:contact@inctfj.in">contact@inctf.in</a></div>
+                    <div style={{ color: '#111' }}>Did not find what you were looking for?</div>
+                    <div style={{ color: '#222' }}>Write to us at <a href="mailto:contact@inctfj.in">contact@inctf.in</a></div>
                 </div>
             </div>
         </FAQSection>
