@@ -17,7 +17,7 @@ import SponsorBar from "../src/components/landing/SponsorBar";
 import CTAPartners from "../src/components/landing/CTAPartners";
 import LandingHeader from "../src/components/landing/Header";
 import LandingResources from "../src/components/landing/LandingResources";
-// import Schedule from "../src/components/landing/Schedule";
+import Schedule from "../src/components/landing/Schedule";
 
 const StartPage = () => {
 
@@ -29,7 +29,7 @@ const StartPage = () => {
             <LandingResources />
             <LandingAboutInCTF />
             <SponsorBar />
-            {/*<Schedule />*/}
+            <Schedule />
             <LandingTestimonials />
             <LandingHowItWorks />
             <LandingJoinDiscussion />
