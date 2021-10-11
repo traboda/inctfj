@@ -147,23 +147,32 @@ const LandingHeader = ({ UTMSource = null }) => {
     return <HeaderContainer>
         <div className="container header-container" style={{ width: '1200px', maxWidth: '100%' }}>
             <div>
-                <div className="px-3">
-                    <Pulse>
-                        <h1>
-                            <span style={{ color: '#FF6F00'}}>Young Hackers Are Born Here,</span><br/>
-                            Become the Next Cyber Security Warrior.
-                        </h1>
-                    </Pulse>
-                    <Fade up>
-                        <p>
-                            InCTF Junior is India's First & Premier Hacking & Cyber Security Contest for High School Students,
-                            organized by team bi0s, India's No.1 ranked CTF Team.
-                            <span className="mt-6">
-                                Every year the brightest young hackers from all across India participate in this the learn & hack CTF contest,
-                                win exciting prizes & kick-start their cyber-security career.
-                            </span>
-                        </p>
-                    </Fade>
+                <div className="flex flex-wrap  mx-0">
+                    <div className="md:w-2/3 px-3">
+                        <Pulse>
+                            <h1>
+                                <span style={{ color: '#FF6F00'}}>Young Hackers Are Born Here,</span><br/>
+                                Become the Next Cyber Security Warrior.
+                            </h1>
+                        </Pulse>
+                        <Fade up>
+                            <p>
+                                InCTF Junior is India's First & Premier Hacking & Cyber Security Contest for High School Students,
+                                organized by team bi0s, India's No.1 ranked CTF Team.
+                                <span className="mt-6">
+                                    Every year the brightest young hackers from all across India participate in this the learn & hack CTF contest,
+                                    win exciting prizes & kick-start their cyber-security career.
+                                </span>
+                            </p>
+                        </Fade>
+                    </div>
+                    <div className="md:w-1/3 mt-4 md:mt-0 px-3">
+                        <img
+                            src={require('../../assets/images/covers/landing-cover-image.png')}
+                            style={{ position: 'unset', maxHeight: '500px', maxWidth: '100%' }}
+                            draggable="false"
+                        />
+                    </div>
                 </div>
                 <div className="flex flex-wrap  mx-0">
                     <div className="w-full p-2">
@@ -171,8 +180,10 @@ const LandingHeader = ({ UTMSource = null }) => {
                             <div className="md:text-left text-center mb-3 font-semibold">In Association With</div>
                             <a target="_blank" href="https://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf">
                                 <img
+                                    alt="cbse"
                                     src={require('../../assets/images/logos/cbse_logo.png')}
                                     style={{ position: 'unset', maxHeight: '90px', maxWidth: '100%' }}
+                                    draggable="false"
                                 />
                             </a>
                         </div>
