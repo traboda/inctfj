@@ -156,18 +156,19 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
     return <div>
         <TopbarContainer ref={topbarRef} className={scrollDir + ` ${isAtTop ? 'top' : 'floating'}`}>
             <div className="topbar-container">
-                <div className="container mx-auto sm:px-4 px-0">
-                    <div className="flex flex-wrap  w-full mx-0">
+                <div className="mx-0 w-full px-0">
+                    <div className="flex flex-wrap w-full mx-0">
                         <div
-                            className="w-1/3 md:w-1/4 pr-4 pl-4 lg:w-1/5 pr-4 pl-4 md:text-center flex items-center md:justify-end justify-center px-2">
+                            className="w-1/3 pr-4 pl-4 md:w-1/6 pr-4 pl-4 md:text-center flex items-center md:justify-end justify-center px-2"
+                        >
                             <a href="/">
                                 <img className="logo" src={require('../../assets/images/logos/inctf.png')}
                                      alt="InCTFj"/>
                             </a>
                         </div>
-                        <div className="md:w-3/4 pr-4 pl-4 lg:w-4/5 pr-4 pl-4 px-1 hidden md:flex items-center">
+                        <div className="pr-4 pl-4 md:w-5/6 pr-4 pl-4 px-1 hidden md:flex items-center">
                             <div className="flex flex-wrap  mx-0 w-full">
-                                <div className="md:w-1/2 pr-4 pl-4 flex items-center px-1">
+                                <div className="md:w-3/4 xl:w-1/2 pr-4 pl-4 flex items-center px-1">
                                     <nav className="flex">
                                         <Fade delay={0}>
                                             <Link href="/about" passHref>
@@ -191,7 +192,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                         </Fade>
                                         <Fade delay={200}>
                                             <Link href="/stats" passHref>
-                                                <a>Stats & Rankings</a>
+                                                <a>Past Stats</a>
                                             </Link>
                                         </Fade>
                                         <Fade delay={400}>
@@ -201,9 +202,9 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                         </Fade>
                                     </nav>
                                 </div>
-                                <div className="md:w-1/2 pr-4 pl-4 flex justify-end text-right px-1">
+                                <div className="md:w-1/4 xl:w-1/2 pr-4 pl-4 flex justify-end text-right px-1">
                                     <TopbarInfoCard>
-                                        <div className="mr-2">
+                                        <div className="hidden xl:inline-block mr-2">
                                             <div>India's First & Only CTF Hacking Contest</div>
                                             <h5>Exclusively for School Students</h5>
                                         </div>

@@ -166,7 +166,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                             </p>
                         </Fade>
                     </div>
-                    <div className="md:w-1/3 mt-4 md:mt-0 px-3">
+                    <div className="md:w-1/3 my-4 md:my-0 px-3">
                         <img
                             src={require('../../assets/images/covers/landing-cover-image.png')}
                             style={{ position: 'unset', maxHeight: '500px', maxWidth: '100%' }}
