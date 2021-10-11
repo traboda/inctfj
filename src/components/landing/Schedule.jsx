@@ -5,7 +5,7 @@ const Schedule = () => {
 
     const timeline = [
         {
-            "date": "October 14",
+            "date": "October 15",
             "timing": "06:00 - 08:00 PM",
             "event": "Introduction to CTF",
             "presenter": "Namitha & Revathi",

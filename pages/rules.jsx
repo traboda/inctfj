@@ -7,7 +7,7 @@ const RulePage = () => {
 
     return <Base meta={{ title: 'Rules' }}>
         <TopBar darkenOnSidebar includeSpace />
-        <div className="container">
+        <div className="container p-4">
             <h1 className="display-3 mt-5 p-2">Rules</h1>
             <div className="my-4">
                 <ol>
