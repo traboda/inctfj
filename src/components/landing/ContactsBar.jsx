@@ -62,7 +62,7 @@ const LandingContactsBar = () => {
                 <Fade left>
                     <div className="p-2 mb-4 flex items-center justify-center mr-8 text-center">
                         <PoweredByTraboda>
-                            <div>In association with CBSE</div>
+                            <div>In Association with the CBSE</div>
                             <a href="https://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf">
                                 <img
                                     src={require('../../assets/images/logos/cbse_logo.png')}
@@ -75,7 +75,7 @@ const LandingContactsBar = () => {
                 <Fade right>
                     <div className="p-2 mb-4 flex items-center justify-center text-center">
                         <PoweredByTraboda>
-                            <div>Powered By Traboda.</div>
+                            <div>Powered By Traboda</div>
                             <a href="https://app.traboda.com">
                                 <img
                                     src={require('../../assets/images/logos/traboda_light.png')}
