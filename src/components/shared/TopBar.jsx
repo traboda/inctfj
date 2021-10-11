@@ -174,6 +174,21 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                                 <a>About</a>
                                             </Link>
                                         </Fade>
+                                        <Fade delay={600}>
+                                            <Link href="/resources" passHref>
+                                                <a>Resources</a>
+                                            </Link>
+                                        </Fade>
+                                        <Fade delay={600}>
+                                            <Link href="/trainings" passHref>
+                                                <a>
+                                                    Trainings
+                                                    <span className="inline-block px-1 ml-1 rounded text-sm bg-green-100">
+                                                        Free
+                                                    </span>
+                                                </a>
+                                            </Link>
+                                        </Fade>
                                         <Fade delay={200}>
                                             <Link href="/stats" passHref>
                                                 <a>Stats & Rankings</a>
@@ -182,11 +197,6 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                         <Fade delay={400}>
                                             <Link href="/faq" passHref>
                                                 <a>FAQ</a>
-                                            </Link>
-                                        </Fade>
-                                        <Fade delay={600}>
-                                            <Link href="/resources" passHref>
-                                                <a>Resources</a>
                                             </Link>
                                         </Fade>
                                     </nav>

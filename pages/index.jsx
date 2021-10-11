@@ -17,6 +17,7 @@ import LandingJoinDiscussion from "../src/components/landing/JoinDiscussions";
 import SponsorBar from "../src/components/landing/SponsorBar";
 import CTAPartners from "../src/components/landing/CTAPartners";
 import LandingPromoVideo from "../src/components/landing/PromoVideo";
+import Schedule from "../src/components/landing/Schedule";
 
 const LandingPage = () => {
 
@@ -31,6 +32,7 @@ const LandingPage = () => {
             <LandingReasonsToParticipate />
             <LandingTestimonials />
             <CTAReg />
+            <Schedule />
             <SponsorBar />
             <LandingHowItWorks />
             <LandingSponsorship />
