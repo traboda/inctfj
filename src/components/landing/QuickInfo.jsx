@@ -43,7 +43,7 @@ const LandingQuickInfo = () => {
         },
         {
             image: require('../../assets/images/icons/backpack.png'), right: true,
-            question: "For Whom?", answer: "Grade 08-12 School Students"
+            question: "For Whom?", answer: "Grade 07-12 School Students"
         }
     ]
 
