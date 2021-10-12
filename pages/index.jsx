@@ -27,8 +27,8 @@ const LandingPage = () => {
             <LandingHeader />
             <LandingQuickInfo />
             <LandingAboutInCTF />
-            <LandingPromoVideo />
             <LandingStatsBar />
+            <LandingPromoVideo />
             <LandingReasonsToParticipate />
             <LandingTestimonials />
             <CTAReg />

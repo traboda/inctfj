@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from "@emotion/styled";
 import CountUp from 'react-countup';
 import Zoom from 'react-reveal/Zoom';
@@ -17,18 +17,38 @@ const StatsContainer = styled.section`
 
 const LandingStatsBar = () => {
 
-    const stats = [
-        { value: 5, title: "Successful Editions" },
-        { value: 1568, suffix:"+", title: "Participants in 2020" },
-        { value: 8532, suffix:"+", title: "Total Participants" },
-        { value: 323, suffix:"+", title: "Schools Participated" },
+    const [stats, setStats] = useState();
+
+    const fetchStats = () => {
+        try {
+            fetch('https://app.traboda.com/api/contest/stats/66').then(async (response) => {
+                if(response.ok && response.status == 200)
+                    return await response.json();
+                else
+                    return null;
+            }).then((data) => {
+                setStats(data);
+            }).catch((e) => {
+
+            })
+        } catch (e) {
+
+        }
+    };
+
+    useEffect(fetchStats, []);
+
+    const statsPreviewer = () => [
+        { value: stats?.registrations || 0, title: "Total Participants" },
+        { value: stats?.regToday || 0, title: "Registrations Today" },
+        { value: stats?.institutions || 0, title: "Schools Participating" },
     ]
 
     return <StatsContainer className="flex flex-wrap text-center mx-0">
-        {stats.map((s) =>
-            <div className="w-1/2 md:w-1/4 p-4">
+        {statsPreviewer().map((s) =>
+            <div className="w-1/2 md:w-1/3 p-4">
                 <Zoom mountOnEnter effect="fadeInUp">
-                    <div className="text-blue-600 h2 font-bold">
+                    <div className="text-blue-600 h2 mb-2 font-bold">
                         <CountUp delay={0.5} duration={4.5} end={s.value} />{s.suffix}
                     </div>
                     <div className="h5 mb-0">{s.title}</div>
