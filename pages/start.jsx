@@ -12,12 +12,11 @@ import LandingStatsBar from "../src/components/landing/StatsCounter";
 import LandingHowItWorks from "../src/components/landing/HowItWorks";
 import LandingContactsBar from "../src/components/landing/ContactsBar";
 import TopBar from "../src/components/shared/TopBar";
-import LandingJoinDiscussion from "../src/components/landing/JoinDiscussions";
-import SponsorBar from "../src/components/landing/SponsorBar";
 import CTAPartners from "../src/components/landing/CTAPartners";
 import LandingHeader from "../src/components/landing/Header";
 import LandingResources from "../src/components/landing/LandingResources";
 import Schedule from "../src/components/landing/Schedule";
+import LandingPromoVideo from "../src/components/landing/PromoVideo";
 
 const StartPage = () => {
 
@@ -28,16 +27,15 @@ const StartPage = () => {
             <LandingQuickInfo />
             <LandingResources />
             <LandingAboutInCTF />
-            <SponsorBar />
-            <Schedule />
-            <LandingTestimonials />
-            <LandingHowItWorks />
-            <LandingJoinDiscussion />
+            <LandingStatsBar />
+            <LandingPromoVideo />
             <LandingReasonsToParticipate />
             <CTAReg UTMSource="start_page" />
+            <Schedule />
+            <LandingHowItWorks />
+            <LandingTestimonials />
             <LandingSponsorship />
             <CTAPartners />
-            <LandingStatsBar />
             <LandingOrganizers />
             <LandingContactsBar />
         </div>
