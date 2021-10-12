@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
 import styled from "@emotion/styled";
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
-import Fade from 'react-reveal/Fade';
 import Modal from "react-modal";
 
 import SideBar from "./SideBar";
@@ -18,8 +16,10 @@ const TopbarContainer = styled.header`
   background: transparent;
   border-bottom: 2px solid transparent;
   box-shadow: none;
-  transition: all 250ms ease-in-out;
+  transition: all 300ms ease-in-out;
   transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
   padding: 1rem 0.35rem;
   
   &.floating {
@@ -29,7 +29,18 @@ const TopbarContainer = styled.header`
   }
   
   &.up, &.top {
+    pointer-events: auto;
     transform: none;
+    opacity: 1;
+  }
+  
+  @media screen and (max-width: 768px) {
+    border-top: 2px solid #FF6F00;
+    border-bottom: none !important;
+    background: white;
+    top: initial;
+    bottom: 0;
+    transform: translateY(100%);
   }
 
   nav {
@@ -58,12 +69,12 @@ const TopbarContainer = styled.header`
   button {
     border: none;
     padding: 0.5rem;
-    border-radius: 5px;
+    border-radius: 10px;
     background: none;
-    color: #E65100;
+    color: #F13F17;
 
     &:hover, &:focus {
-      background: #E65100 !important;
+      background: #F13F17 !important;
       outline: none !important;
     }
   }
@@ -74,14 +85,8 @@ const TopbarInfoCard = styled.div`
   color: #222;
   line-height: 1;
   display: flex;
-  align-items: center;
-  justify-content: center;
-
-  h5 {
-    font-size: 18px;
-    margin: 0;
-    color: #fd7e14;
-  }
+  justify-content: flex-end;
+  width: 100%;
 
   button {
     margin-left: 8px;
@@ -92,6 +97,8 @@ const TopbarInfoCard = styled.div`
     padding: 1rem;
     font-weight: 600;
     border-radius: 10px;
+    min-width: 180px;
+    max-width: 100%;
   }
 `;
 
@@ -129,21 +136,19 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
 
     const onOpen = () => {
         const targetElement = document.querySelector(".app");
-        disableBodyScroll(targetElement);
         setShowMenu(true);
     };
 
     const onClose = () => {
         setShowMenu(false);
-        clearAllBodyScrollLocks();
     };
 
     const onScroll = () => {
         let st = window.pageYOffset || document.documentElement.scrollTop;
         st = st <= 0 ? 0 : st;
 
-        setScrollDir(st > topbarRef.current.scrollHeight && st > scrollPrevStateRef.current ? 'down' : 'up');
-        setIsAtTop(st <= topbarRef.current.scrollHeight);
+        setScrollDir(st > 83 && st > scrollPrevStateRef.current ? 'down' : 'up');
+        setIsAtTop(st <= 83);
         scrollPrevStateRef.current = st;
     }
 
@@ -254,6 +259,8 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
         }
     ]
 
+    const isVisible = () => scrollDir === 'up' || isAtTop;
+
     return <div>
         <TopbarContainer ref={topbarRef} className={scrollDir + ` ${isAtTop ? 'top' : 'floating'}`}>
             <div className="topbar-container">
@@ -272,7 +279,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                 <div className="md:w-3/4 xl:w-1/2 pr-4 pl-4 flex items-center px-1">
                                     <nav className="flex">
                                         {TopbarItems?.map((i) => (
-                                            <TopBarItem item={i} />
+                                            <TopBarItem item={i} isVisible={isVisible()} />
                                         ))}
                                     </nav>
                                 </div>
@@ -291,12 +298,13 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                             <TopbarInfoCard className="mr-3">
                                 <button
                                     onClick={() => setShowRegCard(true)}
+                                    className="px-10"
                                 >
                                     Register
                                 </button>
                             </TopbarInfoCard>
-                            <button onClick={onOpen} className="transition">
-                                <i className="fa fa-bars text-3xl hover:text-white transition" />
+                            <button onClick={onOpen} className="transition" style={{ width: 46, height: 46 }}>
+                                <i className="fa fa-bars text-2xl hover:text-white transition" />
                             </button>
                         </div>
                     </div>
@@ -339,14 +347,14 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 />
             </div>}
         </Modal>
-        {showMenu &&
+        {isVisible() && showMenu &&
         <SideBar
             darkenOnSidebar={darkenOnSidebar}
             onClose={onClose}
             isLoggedIn={hasLoaded && isLoggedIn}
             onLogOut={onLogOut}
         />}
-        <div style={{ height: topbarRef ? topbarRef?.current?.clientHeight : '72px' }}/>
+        <div style={{ height: topbarRef ? topbarRef?.current?.clientHeight : '72px' }} className="hidden md:block"/>
     </div>
 
 };

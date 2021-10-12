@@ -9,7 +9,7 @@ const ItemContainer = styled('div')`
 
 const ItemDropDown = styled('div')`
     position: absolute;
-    top: 2.2rem;
+    top: calc(100% + 6px);
     left: -5px;
     background: white;
     padding: 1rem;
@@ -17,10 +17,21 @@ const ItemDropDown = styled('div')`
     box-shadow: 5px 6px 8px rgba(0,0,0,0.15);
     width: 250px;
     max-width: 100vw;
-    transition: all 0.5s ease-in;
+    transition: all 0.2s ease-in;
+    opacity: 0;
+    pointer-events: none;
+    &.c-visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      top: initial;
+      bottom: calc(100% + 6px);
+    }
 `;
 
-const TopBarItem = ({ item }) => {
+const TopBarItem = ({ item, isVisible }) => {
 
     const [isOpen, setOpen] = useState(false);
 
@@ -31,7 +42,7 @@ const TopBarItem = ({ item }) => {
                     <a>{item.label}</a>
                 </Link>
                 {(item?.items?.length > 0) && (
-                    <ItemDropDown className={isOpen ? 'block' : 'hidden'}>
+                    <ItemDropDown className={isOpen && isVisible ? 'c-visible' : ''}>
                         {item.items.map((i) =>
                             <Link href={i.link} passHref>
                                 <a className="block">
