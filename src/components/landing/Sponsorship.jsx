@@ -101,12 +101,21 @@ const LandingSponsorship = () => {
             desg: "Diamond Sponsor",
         },
         {
+            image: require('../../assets/images/sponsors/vmware.png'),
+            desg: "Diamond Sponsor",
+        },
+        {
             image: require('../../assets/images/sponsors/crowdstrike.png'),
-            desg: "Associate Sponsor",
+            desg: "Platinum Sponsor",
         },
         {
             image: require('../../assets/images/sponsors/cred.png'),
             desg: "Gold Sponsor",
+        },
+        {
+            image: require('../../assets/images/sponsors/h&rblock.png'),
+            maxHeight: '50px',
+            desg: "Silver Sponsor",
         },
     ];
 
@@ -188,7 +197,10 @@ const LandingSponsorship = () => {
                                 <div className="md:w-1/2 px-2 w-1/2 flex justify-center items-end p-1">
                                     <Fade>
                                         <a href={s.link} target="_blank">
-                                            <img draggable="false" alt="Sponsor Logo" src={s.image} />
+                                            <img
+                                                style={{ maxHeight: s?.maxHeight }}
+                                                draggable="false" alt="Sponsor Logo" src={s.image}
+                                            />
                                             {s?.desg && (<div className="text-sm mt-3 font-light">{s.desg}</div>)}
                                         </a>
                                     </Fade>
@@ -204,9 +216,13 @@ const LandingSponsorship = () => {
                             </div>
                             {inCTFSponsors.map((s) =>
                                 <div className="md:w-1/4 px-2 w-1/2 p-1 flex justify-center text-center items-end">
-                                    <div>
+                                    <div className="text-center">
                                         <Fade>
-                                            <img draggable="false" alt="Sponsor Logo" src={s.image} />
+                                            <img
+                                                style={{ maxHeight: s?.maxHeight }}
+                                                draggable="false" alt="Sponsor Logo"
+                                                src={s.image}
+                                            />
                                             {s?.desg && (<div className="text-sm mt-3 font-light">{s.desg}</div>)}
                                         </Fade>
                                     </div>
@@ -214,7 +230,7 @@ const LandingSponsorship = () => {
                             )}
                         </div>
                         <div className="flex my-3 past-sponsors flex-wrap">
-                            <div className="w-full p-0 mt-3 mb-3 text-red-500 opacity-80 text-center">InCTF 2020 Sponsors</div>
+                            <div className="w-full p-0 mt-3 mb-3 text-red-500 opacity-80 text-center">InCTF 2019 Sponsors</div>
                             {pastSponsors.map((s) =>
                                 <div className="md:w-1/5 px-1 flex items-center justify-center w-1/3 p-1">
                                     <Fade><img draggable="false" alt="Sponsor Logo" src={s.image} /></Fade>
