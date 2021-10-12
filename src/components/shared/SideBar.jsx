@@ -4,32 +4,22 @@ import Slide from "react-reveal/Slide";
 import styled from "@emotion/styled";
 import Fade from "react-reveal/Fade";
 
-const TopbarWrap = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 6000;
-  background: ${({darken}) => !darken ? `rgba(0,0,0,0.25)` : `rgba(0,0,0,0.55)` };
-`;
-
-
 const SideBarMenu = styled.div`
   position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
+  bottom: 100px;
+  right: 12px;
   z-index: 9000;
-  background: linear-gradient(45deg, rgba(0,0,0,0.4) 0%, rgba(46,0,37,0.8) 37%, rgba(254,0,100,0.4) 51%, rgba(0,0,0,0.9) 100%),linear-gradient(51deg, rgba(82,55,15,1) 0%, rgba(71,83,0,1) 40%, rgba(0,50,124,1) 100%);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(3.5px);
   color: white;
   box-shadow: -10px 0 8px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
   max-width: 400px;
-  .sidebar-container {
-     height: 100vh;
-     width: 100%;
-     background-color: rgba(0,0,0,0.65);
+  border-radius: 10px;
+  animation: fade-in 250ms;
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(80px); }
+    to { opacity: 1; transform: none; }
   }
   img {
     max-height: 28px;
@@ -144,73 +134,69 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
         { "icon": require('../../assets/images/icons/logout.png'), "title": "Logout", "onClick": onLogOut }
     ];
 
-    return <TopbarWrap darken={darkenOnSidebar} onClick={onClose}>
-        <Slide right duration={300}>
-            <SideBarMenu onClick={(e) => { e.stopPropagation() }}>
-                <div className="sidebar-container">
-                    <div style={{ position: 'absolute', right: '0.25rem', top: '0.25rem' }}>
-                        <button onClick={onClose}>
-                            <img alt="menu" src={require('../../assets/images/icons/close.png')} />
-                        </button>
-                    </div>
-                    <div className="text-center pt-5">
-                        <img alt="InCTFj" style={{ maxHeight: '20vh', maxWidth: '100%' }} className="p-6" src={require('../../assets/images/logos/inctf_light.png')} />
-                    </div>
-                    {/*{!isLoggedIn && <OnBoardingCard>*/}
-                    {/*    <p>Let's get started, right away!</p>*/}
-                    {/*    <div className="flex w-full items-center justify-center">*/}
-                    {/*        /!*<a className="plain-link mr-1" href="/register">Register</a>*!/*/}
-                    {/*        <a className="plain-link" style={{ background: '#4A148C' }} href="/login">Login</a>*/}
-                    {/*    </div>*/}
-                    {/*</OnBoardingCard>}*/}
-                    <ol className="pl-0 mt-3">{sidebarLinks.map((l, index) =>
-                        <Fade delay={index*250}>
-                            <li>
-                                {l.href ? <Link href={l.href} passHref>
-                                    <a className="w-full">
-                                        <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
-                                    </a>
-                                </Link> : <button onClick={l.onClick} className="w-full">
-                                    <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
-                                </button>}
-                            </li>
-                        </Fade>
-                    )}</ol>
-                    {/*<div className="my-3 mx-2">*/}
-                    {/*    {!isLoggedIn && <RegisterFooterButton className="plain-link" href="/register">*/}
-                    {/*        Register Now*/}
-                    {/*        <img alt="Register now" src={require('../../assets/images/icons/chevron_right.png')}/>*/}
-                    {/*    </RegisterFooterButton>}*/}
-                    {/*</div>*/}
-                    <div style={{ color: '#999' }} className="text-center pt-4">
-                        follow us on
-                    </div>
-                    <SocialMediaLinks className="social-bar flex items-center justify-center px-2">
-                        <Fade delay={50}>
-                            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/juniorinctf/">
-                                <i className="fab fa-instagram" />
+    return <div onClick={onClose}>
+        <SideBarMenu onClick={(e) => { e.stopPropagation() }}>
+            <div style={{ position: 'absolute', right: '0.25rem', top: '0.25rem' }}>
+                <button onClick={onClose}>
+                    <img alt="menu" src={require('../../assets/images/icons/close.png')} />
+                </button>
+            </div>
+            <div className="text-center pt-5">
+                <img alt="InCTFj" style={{ maxHeight: '20vh', maxWidth: '100%' }} className="p-6" src={require('../../assets/images/logos/inctf_light.png')} />
+            </div>
+            {/*{!isLoggedIn && <OnBoardingCard>*/}
+            {/*    <p>Let's get started, right away!</p>*/}
+            {/*    <div className="flex w-full items-center justify-center">*/}
+            {/*        /!*<a className="plain-link mr-1" href="/register">Register</a>*!/*/}
+            {/*        <a className="plain-link" style={{ background: '#4A148C' }} href="/login">Login</a>*/}
+            {/*    </div>*/}
+            {/*</OnBoardingCard>}*/}
+            <ol className="pl-0 mt-3">{sidebarLinks.map((l, index) =>
+                <Fade delay={index*250}>
+                    <li>
+                        {l.href ? <Link href={l.href} passHref>
+                            <a className="w-full">
+                                <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
                             </a>
-                        </Fade>
-                        <Fade delay={250}>
-                            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/InCTFj">
-                                <i className="fab fa-twitter" />
-                            </a>
-                        </Fade>
-                        <Fade delay={500}>
-                            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/InCTFj/">
-                                <i className="fab fa-facebook" />
-                            </a>
-                        </Fade>
-                        <Fade delay={750}>
-                            <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/c/InCTFj">
-                                <i className="fab fa-youtube" />
-                            </a>
-                        </Fade>
-                    </SocialMediaLinks>
-                </div>
-            </SideBarMenu>
-        </Slide>
-    </TopbarWrap>;
+                        </Link> : <button onClick={l.onClick} className="w-full">
+                            <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
+                        </button>}
+                    </li>
+                </Fade>
+            )}</ol>
+            {/*<div className="my-3 mx-2">*/}
+            {/*    {!isLoggedIn && <RegisterFooterButton className="plain-link" href="/register">*/}
+            {/*        Register Now*/}
+            {/*        <img alt="Register now" src={require('../../assets/images/icons/chevron_right.png')}/>*/}
+            {/*    </RegisterFooterButton>}*/}
+            {/*</div>*/}
+            <div style={{ color: '#999' }} className="text-center pt-4">
+                follow us on
+            </div>
+            <SocialMediaLinks className="social-bar flex items-center justify-center px-2">
+                <Fade delay={50}>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/juniorinctf/">
+                        <i className="fab fa-instagram" />
+                    </a>
+                </Fade>
+                <Fade delay={250}>
+                    <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/InCTFj">
+                        <i className="fab fa-twitter" />
+                    </a>
+                </Fade>
+                <Fade delay={500}>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/InCTFj/">
+                        <i className="fab fa-facebook" />
+                    </a>
+                </Fade>
+                <Fade delay={750}>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/c/InCTFj">
+                        <i className="fab fa-youtube" />
+                    </a>
+                </Fade>
+            </SocialMediaLinks>
+        </SideBarMenu>
+    </div>;
 
 };
 

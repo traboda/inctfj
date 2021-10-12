@@ -24,6 +24,11 @@ const ItemDropDown = styled('div')`
       opacity: 1;
       pointer-events: auto;
     }
+
+    @media screen and (max-width: 768px) {
+      top: initial;
+      bottom: calc(100% + 6px);
+    }
 `;
 
 const TopBarItem = ({ item, isVisible }) => {
