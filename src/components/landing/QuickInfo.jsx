@@ -5,6 +5,7 @@ import Fade from "react-reveal/Fade";
 const QuickInfoSection = styled.section`
       padding: 2vh 2vw;
       user-select: none;
+      background: white;
       .col-md-4 {
           display: flex;
           align-items: center;
@@ -23,7 +24,7 @@ const QuickInfoSection = styled.section`
       }
       .ans {
         font-size: 18px;
-        line-height: 1.2;
+        line-height: 1.5;
         font-weight: 300;
       }
 `;
@@ -33,7 +34,7 @@ const LandingQuickInfo = () => {
     const landingInfo = [
         {
             image: require('../../assets/images/icons/trophy.png'), left: true,
-            question: "What?", answer: <>Learn & Hack <br /> Capture The Flag (CTF) Contest</>
+            question: "What?", answer: <>Cyber-Security Training & <br /> Capture The Flag (CTF) Championship</>
         },
         {
             image: require('../../assets/images/icons/calendar.png'), up: true,
@@ -43,7 +44,10 @@ const LandingQuickInfo = () => {
         },
         {
             image: require('../../assets/images/icons/backpack.png'), right: true,
-            question: "For Whom?", answer: "Grade 07-12 School Students"
+            question: "For Whom?", answer: <>
+                Grade 07-12 <br/>
+                School Students
+            </>,
         }
     ]
 

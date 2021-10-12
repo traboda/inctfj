@@ -8,6 +8,7 @@ const RegCTASection = styled.section`
       font-size: 24px;
       font-weight: 700;
       margin-bottom: 0;
+      line-height: 1.5;
    }
    a {
        display: inline-block;
@@ -33,7 +34,7 @@ const CTAPartners = () => {
                 <div className="md:w-3/4 pr-4 pl-4 flex items-center p-2">
                     {/*<img alt="star" className="hidden md:block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />*/}
                     <h3 style={{ maxWidth: '800px' }}>
-                        InCTF Jr is looking for school partners for our National Level Cyber Security Talent Hunt and
+                        InCTF Jr is looking for school partners for our National Cyber Security League and
                         International Conference.
                     </h3>
                 </div>

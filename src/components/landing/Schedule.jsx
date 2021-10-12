@@ -77,7 +77,7 @@ const Schedule = () => {
     ]
 
     return <div>
-        <div className="container min-w-lg mx-auto sm:px-4 px-8 py-10">
+        <div className="container min-w-lg mx-auto sm:px-4 lg:px-8 lg:py-10">
             {/*<div className="flex flex-wrap  mt-3 mb-4 px-1 mx-0">*/}
             {/*    <div className="md:w-1/3 pr-4 pl-4 flex items-center justify-center p-1 mb-3">*/}
             {/*        <Fade left>*/}
@@ -117,7 +117,7 @@ const Schedule = () => {
             {/*<h5 style={{ color: '#FF6F00' }}>Opening Ceremony</h5>*/}
             <div className="flex justify-center">
                 <div style={{ maxWidth: '100%', width: '1000px' }}>
-                    <div className="text-center mb-6">
+                    <div className="text-center px-4 mb-6">
                         More details and links to join the free online beginner-level training programme will be shared soon.
                     </div>
                     <div className="flex flex-wrap  hidden md:flex font-bold mx-0 py-2 border-b">

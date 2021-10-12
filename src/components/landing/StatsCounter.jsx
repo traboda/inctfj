@@ -5,7 +5,7 @@ import Zoom from 'react-reveal/Zoom';
 
 
 const StatsContainer = styled.section`
-    padding: 10vh 0;
+    padding: 2.5vh 0;
     .h2 {
       font-size: calc(1.5rem + 2vw);
       margin-bottom: 0;
