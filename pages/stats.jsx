@@ -14,23 +14,21 @@ import Footer from "../src/components/shared/Footer";
 
 const Header = styled.section`
     min-height: 50vh;
-    background: black;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     h1 {
-       color: white;
+       color: orangered;
     }
     p {
-      color: #AAA;
+      color: #333;
     }
 `;
 
 const PageWrap = styled.div`
-    background: rgb(25, 25, 40);
     min-height: 50vh;
-    color: #eee;
+    background: #FAFAFA;
 `;
 
 const TabButton = styled.button`
@@ -39,7 +37,7 @@ const TabButton = styled.button`
       background: none;
       border: none;
       font-weight: 600;
-      color: ${({isActive}) => isActive ? `#fd7e14` : '#eee'};
+      color: ${({isActive}) => isActive ? `#fd7e14` : '#333'};
       &:hover, &:focus {
         outline: none!important;
       }
@@ -140,7 +138,7 @@ const Stats = () => {
             </div>
         </Header>
         <PageWrap>
-            <div style={{ background: `rgba(0,0,30,0.5)` }} className="d-flex align-items-center">
+            <div className="d-flex align-items-center">
                 <div className="container-lg p-2">
                     {editions.map((y) =>
                         <TabButton isActive={y.year===year} onClick={() => setYear(y.year)}>{y.year}</TabButton>

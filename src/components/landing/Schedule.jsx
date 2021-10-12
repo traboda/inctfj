@@ -77,7 +77,7 @@ const Schedule = () => {
     ]
 
     return <div>
-        <div className="container min-w-lg mx-auto sm:px-4 lg:px-8 lg:py-10">
+        <div className="container min-w-lg mx-auto sm:px-4 lg:px-8 py-10">
             {/*<div className="flex flex-wrap  mt-3 mb-4 px-1 mx-0">*/}
             {/*    <div className="md:w-1/3 pr-4 pl-4 flex items-center justify-center p-1 mb-3">*/}
             {/*        <Fade left>*/}

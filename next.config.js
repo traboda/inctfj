@@ -57,7 +57,16 @@ const customConfig = {
                 destination: '/stats',
                 permanent: true,
             },
-
+            {
+                source: '/privacy',
+                destination: 'https://traboda.com/privacy',
+                permanent: false
+            },
+            {
+                source: '/discord',
+                destination: 'https://discord.gg/QVXewGh7sP',
+                permanent: false,
+            }
         ]
     },
     exportPathMap: async function(

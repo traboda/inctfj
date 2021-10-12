@@ -10,16 +10,16 @@ import SchoolLeaderboard from "./SchoolLeaderboard";
 import Fade from "react-reveal/Fade";
 
 const SearchBar = styled.div`
-    background: rgba(75, 20, 150, 0.25)!important;
-    color: white;
+    background: white;
+    border-radius: 0.5rem;
     z-index: 6000;
     input {
         display: flex;
-        background: rgba(0, 0, 30, 0.8);
-        border: 1px solid rgb(74, 20, 140);
+        background: white;
+        border: 2px solid rgb(74, 20, 140);
         padding: 0.5rem 0.75rem;
-        border-radius: 0.25rem;
-        color: #EEE;
+        border-radius: 0.35rem;
+        color: #111;
         width: 100%;
         &:focus {
           outline: none;
@@ -32,9 +32,9 @@ const SearchBar = styled.div`
               border-color: #fd7e14!important;
          }
          .state-filter__control {
-            background: rgba(0, 0, 30, 0.8)!important;
+            background: white;
             border: 2px solid rgb(74, 20, 140);
-            border-radius: 0.25rem;
+            border-radius: 0.35rem;
             &:focus {
               outline: none;
               border-color: #fd7e14;
@@ -70,10 +70,11 @@ const SearchBar = styled.div`
 `;
 
 const ChampionCard = styled.div`
-   background: rgba(80,20,120,0.35);
+   background: white;
+   border-radius: 0.75rem;
    height: 100%;
    img {
-    width: 100%;
+      width: 100%;
    }
    h5 {
       font-weight: 600;
@@ -117,7 +118,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
     <div className="py-3">
         <div className="p-2">
             <h3 style={{ color: '#fd7e14' }} className="mb-1">Champions</h3>
-            <p style={{ color: '#AAA' }} className="mb-3">
+            <p style={{ opacity: 0.8 }} className="mb-3">
                The InCTF Junior {year} champions
             </p>
         </div>
@@ -127,7 +128,12 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
                     <ChampionCard>
                         <div className="flex flex-wrap  h-full w-full mx-0">
                             <div
-                                style={{ background: `url(${c.avatar})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                                style={{
+                                    borderRadius: '0.75rem',
+                                    background: `url(${c.avatar})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center'
+                                }}
                                 className="w-1/3 lg:w-1/4 pr-4 pl-4 px-2 md:px-0"
                             />
                             <div className="w-2/3 lg:w-3/4 pr-4 pl-4 flex items-center p-2 md:p-4">
@@ -148,7 +154,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
     <div className="py-3">
         <div className="p-2">
             <h3 style={{ color: '#fd7e14' }} className="mb-1">Top Women Hackers</h3>
-            <p style={{ color: '#AAA' }} className="mb-3">
+            <p style={{ opacity: 0.8 }} className="mb-3">
                 The top Women Hackers of InCTF Junior {year}
             </p>
         </div>
@@ -158,7 +164,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
                     <ChampionCard>
                         <div className="flex flex-wrap  h-full w-full mx-0">
                             <div
-                                style={{ background: `url(${c.avatar})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                                style={{  borderRadius: '0.75rem', background: `url(${c.avatar})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                                 className="w-1/3 lg:w-1/4 pr-4 pl-4 px-2 md:px-0"
                             />
                             <div className="w-2/3 lg:w-3/4 pr-4 pl-4 flex items-center p-2 md:p-4">
@@ -179,7 +185,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
     <div className="py-3">
         <div className="p-2">
             <h3 style={{ color: '#fd7e14' }} className="mb-1">Leaderboards</h3>
-            <p style={{ color: '#AAA' }} className="mb-3">
+            <p style={{ opacity: 0.8 }} className="mb-3">
                 Finalist leaderboard ranked based on most points earned by capturing the most number of flags in the lowest time.
             </p>
         </div>
