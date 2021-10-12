@@ -32,7 +32,7 @@ const FAQPage = () => {
         <TopBar darkenOnSidebar includeSpace={false} />
         <FAQSection>
             <h1 className="mx-2 top-0 sticky-top">
-                <img alt="FAQ" className="d-inline-block" src={require('../src/assets/images/icons/faq.png')} />
+                <img alt="FAQ" className="inline mb-3" src={require('../src/assets/images/icons/faq.png')} />
                 <div>Frequently Asked Questions</div>
             </h1>
             <div className="container px-6">

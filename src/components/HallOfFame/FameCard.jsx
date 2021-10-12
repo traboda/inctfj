@@ -7,9 +7,9 @@ const FameCardWrap = styled.div`
    height: 100%;
    box-shadow: 2px 3px 8px rgba(0,0,0,0.15);
    font-size: 13px;
-   background: rgba(80,10,130,0.25);
-   color: white;
-   border-radius: 3px;
+   background: white;
+   color: black;
+   border-radius: 0.5rem;
    img {
       max-width: 100%;
       margin: 0;
@@ -18,7 +18,7 @@ const FameCardWrap = styled.div`
    h4 { 
       font-size: 16px;
       margin-bottom: 0;
-      color: white;
+      color: black;
       img {
          height: 32px;
          margin-left: 5px;
@@ -29,15 +29,14 @@ const FameCardWrap = styled.div`
    }
    div {
       line-height: 1.25;
-      color: #AAA;
    }
    b {
-      color: white;
+      color: black;
    }
    .rank {
       font-size: calc(1.5rem + 1vw);
       line-height: 1;
-      color: white;
+      color: black;
    }
 `;
 
@@ -74,7 +73,7 @@ const FameCard = ({
             </div>
             <div className="md:w-2/5 pr-4 pl-4 flex p-1">
                 <div>
-                    {school && <div style={{ fontSize: '15px', color: '#fd7e14' }} className="line-height-1 mb-1">{school}</div>}
+                    {school && <div style={{ fontSize: '15px', color: '#333' }} className="line-height-1 mb-1">{school}</div>}
                     {(city||state) && <div>{city}, {getStateName()}</div>}
                 </div>
             </div>
