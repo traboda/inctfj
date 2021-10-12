@@ -18,8 +18,10 @@ const TopbarContainer = styled.header`
   background: transparent;
   border-bottom: 2px solid transparent;
   box-shadow: none;
-  transition: all 250ms ease-in-out;
+  transition: all 300ms ease-in-out;
   transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
   padding: 1rem 0.35rem;
   
   &.floating {
@@ -29,7 +31,9 @@ const TopbarContainer = styled.header`
   }
   
   &.up, &.top {
+    pointer-events: auto;
     transform: none;
+    opacity: 1;
   }
 
   nav {
@@ -142,8 +146,8 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
         let st = window.pageYOffset || document.documentElement.scrollTop;
         st = st <= 0 ? 0 : st;
 
-        setScrollDir(st > topbarRef.current.scrollHeight && st > scrollPrevStateRef.current ? 'down' : 'up');
-        setIsAtTop(st <= topbarRef.current.scrollHeight);
+        setScrollDir(st > 83 && st > scrollPrevStateRef.current ? 'down' : 'up');
+        setIsAtTop(st <= 83);
         scrollPrevStateRef.current = st;
     }
 
@@ -272,7 +276,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                 <div className="md:w-3/4 xl:w-1/2 pr-4 pl-4 flex items-center px-1">
                                     <nav className="flex">
                                         {TopbarItems?.map((i) => (
-                                            <TopBarItem item={i} />
+                                            <TopBarItem item={i} isVisible={scrollDir === 'up' || isAtTop} />
                                         ))}
                                     </nav>
                                 </div>
