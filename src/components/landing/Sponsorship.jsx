@@ -94,11 +94,11 @@ const LandingSponsorship = () => {
     const inCTFSponsors = [
         {
             image: require('../../assets/images/sponsors/salesforce.png'),
-            desg: "Title Sponsor",
+            desg: "Event Sponsor",
         },
         {
             image: require('../../assets/images/sponsors/zoho.png'),
-            desg: "Event Sponsor",
+            desg: "Diamond Sponsor",
         },
         {
             image: require('../../assets/images/sponsors/crowdstrike.png'),
@@ -106,7 +106,7 @@ const LandingSponsorship = () => {
         },
         {
             image: require('../../assets/images/sponsors/cred.png'),
-            desg: "Associate Sponsor",
+            desg: "Gold Sponsor",
         },
     ];
 
