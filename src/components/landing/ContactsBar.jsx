@@ -60,7 +60,7 @@ const LandingContactsBar = () => {
         <div className="flex flex-wrap">
             <div className="w-full flex justify-center flex-wrap">
                 <Fade left>
-                    <div className="p-2 mb-4 flex items-center justify-center mr-8 text-center">
+                    <div className="md:w-1/4 p-2 mb-4 flex items-center justify-center text-center">
                         <PoweredByTraboda>
                             <div>In Association with the CBSE</div>
                             <a href="https://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf">
@@ -73,7 +73,7 @@ const LandingContactsBar = () => {
                     </div>
                 </Fade>
                 <Fade right>
-                    <div className="p-2 mb-4 flex items-center justify-center text-center">
+                    <div className="md:w-1/4 p-2 mb-4 flex items-center justify-center text-center">
                         <PoweredByTraboda>
                             <div>Powered By Traboda</div>
                             <a href="https://app.traboda.com">
@@ -89,7 +89,7 @@ const LandingContactsBar = () => {
             <div className="md:w-2/3 w-full text-center md:text-left h-full flex items-center pt-4 px-2">
                 <div className="w-full">
                     <div>&copy; Amrita InCTF 2016-2021. All Rights Reserved.</div>
-                    <FooterLinksBar>
+                    <FooterLinksBar className="mt-4 md:mt-0">
                         <a href="/branding">Brand Kit</a>
                         <a href="/privacy">Privacy Policy</a>
                         <a href="/rules">Rules</a>

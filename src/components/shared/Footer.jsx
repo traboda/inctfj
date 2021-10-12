@@ -57,6 +57,9 @@ const Footer = () => {
                 </div>
                 <div className="social-bar md:w-1/3 w-full order-1 md:order-2 flex items-center md:justify-end justify-center px-1">
                     <div className="flex items-center md:justify-end justify-center md:mb-0 mb-2 p-2">
+                        <a target="_blank" rel="noopener noreferrer" href="mailto:inctfj@am.amrita.edu">
+                            <i className="fas fa-envelope" />
+                        </a>
                         <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/juniorinctf/">
                             <i className="fab fa-instagram" />
                         </a>
@@ -68,6 +71,9 @@ const Footer = () => {
                         </a>
                         <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/c/InCTFj">
                             <i className="fab fa-youtube" />
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/QVXewGh7sP">
+                            <i className="fab fa-discord" />
                         </a>
                     </div>
                 </div>
