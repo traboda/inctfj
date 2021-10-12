@@ -72,8 +72,8 @@ const TopbarContainer = styled.header`
     border-radius: 10px;
     background: none;
     color: #F13F17;
-
-    &:hover, &:focus {
+    &:hover {
+      color: white;
       background: #F13F17 !important;
       outline: none !important;
     }
@@ -83,7 +83,7 @@ const TopbarContainer = styled.header`
 
 const TopbarInfoCard = styled.div`
   color: #222;
-  line-height: 1;
+  line-height: 1.3;
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -135,8 +135,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
     };
 
     const onOpen = () => {
-        const targetElement = document.querySelector(".app");
-        setShowMenu(true);
+        setShowMenu(!showMenu);
     };
 
     const onClose = () => {
@@ -163,36 +162,36 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
         {
             "label": "About",
             "link": "/about",
-            items: [
-                {
-                    "label": "What's India CTF Jr?",
-                    "link": "/about#what"
-                },
-                {
-                    "label": "Why InCTF Jr?",
-                    "link": "/about#why"
-                },
-                {
-                    "label": "Our Impact",
-                    "link": "/about#impact"
-                },
-                {
-                    "label": "Advisory Board",
-                    "link": "/advisory-board"
-                },
-                {
-                    "label": "Organizers",
-                    "link": "/about#organizers"
-                },
-                {
-                    "label": "Sponsors",
-                    "link": "/sponsors"
-                }
-            ]
+            // items: [
+            //     {
+            //         "label": "What's India CTF Jr?",
+            //         "link": "/about#what"
+            //     },
+            //     {
+            //         "label": "Why InCTF Jr?",
+            //         "link": "/about#why"
+            //     },
+            //     {
+            //         "label": "Our Impact",
+            //         "link": "/about#impact"
+            //     },
+            //     {
+            //         "label": "Advisory Board",
+            //         "link": "/advisory-board"
+            //     },
+            //     {
+            //         "label": "Organizers",
+            //         "link": "/about#organizers"
+            //     },
+            //     {
+            //         "label": "Sponsors",
+            //         "link": "/sponsors"
+            //     }
+            // ]
         },
         {
             "label": "Learn",
-            "link": "/learn",
+            "link": "/resources",
             items: [
                 {
                     "label": "Cyber Workshops",
@@ -217,28 +216,28 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 }
             ]
         },
-        {
-            "label": "Championship",
-            "link": "/championship",
-            "items": [
-                {
-                    "label": "How to Play a CTF?",
-                    "link": "championship/#how-to",
-                },
-                {
-                    "label": "Guidelines & Rules",
-                    "link": "/rules",
-                },
-                {
-                    "label": "Prizes",
-                    "link": "championship/#prizes",
-                },
-                {
-                    "label": "Past Statistics",
-                    "link": "/stats",
-                }
-            ]
-        },
+        // {
+        //     "label": "Championship",
+        //     "link": "/championship",
+        //     "items": [
+        //         {
+        //             "label": "How to Play a CTF?",
+        //             "link": "championship/#how-to",
+        //         },
+        //         {
+        //             "label": "Guidelines & Rules",
+        //             "link": "/rules",
+        //         },
+        //         {
+        //             "label": "Prizes",
+        //             "link": "championship/#prizes",
+        //         },
+        //         {
+        //             "label": "Past Statistics",
+        //             "link": "/stats",
+        //         }
+        //     ]
+        // },
         {
             "label": "Resources",
             "link": "/resources",
@@ -251,15 +250,19 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                     "label": "Promote InCTF",
                     "link": "/promote"
                 },
-                {
-                    "label": "Get Help",
-                    "link": "/support"
-                }
+                // {
+                //     "label": "Get Help",
+                //     "link": "/support"
+                // }
             ]
         }
     ]
 
     const isVisible = () => scrollDir === 'up' || isAtTop;
+
+    useEffect(() => {
+        setShowMenu(false);
+    }, [scrollDir]);
 
     return <div>
         <TopbarContainer ref={topbarRef} className={scrollDir + ` ${isAtTop ? 'top' : 'floating'}`}>
@@ -267,7 +270,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 <div className="mx-0 w-full px-0">
                     <div className="flex flex-wrap w-full mx-0">
                         <div
-                            className="w-1/3 pr-4 pl-4 md:w-1/6 pr-4 pl-4 md:text-center flex items-center md:justify-end justify-center px-2"
+                            className="w-1/4 md:w-1/6 md:text-center flex items-center md:justify-end justify-center px-2"
                         >
                             <a href="/">
                                 <img className="logo" src={require('../../assets/images/logos/inctf.png')}
@@ -287,24 +290,24 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                     <TopbarInfoCard>
                                         <div className="hidden xl:inline-block mr-2">
                                             <div>India's First & Only CTF Hacking Contest</div>
-                                            <h5>Exclusively for School Students</h5>
+                                            <h5 style={{ color: '#F13F17' }}>Exclusively for School Students</h5>
                                         </div>
                                         <button onClick={() => setShowRegCard(true)}>Register</button>
                                     </TopbarInfoCard>
                                 </div>
                             </div>
                         </div>
-                        <div className="w-2/3 flex md:hidden items-center justify-end px-1">
+                        <div className="w-3/4 flex md:hidden items-center justify-end px-1">
                             <TopbarInfoCard className="mr-3">
                                 <button
                                     onClick={() => setShowRegCard(true)}
-                                    className="px-10"
+                                    className="w-full"
                                 >
                                     Register
                                 </button>
                             </TopbarInfoCard>
                             <button onClick={onOpen} className="transition" style={{ width: 46, height: 46 }}>
-                                <i className="fa fa-bars text-2xl hover:text-white transition" />
+                                <i className={`${showMenu ? 'fa fa-times' : 'fa fa-bars'} text-2xl transition`} />
                             </button>
                         </div>
                     </div>
@@ -339,7 +342,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 <img alt="close" src={require('../../assets/images/icons/close.png')}/>
             </CloseButton>
             {showRegCard &&
-            <div className="flex bg-white md:p-4 pt-4 items-end rounded-t-2xl md:rounded-r-none md:rounded-bl-2xl justify-center">
+            <div className="flex bg-white px-3 md:p-4 py-6 items-end rounded-t-2xl md:rounded-r-none md:rounded-bl-2xl justify-center">
                 <iframe
                     className="border-0"
                     style={{ width: '500px', maxWidth: '100vw', height: '190px', overflow: 'auto' }}

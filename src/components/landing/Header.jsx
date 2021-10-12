@@ -19,7 +19,7 @@ const HeaderContainer = styled.section`
         width: 100%;
         color: black;
     }
-    img {
+    #landing-header-cover-image {
         bottom: 0;
         left: 0;
         position: absolute;
@@ -144,93 +144,105 @@ const LandingHeader = ({ UTMSource = null }) => {
 
     const [iframeError, setIframeError] = useState(false);
 
-    return <HeaderContainer>
-        <div className="container header-container" style={{ width: '1200px', maxWidth: '100%' }}>
-            <div>
-                <div className="flex flex-wrap  mx-0">
-                    <div className="md:w-2/3 px-3">
-                        <Pulse>
-                            <h1>
-                                <span style={{ color: '#FF6F00'}}>Young Hackers Are Born Here,</span><br/>
-                                Become the Next Cyber Security Warrior.
-                            </h1>
-                        </Pulse>
-                        <Fade up>
-                            <p>
-                                InCTF Junior is India's First & Premier Hacking & Cyber Security Contest for High School Students,
-                                organized by team bi0s, India's No.1 ranked CTF Team.
-                                <span className="mt-6">
+    return (
+        <React.Fragment>
+            <div className="block md:hidden py-4 px-5">
+                <img
+                    alt="InCTF Jr"
+                    style={{ height: '72px' }}
+                    src={require('../../assets/images/branding/colorful.png')}
+                />
+            </div>
+            <HeaderContainer>
+                <div className="container header-container" style={{ width: '1200px', maxWidth: '100%' }}>
+                    <div>
+                        <div className="flex flex-wrap  mx-0">
+                            <div className="md:w-2/3 px-4">
+                                <Pulse>
+                                    <h1>
+                                        <span style={{ color: '#FF6F00'}}>Young Hackers Are Born Here,</span><br/>
+                                        Become the Next Cyber Security Warrior.
+                                    </h1>
+                                </Pulse>
+                                <Fade up>
+                                    <p>
+                                        InCTF Junior is India's First & Premier Hacking & Cyber Security Contest for High School Students,
+                                        organized by team bi0s, India's No.1 ranked CTF Team.
+                                        <span className="mt-6">
                                     Every year the brightest young hackers from all across India participate in this the learn & hack CTF contest,
                                     win exciting prizes & kick-start their cyber-security career.
                                 </span>
-                            </p>
-                        </Fade>
-                    </div>
-                    <div className="md:w-1/3 my-4 md:my-0 px-3">
-                        <img
-                            src={require('../../assets/images/covers/landing-cover-image.png')}
-                            style={{ position: 'unset', maxHeight: '500px', maxWidth: '100%' }}
-                            draggable="false"
-                        />
-                    </div>
-                </div>
-                <div className="flex flex-wrap  mx-0">
-                    <div className="w-full p-2">
-                        <div className="mb-6">
-                            <div className="md:text-left text-center mb-3 font-semibold">In Association With</div>
-                            <a target="_blank" href="https://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf">
+                                    </p>
+                                </Fade>
+                            </div>
+                            <div className="md:w-1/3 my-4 md:my-0 px-3">
                                 <img
-                                    alt="cbse"
-                                    src={require('../../assets/images/logos/cbse_logo.png')}
-                                    style={{ position: 'unset', maxHeight: '90px', maxWidth: '100%' }}
+                                    id="landing-header-cover-image"
+                                    src={require('../../assets/images/covers/landing-cover-image.png')}
+                                    style={{ position: 'unset', maxHeight: '500px', maxWidth: '100%' }}
                                     draggable="false"
                                 />
-                            </a>
+                            </div>
                         </div>
-                    </div>
-                    <div className="md:w-1/3 pr-4 pl-4 w-full py-5 md:py-0 px-2">
-                        <HowToRegister onClick={() => window.open('https://youtu.be/twS3pzPjRzA', '_blank')}>
-                            <div className="how_to_register_cover">
-                                <div className="text-center">
-                                    <div>How to Get Started?</div>
-                                    <img
-                                        alt="Play Video"
-                                        draggable="false" className="inline-block"
-                                        src={require('../../assets/images/icons/play_button.png')}
-                                    />
+                        <div className="flex flex-wrap  mx-0">
+                            <div className="w-full p-2">
+                                <div className="mb-6">
+                                    <div className="md:text-left text-center mb-3 font-semibold">In Association With</div>
+                                    <a target="_blank" href="https://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf">
+                                        <img
+                                            alt="cbse"
+                                            src={require('../../assets/images/logos/cbse_logo.png')}
+                                            style={{ position: 'unset', maxHeight: '90px', maxWidth: '100%' }}
+                                            draggable="false"
+                                        />
+                                    </a>
                                 </div>
                             </div>
-                            <img
-                                alt="how to Register"
-                                draggable="false"
-                                src={require('../../assets/images/covers/how_to_register.JPG')}
-                            />
-                        </HowToRegister>
-                    </div>
-                    <div className="md:w-2/3 w-full md:px-2 px-0 py-4">
-                        {iframeError ?
-                            <div>
-                                <p>
-                                    Your browser had some issues loading the registration form. So kindly use the links below.
-                                </p>
-                                <a id="header-register-button" className="mr-2" href="https://traboda.com/contest/inctfj-21-lr">
-                                    Register for Learning Round
-                                </a>
-                                <a id="header-register-button" href="https://traboda.com/contest/inctfj-21-lr">
-                                    Login to Dashboard
-                                </a>
-                            </div> :
-                            <IFrameContainer>
-                                <Iframe
-                                    onError={() => setIframeError(true)}
-                                    src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame?color=000&primary=F13F17&primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
-                                />
-                            </IFrameContainer>}
+                            <div className="md:w-1/3 pr-4 pl-4 w-full py-5 md:py-0 px-2">
+                                <HowToRegister onClick={() => window.open('https://youtu.be/twS3pzPjRzA', '_blank')}>
+                                    <div className="how_to_register_cover">
+                                        <div className="text-center">
+                                            <div>How to Get Started?</div>
+                                            <img
+                                                alt="Play Video"
+                                                draggable="false" className="inline-block"
+                                                src={require('../../assets/images/icons/play_button.png')}
+                                            />
+                                        </div>
+                                    </div>
+                                    <img
+                                        alt="how to Register"
+                                        draggable="false"
+                                        src={require('../../assets/images/covers/how_to_register.JPG')}
+                                    />
+                                </HowToRegister>
+                            </div>
+                            <div className="md:w-2/3 w-full md:px-2 px-0 py-4">
+                                {iframeError ?
+                                    <div>
+                                        <p>
+                                            Your browser had some issues loading the registration form. So kindly use the links below.
+                                        </p>
+                                        <a id="header-register-button" className="mr-2" href="https://traboda.com/contest/inctfj-21-lr">
+                                            Register for Learning Round
+                                        </a>
+                                        <a id="header-register-button" href="https://traboda.com/contest/inctfj-21-lr">
+                                            Login to Dashboard
+                                        </a>
+                                    </div> :
+                                    <IFrameContainer>
+                                        <Iframe
+                                            onError={() => setIframeError(true)}
+                                            src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame?color=000&primary=F13F17&primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
+                                        />
+                                    </IFrameContainer>}
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </HeaderContainer>;
+            </HeaderContainer>
+        </React.Fragment>
+    );
 
 
 };

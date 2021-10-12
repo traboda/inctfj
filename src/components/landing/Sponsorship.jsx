@@ -65,6 +65,7 @@ const LogoWall = styled.div`
       }
     }
     img {
+       display: inline;
        max-height: 90px;
        width: auto;
        max-width: 100%;

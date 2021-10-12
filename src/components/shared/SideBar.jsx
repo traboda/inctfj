@@ -1,21 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
-import Slide from "react-reveal/Slide";
 import styled from "@emotion/styled";
 import Fade from "react-reveal/Fade";
 
 const SideBarMenu = styled.div`
   position: fixed;
-  bottom: 100px;
-  right: 12px;
+  bottom: 12vh;
+  right: 0.5rem;
   z-index: 9000;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(3.5px);
-  color: white;
+  background: white;
+  color: black;
   box-shadow: -10px 0 8px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
   max-width: 400px;
   border-radius: 10px;
+  padding: 0.5rem;
   animation: fade-in 250ms;
   @keyframes fade-in {
     from { opacity: 0; transform: translateY(80px); }
@@ -42,9 +41,8 @@ const SideBarMenu = styled.div`
 
     a, button {
         text-decoration: none!important;
-        font-size: 30px;
-        color: #EEE;
-        font-weight: 600;
+        font-size: 25px;
+        color: black;
         padding: 0;
         display: flex;
         align-items: center;
@@ -54,8 +52,8 @@ const SideBarMenu = styled.div`
         }
     }
     &:hover {
-      background: rgba(74,20,140,0.8);
-      a{ color: white!important; }
+      border-radius: 1rem;
+      background: rgba(100,100,100,0.15);
     }   
   }
 `;
@@ -106,14 +104,17 @@ const SocialMediaLinks = styled.div`
     padding: 1rem;
     a {
        display: block;
-       margin-right: 16px;
+       margin-right: 1.2rem;
        i {
           font-size: 30px;
-          color: #AAA;
+          color: #222;
           &:hover {
             color: #fd7e14;
           }
        }
+    }
+    a:last-of-type {
+      margin-right: 0;
     }
 `;
 
@@ -124,7 +125,7 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
         { "icon": require('../../assets/images/icons/star_glowing.png'), "title": "About", "href": "/about" },
         { "icon": require('../../assets/images/icons/learn.png'), "title": "Resources", "href": "/resources"},
         { "icon": require('../../assets/images/icons/learn.png'), "title": "Trainings", "href": "/trainings" },
-        { "icon": require('../../assets/images/icons/trophy.png'), "title": "Stats & Rankings", "href": "/stats" },
+        { "icon": require('../../assets/images/icons/trophy.png'), "title": "Past Stats", "href": "/stats" },
         { "icon": require('../../assets/images/icons/faq.png'), "title": "FAQ", "href": "/faq" },
     ] : [
         { "icon": require('../../assets/images/icons/sword.png'), "title": "CTF Arena", "href": "/ctf" },
@@ -138,12 +139,12 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
         <SideBarMenu onClick={(e) => { e.stopPropagation() }}>
             <div style={{ position: 'absolute', right: '0.25rem', top: '0.25rem' }}>
                 <button onClick={onClose}>
-                    <img alt="menu" src={require('../../assets/images/icons/close.png')} />
+                    <i className="fa fa-times" />
                 </button>
             </div>
-            <div className="text-center pt-5">
-                <img alt="InCTFj" style={{ maxHeight: '20vh', maxWidth: '100%' }} className="p-6" src={require('../../assets/images/logos/inctf_light.png')} />
-            </div>
+            {/*<div className="text-center pt-5">*/}
+            {/*    <img alt="InCTFj" style={{ maxHeight: '20vh', maxWidth: '100%' }} className="p-6" src={require('../../assets/images/logos/inctf_light.png')} />*/}
+            {/*</div>*/}
             {/*{!isLoggedIn && <OnBoardingCard>*/}
             {/*    <p>Let's get started, right away!</p>*/}
             {/*    <div className="flex w-full items-center justify-center">*/}
@@ -154,12 +155,14 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
             <ol className="pl-0 mt-3">{sidebarLinks.map((l, index) =>
                 <Fade delay={index*250}>
                     <li>
-                        {l.href ? <Link href={l.href} passHref>
+                        {l.href ?
+                        <Link href={l.href} passHref>
                             <a className="w-full">
-                                <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
+                                {l.title}
                             </a>
-                        </Link> : <button onClick={l.onClick} className="w-full">
-                            <img alt={l.text} draggable="false" src={l.icon} /> {l.title}
+                        </Link> :
+                        <button onClick={l.onClick} className="w-full">
+                            {l.title}
                         </button>}
                     </li>
                 </Fade>
@@ -170,7 +173,7 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
             {/*        <img alt="Register now" src={require('../../assets/images/icons/chevron_right.png')}/>*/}
             {/*    </RegisterFooterButton>}*/}
             {/*</div>*/}
-            <div style={{ color: '#999' }} className="text-center pt-4">
+            <div style={{ opacity: 0.8 }} className="text-center pt-4">
                 follow us on
             </div>
             <SocialMediaLinks className="social-bar flex items-center justify-center px-2">
@@ -192,6 +195,11 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
                 <Fade delay={750}>
                     <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/c/InCTFj">
                         <i className="fab fa-youtube" />
+                    </a>
+                </Fade>
+                <Fade delay={750}>
+                    <a target="_blank" rel="noopener noreferrer" href="/discord">
+                        <i className="fab fa-discord" />
                     </a>
                 </Fade>
             </SocialMediaLinks>
