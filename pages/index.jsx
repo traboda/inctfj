@@ -29,10 +29,10 @@ const LandingPage = () => {
             <LandingStatsBar />
             <LandingPromoVideo />
             <LandingReasonsToParticipate />
-            <LandingTestimonials />
             <CTAReg />
             <Schedule />
             <LandingHowItWorks />
+            <LandingTestimonials />
             <LandingSponsorship />
             <CTAPartners />
             <LandingOrganizers />
