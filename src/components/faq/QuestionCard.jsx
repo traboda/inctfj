@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from "@emotion/styled";
 import { AnimatePresence, motion } from "framer-motion";
+import reactStringReplace from 'react-string-replace';
+import Tooltip from 'rc-tooltip';
 
-const reactStringReplace = require('react-string-replace');
+import 'rc-tooltip/assets/bootstrap_white.css';
 
 const QuestionContainer = styled.div`
   padding: 0.75rem 1rem;
@@ -50,12 +52,31 @@ const QuestionContainer = styled.div`
 
 const QuestionCard = ({ question, answer, isOpen, onClick = () => {}, search }) => {
 
+    const [isCopied, setIsCopied] = useState(false);
+    const copy = event => {
+        event.preventDefault();
+        event.stopPropagation();
+        navigator.clipboard.writeText(encodeURI(`${location.origin}/faq?q=${question}`))
+        setIsCopied(true);
+        setTimeout(() => setIsCopied(false), 1000);
+    }
+
     return <QuestionContainer>
-        <button onClick={onClick} className="font-semibold">
-            <i className={`fa fa-chevron-up ${isOpen ? 'flip' : ''}`}/>
-            <div>
-                {reactStringReplace(question, search, match => <span style={{ background: 'yellow' }}>{match}</span>)}
+        <button onClick={onClick} className="font-semibold w-full justify-between">
+            <div className="flex items-baseline">
+                <i className={`fa fa-chevron-up ${isOpen ? 'flip' : ''}`}/>
+                <div>
+                    {reactStringReplace(question, search, match => (
+                        <span style={{ background: 'yellow' }}>{match}</span>
+                    ))}
+                </div>
             </div>
+
+            <Tooltip overlay={isCopied ? 'copied!' : 'Click to copy link to the question'} placement="bottom">
+                <a href="#" onClick={copy}>
+                    <i className="fas fa-share-alt opacity-75 text-sm" />
+                </a>
+            </Tooltip>
         </button>
         <AnimatePresence>
             {isOpen && (
