@@ -162,32 +162,32 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
         {
             "label": "About",
             "link": "/about",
-            // items: [
-            //     {
-            //         "label": "What's India CTF Jr?",
-            //         "link": "/about#what"
-            //     },
-            //     {
-            //         "label": "Why InCTF Jr?",
-            //         "link": "/about#why"
-            //     },
-            //     {
-            //         "label": "Our Impact",
-            //         "link": "/about#impact"
-            //     },
-            //     {
-            //         "label": "Advisory Board",
-            //         "link": "/advisory-board"
-            //     },
-            //     {
-            //         "label": "Organizers",
-            //         "link": "/about#organizers"
-            //     },
-            //     {
-            //         "label": "Sponsors",
-            //         "link": "/sponsors"
-            //     }
-            // ]
+            items: [
+                {
+                    "label": "What's India CTF Jr?",
+                    "link": "/about#what"
+                },
+                {
+                    "label": "Why InCTF Jr?",
+                    "link": "/about#why"
+                },
+                {
+                    "label": "Our Impact",
+                    "link": "/about#impact"
+                },
+                {
+                    "label": "Advisory Board",
+                    "link": "/advisory-board"
+                },
+                // {
+                //     "label": "Organizers",
+                //     "link": "/about#organizers"
+                // },
+                {
+                    "label": "Sponsors",
+                    "link": "/sponsors"
+                }
+            ]
         },
         {
             "label": "Learn",
