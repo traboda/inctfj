@@ -13,7 +13,6 @@ import LandingStatsBar from "../src/components/landing/StatsCounter";
 import LandingHowItWorks from "../src/components/landing/HowItWorks";
 import LandingContactsBar from "../src/components/landing/ContactsBar";
 import TopBar from "../src/components/shared/TopBar";
-import SponsorBar from "../src/components/landing/SponsorBar";
 import CTAPartners from "../src/components/landing/CTAPartners";
 import LandingPromoVideo from "../src/components/landing/PromoVideo";
 import Schedule from "../src/components/landing/Schedule";
