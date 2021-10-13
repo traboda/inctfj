@@ -1,14 +1,13 @@
 import React, {useEffect} from 'react';
 import Head from "next/head";
 import config from 'react-reveal/globals';
-// import SupportDesk from "./Support";
 
 config({ ssrFadeout: true });
 
 const seoTags = {
     "siteName": "InCTF Jr",
-    "tagLine": "India's First & Premier CTF Hacking Contest for School Students",
-    "description": "India's First & Premier Hacking & Cyber Security Contest exclusively for High School Students, organized by team bi0s, India's No.1 ranked CTF Team."
+    "tagLine": "India's First & Only CTF CyberSecurity Championship for School Students",
+    "description": "India's First & Only CTF & Cyber Security Championship & Talent Incubation Programme exclusively for High School Students, organized by team bi0s, India's No.1 ranked CTF Team."
 };
 
 const Base = ({ children, meta }) => {
