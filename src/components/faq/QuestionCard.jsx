@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion";
+
+const reactStringReplace = require('react-string-replace');
 
 const QuestionContainer = styled.div`
   padding: 0.75rem 1rem;
@@ -46,12 +48,14 @@ const QuestionContainer = styled.div`
   }
 `;
 
-const QuestionCard = ({ question, answer, isOpen, onClick = () => {} }) => {
+const QuestionCard = ({ question, answer, isOpen, onClick = () => {}, search }) => {
 
     return <QuestionContainer>
         <button onClick={onClick} className="font-semibold">
             <i className={`fa fa-chevron-up ${isOpen ? 'flip' : ''}`}/>
-            {question}
+            <div>
+                {reactStringReplace(question, search, match => <span style={{ background: 'yellow' }}>{match}</span>)}
+            </div>
         </button>
         <AnimatePresence>
             {isOpen && (
