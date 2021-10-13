@@ -194,6 +194,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                                             src={require('../../assets/images/logos/cbse_logo.png')}
                                             style={{ position: 'unset', maxHeight: '90px', maxWidth: '100%' }}
                                             draggable="false"
+                                            className="inline"
                                         />
                                     </a>
                                 </div>

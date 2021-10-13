@@ -27,7 +27,7 @@ const SponsorBar = () => {
             <div className="w-full md:w-1/2 pr-4 pl-4 p-2">
                 <h4 className="text-center">Our Sponsors</h4>
                 <SponsorsContainer>
-                    <a href="https://jnanamarga.in/" target="_blank" rel="nofollow noopener">
+                    <a href="http://jnanamarga.in/" target="_blank" rel="nofollow noopener">
                         <img
                             alt="Jnana Marga Technologies" draggable="false"
                             src={require('../../assets/images/logos/jnanamarga_tech.jpg')}
