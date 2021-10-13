@@ -169,14 +169,15 @@ const LandingHeader = ({ UTMSource = null }) => {
                                         InCTF Junior is India's First & Premier Hacking & Cyber Security Contest for High School Students,
                                         organized by team bi0s, India's No.1 ranked CTF Team.
                                         <span className="mt-6">
-                                    Every year the brightest young hackers from all across India participate in this the learn & hack CTF contest,
-                                    win exciting prizes & kick-start their cyber-security career.
-                                </span>
+                                            Every year the brightest young hackers from all across India participate in this the learn & hack CTF contest,
+                                            win exciting prizes & kick-start their cyber-security career.
+                                        </span>
                                     </p>
                                 </Fade>
                             </div>
                             <div className="md:w-1/3 my-4 md:my-0 px-3">
                                 <img
+                                    alt="InCTF Jr"
                                     id="landing-header-cover-image"
                                     src={require('../../assets/images/covers/landing-cover-image.png')}
                                     style={{ position: 'unset', maxHeight: '500px', maxWidth: '100%' }}

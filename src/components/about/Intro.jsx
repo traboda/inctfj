@@ -4,6 +4,11 @@ import styled from "@emotion/styled";
 
 const IntroSectionWrap = styled.div`
     user-select: none;
+    p {
+      max-width: 100%;
+      width: 800px;
+      margin-bottom: 1rem;
+    }
 `;
 
 
@@ -21,13 +26,18 @@ const InctfIntro = () => {
             <div className="flex flex-wrap  mx-0">
                 <div className="md:w-2/3 pr-4 pl-4 flex items-center p-6">
                     <div>
-                        <Fade up><h1 className="font-bold">Why InCTF Junior?</h1></Fade>
+                        <Fade up><h1 className="font-bold mb-6">Why InCTF Junior?</h1></Fade>
                         <Fade>
                             <p>
                                 A recent report has revealed that a miniscule 0.6% of graduate students are currently working in
-                                cyber security while cyber attacks and breaches are manifesting in the country. In order to
+                                cyber security while cyber attacks and breaches are rapidly increasing world-wide. In order to
                                 encourage the youth to participate, they need to be taught at a young age about the importance of
-                                computer security. A lot of research have been proven to be the best way to approach this is
+                                computer security.
+                            </p>
+                        </Fade>
+                        <Fade>
+                            <p>
+                                A lot of research have been proven to be the best way to approach this is
                                 Capture the Flag style contests. These contests typically simulate real life scenarios that enable
                                 participants to develop real world security skills. Many of the countries like USA and China have
                                 realized the need for cyber security education and are conducting CTF contests for school students.
