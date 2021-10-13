@@ -201,6 +201,11 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                     "link": "/trainings"
                 },
                 {
+                    "label": "Writeups",
+                    badge: "new",
+                    "link": "/writeups"
+                },
+                {
                     "label": "Videos & Guides",
                     "link": "/resources"
                 },

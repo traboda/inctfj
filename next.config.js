@@ -64,6 +64,7 @@ const customConfig = {
         { dev, dir, outDir, distDir, buildId }
     ) {
         const posts = require('./src/data/posts');
+        const writeups = require('./src/data/writeups');
         return {
             "/": { page: "/" },
             "/blog": { page: "/blog" },
@@ -81,6 +82,7 @@ const customConfig = {
             "/advisory-board": { page: "/advisory-board" },
             "/discord": { page: "/discord" },
             "/privacy": { page: "/privacy" },
+            ...writeups,
             ...posts
         }
     },
