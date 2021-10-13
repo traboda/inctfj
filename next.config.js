@@ -78,6 +78,9 @@ const customConfig = {
             "/start": { page: "/start" },
             "/resources": { page: "/resources" },
             "/trainings": { page: "/trainings" },
+            "/advisory-board": { page: "/advisory-board" },
+            "/discord": { page: "/discord" },
+            "/privacy": { page: "/privacy" },
             ...posts
         }
     },

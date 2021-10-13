@@ -1,12 +1,18 @@
-const DiscordRedirect = () => <div />;
+import {useEffect} from "react";
+import {useRouter} from "next/router";
+import Base from "../src/components/shared/Base";
 
-export async function getServerSideProps(context) {
-    return {
-        redirect: {
-            destination: 'https://discord.gg/QVXewGh7sP',
-            permanent: false,
-        },
-    }
+const DiscordRedirect = () => {
+
+    const router = useRouter();
+
+    useEffect(() => {
+        router.push('https://discord.gg/QVXewGh7sP')
+    }, []);
+
+    return <Base meta={{ title: 'Join InCTF Jr Discord Server' }}>
+        <h1>Please wait while we redirect you.</h1>
+    </Base>;
 };
 
 export default DiscordRedirect;

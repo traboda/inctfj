@@ -183,10 +183,10 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 //     "label": "Organizers",
                 //     "link": "/about#organizers"
                 // },
-                {
-                    "label": "Sponsors",
-                    "link": "/sponsors"
-                }
+                // {
+                //     "label": "Sponsors",
+                //     "link": "/sponsors"
+                // }
             ]
         },
         {
@@ -211,7 +211,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                     "link": "https://wiki.bi0s.in/"
                 },
                 {
-                    "label": "Join Community",
+                    "label": "Join Discord Community",
                     "link": "/discord"
                 }
             ]
