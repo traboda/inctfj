@@ -22,7 +22,7 @@ const InctfIntro = () => {
     ]
 
     return <IntroSectionWrap>
-        <div className="container min-w-lg mx-auto sm:px-4 py-4 px-1">
+        <div className="container min-w-lg mx-auto sm:px-4 py-12 px-1">
             <div className="flex flex-wrap  mx-0">
                 <div className="md:w-2/3 pr-4 pl-4 flex items-center p-6">
                     <div>
