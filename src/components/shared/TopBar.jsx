@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from "@emotion/styled";
-import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import { clearAllBodyScrollLocks } from 'body-scroll-lock';
 import Modal from "react-modal";
+import Link from "next/link";
 
 import SideBar from "./SideBar";
 import { setUserInfo, useAuthState } from "../../states";
 import TopBarItem from "./TopBarItem";
+
 
 const TopbarContainer = styled.header`
   position: fixed;
@@ -273,8 +275,11 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                             className="w-1/4 md:w-1/6 md:text-center flex items-center md:justify-end justify-center px-2"
                         >
                             <a href="/">
-                                <img className="logo" src={require('../../assets/images/logos/inctf.png')}
-                                     alt="InCTFj"/>
+                                <img
+                                    className="logo"
+                                    src={require('../../assets/images/logos/inctf.png')}
+                                    alt="InCTF Jr"
+                                />
                             </a>
                         </div>
                         <div className="pr-4 pl-4 md:w-5/6 pr-4 pl-4 px-1 hidden md:flex items-center">
@@ -358,6 +363,18 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
             onLogOut={onLogOut}
         />}
         <div style={{ height: topbarRef ? topbarRef?.current?.clientHeight : '72px' }} className="hidden md:block"/>
+        <div className="block md:hidden text-center pt-6 px-2 pb-4">
+            <Link passHref href="/">
+                <a>
+                    <img
+                        alt="InCTF Jr"
+                        style={{ height: '72px' }}
+                        className="inline"
+                        src={require('../../assets/images/branding/colorful.png')}
+                    />
+                </a>
+            </Link>
+        </div>
     </div>
 
 };

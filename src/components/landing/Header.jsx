@@ -11,7 +11,7 @@ const HeaderContainer = styled.section`
     align-items: center;
     justify-content: center;
     .header-container {
-        padding-top: 7.5vh;
+        padding-top: 1.5vh;
         min-height: 100vh;
         display: flex;
         align-items: center;
@@ -146,13 +146,6 @@ const LandingHeader = ({ UTMSource = null }) => {
 
     return (
         <React.Fragment>
-            <div className="block md:hidden py-4 px-5">
-                <img
-                    alt="InCTF Jr"
-                    style={{ height: '72px' }}
-                    src={require('../../assets/images/branding/colorful.png')}
-                />
-            </div>
             <HeaderContainer>
                 <div className="container header-container" style={{ width: '1200px', maxWidth: '100%' }}>
                     <div>
