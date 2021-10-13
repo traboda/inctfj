@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styled from "@emotion/styled";
-import Fade from "react-reveal/Fade";
 
 import Base from "../src/components/shared/Base";
 import TopBar from "../src/components/shared/TopBar";
@@ -65,8 +64,13 @@ const FAQPage = () => {
                 <div>Frequently Asked Questions</div>
             </h1>
             <div className="px-6 mx-auto" style={{ maxWidth: 800 }}>
-                <FAQFilter search={search} setSearch={setSearch} tags={tags} setTags={setTags} totalTags={totalTags}/>
-
+                <FAQFilter
+                    search={search}
+                    setSearch={setSearch}
+                    tags={tags}
+                    setTags={setTags}
+                    totalTags={totalTags}
+                />
                 {filteredFAQ().map((q, i) =>
                     <QuestionCard
                         search={search}

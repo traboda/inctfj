@@ -9,7 +9,7 @@ const FAQFilter = ({ search, setSearch, tags, setTags, totalTags }) => {
                     type="text"
                     value={search}
                     onChange={e => setSearch(e.target.value)}
-                    placeholder="Search..."
+                    placeholder="Enter your question here..."
                     className="outline-none pl-4 pr-12 py-2 border rounded-lg shadow-inner focus:border-yellow-600 w-full"
                 />
                 <div
