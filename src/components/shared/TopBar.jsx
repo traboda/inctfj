@@ -287,7 +287,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                     </nav>
                                 </div>
                                 <div className="md:w-1/4 xl:w-1/2 pr-4 pl-4 flex justify-end text-right px-1">
-                                    <TopbarInfoCard>
+                                    <TopbarInfoCard className="items-center">
                                         <div className="hidden xl:inline-block mr-2">
                                             <div>India's First & Only CTF Hacking Contest</div>
                                             <h5 style={{ color: '#F13F17' }}>Exclusively for School Students</h5>
