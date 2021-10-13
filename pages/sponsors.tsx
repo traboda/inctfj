@@ -8,7 +8,7 @@ const SponsorsPage = () => {
     return (
         <Base meta={{ title: "Sponsors InCTF Jr." }}>
             <TopBar />
-            <div className="mx-auto px-4 py-16" style={{ maxWidth: 700 }}>
+            <div className="mx-auto text-center px-4 py-16" style={{ maxWidth: 700 }}>
                 <SponsorsSection />
             </div>
             <Footer />

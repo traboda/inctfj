@@ -36,6 +36,10 @@ const TopbarContainer = styled.header`
     opacity: 1;
   }
   
+  &.top {
+    margin-top: 7vh;
+  }
+  
   @media screen and (max-width: 768px) {
     border-top: 2px solid #FF6F00;
     border-bottom: none !important;
@@ -174,8 +178,12 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                     "link": "/about#why"
                 },
                 {
-                    "label": "Our Impact",
-                    "link": "/about#impact"
+                    "label": "Our Reach & Statistics",
+                    "link": "/about#reach"
+                },
+                {
+                    "label": "Organizing Team",
+                    "link": "/organizers"
                 },
                 {
                     "label": "Advisory Board",
@@ -185,14 +193,68 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 //     "label": "Organizers",
                 //     "link": "/about#organizers"
                 // },
-                // {
-                //     "label": "Sponsors",
-                //     "link": "/sponsors"
-                // }
+                {
+                    "label": "Sponsors",
+                    "link": "/sponsors"
+                }
             ]
         },
+        // {
+        //     "label": "Talent Incubation",
+        //     "link": "/talent-incubation",
+        //     "items": [
+        //         {
+        //             "label": "The CTF Pedagogy",
+        //             "link": "/talent-incubation#pedagogy"
+        //         },
+        //         {
+        //             "label": "CyberSafety Education",
+        //             "link": "/talent-incubation#programmes"
+        //         },
+        //         {
+        //             "label": "Indian Cyber League",
+        //             "link": "/talent-incubation#indian-cyber-league"
+        //         },
+        //         {
+        //             "label": "Diversity Initiatives",
+        //             "link": "/talent-incubation#diversity"
+        //         },
+        //         {
+        //             "label": "Success Stories",
+        //             "link": "/about#impact"
+        //         }
+        //     ]
+        // },
+        // {
+        //     "label": "Championship",
+        //     "link": "/championship",
+        //     "items": [
+        //         {
+        //             "label": "Why Participate?",
+        //             "link": "/championship#why-participate",
+        //         },
+        //         {
+        //             "label": "Contest Timeline",
+        //             "link": "/championship#timeline",
+        //         },
+        //         {
+        //             "label": "Guidelines & Rules",
+        //             "link": "/rules",
+        //         },
+        //         {
+        //             "label": "Prizes",
+        //             badge: "3 Lks+",
+        //             badgeColor: "bg-green-100",
+        //             "link": "championship/#prizes",
+        //         },
+        //         {
+        //             "label": "Past Winners",
+        //             "link": "/stats",
+        //         }
+        //     ]
+        // },
         {
-            "label": "Learn",
+            "label": "Get Started",
             "link": "/resources",
             items: [
                 {
@@ -201,68 +263,39 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                     "link": "/trainings"
                 },
                 {
-                    "label": "Writeups",
-                    badge: "new",
-                    "link": "/writeups"
-                },
-                {
                     "label": "Videos & Guides",
                     "link": "/resources"
                 },
                 {
-                    "label": "Practice Challenges",
-                    "link": "https://app.traboda.com/"
+                    "label": "FAQ",
+                    "link": "/faq",
                 },
                 {
                     "label": "bi0s Wiki",
                     "link": "https://wiki.bi0s.in/"
                 },
                 {
-                    "label": "Join Discord Community",
-                    "link": "/discord"
-                }
-            ]
-        },
-        // {
-        //     "label": "Championship",
-        //     "link": "/championship",
-        //     "items": [
-        //         {
-        //             "label": "How to Play a CTF?",
-        //             "link": "championship/#how-to",
-        //         },
-        //         {
-        //             "label": "Guidelines & Rules",
-        //             "link": "/rules",
-        //         },
-        //         {
-        //             "label": "Prizes",
-        //             "link": "championship/#prizes",
-        //         },
-        //         {
-        //             "label": "Past Statistics",
-        //             "link": "/stats",
-        //         }
-        //     ]
-        // },
-        {
-            "label": "Resources",
-            "link": "/resources",
-            "items": [
+                    "label": "Practice Challenges",
+                    "link": "https://app.traboda.com/"
+                },
                 {
-                    "label": "FAQ",
-                    "link": "/faq",
+                    "label": "Writeups",
+                    badge: "new",
+                    badgeColor: "bg-yellow-100",
+                    "link": "/writeups"
                 },
                 {
                     "label": "Promote InCTF",
                     "link": "/promote"
                 },
-                // {
-                //     "label": "Get Help",
-                //     "link": "/support"
-                // }
+                {
+                    "label": "Get Help",
+                    "badge": "discord",
+                    badgeColor: "bg-blue-100",
+                    "link": "/discord"
+                }
             ]
-        }
+        },
     ]
 
     const isVisible = () => scrollDir === 'up' || isAtTop;
@@ -272,6 +305,21 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
     }, [scrollDir]);
 
     return <div>
+        <div style={{ fontSize: '14px' }} className="hidden md:block p-2 bg-blue-800 text-white">
+            <div className="flex flex-wrap items-center">
+                <div className="md:w-4/5 px-3">
+                    Have you got stuck? Need Help? <wbr />
+                    <span className="inline-block">
+                                Join our discord server, ask your doubts & get support from our experts.
+                            </span>
+                </div>
+                <div className="md:w-1/5 flex items-center md:my-0 px-2 md:px-0 justify-end">
+                    <a href="/discord" className="bg-white text-blue-800 mb-0 hover:text-primary rounded-lg px-3 py-2">
+                        Join Discord Now <i className="fa fa-chevron-right ml-1" />
+                    </a>
+                </div>
+            </div>
+        </div>
         <TopbarContainer ref={topbarRef} className={scrollDir + ` ${isAtTop ? 'top' : 'floating'}`}>
             <div className="topbar-container">
                 <div className="mx-0 w-full px-0">
@@ -287,7 +335,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                 />
                             </a>
                         </div>
-                        <div className="pr-4 pl-4 md:w-5/6 pr-4 pl-4 px-1 hidden md:flex items-center">
+                        <div className="md:w-5/6 px-1 hidden md:flex items-center">
                             <div className="flex flex-wrap  mx-0 w-full">
                                 <div className="md:w-3/4 xl:w-1/2 pr-4 pl-4 flex items-center px-1">
                                     <nav className="flex">
@@ -297,10 +345,10 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                     </nav>
                                 </div>
                                 <div className="md:w-1/4 xl:w-1/2 pr-4 pl-4 flex justify-end text-right px-1">
-                                    <TopbarInfoCard className="items-center">
+                                    <TopbarInfoCard className="items-center flex">
                                         <div className="hidden xl:inline-block mr-2">
-                                            <div>India's First & Only CTF Hacking Contest</div>
-                                            <h5 style={{ color: '#F13F17' }}>Exclusively for School Students</h5>
+                                            <div>India's First & Only CTF Championship</div>
+                                            <h5 style={{ color: '#F13F17' }} className="mb-0">Exclusively for School Students</h5>
                                         </div>
                                         <button onClick={() => setShowRegCard(true)}>Register</button>
                                     </TopbarInfoCard>

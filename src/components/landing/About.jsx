@@ -61,7 +61,7 @@ const HighlightFeature = styled('div')`
 const LandingAboutInCTF = () => (
     <AboutInCTFSection>
         <Zoom up>
-            <div className="flex justify-center mb-6">
+            <div className="md:hidden flex justify-center mb-6">
                 <div className="rounded-lg p-2 bg-blue-100" style={{ maxWidth: '100%', width: '1100px' }}>
                     <div className="flex flex-wrap items-center">
                         <div className="md:w-4/5 px-3">

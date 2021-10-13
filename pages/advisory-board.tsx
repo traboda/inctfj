@@ -2,11 +2,11 @@ import React from "react";
 import TopBar from "../src/components/shared/TopBar";
 import Base from "../src/components/shared/Base";
 
-import {AdvisoryBoard} from "../src/data/organizers";
+import { AdvisoryBoard, AdvisoryBoardAlumni } from "../src/data/organizers";
 import ProfileCard from "../src/components/ProfileCard";
 import Footer from "../src/components/shared/Footer";
 
-const OurTeam = () => {
+const AdvisoryBoardPage = () => {
 
     return (
         <Base meta={{ title: "Advisory Board" }}>
@@ -29,10 +29,22 @@ const OurTeam = () => {
             </div>
             <div className="container py-6 px-2" style={{ background: '#FAFAFA' }}>
                 {AdvisoryBoard?.length > 0 && (
-                    <div>
-                        <h2 className="text-2xl text-center">Industry Experts</h2>
+                    <div className="py-5">
+                        <h2 className="text-3xl mb-4 text-center">Industry Experts</h2>
                         <div className="flex flex-wrap">
                             {AdvisoryBoard.map((a) => (
+                                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 py-3 sm:p-3">
+                                    <ProfileCard {...a} />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+                {AdvisoryBoardAlumni?.length > 0 && (
+                    <div className="py-5">
+                        <h2 className="text-3xl mb-5 text-center">Amrita Alumni & Industry Experts</h2>
+                        <div className="flex flex-wrap">
+                            {AdvisoryBoardAlumni.map((a) => (
                                 <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 py-3 sm:p-3">
                                     <ProfileCard {...a} />
                                 </div>
@@ -46,4 +58,4 @@ const OurTeam = () => {
     )
 };
 
-export default OurTeam;
+export default AdvisoryBoardPage;

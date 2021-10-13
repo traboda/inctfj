@@ -16,7 +16,7 @@ const ProfileCard = ({
         {org && <div className="text-lg">{org}</div>}
         {linkedIn && (
             <div className=" mt-3 text-3xl text-center">
-                <a href={linkedIn} className="fab fa-linkedin" />
+                <a href={linkedIn} target="_blank" className="fab fa-linkedin" />
             </div>
         )}
     </div>

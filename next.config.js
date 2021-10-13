@@ -82,6 +82,8 @@ const customConfig = {
             "/advisory-board": { page: "/advisory-board" },
             "/discord": { page: "/discord" },
             "/privacy": { page: "/privacy" },
+            "/sponsors": { page: "/sponsors" },
+            "/organizers": { page: "/organizers" },
             ...writeups,
             ...posts
         }

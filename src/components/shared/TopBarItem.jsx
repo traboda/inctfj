@@ -14,7 +14,7 @@ const ItemDropDown = styled('div')`
     background: white;
     padding: 1rem;
     border-radius: 1.25rem;
-    box-shadow: 5px 6px 8px rgba(0,0,0,0.15);
+    box-shadow: 1px 6px 8px rgba(0,0,0,0.2);
     width: 250px;
     max-width: 100vw;
     transition: all 0.2s ease-in;
@@ -48,7 +48,7 @@ const TopBarItem = ({ item, isVisible }) => {
                                 <a className="block">
                                     {i.label}
                                     {i?.badge && (
-                                        <div className="bg-green-100 px-2 py-1 ml-1 inline rounded text-sm">
+                                        <div className={`${i?.badgeColor ? i.badgeColor : 'bg-green-100'} px-2 py-1 ml-1 inline rounded text-sm`}>
                                             {i.badge}
                                         </div>
                                     )}
