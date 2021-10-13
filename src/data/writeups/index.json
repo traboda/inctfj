@@ -1,0 +1,14 @@
+{
+  "/writeup/586": {
+    "page": "/writeup/[id]",
+    "query": { "id": 586 }
+  },
+  "/writeup/588": {
+    "page": "/writeup/[id]",
+    "query": { "id": 588 }
+  },
+  "/writeup/587": {
+    "page": "/writeup/[id]",
+    "query": { "id": 587 }
+  }
+}
