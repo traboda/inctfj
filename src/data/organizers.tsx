@@ -4,7 +4,8 @@ export const AdvisoryBoard = [
         desg: "CISO",
         org: "Vodafone Idea (Vi)",
         photo: require('../../src/assets/images/people/mathan-kasilingam.jpg'),
-        linkedIn: "https://www.linkedin.com/in/mathan-babu-kasilingam-4bb4564/"
+        linkedIn: "https://www.linkedin.com/in/mathan-babu-kasilingam-4bb4564/",
+        twitter: "https://twitter.com/luciuslobo"
     },
     {
         name: "Ambarish Kumar Singh",
@@ -31,7 +32,8 @@ export const AdvisoryBoard = [
         desg: "CISO",
         org: "Tech Mahindra",
         photo: require('../../src/assets/images/people/lucius-lobo.jpg'),
-        linkedIn: "https://www.linkedin.com/in/luciuslobo/"
+        linkedIn: "https://www.linkedin.com/in/luciuslobo/",
+        twitter: "https://twitter.com/luciuslobo"
     },
     {
         name: "Anuprita Daga",

@@ -18,9 +18,12 @@ const OurTeam = () => {
                 <h1 className="text-red-700 mb-3">InCTF Adivisory Board</h1>
                 <div className="flex justify-center">
                     <p className="opacity-75 px-2" style={{ maxWidth: '100%', width: '700px' }}>
-                        InCTF Advisory committee consists of eminent personalities from academia and industry who reviews
-                        and provides valuable help and advice on all aspects of our programme with the aim of making the
-                        same an International gold standard when it comes to CyberSecurity training.
+                        The InCTF Advisory Board is a high-level expert panel consisting of eminent personalities
+                        from academia and industry who review and provide valuable help and advice on all aspects
+                        of our end-to-end CyberSecurity programme. Our advisory board plays a pivotal role in transforming
+                        InCTF to a global pioneer in CyberSecurity education, that sets a platform that inspires & enables
+                        CyberSecurity education among the students, and thereby helping nurture next generation of
+                        CyberSecurity workforce for tomorrow.
                     </p>
                 </div>
             </div>
