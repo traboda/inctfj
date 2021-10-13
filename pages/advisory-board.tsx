@@ -15,9 +15,9 @@ const OurTeam = () => {
                 className="flex items-center justify-center text-center flex-col"
                 style={{ minHeight: '40vh' }}
             >
-                <h1 className="text-red-700 mb-3">InCTF Adivisory Board</h1>
-                <div className="flex justify-center">
-                    <p className="opacity-75 px-2" style={{ maxWidth: '100%', width: '700px' }}>
+                <h1 className="text-red-700 py-4">InCTF Adivisory Board</h1>
+                <div className="flex w-full justify-center">
+                    <p className="opacity-75 px-3" style={{ maxWidth: '100%', width: '700px' }}>
                         The InCTF Advisory Board is a high-level expert panel consisting of eminent personalities
                         from academia and industry who review and provide valuable help and advice on all aspects
                         of our end-to-end CyberSecurity programme. Our advisory board plays a pivotal role in transforming
@@ -27,14 +27,17 @@ const OurTeam = () => {
                     </p>
                 </div>
             </div>
-            <div className="container p-2" style={{ background: '#FAFAFA' }}>
+            <div className="container py-6 px-2" style={{ background: '#FAFAFA' }}>
                 {AdvisoryBoard?.length > 0 && (
-                    <div className="flex flex-wrap">
-                        {AdvisoryBoard.map((a) => (
-                            <div className="sm:w-1/2 md:w-1/3 lg:w-1/4 py-3 sm:p-3">
-                                <ProfileCard {...a} />
-                            </div>
-                        ))}
+                    <div>
+                        <h2 className="text-2xl text-center">Industry Experts</h2>
+                        <div className="flex flex-wrap">
+                            {AdvisoryBoard.map((a) => (
+                                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 py-3 sm:p-3">
+                                    <ProfileCard {...a} />
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 )}
             </div>
