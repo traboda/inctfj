@@ -1,6 +1,6 @@
 const DiscordRedirect = () => <div />;
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
     return {
         redirect: {
             destination: 'https://discord.gg/QVXewGh7sP',
