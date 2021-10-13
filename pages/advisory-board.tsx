@@ -31,7 +31,7 @@ const OurTeam = () => {
                 {AdvisoryBoard?.length > 0 && (
                     <div className="flex flex-wrap">
                         {AdvisoryBoard.map((a) => (
-                            <div className="w-1/2 md:w-1/3 lg:w-1/4 p-3">
+                            <div className="sm:w-1/2 md:w-1/3 lg:w-1/4 py-3 sm:p-3">
                                 <ProfileCard {...a} />
                             </div>
                         ))}
