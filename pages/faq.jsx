@@ -65,6 +65,30 @@ const FAQPage = () => {
     const updateTotalVisible = (value) =>
         setTotalVisible(Math.max(10, Math.min(value, filteredFAQ(false).length)));
 
+    const renderFAQ = () => {
+        const items = filteredFAQ();
+        return items?.length > 0 ? (
+            items.map((q, i) =>
+                <QuestionCard
+                    search={search}
+                    {...q}
+                    isOpen={i === openQ}
+                    onClick={() => setOpen(i !== openQ ? i : null)}
+                    key={i}
+                />
+            )
+        ) : (
+            <div className="py-5 text-center">
+                <h4 className="text-3xl mb-4">No Answers Found 😔</h4>
+                <p className="text-dark ">
+                    Your question in not one among our frequently asked questions.
+                    You could try rephrasing the question in a different way, or
+                    can join our <a href="/discord" target="_blank" className="hover:text-blue-600">discord community <i className="fa fa-external-link mr-1" /> </a> to ask us directly.
+                </p>
+            </div>
+        );
+    }
+
     return <Base meta={{ title: "Frequently Asked Questions (FAQ)" }}>
         <TopBar/>
         <FAQSection>
@@ -80,23 +104,12 @@ const FAQPage = () => {
                     setTags={setTags}
                     totalTags={totalTags}
                 />
-                {filteredFAQ().map((q, i) =>
-                    <QuestionCard
-                        search={search}
-                        {...q}
-                        isOpen={i === openQ}
-                        onClick={() => setOpen(i !== openQ ? i : null)}
-                        key={i}
-                    />
-                )}
-                <Waypoint
-                    onEnter={() => updateTotalVisible(totalVisible + 4)}
-                >
+                {renderFAQ()}
+                <Waypoint onEnter={() => updateTotalVisible(totalVisible + 4)}>
                     <div className="my-6 text-center">
                         <div style={{ color: '#111' }}>Did not find what you were looking for?</div>
                         <div style={{ color: '#222' }}>
-                            Write to us at
-                            <a href="mailto:inctfj@am.amrita.edu">inctfj@am.amrita.edu</a>
+                            Write to us at <a href="mailto:inctfj@am.amrita.edu">inctfj@am.amrita.edu</a>
                         </div>
                     </div>
                 </Waypoint>
