@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from "@emotion/styled";
-import Fade from "react-reveal/Fade";
+import { useRouter } from "next/router";
 
 import Base from "../src/components/shared/Base";
 import TopBar from "../src/components/shared/TopBar";
@@ -40,6 +40,14 @@ const FAQPage = () => {
     const [openQ, setOpen] = useState(0);
     const [search, setSearch] = useState('');
     const [tags, setTags] = useState(new Set());
+
+    const router = useRouter();
+
+    useEffect(() => {
+        if(!router.isReady) return;
+        const { q } = router.query;
+        setSearch(q ?? '');
+    }, [router.isReady]);
 
     useEffect(() => {
         setOpen(0);

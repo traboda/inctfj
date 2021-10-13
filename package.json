@@ -29,6 +29,7 @@
     "next-offline": "^5.0.2",
     "next-optimized-images": "2.6.1",
     "next-videos": "1.4.0",
+    "rc-tooltip": "^5.1.1",
     "re-resizable": "6.9.0",
     "react": "17.0.1",
     "react-countup": "4.3.3",
