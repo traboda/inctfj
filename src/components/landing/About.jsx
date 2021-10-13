@@ -61,6 +61,23 @@ const HighlightFeature = styled('div')`
 const LandingAboutInCTF = () => (
     <AboutInCTFSection>
         <Zoom up>
+            <div className="flex justify-center mb-6">
+                <div className="rounded-lg p-2 bg-blue-100" style={{ maxWidth: '100%', width: '1100px' }}>
+                    <div className="flex flex-wrap items-center">
+                        <div className="md:w-4/5 px-3">
+                            Have you got stuck? Need Help? <wbr />
+                            <span className="inline-block">
+                                Join our discord server, ask your doubts & get support from our experts.
+                            </span>
+                        </div>
+                        <div className="md:w-1/5 flex items-center md:my-0 my-3 px-2 md:px-0 justify-end">
+                            <a href="/discord" className="bg-blue-800 mb-0 px-4 py-3">
+                                Join Discord Now <i className="fa fa-chevron-right ml-1" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="flex flex-wrap  mx-0">
                 <div className="md:w-2/3 p-2">
                     <h2 className="mt-2">

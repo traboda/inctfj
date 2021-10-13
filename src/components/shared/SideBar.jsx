@@ -127,6 +127,7 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
         { "icon": require('../../assets/images/icons/learn.png'), "title": "Trainings", "href": "/trainings" },
         { "icon": require('../../assets/images/icons/trophy.png'), "title": "Past Stats", "href": "/stats" },
         { "icon": require('../../assets/images/icons/faq.png'), "title": "FAQ", "href": "/faq" },
+        { "icon": require('../../assets/images/icons/faq.png'), "title": "Get Help", "href": "/discord" },
     ] : [
         { "icon": require('../../assets/images/icons/sword.png'), "title": "CTF Arena", "href": "/ctf" },
         { "icon": require('../../assets/images/icons/dashboard.png'), "title": "Dashboard", "href": "/dashboard" },
