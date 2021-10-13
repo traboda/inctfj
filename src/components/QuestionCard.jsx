@@ -1,51 +1,71 @@
 import React from 'react';
 import styled from "@emotion/styled";
+import { AnimatePresence, motion } from "framer-motion"
 
 const QuestionContainer = styled.div`
-    padding: 0.75rem 1rem;
-    width: 100%;
-    background: white;
-    color: black;
-    box-shadow: 2px 3px 8px rgba(0,0,0,0.25);
-    border-radius: 5px;
-    margin-bottom: 0.75rem;
-    h5 { margin-bottom: 0; font-size: 18px; }
-    p {
-      font-size: 15px;
-      margin-top: 8px;
-      margin-bottom: 0;
-    }
-    button {
-      display: flex;
-      align-items: center;
-      padding: 0;
-      text-align: left;
-      background: none!important;
-      border: none;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  background: white;
+  color: #222;
+  margin-bottom: 0.5rem;
+  font-size: 17px;
+
+  p {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  button {
+    display: flex;
+    align-items: baseline;
+    padding: 0;
+    text-align: left;
+    background: none !important;
+    border: none;
+    font-size: 22px;
+    line-height: 1.5;
+
+    i {
       color: #fd7e14;
-      font-size: calc(1rem + 0.25vw);
-      line-height: 1.2;
-      i {
-         font-size: 22px;
-         margin-right: 8px;
-      }
-      &:focus, &:hover {
-        outline: none!important;
+      font-size: 22px;
+      margin-right: 8px;
+      transition: transform 250ms ease-in;
+
+      &.flip {
+        transform: rotate(180deg);
       }
     }
-    li {
-      margin: 5px 0;
+
+    &:focus, &:hover {
+      outline: none !important;
     }
+  }
+
+  li {
+    margin: 5px 0;
+  }
 `;
 
 const QuestionCard = ({ question, answer, isOpen, onClick = () => {} }) => {
 
     return <QuestionContainer>
-        <button onClick={onClick}>
-            {isOpen ? <i className="fa fa-chevron-up" /> : <i className="fa fa-chevron-down" />}
+        <button onClick={onClick} className="font-semibold">
+            <i className={`fa fa-chevron-up ${isOpen ? 'flip' : ''}`}/>
             {question}
         </button>
-        {isOpen && <div className="mx-2 mt-3 mb-1">{answer}</div>}
+        <AnimatePresence>
+            {isOpen && (
+                <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                >
+                    <div className="px-2 pt-3 pb-1" style={{ marginLeft: 19 }}>
+                        {answer}
+                    </div>
+                </motion.div>
+            )}
+        </AnimatePresence>
     </QuestionContainer>
 
 };
