@@ -1,6 +1,16 @@
 export default
 [
     {
+        "question": "Is this a quiz?",
+        "keywords": ["quiz"],
+        "answer": <>
+            No. InCTF is a Capture The Flag Championship, which is a more practical hands-on computer security competition.
+            Unlike quizzes, a participant will be working with actual tools & using problem solving skills to solve
+            challenges and obtain a flag that earns them points.
+        </>,
+        tags: ['getting-started']
+    },
+    {
         "question": "What is a Capture The Flag competition?",
         "answer": <>
             <p>
@@ -17,9 +27,10 @@ export default
         tags: ['getting-started']
     },
     {
-        "question": "Who can play Amrita InCTF Junior?",
+        "question": "Who can participate in Amrita InCTF Junior?",
         "answer": <>
-            The competition is open to all high school students (8th - 12th grade) from India.
+            The competition is open to all school students from classes 7th to 12th grade in India.
+            To be eligible for prizes, the student must be a citizen of India.
         </>,
         tags: ['eligibility', 'getting-started']
     },
@@ -154,13 +165,54 @@ export default
     },
     {
         "question": "Is InCTF Jr a team event?",
+        "keywords": [
+            "team event", "participate as a team", "individually or teams",
+        ],
         "answer": <>
             No. InCTF Jr is an individual CTF competition exclusively for school students in India.
         </>,
         tags: ['rules', 'eligibility']
     },
     {
+        "question": "How many students from a school can qualify for the finals?",
+        "keywords": [
+            "students from a school", "my school"
+        ],
+        "answer": <>
+            There is no restriction for the number of students who can participate from a school.
+            However, to ensure participation & diversity, only a maximum of 10 top students may be
+            qualified from a single school for the finals.
+        </>,
+        tags: ['rules', 'eligibility', 'qualifiers']
+    },
+    {
+        "question": "Will I get a certificate of participation?",
+        "keywords": [
+            "certificate of participation", "participation certificate"
+        ],
+        "answer": <>
+            Yes! You will get a digital participation certificate if you register and complete
+            at-least 1 challenge for the qualifiers. However, there is no participation certificate
+            for the learning round.
+        </>,
+        tags: ["certificate",]
+    },
+    {
+        "question": "Can I participate if I an NRI student?",
+        "keywords": ["nri"],
+        "answer": <>
+            Yes! InCTF Jr is open for school students who are citizens of India including Non-Residents of India.
+            However, overseas citizens of India, and students of Indian origin not holding an Indian citizenship
+            are not eligible for prizes, though are encouraged to participate.
+        </>,
+        tags: ["eligibility"]
+    },
+    {
         "question": "Should I be a school student to participate?",
+        "questions": [
+            "Should I be a school student to participate?",
+            "Can only school students participate?"
+        ],
         "answer": <>
             <p>
                 InCTF Junior is a beginner-level cyber-security programme we organize exclusively for school students in
@@ -182,5 +234,30 @@ export default
             and participate in the championship & programme.
         </>,
         tags: ['eligibility']
-    }
+    },
+    {
+        "question": "Is changing profile information possible after registration?",
+        "answer": <>
+            Until the qualifier CTF starts, participants are allowed to change some of their profile information
+            such as name, school etc. You can perform this by going to <a href="https://app.traboda.com/profile/edit">app.traboda.com/profile/edit</a>.
+            However, some information such as your email address used to register the account cannot be changed.
+        </>,
+        tags: ['traboda', 'help']
+    },
+    {
+        "question": "I forgot my password, what can I do?",
+        "keywords": ['password', 'forgot'],
+        "answer": <>
+            <p>
+                There is a password reset functionality available on Traboda. You can go to the login page/login popup,
+                and click on "forgot password" option. Upon entering your registered email address, you shall be emailed
+                a password reset link, using which you can change your password.
+            </p>
+            <p>
+                If you have used a gmail (google) email address to register, you can also use the login with google
+                option and get access to your account without needing a password (or password reset).
+            </p>
+        </>,
+        tags: ['traboda', 'help', 'password']
+    },
 ];

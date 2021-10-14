@@ -189,10 +189,6 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                     "label": "Advisory Board",
                     "link": "/advisory-board"
                 },
-                // {
-                //     "label": "Organizers",
-                //     "link": "/about#organizers"
-                // },
                 {
                     "label": "Sponsors",
                     "link": "/sponsors"
@@ -268,6 +264,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 },
                 {
                     "label": "FAQ",
+                    badge: "get answers",
                     "link": "/faq",
                 },
                 {

@@ -89,8 +89,8 @@ const LandingHowItWorks = () => {
     ]
 
     return <HowItWorksSection className="motto-cards flex flex-wrap py-5 mx-0 container mx-auto">
-        <div className="w-full flex p-0 mb-12 px-4">
-            <h2 className="md:px-4 px-1 py-2 rounded-r mt-4 mb-2 md:flex inline-block items-center bg-blue-600 text-gray-100 uppercase shadow font-bold text-center mb-0">
+        <div className="w-full flex justify-center p-0 mb-12 px-4">
+            <h2 className="md:px-4 px-1 py-2 rounded-r mt-4 mb-2 md:flex inline-block items-center font-bold text-center mb-0">
                 <img
                     draggable="false"
                     alt="How it Works?"
@@ -98,7 +98,7 @@ const LandingHowItWorks = () => {
                     className="mr-2 my-0 p-0 shadow-none inline-block"
                     style={{ width: '64px' }}
                 />
-                How does it Work?
+                How Does it Work?
             </h2>
         </div>
         {steps.map((s) =>

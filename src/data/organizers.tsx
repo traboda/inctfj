@@ -91,22 +91,22 @@ export const AdvisoryBoardAlumni = [
 
 export const OrganizingTeamChiefs = [
     {
-        name: "Vipin Pavithran",
-        desg: "Founder & Chief Organizer",
-        photo: require('../../src/assets/images/people/vipin.jpg'),
+        name: "Dr. Krishnasree Achuthan",
+        desg: "Chief Coordinator",
+        photo: require('../../src/assets/images/people/krishnasree.jpg'),
         extraDesg: <>
-            <div>Founder & Chief Mentor, team bi0s, amFOSS & Shakti</div>
-            <div>Managing Director, Traboda CyberLabs</div>
+            <div>Director, Amrita Center for CyberSecurity Systems & Networks</div>
+            <div>Dean of PG Programs, School of Engineering, Amritapuri</div>
+            <div>Director, Amrita Technology Business Incubator (TBI)</div>
         </>,
         description: <>
-            Vipin Pavithran is a cyber-security veteran and the founder of InCTF & Traboda CyberLabs, and
-            takes deep passion in mentoring students at Amrita Vishwa Vidyapeetham. Prior to coming to Amritapuri,
-            he has worked for over 10 years in the software industry in the USA & UK. Being passionate about
-            helping students to develop their talent and to make them reach their potential, he founded the
-            internationally recognised student clubs - amFOSS, Team bi0s and Team Shakti, and today mentors
-            over 300 engineering students directly through these clubs. team bi0s was India's first-ever CTF team
-            when it was formed in 2007, and it was this team that founded the InCTF in 2010, which was the first-ever
-            CTF contest to be organized in India.
+            <p>
+                Dr. Krishnashree Achuthan is an ardent researcher with multi-disciplinary interests, and she
+                heads the Amrita Center for CyberSecurity Systems & Networks, and the Amrita Technology Business
+                Incubator (Amrita TBI). Holding a PhD degree from Clakson University, NY, USA, she also serves
+                as the Dean of Post Graduate Programs at Amrita Vishwa Vidyapeetham. She holds 33 US patents,
+                and has published over 50 publications in Journals & Conferences.
+            </p>
         </>
     },
     {
@@ -132,24 +132,24 @@ export const OrganizingTeamChiefs = [
         </>
     },
     {
-        name: "Dr. Krishnasree Achuthan",
-        desg: "Chief Coordinator",
-        photo: require('../../src/assets/images/people/krishnasree.jpg'),
+        name: "Vipin Pavithran",
+        desg: "Founder & Chief Organizer",
+        photo: require('../../src/assets/images/people/vipin.jpg'),
         extraDesg: <>
-            <div>Director, Amrita Center for CyberSecurity Systems & Networks</div>
-            <div>Dean of PG Programs, School of Engineering, Amritapuri</div>
-            <div>Director, Amrita Technology Business Incubator (TBI)</div>
+            <div>Founder & Chief Mentor, team bi0s, amFOSS & Shakti</div>
+            <div>Managing Director, Traboda CyberLabs</div>
         </>,
         description: <>
-            <p>
-                Dr. Krishnashree Achuthan is an ardent researcher with multi-disciplinary interests, and she
-                heads the Amrita Center for CyberSecurity Systems & Networks, and the Amrita Technology Business
-                Incubator (Amrita TBI). Holding a PhD degree from Clakson University, NY, USA, she also serves
-                as the Dean of Post Graduate Programs at Amrita Vishwa Vidyapeetham. She holds 33 US patents,
-                and has published over 50 publications in Journals & Conferences.
-            </p>
+            Vipin Pavithran is a cyber-security veteran and the founder of InCTF & Traboda CyberLabs, and
+            takes deep passion in mentoring students at Amrita Vishwa Vidyapeetham. Prior to coming to Amritapuri,
+            he has worked for over 10 years in the software industry in the USA & UK. Being passionate about
+            helping students to develop their talent and to make them reach their potential, he founded the
+            internationally recognised student clubs - amFOSS, Team bi0s and Team Shakti, and today mentors
+            over 300 engineering students directly through these clubs. team bi0s was India's first-ever CTF team
+            when it was formed in 2007, and it was this team that founded the InCTF in 2010, which was the first-ever
+            CTF contest to be organized in India.
         </>
-    }
+    },
 ];
 
 export const OrganizingTeamTier2 = [
@@ -181,12 +181,22 @@ export const OrganizingTeamTier3 = [
         desg: "Head - Website & CTF Platform Development"
     },
     {
+        photo: require('../assets/images/people/shogil.jpg'),
+        name: "Shogil Babu",
+        desg: "Youtube Channel"
+    },
+    {
+        photo: require('../assets/images/people/rahul.jpg'),
+        name: "Rahul Manneri",
+        desg: "Support & Emails"
+    },
+    {
         name: "Sridevi",
-        desg: "Head - Training Programmes"
+        desg: "Training Programmes"
     },
     {
         name: "Vishvesh",
-        desg: "Head - CTF Contest"
+        desg: "CTF Contest"
     },
 ]
 
