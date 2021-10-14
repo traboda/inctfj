@@ -29,17 +29,15 @@ const StateWiseRegistrationMap = ({ data }) => {
     };
 
     const getStateVal = (code) => {
-        if(data?.states?.length > 0)
-            data.states.forEach((s) => {
-                if(s['state'] === code){
-                    return s['state'];
-                }
-            })
+        if(data?.states?.length > 0){
+            const fil = data.states.filter((s) => (s['state'] === code))
+            if(fil?.length > 0)
+                return fil[0].count;
+        }
         return 0;
     }
 
     const getHeatMapData = () => {
-
         return [
             { id: 'AP', state: 'Andhra Pradesh', value: getStateVal('IN-AP') },
             { id: 'AR', state: 'Arunachal Pradesh', value: getStateVal('IN-AR') },
@@ -74,7 +72,7 @@ const StateWiseRegistrationMap = ({ data }) => {
             { id: 'DN', state: 'Dadra and Nagar Haveli', value: 0 },
             { id: 'DD', state: 'Daman and Diu', value: 0 },
             { id: 'DL', state: 'Delhi', value: getStateVal('IN-DL') },
-            { id: 'JK', state: 'Jammu and Kashmir', value: 0 },
+            { id: 'JK', state: 'Jammu and Kashmir', value: getStateVal('IN-JK') },
             { id: 'LA', state: 'Ladakh', value: 0 },
             { id: 'LD', state: 'Lakshadweep', value: 0 },
             { id: 'PY', state: 'Puducherry', value: 0 }
@@ -83,7 +81,7 @@ const StateWiseRegistrationMap = ({ data }) => {
 
     const colorScale = (val) => {
         if(data?.registrations > 0){
-            const pc = val/data?.registrations;
+            const pc = (val/data?.registrations) * 1000;
             if(pc > 50) return '#9a311f';
             if(pc > 40) return '#e2492d';
             if(pc > 30) return '#ff5533';
