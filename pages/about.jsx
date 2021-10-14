@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from "@emotion/styled";
 
 import Base from "../src/components/shared/Base";
@@ -37,6 +37,8 @@ const AboutPage = () => {
 
         }
     };
+
+    useEffect(fetchStats, [])
 
     return <Base meta={{ title: "About InCTF Jr." }}>
         <TopBar includeSpace={false} />
