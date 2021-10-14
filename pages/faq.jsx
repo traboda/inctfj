@@ -9,6 +9,7 @@ import faq from '../src/data/faq';
 import QuestionCard from "../src/components/faq/QuestionCard";
 import Footer from "../src/components/shared/Footer";
 import FAQFilter from "../src/components/faq/Filter";
+import { filteredFAQ } from "../src/components/faq/filterUtils";
 import { Waypoint } from "react-waypoint";
 
 const FAQSection = styled.section`
@@ -32,8 +33,6 @@ const totalTags = [...faq.reduce((acc, f) => {
     return _acc;
 }, new Set)].map(faq => ({ value: faq, label: faq }));
 
-const intersection = (set1, set2) => new Set([...set1].filter(x => set2.has(x)))
-
 const FAQPage = () => {
 
     const [totalVisible, setTotalVisible] = useState(10);
@@ -53,20 +52,11 @@ const FAQPage = () => {
         setOpen(0);
     }, [search, tags]);
 
-    const filteredFAQ = (slice = true) => {
-        let _faq = faq.filter(f => {
-            return f.question.toLowerCase().includes(search.toLowerCase()) &&
-                (tags.size > 0 ? intersection(f.tags, tags).size > 0 : true)
-        });
-        if (slice) _faq = _faq.slice(0, totalVisible);
-        return _faq;
-    }
-
     const updateTotalVisible = (value) =>
-        setTotalVisible(Math.max(10, Math.min(value, filteredFAQ(false).length)));
+        setTotalVisible(Math.max(10, Math.min(value, filteredFAQ(search, tags).length)));
 
     const renderFAQ = () => {
-        const items = filteredFAQ();
+        const items = filteredFAQ(search, tags, totalVisible);
         return items?.length > 0 ? (
             items.map((q, i) =>
                 <QuestionCard
