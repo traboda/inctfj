@@ -2,18 +2,15 @@ title: r0b0c0rp
 id: 586
 category: Web
 difficulty: Beginner
-content: !
+content: |
   As the name suggests, the challenge has something to do with robots. So what do we mean by robots when we speak in
   context with the world wide web? Robots are nothing but crawlers that visit all the sites and note what it contains.
   All major search companies would use a crawler. That's how they find the websites when we give a piece of text from it.
-
 
   Alright, what if the website has a sensitive page that it does not wish to share with the crawler? So, the developers
   decided that there should be a page that gives this information to the crawler. And to this cause, robots.txt endpoint
   was created. This page follows a syntax the crawler understands to mark the pages that can be or cannot be read by
   the crawler.
-
-
 
   Coming back to the challenge, we visit <challenge deployment url>/robots.txt to find a hidden
   endpoint - "/1w4ntn0r0b0tsh3r3.html". When we open that html, we get the flag.
