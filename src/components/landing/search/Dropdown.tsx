@@ -4,7 +4,7 @@ import reactStringReplace from 'react-string-replace';
 
 import { filteredFAQ } from "../../faq/filterUtils";
 
-const Dropdown = ({ search }) => {
+const Dropdown = ({ search, setSearch = (question: string) => {} }) => {
     const faq = () => filteredFAQ(search, new Set(), 5);
 
     return (
@@ -16,7 +16,7 @@ const Dropdown = ({ search }) => {
                 <div>
                     {faq().map((f, i) => (
                         <Link key={i} href={`/faq?q=${encodeURI(f.question)}`} passHref>
-                            <a className="px-6 py-2 hover:bg-gray-100 flex">
+                            <a className="px-6 py-2 hover:bg-gray-100 flex" onClick={() => setSearch(f.question)}>
                                 <div>
                                     {reactStringReplace(f.question, search, match => (
                                         <span className="font-semibold">{match}</span>

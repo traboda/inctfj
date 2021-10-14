@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import TagSelector from "./TagSelector";
+import Dropdown from "../landing/search/Dropdown";
 
 const FAQFilter = ({ search, setSearch, tags, setTags, totalTags }) => {
+    const [searchFocus, setSearchFocus] = useState(false);
+
     return (
         <div className="mx-4 mb-8">
             <form className="w-full transition relative" style={{ height: 'fit-content' }}>
@@ -10,7 +13,9 @@ const FAQFilter = ({ search, setSearch, tags, setTags, totalTags }) => {
                     value={search}
                     onChange={e => setSearch(e.target.value)}
                     placeholder="Enter your question here..."
-                    className="outline-none pl-4 pr-12 py-2 border rounded-lg shadow-inner focus:border-yellow-600 w-full"
+                    className={`outline-none pl-4 pr-12 py-2 border rounded-t-lg shadow-inner focus:border-yellow-600 w-full ${searchFocus ? '' : 'rounded-b-lg'}`}
+                    onFocus={() => setSearchFocus(true)}
+                    onBlur={() => setTimeout(() => setSearchFocus(false), 100)}
                 />
                 <div
                     className="absolute right-0 mr-4"
@@ -24,6 +29,7 @@ const FAQFilter = ({ search, setSearch, tags, setTags, totalTags }) => {
                     )}
                     <button type="submit" className="fas fa-search hover:text-black opacity-50" />
                 </div>
+                {searchFocus && <Dropdown search={search} setSearch={setSearch}/>}
             </form>
             <div className="w-full mt-2">
                 <TagSelector

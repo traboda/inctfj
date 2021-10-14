@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from "./SearchBar";
 
-const LandingSearch = () => {
+const LandingSearch = ({ showImage = true }) => {
     return (
         <div>
             <div style={{ padding: '5vh 1rem 15vh 1rem' }} className="container mx-auto flex flex-col items-center justify-center">
@@ -10,11 +10,13 @@ const LandingSearch = () => {
                     <SearchBar />
                 </div>
             </div>
-            <img
-                alt="amritapuri vector illustration"
-                draggable="false"
-                src={require('../../../assets/images/logos/amritapuri_vector.png')}
-            />
+            {showImage && (
+                <img
+                    alt="amritapuri vector illustration"
+                    draggable="false"
+                    src={require('../../../assets/images/logos/amritapuri_vector.png')}
+                />
+            )}
         </div>
     );
 };

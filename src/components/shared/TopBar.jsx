@@ -1,13 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from "@emotion/styled";
-import { clearAllBodyScrollLocks } from 'body-scroll-lock';
+import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
 import Modal from "react-modal";
 import Link from "next/link";
 
 import SideBar from "./SideBar";
 import { setUserInfo, useAuthState } from "../../states";
 import TopBarItem from "./TopBarItem";
+import dynamic from "next/dynamic";
 
+const LandingSearch = dynamic(() => import("../landing/search"), { ssr: false });
 
 const TopbarContainer = styled.header`
   position: fixed;
@@ -128,6 +130,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
     const [isLoggedIn] = useAuthState('isLoggedIn');
     const [scrollDir, setScrollDir] = useState('up');
     const [isAtTop, setIsAtTop] = useState(true);
+    const [searchModal, setSearchModal] = useState(false);
 
     useEffect(() => {
         setLoaded(true);
@@ -307,8 +310,8 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 <div className="md:w-4/5 px-3">
                     Have you got stuck? Need Help? <wbr />
                     <span className="inline-block">
-                                Join our discord server, ask your doubts & get support from our experts.
-                            </span>
+                        Join our discord server, ask your doubts & get support from our experts.
+                    </span>
                 </div>
                 <div className="md:w-1/5 flex items-center md:my-0 px-2 md:px-0 justify-end">
                     <Link href="/discord" passHref>
@@ -347,6 +350,15 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                 </div>
                                 <div className="md:w-1/4 xl:w-1/2 pr-4 pl-4 flex justify-end text-right px-1">
                                     <TopbarInfoCard className="items-center flex">
+                                        <div
+                                            className="cursor-pointer border-2 w-10 h-10 flex items-center justify-center rounded-full mr-4"
+                                            onClick={() => {
+                                                disableBodyScroll(document.body);
+                                                setSearchModal(true);
+                                            }}
+                                        >
+                                            <i className="fas fa-search opacity-75" />
+                                        </div>
                                         <div className="hidden xl:inline-block mr-2">
                                             <div>India's First & Only CTF Championship</div>
                                             <h5 style={{ color: '#F13F17' }} className="mb-0">Exclusively for School Students</h5>
@@ -408,6 +420,37 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                     src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame?color=000&primary=F13F17&primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
                 />
             </div>}
+        </Modal>
+        <Modal
+            isOpen={searchModal}
+            onRequestClose={() => {
+                clearAllBodyScrollLocks();
+                setSearchModal(false);
+            }}
+            style={{
+                overlay: {
+                    zIndex: 9000,
+                    height: '100vh',
+                    width: '100vw'
+                },
+                content: {
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center'
+                }
+            }}
+        >
+            <div
+                className="absolute top-0 right-0 mt-4 mr-4 cursor-pointer"
+                onClick={() => {
+                    clearAllBodyScrollLocks();
+                    setSearchModal(false);
+                }}
+            >
+                <i className="fas fa-times text-xl" />
+            </div>
+
+            <LandingSearch showImage={false} />
         </Modal>
         {isVisible() && showMenu &&
         <SideBar
