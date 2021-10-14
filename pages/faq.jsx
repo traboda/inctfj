@@ -82,10 +82,7 @@ const FAQPage = () => {
     return <Base meta={{ title: "Frequently Asked Questions (FAQ)" }}>
         <TopBar/>
         <FAQSection>
-            <h1 className="mx-2 top-0 sticky-top">
-                <img alt="FAQ" className="inline mb-3" src={require('../src/assets/images/icons/faq.png')}/>
-                <div>Frequently Asked Questions</div>
-            </h1>
+            <h1 className="text-primary text-center text-3xl lg:text-6xl py-4">Frequently Asked Questions</h1>
             <div className="px-6 mx-auto" style={{ maxWidth: 800 }}>
                 <FAQFilter
                     search={search}

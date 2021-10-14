@@ -113,12 +113,15 @@ const Schedule = () => {
             {/*        </Fade>*/}
             {/*    </div>*/}
             {/*</div>*/}
-            <h3 className="text-5xl text-center mb-6 font-bold">Training Schedule</h3>
+
             {/*<h5 style={{ color: '#FF6F00' }}>Opening Ceremony</h5>*/}
             <div className="flex justify-center">
                 <div style={{ maxWidth: '100%', width: '1000px' }}>
-                    <div className="text-center px-4 mb-6">
-                        More details and links to join the free online beginner-level training programme will be shared soon.
+                    <div className="text-center px-4 py-8 mb-8">
+                        <h3 className="text-3xl lg:text-6xl text-primary mb-6 font-bold">Training Schedule</h3>
+                        <p>
+                            More details and links to join the free online beginner-level training programme will be shared soon.
+                        </p>
                     </div>
                     <div className="flex flex-wrap  hidden md:flex font-bold mx-0 py-2 border-b">
                         <div className="md:w-1/4 pr-4 pl-4  flex items-center p-1">

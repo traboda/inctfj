@@ -8,6 +8,7 @@ import TopBar from "../../src/components/shared/TopBar";
 import Footer from "../../src/components/shared/Footer";
 import styled from "@emotion/styled";
 import dynamic from "next/dynamic";
+import Breadcrumb from "../../src/components/shared/Breadcrumbs";
 
 const CodeBlock = dynamic(() => import("../../src/components/CodeBlock"), { ssr: false });
 
@@ -121,27 +122,35 @@ const WriteUpPage = ({ id }) => {
     return data ?
         <Base meta={{ title: `${data.title} - ${data?.category} Challenge Solution`}}>
             <TopBar darkenOnSidebar />
-            <div className="container px-6 py-12 mx-auto">
-                <div className="mb-4 py-2">
-                    <div>
-                        <div className="font-semibold opacity-75 text-base mb-2">
-                            <span><i className="far fa-fire"/> {data?.difficulty} </span>
-                            <span className="ml-2"><i className="far fa-album-collection"/> {data?.category}</span>
-                        </div>
-                        <div className="pb-3" style={{ maxWidth: '900px' }}>
-                            <h1>{data.title}</h1>
-                        </div>
-                        <div className="mt-4">
-                            <a
-                                href={`https://app.traboda.com/contest/inctfj-21-lr/challenge/${data?.id}`}
-                                className="bg-blue-900 px-4 py-3 text-white rounded-lg"
-                            >
-                                Open Challenge <i className="fa fa-external-link ml-1" />
-                            </a>
-                        </div>
+            <div className="px-4 py-8 flex items-end justify-center" style={{ minHeight: '30vh' }}>
+                <div style={{ width: '1000px', maxWidth: '100%'  }}>
+                    <div className="mb-6">
+                        <Breadcrumb
+                            items={[
+                                {
+                                    link: '/writeups',
+                                    title: 'Writeups'
+                                }
+                            ]}
+                        />
+                    </div>
+                    <h1 className="text-primary mb-2 text-3xl lg:text-6xl">{data.title}</h1>
+                    <div className="font-semibold opacity-75 text-base pb-6 pt-2">
+                        <span><i className="far fa-fire"/> {data?.difficulty} </span>
+                        <span className="ml-2"><i className="far fa-album-collection"/> {data?.category}</span>
+                    </div>
+                    <div className="mt-4">
+                        <a
+                            href={`https://app.traboda.com/contest/inctfj-21-lr/challenge/${data?.id}`}
+                            className="bg-blue-900 hover:bg-primary px-4 py-3 text-white rounded-lg"
+                        >
+                            Open Challenge <i className="fa fa-external-link ml-1" />
+                        </a>
                     </div>
                 </div>
-                <div className="py-4" style={{ minHeight: '70vh', maxWidth: '900px' }}>
+            </div>
+            <div className="py-4 flex justify-center bg-gray-50">
+                <div className="p-3" style={{ minHeight: '70vh', width: '1000px', maxWidth: '100%' }}>
                     <Markdown className="leading-relaxed">
                         <ReactMarkdown
                             plugins={[remarkGfm]}

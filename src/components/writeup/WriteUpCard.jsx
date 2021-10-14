@@ -36,7 +36,7 @@ const WriteUpCard = ({ title, id, category, difficulty }) => {
         <Link href={`/writeup/${id}`} passHref>
             <PostCardWrapper className="shadow hover:shadow-lg">
                 <h4>{title}</h4>
-                <div className="mt-4">
+                <div className="mt-2">
                     <span><i className="far fa-fire"/> {difficulty}</span>
                     <span className="ml-2"><i className="far fa-album-collection"/> {category}</span>
                 </div>

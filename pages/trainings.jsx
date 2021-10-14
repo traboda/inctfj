@@ -9,7 +9,8 @@ const TrainingSchedulePage = () => {
     return (
         <Base meta={{ title: "Training Schedule for InCTF Jr." }}>
             <TopBar />
-            <div style={{ minHeight: '100vh' }}>
+
+            <div className="py-4" style={{ minHeight: '100vh' }}>
                 <Schedule />
             </div>
             <Footer />
