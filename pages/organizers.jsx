@@ -11,7 +11,7 @@ import ProfileMicroCard from "../src/components/ProfileMicroCard";
 const OrganizersPage = () => {
 
     return (
-        <Base meta={{ title: "Advisory Board" }}>
+        <Base meta={{ title: "Organizers" }}>
             <TopBar darkenOnSidebar />
             <div
                 className="flex items-center justify-center text-center flex-col"
