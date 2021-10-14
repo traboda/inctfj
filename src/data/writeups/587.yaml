@@ -2,32 +2,34 @@ title: Client Auth
 id: 587
 category: Web
 difficulty: Easy
-content: >
+content: |
   The page has a login form.
   Since the title says "Client Auth", we can assume that the authentication part happens on the client-side.
   So, we need to check the source to know what's happening.
-  There is a "/script.js" file being used.
+  There is a `/script.js` file being used.
   From this file, we can see that the username and password are being compared to a value and once that is correct
-  we are taken to the path <the-correct-password>/<the-correct-username>.html
+  we are taken to the path `<the-correct-password>/<the-correct-username>.html`
 
-  The username and password are compared to a value using a function called String.fromCodePoint().
+  The username and password are compared to a value using a function called `String.fromCodePoint()`.
 
-  This function is used to convert values into a string. That is, String.fromCodePoint(97) will return "a".
+  This function is used to convert values into a string. That is, `String.fromCodePoint(97)` will return "a".
 
   Now that we know how the authentication is being done, we can directly check what username and password the
   code is expecting.
 
-  "us == String.fromCodePoint(0x61,0x64,0x6D,0x69,0x6E,0x33,0x32,0x31) && pp == String.fromCharCode(105,95,97,109,95,99,48,48,76,95,95)".
+  ```
+  us == String.fromCodePoint(0x61,0x64,0x6D,0x69,0x6E,0x33,0x32,0x31) && pp == String.fromCharCode(105,95,97,109,95,99,48,48,76,95,95)
+  ```
 
   We can get the values using the "Console" tab of "DevTools".
 
-  You can access this by pressing "Ctrl + Shift + I" or "F12".
+  You can access this by pressing `Ctrl + Shift + I` or `F12`.
 
-  Then paste String.fromCodePoint(0x61,0x64,0x6D,0x69,0x6E,0x33,0x32,0x31) and hit enter.
+  Then paste `String.fromCodePoint(0x61,0x64,0x6D,0x69,0x6E,0x33,0x32,0x31)` and hit enter.
 
   Do the same for pp comparison and you'll get the password.
 
-  After this, you'll get "admin321" and <HIDDEN> and username and password respectively.
+  After this, you'll get `admin321` and <HIDDEN> and username and password respectively.
 
   When we use this to log in, we are taken to a page that says "Debug".
 
