@@ -22,22 +22,21 @@ const StatsContainer = styled.section`
 `;
 
 
-const INCTFJStats = () => {
+const INCTFJStats = ({ stats }) => {
 
-    const stats = [
-        { value: 5, title: "Successful Editions" },
-        { value: 1568, suffix:"+", title: "Participants in 2020" },
-        { value: 5810, suffix:"+", title: "Total Participants" },
-        { value: 323, suffix:"+", title: "Schools Participated" },
+    const statsPreviewer = () => [
+        { value: stats?.registrations || 0, title: "Total Participants" },
+        { value: stats?.regToday || 0, title: "Registrations Today" },
+        { value: stats?.institutions || 0, title: "Schools Participating" },
     ]
 
     return <StatsSecion>
          <StatsContainer className="flex flex-wrap  py-8 text-center mx-0">
-            {stats.map((s) =>
-                <div className="w-1/2 md:w-1/4 p-3">
+            {statsPreviewer().map((s) =>
+                <div className="w-1/2 md:w-1/3 p-3">
                     <Zoom mountOnEnter effect="fadeInUp">
                         <h2 className="text-blue-600 mb-0 mb-3 font-bold">
-                            <CountUp delay={0.5} duration={4.5} end={s.value} />{s.suffix}
+                            <CountUp delay={0.5} duration={4.5} end={s.value} />
                         </h2>
                         <h4 className="mb-0">{s.title}</h4>
                     </Zoom>

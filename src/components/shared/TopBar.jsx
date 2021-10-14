@@ -9,7 +9,7 @@ import { setUserInfo, useAuthState } from "../../states";
 import TopBarItem from "./TopBarItem";
 import dynamic from "next/dynamic";
 
-const LandingSearch = dynamic(() => import("../landing/search"), { ssr: false });
+const SearchBar = dynamic(() => import("../landing/search/SearchBar"), { ssr: false });
 
 const TopbarContainer = styled.header`
   position: fixed;
@@ -72,19 +72,6 @@ const TopbarContainer = styled.header`
   img {
     max-height: 32px;
     max-width: 100%;
-  }
-
-  button {
-    border: none;
-    padding: 0.5rem;
-    border-radius: 10px;
-    background: none;
-    color: #F13F17;
-    &:hover {
-      color: white;
-      background: #F13F17 !important;
-      outline: none !important;
-    }
   }
 `;
 
@@ -342,23 +329,21 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                         <div className="md:w-5/6 px-1 hidden md:flex items-center">
                             <div className="flex flex-wrap  mx-0 w-full">
                                 <div className="md:w-3/4 xl:w-1/2 pr-4 pl-4 flex items-center px-1">
-                                    <nav className="flex">
+                                    <nav className="flex items-center">
                                         {TopbarItems?.map((i) => (
                                             <TopBarItem item={i} isVisible={isVisible()} />
                                         ))}
-                                    </nav>
-                                </div>
-                                <div className="md:w-1/4 xl:w-1/2 pr-4 pl-4 flex justify-end text-right px-1">
-                                    <TopbarInfoCard className="items-center flex">
-                                        <div
-                                            className="cursor-pointer border-2 w-10 h-10 flex items-center justify-center rounded-full mr-4"
+                                        <button
+                                            className="fas fa-search justify-center text-lg text-black hover:text-primary ml-2"
                                             onClick={() => {
                                                 disableBodyScroll(document.body);
                                                 setSearchModal(true);
                                             }}
-                                        >
-                                            <i className="fas fa-search opacity-75" />
-                                        </div>
+                                        />
+                                    </nav>
+                                </div>
+                                <div className="md:w-1/4 xl:w-1/2 pr-4 pl-4 flex justify-end text-right px-1">
+                                    <TopbarInfoCard className="items-center flex">
                                         <div className="hidden xl:inline-block mr-2">
                                             <div>India's First & Only CTF Championship</div>
                                             <h5 style={{ color: '#F13F17' }} className="mb-0">Exclusively for School Students</h5>
@@ -431,26 +416,47 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 overlay: {
                     zIndex: 9000,
                     height: '100vh',
-                    width: '100vw'
+                    width: '100vw',
+                    padding: 0
                 },
                 content: {
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    border: 'none',
+                    borderRadius: 0,
+                    inset: 0,
+                    height: '100vh',
+                    width: '100vw',
+                    background: 'white'
                 }
             }}
         >
-            <div
-                className="absolute top-0 right-0 mt-4 mr-4 cursor-pointer"
+            <button
+                className="fas fa-times text-xl absolute top-0 text-light hover:text-primary right-0 mt-4 mr-4 cursor-pointer"
                 onClick={() => {
                     clearAllBodyScrollLocks();
                     setSearchModal(false);
                 }}
-            >
-                <i className="fas fa-times text-xl" />
+            />
+            <div style={{ padding: '5vh 1rem 15vh 1rem' }} className="container mx-auto flex flex-col items-center justify-center">
+                <div className="text-center w-full" style={{ maxWidth: 600 }}>
+                    <Link href="/" passHref>
+                        <a>
+                            <img
+                                className="mb-8 inline"
+                                src={require('../../assets/images/logos/inctf.png')}
+                                alt="InCTF Jr"
+                                style={{ maxHeight: '120px' }}
+                            />
+                        </a>
+                    </Link>
+                    <SearchBar
+                        placeholder="Search your queries & questions about InCTF Jr"
+                        isFocused
+                    />
+                </div>
             </div>
-
-            <LandingSearch showImage={false} />
         </Modal>
         {isVisible() && showMenu &&
         <SideBar

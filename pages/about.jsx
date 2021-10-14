@@ -42,7 +42,7 @@ const AboutPage = () => {
         <TopBar includeSpace={false} />
         <AboutPageCoverSection />
         <InctfIntro />
-        <INCTFJStats />
+        <INCTFJStats stats={stats} />
         <StateWiseRegistrationMap data={stats} />
         <AboutAchievements />
         <PastINCTFSpeakers />

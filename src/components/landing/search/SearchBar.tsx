@@ -3,7 +3,7 @@ import {useRouter} from "next/router";
 import Dropdown from "./Dropdown";
 import { AnimatePresence, motion} from "framer-motion";
 
-const SearchBar = () => {
+const SearchBar = ({ placeholder = 'Type your question...', isFocused = false }) => {
     const [search, setSearch] = useState('');
 
     const router = useRouter();
@@ -22,8 +22,9 @@ const SearchBar = () => {
                 <input
                     type="text"
                     className="p-0 outline-none w-full"
-                    placeholder="Type your question..."
+                    placeholder={placeholder}
                     value={search}
+                    autoFocus={isFocused}
                     onChange={e => setSearch(e.target.value)}
                 />
                 <i
