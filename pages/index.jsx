@@ -16,6 +16,7 @@ import TopBar from "../src/components/shared/TopBar";
 import CTAPartners from "../src/components/landing/CTAPartners";
 import LandingPromoVideo from "../src/components/landing/PromoVideo";
 import Schedule from "../src/components/landing/Schedule";
+import LandingSearch from "../src/components/landing/search";
 
 const LandingPage = () => {
 
@@ -34,6 +35,7 @@ const LandingPage = () => {
             <LandingTestimonials />
             <LandingSponsorship />
             <CTAPartners />
+            <LandingSearch />
             <LandingOrganizers />
             <LandingContactsBar />
         </div>
