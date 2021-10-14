@@ -9,6 +9,7 @@ import InctfIntro from "../src/components/about/Intro";
 import Footer from "../src/components/shared/Footer";
 import AboutAchievements from "../src/components/about/Achievements";
 import StateWiseRegistrationMap from "../src/components/about/stats/map";
+import UNSDGSection from "../src/components/about/unsdg";
 
 const AboutPageCoverSection = styled.div`
     background-image: ${() => `url(${require('../src/assets/images/covers/inctfj_mountains.jpg')})`};
@@ -47,6 +48,7 @@ const AboutPage = () => {
         <INCTFJStats stats={stats} />
         <StateWiseRegistrationMap data={stats} />
         <AboutAchievements />
+        <UNSDGSection />
         <PastINCTFSpeakers />
         <Footer />
     </Base>
