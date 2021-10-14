@@ -10,7 +10,7 @@ const Dropdown = ({ search }) => {
     return (
         <div
             className="w-full border bg-white absolute top-full left-0 shadow-lg z-10 overflow-hidden"
-            style={{ borderBottomLeftRadius: 30, borderBottomRightRadius: 30 }}
+            style={{ borderBottomLeftRadius: 8, borderBottomRightRadius: 8 }}
         >
             {faq().length ? (
                 <div>
@@ -27,10 +27,13 @@ const Dropdown = ({ search }) => {
                     ))}
                 </div>
             ) : (
-                <div className="px-6 py-3 text-center">
-                    <span>Didn't find what you were looking for? </span>
+                <div className="p-3 lg:p-6 text-center">
+                    <div className="mb-2">Do not see what you were looking for? </div>
                     <Link href="/discord" passHref>
-                        <a className="underline">Join our discord server</a>
+                        <a className="text-primary hover:text-blue-800">
+                            Join our discord server
+                            <i className="fa fa-external-link ml-1" />
+                        </a>
                     </Link>
                     <span> to get help from experts.</span>
                 </div>

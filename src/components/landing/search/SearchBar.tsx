@@ -9,31 +9,29 @@ const SearchBar = () => {
     const router = useRouter();
 
     return (
-        <div className="w-full relative shadow rounded-full">
+        <div className="w-full relative rounded">
             <div
                 className="border pl-6 pr-12 py-3 relative bg-white shadow-inner"
                 style={{
-                    borderTopLeftRadius: 30,
-                    borderTopRightRadius: 30,
-                    borderBottomRightRadius: search.length ? 0 : 30,
-                    borderBottomLeftRadius: search.length ? 0 : 30,
+                    borderTopLeftRadius: 8,
+                    borderTopRightRadius: 8,
+                    borderBottomRightRadius: search.length ? 0 : 8,
+                    borderBottomLeftRadius: search.length ? 0 : 8,
                 }}
             >
                 <input
                     type="text"
                     className="p-0 outline-none w-full"
-                    placeholder="Enter your query here..."
+                    placeholder="Type your question..."
                     value={search}
                     onChange={e => setSearch(e.target.value)}
                 />
-
                 <i
                     className="fas fa-search absolute right-0 opacity-75 cursor-pointer mr-6"
                     style={{ transform: 'translateY(-50%)', top: '50%' }}
                     onClick={() => router.push(`/faq?q=${encodeURI(search)}`)}
                 />
             </div>
-
             <AnimatePresence>
                 {search.length && (
                     <motion.div initial={{ height: 0 }} animate={{ height: 'auto' }} exit={{ height: 0 }}>

@@ -15,7 +15,7 @@ const AdvisoryBoardPage = () => {
                 className="flex items-center justify-center text-center flex-col"
                 style={{ minHeight: '40vh' }}
             >
-                <h1 className="text-red-700 py-4">InCTF Adivisory Board</h1>
+                <h1 className="text-primary text-3xl lg:text-5xl py-4">InCTF Adivisory Board</h1>
                 <div className="flex w-full justify-center">
                     <p className="opacity-75 px-3" style={{ maxWidth: '100%', width: '700px' }}>
                         The InCTF Advisory Board is a high-level expert panel consisting of eminent personalities

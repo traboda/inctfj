@@ -35,8 +35,8 @@ const LandingPage = () => {
             <LandingTestimonials />
             <LandingSponsorship />
             <CTAPartners />
-            <LandingSearch />
             <LandingOrganizers />
+            <LandingSearch />
             <LandingContactsBar />
         </div>
     </Base>

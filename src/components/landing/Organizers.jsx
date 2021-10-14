@@ -101,7 +101,6 @@ const LandingOrganizers = () => {
                 </Fade>
             </div>
         </div>
-        <img alt="amritapuri vector illustration" draggable="false" src={require('../../assets/images/logos/amritapuri_vector.png')} />
     </OrganizersSection>;
 
 };
