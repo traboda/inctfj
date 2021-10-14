@@ -59,7 +59,7 @@ const HighlightFeature = styled('div')`
 `;
 
 const LandingAboutInCTF = () => (
-    <AboutInCTFSection>
+    <AboutInCTFSection className="container mx-auto">
         <Zoom up>
             <div className="md:hidden flex justify-center mb-6">
                 <div className="rounded-lg p-2 bg-blue-100" style={{ maxWidth: '100%', width: '1100px' }}>

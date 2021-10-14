@@ -85,10 +85,10 @@ const LandingSponsorship = () => {
         },
     ]
 
-    return <SponsorshipArea className="flex flex-wrap mx-0">
+    return <SponsorshipArea className="flex flex-wrap mx-auto container">
         <Fade left>
             <div className="lg:w-1/2 p-0 lg:p-4">
-                <div className="px-4 md:px-8 lg:px-12">
+                <div>
                     <div className="mb-2">Not a Student?</div>
                     <h2>
                         Today You Can Help Us to

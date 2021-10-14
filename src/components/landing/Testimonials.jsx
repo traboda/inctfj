@@ -80,7 +80,7 @@ const LandingTestimonials = () => {
         setShowPlayer(true);
     };
 
-    return <TestimonialSection >
+    return <TestimonialSection className="container mx-auto">
         <Pulse>
             <div className="testimonial-title mb-3">
                 <img src={require('../../assets/images/icons/play_button.png')} alt="View Video Testimonials"/>

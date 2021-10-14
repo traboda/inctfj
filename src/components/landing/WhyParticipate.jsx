@@ -58,7 +58,7 @@ const LandingReasonsToParticipate = () => {
         },
     ];
 
-    return <ReasonsSection>
+    return <ReasonsSection className="container mx-auto">
         <h2 className="text-center">
             <div className="flex justify-center">
                 <img className="mr-2" style={{ width: '64px'}} alt="Why Participate?" src={require('../../assets/images/icons/heart.png')} />

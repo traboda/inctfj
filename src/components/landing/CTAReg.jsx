@@ -28,7 +28,7 @@ const RegCTASection = styled.section`
 `
 
 const CTAReg = ({ UTMSource = null }) => (
-    <RegCTASection>
+    <RegCTASection className="container mx-auto">
         <div className="flex flex-wrap  mx-0">
             <Fade left>
                 <div className="md:w-2/3 pr-4 pl-4 flex items-center p-2">

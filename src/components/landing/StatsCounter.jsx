@@ -44,7 +44,7 @@ const LandingStatsBar = () => {
         { value: stats?.institutions || 0, title: "Schools Participating" },
     ]
 
-    return <StatsContainer className="flex flex-wrap text-center mx-0">
+    return <StatsContainer className="container mx-auto flex flex-wrap text-center">
         {statsPreviewer().map((s) =>
             <div className="w-1/2 md:w-1/3 p-4">
                 <Zoom mountOnEnter effect="fadeInUp">

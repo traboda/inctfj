@@ -52,10 +52,10 @@ const LandingQuickInfo = () => {
     ]
 
     return <QuickInfoSection>
-        <div className="flex flex-wrap  mx-0">{landingInfo.map((l) =>
+        <div className="flex flex-wrap container mx-auto">{landingInfo.map((l) =>
             <div className="md:w-1/3 w-full pr-4 pl-4 p-2">
                 <Fade left={l.left} right={l.right} up={l.up}>
-                    <div className="flex flex-wrap  w-full mx-0">
+                    <div className="flex flex-wrap w-full mx-0">
                         <div className="flex items-center justify-center w-1/4 p-2 md:p-0">
                             <img draggable="false" alt={l.question} src={l.image} />
                         </div>

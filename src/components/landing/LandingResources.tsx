@@ -4,7 +4,7 @@ import Pulse from 'react-reveal/Pulse';
 
 const LandingResources = () => {
     return (
-        <div style={{ padding: '4vh 1rem 8vh 1rem' }}>
+        <div className="container mx-auto" style={{ padding: '4vh 1rem 8vh 1rem' }}>
             <Pulse>
                 <div className="mb-3 flex items-center justify-center">
                     <img src={require('../../assets/images/icons/learn.png')} alt="Video resources" width={26} className="inline"/>

@@ -314,9 +314,11 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                             </span>
                 </div>
                 <div className="md:w-1/5 flex items-center md:my-0 px-2 md:px-0 justify-end">
-                    <a href="/discord" className="bg-white text-blue-800 mb-0 hover:text-primary rounded-lg px-3 py-2">
-                        Join Discord Now <i className="fa fa-chevron-right ml-1" />
-                    </a>
+                    <Link href="/discord" passHref>
+                        <a className="bg-white text-blue-800 mb-0 hover:text-primary rounded-lg px-3 py-2">
+                            Join Discord Now <i className="fa fa-chevron-right ml-1" />
+                        </a>
+                    </Link>
                 </div>
             </div>
         </div>
@@ -327,13 +329,15 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                         <div
                             className="w-1/4 md:w-1/6 md:text-center flex items-center md:justify-end justify-center px-2"
                         >
-                            <a href="/">
-                                <img
-                                    className="logo"
-                                    src={require('../../assets/images/logos/inctf.png')}
-                                    alt="InCTF Jr"
-                                />
-                            </a>
+                            <Link href="/" passHref>
+                                <a>
+                                    <img
+                                        className="logo"
+                                        src={require('../../assets/images/logos/inctf.png')}
+                                        alt="InCTF Jr"
+                                    />
+                                </a>
+                            </Link>
                         </div>
                         <div className="md:w-5/6 px-1 hidden md:flex items-center">
                             <div className="flex flex-wrap  mx-0 w-full">

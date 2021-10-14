@@ -28,7 +28,7 @@ const RegCTASection = styled.section`
 
 const CTAPartners = () => {
 
-    return <RegCTASection>
+    return <RegCTASection className="container mx-auto">
         <div className="flex flex-wrap  mx-0">
             <Fade left>
                 <div className="md:w-3/4 pr-4 pl-4 flex items-center p-2">
