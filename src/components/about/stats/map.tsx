@@ -2,11 +2,18 @@ import React, {useState} from "react";
 
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 import ReactTooltip from "react-tooltip";
+import styled from "@emotion/styled";
 
 const INDIA_TOPO_JSON = require('../../../data/india.topo.json');
 
+const Wrapper = styled.div`
+  svg:focus {
+    outline: none;
+  }
+`;
+
 const PROJECTION_CONFIG = {
-    scale: 350,
+    scale: 600,
     center: [78.9629, 22.5937]
 };
 
@@ -102,13 +109,13 @@ const StateWiseRegistrationMap = ({ data }) => {
     };
 
     return (
-        <div>
-            <ReactTooltip>{tooltipContent}</ReactTooltip>
+        <Wrapper className="py-8">
             <ComposableMap
                 projectionConfig={PROJECTION_CONFIG}
                 projection="geoMercator"
                 width={600}
-                height={220}
+                height={340}
+                style={{ width: "100%", height: "auto" }}
                 data-tip=""
             >
                 <Geographies geography={INDIA_TOPO_JSON}>
@@ -121,7 +128,6 @@ const StateWiseRegistrationMap = ({ data }) => {
                                     geography={geo}
                                     fill={current ? colorScale(current.value) : '#EEE'}
                                     style={geographyStyle}
-                                    // @ts-ignore
                                     onMouseEnter={onMouseEnter(geo, current)}
                                     onMouseLeave={onMouseLeave}
                                 />
@@ -130,7 +136,8 @@ const StateWiseRegistrationMap = ({ data }) => {
                     }
                 </Geographies>
             </ComposableMap>
-        </div>
+            <ReactTooltip>{tooltipContent}</ReactTooltip>
+        </Wrapper>
     )
 };
 

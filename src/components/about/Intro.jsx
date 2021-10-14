@@ -5,8 +5,8 @@ import styled from "@emotion/styled";
 const IntroSectionWrap = styled.div`
     user-select: none;
     p {
-      max-width: 100%;
-      width: 800px;
+      width: 100%;
+      max-width: 800px;
       margin-bottom: 1rem;
     }
 `;
@@ -23,7 +23,7 @@ const InctfIntro = () => {
 
     return <IntroSectionWrap>
         <div className="container min-w-lg mx-auto sm:px-4 py-12 px-1">
-            <div className="flex flex-wrap  mx-0">
+            <div className="flex flex-wrap">
                 <div className="md:w-2/3 pr-4 pl-4 flex items-center p-6">
                     <div>
                         <Fade up><h1 className="font-bold mb-6">Why InCTF Junior?</h1></Fade>

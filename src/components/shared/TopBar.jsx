@@ -39,7 +39,7 @@ const TopbarContainer = styled.header`
   }
   
   &.top {
-    margin-top: 7vh;
+    margin-top: 53px;
   }
   
   @media screen and (max-width: 768px) {
@@ -465,7 +465,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
             isLoggedIn={hasLoaded && isLoggedIn}
             onLogOut={onLogOut}
         />}
-        <div style={{ height: topbarRef ? topbarRef?.current?.clientHeight : '72px' }} className="hidden md:block"/>
+        <div style={{ height: topbarRef ? topbarRef?.current?.offsetHeight : '72px' }} className="hidden md:block"/>
         <div className="block md:hidden text-center pt-6 px-2 pb-4">
             <Link passHref href="/">
                 <a>
