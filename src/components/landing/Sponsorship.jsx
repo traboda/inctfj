@@ -85,9 +85,9 @@ const LandingSponsorship = () => {
         },
     ]
 
-    return <SponsorshipArea className="flex flex-wrap mx-auto container px-4">
+    return <SponsorshipArea className="flex flex-wrap mx-auto container">
         <Fade left>
-            <div className="lg:w-1/2 p-0">
+            <div className="lg:w-1/2 p-0 lg:p-4">
                 <div>
                     <div className="mb-2">Not a Student?</div>
                     <h2>
