@@ -173,12 +173,12 @@ export const OrganizingTeamTier3 = [
     {
         photo: require('../assets/images/people/aravind_bl.jpg'),
         name: "Aravind B.L.",
-        desg: "Head - Publicity, Sponsorships & Industry Relations"
+        desg: "Publicity, Sponsorships & Industry Relations"
     },
     {
         photo: require('../assets/images/people/advaith.jpg'),
         name: "Advaith A.J.",
-        desg: "Head - Website & CTF Platform Development"
+        desg: "Website & CTF Platform Development"
     },
     {
         photo: require('../assets/images/people/shogil.jpg'),
