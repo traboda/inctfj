@@ -19,26 +19,27 @@ const WriteUpPage = ({ id }) => {
     return data ?
         <Base meta={{ title: `${data.title} - ${data?.category} Challenge Solution`}}>
             <TopBar darkenOnSidebar />
-            <div className="container px-3 py-5">
-                <div className="lg:px-8 md:px-6 px-3 mb-8 py-2">
+            <div className="container px-6 py-12 mx-auto">
+                <div className="mb-4 py-2">
                     <div>
-                        <div>
-                            {data?.difficulty}  | {data?.category}
+                        <div className="font-semibold opacity-75 text-base mb-2">
+                            <span><i className="far fa-fire"/> {data?.difficulty} </span>
+                            <span className="ml-2"><i className="far fa-album-collection"/> {data?.category}</span>
                         </div>
-                        <div className="py-3" style={{ maxWidth: '900px' }}>
+                        <div className="pb-3" style={{ maxWidth: '900px' }}>
                             <h1>{data.title}</h1>
                         </div>
-                        <div>
+                        <div className="mt-4">
                             <a
                                 href={`https://app.traboda.com/contest/inctfj-21-lr/challenge/${data?.id}`}
-                                className="bg-blue-900 px-4 py-4 text-white rounded-lg"
+                                className="bg-blue-900 px-4 py-3 text-white rounded-lg"
                             >
                                 Open Challenge <i className="fa fa-external-link ml-1" />
                             </a>
                         </div>
                     </div>
                 </div>
-                <div className="py-4 lg:px-8 md:px-6 px-3" style={{ minHeight: '70vh', maxWidth: '900px' }}>
+                <div className="py-4" style={{ minHeight: '70vh', maxWidth: '900px' }}>
                     <div>
                         <ReactMarkdown plugins={[remarkGfm]} children={data?.content} />
                     </div>

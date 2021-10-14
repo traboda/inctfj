@@ -43,7 +43,7 @@ const WriteupListingPage = () => {
         return posts;
     })();
 
-    return  <Base meta={{ title: "Challenge Solution WriteUps" }}>
+    return <Base meta={{ title: "Challenge Solution WriteUps" }}>
         <TopBar darkenOnSidebar />
         <BlogPage>
             <div
@@ -58,7 +58,7 @@ const WriteupListingPage = () => {
                     </p>
                 </div>
             </div>
-            <div className="container px-4 py-6">
+            <div className="container px-4 py-6 mx-auto">
                 {fetchedPosts.length > 0 ?
                 <div className="flex flex-wrap">
                     {fetchedPosts.map((w) =>
