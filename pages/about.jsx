@@ -8,6 +8,7 @@ import InctfIntro from "../src/components/about/Intro";
 import Footer from "../src/components/shared/Footer";
 import AboutAchievements from "../src/components/about/Achievements";
 import UNSDGSection from "../src/components/about/unsdg";
+import { data } from '../src/components/about/stats/66';
 
 const AboutPageCoverSection = styled.div`
     background-image: ${() => `url(${require('../src/assets/images/covers/inctfj_mountains.jpg')})`};
@@ -22,19 +23,11 @@ const AboutPage = () => {
 
     const fetchStats = () => {
         try {
-            fetch('https://app.traboda.com/api/contest/stats/66').then(async (response) => {
-                if(response.ok && response.status == 200)
-                    return await response.json();
-                else
-                    return null;
-            }).then((data) => {
-                setStats(data);
-            }).catch((e) => {
-
-            })
-        } catch (e) {
-
-        }
+            fetch('https://app.traboda.com/api/contest/stats/66')
+                .then(response => response.ok && response.status === 200 ? response.json() : null)
+                .then((data) => setStats(data))
+                .catch((e) => setStats(data))
+        } catch (e) {}
     };
 
     useEffect(fetchStats, [])
