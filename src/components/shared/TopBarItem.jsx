@@ -1,11 +1,6 @@
 import React, {useState} from "react";
 import styled from "@emotion/styled";
-import Link from "next/link";
 import Fade from "react-reveal/Fade";
-
-const ItemContainer = styled('div')`
-    position: relative;
-`;
 
 const ItemDropDown = styled('div')`
     position: absolute;
@@ -37,27 +32,23 @@ const TopBarItem = ({ item, isVisible }) => {
 
     return (
         <Fade delay={0}>
-            <ItemContainer onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-                <Link href={item.link} passHref>
-                    <a>{item.label}</a>
-                </Link>
+            <div className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+                <a href={item.link}>{item.label}</a>
                 {(item?.items?.length > 0) && (
                     <ItemDropDown className={isOpen && isVisible ? 'c-visible' : ''}>
                         {item.items.map((i) =>
-                            <Link href={i.link} passHref>
-                                <a className="block">
-                                    {i.label}
-                                    {i?.badge && (
-                                        <div className={`${i?.badgeColor ? i.badgeColor : 'bg-green-100'} px-2 py-1 ml-1 inline rounded text-sm`}>
-                                            {i.badge}
-                                        </div>
-                                    )}
-                                </a>
-                            </Link>
+                            <a href={i.link} className="block">
+                                {i.label}
+                                {i?.badge && (
+                                    <div className={`${i?.badgeColor ? i.badgeColor : 'bg-green-100'} px-2 py-1 ml-1 inline rounded text-sm`}>
+                                        {i.badge}
+                                    </div>
+                                )}
+                            </a>
                         )}
                     </ItemDropDown>
                 )}
-            </ItemContainer>
+            </div>
         </Fade>
     )
 

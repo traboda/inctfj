@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import styled from "@emotion/styled";
 import Fade from "react-reveal/Fade";
 
@@ -58,45 +57,6 @@ const SideBarMenu = styled.div`
   }
 `;
 
-// const OnBoardingCard = styled.div`
-//     padding: 0.5rem;
-//     margin: 0.5rem;
-//     border-radius: 0.35rem;
-//     background: rgba(32,32,32,0.45);
-//     box-shadow: 1px 2px 3px rgba(0,0,0,0.55);
-//     text-align: center;
-//     p {
-//        margin-bottom: 0.1rem;
-//        font-size: 12px;
-//     }
-//     a {
-//         background: #E65100;
-//         color: white!important;
-//         font-weight: 600;
-//         border-radius: 5px;
-//         margin-top: 0.25rem;
-//         padding: 0.5rem 1rem;
-//         width: 50%;
-//     }
-// `;
-
-// const RegisterFooterButton = styled.a`
-//     display: inline-flex;
-//     align-items: center;
-//     font-size: 16px;
-//     padding: 6px 10px;
-//     border-radius: 6px;
-//     color: black!important;
-//     background: #FFD600;
-//     &:hover{
-//       background: #FFAB00;
-//     }
-//     img {
-//         width: 20px;
-//         margin-left: 6px;
-//     }
-// `;
-
 const SocialMediaLinks = styled.div`
     display: flex;
     align-items: center;
@@ -137,37 +97,19 @@ const SideBar = ({ onClose }) => {
                     <i className="fa fa-times" />
                 </button>
             </div>
-            {/*<div className="text-center pt-5">*/}
-            {/*    <img alt="InCTFj" style={{ maxHeight: '20vh', maxWidth: '100%' }} className="p-6" src={require('../../assets/images/logos/inctf_light.png')} />*/}
-            {/*</div>*/}
-            {/*{!isLoggedIn && <OnBoardingCard>*/}
-            {/*    <p>Let's get started, right away!</p>*/}
-            {/*    <div className="flex w-full items-center justify-center">*/}
-            {/*        /!*<a className="plain-link mr-1" href="/register">Register</a>*!/*/}
-            {/*        <a className="plain-link" style={{ background: '#4A148C' }} href="/login">Login</a>*/}
-            {/*    </div>*/}
-            {/*</OnBoardingCard>}*/}
             <ol className="pl-0 mt-3">{sidebarLinks.map((l, index) =>
                 <Fade delay={index*250}>
                     <li>
                         {l.href ?
-                        <Link href={l.href} passHref>
-                            <a className="w-full">
-                                {l.title}
-                            </a>
-                        </Link> :
+                        <a href={l.href} className="w-full">
+                            {l.title}
+                        </a> :
                         <button onClick={l.onClick} className="w-full">
                             {l.title}
                         </button>}
                     </li>
                 </Fade>
             )}</ol>
-            {/*<div className="my-3 mx-2">*/}
-            {/*    {!isLoggedIn && <RegisterFooterButton className="plain-link" href="/register">*/}
-            {/*        Register Now*/}
-            {/*        <img alt="Register now" src={require('../../assets/images/icons/chevron_right.png')}/>*/}
-            {/*    </RegisterFooterButton>}*/}
-            {/*</div>*/}
             <div style={{ opacity: 0.8 }} className="text-center pt-4">
                 follow us on
             </div>

@@ -226,7 +226,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 },
                 {
                     "label": "Videos & Guides",
-                    "link": "/resources"
+                    "link": "/resources#videos"
                 },
                 {
                     "label": "FAQ",
