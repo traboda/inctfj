@@ -30,7 +30,7 @@ const INCTFJStats = ({ stats }) => {
     const statsPreviewer = () => [
         { value: stats?.registrations || 0, title: "Total Participants" },
         { value: stats?.regToday || 0, title: "Registrations Today" },
-        { value: stats?.institutions || 0, title: "Schools Participating" },
+        { value: stats?.totalInstitutions || 0, title: "Schools Participating" },
     ]
 
     return <StatsSection id="our-reach">
