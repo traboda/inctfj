@@ -1,7 +1,7 @@
 import React from "react";
 
 const CTFPedagogy = () => (
-    <div id="ctf-pedagogy">
+    <div id="ctf-pedagogy" className="container mx-auto py-12 px-4">
         <div>
             <h2>CTFs are not just a contest.</h2>
             <h3>

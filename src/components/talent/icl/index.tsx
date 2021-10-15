@@ -1,7 +1,7 @@
 import React from "react";
 
 const IndianCyberLeague = () => (
-    <div id="indian-cyber-league">
+    <div id="indian-cyber-league" className="container mx-auto py-12 px-4">
         <div>
             <h3>
                 Keeping Interests High

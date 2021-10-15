@@ -1,7 +1,7 @@
 import React from "react";
 
 const CyberClubsInSchools = () => (
-    <div id="cyber-clubs">
+    <div id="cyber-clubs" className="container mx-auto py-12 px-4">
         <div>
             <h3>
                 Building Self-Sustaining
