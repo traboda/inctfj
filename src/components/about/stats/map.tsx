@@ -44,7 +44,7 @@ const StateWiseRegistrationMap = ({ data }) => {
             { id: 'AP', state: 'Andhra Pradesh', value: getStateVal('IN-AP') },
             { id: 'AR', state: 'Arunachal Pradesh', value: getStateVal('IN-AR') },
             { id: 'AS', state: 'Assam', value: getStateVal('IN-AS') },
-            { id: 'BR', state: 'Bihar', value: getStateVal('IN-AS') },
+            { id: 'BR', state: 'Bihar', value: getStateVal('IN-BR') },
             { id: 'CT', state: 'Chhattisgarh', value: getStateVal('IN-CT') },
             { id: 'GA', state: 'Goa', value: getStateVal('IN-GA') },
             { id: 'GJ', state: 'Gujarat', value: getStateVal('IN-GJ') },
@@ -69,15 +69,15 @@ const StateWiseRegistrationMap = ({ data }) => {
             { id: 'UT', state: 'Uttarakhand', value: getStateVal('IN-UT') },
             { id: 'UP', state: 'Uttar Pradesh', value: getStateVal('IN-UP') },
             { id: 'WB', state: 'West Bengal', value: getStateVal('IN-WB') },
-            { id: 'AN', state: 'Andaman and Nicobar Islands', value: 0 },
-            { id: 'CH', state: 'Chandigarh', value: 0 },
-            { id: 'DN', state: 'Dadra and Nagar Haveli', value: 0 },
-            { id: 'DD', state: 'Daman and Diu', value: 0 },
+            { id: 'AN', state: 'Andaman and Nicobar Islands', value: getStateVal('IN-AN') },
+            { id: 'CH', state: 'Chandigarh', value: getStateVal('IN-CH') },
+            { id: 'DN', state: 'Dadra and Nagar Haveli', value: getStateVal('IN-DN') },
+            { id: 'DD', state: 'Daman and Diu', value: getStateVal('IN-DD') },
             { id: 'DL', state: 'Delhi', value: getStateVal('IN-DL') },
             { id: 'JK', state: 'Jammu and Kashmir', value: getStateVal('IN-JK') },
-            { id: 'LA', state: 'Ladakh', value: 0 },
-            { id: 'LD', state: 'Lakshadweep', value: 0 },
-            { id: 'PY', state: 'Puducherry', value: 0 }
+            { id: 'LA', state: 'Ladakh', value: getStateVal('IN-LA') },
+            { id: 'LD', state: 'Lakshadweep', value: getStateVal('IN-LD') },
+            { id: 'PY', state: 'Puducherry', value: getStateVal('IN-PY') }
         ];
     };
 
