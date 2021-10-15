@@ -4,7 +4,7 @@ const achievements = [
     {
         image: require('../../assets/images/achievements/zhero.png'),
         title: 'Zhero',
-        subTitle: <>CTF Team founded by InCTF Jr 2019 Participants</>,
+        subTitle: " ",
         content: <>A CTF team founded by a <span className="text-primary">group of school student participants </span>
             at InCTF Junior 2019 is now ranked <strong>48<sup>th</sup> globally</strong> among 24k teams.</>
     },
@@ -40,15 +40,14 @@ const achievements = [
 
 const AboutAchievements = () => {
     return (
-        <div className="container mx-auto" style={{ padding: '10vw 1.2rem' }}>
+        <div className="container mx-auto" style={{ padding: '7.5vw 1.2rem' }}>
             <div className="text-center">
-                <h1 className="font-bold text-3xl mb-3">Recent Achievements of InCTF Jr Participants</h1>
-                <h5 className="text-primary font-semibold uppercase">Be the part of the history yourself</h5>
+                <h1 className="font-bold text-3xl lg:text-4xl mb-3">Recent Achievements of InCTF Jr Participants</h1>
             </div>
             <div className="mt-12 grid gap-8 lg:grid-cols-4 sm:grid-cols-2 grid-cols-1">
                 {achievements.map((a, i) => (
                     <div key={i} className="flex flex-col items-center text-center">
-                        <div className="opacity-80 mb-4 text-sm">{a.subTitle}</div>
+                        <div className="opacity-80 mb-5 text-sm">{a.subTitle}</div>
                         <img
                             src={a.image}
                             alt={a.title}
@@ -56,7 +55,7 @@ const AboutAchievements = () => {
                             className="rounded-lg shadow-lg"
                             draggable={false}
                         />
-                        <div className="font-bold text-xl mt-4 mb-2">{a.title}</div>
+                        <div className="font-bold text-xl mt-4">{a.title}</div>
                         <div style={{ fontSize: '0.95rem', width: '300px', maxWidth: '100%' }}>{a.content}</div>
                     </div>
                 ))}

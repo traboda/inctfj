@@ -2,9 +2,12 @@ import React from 'react';
 import styled from "@emotion/styled";
 import Zoom from "react-reveal/Zoom";
 import CountUp from "react-countup";
+import StateWiseRegistrationMap from "./map";
 
 
-const StatsSecion = styled.div`
+const StatsSection = styled.div`
+    background: white;
+    padding: 7.5vh 2vw;
     user-select: none;
     img {
         max-width: 100%;
@@ -13,9 +16,9 @@ const StatsSecion = styled.div`
 
 const StatsContainer = styled.section`
     h2 {
-      font-size: calc(1.5rem + 2vw);
+      font-size: calc(1.5rem + 2.5vw);
       margin-bottom: 0;
-      line-height: 1;
+      line-height: 1.2;
     }
     h4 { font-size: calc(1rem + 0.5vw); }
     .col-6 { margin-bottom: 1rem; }
@@ -30,8 +33,11 @@ const INCTFJStats = ({ stats }) => {
         { value: stats?.institutions || 0, title: "Schools Participating" },
     ]
 
-    return <StatsSecion>
-         <StatsContainer className="flex flex-wrap  py-8 text-center mx-0">
+    return <StatsSection id="our-reach">
+        <h2 className="text-center mb-8 text-3xl md:text-4xl lg:text-5xl">
+            InCTF Jr 21 is one of the world's largest CTF
+        </h2>
+        <StatsContainer className="flex flex-wrap py-8 text-center mx-0">
             {statsPreviewer().map((s) =>
                 <div className="w-1/2 md:w-1/3 p-3">
                     <Zoom mountOnEnter effect="fadeInUp">
@@ -43,10 +49,8 @@ const INCTFJStats = ({ stats }) => {
                 </div>
             )}
         </StatsContainer>
-        <div className="text-center pt-6">
-            <img draggable="false" src={require('../../assets/images/photos/standing_as_inctf.jpg')} />
-        </div>
-    </StatsSecion>;
+        <StateWiseRegistrationMap data={stats} />
+    </StatsSection>;
 
 };
 

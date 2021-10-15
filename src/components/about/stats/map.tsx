@@ -12,11 +12,6 @@ const Wrapper = styled.div`
   }
 `;
 
-const PROJECTION_CONFIG = {
-    scale: 600,
-    center: [78.9629, 22.5937]
-};
-
 const StateWiseRegistrationMap = ({ data }) => {
 
     const [tooltipContent, setTooltipContent] = useState('');
@@ -109,13 +104,16 @@ const StateWiseRegistrationMap = ({ data }) => {
     };
 
     return (
-        <Wrapper className="py-8">
+        <Wrapper>
             <ComposableMap
-                projectionConfig={PROJECTION_CONFIG}
+                projectionConfig={{
+                    scale: 450,
+                    center: [83, 22]
+                }}
                 projection="geoMercator"
-                width={600}
-                height={340}
-                style={{ width: "100%", height: "auto" }}
+                width={100}
+                height={320}
+                style={{ width: "100%", maxHeight: '75vh', height: "900px" }}
                 data-tip=""
             >
                 <Geographies geography={INDIA_TOPO_JSON}>
@@ -136,7 +134,7 @@ const StateWiseRegistrationMap = ({ data }) => {
                     }
                 </Geographies>
             </ComposableMap>
-            <ReactTooltip>{tooltipContent}</ReactTooltip>
+            <ReactTooltip backgroundColor="#222" type="dark">{tooltipContent}</ReactTooltip>
         </Wrapper>
     )
 };

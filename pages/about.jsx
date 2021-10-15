@@ -3,12 +3,10 @@ import styled from "@emotion/styled";
 
 import Base from "../src/components/shared/Base";
 import TopBar from "../src/components/shared/TopBar";
-import PastINCTFSpeakers from "../src/components/about/PastSpeakers";
-import INCTFJStats from "../src/components/about/Stats";
+import INCTFJStats from "../src/components/about/stats";
 import InctfIntro from "../src/components/about/Intro";
 import Footer from "../src/components/shared/Footer";
 import AboutAchievements from "../src/components/about/Achievements";
-import StateWiseRegistrationMap from "../src/components/about/stats/map";
 import UNSDGSection from "../src/components/about/unsdg";
 
 const AboutPageCoverSection = styled.div`
@@ -43,13 +41,16 @@ const AboutPage = () => {
 
     return <Base meta={{ title: "About InCTF Jr." }}>
         <TopBar includeSpace={false} />
-        <AboutPageCoverSection />
-        <InctfIntro />
-        <INCTFJStats stats={stats} />
-        <StateWiseRegistrationMap data={stats} />
-        <AboutAchievements />
-        <UNSDGSection />
-        <PastINCTFSpeakers />
+        <div style={{ background: '#FAFAFA' }}>
+            <AboutPageCoverSection />
+            <InctfIntro />
+            <INCTFJStats stats={stats} />
+            <div className="text-center pt-6">
+                <img draggable="false" src={require('../src/assets/images/photos/standing_as_inctf.jpg')} />
+            </div>
+            <AboutAchievements />
+            <UNSDGSection />
+        </div>
         <Footer />
     </Base>
 
