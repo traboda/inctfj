@@ -84,6 +84,8 @@ const customConfig = {
             "/privacy": { page: "/privacy" },
             "/sponsors": { page: "/sponsors" },
             "/organizers": { page: "/organizers" },
+            "/championship": { page: "/championship" },
+            "/talent-incubation": { page: "/talent-incubation" },
             ...writeups,
             ...posts
         }

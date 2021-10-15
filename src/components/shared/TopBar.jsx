@@ -169,7 +169,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 },
                 {
                     "label": "Our Reach & Statistics",
-                    "link": "/about#reach"
+                    "link": "/about#our-reach"
                 },
                 {
                     "label": "Organizing Team",
@@ -185,60 +185,60 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 }
             ]
         },
-        // {
-        //     "label": "Talent Incubation",
-        //     "link": "/talent-incubation",
-        //     "items": [
-        //         {
-        //             "label": "The CTF Pedagogy",
-        //             "link": "/talent-incubation#pedagogy"
-        //         },
-        //         {
-        //             "label": "CyberSafety Education",
-        //             "link": "/talent-incubation#programmes"
-        //         },
-        //         {
-        //             "label": "Indian Cyber League",
-        //             "link": "/talent-incubation#indian-cyber-league"
-        //         },
-        //         {
-        //             "label": "Diversity Initiatives",
-        //             "link": "/talent-incubation#diversity"
-        //         },
-        //         {
-        //             "label": "Success Stories",
-        //             "link": "/about#impact"
-        //         }
-        //     ]
-        // },
-        // {
-        //     "label": "Championship",
-        //     "link": "/championship",
-        //     "items": [
-        //         {
-        //             "label": "Why Participate?",
-        //             "link": "/championship#why-participate",
-        //         },
-        //         {
-        //             "label": "Contest Timeline",
-        //             "link": "/championship#timeline",
-        //         },
-        //         {
-        //             "label": "Guidelines & Rules",
-        //             "link": "/rules",
-        //         },
-        //         {
-        //             "label": "Prizes",
-        //             badge: "3 Lks+",
-        //             badgeColor: "bg-green-100",
-        //             "link": "championship/#prizes",
-        //         },
-        //         {
-        //             "label": "Past Winners",
-        //             "link": "/stats",
-        //         }
-        //     ]
-        // },
+        {
+            "label": "Talent Incubation",
+            "link": "/talent-incubation",
+            "items": [
+                {
+                    "label": "The CTF Pedagogy",
+                    "link": "/talent-incubation#pedagogy"
+                },
+                {
+                    "label": "CyberSafety Education",
+                    "link": "/talent-incubation#programmes"
+                },
+                {
+                    "label": "Indian Cyber League",
+                    "link": "/talent-incubation#indian-cyber-league"
+                },
+                {
+                    "label": "Diversity Initiatives",
+                    "link": "/talent-incubation#diversity"
+                },
+                {
+                    "label": "Success Stories",
+                    "link": "/about#impact"
+                }
+            ]
+        },
+        {
+            "label": "Championship",
+            "link": "/championship",
+            "items": [
+                {
+                    "label": "Why Participate?",
+                    "link": "/championship#why-participate",
+                },
+                {
+                    "label": "Contest Timeline",
+                    "link": "/championship#timeline",
+                },
+                {
+                    "label": "Guidelines & Rules",
+                    "link": "/rules",
+                },
+                {
+                    "label": "Prizes",
+                    badge: "3 Lks+",
+                    badgeColor: "bg-green-100",
+                    "link": "championship/#prizes",
+                },
+                {
+                    "label": "Past Winners",
+                    "link": "/stats",
+                }
+            ]
+        },
         {
             "label": "Get Started",
             "link": "/resources",
