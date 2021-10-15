@@ -1,24 +1,11 @@
-import React, { useState } from 'react';
+import React  from 'react';
 import styled from "@emotion/styled";
 
 import Base from "../src/components/shared/Base";
 import TopBar from "../src/components/shared/TopBar";
 import Footer from "../src/components/shared/Footer";
+import PageHeader from "../src/components/PageHeader";
 
-const Header = styled.section`
-    min-height: 50vh;
-    background: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    h1 {
-       color: white;
-    }
-    p {
-      color: #AAA;
-    }
-`;
 
 const LogoWrap = styled.div`
       background-color: ${({ dark}) => dark ? '#333' : 'white'};
@@ -47,14 +34,12 @@ const LogoWrap = styled.div`
 
 const BrandingPage = () => {
 
-    return <Base meta={{ title: "Branding" }}>
+    return <Base meta={{ title: "Brand Kit" }}>
         <TopBar darkenOnSidebar includeSpace={false} />
-        <Header>
-            <div className="mt-5">
-                <h1>Brand Kit</h1>
-                <p>Brand Assets & Guidelines for InCTF Junior</p>
-            </div>
-        </Header>
+        <PageHeader
+            title="Brand Kit"
+            description="Brand Assets & Guidelines for InCTF Junior"
+        />
         <div style={{ background: '#eee', minHeight: '50vh' }}>
             <div className="flex justify-center px-1 py-5">
                 <div className="flex flex-wrap mx-0" style={{ maxWidth: '900px' }}>

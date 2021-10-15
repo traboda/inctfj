@@ -42,11 +42,13 @@ const Breadcrumb = ({ items }: Breadcrumb) => (
         {items.length > 0 &&
         items.map((i) =>
             <li key={shortid.generate()}>
-                <Link passHref href={i?.link||'#'}>
-                    <a className="hover:text-primary">
-                        {i.title}
-                    </a>
-                </Link>
+                {i.isActive ? i.title : (
+                    <Link passHref href={i?.link||'#'}>
+                        <a className="hover:text-primary">
+                            {i.title}
+                        </a>
+                    </Link>
+                )}
             </li>
         )}
     </BreadcrumbWrapper>);

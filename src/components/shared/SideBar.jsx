@@ -118,9 +118,9 @@ const SocialMediaLinks = styled.div`
     }
 `;
 
-const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
+const SideBar = ({ onClose }) => {
 
-    const sidebarLinks = !isLoggedIn ? [
+    const sidebarLinks = [
         { "icon": require('../../assets/images/icons/home.png'), "title": "Home", "href": "/" },
         { "icon": require('../../assets/images/icons/star_glowing.png'), "title": "About", "href": "/about" },
         { "icon": require('../../assets/images/icons/learn.png'), "title": "Resources", "href": "/resources"},
@@ -128,12 +128,6 @@ const SideBar = ({ onClose, onLogOut, isLoggedIn, darkenOnSidebar }) => {
         { "icon": require('../../assets/images/icons/trophy.png'), "title": "Past Stats", "href": "/stats" },
         { "icon": require('../../assets/images/icons/faq.png'), "title": "FAQ", "href": "/faq" },
         { "icon": require('../../assets/images/icons/faq.png'), "title": "Get Help", "href": "/discord" },
-    ] : [
-        { "icon": require('../../assets/images/icons/sword.png'), "title": "CTF Arena", "href": "/ctf" },
-        { "icon": require('../../assets/images/icons/dashboard.png'), "title": "Dashboard", "href": "/dashboard" },
-        { "icon": require('../../assets/images/icons/shooting_star.png'), "title": "Stats & Rankings", "href": "/stats" },
-        { "icon": require('../../assets/images/icons/blog.png'), "title": "Blog", "href": "/blog" },
-        { "icon": require('../../assets/images/icons/logout.png'), "title": "Logout", "onClick": onLogOut }
     ];
 
     return <div onClick={onClose}>

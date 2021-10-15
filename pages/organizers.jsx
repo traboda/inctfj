@@ -6,7 +6,7 @@ import {OrganizingTeamChiefs, OrganizingTeamTier2, OrganizingTeamTier3} from "..
 import Footer from "../src/components/shared/Footer";
 import ProfileSummaryCard from "../src/components/ProfileSummaryCard";
 import ProfileMicroCard from "../src/components/ProfileMicroCard";
-import Breadcrumb from "../src/components/shared/Breadcrumbs";
+import PageHeader from "../src/components/PageHeader";
 
 
 const OrganizersPage = () => {
@@ -14,30 +14,20 @@ const OrganizersPage = () => {
     return (
         <Base meta={{ title: "Organizers" }}>
             <TopBar darkenOnSidebar />
-            <div className="px-4 py-8 flex items-end justify-center">
-                <div style={{ width: '1000px', maxWidth: '100%'  }}>
-                    <div className="flex items-center py-5" style={{ minHeight: '30vh' }}>
-                        <div>
-                            <div className="w-full text-left mb-2">
-                                <Breadcrumb
-                                    items={[
-                                        {
-                                            link: '/about',
-                                            title: 'About'
-                                        },
-                                        {
-                                            link: '/organizers',
-                                            isActive: true,
-                                            title: 'Organizers'
-                                        }
-                                    ]}
-                                />
-                            </div>
-                            <h1 className="text-primary text-5xl lg:text-6xl py-4">Organizers</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <PageHeader
+                title="Organizers"
+                breadcrumb={[
+                    {
+                        link: '/about',
+                        title: 'About'
+                    },
+                    {
+                        link: '/organizers',
+                        isActive: true,
+                        title: 'Organizers'
+                    }
+                ]}
+            />
             <div className="py-6 px-2" style={{ background: '#FAFAFA' }}>
                 {OrganizingTeamChiefs?.length > 0 && (
                     <div className="py-5">

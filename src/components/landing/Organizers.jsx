@@ -84,7 +84,10 @@ const LandingOrganizers = () => {
                 <Fade right>
                     <div className="w-full md:w-1/3 pr-4 pl-4 cyber md:order-2 order-1 md:text-left text-center">
                         <a href="https://www.amrita.edu/center/cyber-security">
-                            <img alt="Team bi0s" src={require('../../assets/images/logos/amrita_cyber.png')} className="md:mx-0 mx-auto" />
+                            <img
+                                alt="Amrita Center for Cyber Security Systems & Networks"
+                                src={require('../../assets/images/logos/amrita_cyber.png')} className="inline"
+                            />
                         </a>
                         <h4>India's Leading CyberSec. Researchers</h4>
                         <div className="flex md:justify-start justify-center">

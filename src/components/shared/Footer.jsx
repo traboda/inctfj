@@ -2,8 +2,8 @@ import React from 'react';
 import styled from "@emotion/styled";
 
 const FooterContainer = styled.footer`
-    background: #222;
-    color: #AAA;
+    background: #222640;
+    color: white;
     padding: 1rem;
     font-size: 14px;
     img {
@@ -11,6 +11,7 @@ const FooterContainer = styled.footer`
       max-width: 100%;
     }
     .social-bar {
+        opacity: 0.8;
         a {
            padding: 0 8px;
         }
@@ -27,7 +28,8 @@ const FooterContainer = styled.footer`
 const FooterLinksBar = styled.nav`
     a {
        font-size: 13px;
-       color: #999;
+       color: white;
+       opacity: 0.8;
        margin-right: 8px;
        margin-bottom: 5px;
        &:hover {
@@ -46,7 +48,9 @@ const Footer = () => {
                     <div className="md:flex items-center block">
                         <img draggable="false" className="inline mb-3" alt="Amrita InCTF Junior" src={require('../../assets/images/branding/light_version.png')} />
                         <div className="md:ml-6 py-3">
-                            <div className="line-height-1 my-2 md:mb-1 md:mt-0">&copy; Amrita InCTF Jr. 2016-2021. <span className="inline-block">All Rights Reserved.</span></div>
+                            <div className="line-height-1 opacity-80 my-2 md:mb-1 md:mt-0">
+                                &copy; Amrita InCTF Jr. 2016-2021. <span className="inline-block">All Rights Reserved.</span>
+                            </div>
                             <FooterLinksBar>
                                 <a href="/branding">Brand Kit</a>
                                 <a href="/privacy">Privacy Policy</a>

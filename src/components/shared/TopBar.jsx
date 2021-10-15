@@ -5,7 +5,6 @@ import Modal from "react-modal";
 import Link from "next/link";
 
 import SideBar from "./SideBar";
-import { setUserInfo, useAuthState } from "../../states";
 import TopBarItem from "./TopBarItem";
 import dynamic from "next/dynamic";
 
@@ -82,19 +81,6 @@ const TopbarInfoCard = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 100%;
-
-  button {
-    margin-left: 8px;
-    display: block;
-    background: #F13F17;
-    text-decoration: none !important;
-    color: white !important;
-    padding: 1rem;
-    font-weight: 600;
-    border-radius: 10px;
-    min-width: 180px;
-    max-width: 100%;
-  }
 `;
 
 const CloseButton = styled.button`
@@ -113,22 +99,12 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
 
     const [showMenu, setShowMenu] = useState(false);
     const [showRegCard, setShowRegCard] = useState(false);
-    const [hasLoaded, setLoaded] = useState(false);
-    const [isLoggedIn] = useAuthState('isLoggedIn');
     const [scrollDir, setScrollDir] = useState('up');
     const [isAtTop, setIsAtTop] = useState(true);
     const [searchModal, setSearchModal] = useState(false);
 
-    useEffect(() => {
-        setLoaded(true);
-    }, []);
-
     const topbarRef = useRef()
     const scrollPrevStateRef = useRef(0);
-
-    const onLogOut = () => {
-        setUserInfo(null);
-    };
 
     const onOpen = () => {
         setShowMenu(!showMenu);
@@ -348,7 +324,12 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                             <div>India's First & Only CTF Championship</div>
                                             <h5 style={{ color: '#F13F17' }} className="mb-0">Exclusively for School Students</h5>
                                         </div>
-                                        <button onClick={() => setShowRegCard(true)}>Register</button>
+                                        <button
+                                            className="px-8 py-4 rounded-lg font-semibold bg-primary hover:bg-blue-800 shadow hover:shadow-xl text-white ml-3"
+                                            onClick={() => setShowRegCard(true)}
+                                        >
+                                            Register <i className="fa fa-chevron-right" />
+                                        </button>
                                     </TopbarInfoCard>
                                 </div>
                             </div>
@@ -357,9 +338,9 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                             <TopbarInfoCard className="mr-3">
                                 <button
                                     onClick={() => setShowRegCard(true)}
-                                    className="w-full"
+                                    className="w-full px-5 py-4 font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl ml-3"
                                 >
-                                    Register
+                                    Register <i className="fa fa-chevron-right" />
                                 </button>
                             </TopbarInfoCard>
                             <button onClick={onOpen} className="transition" style={{ width: 46, height: 46 }}>
@@ -462,8 +443,6 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
         <SideBar
             darkenOnSidebar={darkenOnSidebar}
             onClose={onClose}
-            isLoggedIn={hasLoaded && isLoggedIn}
-            onLogOut={onLogOut}
         />}
         <div style={{ height: topbarRef ? topbarRef?.current?.offsetHeight : '72px' }} className="hidden md:block"/>
         <div className="block md:hidden text-center pt-6 px-2 pb-4">

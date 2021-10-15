@@ -11,7 +11,7 @@ import schoolRank20 from '../src/data/school-rankings/20'
 
 import YearlyLeaderboard from "../src/components/HallOfFame/YearlyLeaderboard";
 import Footer from "../src/components/shared/Footer";
-import Breadcrumb from "../src/components/shared/Breadcrumbs";
+import PageHeader from "../src/components/PageHeader";
 
 const PageWrap = styled.div`
     min-height: 50vh;
@@ -120,30 +120,20 @@ const Stats = () => {
 
     return <Base meta={{ title: "Statistics & Rankings" }}>
         <TopBar darkenOnSidebar includeSpace={false} />
-        <div className="px-4 py-8 flex items-end justify-center">
-            <div style={{ width: '1000px', maxWidth: '100%'  }}>
-                <div className="flex items-center py-5" style={{ minHeight: '30vh' }}>
-                    <div>
-                        <div className="w-full text-left mb-2">
-                            <Breadcrumb
-                                items={[
-                                    {
-                                        link: '/championship',
-                                        title: 'Championship'
-                                    },
-                                    {
-                                        link: '/organizers',
-                                        isActive: true,
-                                        title: 'Organizers'
-                                    }
-                                ]}
-                            />
-                        </div>
-                        <h1 className="text-primary text-5xl lg:text-6xl py-4">Past Statistics & Rankings</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <PageHeader
+            title="Past Statistics & Rankings"
+            breadcrumb={[
+                {
+                    link: '/championship',
+                    title: 'Championship'
+                },
+                {
+                    link: '/organizers',
+                    isActive: true,
+                    title: 'Organizers'
+                }
+            ]}
+        />
         <PageWrap>
             <div style={{ maxWidth: '1100px', width: '100%' }}>
                 <div className="d-flex align-items-center">
