@@ -1,7 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import VideoLinks from '../../data/videos';
+import TagSelector from "../TagSelector";
 
 const YoutubeVideosSection = () => {
+
+    const [tag, setTag] = useState(null);
+    const [keyword, setKeyword] = useState('');
+
+    const filterOptions = [
+        {
+            "label": "How To?",
+            "value": "how-to"
+        },
+        {
+            "label": "Category Introductions",
+            "value": "cat-intro"
+        },
+        {
+            "label": "Challenge Solutions",
+            "value": "chall-solution"
+        }
+    ]
+
+    console.log(tag);
 
     return (
         <div id="videos">
@@ -11,8 +32,31 @@ const YoutubeVideosSection = () => {
                     These videos will help you get started easily
                 </p>
             </div>
+            <div className="flex flex-wrap mb-2">
+                <div className="md:1/2 flex items-center p-2">
+                    <input
+                        type="text"
+                        value={keyword}
+                        onChange={e => setKeyword(e.target.value)}
+                        placeholder="Type to search..."
+                        className="outline-none pl-4 pr-12 py-2 border rounded-t-lg shadow-inner focus:border-yellow-600 w-full rounded-b-lg"
+                    />
+                </div>
+                <div className="md:1/2 flex items-center p-2">
+                    <TagSelector
+                        options={filterOptions}
+                        isClearable
+                        value={tag}
+                        // @ts-ignore
+                        onChange={(t) => setTag(t?.value === tag?.value ? null : t)}
+                    />
+                </div>
+            </div>
             <div className="flex flex-wrap">
-                {VideoLinks.map((v) => (
+                {VideoLinks.filter((v) =>
+                    (tag == null || (v?.tags?.length > 0 &&  v.tags.indexOf(tag?.value) != -1)) &&
+                    ((keyword?.length < 1) || (v.title?.toLowerCase().startsWith(keyword.toLowerCase())))
+                ).map((v) => (
                     <div
                         key={v.videoID}
                         className="w-full md:w-1/3 lg:w-1/4 p-1 md:p-2 lg:p-3"

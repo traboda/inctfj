@@ -34,7 +34,7 @@ const WriteUpCard = ({ title, id, category, difficulty }) => {
 
     return (
         <Link href={`/writeup/${id}`} passHref>
-            <PostCardWrapper className="shadow hover:shadow-lg">
+            <PostCardWrapper className="shadow-lg hover:shadow">
                 <h4>{title}</h4>
                 <div className="mt-2">
                     <span><i className="far fa-fire"/> {difficulty}</span>

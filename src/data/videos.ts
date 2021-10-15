@@ -27,32 +27,32 @@ export default [
     {
         title: 'Introduction to Stegnoraphy',
         videoID: 'i6z0laa85uc',
-        tags: ['category-introduction', ]
+        tags: ['cat-intro', ]
     },
     {
         title: 'Introduction to Cryptography',
         videoID: 'SKtWfK_YrPE',
-        tags: ['category-introduction', ]
+        tags: ['cat-intro', ]
     },
     {
         title: 'Introduction to Web Exploitation',
         videoID: 'sOSXP5AoOqQ',
-        tags: ['category-introduction', ]
+        tags: ['cat-intro', ]
     },
     {
         title: 'Advanced Dictionary - Forensics Challenge',
         videoID: 'm-cu6WoPRF8',
-        tags: ['challenge-solution', ]
+        tags: ['chall-solution', ]
     },
     {
         title: 'Con-The-Cat & LSB-PNG - Forensics Challenge',
         videoID: 'TFRRIkJW0C8',
-        tags: ['challenge-solution', ]
+        tags: ['chall-solution', ]
 
     },
     {
         title: 'JS_r3v - Web Challenge',
         videoID: 'JV5gvt29cXk',
-        tags: ['challenge-solution', ]
+        tags: ['chall-solution', ]
     }
 ];

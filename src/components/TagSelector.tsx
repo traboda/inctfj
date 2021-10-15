@@ -11,8 +11,7 @@ const TagSelectorContainer = styled.div`
       border-radius: 7px;
       padding: 0.5rem 1rem;
       cursor: pointer;
-      margin-top: 0.5rem;
-      margin-right: 0.5rem;
+      margin: 0.25rem;
       transition: all 250ms ease;
       font-size: 16px !important;
       border-width: 1px;
@@ -30,7 +29,7 @@ const TagSelectorContainer = styled.div`
         color: white;
         
         &:hover {
-          background: #B71C1C;
+          background: #fd7e14;
         }
       }
     }
@@ -50,18 +49,24 @@ const TagSelectorContainer = styled.div`
   }
 `;
 
+type ValueType = (
+    {
+        label: string,
+        value: string
+    } |
+    {
+        label: string,
+        value: string
+    }[]
+)
+
 type TagSelectorProps = {
-    labels?: {
-        helpText: string,
-        title: string,
-    },
-    value: any,
-    onChange: (any) => void,
+    value: ValueType,
+    onChange: (val: ValueType) => void,
     small?: boolean,
     options: {
         value: string,
-        label: (string|React.ReactElement),
-        color?: string
+        label: string,
     }[],
     isClearable?: boolean,
     multiple?: boolean,
@@ -69,13 +74,6 @@ type TagSelectorProps = {
 }
 
 const TagSelector = (props: TagSelectorProps) => {
-    let _default = props.options[0];
-    if(props.value && !Array.isArray(props.value))
-        for(const opt of props.options)
-            if(JSON.stringify(props.value) === JSON.stringify(opt.value))
-                _default = opt;
-
-    const [tag, setTag] = useState(_default);
     const [tags, setTags] = useState([]);
 
     const handleTagClick = (_tag) => {
@@ -91,46 +89,31 @@ const TagSelector = (props: TagSelectorProps) => {
                 setTags(_tags);
                 props.onChange(_tags);
             }
-        } else if(props.isClearable && _tag.value === tag?.value) {
-            setTag(props.options[0]);
+        } else if(props.isClearable &&  !props.value && _tag.value === props.value) {
+            props.onChange(props.options[0]);
             props.onChange(props.options[0]);
         } else {
-            setTag(_tag);
+            props.onChange(_tag);
             props.onChange(_tag);
         }
     };
 
-    const generateClassName = ({ value }) => {
+    const generateClassName = ({ value: val }) => {
         let _class = props.small ? 'small' : '';
         if(!props.fullWidth) _class += ' shadow-sm';
-        if(props.multiple && tags.includes(value)) _class += ' active';
-        if(!props.multiple && tag?.value === value) _class += ' active';
-
+        if(props.multiple && tags.includes(val)) _class += ' active';
+        // @ts-ignore
+        if(!props.multiple && props.value?.value === val) _class += ' active';
         return _class;
     };
 
     return <TagSelectorContainer className={props.fullWidth ? 'fullWidth' : ''}>
-        {props?.labels &&
-        <div className="flex flex-wrap  mx-0">
-            {props.labels?.title &&
-            <div className="w-4/5 p-1">
-                <div style={{ fontSize: '1.1rem', opacity: 0.8 }}>{props.labels.title}</div>
-            </div>}
-            {props.labels.helpText &&
-            <div className="w-1/5 flex items-center justify-end p-1">
-                <i
-                    style={{ fontSize: '1.35rem', opacity: 0.8, fontWeight: 300 }}
-                    className="far fa-info-circle"
-                />
-            </div>}
-        </div>}
         <div className={`tag-container ${props.fullWidth ? 'shadow-sm' : ''}`}>
             {props.options.map(opt =>
                 <div
                     key={opt.value}
                     className={`tag ${generateClassName(opt)}`}
                     onClick={() => handleTagClick(opt)}
-                    style={opt.color ? { color: opt.color } : null}
                 >
                     {opt.label}
                 </div>

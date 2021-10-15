@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import TagSelector from "./TagSelector";
+import TagSelector from "../TagSelector";
 import Dropdown from "../landing/search/Dropdown";
 
 const FAQFilter = ({ search, setSearch, tags, setTags, totalTags }) => {
