@@ -83,7 +83,7 @@ const FAQPage = () => {
         <TopBar/>
         <FAQSection>
             <h1 className="text-primary text-center text-3xl lg:text-6xl py-4">Frequently Asked Questions</h1>
-            <div className="px-6 mx-auto" style={{ maxWidth: 800 }}>
+            <div className="px-6 mx-auto" style={{ maxWidth: 800, minHeight: '50vh' }}>
                 <FAQFilter
                     search={search}
                     setSearch={setSearch}

@@ -5,14 +5,9 @@ import styled from "@emotion/styled";
 
 import Base from "./shared/Base";
 import TopBar from "./shared/TopBar";
+import Breadcrumb from "./shared/Breadcrumbs";
+import Footer from "./shared/Footer";
 
-
-const PageCover = styled.div`
-    background-image: ${() => `url(${require('../assets/images/covers/inctfj_mountains.jpg')})`};
-    background-size: cover;
-    background-position: center;
-    min-height: 60vmin;
-`;
 
 const ShareSection = styled.section`
   padding: 3.5vh 1rem;
@@ -62,7 +57,7 @@ const ShareSection = styled.section`
       box-shadow: 2px 5px 12px rgba(0,0,0,0.35);
   }
   .inctf_poster {
-      height: 50vmin;
+      max-height: 50vmin;
   }
   .inctf_video_cover {
       height: 35vmin;
@@ -110,7 +105,30 @@ const PromotePage = () => {
 
     return <Base meta={{ title: "Publicize InCTF Jr." }}>
         <TopBar includeSpace={false} />
-        <PageCover />
+        <div className="px-4 py-8 flex items-end justify-center">
+            <div style={{ width: '1000px', maxWidth: '100%'  }}>
+                <div className="flex items-center py-5" style={{ minHeight: '30vh' }}>
+                    <div>
+                        <div className="w-full text-left mb-2">
+                            <Breadcrumb
+                                items={[
+                                    {
+                                        link: '/resources',
+                                        title: 'Resources'
+                                    },
+                                    {
+                                        link: '/promote',
+                                        isActive: true,
+                                        title: 'Promote'
+                                    }
+                                ]}
+                            />
+                        </div>
+                        <h1 className="text-primary text-5xl lg:text-6xl py-4">Promote InCTF Jr</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
         <ShareSection>
             <div className="flex justify-center text-center py-2">
                 <div>
@@ -149,6 +167,7 @@ const PromotePage = () => {
                 )}
             </ScrollContainer>
         </ShareSection>
+        <Footer />
     </Base>;
 
 };

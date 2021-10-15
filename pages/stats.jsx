@@ -11,24 +11,13 @@ import schoolRank20 from '../src/data/school-rankings/20'
 
 import YearlyLeaderboard from "../src/components/HallOfFame/YearlyLeaderboard";
 import Footer from "../src/components/shared/Footer";
-
-const Header = styled.section`
-    min-height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    h1 {
-       color: orangered;
-    }
-    p {
-      color: #333;
-    }
-`;
+import Breadcrumb from "../src/components/shared/Breadcrumbs";
 
 const PageWrap = styled.div`
     min-height: 50vh;
     background: #FAFAFA;
+    display: flex;
+    justify-content: center;
 `;
 
 const TabButton = styled.button`
@@ -131,24 +120,44 @@ const Stats = () => {
 
     return <Base meta={{ title: "Statistics & Rankings" }}>
         <TopBar darkenOnSidebar includeSpace={false} />
-        <Header>
-            <div className="mt-5">
-                <h1>InCTF Jr. Stats & Rankings</h1>
-                <p>Honouring past participants & schools of InCTF Junior</p>
-            </div>
-        </Header>
-        <PageWrap>
-            <div className="d-flex align-items-center">
-                <div className="container-lg p-2">
-                    {editions.map((y) =>
-                        <TabButton isActive={y.year===year} onClick={() => setYear(y.year)}>{y.year}</TabButton>
-                    )}
+        <div className="px-4 py-8 flex items-end justify-center">
+            <div style={{ width: '1000px', maxWidth: '100%'  }}>
+                <div className="flex items-center py-5" style={{ minHeight: '30vh' }}>
+                    <div>
+                        <div className="w-full text-left mb-2">
+                            <Breadcrumb
+                                items={[
+                                    {
+                                        link: '/championship',
+                                        title: 'Championship'
+                                    },
+                                    {
+                                        link: '/organizers',
+                                        isActive: true,
+                                        title: 'Organizers'
+                                    }
+                                ]}
+                            />
+                        </div>
+                        <h1 className="text-primary text-5xl lg:text-6xl py-4">Past Statistics & Rankings</h1>
+                    </div>
                 </div>
             </div>
-            <div className="container-lg px-1 py-5">
-                {editions.filter((y) => y.year === year).map((y) =>
-                    <YearlyLeaderboard {...y} />
-                )}
+        </div>
+        <PageWrap>
+            <div style={{ maxWidth: '1100px', width: '100%' }}>
+                <div className="d-flex align-items-center">
+                    <div className="container-lg p-2">
+                        {editions.map((y) =>
+                            <TabButton isActive={y.year===year} onClick={() => setYear(y.year)}>{y.year}</TabButton>
+                        )}
+                    </div>
+                </div>
+                <div className="container-lg px-1 py-5">
+                    {editions.filter((y) => y.year === year).map((y) =>
+                        <YearlyLeaderboard {...y} />
+                    )}
+                </div>
             </div>
         </PageWrap>
         <Footer />
