@@ -4,11 +4,11 @@ const CTFPedagogy = () => (
     <div id="ctf-pedagogy" className="container mx-auto py-12 px-4">
         <div className="w-full flex justify-center items-center flex-col py-24">
             <h1>CTFs are not just a contest.</h1>
-            <h3 className="mt-3 text-center">
+            <h4 className="mt-3 text-center">
                 It’s probably among
                 <div className="text-primary">the best pedagogy for learning,</div>
                 especially for beginner students to learn complex concepts.
-            </h3>
+            </h4>
         </div>
         <div className="mt-16">
             <h1 className="font-semibold mt-4 text-primary">CTFs are very popular world-wide</h1>

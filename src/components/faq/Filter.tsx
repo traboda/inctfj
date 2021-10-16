@@ -38,7 +38,7 @@ const FAQFilter = ({ search, setSearch, tags, setTags, totalTags }) => {
                     multiple={true}
                     small={true}
                     value={[...tags].map(t => ({ label: t, value: t }))}
-                    onChange={s => setTags(new Set(s))}
+                    onChange={s => setTags(new Set(Array.isArray(s) ? s : [s]))}
                 />
             </div>
         </div>
