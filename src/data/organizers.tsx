@@ -62,13 +62,6 @@ export const AdvisoryBoard = [
         org: "Cinepolis India",
         photo: require('../../src/assets/images/people/bipin-chaudhary.jpeg'),
         linkedIn: "https://www.linkedin.com/in/bipin-k-chaudhary-18b6757/"
-    },
-    {
-        name: "Nithin Manoharan",
-        desg: "Director",
-        org: "Philip Morris International",
-        photo: require('../../src/assets/images/people/nithin-manoharan.jpeg'),
-        linkedIn: "https://www.linkedin.com/in/bipin-k-chaudhary-18b6757/"
     }
 ];
 
@@ -86,6 +79,13 @@ export const AdvisoryBoardAlumni = [
         org: "Benow",
         photo: require('../../src/assets/images/people/soorraj-vs.jpg'),
         linkedIn: "https://www.linkedin.com/in/soorraj-vs-ab905b9/"
+    },
+    {
+        name: "Nithin Manoharan",
+        desg: "Director",
+        org: "Philip Morris International",
+        photo: require('../../src/assets/images/people/nithin-manoharan.jpeg'),
+        linkedIn: "https://www.linkedin.com/in/nmanohar/"
     }
 ];
 

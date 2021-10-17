@@ -101,6 +101,45 @@ const RulePage = () => {
                         a participant shall not ask people, forums etc. on the internet for help for solving a challenge.
                     </li>
                 </ul>
+                <h2>Certificates</h2>
+                <p>A Participant may be eligible for the following types of certificates -</p>
+                <ul>
+                    <li>
+                        <b>Participation Certificate</b> - shall be issued to all eligible Participants who have
+                        at least solved 1 challenge in the Contest qualifiers round. This shall be a digital
+                        certificate, and shall be emailed at the end of the Contest.
+                    </li>
+                    <li>
+                        <b>Certificate of Appreciation</b> -  shall be issued to all eligible Participants who have
+                        at least completed solving 35% of challenges released during the Contest qualifiers round.
+                        This shall be a digital certificate, and shall be emailed at the end of the Contest.
+                    </li>
+                    <li>
+                        <b>Certificate of Excellence</b> - shall be issued to all eligible Participants who have
+                        qualified for the national level finals of the Contest. This shall be a physical certificate,
+                        and shall be mailed to the address provided by the Participant.
+                    </li>
+                    <li>
+                        <b>Certificate of Achievement</b> - shall be issued to eligible Participants who are winners
+                        of some prize/award at the national level finals of the Contest. This shall be a physical
+                        certificate, and shall be mailed to the address provided by the Participant.
+                    </li>
+                </ul>
+                <p>
+                    The certificates will be generated/printed based on the profile information provided by the
+                    Participant during their registration. It is the sole responsibility of the Participant to ensure
+                    that this information is correct, and the Organizers shall not be liable for any mistakes
+                    after the certificates have been generated/printed.
+                </p>
+                <p>
+                    A Participant is requested to ensure that the information provided by them during the registration
+                    is correct, and they shall get the opportunity to edit it until the Contest starts. Once the
+                    Contest has started, the profile information of the user shall be locked. In case any changes
+                    are required, the Participant must inform the Organizers via inctfj@am.amrita.edu so that they
+                    can be corrected. Requests for correction in profile information shall be entertained for
+                    a maximum of 7 days after the end of the Contest, and any such corrections shall be
+                    accepted/made at the sole discretion of the Organizers.
+                </p>
             </div>
         </div>
         <Footer />
