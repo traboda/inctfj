@@ -5,43 +5,43 @@ const Schedule = () => {
 
     const timeline = [
         {
-            "date": "October 17",
+            "date": "October 20",
             "timing": "06:00 - 08:00 PM",
             "event": "Introduction to CTF",
             "presenter": "Namitha & Revathi",
         },
         {
-            "date": "October 18",
+            "date": "October 21",
             "timing": "06:00 - 08:00 PM",
             "event": "Basics of Web",
             "presenter": "Rohit, Rahul & Aneesh",
         },
         {
-            "date": "October 20-21",
+            "date": "October 22-23",
             "timing": "06:00 - 08:00 PM",
             "event": "Introduction to Web Exploitation",
             "presenter": "Yadhu & Sayooj",
         },
         {
-            "date": "October 22-23",
+            "date": "October 24-25",
             "timing": "06:00 - 08:00 PM",
             "event": "Introduction to Cryptography",
             "presenter": "Abhishek & Sahith",
         },
         {
-            "date": "October 24-25",
+            "date": "October 26-27",
             "timing": "06:00 - 08:00 PM",
             "event": "Introduction to Cyber Forensics",
             "presenter": "Sridevi, Abhishek, Pranav",
         },
         {
-            "date": "October 26-27",
+            "date": "October 28-29",
             "timing": "06:00 - 08:00 PM",
             "event": "Introduction to Reverse Engineering",
             "presenter": "Barla Abhishek, Simran",
         },
         {
-            "date": "October 28-29",
+            "date": "October 30-31",
             "timing": "06:00 - 08:00 PM",
             "event": "Introduction to Binary Exploitation",
             "presenter": "Adithya, Nikhil, Hrishikesh",
