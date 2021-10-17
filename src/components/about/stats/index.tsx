@@ -60,14 +60,11 @@ const INCTFJStats = ({stats}) => {
                 )}
             </StatsContainer>
             <div className="flex flex-wrap items-center">
-                <div className="md:w-1/3 w-full">
+                <div className="md:w-1/3 order-2 md:order-1 w-full">
                     <AboutGender data={stats}/>
                 </div>
-                <div className="md:w-1/3 w-full md:mt-0 mt-6">
+                <div className="md:w-1/3 w-full order-1 md:order-2 md:mt-0 mt-6">
                     <StateWiseRegistrationMap data={stats}/>
-                </div>
-                <div className="md:w-1/3 w-full md:mt-0 mt-6">
-                    <DailyGraph data={stats}/>
                 </div>
             </div>
         </StatsSection>

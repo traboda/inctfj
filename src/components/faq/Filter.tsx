@@ -38,6 +38,7 @@ const FAQFilter = ({ search, setSearch, tags, setTags, totalTags }) => {
                     multiple={true}
                     small={true}
                     value={[...tags].map(t => ({ label: t, value: t }))}
+                    // @ts-ignore
                     onChange={s => setTags(new Set(s))}
                 />
             </div>
