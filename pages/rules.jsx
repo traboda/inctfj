@@ -1,8 +1,35 @@
 import React from 'react';
+import styled from "@emotion/styled";
+
 import Base from "../src/components/shared/Base";
 import TopBar from "../src/components/shared/TopBar";
 import Footer from "../src/components/shared/Footer";
 import PageHeader from "../src/components/PageHeader";
+
+const RulesContainer = styled('div')`
+    padding: 1rem 2vw;
+    max-width: 100vw;
+    width: 900px;
+    h2 {
+      margin: 1.35rem 0;
+      font-size: calc(1.2rem + 0.35vw);
+    }
+    h3 {
+      font-size: calc(1.15rem + 0.25vw);
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    ul {
+        padding-left: 1.5rem;
+        list-style: square;  
+        margin-bottom: 1.5rem;
+        li {
+          margin-bottom: 0.5rem;
+        }
+    }
+`;
 
 const RulePage = () => {
 
@@ -22,8 +49,8 @@ const RulePage = () => {
                 }
             ]}
         />
-        <div className="container p-4">
-            <div style={{ minHeight: '80vh' }} className="my-4">
+        <div className="flex justify-center p-4">
+            <RulesContainer style={{ maxWidth: '100vw', width: '1100px' }}>
                 <p>
                     The India Capture The Flag Junior (“InCTF Jr”, “InCTFj”, “Contest”) is annual cyber-security
                     championship organized for school students in India by Amrita Vishwa Vidyapeetham in association
@@ -140,7 +167,7 @@ const RulePage = () => {
                     a maximum of 7 days after the end of the Contest, and any such corrections shall be
                     accepted/made at the sole discretion of the Organizers.
                 </p>
-            </div>
+            </RulesContainer>
         </div>
         <Footer />
     </Base>

@@ -1,3 +1,5 @@
+import React from "react";
+
 export default
 [
     {
@@ -29,8 +31,17 @@ export default
     {
         "question": "Who can participate in Amrita InCTF Junior?",
         "answer": <>
-            The competition is open to all school students from classes 7th to 12th grade in India.
-            To be eligible for prizes, the student must be a citizen of India.
+            Each individual who participates in the competition in order to be eligible for
+            the finals / prizes must be:
+            <li>
+                at least thirteen (13) years of age and not more than nineteen (19) years of age
+            </li>
+            <li>
+                a citizen of the Republic of India
+            </li>
+            <li>
+                must not have completed 12th or equivalent grade of school.
+            </li>
         </>,
         tags: ['eligibility', 'getting-started']
     },
@@ -260,4 +271,34 @@ export default
         </>,
         tags: ['traboda', 'help', 'password']
     },
+    {
+        "question": "What are the different types of Certificates I can get?",
+        keywords: ["certificate", "types"],
+        "answer": <>
+            <p>A Participant may be eligible for the following types of certificates -</p>
+            <ul>
+                <li>
+                    <b>Participation Certificate</b> - shall be issued to all eligible Participants who have
+                    at least solved 1 challenge in the Contest qualifiers round. This shall be a digital
+                    certificate, and shall be emailed at the end of the Contest.
+                </li>
+                <li>
+                    <b>Certificate of Appreciation</b> -  shall be issued to all eligible Participants who have
+                    at least completed solving 35% of challenges released during the Contest qualifiers round.
+                    This shall be a digital certificate, and shall be emailed at the end of the Contest.
+                </li>
+                <li>
+                    <b>Certificate of Excellence</b> - shall be issued to all eligible Participants who have
+                    qualified for the national level finals of the Contest. This shall be a physical certificate,
+                    and shall be mailed to the address provided by the Participant.
+                </li>
+                <li>
+                    <b>Certificate of Achievement</b> - shall be issued to eligible Participants who are winners
+                    of some prize/award at the national level finals of the Contest. This shall be a physical
+                    certificate, and shall be mailed to the address provided by the Participant.
+                </li>
+            </ul>
+        </>,
+        tags: ['certificate']
+    }
 ];

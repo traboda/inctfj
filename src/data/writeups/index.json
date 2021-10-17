@@ -1,14 +1,22 @@
 {
+  "/writeup/585": {
+    "page": "/writeup/[id]",
+    "query": { "id": 585 }
+  },
   "/writeup/586": {
     "page": "/writeup/[id]",
     "query": { "id": 586 }
+  },
+  "/writeup/587": {
+    "page": "/writeup/[id]",
+    "query": { "id": 587 }
   },
   "/writeup/588": {
     "page": "/writeup/[id]",
     "query": { "id": 588 }
   },
-  "/writeup/587": {
+  "/writeup/589": {
     "page": "/writeup/[id]",
-    "query": { "id": 587 }
+    "query": { "id": 589 }
   }
 }
