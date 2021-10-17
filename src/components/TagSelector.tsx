@@ -49,25 +49,16 @@ const TagSelectorContainer = styled.div`
   }
 `;
 
-type ValueType = (
-    {
-        label: string,
-        value: string
-    } |
-    {
-        label: string,
-        value: string
-    }[]
-)
+type ValueType = {
+    value: string,
+    label: string,
+}
 
 type TagSelectorProps = {
-    value: ValueType,
-    onChange: (val: ValueType) => void,
+    value: ValueType[],
+    onChange: (val: ValueType | ValueType[]) => void,
     small?: boolean,
-    options: {
-        value: string,
-        label: string,
-    }[],
+    options: ValueType[],
     isClearable?: boolean,
     multiple?: boolean,
     fullWidth?: boolean
