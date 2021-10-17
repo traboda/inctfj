@@ -67,13 +67,6 @@ export const AdvisoryBoard = [
 
 export const AdvisoryBoardAlumni = [
     {
-        name: "Hari Mukundhan",
-        desg: "VP - Cyber Security Product Manager",
-        org: "JP Morgan Chase",
-        photo: require('../../src/assets/images/people/hari-mukundan.jpeg'),
-        linkedIn: "https://www.linkedin.com/in/harimukundhan/"
-    },
-    {
         name: "Soorraj VS",
         desg: "MD & Chief Executive",
         org: "Benow",
@@ -86,6 +79,13 @@ export const AdvisoryBoardAlumni = [
         org: "Philip Morris International",
         photo: require('../../src/assets/images/people/nithin-manoharan.jpeg'),
         linkedIn: "https://www.linkedin.com/in/nmanohar/"
+    },
+    {
+        name: "Hari Mukundhan",
+        desg: "VP - Cyber Security Product Manager",
+        org: "JP Morgan Chase",
+        photo: require('../../src/assets/images/people/hari-mukundan.jpeg'),
+        linkedIn: "https://www.linkedin.com/in/harimukundhan/"
     }
 ];
 
