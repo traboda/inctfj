@@ -77,8 +77,8 @@ const LandingSponsorship = () => {
 
     const inCTFJrPartners = [
         {
-            image: require('../../assets/images/logos/cbse_logo.png'),
-            link: "https://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf",
+            image: require('../../assets/images/logos/cbse.jpg'),
+            link: "http://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf",
         },
         {
             image: require('../../assets/images/logos/ssi_logo.jpg'),

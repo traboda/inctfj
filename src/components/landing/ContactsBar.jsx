@@ -50,9 +50,9 @@ const LandingContactsBar = () => {
                     <div className="md:w-1/4 p-2 mb-4 flex items-center justify-center text-center">
                         <PoweredByTraboda>
                             <div>In Association with the CBSE</div>
-                            <a href="https://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf">
+                            <a href="http://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf">
                                 <img
-                                    src={require('../../assets/images/logos/cbse_logo.png')}
+                                    src={require('../../assets/images/logos/cbse.jpg')}
                                     alt="CBSE" draggable="false"
                                 />
                             </a>

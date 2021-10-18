@@ -301,7 +301,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                     </a>
                     <a
                         target="_blank"
-                        href="https://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf"
+                        href="http://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf"
                         className="w-2/3 pl-2 md:flex hidden flex-col items-start"
                         title="In association with CBSE"
                     >
@@ -309,11 +309,11 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                             className="uppercase tracking-widest opacity-80"
                             style={{ fontSize: 8 }}
                         >
-                            In Association with.
+                            In association with
                         </span>
                         <img
                             alt="cbse"
-                            src={require('../../assets/images/logos/cbse_logo.png')}
+                            src={require('../../assets/images/logos/cbse.jpg')}
                             style={{ position: 'unset', maxHeight: 45, maxWidth: '100%' }}
                             draggable="false"
                             className="inline"
