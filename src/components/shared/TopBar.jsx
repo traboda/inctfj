@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
 import Modal from "react-modal";
 import Link from "next/link";
+import { AnimateSharedLayout, AnimatePresence, motion } from 'framer-motion';
 
 import SideBar from "./SideBar";
 import TopBarItem from "./TopBarItem";
@@ -27,22 +28,23 @@ const TopbarContainer = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
+
   &.floating {
     background: white;
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.35);
     border-bottom: 2px solid #FF6F00;
   }
-  
+
   &.up, &.top {
     pointer-events: auto;
     transform: none;
     opacity: 1;
   }
-  
+
   &.top {
     margin-top: 53px;
   }
-  
+
   @media screen and (max-width: 768px) {
     border-top: 2px solid #FF6F00;
     border-bottom: none !important;
@@ -269,11 +271,11 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
         setShowMenu(false);
     }, [scrollDir]);
 
-    return <div>
+    return <AnimateSharedLayout type="crossfade">
         <div style={{ fontSize: '14px' }} className="hidden md:block p-2 bg-blue-800 text-white">
             <div className="flex items-center justify-between">
                 <div className="px-3">
-                    Have you got stuck? Need Help? <wbr />
+                    Have you got stuck? Need Help? <wbr/>
                     <span className="inline-block">
                         Join our discord server, ask your doubts & get support from our experts.
                     </span>
@@ -281,7 +283,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 <div className="flex items-center md:my-0 px-2 md:px-0 justify-end">
                     <Link href="/discord" passHref>
                         <a className="bg-white text-blue-800 mb-0 hover:text-primary rounded-lg px-3 py-2 whitespace-nowrap">
-                            Join Discord Now <i className="fa fa-chevron-right ml-1" />
+                            Join Discord Now <i className="fa fa-chevron-right ml-1"/>
                         </a>
                     </Link>
                 </div>
@@ -326,22 +328,24 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                             <TopbarInfoCard className="items-center flex">
                                 <nav className="flex items-center mr-4">
                                     {TopbarItems?.map((i) => (
-                                        <TopBarItem item={i} isVisible={isVisible()} />
+                                        <TopBarItem item={i} isVisible={isVisible()}/>
                                     ))}
-                                    <button
-                                        className="fas fa-search justify-center text-lg text-black hover:text-primary ml-2"
-                                        onClick={() => {
-                                            disableBodyScroll(document.body);
-                                            setSearchModal(true);
-                                        }}
-                                    />
+                                    <motion.div layoutId="search-button" className="bg-white rounded-full">
+                                        {!searchModal && <button
+                                            className="fas fa-search justify-center text-lg text-black hover:text-primary ml-2"
+                                            onClick={() => {
+                                                disableBodyScroll(document.body);
+                                                setSearchModal(true);
+                                            }}
+                                        />}
+                                    </motion.div>
                                 </nav>
 
                                 <button
                                     className="px-8 py-4 rounded-lg font-semibold bg-primary hover:bg-blue-800 shadow hover:shadow-xl text-white ml-3"
                                     onClick={() => setShowRegCard(true)}
                                 >
-                                    Register <i className="fa fa-chevron-right" />
+                                    Register <i className="fa fa-chevron-right"/>
                                 </button>
                             </TopbarInfoCard>
                         </div>
@@ -353,11 +357,11 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                             onClick={() => setShowRegCard(true)}
                             className="w-full px-5 py-4 font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl ml-3"
                         >
-                            Register <i className="fa fa-chevron-right" />
+                            Register <i className="fa fa-chevron-right"/>
                         </button>
                     </TopbarInfoCard>
                     <button onClick={onOpen} className="transition" style={{ width: 46, height: 46 }}>
-                        <i className={`${showMenu ? 'fa fa-times' : 'fa fa-bars'} text-2xl transition`} />
+                        <i className={`${showMenu ? 'fa fa-times' : 'fa fa-bars'} text-2xl transition`}/>
                     </button>
                 </div>
             </div>
@@ -390,7 +394,8 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 <img alt="close" src={require('../../assets/images/icons/close.png')}/>
             </CloseButton>
             {showRegCard &&
-            <div className="flex bg-white px-3 md:p-4 py-6 items-end rounded-t-2xl md:rounded-r-none md:rounded-bl-2xl justify-center">
+            <div
+                className="flex bg-white px-3 md:p-4 py-6 items-end rounded-t-2xl md:rounded-r-none md:rounded-bl-2xl justify-center">
                 <iframe
                     className="border-0"
                     style={{ width: '500px', maxWidth: '100vw', height: '190px', overflow: 'auto' }}
@@ -398,58 +403,47 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 />
             </div>}
         </Modal>
-        <Modal
-            isOpen={searchModal}
-            onRequestClose={() => {
-                clearAllBodyScrollLocks();
-                setSearchModal(false);
-            }}
-            style={{
-                overlay: {
-                    zIndex: 9000,
-                    height: '100vh',
-                    width: '100vw',
-                    padding: 0
-                },
-                content: {
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    border: 'none',
-                    borderRadius: 0,
-                    inset: 0,
-                    height: '100vh',
-                    width: '100vw',
-                    background: 'white'
-                }
-            }}
-        >
-            <button
-                className="fas fa-times text-xl absolute top-0 text-light hover:text-primary right-0 mt-4 mr-4 cursor-pointer"
-                onClick={() => {
-                    clearAllBodyScrollLocks();
-                    setSearchModal(false);
-                }}
-            />
-            <div style={{ padding: '5vh 1rem 15vh 1rem' }} className="container mx-auto flex flex-col items-center justify-center">
-                <div className="text-center w-full" style={{ maxWidth: 600 }}>
-                    <Link href="/" passHref>
-                        <a>
-                            <img
-                                className="mb-8 inline"
-                                src={require('../../assets/images/logos/inctf.png')}
-                                alt="InCTF Jr"
-                                style={{ maxHeight: '120px' }}
-                            />
-                        </a>
-                    </Link>
-                    <SearchBar
-                        placeholder="Search your queries & questions about InCTF Jr"
-                        isFocused
-                    />
-                </div>
-            </div>
-        </Modal>
+        <AnimatePresence>
+            {searchModal && (
+                <motion.div
+                    layoutId="search-button"
+                    className="w-screen h-screen bg-white fixed top-0 left-0"
+                    style={{ zIndex: 9000 }}
+                    initial={{ borderRadius: 1000 }}
+                    exit={{ borderRadius: 1000 }}
+                    animate={{ borderRadius: 0 }}
+                >
+                    <div className="flex flex-col justify-center items-center w-full h-full">
+                        <button
+                            className="fas fa-times text-xl absolute top-0 text-light hover:text-primary right-0 mt-4 mr-4 cursor-pointer"
+                            onClick={() => {
+                                clearAllBodyScrollLocks();
+                                setSearchModal(false);
+                            }}
+                        />
+                        <div style={{ padding: '5vh 1rem 15vh 1rem' }}
+                             className="container mx-auto flex flex-col items-center justify-center">
+                            <div className="text-center w-full" style={{ maxWidth: 600 }}>
+                                <Link href="/" passHref>
+                                    <a>
+                                        <img
+                                            className="mb-8 inline"
+                                            src={require('../../assets/images/logos/inctf.png')}
+                                            alt="InCTF Jr"
+                                            style={{ maxHeight: '120px' }}
+                                        />
+                                    </a>
+                                </Link>
+                                <SearchBar
+                                    placeholder="Search your queries & questions about InCTF Jr"
+                                    isFocused
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
+            )}
+        </AnimatePresence>
         {isVisible() && showMenu &&
         <SideBar
             darkenOnSidebar={darkenOnSidebar}
@@ -468,8 +462,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 </a>
             </Link>
         </div>
-    </div>
-
+    </AnimateSharedLayout>
 };
 
 export default TopBar;
