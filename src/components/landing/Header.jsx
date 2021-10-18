@@ -178,7 +178,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                                 />
                             </div>
                         </div>
-                        <div className="flex flex-wrap  mx-0">
+                        <div className="flex flex-wrap mx-0">
                             <div className="w-full p-2">
                                 <div className="mb-6">
                                     <div className="md:text-left text-center mb-3 font-semibold">In Association With</div>

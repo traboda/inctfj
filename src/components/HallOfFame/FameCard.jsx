@@ -5,7 +5,6 @@ import IndianStates from "../../data/indian-states";
 
 const FameCardWrap = styled.div`
    height: 100%;
-   box-shadow: 2px 3px 8px rgba(0,0,0,0.15);
    font-size: 13px;
    background: white;
    color: black;
@@ -52,7 +51,7 @@ const FameCard = ({
     }
 
     return <FameCardWrap>
-        <div className="flex flex-wrap  mx-0 p-2">
+        <div className="flex flex-wrap p-2 border rounded-lg h-full items-center">
             <div className="w-1/5 text-right justify-center items-center flex">
                 {
                     rank === 1 ? <img src={require('../../assets/images/icons/crown.png')} /> :

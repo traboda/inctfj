@@ -70,7 +70,6 @@ const SearchBar = styled.div`
 `;
 
 const ChampionCard = styled.div`
-   background: white;
    border-radius: 0.75rem;
    height: 100%;
    img {
@@ -88,6 +87,12 @@ const ChampionCard = styled.div`
    }
    font-size: 13px;
 `
+
+const GridHeight = styled.div`
+& > div > div.react-reveal {
+  height: 100% !important;
+}
+`;
 
 const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers }) => {
 
@@ -116,17 +121,17 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
     return <div>
     {champions?.length > 0 &&
     <div className="py-3">
-        <div className="p-2">
-            <h3 style={{ color: '#fd7e14' }} className="mb-1">Champions</h3>
+        <div className="py-2">
+            <h3 style={{ color: '#fd7e14' }} className="mb-1 font-semibold">Champions</h3>
             <p style={{ opacity: 0.8 }} className="mb-3">
                The InCTF Junior {year} champions
             </p>
         </div>
-        <div className="flex flex-wrap  mx-0">{champions.map((c, index) =>
-            <div className="md:w-1/2 pr-4 pl-4 p-1" key={shortid.generate()}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{champions.map((c, index) =>
+            <div className="p-4 bg-white rounded-lg border" key={shortid.generate()}>
                 <Fade up delay={index*250}>
                     <ChampionCard>
-                        <div className="flex flex-wrap  h-full w-full mx-0">
+                        <div className="flex flex-wrap h-full w-full">
                             <div
                                 style={{
                                     borderRadius: '0.75rem',
@@ -152,19 +157,19 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
     </div>}
     {womenHackers?.length > 0 &&
     <div className="py-3">
-        <div className="p-2">
-            <h3 style={{ color: '#fd7e14' }} className="mb-1">Top Women Hackers</h3>
+        <div className="py-2">
+            <h3 style={{ color: '#fd7e14' }} className="mb-1 font-semibold">Top Women Hackers</h3>
             <p style={{ opacity: 0.8 }} className="mb-3">
                 The top Women Hackers of InCTF Junior {year}
             </p>
         </div>
-        <div className="flex flex-wrap  mx-0">{womenHackers.map((c, index) =>
-            <div className="md:w-1/2 pr-4 pl-4 p-1" key={shortid.generate()}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">{womenHackers.map((c, index) =>
+            <div className="p-4 bg-white rounded-lg border" key={shortid.generate()}>
                 <Fade up delay={index*250}>
                     <ChampionCard>
-                        <div className="flex flex-wrap  h-full w-full mx-0">
+                        <div className="flex flex-wrap h-full w-full">
                             <div
-                                style={{  borderRadius: '0.75rem', background: `url(${c.avatar})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                                style={{ borderRadius: '0.75rem', background: `url(${c.avatar})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                                 className="w-1/3 lg:w-1/4 pr-4 pl-4 px-2 md:px-0"
                             />
                             <div className="w-2/3 lg:w-3/4 pr-4 pl-4 flex items-center p-2 md:p-4">
@@ -183,63 +188,65 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
     </div>}
     <SchoolLeaderboard schools={schools} />
     <div className="py-3">
-        <div className="p-2">
+        <div className="py-2">
             <h3 style={{ color: '#fd7e14' }} className="mb-1">Leaderboards</h3>
             <p style={{ opacity: 0.8 }} className="mb-3">
-                Finalist leaderboard ranked based on most points earned by capturing the most number of flags in the lowest time.
+                Top 100 participants leaderboard ranked based on most points earned by capturing the most number of flags in the lowest time.
             </p>
         </div>
         {leaderboard?.length > 0 ?
-                <div className="flex flex-wrap  mx-0">
-                    <div className="md:w-full pr-4 pl-4 mb-2 px-0">
-                        <SearchBar className="flex flex-wrap  bg-white p-2 mx-0">
-                            <div className="md:w-2/3 pr-4 pl-4 p-1 flex items-center">
-                                <input
-                                    value={keyword}
-                                    onChange={(e) => setKeyword(e.currentTarget.value)}
-                                    placeholder="Search for names"
+            <div className="flex flex-wrap">
+                <div className="md:w-full mb-2">
+                    <SearchBar className="flex flex-wrap bg-white p-2 mx-0 border">
+                        <div className="md:w-2/3 p-2 flex items-center">
+                            <input
+                                value={keyword}
+                                onChange={(e) => setKeyword(e.currentTarget.value)}
+                                placeholder="Search for names"
+                            />
+                        </div>
+                        <div className="md:w-1/3 pr-4 pl-4 p-1 flex items-center">
+                            <div className="w-full">
+                                <Select
+                                    aria-label="user-state-selector"
+                                    name="state"
+                                    className="state-filter-select"
+                                    classNamePrefix="state-filter"
+                                    options={[{ value: null, label: "All States/UT"}, ...applicableStates()]}
+                                    menuPlacement="auto"
+                                    placeholder="Filter by State/UT"
+                                    noOptionsMessage={() => <div>No States/Provinces/UT could be found</div>}
+                                    onChange={(s) => setState(s['value'])}
+                                    value={getStateObj()}
                                 />
                             </div>
-                            <div className="md:w-1/3 pr-4 pl-4 p-1 flex items-center">
-                                <div className="w-full">
-                                    <Select
-                                        aria-label="user-state-selector"
-                                        name="state"
-                                        className="state-filter-select"
-                                        classNamePrefix="state-filter"
-                                        options={[{ value: null, label: "All States/UT"}, ...applicableStates()]}
-                                        menuPlacement="auto"
-                                        placeholder="Filter by State/UT"
-                                        noOptionsMessage={() => <div>No States/Provinces/UT could be found</div>}
-                                        onChange={(s) => setState(s['value'])}
-                                        value={getStateObj()}
-                                    />
-                                </div>
-                            </div>
-                        </SearchBar>
-                    </div>
+                        </div>
+                    </SearchBar>
+                </div>
+                <GridHeight className="grid md:grid-cols-2 grid-cols-1 gap-4 mt-3 w-full">
                     {leaderboard.filter((s) =>
                         (keyword ? (s.name.startsWith(keyword) || s.username.startsWith(keyword)) : true) &&
                         (state ? s.state === state : true)
                     ).map((l) =>
-                        <div className="md:w-1/2 pr-4 pl-4 p-1">
+                        <div>
                             <Fade>
                                 <FameCard {...l} key={shortid.generate()} />
                             </Fade>
                         </div>
                     )}
-                    <div style={{ color: '#999', fontSize: '11px' }} className="py-3 p-2">
-                        <li>The leaderboard only includes participants who have earned at-least 1 point in the finale.</li>
-                        <li>Participants with incomplete profile information, and who failed to verify their identity as a school student have been excluded from the listing.</li>
-                        <li>Data before 4th edition may not be complete, or may have inaccuracies due to limitations of available data.</li>
-                    </div>
-                </div> :
-                <div className="flex items-center justify-center">
-                    <div className="my-5 text-center">
-                        <h4 className="font-bold text-red-600">No Records Currently Available</h4>
-                        <p style={{ fontSize: '13px' }}>We will shortly update the entries here, check back later</p>
-                    </div>
-                </div>}
+                </GridHeight>
+                <div style={{ color: '#999', fontSize: '11px' }} className="py-3 p-2">
+                    <li>The leaderboard only includes participants who have earned at-least 1 point in the finale.</li>
+                    <li>Participants with incomplete profile information, and who failed to verify their identity as a school student have been excluded from the listing.</li>
+                    <li>Data before 4th edition may not be complete, or may have inaccuracies due to limitations of available data.</li>
+                </div>
+            </div> :
+            <div className="flex items-center justify-center">
+                <div className="my-5 text-center">
+                    <h4 className="font-bold text-red-600">No Records Currently Available</h4>
+                    <p style={{ fontSize: '13px' }}>We will shortly update the entries here, check back later</p>
+                </div>
+            </div>}
         </div>
     </div>;
 };

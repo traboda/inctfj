@@ -8,7 +8,6 @@ import leaderboard19 from '../src/data/hall-of-fame/2019';
 import leaderboard20 from '../src/data/hall-of-fame/2020';
 import schoolRank20 from '../src/data/school-rankings/20'
 
-
 import YearlyLeaderboard from "../src/components/HallOfFame/YearlyLeaderboard";
 import Footer from "../src/components/shared/Footer";
 import PageHeader from "../src/components/PageHeader";
@@ -21,7 +20,7 @@ const PageWrap = styled.div`
 `;
 
 const TabButton = styled.button`
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1rem 0.5rem 0;
       font-size: 24px;
       background: none;
       border: none;
@@ -137,7 +136,7 @@ const Stats = () => {
         <PageWrap>
             <div style={{ maxWidth: '1100px', width: '100%' }}>
                 <div className="d-flex align-items-center">
-                    <div className="container-lg p-2">
+                    <div className="container-lg mt-6">
                         {editions.map((y) =>
                             <TabButton isActive={y.year===year} onClick={() => setYear(y.year)}>{y.year}</TabButton>
                         )}
