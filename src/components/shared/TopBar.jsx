@@ -290,9 +290,9 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
         <TopbarContainer ref={topbarRef} className={scrollDir + ` ${isAtTop ? 'top' : 'floating'}`}>
             <div className="flex flex-wrap justify-center items-center container">
                 <div
-                    className="md:w-1/3 xl:w-1/4 md:text-center flex flex-wrap items-center md:justify-end justify-center px-2"
+                    className="w-1/4 md:w-1/3 xl:w-1/4 md:text-center flex flex-wrap items-center md:justify-end justify-center px-2"
                 >
-                    <a className="w-1/3" href="/">
+                    <a className="w-full md:w-1/3" href="/">
                         <img
                             className="logo"
                             src={require('../../assets/images/logos/inctf.png')}

@@ -189,10 +189,10 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
     <SchoolLeaderboard schools={schools} />
     <div className="py-3">
         <div className="py-2">
-            <h3 style={{ color: '#fd7e14' }} className="mb-1">Top 100</h3>
-            {/*<p style={{ opacity: 0.8 }} className="mb-3">*/}
-            {/*    Top 100 participants leaderboard ranked based on most points earned by capturing the most number of flags in the lowest time.*/}
-            {/*</p>*/}
+            <h3 style={{ color: '#fd7e14' }} className="mb-1">National-Level Finalists</h3>
+            <p style={{ opacity: 0.8 }} className="mb-3">
+                Top participants who qualified for the national-level finals, ranked according to final published scoreboard based on most points earned by capturing the most number of flags in the lowest time.
+            </p>
         </div>
         {leaderboard?.length > 0 ?
             <div className="flex flex-wrap">
