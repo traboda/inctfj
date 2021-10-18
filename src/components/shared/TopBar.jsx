@@ -103,7 +103,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
     const [isAtTop, setIsAtTop] = useState(true);
     const [searchModal, setSearchModal] = useState(false);
 
-    const topbarRef = useRef()
+    const topbarRef = useRef(null)
     const scrollPrevStateRef = useRef(0);
 
     const onOpen = () => {
@@ -444,7 +444,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
             darkenOnSidebar={darkenOnSidebar}
             onClose={onClose}
         />}
-        <div style={{ height: topbarRef ? topbarRef?.current?.offsetHeight : '72px' }} className="hidden md:block"/>
+        <div style={{ height: topbarRef.current?.offsetHeight ?? 90 }} className="hidden md:block"/>
         <div className="block md:hidden text-center pt-6 px-2 pb-4">
             <Link passHref href="/">
                 <a>
