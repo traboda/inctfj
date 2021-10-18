@@ -5,43 +5,43 @@ const Schedule = () => {
 
     const timeline = [
         {
-            "date": "October 20",
+            "date": "October 21",
             "timing": "06:00 - 08:00 PM",
             "event": "Introduction to CTF",
             "presenter": "Namitha & Revathi",
         },
         {
-            "date": "October 21",
+            "date": "October 22",
             "timing": "06:00 - 08:00 PM",
             "event": "Basics of Web",
             "presenter": "Rohit, Rahul & Aneesh",
         },
         {
-            "date": "October 22-23",
+            "date": "October 23-24",
             "timing": "06:00 - 08:00 PM",
             "event": "Introduction to Web Exploitation",
             "presenter": "Yadhu & Sayooj",
         },
         {
-            "date": "October 24-25",
+            "date": "October 25-26",
             "timing": "06:00 - 08:00 PM",
             "event": "Introduction to Cryptography",
             "presenter": "Abhishek & Sahith",
         },
         {
-            "date": "October 26-27",
+            "date": "October 27-28",
             "timing": "06:00 - 08:00 PM",
             "event": "Introduction to Cyber Forensics",
             "presenter": "Sridevi, Abhishek, Pranav",
         },
         {
-            "date": "October 28-29",
+            "date": "October 29-30",
             "timing": "06:00 - 08:00 PM",
             "event": "Introduction to Reverse Engineering",
             "presenter": "Barla Abhishek, Simran",
         },
         {
-            "date": "October 30-31",
+            "date": "Oct. 31 - Nov. 01",
             "timing": "06:00 - 08:00 PM",
             "event": "Introduction to Binary Exploitation",
             "presenter": "Adithya, Nikhil, Hrishikesh",
@@ -53,7 +53,6 @@ const Schedule = () => {
             <div className="flex justify-center">
                 <div style={{ maxWidth: '100%', width: '1000px' }}>
                     <div className="text-center px-4 py-8 mb-8">
-                        <h3 className="text-3xl lg:text-6xl text-primary mb-6 font-bold">Training Schedule</h3>
                         <p>
                             More details and links to join the free online beginner-level training programme will be shared soon.
                         </p>

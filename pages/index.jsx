@@ -15,7 +15,6 @@ import LandingContactsBar from "../src/components/landing/ContactsBar";
 import TopBar from "../src/components/shared/TopBar";
 import CTAPartners from "../src/components/landing/CTAPartners";
 import LandingPromoVideo from "../src/components/landing/PromoVideo";
-import Schedule from "../src/components/landing/Schedule";
 import LandingSearch from "../src/components/landing/search";
 import Footer from "../src/components/shared/Footer";
 
@@ -31,7 +30,6 @@ const LandingPage = () => {
             <LandingPromoVideo />
             <LandingReasonsToParticipate />
             <CTAReg />
-            <Schedule />
             <LandingHowItWorks />
             <LandingTestimonials />
             <LandingSponsorship />

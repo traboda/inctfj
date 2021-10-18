@@ -14,7 +14,6 @@ import LandingContactsBar from "../src/components/landing/ContactsBar";
 import TopBar from "../src/components/shared/TopBar";
 import CTAPartners from "../src/components/landing/CTAPartners";
 import LandingHeader from "../src/components/landing/Header";
-import Schedule from "../src/components/landing/Schedule";
 import LandingPromoVideo from "../src/components/landing/PromoVideo";
 import YoutubeVideosSection from "../src/components/resources/YoutubeVideos";
 
@@ -31,7 +30,6 @@ const StartPage = () => {
             <LandingPromoVideo />
             <LandingReasonsToParticipate />
             <CTAReg UTMSource="start_page" />
-            <Schedule />
             <LandingHowItWorks />
             <LandingTestimonials />
             <LandingSponsorship />

@@ -15,7 +15,6 @@ import TopBar from "../src/components/shared/TopBar";
 import CTAPartners from "../src/components/landing/CTAPartners";
 import LandingHeader from "../src/components/landing/Header";
 import LandingPromoVideo from "../src/components/landing/PromoVideo";
-import Schedule from "../src/components/landing/Schedule";
 
 const SSILandingPage = () => {
 
@@ -29,7 +28,6 @@ const SSILandingPage = () => {
             <LandingPromoVideo />
             <LandingReasonsToParticipate />
             <CTAReg UTMSource="ssi" />
-            <Schedule />
             <LandingHowItWorks />
             <LandingTestimonials />
             <LandingSponsorship />
