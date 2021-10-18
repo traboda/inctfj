@@ -136,13 +136,13 @@ const Stats = () => {
         <PageWrap>
             <div style={{ maxWidth: '1100px', width: '100%' }}>
                 <div className="d-flex align-items-center">
-                    <div className="container-lg mt-6">
+                    <div className="container-lg mt-6 px-4">
                         {editions.map((y) =>
                             <TabButton isActive={y.year===year} onClick={() => setYear(y.year)}>{y.year}</TabButton>
                         )}
                     </div>
                 </div>
-                <div className="container-lg px-1 py-5">
+                <div className="container-lg px-4 py-5">
                     {editions.filter((y) => y.year === year).map((y) =>
                         <YearlyLeaderboard {...y} />
                     )}

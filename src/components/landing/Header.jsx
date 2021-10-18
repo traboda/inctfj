@@ -179,20 +179,6 @@ const LandingHeader = ({ UTMSource = null }) => {
                             </div>
                         </div>
                         <div className="flex flex-wrap mx-0">
-                            <div className="w-full p-2">
-                                <div className="mb-6">
-                                    <div className="md:text-left text-center mb-3 font-semibold">In Association With</div>
-                                    <a target="_blank" href="https://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf">
-                                        <img
-                                            alt="cbse"
-                                            src={require('../../assets/images/logos/cbse_logo.png')}
-                                            style={{ position: 'unset', maxHeight: '90px', maxWidth: '100%' }}
-                                            draggable="false"
-                                            className="inline"
-                                        />
-                                    </a>
-                                </div>
-                            </div>
                             <div className="md:w-1/3 pr-4 pl-4 w-full py-5 md:py-0 px-2">
                                 <HowToRegister onClick={() => window.open('https://youtu.be/twS3pzPjRzA', '_blank')}>
                                     <div className="how_to_register_cover">

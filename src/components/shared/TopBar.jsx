@@ -269,16 +269,16 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
 
     return <div>
         <div style={{ fontSize: '14px' }} className="hidden md:block p-2 bg-blue-800 text-white">
-            <div className="flex flex-wrap items-center">
-                <div className="md:w-4/5 px-3">
+            <div className="flex items-center justify-between">
+                <div className="px-3">
                     Have you got stuck? Need Help? <wbr />
                     <span className="inline-block">
                         Join our discord server, ask your doubts & get support from our experts.
                     </span>
                 </div>
-                <div className="md:w-1/5 flex items-center md:my-0 px-2 md:px-0 justify-end">
+                <div className="flex items-center md:my-0 px-2 md:px-0 justify-end">
                     <Link href="/discord" passHref>
-                        <a className="bg-white text-blue-800 mb-0 hover:text-primary rounded-lg px-3 py-2">
+                        <a className="bg-white text-blue-800 mb-0 hover:text-primary rounded-lg px-3 py-2 whitespace-nowrap">
                             Join Discord Now <i className="fa fa-chevron-right ml-1" />
                         </a>
                     </Link>
@@ -287,10 +287,10 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
         </div>
         <TopbarContainer ref={topbarRef} className={scrollDir + ` ${isAtTop ? 'top' : 'floating'}`}>
             <div className="topbar-container">
-                <div className="mx-0 w-full px-0">
-                    <div className="flex flex-wrap w-full mx-0">
+                <div className="w-full">
+                    <div className="flex w-full md:justify-between">
                         <div
-                            className="w-1/4 md:w-1/6 md:text-center flex items-center md:justify-end justify-center px-2"
+                            className="md:text-center flex items-center md:justify-end justify-center px-2"
                         >
                             <Link href="/" passHref>
                                 <a>
@@ -301,29 +301,43 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                     />
                                 </a>
                             </Link>
+
+                            <a
+                                target="_blank"
+                                href="https://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf"
+                                className="ml-6 md:flex hidden flex-col items-start"
+                                title="In association with CBSE"
+                            >
+                                <span
+                                    className="uppercase tracking-widest font-semibold"
+                                    style={{ fontSize: 8 }}
+                                >In Association with.</span>
+                                <img
+                                    alt="cbse"
+                                    src={require('../../assets/images/logos/cbse_logo.png')}
+                                    style={{ position: 'unset', maxHeight: 46, maxWidth: '100%' }}
+                                    draggable="false"
+                                    className="inline"
+                                />
+                            </a>
                         </div>
-                        <div className="md:w-5/6 px-1 hidden md:flex items-center">
-                            <div className="flex flex-wrap  mx-0 w-full">
-                                <div className="md:w-3/4 xl:w-1/2 pr-4 pl-4 flex items-center px-1">
-                                    <nav className="flex items-center">
-                                        {TopbarItems?.map((i) => (
-                                            <TopBarItem item={i} isVisible={isVisible()} />
-                                        ))}
-                                        <button
-                                            className="fas fa-search justify-center text-lg text-black hover:text-primary ml-2"
-                                            onClick={() => {
-                                                disableBodyScroll(document.body);
-                                                setSearchModal(true);
-                                            }}
-                                        />
-                                    </nav>
-                                </div>
-                                <div className="md:w-1/4 xl:w-1/2 pr-4 pl-4 flex justify-end text-right px-1">
+                        <div className="px-1 hidden md:flex items-center">
+                            <div className="flex w-full">
+                                <div className="w-full pl-4 flex justify-end text-left px-1">
                                     <TopbarInfoCard className="items-center flex">
-                                        <div className="hidden xl:inline-block mr-2">
-                                            <div>India's First & Only CTF Championship</div>
-                                            <h5 style={{ color: '#F13F17' }} className="mb-0">Exclusively for School Students</h5>
-                                        </div>
+                                        <nav className="flex items-center mr-4">
+                                            {TopbarItems?.map((i) => (
+                                                <TopBarItem item={i} isVisible={isVisible()} />
+                                            ))}
+                                            <button
+                                                className="fas fa-search justify-center text-lg text-black hover:text-primary ml-2"
+                                                onClick={() => {
+                                                    disableBodyScroll(document.body);
+                                                    setSearchModal(true);
+                                                }}
+                                            />
+                                        </nav>
+
                                         <button
                                             className="px-8 py-4 rounded-lg font-semibold bg-primary hover:bg-blue-800 shadow hover:shadow-xl text-white ml-3"
                                             onClick={() => setShowRegCard(true)}
