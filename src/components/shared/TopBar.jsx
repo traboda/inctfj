@@ -24,7 +24,9 @@ const TopbarContainer = styled.header`
   opacity: 0;
   pointer-events: none;
   padding: 1rem 0.35rem;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &.floating {
     background: white;
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.35);
@@ -286,82 +288,77 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
             </div>
         </div>
         <TopbarContainer ref={topbarRef} className={scrollDir + ` ${isAtTop ? 'top' : 'floating'}`}>
-            <div className="topbar-container">
-                <div className="w-full">
-                    <div className="flex w-full md:justify-between">
-                        <div
-                            className="md:text-center flex items-center md:justify-end justify-center px-2"
+            <div className="flex flex-wrap justify-center items-center container">
+                <div
+                    className="md:w-1/3 xl:w-1/4 md:text-center flex flex-wrap items-center md:justify-end justify-center px-2"
+                >
+                    <a className="w-1/3" href="/">
+                        <img
+                            className="logo"
+                            src={require('../../assets/images/logos/inctf.png')}
+                            alt="InCTF Jr"
+                        />
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf"
+                        className="w-2/3 pl-2 md:flex hidden flex-col items-start"
+                        title="In association with CBSE"
+                    >
+                        <span
+                            className="uppercase tracking-widest opacity-80"
+                            style={{ fontSize: 8 }}
                         >
-                            <Link href="/" passHref>
-                                <a>
-                                    <img
-                                        className="logo"
-                                        src={require('../../assets/images/logos/inctf.png')}
-                                        alt="InCTF Jr"
+                            In Association with.
+                        </span>
+                        <img
+                            alt="cbse"
+                            src={require('../../assets/images/logos/cbse_logo.png')}
+                            style={{ position: 'unset', maxHeight: 45, maxWidth: '100%' }}
+                            draggable="false"
+                            className="inline"
+                        />
+                    </a>
+                </div>
+                <div className="md:w-2/3 xl:w-3/4 px-1 hidden md:flex items-center">
+                    <div className="flex w-full">
+                        <div className="w-full pl-4 flex justify-end text-left px-1">
+                            <TopbarInfoCard className="items-center flex">
+                                <nav className="flex items-center mr-4">
+                                    {TopbarItems?.map((i) => (
+                                        <TopBarItem item={i} isVisible={isVisible()} />
+                                    ))}
+                                    <button
+                                        className="fas fa-search justify-center text-lg text-black hover:text-primary ml-2"
+                                        onClick={() => {
+                                            disableBodyScroll(document.body);
+                                            setSearchModal(true);
+                                        }}
                                     />
-                                </a>
-                            </Link>
+                                </nav>
 
-                            <a
-                                target="_blank"
-                                href="https://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf"
-                                className="ml-6 md:flex hidden flex-col items-start"
-                                title="In association with CBSE"
-                            >
-                                <span
-                                    className="uppercase tracking-widest font-semibold"
-                                    style={{ fontSize: 8 }}
-                                >In Association with.</span>
-                                <img
-                                    alt="cbse"
-                                    src={require('../../assets/images/logos/cbse_logo.png')}
-                                    style={{ position: 'unset', maxHeight: 46, maxWidth: '100%' }}
-                                    draggable="false"
-                                    className="inline"
-                                />
-                            </a>
-                        </div>
-                        <div className="px-1 hidden md:flex items-center">
-                            <div className="flex w-full">
-                                <div className="w-full pl-4 flex justify-end text-left px-1">
-                                    <TopbarInfoCard className="items-center flex">
-                                        <nav className="flex items-center mr-4">
-                                            {TopbarItems?.map((i) => (
-                                                <TopBarItem item={i} isVisible={isVisible()} />
-                                            ))}
-                                            <button
-                                                className="fas fa-search justify-center text-lg text-black hover:text-primary ml-2"
-                                                onClick={() => {
-                                                    disableBodyScroll(document.body);
-                                                    setSearchModal(true);
-                                                }}
-                                            />
-                                        </nav>
-
-                                        <button
-                                            className="px-8 py-4 rounded-lg font-semibold bg-primary hover:bg-blue-800 shadow hover:shadow-xl text-white ml-3"
-                                            onClick={() => setShowRegCard(true)}
-                                        >
-                                            Register <i className="fa fa-chevron-right" />
-                                        </button>
-                                    </TopbarInfoCard>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="w-3/4 flex md:hidden items-center justify-end px-1">
-                            <TopbarInfoCard className="mr-3">
                                 <button
+                                    className="px-8 py-4 rounded-lg font-semibold bg-primary hover:bg-blue-800 shadow hover:shadow-xl text-white ml-3"
                                     onClick={() => setShowRegCard(true)}
-                                    className="w-full px-5 py-4 font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl ml-3"
                                 >
                                     Register <i className="fa fa-chevron-right" />
                                 </button>
                             </TopbarInfoCard>
-                            <button onClick={onOpen} className="transition" style={{ width: 46, height: 46 }}>
-                                <i className={`${showMenu ? 'fa fa-times' : 'fa fa-bars'} text-2xl transition`} />
-                            </button>
                         </div>
                     </div>
+                </div>
+                <div className="w-3/4 flex md:hidden items-center justify-end px-1">
+                    <TopbarInfoCard className="mr-3">
+                        <button
+                            onClick={() => setShowRegCard(true)}
+                            className="w-full px-5 py-4 font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl ml-3"
+                        >
+                            Register <i className="fa fa-chevron-right" />
+                        </button>
+                    </TopbarInfoCard>
+                    <button onClick={onOpen} className="transition" style={{ width: 46, height: 46 }}>
+                        <i className={`${showMenu ? 'fa fa-times' : 'fa fa-bars'} text-2xl transition`} />
+                    </button>
                 </div>
             </div>
         </TopbarContainer>

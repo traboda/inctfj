@@ -11,8 +11,7 @@ const HeaderContainer = styled.section`
     align-items: center;
     justify-content: center;
     .header-container {
-        padding-top: 1.5vh;
-        min-height: 100vh;
+        padding: 3.5vh 1rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -147,7 +146,7 @@ const LandingHeader = ({ UTMSource = null }) => {
     return (
         <React.Fragment>
             <HeaderContainer>
-                <div className="container header-container" style={{ width: '1200px', maxWidth: '100%' }}>
+                <div className="container header-container">
                     <div>
                         <div className="flex flex-wrap  mx-0">
                             <div className="md:w-2/3 px-4">
