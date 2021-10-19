@@ -12,7 +12,6 @@ const TrainingSchedulePage = () => {
             <TopBar />
             <PageHeader
                 title="Training Workshops"
-                description="More details and links to join the free online beginner-level training programme will be shared soon."
                 breadcrumb={[
                     {
                         title: 'Get Started',
