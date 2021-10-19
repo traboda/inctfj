@@ -231,7 +231,7 @@ export const OrganizingTeamMembers = [
     {
         photo: require('../assets/images/people/s_abhishek.jpg'),
         name: "S Abhishek",
-        desg: "Trainer, Category Lead - Forensics"
+        desg: "Trainer, Challenge Author - Forensics"
     },
     {
         photo: require('../assets/images/people/arya_arun.jpg'),
