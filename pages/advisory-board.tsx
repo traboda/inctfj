@@ -6,6 +6,7 @@ import { AdvisoryBoard, AdvisoryBoardAlumni } from "../src/data/organizers";
 import ProfileCard from "../src/components/ProfileCard";
 import Footer from "../src/components/shared/Footer";
 import PageHeader from "../src/components/PageHeader";
+import PageFooterExplorer from "../src/components/PageFooterExplorer";
 
 const AdvisoryBoardPage = () => {
 
@@ -60,6 +61,25 @@ const AdvisoryBoardPage = () => {
                     </div>
                 )}
             </div>
+            <PageFooterExplorer
+                items={[
+                    {
+                        "title": "Our Reach & Impact",
+                        "text": "See our reach & impact",
+                        "link": "/about#our-reach"
+                    },
+                    {
+                        "title": "Organizers",
+                        "text": "View our team of organizers",
+                        "link": "/organizers"
+                    },
+                    {
+                        "title": "Sponsors",
+                        "text": "View our Sponsors",
+                        "link": "/sponsors"
+                    }
+                ]}
+            />
             <Footer />
         </Base>
     )

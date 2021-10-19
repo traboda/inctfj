@@ -11,19 +11,6 @@ const FooterContainer = styled.footer`
       max-height: 64px;
       max-width: 100%;
     }
-    .social-bar {
-        opacity: 0.8;
-        a {
-           padding: 0 8px;
-        }
-        i {
-          font-size: 36px;
-          color: #AAA;
-          &:hover {
-            color: #fd7e14;
-          }
-        }
-    }
 `;
 
 const FooterLinksBar = styled.nav`
@@ -60,7 +47,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="social-bar md:w-1/3 py-4 md:py-0 w-full order-1 md:order-2 flex items-center md:justify-end justify-center px-1">
+                <div className="social-bar md:w-1/3 py-4 md:py-0 w-full order-1 md:order-2 text-white flex items-center md:justify-end justify-center px-1">
                     <SocialMediaLinks />
                 </div>
             </div>

@@ -16,6 +16,8 @@ import CTAPartners from "../src/components/landing/CTAPartners";
 import LandingHeader from "../src/components/landing/Header";
 import LandingPromoVideo from "../src/components/landing/PromoVideo";
 import YoutubeVideosSection from "../src/components/resources/YoutubeVideos";
+import Footer from "../src/components/shared/Footer";
+import LandingSearch from "../src/components/landing/search";
 
 const StartPage = () => {
 
@@ -35,7 +37,9 @@ const StartPage = () => {
             <LandingSponsorship />
             <CTAPartners />
             <LandingOrganizers />
+            <LandingSearch />
             <LandingContactsBar />
+            <Footer />
         </div>
     </Base>
 

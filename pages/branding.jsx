@@ -5,6 +5,7 @@ import Base from "../src/components/shared/Base";
 import TopBar from "../src/components/shared/TopBar";
 import Footer from "../src/components/shared/Footer";
 import PageHeader from "../src/components/PageHeader";
+import PageFooterExplorer from "../src/components/PageFooterExplorer";
 
 
 const LogoWrap = styled.div`
@@ -64,6 +65,25 @@ const BrandingPage = () => {
                 </div>
             </div>
         </div>
+        <PageFooterExplorer
+            items={[
+                {
+                    "title": "Advisory Board",
+                    "text": "View our elite panel of advisors",
+                    "link": "/advisory-board"
+                },
+                {
+                    "title": "Organizers",
+                    "text": "View our team of organizers",
+                    "link": "/organizers"
+                },
+                {
+                    "title": "Our Reach & Impact",
+                    "text": "See our reach & impact",
+                    "link": "/about#our-reach"
+                },
+            ]}
+        />
         <Footer />
     </Base>;
 

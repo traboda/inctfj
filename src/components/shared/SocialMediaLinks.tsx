@@ -30,10 +30,10 @@ const SocialMediaLinks = () => {
     ];
 
     return (
-        <div className="flex items-center md:justify-end text-2xl justify-center md:mb-0 mb-2 p-2">
+        <div className="flex items-center md:justify-end text-2xl lg:text-3xl xl:text-4xl justify-center md:mb-0 mb-2 p-2">
             {links.map((l) => (
                 <a
-                    className="mx-2 opacity-80 hover:opacity-100 hover:text-primary"
+                    className="mx-2 opacity-75 hover:opacity-100"
                     target="_blank"
                     rel="noopener noreferrer"
                     href={l.href}

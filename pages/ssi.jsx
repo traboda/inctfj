@@ -15,6 +15,7 @@ import TopBar from "../src/components/shared/TopBar";
 import CTAPartners from "../src/components/landing/CTAPartners";
 import LandingHeader from "../src/components/landing/Header";
 import LandingPromoVideo from "../src/components/landing/PromoVideo";
+import Footer from "../src/components/shared/Footer";
 
 const SSILandingPage = () => {
 
@@ -34,6 +35,7 @@ const SSILandingPage = () => {
             <CTAPartners />
             <LandingOrganizers />
             <LandingContactsBar />
+            <Footer />
         </div>
     </Base>;
 

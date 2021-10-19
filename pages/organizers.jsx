@@ -12,6 +12,7 @@ import Footer from "../src/components/shared/Footer";
 import ProfileSummaryCard from "../src/components/ProfileSummaryCard";
 import ProfileMicroCard from "../src/components/ProfileMicroCard";
 import PageHeader from "../src/components/PageHeader";
+import PageFooterExplorer from "../src/components/PageFooterExplorer";
 
 
 const OrganizersPage = () => {
@@ -83,6 +84,25 @@ const OrganizersPage = () => {
                     </div>
                 )}
             </div>
+            <PageFooterExplorer
+                items={[
+                    {
+                        "title": "Our Reach & Impact",
+                        "text": "See our reach & impact",
+                        "link": "/about#our-reach"
+                    },
+                    {
+                        "title": "Advisory Board",
+                        "text": "View our elite panel of advisors",
+                        "link": "/advisory-board"
+                    },
+                    {
+                        "title": "Sponsors",
+                        "text": "View our Sponsors",
+                        "link": "/sponsors"
+                    }
+                ]}
+            />
             <Footer />
         </Base>
     )

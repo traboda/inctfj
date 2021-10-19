@@ -5,6 +5,7 @@ import Base from "../src/components/shared/Base";
 import TopBar from "../src/components/shared/TopBar";
 import Footer from "../src/components/shared/Footer";
 import PageHeader from "../src/components/PageHeader";
+import PageFooterExplorer from "../src/components/PageFooterExplorer";
 
 const RulesContainer = styled('div')`
     padding: 1rem 2vw;
@@ -169,6 +170,25 @@ const RulePage = () => {
                 </div>
             </RulesContainer>
         </div>
+        <PageFooterExplorer
+            items={[
+                {
+                    "title": "FAQ",
+                    "text": "Answers to common questions",
+                    "link": "/faq"
+                },
+                {
+                    "title": "Promote",
+                    "text": "Promote InCTF Junior",
+                    "link": "/promote"
+                },
+                {
+                    "title": "Our Reach & Impact",
+                    "text": "See our reach & impact",
+                    "link": "/about#our-reach"
+                },
+            ]}
+        />
         <Footer />
     </Base>
 }

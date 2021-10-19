@@ -9,6 +9,7 @@ import Footer from "../../src/components/shared/Footer";
 import styled from "@emotion/styled";
 import dynamic from "next/dynamic";
 import Breadcrumb from "../../src/components/shared/Breadcrumb";
+import PageFooterExplorer from "../../src/components/PageFooterExplorer";
 
 const CodeBlock = dynamic(() => import("../../src/components/CodeBlock"), { ssr: false });
 
@@ -150,7 +151,7 @@ const WriteUpPage = ({ id }) => {
                 </div>
             </div>
             <div className="py-4 flex justify-center bg-gray-50">
-                <div className="p-3" style={{ minHeight: '70vh', width: '1000px', maxWidth: '100%' }}>
+                <div className="py-8 px-3" style={{ minHeight: '50vh', width: '1000px', maxWidth: '100%' }}>
                     <Markdown className="leading-relaxed">
                         <ReactMarkdown
                             plugins={[remarkGfm]}
@@ -162,6 +163,45 @@ const WriteUpPage = ({ id }) => {
                     </Markdown>
                 </div>
             </div>
+            <PageFooterExplorer
+                items={[
+                    {
+                        "title": "Workshops",
+                        "text": "Attend Free Training Workshops",
+                        "link": "/trainings"
+                    },
+                    {
+                        "title": "FAQ",
+                        "text": "Answers to common questions",
+                        "link": "/faq"
+                    },
+                    {
+                        "title": "Videos",
+                        "text": "Videos to help get started",
+                        "link": "/resources#videos"
+                    },
+                    {
+                        "title": "bi0s Wiki",
+                        "text": "Learn fundamental concepts",
+                        "link": "https://wiki.bi0s.in"
+                    },
+                    {
+                        "title": "Practice Challenges",
+                        "text": "Prepare solving challenges",
+                        "link": "https://app.traboda.com/challenges"
+                    },
+                    {
+                        "title": "Promote",
+                        "text": "Promote InCTF Junior",
+                        "link": "/promote"
+                    },
+                    {
+                        "title": "Join Discord Server",
+                        "text": "Get help from our community",
+                        "link": "/discord"
+                    },
+                ]}
+            />
             <Footer />
         </Base> :
         <Base meta={{ title: `WriteUp Not Found` }}>
