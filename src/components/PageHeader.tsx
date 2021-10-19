@@ -3,7 +3,7 @@ import Breadcrumb from "./shared/Breadcrumb";
 
 const PageHeader = ({ title, breadcrumb = null, description = null }) => (
     <div className="flex justify-center items-end">
-        <div className="flex w-full container items-center px-4 py-8" style={{ minHeight: '30vh' }}>
+        <div className="flex w-full container items-center px-4 lg:px-10 py-8" style={{ minHeight: '30vh' }}>
             <div>
                 {breadcrumb?.length > 0 && (
                     <div className="w-full text-left mb-2">
