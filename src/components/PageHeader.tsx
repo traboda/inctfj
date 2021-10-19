@@ -1,5 +1,5 @@
 import React from "react";
-import Breadcrumb from "./shared/Breadcrumbs";
+import Breadcrumb from "./shared/Breadcrumb";
 
 const PageHeader = ({ title, breadcrumb = null, description = null }) => (
     <div className="flex justify-center items-end">

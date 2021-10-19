@@ -3,7 +3,7 @@ import TopBar from "../src/components/shared/TopBar";
 import Footer from "../src/components/shared/Footer";
 import Base from "../src/components/shared/Base";
 import SponsorsSection from "../src/components/landing/SponsorsSection";
-import Breadcrumb from "../src/components/shared/Breadcrumbs";
+import Breadcrumb from "../src/components/shared/Breadcrumb";
 import PageHeader from "../src/components/PageHeader";
 
 const SponsorsPage = () => {

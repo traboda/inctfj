@@ -8,7 +8,7 @@ import TopBar from "../../src/components/shared/TopBar";
 import Footer from "../../src/components/shared/Footer";
 import styled from "@emotion/styled";
 import dynamic from "next/dynamic";
-import Breadcrumb from "../../src/components/shared/Breadcrumbs";
+import Breadcrumb from "../../src/components/shared/Breadcrumb";
 
 const CodeBlock = dynamic(() => import("../../src/components/CodeBlock"), { ssr: false });
 

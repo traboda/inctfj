@@ -5,7 +5,7 @@ import styled from "@emotion/styled";
 
 import Base from "./shared/Base";
 import TopBar from "./shared/TopBar";
-import Breadcrumb from "./shared/Breadcrumbs";
+import Breadcrumb from "./shared/Breadcrumb";
 import Footer from "./shared/Footer";
 
 

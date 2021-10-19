@@ -191,22 +191,81 @@ export const OrganizingTeamTier3 = [
         desg: "Support & Emails"
     },
     {
-        name: "Sridevi",
-        desg: "Training Programmes"
+        photo: require('../assets/images/people/aditya_vardhan.jpg'),
+        name: "Aditya Vardhan Padala",
+        desg: "CTF Admin"
     },
     {
-        name: "Vishvesh",
-        desg: "CTF Contest"
+        photo: require('../assets/images/people/nihith.jpg'),
+        name: "Bolisetty Krishna Sai Nihith",
+        desg: "CTF Admin"
+    },
+    {
+        photo: require('../assets/images/people/jaswanth_bommidi.jpg'),
+        name: "Jaswanth Bommidi",
+        desg: "CTF Admin"
     },
 ]
 
-export const OrganizingTeam = [
+export const OrganizingTeamMembers = [
     {
-        name: "Aswin C",
+        photo: require('../assets/images/people/nikhil_nair.jpg'),
+        name: "Nikhil T Nair",
+        desg: "Challenge Author"
+    },
+    {
+        photo: require('../assets/images/people/yaswanth.jpg'),
+        name: "Yaswant R",
+        desg: "Category Lead"
+    },
+    {
+        photo: require('../assets/images/people/yadhu_krishna.jpeg'),
+        name: "Yadhu Krishna M",
         desg: "Social Media"
     },
     {
-        name: "Yadhu",
-        desg: "Social Media"
+        photo: require('../assets/images/people/sayooj_b_kumar.jpg'),
+        name: "Sayooj B Kumar",
+        desg: "Trainer"
     },
+    {
+        photo: require('../assets/images/people/s_abhishek.jpg'),
+        name: "S Abhishek",
+        desg: "Trainer, Category Lead - Forensics"
+    },
+    {
+        photo: require('../assets/images/people/arya_arun.jpg'),
+        name: "Arya Arun",
+        desg: "Challenge Author - Forensics"
+    },
+    {
+        photo: require('../assets/images/people/sai_sampath.jpg'),
+        name: "Ganta Sai Sampath",
+        desg: "Challenge Author - Forensics"
+    },
+    {
+        photo: require('../assets/images/people/goutham_rajesh.jpg'),
+        name: "Goutham Rajesh",
+        desg: "Challenge Author - Forensics"
+    },
+    {
+        photo: require('../assets/images/people/aneesh_nadh.jpeg'),
+        name: "Aneesh Nadh R",
+        desg: "bi0s Web"
+    },
+    {
+        photo: require('../assets/images/people/rohit_narayanan.jpeg'),
+        name: "Rohit Narayanan M",
+        desg: "Challenge Author"
+    },
+    {
+        photo: require('../assets/images/people/sahith_m.jpeg'),
+        name: "Sahith Chowdary Madamanchi",
+        desg: "bi0s Cryptography"
+    },
+    {
+        photo: require('../assets/images/people/rahul_sunder.jpg'),
+        name: "Rahul Sunder",
+        desg: "bi0s Web"
+    }
 ]

@@ -1,15 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
 import styled from "@emotion/styled";
-import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
-import Modal from "react-modal";
+import React, {useEffect, useRef, useState} from "react";
 import Link from "next/link";
-import { AnimateSharedLayout, AnimatePresence, motion } from 'framer-motion';
+import Modal from "react-modal";
+import {clearAllBodyScrollLocks} from "body-scroll-lock";
 
-import SideBar from "./SideBar";
-import TopBarItem from "./TopBarItem";
-import dynamic from "next/dynamic";
+import MobileMenu from "./MobileMenu";
+import TopBarSearch from "./search";
+import TopBarItem from "./item";
 
-const SearchBar = dynamic(() => import("../landing/search/SearchBar"), { ssr: false });
+import TopbarItems from "./menu.json";
 
 const TopbarContainer = styled.header`
   position: fixed;
@@ -105,7 +104,6 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
     const [showRegCard, setShowRegCard] = useState(false);
     const [scrollDir, setScrollDir] = useState('up');
     const [isAtTop, setIsAtTop] = useState(true);
-    const [searchModal, setSearchModal] = useState(false);
 
     const topbarRef = useRef(null)
     const scrollPrevStateRef = useRef(0);
@@ -134,144 +132,13 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
         }
     }, []);
 
-    const TopbarItems = [
-        {
-            "label": "About",
-            "link": "/about",
-            items: [
-                {
-                    "label": "What's India CTF Jr?",
-                    "link": "/about#what"
-                },
-                {
-                    "label": "Why InCTF Jr?",
-                    "link": "/about#why"
-                },
-                {
-                    "label": "Our Reach & Statistics",
-                    "link": "/about#our-reach"
-                },
-                {
-                    "label": "Organizing Team",
-                    "link": "/organizers"
-                },
-                {
-                    "label": "Advisory Board",
-                    "link": "/advisory-board"
-                },
-                {
-                    "label": "Sponsors",
-                    "link": "/sponsors"
-                }
-            ]
-        },
-        {
-            "label": "Talent Incubation",
-            "link": "/talent-incubation",
-            "items": [
-                {
-                    "label": "The CTF Pedagogy",
-                    "link": "/talent-incubation#pedagogy"
-                },
-                {
-                    "label": "CyberSafety Education",
-                    "link": "/talent-incubation#programmes"
-                },
-                {
-                    "label": "Indian Cyber League",
-                    "link": "/talent-incubation#indian-cyber-league"
-                },
-                {
-                    "label": "Diversity Initiatives",
-                    "link": "/talent-incubation#diversity"
-                },
-                {
-                    "label": "Success Stories",
-                    "link": "/about#impact"
-                }
-            ]
-        },
-        {
-            "label": "Championship",
-            "link": "/championship",
-            "items": [
-                {
-                    "label": "Why Participate?",
-                    "link": "/championship#why-participate",
-                },
-                {
-                    "label": "Contest Timeline",
-                    "link": "/championship#timeline",
-                },
-                {
-                    "label": "Guidelines & Rules",
-                    "link": "/rules",
-                },
-                {
-                    "label": "Prizes",
-                    badge: "3 Lks+",
-                    badgeColor: "bg-green-100",
-                    "link": "championship/#prizes",
-                },
-                {
-                    "label": "Past Winners",
-                    "link": "/stats",
-                }
-            ]
-        },
-        {
-            "label": "Get Started",
-            "link": "/resources",
-            items: [
-                {
-                    "label": "Cyber Workshops",
-                    "badge": "free",
-                    "link": "/trainings"
-                },
-                {
-                    "label": "Videos & Guides",
-                    "link": "/resources#videos"
-                },
-                {
-                    "label": "FAQ",
-                    badge: "get answers",
-                    "link": "/faq",
-                },
-                {
-                    "label": "bi0s Wiki",
-                    "link": "https://wiki.bi0s.in/"
-                },
-                {
-                    "label": "Practice Challenges",
-                    "link": "https://app.traboda.com/"
-                },
-                {
-                    "label": "Writeups",
-                    badge: "new",
-                    badgeColor: "bg-yellow-100",
-                    "link": "/writeups"
-                },
-                {
-                    "label": "Promote InCTF",
-                    "link": "/promote"
-                },
-                {
-                    "label": "Get Help",
-                    "badge": "discord",
-                    badgeColor: "bg-blue-100",
-                    "link": "/discord"
-                }
-            ]
-        },
-    ]
-
     const isVisible = () => scrollDir === 'up' || isAtTop;
 
     useEffect(() => {
         setShowMenu(false);
     }, [scrollDir]);
 
-    return <AnimateSharedLayout type="crossfade">
+    return <div>
         <div style={{ fontSize: '14px' }} className="hidden md:block p-2 bg-blue-800 text-white">
             <div className="flex items-center justify-between">
                 <div className="px-3">
@@ -297,7 +164,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                     <a className="w-full md:w-1/3" href="/">
                         <img
                             className="logo"
-                            src={require('../../assets/images/logos/inctf.png')}
+                            src={require('../../../assets/images/logos/inctf.png')}
                             alt="InCTF Jr"
                         />
                     </a>
@@ -315,7 +182,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                         </span>
                         <img
                             alt="cbse"
-                            src={require('../../assets/images/logos/cbse.jpg')}
+                            src={require('../../../assets/images/logos/cbse.jpg')}
                             style={{ position: 'unset', maxHeight: 45, maxWidth: '100%' }}
                             draggable="false"
                             className="inline"
@@ -328,19 +195,14 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                             <TopbarInfoCard className="items-center flex">
                                 <nav className="flex items-center mr-4">
                                     {TopbarItems?.map((i) => (
-                                        <TopBarItem item={i} isVisible={isVisible()}/>
+                                        <TopBarItem
+                                            key={`topbar_menu_link_${i?.link}`}
+                                            item={i}
+                                            isVisible={isVisible()}
+                                        />
                                     ))}
-                                    <motion.div layoutId="search-button" className="bg-white rounded-full">
-                                        {!searchModal && <button
-                                            className="fas fa-search justify-center text-lg text-black hover:text-primary ml-2"
-                                            onClick={() => {
-                                                disableBodyScroll(document.body);
-                                                setSearchModal(true);
-                                            }}
-                                        />}
-                                    </motion.div>
+                                    <TopBarSearch />
                                 </nav>
-
                                 <button
                                     className="px-8 py-4 rounded-lg font-semibold bg-primary hover:bg-blue-800 shadow hover:shadow-xl text-white ml-3"
                                     onClick={() => setShowRegCard(true)}
@@ -391,7 +253,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                     setShowRegCard(false)
                 }}
             >
-                <img alt="close" src={require('../../assets/images/icons/close.png')}/>
+                <img alt="close" src={require('../../../assets/images/icons/close.png')}/>
             </CloseButton>
             {showRegCard &&
             <div
@@ -403,49 +265,8 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 />
             </div>}
         </Modal>
-        <AnimatePresence>
-            {searchModal && (
-                <motion.div
-                    layoutId="search-button"
-                    className="w-screen h-screen bg-white fixed top-0 left-0"
-                    style={{ zIndex: 9000 }}
-                    initial={{ borderRadius: 1000 }}
-                    exit={{ borderRadius: 1000 }}
-                    animate={{ borderRadius: 0 }}
-                >
-                    <div className="flex flex-col justify-center items-center w-full h-full">
-                        <button
-                            className="fas fa-times text-xl absolute top-0 text-light hover:text-primary right-0 mt-4 mr-4 cursor-pointer"
-                            onClick={() => {
-                                clearAllBodyScrollLocks();
-                                setSearchModal(false);
-                            }}
-                        />
-                        <div style={{ padding: '5vh 1rem 15vh 1rem' }}
-                             className="container mx-auto flex flex-col items-center justify-center">
-                            <div className="text-center w-full" style={{ maxWidth: 600 }}>
-                                <Link href="/" passHref>
-                                    <a>
-                                        <img
-                                            className="mb-8 inline"
-                                            src={require('../../assets/images/logos/inctf.png')}
-                                            alt="InCTF Jr"
-                                            style={{ maxHeight: '120px' }}
-                                        />
-                                    </a>
-                                </Link>
-                                <SearchBar
-                                    placeholder="Search your queries & questions about InCTF Jr"
-                                    isFocused
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </motion.div>
-            )}
-        </AnimatePresence>
         {isVisible() && showMenu &&
-        <SideBar
+        <MobileMenu
             darkenOnSidebar={darkenOnSidebar}
             onClose={onClose}
         />}
@@ -457,12 +278,12 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                         alt="InCTF Jr"
                         style={{ height: '72px' }}
                         className="inline"
-                        src={require('../../assets/images/branding/colorful.png')}
+                        src={require('../../../assets/images/branding/colorful.png')}
                     />
                 </a>
             </Link>
         </div>
-    </AnimateSharedLayout>
+    </div>
 };
 
 export default TopBar;
