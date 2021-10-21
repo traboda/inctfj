@@ -17,6 +17,7 @@ import CTAPartners from "../src/components/landing/CTAPartners";
 import LandingPromoVideo from "../src/components/landing/PromoVideo";
 import LandingSearch from "../src/components/landing/search";
 import Footer from "../src/components/shared/Footer";
+import Bot from '../src/components/chatbot'
 
 const LandingPage = () => {
 
@@ -37,6 +38,7 @@ const LandingPage = () => {
             <LandingOrganizers />
             <LandingSearch />
             <LandingContactsBar />
+            <Bot />
         </div>
         <Footer />
     </Base>

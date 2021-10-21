@@ -55,3 +55,19 @@ h5, .h5 {
 h6, .h6 {
     font-size: 1rem;
 }
+
+/* Chatbot overidden styles */
+.react-chatbot-kit-chat-container {
+    position: fixed !important;
+    right: 0;
+    bottom: 90px;
+}
+
+.react-chatbot-kit-chat-btn-send-icon {
+    margin: 0 auto;
+}
+
+.react-chatbot-kit-chat-container {
+    border: 1px solid #f13f17;
+    border-radius: 7px;
+}
