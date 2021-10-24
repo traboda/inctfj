@@ -1,5 +1,25 @@
 export default [
     {
+        title: 'Introduction to CTFs',
+        videoID: '-PvKBido90I',
+        tags: ['live', ]
+    },
+    {
+        title: 'Introduction to Reverse Engineering',
+        videoID: 'U0PHOIaRyXE',
+        tags: ['live', ]
+    },
+    {
+        title: 'Basics of Web',
+        videoID: 'clcfThE2UIg',
+        tags: ['live', ]
+    },
+    {
+        title: 'Introduction to Web Exploitation',
+        videoID: 'uHiLpyfEhpw',
+        tags: ['live', ]
+    },
+    {
         title: 'How to Register?',
         videoID: 'twS3pzPjRzA',
         tags: ['how-to', ]

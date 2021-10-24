@@ -13,16 +13,18 @@ const YoutubeVideosSection = () => {
             "value": "how-to"
         },
         {
+            "label": "Live Streams",
+            "value": "live"
+        },
+        {
             "label": "Category Introductions",
             "value": "cat-intro"
         },
         {
             "label": "Challenge Solutions",
             "value": "chall-solution"
-        }
+        },
     ]
-
-    console.log(tag);
 
     return (
         <div id="videos">

@@ -19,7 +19,7 @@ outline: none;
 
 function Bot() {
 
-    const [showBot, setShowBot] = useState(true);
+    const [showBot, setShowBot] = useState(false);
 
     const handleClick = () => {
         setShowBot(!showBot);
