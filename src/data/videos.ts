@@ -30,8 +30,8 @@ export default [
         tags: ['how-to', ]
     },
     {
-        title: 'How to join discord server?',
-        videoID: 'pbNp45IvmP4',
+        title: 'How to join & use discord server?',
+        videoID: 'y65VJwtoJsc',
         tags: ['how-to', ]
     },
     {
