@@ -34,7 +34,7 @@ const CTAReg = ({ UTMSource = null }) => (
                 <div className="md:w-2/3 pr-4 pl-4 flex items-center p-2">
                     <img alt="star" className="hidden md:block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />
                     <h3>
-                        InCTF Jr is your perfect entry to CyberSec & Hacking before college.
+                        InCTF is your perfect entry to CyberSec & Hacking.
                     </h3>
                 </div>
             </Fade>
