@@ -45,7 +45,7 @@ const LandingQuickInfo = () => {
         {
             image: require('../../assets/images/icons/graduation.png'), right: true,
             question: "For Whom?", answer: <>
-                College Students <br/>
+                College Students &<br/>
                 Professionals
             </>,
         }
