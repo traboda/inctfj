@@ -47,7 +47,7 @@ const TopBarSearch = () => {
                                             <img
                                                 className="mb-8 inline"
                                                 src={require('../../../assets/images/logos/inctf.png')}
-                                                alt="InCTF Jr"
+                                                alt="InCTF"
                                                 style={{ maxHeight: '120px' }}
                                             />
                                         </a>

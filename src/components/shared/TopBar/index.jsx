@@ -242,7 +242,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 <iframe
                     className="border-0"
                     style={{ width: '500px', maxWidth: '100vw', height: '190px', overflow: 'auto' }}
-                    src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame?color=000&primary=F13F17&primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
+                    src={`https://app.traboda.com/contest/inctf-21-lr/reg-frame?primary=F13F17&amp;primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
                 />
             </div>}
         </Modal>
@@ -256,7 +256,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
             <Link passHref href="/">
                 <a>
                     <img
-                        alt="InCTF Jr"
+                        alt="InCTF"
                         style={{ height: '72px' }}
                         className="inline"
                         src={require('../../../assets/images/branding/colorful.png')}
