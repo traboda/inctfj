@@ -7,7 +7,7 @@ const DiscordRedirect = () => {
     const router = useRouter();
 
     useEffect(() => {
-        router.push('https://discord.gg/QVXewGh7sP')
+        router.push('https://discord.gg/uZ2yahXyMd')
     }, []);
 
     return <Base meta={{ title: 'Join InCTF Jr Discord Server' }}>

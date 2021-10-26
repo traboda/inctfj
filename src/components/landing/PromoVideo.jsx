@@ -24,7 +24,7 @@ const LandingPromoVideoSection = styled('section')`
 const LandingPromoVideo = () => (
     <LandingPromoVideoSection className="container mx-auto">
         <div className="promo-video-container p-0 md:p-3">
-            <ReactPlayer url="https://www.youtube.com/watch?v=sxRZ06Rbh_c" width="100%" height="100%" />
+            <ReactPlayer url="https://youtu.be/MICFZTmNOog" width="100%" height="100%" />
         </div>
     </LandingPromoVideoSection>
 );

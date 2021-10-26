@@ -168,26 +168,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                             alt="InCTF Jr"
                         />
                     </a>
-                    <a
-                        target="_blank"
-                        href="http://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf"
-                        className="w-2/3 pl-2 md:flex hidden flex-col items-start"
-                        title="In association with CBSE"
-                    >
-                        <span
-                            className="uppercase tracking-widest opacity-80"
-                            style={{ fontSize: 8 }}
-                        >
-                            In association with
-                        </span>
-                        <img
-                            alt="cbse"
-                            src={require('../../../assets/images/logos/cbse.jpg')}
-                            style={{ position: 'unset', maxHeight: 45, maxWidth: '100%' }}
-                            draggable="false"
-                            className="inline"
-                        />
-                    </a>
+                  
                 </div>
                 <div className="md:w-2/3 xl:w-3/4 px-1 hidden md:flex items-center">
                     <div className="flex w-full">
