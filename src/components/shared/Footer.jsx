@@ -37,7 +37,7 @@ const Footer = () => {
                         <img draggable="false" className="inline mb-3" alt="Amrita InCTF Junior" src={require('../../assets/images/branding/light_version.png')} />
                         <div className="md:ml-6 py-3">
                             <div className="line-height-1 opacity-80 my-2 md:mb-1 md:mt-0">
-                                &copy; Amrita InCTF Jr. 2016-2021. <span className="inline-block">All Rights Reserved.</span>
+                                &copy; Amrita InCTF 2016-2021. <span className="inline-block">All Rights Reserved.</span>
                             </div>
                             <FooterLinksBar>
                                 <a href="/branding">Brand Kit</a>

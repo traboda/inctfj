@@ -170,7 +170,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                                 <img
                                     alt="InCTF Jr"
                                     id="landing-header-cover-image"
-                                    src={require('../../assets/images/covers/landing-cover-image.png')}
+                                    src={require('../../assets/images/covers/Untitled design.png')}
                                     style={{ position: 'unset', maxHeight: '500px', maxWidth: '100%' }}
                                     draggable="false"
                                 />
@@ -202,10 +202,10 @@ const LandingHeader = ({ UTMSource = null }) => {
                                         <p>
                                             Your browser had some issues loading the registration form. So kindly use the links below.
                                         </p>
-                                        <a id="header-register-button" className="mr-2" href="https://traboda.com/contest/inctfj-21-lr">
+                                        <a id="header-register-button" className="mr-2" href="https://app.traboda.com/contest/inctf-21-lr">
                                             Register for Learning Round
                                         </a>
-                                        <a id="header-register-button" href="https://traboda.com/contest/inctfj-21-lr">
+                                        <a id="header-register-button" href="https://app.traboda.com/contest/inctf-21-lr">
                                             Login to Dashboard
                                         </a>
                                     </div> :

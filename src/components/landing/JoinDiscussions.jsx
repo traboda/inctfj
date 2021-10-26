@@ -54,7 +54,7 @@ const LandingJoinDiscussion = () => {
 
     return <div className="flex flex-wrap">
         <div className="md:w-1/2 w-full">
-            <TwitterDiscussion href="https://twitter.com/InCTFj" rel="noopener noreferrer" target="_blank">
+            <TwitterDiscussion href="https://twitter.com/InCTF" rel="noopener noreferrer" target="_blank">
                 <Fade left>
                     <div>
                         <img src={require('../../assets/images/logos/twitter.png')} alt="Follow us on Twitter<" />
@@ -65,7 +65,7 @@ const LandingJoinDiscussion = () => {
         </div>
 
         <div className="md:w-1/2 w-full">
-            <DiscordDiscussion href="https://discord.gg/rkyDM6p3m2" rel="noopener noreferrer" target="_blank">
+            <DiscordDiscussion href="https://discord.gg/uZ2yahXyMd" rel="noopener noreferrer" target="_blank">
                 <Fade right>
                     <div>
                         <img src={require('../../assets/images/logos/discord.png')} alt="Join Discord Server" />
