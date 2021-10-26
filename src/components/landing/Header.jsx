@@ -152,17 +152,16 @@ const LandingHeader = ({ UTMSource = null }) => {
                             <div className="md:w-2/3 px-4">
                                 <Pulse>
                                     <h1>
-                                        <span style={{ color: '#FF6F00'}}>Young Hackers Are Born Here,</span><br/>
-                                        Become the Next Cyber Security Warrior.
+                                        <span style={{ color: '#FF6F00'}}>INDIA'S FLAGSHIP CYBER SECURITY CONTEST AND CONFERENCE</span><br/>
+                                        SEP 2021 TO JAN 2022.
+
                                     </h1>
                                 </Pulse>
                                 <Fade up>
                                     <p>
-                                        InCTF Junior is India's First & Premier Hacking & Cyber Security Contest for High School Students,
-                                        organized by team bi0s, India's No.1 ranked CTF Team.
+                                    
                                         <span className="mt-6">
-                                            Every year the brightest young hackers from all across India participate in this the learn & hack CTF contest,
-                                            win exciting prizes & kick-start their cyber-security career.
+                                        InCTF India's Premier Hacking & Cyber Security contest organized by team bi0s, India's No.1 ranked CTF Team.Participate in this learn & hack CTF contest, win exciting prizes & kick-start your cyber-security career.
                                         </span>
                                     </p>
                                 </Fade>
@@ -179,7 +178,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                         </div>
                         <div className="flex flex-wrap mx-0">
                             <div className="md:w-1/3 pr-4 pl-4 w-full py-5 md:py-0 px-2">
-                                <HowToRegister onClick={() => window.open('https://youtu.be/twS3pzPjRzA', '_blank')}>
+                                <HowToRegister onClick={() => window.open('https://youtu.be/T8pEY4AR_Kg', '_blank')}>
                                     <div className="how_to_register_cover">
                                         <div className="text-center">
                                             <div>How to Get Started?</div>
@@ -193,7 +192,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                                     <img
                                         alt="how to Register"
                                         draggable="false"
-                                        src={require('../../assets/images/covers/how_to_register.JPG')}
+                                        src={require('../../assets/images/covers/howtoreg.png')}
                                     />
                                 </HowToRegister>
                             </div>
@@ -213,7 +212,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                                     <IFrameContainer>
                                         <Iframe
                                             onError={() => setIframeError(true)}
-                                            src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame?color=000&primary=F13F17&primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
+                                            src={`https://app.traboda.com/contest/inctf-21-lr/reg-frame?primary=F13F17&amp;primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
                                         />
                                     </IFrameContainer>}
                             </div>
