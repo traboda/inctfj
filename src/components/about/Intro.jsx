@@ -26,7 +26,7 @@ const InctfIntro = () => {
             <div className="flex flex-wrap">
                 <div className="md:w-2/3 pr-4 pl-4 flex items-center p-6">
                     <div>
-                        <Fade up><h1 className="font-bold mb-6">Why InCTF Junior?</h1></Fade>
+                        <Fade up><h1 className="font-bold mb-6">Why InCTF?</h1></Fade>
                         <Fade>
                             <p>
                                 A recent report has revealed that a miniscule 0.6% of graduate students are currently working in

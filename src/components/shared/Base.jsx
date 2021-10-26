@@ -5,9 +5,9 @@ import config from 'react-reveal/globals';
 config({ ssrFadeout: true });
 
 const seoTags = {
-    "siteName": "InCTF Jr",
-    "tagLine": "India's First & Only CTF CyberSecurity Championship for School Students",
-    "description": "India's First & Only CTF & Cyber Security Championship & Talent Incubation Programme exclusively for High School Students, organized by team bi0s, India's No.1 ranked CTF Team."
+    "siteName": "InCTF",
+    "tagLine": "Amrita InCTF: India’s First Ethical Hacking contest.",
+    "description": "Capture the Flag contest. India’s first hacking competition. Play CTFs, win prizes and get placed with our sponsors."
 };
 
 const Base = ({ children, meta }) => {
