@@ -46,19 +46,6 @@ const LandingContactsBar = () => {
     return <ContactsBarSection>
         <div className="flex flex-wrap">
             <div className="w-full flex justify-center flex-wrap">
-                <Fade left>
-                    <div className="md:w-1/4 p-2 mb-4 flex items-center justify-center text-center">
-                        <PoweredByTraboda>
-                            <div>In Association with the CBSE</div>
-                            <a href="http://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf">
-                                <img
-                                    src={require('../../assets/images/logos/cbse.jpg')}
-                                    alt="CBSE" draggable="false"
-                                />
-                            </a>
-                        </PoweredByTraboda>
-                    </div>
-                </Fade>
                 <Fade right>
                     <div className="md:w-1/4 p-2 mb-4 flex items-center justify-center text-center">
                         <PoweredByTraboda>

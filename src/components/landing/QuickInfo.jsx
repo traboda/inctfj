@@ -39,14 +39,14 @@ const LandingQuickInfo = () => {
         {
             image: require('../../assets/images/icons/calendar.png'), up: true,
             question: "When?", answer: <>
-                Learning Round Started, <br /> Finals December 3-5, 2021
+                Finals Jan 7-9, 2022, <br />International Conference Jan 21-23, 2022 
             </>
         },
         {
-            image: require('../../assets/images/icons/backpack.png'), right: true,
+            image: require('../../assets/images/icons/graduation.png'), right: true,
             question: "For Whom?", answer: <>
-                Grade 07-12 <br/>
-                School Students
+                College Students <br/>
+                Professionals
             </>,
         }
     ]
