@@ -1,0 +1,13 @@
+title: No-Rclick
+id: 588
+category: Web
+difficulty: Beginner
+content: |
+  Right click is disabled in this challenge.
+
+  You get the flag if you manage to some-how view the source code of the challenge page.
+
+  To view the source code of the website, there are many ways -
+  1. Ctrl + Shift + I
+  2. F12
+  3. add "view-source:" in front of the URL in the address bar, for eg - "view-source:http://chall.eng.run:30335/"

@@ -1,0 +1,6 @@
+{
+    "/posts/state-of-cybersec-in-india-students-role": {
+        "page": "/posts/[slug]",
+        "query": { "slug": "state-of-cybersec-in-india-students-role" }
+    }
+}
