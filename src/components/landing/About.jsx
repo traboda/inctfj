@@ -86,14 +86,13 @@ const LandingAboutInCTF = () => (
                         for School Students
                     </h2>
                     <p>
-                        Democratizing cyber-security education by making it accessible to everyone at a very
-                        young age and anchoring them on the track for excellent careers is what Amrita's India
-                        Capture The Flag (InCTF) Junior programme is all about.
+                    InCTF is a National level Ethical Hacking contest organized annually by Team bi0s in 
+                    association with Amrita Vishwa Vidyapeetham and Amrita Centre for Cyber Security. 
+                    The contest is exclusively for students enrolled in an Indian university and aimed at 
+                    students who have no prior exposure to computer security and for the working professionals. 
+                    Started in 2010 and so far over 15,000 university students across India from 22 states have taken part.
                     </p>
-                    <p>
-                        Today, InCTF Junior is a Cyber-Security talent incubator that exposes participants to
-                        the cyber-security world, helping them to learn & grow their skills hands-on.
-                    </p>
+                   
                     <p>
                         It presents them exciting opportunities of getting mentored, peer-networking,
                         and perhaps a platform to showcase their talent and get recognized & rewarded.
@@ -101,15 +100,11 @@ const LandingAboutInCTF = () => (
                 </div>
                 <div className="md:w-1/3 flex justify-end items-center p-3">
                     <div>
-                        <HighlightFeature>
-                            National Level Cyber Security <wbr /> <span>Talent Incubation</span>
-                        </HighlightFeature>
+                        
                         <HighlightFeature>
                             5-month Long Completely Free, <wbr /> <span>End-to-End Programme</span>
                         </HighlightFeature>
-                        <HighlightFeature>
-                            Beginner Friendly & <wbr /> <span>Exclusively for School Students</span>
-                        </HighlightFeature>
+                        
                         <HighlightFeature>
                             Organized by India's No.1 Ranked <wbr />
                             <span>CTF CyberSecurity Team - bi0s</span>
