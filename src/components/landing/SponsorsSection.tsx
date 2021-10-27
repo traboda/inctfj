@@ -5,17 +5,14 @@ import styled from "@emotion/styled";
 const Wrapper = styled.div`
   .past-sponsors {
     img {
-      height: auto;
-      width:200px;
-      filter: saturate(0) contrast(50%);
-      &:hover {
-        filter: none!important;
+        height: auto;
+        width:200px;
+        
       }
-    }
   }
   img {
     display: inline;
-    max-height: 90px;
+    max-height: 120px;
     width: auto;
     max-width: 100%;
   }
@@ -75,12 +72,12 @@ const SponsorsSection = () => {
             <div className="flex my-3 flex-wrap my-6">
                 <div className="w-full p-0 mt-3 mb-3 text-red-500 opacity-80 text-center">InCTF 2021 Sponsors</div>
                 <div className="w-full justify-center">
-                    <p className="text-center opacity-8 mb-3" style={{ maxWidth: '100%', fontSize: '95%', lineHeight: 1.4, width: '450px' }}>
+                    <p className="w-full text-center opacity-8 mb-3" style={{ maxWidth: '100%', fontSize: '95%', lineHeight: 1.4, width: '450px' }}>
                         We thank these organizations for investing in the CyberSecurity Workforce of Tomorrow.
                     </p>
                 </div>
                 {inCTFSponsors.map((s, i) =>
-                    <div className="md:w-1/4 px-2 w-1/2 p-1 flex justify-center text-center items-end" key={i}>
+                    <div className="md:w-1/2 px-2 w-1/2 p-1 flex justify-center text-center items-end" key={i}>
                         <div className="text-center">
                             <Fade>
                                 <img

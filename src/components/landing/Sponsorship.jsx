@@ -52,12 +52,11 @@ const LogoWall = styled.div`
       font-size: 18px;
     }
     .past-sponsors {
-      img {
-        height: 64px!important;
-        filter: saturate(0) contrast(50%);
-        &:hover {
-          filter: none!important;
-        }
+        img {
+            height: auto;
+            width:200px;
+            
+          }
       }
     }
     .inctfj-sponsors {
