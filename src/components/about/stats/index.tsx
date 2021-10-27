@@ -45,7 +45,7 @@ const INCTFJStats = ({stats}) => {
     return (
         <StatsSection id="our-reach">
             <h2 className="text-center mb-8 text-3xl md:text-4xl lg:text-5xl">
-                InCTF Jr 21 is one of the world's largest CTF
+                InCTF 21 is one of the world's largest CTF
             </h2>
             <StatsContainer className="flex flex-wrap py-8 text-center mx-0">
                 {statsPreviewer().map((s) =>

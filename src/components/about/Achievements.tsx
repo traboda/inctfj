@@ -42,7 +42,7 @@ const AboutAchievements = () => {
     return (
         <div id="impact" className="container mx-auto" style={{ padding: '7.5vw 1.2rem' }}>
             <div className="text-center">
-                <h1 className="font-bold text-3xl lg:text-4xl mb-3">Recent Achievements of InCTF Jr Participants</h1>
+                <h1 className="font-bold text-3xl lg:text-4xl mb-3">Recent Achievements of InCTF Participants</h1>
             </div>
             <div className="mt-12 grid gap-8 lg:grid-cols-4 sm:grid-cols-2 grid-cols-1">
                 {achievements.map((a, i) => (
