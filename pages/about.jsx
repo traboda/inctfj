@@ -25,11 +25,11 @@ const AboutPage = () => {
 
     useEffect(fetchStats, [])
 
-    return <Base meta={{ title: "About InCTF Jr." }}>
+    return <Base meta={{ title: "About InCTF" }}>
         <TopBar includeSpace={false} />
         <div style={{ background: '#FAFAFA' }}>
             <Parallax
-                background={require('../src/assets/images/covers/inctfj_mountains.jpg')}
+                background={require('../src/assets/images/covers/inctf_mountain.jpg')}
                 height="600px"
             />
             <InctfIntro />
@@ -38,7 +38,6 @@ const AboutPage = () => {
                 <img draggable="false" src={require('../src/assets/images/photos/standing_as_inctf.jpg')} />
             </div>
             <AboutAchievements />
-            <UNSDGSection />
         </div>
         <Footer />
     </Base>
