@@ -64,12 +64,7 @@ const LogoWall = styled.div`
         height: 90px!important;
       }
     }
-    img {
-       display: inline;
-       max-height: 90px;
-       width: auto;
-       max-width: 100%;
-    }
+    
 `
 
 const LandingSponsorship = () => {

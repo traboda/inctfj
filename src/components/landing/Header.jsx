@@ -168,7 +168,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                             </div>
                             <div className="md:w-1/3 my-4 md:my-0 px-3">
                                 <img
-                                    alt="InCTF Jr"
+                                    alt="InCTF"
                                     id="landing-header-cover-image"
                                     src={require('../../assets/images/covers/Untitled design.png')}
                                     style={{ position: 'unset', maxHeight: '500px', maxWidth: '100%' }}

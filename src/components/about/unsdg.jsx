@@ -9,7 +9,7 @@ const UNSection = styled('section')`
 const UNSDGSection = () => (
     <UNSection>
         <div className="py-3 text-center px-2">
-            <h3 className="text-lg lg:text-2xl text-white mb-2">Amrita InCTF Junior proudly supports the</h3>
+            <h3 className="text-lg lg:text-2xl text-white mb-2">Amrita InCTF proudly supports the</h3>
             <img
                 alt="United Nations Sustainable Development Goals"
                 src={require('../../assets/images/unsdg_logo.png')}

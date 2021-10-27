@@ -6,7 +6,6 @@ import INCTFJStats from "../src/components/about/stats";
 import InctfIntro from "../src/components/about/Intro";
 import Footer from "../src/components/shared/Footer";
 import AboutAchievements from "../src/components/about/Achievements";
-import UNSDGSection from "../src/components/about/unsdg";
 import { data } from '../src/components/about/stats/66';
 import Parallax from "../src/components/Parallax";
 
