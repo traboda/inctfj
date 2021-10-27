@@ -47,8 +47,7 @@ const InctfIntro = () => {
                             <p>
                                 Having realized the dire need for such a training culture in India, team bi0s, the cyber security
                                 student community of Amrita Vishwa Vidyapeetham is organizing Amrita InCTF Junior, an online Capture
-                                the Flag style contest specifically designed to introduce cyber security awareness and training
-                                in high school students.
+                                the Flag style contest specifically designed to introduce cyber security awareness and training.
                             </p>
                         </Fade>
                     </div>
