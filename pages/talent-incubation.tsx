@@ -26,5 +26,5 @@ const TalentIncubation = () => {
     );
 
 };
-
+ 
 export default TalentIncubation;
