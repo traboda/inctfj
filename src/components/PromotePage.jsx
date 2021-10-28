@@ -68,11 +68,9 @@ const ShareSection = styled.section`
 const PromotePage = () => {
 
     const posters = [
-        require('../assets/images/posters/p1.JPG'),
-        require('../assets/images/posters/p2.JPG'),
-        require('../assets/images/posters/p3.JPG'),
-        require('../assets/images/posters/p4.JPG'),
-        require('../assets/images/posters/p5.jpg'),
+       
+        require('../assets/images/posters/p6.jpg'),
+        require('../assets/images/posters/p7.jpg'),
         // require('../assets/images/posters/1.jpg'),
         // require('../assets/images/posters/2.jpg'),
         // require('../assets/images/posters/3.jpg'),
@@ -84,13 +82,10 @@ const PromotePage = () => {
 
     const videos = [
         {
-            "cover": require('../assets/images/covers/videos/2020_promo_1.jpg'),
-            "link": "https://www.youtube.com/watch?v=AO4p6M4l-VA&feature=youtu.be"
+            "cover": require('../assets/images/covers/videos/2019_promo_1.png'),
+            "link": "https://youtu.be/MICFZTmNOog"
         },
-        {
-            "cover": require('../assets/images/covers/videos/2019_highlights.jpg'),
-            "link": "https://www.youtube.com/watch?v=sxRZ06Rbh_c"
-        }
+        
     ]
 
     const handlePosterDownload = (p) => {
@@ -124,7 +119,7 @@ const PromotePage = () => {
                                 ]}
                             />
                         </div>
-                        <h1 className="text-primary text-5xl lg:text-6xl py-4">Promote InCTF Jr</h1>
+                        <h1 className="text-primary text-5xl lg:text-6xl py-4">Promote InCTF</h1>
                     </div>
                 </div>
             </div>
