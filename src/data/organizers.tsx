@@ -183,7 +183,7 @@ export const OrganizingTeamTier3 = [
     {
         photo: require('../assets/images/people/shogil.jpg'),
         name: "Shogil Babu",
-        desg: "Youtube Channel"
+        desg: "Website & Youtube Channel"
     },
     {
         photo: require('../assets/images/people/rahul.jpg'),
