@@ -21,27 +21,12 @@ export default [
     },
     {
         title: 'How to Register?',
-        videoID: 'twS3pzPjRzA',
-        tags: ['how-to', ]
-    },
-    {
-        title: 'Introduction to bi0s wiki, YouTube Channel & CTF Platform',
-        videoID: '8gOrKO0hJ34',
+        videoID: 'T8pEY4AR_Kg',
         tags: ['how-to', ]
     },
     {
         title: 'How to join & use discord server?',
-        videoID: 'y65VJwtoJsc',
-        tags: ['how-to', ]
-    },
-    {
-        title: 'How to use the Platform Dashboard?',
-        videoID: 'xpzb4S3G3FY',
-        tags: ['how-to', ]
-    },
-    {
-        title: 'How to get into the leaderboard?',
-        videoID: '767Y-wtDH5A',
+        videoID: '9sF8FM9Ywr4',
         tags: ['how-to', ]
     },
     {
