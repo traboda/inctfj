@@ -42,7 +42,7 @@ class ActionProvider {
    }
 
    handlePlay = () => {
-     const message = this.createChatBotMessage("Unfortunately, yes. You will need to have a laptop or a PC in-order to participate in InCTF Junior.",
+     const message = this.createChatBotMessage("Unfortunately, yes. You will need to have a laptop or a PC in-order to participate in InCTF.",
      {
        withAvatar: true,
      })

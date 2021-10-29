@@ -165,7 +165,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                         <img
                             className="logo"
                             src={require('../../../assets/images/logos/inctf.png')}
-                            alt="InCTF Jr"
+                            alt="InCTF"
                         />
                     </a>
                   

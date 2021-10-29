@@ -53,7 +53,7 @@ const TopBarSearch = () => {
                                         </a>
                                     </Link>
                                     <SearchBar
-                                        placeholder="Search your queries & questions about InCTF Jr"
+                                        placeholder="Search your queries & questions about InCTF"
                                         isFocused
                                     />
                                 </div>
