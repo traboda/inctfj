@@ -39,7 +39,7 @@ const BrandingPage = () => {
         <TopBar darkenOnSidebar includeSpace={false} />
         <PageHeader
             title="Brand Kit"
-            description="Brand Assets & Guidelines for InCTF Junior"
+            description="Brand Assets & Guidelines for InCTF"
         />
         <div style={{ background: '#eee', minHeight: '50vh' }}>
             <div className="flex justify-center px-1 py-5">
