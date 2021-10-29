@@ -6,7 +6,7 @@ import Questions from '../widgets/Questions/index';
 
 const config = {
   initialMessages: [
-    createChatBotMessage(`Welcome to InCTF Junior`),
+    createChatBotMessage(`Welcome to InCTF`),
     createChatBotMessage('How can I help you today ?',
     {
       withAvatar: true,
