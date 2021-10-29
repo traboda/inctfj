@@ -51,7 +51,7 @@ const RulePage = () => {
         <div className="flex justify-center p-4">
             <RulesContainer className="container">
                 <div style={{ width: '100%', maxWidth: '900px' }}>
-                    
+                    <h1>Rules for Student Participants</h1>
                     <h2>Eligibility for Participation</h2>
                     <p>
                         1.All participating students should be permanent residents and citizens of the Republic of India.     
@@ -85,6 +85,22 @@ const RulePage = () => {
                         <li>Self-Study Students: Top 25 self-study students/student teams with minimum eligibility shall be selected for the finals. This is in-addition, and does not include those already qualified as scoreboard toppers.</li>
                         <li>All team members shall need to submit their ID cards for verification. Teams failing to complete ID card verification of all its members in due time shall be disqualified, and the next eligible team from their quota shall be considered.</li>
                     </ul>
+                    <h1>Rules for Professionals</h1>
+                    <h2>Eligibility for Participation </h2>
+                    <p>All participating professionals should be permanent residents and citizens of the Republic of India.</p>
+                    <p>All participants should be full-time employees of an incorporated company.</p>
+                    <h2>Team Formation Rules</h2>
+                    <ul>
+                        <li>Professionals working in India are eligible for prizes Team can have Max of 5 and Min of 2 members.</li>
+                        <li>Teams can be formed in any manner.</li>
+                        <li>Top 20 teams from from the qualifier round will be selected for the finals.</li>
+                        <li>The teams should score above 500 points to qualify for the final selection.</li>
+                        <li>Professional teams cannot club with the student team.</li>
+                        <li>One participant cannot be the member of more than one team.</li>
+                        <li>Teams selected for the finals will be finalised only after professional ID card verification of all the members.</li>
+                    </ul>
+
+                   
                 </div>
             </RulesContainer>
         </div>
