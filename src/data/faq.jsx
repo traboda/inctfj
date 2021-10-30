@@ -36,27 +36,6 @@ export default
         tags: ['getting-started']
     },
     {
-        "question": "Who can participate in Amrita InCTF Junior?",
-        "keywords": ["who", "participate"],
-        "response": [
-            "Each individual who participates in the competition in order to be eligible for the finals prizes must be: "
-        ],
-        "answer": <>
-            Each individual who participates in the competition in order to be eligible for
-            the finals / prizes must be:
-            <li>
-                at least thirteen (13) years of age and not more than nineteen (19) years of age
-            </li>
-            <li>
-                a citizen of the Republic of India
-            </li>
-            <li>
-                must not have completed 12th or equivalent grade of school.
-            </li>
-        </>,
-        tags: ['eligibility', 'getting-started']
-    },
-    {
         "question": "Do I need a laptop/PC to participate?",
         "keywords": ["laptop", "pc", "participate"],
         "response": [
@@ -69,7 +48,7 @@ export default
         tags: ['requirements']
     },
     {
-        "question": "How much does it cost to participate in Amrita InCTF Junior?",
+        "question": "How much does it cost to participate in Amrita InCTF?",
         "keywords": ["cost", "participate"],
         "response": [
             "Participation is fully free: there are no fees for participating in the contest."
