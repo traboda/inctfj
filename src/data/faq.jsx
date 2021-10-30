@@ -39,10 +39,10 @@ export default
         "question": "Do I need a laptop/PC to participate?",
         "keywords": ["laptop", "pc", "participate"],
         "response": [
-            "Unfortunately, yes. You will need to have a laptop or a PC in-order to participate in InCTF Junior."
+            "Unfortunately, yes. You will need to have a laptop or a PC in-order to participate in InCTF."
         ],
         "answer": <>
-            Unfortunately, yes. You will need to have a laptop or a PC in-order to participate in InCTF Junior.
+            Unfortunately, yes. You will need to have a laptop or a PC in-order to participate in InCTF.
             You would need use techniques and some tools that only are available on a PC/Laptop.
         </>,
         tags: ['requirements']
@@ -92,24 +92,7 @@ export default
         </>,
         tags: ['getting-started',]
     },
-    {
-        "question": "How can I prepare for this competition?",
-        "keywords": ["prepare", "preparation"],
-        "response": [
-            "The challenges from the previous round of InCTFj are accessible. The detailed solutions to these challenges will be put up later on."
-        ],
-        "answer": <>
-            <p>
-                The challenges from the previous round of InCTFj are accessible. The detailed solutions to these
-                challenges will be put up later on. New users can use these solutions to learn as the challenges
-                for this round might cover similar concepts as well.
-            </p>
-            <p>
-                It might also be helpful to learn a bit of programming in languages such as C, Python, Javascript and HTML.
-            </p>
-        </>,
-        tags: ['getting-started']
-    },
+    
     {
         "question": "What do I need for this competition?",
         "keywords": ["need", "requirement"],
@@ -159,43 +142,8 @@ export default
         </>,
         tags: ['prizes']
     },
-    {
-        "question": "What constitutes as cheating?",
-        "keywords": ["cheating", "cheat"],
-        "response": [
-            "Attacking the scoring server, other teams, or machines not explicitly designated as targets is cheating."
-        ],
-        "answer": <>
-            <ul>
-                <li>
-                    Attacking the scoring server, other teams, or machines not explicitly designated as targets is cheating.
-                    This includes both breaking into such machines and denying others access to them.
-                </li>
-                <li>
-                    Sharing solutions or providing overly-revealing hints with other teams is cheating, as is being
-                    directly assisted by personnel other than contest admins (using tools from the internet is OK;
-                    asking people on the internet to help you solve the problem is not).
-                </li>
-                <li>
-                    We encourage you to solve problems in novel and creative ways using all available resources,
-                    but we do require that you solve them yourselves.
-                </li>
-            </ul>
-        </>,
-        tags: ['rules',]
-    },
-    {
-        "question": "Are there any similar competitions?",
-        "keywords": ["similar", "competition"],
-        "response": [
-            "There are a few CTF’s that are intended to help high school students gain some experience"
-        ],
-        "answer": <>
-            There are a few CTF’s that are intended to help high school students gain some experience such as
-            picoCTF, EasyCTF, HSCTF etc. You may try out the challenges from these CTF’s if available.
-        </>,
-        tags: ['getting-started']
-    },
+    
+  
     {
         "question": "I have some doubts, where can I ask?",
         "keywords": ["doubt", "doubts"],
@@ -204,38 +152,12 @@ export default
         ],
         "answer": <>
             You can contact us through our discord community <a href="/discord" target="_blank">(Join)</a> for priority reply
-            or email us at <a href="mailto:inctfj@am.amrita.edu">inctfj@am.amrita.edu</a>.
+            or email us at <a href="mailto:inctf@am.amrita.edu">inctf@am.amrita.edu</a>.
         </>,
         tags: ['support']
     },
-    {
-        "question": "Is InCTF Jr a team event?",
-        "keywords": [
-            "team event", "participate as a team", "individually or teams",
-        ],
-        "response": [
-            "No. InCTF Jr is an individual CTF competition exclusively for school students in India."
-        ],
-        "answer": <>
-            No. InCTF Jr is an individual CTF competition exclusively for school students in India.
-        </>,
-        tags: ['rules', 'eligibility']
-    },
-    {
-        "question": "How many students from a school can qualify for the finals?",
-        "keywords": [
-            "students from a school", "my school"
-        ],
-        "response": [
-            "There is no restriction for the number of students who can participate from a school."
-        ],
-        "answer": <>
-            There is no restriction for the number of students who can participate from a school.
-            However, to ensure participation & diversity, only a maximum of 10 top students may be
-            qualified from a single school for the finals.
-        </>,
-        tags: ['rules', 'eligibility', 'qualifiers']
-    },
+    
+   
     {
         "question": "Will I get a certificate of participation?",
         "keywords": [
@@ -251,55 +173,9 @@ export default
         </>,
         tags: ["certificate",]
     },
-    {
-        "question": "Can I participate if I an NRI student?",
-        "keywords": ["nri"],
-        "response": [
-            "Yes! InCTF Jr is open for school students who are citizens of India including Non-Residents of India."
-        ],
-        "answer": <>
-            Yes! InCTF Jr is open for school students who are citizens of India including Non-Residents of India.
-            However, overseas citizens of India, and students of Indian origin not holding an Indian citizenship
-            are not eligible for prizes, though are encouraged to participate.
-        </>,
-        tags: ["eligibility"]
-    },
-    {
-        "question": "Should I be a school student to participate?",
-        "questions": [
-            "Should I be a school student to participate?",
-            "Can only school students participate?"
-        ],
-        "keywords": ["school student", "highschool"],
-        "response": [
-            "InCTF Junior is a beginner-level cyber-security programme we organize exclusively for school students in India."
-        ],
-        "answer": <>
-            <p>
-                InCTF Junior is a beginner-level cyber-security programme we organize exclusively for school students in
-                India. If you are a college student, or a professional, we organize InCTF & InCTF Pro which are for
-                college students & professionals. You can check them out by going to <a href="https://inctf.in" target="_blank">inctf.in</a>.
-            </p>
-            <p>
-                If you decide to register for InCTF Junior, you shall be eligible to qualify for the finals
-                and eligible for prizes only after verification of your school ID card.
-            </p>
-        </>,
-        tags: ['eligibility']
-    },
-    {
-        "question": "Can I participate if I am not enrolled to any school ?",
-        "keywords": ["not enrolled"],
-        "response": [
-            "If you are a self-study student who have not enrolled in any traditional school under the age of 20,"
-        ],
-        "answer": <>
-            If you are a self-study student who have not enrolled in any traditional school under the age of 20,
-            you can contact us (<a href="mailto:inctfj@am.amrita.edu">inctfj@am.amrita.edu</a>) to register
-            and participate in the championship & programme.
-        </>,
-        tags: ['eligibility']
-    },
+    
+    
+    
     {
         "question": "Is changing profile information possible after registration?",
         "keywords": ["profile", "information"],
