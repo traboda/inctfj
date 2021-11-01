@@ -3,6 +3,8 @@ import styled from '@emotion/styled';
 import Discord from '../../../assets/images/chatbot/Discord.svg';
 import Facebook from '../../../assets/images/chatbot/Facebook.svg';
 import Email from '../../../assets/images/chatbot/Email.svg';
+import Instagram from '../../../assets/images/chatbot/instagram.svg';
+import Twitter from '../../../assets/images/chatbot/twitter.svg';
 
 const Tab = styled.div`
   background-color: white;
@@ -28,19 +30,23 @@ const Social = () => {
     const options = [
         {
             id: 1,
-            text: "Discord",
-            icon: Discord,
-            link:"https://discord.com/invite/QVXewGh7sP",
+            icon: Facebook,
+            link: "https://www.facebook.com/InCTF",
         },
         {
             id: 2,
-            icon: Facebook,
-            link: "https://www.facebook.com/InCTFj",
+            icon: Email,
+            link: "mailto:inctf@am.amrita.edu."
         },
         {
             id: 3,
-            icon: Email,
-            link: "mailto:inctfj@am.amrita.edu."
+            icon: Instagram,
+            link: "https://www.instagram.com/inctf.in/"
+        },
+        {
+            id: 4,
+            icon: Twitter,
+            link: "https://twitter.com/inctf"
         }
     ]
 

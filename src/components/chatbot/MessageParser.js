@@ -12,14 +12,6 @@ class MessageParser {
       const questions = [];
       const matches = [];
 
-      if(lowerCaseMessage.includes("hello")) {
-        this.actionProvider.greet();
-      } else if (lowerCaseMessage.includes("contact")) {
-        this.actionProvider.handleContact();
-      } else {
-        this.actionProvider.handleDefault();
-      }
-
       const res = (q) => {
         const question = new Object();
         question.question = q.question.toLowerCase();
@@ -48,7 +40,14 @@ class MessageParser {
 
       if(matches.length !== 0) {
         this.actionProvider.handleQuestions(matches);
+      } else if(lowerCaseMessage.includes("hello")) {
+        this.actionProvider.greet();
+      } else if (lowerCaseMessage.includes("contact")) {
+        this.actionProvider.handleContact();
+      } else {
+        this.actionProvider.handleDefault();
       }
+
     }
   }
   
