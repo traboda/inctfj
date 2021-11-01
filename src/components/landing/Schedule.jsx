@@ -78,14 +78,14 @@ const Schedule = () => {
             "date": "Oct 31",
             "timing": "06:00 - 08:00 PM",
             "event": "Introduction to Binary Exploitation (Day 1)",
-            "presenter": "Adithya, Nikhil, Hrishikesh",
+            "presenter": "Adhithya, Nikhil, Hrishikesh",
             "link": "https://youtu.be/yMkyHCR7fqw",
         },
         {
             "date": "Nov 01",
             "timing": "06:00 - 08:00 PM",
             "event": "Introduction to Binary Exploitation (Day 2)",
-            "presenter": "Adithya, Nikhil, Hrishikesh",
+            "presenter": "Adhithya, Nikhil, Hrishikesh",
             "link": "https://youtu.be/QoRgu0uiyA0"
         }
     ]

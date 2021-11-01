@@ -83,7 +83,7 @@ const LandingAboutInCTF = () => (
                     <h2 className="mt-2">
                         India's CyberSecurity Championship & <wbr />
                         <span>Talent Incubation Programme</span> <wbr />
-                        for School Students
+                        for College Students & Professionals
                     </h2>
                     <p>
                     InCTF is a National level Ethical Hacking contest organized annually by Team bi0s in 
