@@ -5,7 +5,7 @@ import LandingHeader from "../src/components/landing/Header";
 import LandingSponsorship from "../src/components/landing/Sponsorship";
 {/*import LandingTestimonials from "../src/components/landing/Testimonials";*/}
 import LandingOrganizers from "../src/components/landing/Organizers";
-{/*import LandingReasonsToParticipate from "../src/components/landing/WhyParticipate";*/}
+import LandingReasonsToParticipate from "../src/components/landing/WhyParticipate";
 import CTAReg from "../src/components/landing/CTAReg";
 import LandingQuickInfo from "../src/components/landing/QuickInfo";
 import LandingAboutInCTF from "../src/components/landing/About";
@@ -28,7 +28,7 @@ const LandingPage = () => {
             <LandingAboutInCTF />
             <LandingStatsBar />
             <LandingPromoVideo />
-            {/*<LandingReasonsToParticipate />*/}
+            <LandingReasonsToParticipate />
             <CTAReg />
             <LandingHowItWorks />
             {/*<LandingTestimonials />*/}

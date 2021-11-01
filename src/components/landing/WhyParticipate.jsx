@@ -46,7 +46,7 @@ const LandingReasonsToParticipate = () => {
         },
         {
             "video":  require('../../assets/videos/excitement.mp4'),
-            "title": <>Win Exciting Prizes <br /> for Learning Cool New Things</>
+            "title": <>Understand the latest happenings in the Cyber security realm</>
         },
         {
             "video": require('../../assets/videos/new_friends.mp4'),
