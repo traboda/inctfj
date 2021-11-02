@@ -69,7 +69,7 @@ const FAQPage = () => {
             )
         ) : (
             <div className="py-5 text-center">
-                <h4 className="text-3xl mb-4">No Answers Found 😔</h4>
+                <h4 className="text-3xl mb-4">No Answers Found😔</h4>
                 <p className="text-dark ">
                     Your question in not one among our frequently asked questions.
                     You could try rephrasing the question in a different way, or
