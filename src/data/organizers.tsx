@@ -186,6 +186,11 @@ export const OrganizingTeamTier3 = [
         desg: "Youtube Channel"
     },
     {
+        photo: require('../assets/images/people/prajwal.jpg'),
+        name: "Prajwal CP",
+        desg: "DevOps"
+    },
+    {
         photo: require('../assets/images/people/rahul.jpg'),
         name: "Rahul Manneri",
         desg: "Support & Emails"
