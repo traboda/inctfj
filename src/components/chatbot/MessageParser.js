@@ -1,4 +1,5 @@
 import faq from '../../data/faq'
+import { supabase } from '../../utils/supabaseClient';
 
 class MessageParser {
     constructor(actionProvider, state) {
@@ -7,6 +8,19 @@ class MessageParser {
     }
   
     parse(message) {
+
+      // Function to log question asked by user in supabase.
+      const questionAsked = async () => {
+        if(message.length !== 0) {
+          const { data, error } = await supabase
+          .from('Questions')
+          .insert([
+            { Questions: message },
+          ], { returning: "minimal" })
+
+          if(error) console.log(error);
+        }
+      }
 
       const lowerCaseMessage = message.toLowerCase();
       const questions = [];
@@ -49,6 +63,9 @@ class MessageParser {
       if(matches.length !== 0) {
         this.actionProvider.handleQuestions(matches);
       }
+
+      // Log the message after submitting response to user.
+      questionAsked();
     }
   }
   
