@@ -21,7 +21,7 @@ const LandingStatsBar = () => {
 
     const fetchStats = () => {
         try {
-            fetch('https://app.traboda.com/api/contest/stats/66').then(async (response) => {
+            fetch('https://app.traboda.com/api/contest/stats/69').then(async (response) => {
                 if(response.ok && response.status == 200)
                     return await response.json();
                 else

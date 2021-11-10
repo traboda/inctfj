@@ -2,7 +2,7 @@ import React from 'react';
 import Base from "../src/components/shared/Base";
 
 import LandingSponsorship from "../src/components/landing/Sponsorship";
-import LandingTestimonials from "../src/components/landing/Testimonials";
+{/*import LandingTestimonials from "../src/components/landing/Testimonials";**/}
 import LandingOrganizers from "../src/components/landing/Organizers";
 import LandingReasonsToParticipate from "../src/components/landing/WhyParticipate";
 import CTAReg from "../src/components/landing/CTAReg";
@@ -33,9 +33,9 @@ const StartPage = () => {
             <LandingReasonsToParticipate />
             <CTAReg UTMSource="start_page" />
             <LandingHowItWorks />
-            <LandingTestimonials />
+            {/*<LandingTestimonials />*/}
             <LandingSponsorship />
-            <CTAPartners />
+            {/*<CTAPartners />*/}
             <LandingOrganizers />
             <LandingSearch />
             <LandingContactsBar />
