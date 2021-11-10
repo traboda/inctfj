@@ -32,7 +32,7 @@ const WomenInCyberSecuritySection = () => (
                 </ul>
             </div>
         </div>
-        <div className="mt-32 md:flex items-center">
+        {/*<div className="mt-32 md:flex items-center">
             <div className="mr-12">
                 <h1 className="font-semibold text-primary">Our Initiatives for</h1>
                 <h2 className="font-semibold text-primary">Women In CyberSecurity</h2>
@@ -58,10 +58,10 @@ const WomenInCyberSecuritySection = () => (
             <div className="w-full md:w-1/3">
                 <img src={require('../../../assets/images/talent-incubation/top_women_hackers.png')}
                      alt="Top women hackers" className="w-full rounded-lg" draggable={false}/>
-                {/*<img src={require('../../../assets/images/talent-incubation/shakticon.jpg')}*/}
-                {/*     alt="Shakticon" className="w-full" draggable={false}/>*/}
+                <img src={require('../../../assets/images/talent-incubation/shakticon.jpg')}*/}
+                {/*     alt="Shakticon" className="w-full" draggable={false}/>
             </div>
-        </div>
+        </div>*/}
     </div>
 );
 
