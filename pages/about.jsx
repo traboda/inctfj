@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import Base from "../src/components/shared/Base";
 import TopBar from "../src/components/shared/TopBar";
-import INCTFJStats from "../src/components/about/stats";
+import INCTFStats from "../src/components/about/stats";
 import InctfIntro from "../src/components/about/Intro";
 import Footer from "../src/components/shared/Footer";
-import AboutAchievements from "../src/components/about/Achievements";
+{/*import AboutAchievements from "../src/components/about/Achievements";*/}
 import { data } from '../src/components/about/stats/66';
 import Parallax from "../src/components/Parallax";
 
@@ -32,11 +32,11 @@ const AboutPage = () => {
                 height="600px"
             />
             <InctfIntro />
-            <INCTFJStats stats={stats} />
+            <INCTFStats stats={stats} />
             <div className="text-center pt-6">
                 <img draggable="false" src={require('../src/assets/images/photos/standing_as_inctf.jpg')} />
             </div>
-            <AboutAchievements />
+            {/*<AboutAchievements />*/}
         </div>
         <Footer />
     </Base>

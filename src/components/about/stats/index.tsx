@@ -34,12 +34,12 @@ const StatsContainer = styled.section`
 `;
 
 
-const INCTFJStats = ({stats}) => {
+const INCTFStats = ({stats}) => {
 
     const statsPreviewer = () => [
         { value: stats?.registrations || 0, title: "Total Participants" },
         { value: stats?.regToday || 0, title: "Registrations Today" },
-        { value: stats?.totalInstitutions || 0, title: "Schools Participating" },
+        { value: stats?.totalInstitutions || 0, title: "College Participating" },
     ]
 
     return (
@@ -72,4 +72,4 @@ const INCTFJStats = ({stats}) => {
 
 };
 
-export default INCTFJStats;
+export default INCTFStats;
