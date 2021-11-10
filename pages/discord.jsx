@@ -10,7 +10,7 @@ const DiscordRedirect = () => {
         router.push('https://discord.gg/uZ2yahXyMd')
     }, []);
 
-    return <Base meta={{ title: 'Join InCTF Jr Discord Server' }}>
+    return <Base meta={{ title: 'Join InCTF Discord Server' }}>
         <h1>Please wait while we redirect you.</h1>
     </Base>;
 };
