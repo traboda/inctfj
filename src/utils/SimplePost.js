@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-fetch';
 
 
-const domain = process.env.domain || 'https://play.inctf.in/junior';
+const domain = process.env.domain || 'https://play.inctf.in/';
 
 const SimplePost = async ({
     data, endpoint,

@@ -74,7 +74,9 @@ const SponsorsSection = () => {
                 <div className="w-full justify-center">
                     <p className="w-full text-center opacity-8 mb-3" style={{ maxWidth: '100%', fontSize: '95%', lineHeight: 1.4, width: '450px' }}>
                         We thank these organizations for investing in the CyberSecurity Workforce of Tomorrow.
+                        
                     </p>
+                    
                 </div>
                 {inCTFSponsors.map((s, i) =>
                     <div className="md:w-1/2 px-2 w-1/2 p-1 flex justify-center text-center items-end" key={i}>
