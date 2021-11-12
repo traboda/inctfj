@@ -45,31 +45,24 @@ const Stats = () => {
             },
             champions: [
                 {
-                    "name": "Team Invaders",
+                    "name": "Bandaru Vara Prasad",
                     "school": "Rajiv Gandhi University of Knowledge and Technology",
                     "place": "Nuzividu, Andhra Pradesh",
-                    "title": "Champion Hacker",
+                    "title": "1st Prize Winner",
                     "avatar": require('../src/assets/images/champions/rajvardhan.jpeg')
                 },
                 {
-                    "name": "Shwetha S",
-                    "school": "Sri Shankara Senior Secondary Schoor, Adayar",
-                    "place": "Chennai, Tamil Nadu",
-                    "title": "Women Hacker",
-                    "avatar": require('../src/assets/images/champions/swetha.JPG')
-                },
-                {
-                    "name": "Nilabha Saha",
-                    "school": "Oxford Independent PU College",
-                    "place": "Bengaluru, Karnataka",
-                    "title": "Runner-Up",
+                    "name": "Abhay Nair",
+                    "school": "Manipal Institute of Technology",
+                    "place": "Manipal, Karnataka",
+                    "title": "2nd Prize Winner",
                     "avatar": require('../src/assets/images/champions/nilabha.png')
                 },
                 {
                     "name": "Jones Martin",
                     "school": "Good Shepherd English School",
                     "place": "Karaikal, Puducherry",
-                    "title": "Second Runner-Up",
+                    "title": "3rd Prize Winner",
                     "avatar": require('../src/assets/images/champions/jones.jpg')
                 }
             ],
