@@ -124,7 +124,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
         <div className="py-2">
             <h3 style={{ color: '#fd7e14' }} className="mb-1 font-semibold">Champions</h3>
             <p style={{ opacity: 0.8 }} className="mb-3">
-               The InCTF Junior {year} champions
+               The InCTF {year} champions
             </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{champions.map((c, index) =>
@@ -160,7 +160,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
         <div className="py-2">
             <h3 style={{ color: '#fd7e14' }} className="mb-1 font-semibold">Top Women Hackers</h3>
             <p style={{ opacity: 0.8 }} className="mb-3">
-                The top Women Hackers of InCTF Junior {year}
+                The top Women Hackers of InCTF {year}
             </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">{womenHackers.map((c, index) =>
@@ -186,7 +186,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
             </div>
         )}</div>
     </div>}
-    <SchoolLeaderboard schools={schools} />
+    {/*<SchoolLeaderboard schools={schools} />
     <div className="py-3">
         <div className="py-2">
             <h3 style={{ color: '#fd7e14' }} className="mb-1">National-Level Finalists</h3>
@@ -247,7 +247,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
                     <p style={{ fontSize: '13px' }}>We will shortly update the entries here, check back later</p>
                 </div>
             </div>}
-        </div>
+        </div>*/}
     </div>;
 };
 

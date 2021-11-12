@@ -33,11 +33,11 @@ const TabButton = styled.button`
 
 const Stats = () => {
 
-    const [year, setYear] = useState(2020);
+    const [year, setYear] = useState(2019);
 
     const editions = [
         {
-            year: 2020,
+            year: 2019,
             stats: {
                 totalRegistrations: 1587,
                 totalStates: 16,
@@ -45,9 +45,9 @@ const Stats = () => {
             },
             champions: [
                 {
-                    "name": "Rajvardhan Agarwal",
-                    "school": "Kiit International School",
-                    "place": "Bhubaneshwar, Odisha",
+                    "name": "Team Invaders",
+                    "school": "Rajiv Gandhi University of Knowledge and Technology",
+                    "place": "Nuzividu, Andhra Pradesh",
                     "title": "Champion Hacker",
                     "avatar": require('../src/assets/images/champions/rajvardhan.jpeg')
                 },
@@ -75,10 +75,10 @@ const Stats = () => {
             ],
             womenHackers: [
                 {
-                    "name": "Shwetha S",
-                    "school": "Sri Shankara Senior Secondary Schoor, Adayar",
-                    "place": "Chennai, Tamil Nadu",
-                    "points": 3250,
+                    "name": "Team Invaders",
+                    "school": "Rajiv Gandhi University of Knowledge and Technology",
+                    "place": "Nuzividu, Andhra Pradesh",
+                    "title": "Champion Hacker",
                     "avatar": require('../src/assets/images/champions/swetha.JPG')
                 },
                 {
@@ -93,21 +93,28 @@ const Stats = () => {
             schools: schoolRank20
         },
         {
-            year: 2019,
+            year: 2018,
             champions: [
                 {
-                    "name": "Pranav Krishna",
-                    "school": "CS Academy",
-                    "place": "Coimbatore, Tamil Nadu",
-                    "title": "Champion Hacker",
-                    "avatar": require('../src/assets/images/champions/pranavkrishna.jpg')
+                    "name": "Team Invaders",
+                    "school": "Rajiv Gandhi University of Knowledge and Technology",
+                    "place": " Nuzividu, Andhra Pradesh",
+                    "title": "1st prize winners",
+                    "avatar": require('../src/assets/images/champions/invaders.jpg')
                 },
                 {
-                    "name": "Nilabha Saha",
-                    "school": "Oxford Independent PU College",
-                    "place": "Bengaluru, Karnataka",
-                    "title": "Runner-Up",
-                    "avatar": require('../src/assets/images/champions/nilabha.png')
+                    "name": "Team CTF_Probably",
+                    "school": "K. J. Somaiya College of Engineering",
+                    "place": "Mumbai",
+                    "title": "2nd prize winners",
+                    "avatar": require('../src/assets/images/champions/ctfprobably.png')
+                },
+                {
+                    "name": "Team Init0",
+                    "school": "NIT",
+                    "place": "Rourkela, Odisha",
+                    "title": "3rd prize winners",
+                    "avatar": require('../src/assets/images/champions/inito.png')
                 },
             ],
             leaderboard: leaderboard19
