@@ -49,21 +49,21 @@ const Stats = () => {
                     "school": "Rajiv Gandhi University of Knowledge and Technology",
                     "place": "Nuzividu, Andhra Pradesh",
                     "title": "First Prize Winner",
-                    "avatar": require('../src/assets/images/champions/rajvardhan.jpeg')
+                    "avatar": require('../src/assets/images/champions/bandaruu.jpeg')
                 },
                 {
                     "name": "Abhay Nair",
                     "school": "Manipal Institute of Technology",
                     "place": "Manipal, Karnataka",
                     "title": "Second prize Winner",
-                    "avatar": require('../src/assets/images/champions/nilabha.png')
+                    "avatar": require('../src/assets/images/champions/abhay.png')
                 },
                 {
                     "name": "Swapnil Kumbhare",
                     "school": "SASTRA Deemed to be University",
                     "place": "Thanjavur, Tamil Nadu ",
                     "title": "Third prize Winner",
-                    "avatar": require('../src/assets/images/champions/jones.jpg')
+                    "avatar": require('../src/assets/images/champions/swapnil.jpg')
                 }
             ],
             womenHackers: [
@@ -73,7 +73,7 @@ const Stats = () => {
                     "school": "Amrita Vishwa Vidyapeetham",
                     "place": "Amritapuri, Kerala",
                     "title": "Women CTF Winner",
-                    "avatar": require('../src/assets/images/champions/megha.png')
+                    "avatar": require('../src/assets/images/champions/sreesruthi.png')
                 }
             ],
             leaderboard: leaderboard20,
