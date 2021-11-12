@@ -48,21 +48,21 @@ const Stats = () => {
                     "name": "Bandaru Vara Prasad",
                     "school": "Rajiv Gandhi University of Knowledge and Technology",
                     "place": "Nuzividu, Andhra Pradesh",
-                    "title": "1st Prize Winner",
+                    "title": "First Prize Winner",
                     "avatar": require('../src/assets/images/champions/rajvardhan.jpeg')
                 },
                 {
                     "name": "Abhay Nair",
                     "school": "Manipal Institute of Technology",
                     "place": "Manipal, Karnataka",
-                    "title": "2nd Prize Winner",
+                    "title": "Second prize Winner",
                     "avatar": require('../src/assets/images/champions/nilabha.png')
                 },
                 {
-                    "name": "Jones Martin",
-                    "school": "Good Shepherd English School",
-                    "place": "Karaikal, Puducherry",
-                    "title": "3rd Prize Winner",
+                    "name": "Swapnil Kumbhare",
+                    "school": "SASTRA Deemed to be University",
+                    "place": "Thanjavur, Tamil Nadu ",
+                    "title": "Third prize Winner",
                     "avatar": require('../src/assets/images/champions/jones.jpg')
                 }
             ],
