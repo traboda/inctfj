@@ -74,18 +74,12 @@ const Stats = () => {
                 }
             ],
             womenHackers: [
+                
                 {
-                    "name": "Team Invaders",
-                    "school": "Rajiv Gandhi University of Knowledge and Technology",
-                    "place": "Nuzividu, Andhra Pradesh",
-                    "title": "Champion Hacker",
-                    "avatar": require('../src/assets/images/champions/swetha.JPG')
-                },
-                {
-                    "name": "Megha N Iyer",
-                    "school": "Yashasvi International School",
-                    "place": "Bengaluru, Karnataka",
-                    "points": 2475,
+                    "name": "Sreesruthi PK",
+                    "school": "Amrita Vishwa Vidyapeetham",
+                    "place": "Amritapuri, Kerala",
+                    "title": "Women CTF Winner",
                     "avatar": require('../src/assets/images/champions/megha.png')
                 }
             ],

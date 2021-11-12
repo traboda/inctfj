@@ -158,9 +158,9 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
     {womenHackers?.length > 0 &&
     <div className="py-3">
         <div className="py-2">
-            <h3 style={{ color: '#fd7e14' }} className="mb-1 font-semibold">Top Women Hackers</h3>
+            <h3 style={{ color: '#fd7e14' }} className="mb-1 font-semibold">Top Women Hacker</h3>
             <p style={{ opacity: 0.8 }} className="mb-3">
-                The top Women Hackers of InCTF {year}
+                The top Women Hacker of InCTF {year}
             </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">{womenHackers.map((c, index) =>
@@ -175,7 +175,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
                             <div className="w-2/3 lg:w-3/4 pr-4 pl-4 flex items-center p-2 md:p-4">
                                 <div>
                                     <h5 className="font-bold">{c.name}</h5>
-                                    <div className="h6 mb-1">{c.points} Pts</div>
+                                    <div className="h6 mb-1">{c.title}</div>
                                     <div className="school-name">{c.school}</div>
                                     <div>{c.place}</div>
                                 </div>
