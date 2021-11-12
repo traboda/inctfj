@@ -31,7 +31,7 @@
   },
 
 
-  
+
   {
     "label": "Championship",
     "link": "/championship",
@@ -85,12 +85,6 @@
       {
         "label": "Practice Challenges",
         "link": "https://app.traboda.com/"
-      },
-      {
-        "label": "Writeups",
-        "badge": "new",
-        "badgeColor": "bg-yellow-100",
-        "link": "/writeups"
       },
       {
         "label": "Promote InCTF",
