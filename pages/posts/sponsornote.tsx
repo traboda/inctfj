@@ -107,7 +107,34 @@ const SponsorNote = () => (
                 </ul>
             </div>
         </div> <br/><br/>
-        
+        <div className="flex flex-wrap">
+            <div className="w-full md:w-1/3">
+                <img src={require('../../src/assets/images/sponsors/cred.png')}
+                     alt="salesforce" className="w-full rounded-lg" draggable={false}/>
+            </div>
+            <div className="w-full md:w-2/3 md:pl-10 mt-4 md:mt-0">
+                <h6 className="font-semibold text-left">GOLD SPONSOR</h6>
+                <h1 className="font-semibold text-primary text-left">CRED</h1>
+                <ul className="leading-loose font-medium text-left">
+                    
+                    <li className="mt-2">
+                    CRED is a high-trust, low-friction platform that enables the most creditworthy Indians to improve their lives and lifestyles by managing money better. CRED incentivizes responsible financial behaviour and financial literacy with rewarding products, services and experiences from leading brands and institutions. Over 7.5 million individuals are part of CRED, which is accessible to anyone with a credit score of over 750. CRED processes 25% of credit card bill payments in India and the community includes over 35% of premium credit card-holders.                    
+                    </li>
+                    <ol>
+                        <li  className="mt-2">
+                            For individuals: With its empathetic approach to design, CRED makes decisions visible, delightful, and rewarding. CRED nudges positive actions with tools for members to minimize losses, manage credit well, build wealth, spend wisely, and contribute to the community. These benefits have led to over 375,000 individuals on its waitlist at any point in time, 15% of whom work to improve their scores and become members.
+                        </li>
+                        <li  className="mt-2">
+                        For financial institutions: CRED offers a low-risk environment for financial institutions to craft and offer new products to members, increase credit utilization, and expand consumption. Current offerings include CRED Cash- an instant, three-step personal credit line; CRED Max- which allows members to pay monthly rent or education EMIs on their credit card for a small transaction fee, and CRED Mint -an easy-to-use, low-risk investment product that lets members put idle money to work. CRED is working to make more transactions friction-less, and to partner with more financial institutions for new products.
+                        </li>
+                        <li  className="mt-2">
+                        For brands and merchants: The CRED Commerce offering - CRED Store, Rewards, and CRED Pay - is a meaningful channel for young, independent consumer brands to be discovered by and engage with potential customers on CRED and their own platforms. Over 2000 brands have participated in CRED Commerce,  which has emerged as a medium for young Indian consumer startups to build their brand. On CRED, these brands are positioned alongside aspirational global brands and can build traction with taste-making consumers. 
+                        </li>
+                    </ol>
+                    
+                </ul>
+            </div>
+        </div> <br/><br/>
     </div>
 </Wrapper>
 );
