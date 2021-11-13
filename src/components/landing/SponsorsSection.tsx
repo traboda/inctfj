@@ -63,7 +63,7 @@ const inCTFSponsors = [
     },
     {
         image: require('../../assets/images/sponsors/h&rblock.png'),
-        maxHeight: '50px',
+        maxHeight: '90px',
         desg: "Silver Sponsor",
     },
 ];

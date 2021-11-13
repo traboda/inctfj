@@ -76,13 +76,13 @@ const SponsorNote = () => (
                 <ul className="leading-loose font-medium text-left">
                     
                     <li className="mt-2">
-                    Why will you enjoy joining us?
+                    <span className="text-primary">Why will you enjoy joining us?</span>
                     </li>
                     <li className="mt-2">
                     The world is changing fast, and the security engineering space is changing even faster! Corporations, governments, schools, hospitals are in desperate need for digital transformation at a rapid space. VMware is driving this transformation for 350,000 customers (which includes 98% of Fortune 500). You won’t find another company that offers the breadth of innovative technology. Now imagine the opportunity to work on securing the products and services which VMware creates on cutting edge technologies. You would be exposed to the broad technology stack which you can break / hack into and help secure. This opportunity provides an endless possibility to learn, grow and flourish as a product security engineer.
                     <br /> Security@VMware <br />
                     Security at VMware is primarily driven by S.C.O.P.E, which expands to Security, Compliance, and Privacy Engineering. vSECR, which is widely known, is part of this organization. This organization is responsible for the complete security state of all the Products and SaaS offerings from VMware. The exciting part is you would be exposed to all phases of Security Development Lifecycle(SDL), and hence the opportunity to collaborate with security architects, development teams across VMware, and other security engineers in the team. If you have the drive to work on securing the next big thing, we would love to talk! <br />
-                    Why would we love to have you at VMware? <br />
+                    <span className="text-primary">Why would we love to have you at VMware?</span> <br />
                     The team is distributed across the globe, and has a diverse, inclusive and open culture. We believe fresh talent from universities drives innovation and helps build a world-class security team. The team consists of majorly security engineers with experience ranging from less than a year to more than 10 years. We also have a good presence of technical product managers, full stack developers, and security architects. We encourage continuous learning, sharing of ideas and thoughts, and growing together as a team. The team is built on trust and empathy, and we celebrate each other’s successes. We would love to have you as part of VMware family
                                         
                     </li><br />
@@ -106,7 +106,7 @@ const SponsorNote = () => (
                     
                 </ul>
             </div>
-        </div> <br/><br/>
+        </div> <br/><br/>+
         <div className="flex flex-wrap">
             <div className="w-full md:w-1/3">
                 <img src={require('../../src/assets/images/sponsors/cred.png')}

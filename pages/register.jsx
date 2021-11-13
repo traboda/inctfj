@@ -7,7 +7,7 @@ const RegisterPage = () => {
     const router = useRouter();
 
     useEffect(() => {
-        router.push('https://app.traboda.com/contest/inctf-21-lr');
+        router.push('https://app.traboda.com/contest/inctf-21-qualifiers');
     }, []);
 
     return <Base meta={{ title: 'Register for InCTF 2021' }}>
