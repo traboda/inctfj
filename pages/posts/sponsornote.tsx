@@ -21,7 +21,7 @@ const SponsorNote = () => (
                      alt="salesforce" className="w-full rounded-lg" draggable={false}/>
             </div>
             <div className="w-full md:w-2/3 md:pl-10 mt-4 md:mt-0">
-                <h5 className="font-semibold text-left">EVENT SPONSOR</h5>
+                <h6 className="font-semibold text-left">EVENT SPONSOR</h6>
                 <h1 className="font-semibold text-primary text-left">Salesforce</h1>
                 <ul className="leading-loose font-medium text-left">
                     <li>
@@ -54,7 +54,7 @@ const SponsorNote = () => (
                      alt="salesforce" className="w-full rounded-lg" draggable={false}/>
             </div>
             <div className="w-full md:w-2/3 md:pl-10 mt-4 md:mt-0">
-                <h5 className="font-semibold text-left">DAIMOND SPONSOR</h5>
+                <h6 className="font-semibold text-left">DAIMOND SPONSOR</h6>
                 <h1 className="font-semibold text-primary text-left">Zoho</h1>
                 <ul className="leading-loose font-medium text-left">
                     
@@ -71,7 +71,7 @@ const SponsorNote = () => (
                      alt="salesforce" className="w-full rounded-lg" draggable={false}/>
             </div>
             <div className="w-full md:w-2/3 md:pl-10 mt-4 md:mt-0">
-                <h5 className="font-semibold text-left">DAIMOND SPONSOR</h5>
+                <h6 className="font-semibold text-left">DAIMOND SPONSOR</h6>
                 <h1 className="font-semibold text-primary text-left">VMware</h1>
                 <ul className="leading-loose font-medium text-left">
                     
@@ -96,7 +96,7 @@ const SponsorNote = () => (
                      alt="salesforce" className="w-full rounded-lg" draggable={false}/>
             </div>
             <div className="w-full md:w-2/3 md:pl-10 mt-4 md:mt-0">
-                <h5 className="font-semibold text-left">PLATINUM SPONSOR</h5>
+                <h6 className="font-semibold text-left">PLATINUM SPONSOR</h6>
                 <h1 className="font-semibold text-primary text-left">CrowdStrike</h1>
                 <ul className="leading-loose font-medium text-left">
                     
