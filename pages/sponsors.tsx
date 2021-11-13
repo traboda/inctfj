@@ -6,10 +6,11 @@ import SponsorsSection from "../src/components/landing/SponsorsSection";
 import Breadcrumb from "../src/components/shared/Breadcrumb";
 import PageHeader from "../src/components/PageHeader";
 import PageFooterExplorer from "../src/components/PageFooterExplorer";
+import SponsorNote from './posts/women';
 
 const SponsorsPage = () => {
     return (
-        <Base meta={{ title: "Sponsors InCTF Jr." }}>
+        <Base meta={{ title: "Sponsors InCTF" }}>
             <TopBar />
             <PageHeader
                 title="Our Sponsors"
@@ -25,8 +26,9 @@ const SponsorsPage = () => {
                     }
                 ]}
             />
-            <div className="mx-auto text-center px-4 pb-8" style={{ maxWidth: 700 }}>
+            <div className="mx-auto text-center px-4 pb-8" style={{ maxWidth: 1250 }}>
                 <SponsorsSection />
+                <SponsorNote/>
             </div>
             <PageFooterExplorer
                 items={[
