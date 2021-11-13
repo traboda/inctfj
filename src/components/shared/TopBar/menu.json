@@ -36,14 +36,7 @@
     "label": "Championship",
     "link": "/championship",
     "items": [
-      {
-        "label": "Why Participate?",
-        "link": "/championship#why-participate"
-      },
-      {
-        "label": "Contest Timeline",
-        "link": "/championship#timeline"
-      },
+      
       {
         "label": "Guidelines & Rules",
         "link": "/rules"
