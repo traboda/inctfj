@@ -65,6 +65,23 @@ const SponsorNote = () => (
                 </ul>
             </div>
         </div> <br/><br/>
+        <div className="flex flex-wrap">
+            <div className="w-full md:w-1/3">
+                <img src={require('../../src/assets/images/sponsors/crowdstrike.png')}
+                     alt="salesforce" className="w-full rounded-lg" draggable={false}/>
+            </div>
+            <div className="w-full md:w-2/3 md:pl-10 mt-4 md:mt-0">
+                <h5 className="font-semibold text-left">PLATINUM SPONSOR</h5>
+                <h1 className="font-semibold text-primary text-left">CrowdStrike</h1>
+                <ul className="leading-loose font-medium text-left">
+                    
+                    <li className="mt-2">
+                    CrowdStrike is a leading cybersecurity company protecting customers from all cyber threats by leveraging its Security Cloud to stop breaches. From its inception in 2011, CrowdStrike was created as a different kind of cybersecurity company. Cloud-native, CrowdStrike immediately brought a threat perspective, effectiveness, scalability, and flexibility never seen before in the industry – seamlessly aligning People, Technology, and Processes. And it doesn’t stop there. At CrowdStrike we’re on a mission - to stop breaches. Our ground breaking technology, services delivery, and intelligence gathering together with our innovations in machine learning and behavioural-based detection, allow our customers to not only defend themselves, but do so in a future-proof manner. Because of that we’ve earned numerous honours and top rankings for our technology, organization and talent. Our culture was purpose-built to be remote first, and we offer flexible work arrangements to help our people manage their personal and professional lives in a way that works for them. If you’re ready to work on unrivalled technology with a team that makes a difference every day, let’s talk
+                    </li><br />
+                    
+                </ul>
+            </div>
+        </div> <br/><br/>
         
     </div>
 </Wrapper>
