@@ -79,7 +79,7 @@ const SponsorsSection = () => {
                     
                 </div>
                 {inCTFSponsors.map((s, i) =>
-                    <div className="md:w-1/2 px-2 w-1/2 p-1 flex justify-center text-center items-end" key={i}>
+                    <div className="md:w-1/2 px-2 w-1/2 p-1 flex justify-center text-center items-end"  key={i}>
                         <div className="text-center">
                             <Fade>
                                 <img
