@@ -37,13 +37,13 @@ const SponsorNote = () => (
                     Salesforce has one of the best Information Security teams in the world and growing this piece of the business in India is a top priority! Our Information Security teams work hand in hand with the business to ensure the highest security around all of our applications. For example, the Detection & Response function is responsible for 24x7x365 security monitoring and rapid incident response across all Salesforce environments. The Salesforce Security Engineering team provides the fundamental building blocks to improve and preserve customer trust in Salesforce’s products across multiple public cloud substrates and our own network infrastructure. Similarly, we have teams that oversee our network security, identity and access management, threat & vulnerability management, system security, security GRC, compliance etc. all working towards the common goal of upholding our foundational values of Trust and Customer Success.
                     </li>
                     <li className="mt-2">
-                    We are always looking out for talent, reach out to us on <a href="https://www.salesforce.com/company/careers/university-recruiting/">India Cyber Security Careers</a>
+                    We are always looking out for talent, reach out to us on <a href="https://www.salesforce.com/company/careers/university-recruiting/"><span className="text-primary">India Cyber Security Careers</span></a>
                     </li>
                     <li className="mt-2">
-                     To know more visit <a href="https://salesforce.wd2.myworkdayjobs-impl.com/External_Career_Site/job/India---Hyderabad/Intern-Security-Event-Analyst_JR117289-2">Salesforce India University Recruiting</a>
+                     To know more visit <a href="https://salesforce.wd2.myworkdayjobs-impl.com/External_Career_Site/job/India---Hyderabad/Intern-Security-Event-Analyst_JR117289-2"><span className="text-primary">Salesforce India University Recruiting</span></a>
                     </li>
                     <li className="mt-2">
-                    <a href="https://trailhead.salesforce.com/cybersecurity/">Learn in-demand cybersecurity skills</a>
+                    <a href="https://trailhead.salesforce.com/cybersecurity/"><span className="text-primary">Learn in-demand cybersecurity skills</span></a>
                     </li>
                 </ul>
             </div>
