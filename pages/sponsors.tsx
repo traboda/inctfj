@@ -6,7 +6,7 @@ import SponsorsSection from "../src/components/landing/SponsorsSection";
 import Breadcrumb from "../src/components/shared/Breadcrumb";
 import PageHeader from "../src/components/PageHeader";
 import PageFooterExplorer from "../src/components/PageFooterExplorer";
-import SponsorNote from './posts/women';
+import SponsorNote from './posts/sponsornote';
 
 const SponsorsPage = () => {
     return (
@@ -27,7 +27,6 @@ const SponsorsPage = () => {
                 ]}
             />
             <div className="mx-auto text-center px-4 pb-8" style={{ maxWidth: 1250 }}>
-                <SponsorsSection />
                 <SponsorNote/>
             </div>
             <PageFooterExplorer
