@@ -1,14 +1,14 @@
 import styled from "@emotion/styled";
 import React, {useEffect, useRef, useState} from "react";
 import Link from "next/link";
-import Modal from "react-modal";
-import {clearAllBodyScrollLocks} from "body-scroll-lock";
+import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 
 import MobileMenu from "./MobileMenu";
 import TopBarSearch from "./search";
 import TopBarItem from "./item";
 
 import TopbarItems from "./menu.json";
+import RegistrationModal from "../RegisterModal";
 
 const TopbarContainer = styled.header`
   position: fixed;
@@ -84,18 +84,6 @@ const TopbarInfoCard = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 100%;
-`;
-
-const CloseButton = styled.button`
-  background: none !important;
-  top: 1rem;
-  right: 1rem;
-  position: absolute;
-  padding: 0 !important;
-
-  img {
-    width: 32px;
-  }
 `;
 
 const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
@@ -186,7 +174,10 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                 </nav>
                                 <button
                                     className="px-8 py-4 rounded-lg font-semibold bg-primary hover:bg-blue-800 shadow hover:shadow-xl text-white ml-3"
-                                    onClick={() => setShowRegCard(true)}
+                                    onClick={() => {
+                                        setShowRegCard(true);
+                                        disableBodyScroll(document.body);
+                                    }}
                                 >
                                     Register <i className="fa fa-chevron-right"/>
                                 </button>
@@ -197,7 +188,10 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 <div className="w-3/4 flex md:hidden items-center justify-end px-1">
                     <TopbarInfoCard className="mr-3">
                         <button
-                            onClick={() => setShowRegCard(true)}
+                            onClick={() => {
+                                setShowRegCard(true);
+                                disableBodyScroll();
+                            }}
                             className="w-full px-5 py-4 font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl ml-3"
                         >
                             Register <i className="fa fa-chevron-right"/>
@@ -209,43 +203,13 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 </div>
             </div>
         </TopbarContainer>
-        <Modal
+        <RegistrationModal
             isOpen={showRegCard}
-            onRequestClose={() => {
+            onClose={() => {
                 clearAllBodyScrollLocks();
                 setShowRegCard(false);
             }}
-            style={{
-                overlay: {
-                    zIndex: 9000, background: 'rgba(0,0,0,0.5)',
-                    height: '100vh', width: '100%',
-                    display: 'flex', alignItems: 'flex-end', justifyContent: 'right',
-                },
-                content: {
-                    position: 'unset', top: 0, left: 0, right: 0, padding: 0,
-                    border: 'none', background: 'none', width: '500px', maxWidth: '100vw'
-                }
-            }}
-        >
-            <CloseButton
-                className="px-4 border-0 rounded"
-                onClick={() => {
-                    clearAllBodyScrollLocks();
-                    setShowRegCard(false)
-                }}
-            >
-                <img alt="close" src={require('../../../assets/images/icons/close.png')}/>
-            </CloseButton>
-            {showRegCard &&
-            <div
-                className="flex bg-white px-3 md:p-4 py-6 items-end rounded-t-2xl md:rounded-r-none md:rounded-bl-2xl justify-center">
-                <iframe
-                    className="border-0"
-                    style={{ width: '500px', maxWidth: '100vw', height: '190px', overflow: 'auto' }}
-                    src={`https://app.traboda.com/contest/inctf-21-lr/reg-frame?primary=F13F17&amp;primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
-                />
-            </div>}
-        </Modal>
+        />
         {isVisible() && showMenu &&
         <MobileMenu
             darkenOnSidebar={darkenOnSidebar}
