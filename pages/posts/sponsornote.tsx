@@ -106,7 +106,7 @@ const SponsorNote = () => (
                     
                 </ul>
             </div>
-        </div> <br/><br/>+
+        </div> <br/><br/>
         <div className="flex flex-wrap">
             <div className="w-full md:w-1/3">
                 <img src={require('../../src/assets/images/sponsors/cred.png')}
