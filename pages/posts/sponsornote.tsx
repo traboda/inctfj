@@ -135,6 +135,29 @@ const SponsorNote = () => (
                 </ul>
             </div>
         </div> <br/><br/>
+        <div className="flex flex-wrap">
+            <div className="w-full md:w-1/3">
+                <img src={require('../../src/assets/images/sponsors/secfence.jpg')}
+                     alt="salesforce" className="w-full rounded-lg" draggable={false}/>
+            </div>
+            <div className="w-full md:w-2/3 md:pl-10 mt-4 md:mt-0">
+                <h6 className="font-semibold text-left">GOLD SPONSOR</h6>
+                <h1 className="font-semibold text-primary text-left">Secfence</h1>
+                <ul className="leading-loose font-medium text-left">
+                    
+                    <li className="mt-2">
+                    Secfence has been the pioneer of Defensive & Offensive Security in India for over a decade. We are a research-based organization focusing on Vulnerability Research & Exploit Development. Along with our in-house research teams, we have formed global alliances to bring the state-of-the-art capabilities to our clients. We take pride in working with Governments, Law Enforcement & Intelligence Agencies to help their homeland security.
+                    </li>
+                    <li className="mt-2">
+                    We are always looking out for talent, reach out to us on <span className="text-primary">contact@secfence.com</span> (PGP: 0x1A3AB75C08723D81) 
+                    </li>
+                   <li className="mt-2">
+                   To know more visit <a href="https://www.secfence.com/"><span className="text-primary">www.secfence.com</span></a>
+                   </li>
+                    
+                </ul>
+            </div>
+        </div> <br/><br/>
     </div>
 </Wrapper>
 );
