@@ -8,7 +8,7 @@ import PageHeader from "../src/components/PageHeader";
 
 const TrainingSchedulePage = () => {
     return (
-        <Base meta={{ title: "Training Schedule for InCTF Jr." }}>
+        <Base meta={{ title: "Training Schedule for InCTF" }}>
             <TopBar />
             <PageHeader
                 title="Training Workshops"
