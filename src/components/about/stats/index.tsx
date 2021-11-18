@@ -36,11 +36,7 @@ const StatsContainer = styled.section`
  
 const INCTFStats = ({stats}) => {
 
-    const statsPreviewer = () => [
-        { value: stats?.registrations || 0, title: "Total Participants" },
-        { value: stats?.regToday || 0, title: "Registrations Today" },
-        { value: stats?.totalInstitutions || 0, title: "College Participating" },
-    ]
+    
 
     return (
         <StatsSection id="our-reach">
