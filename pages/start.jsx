@@ -31,7 +31,7 @@ const StartPage = () => {
             <LandingStatsBar />
             <LandingPromoVideo />
             <LandingReasonsToParticipate />
-            <CTAReg UTMSource="start_page" />
+            {/*<CTAReg UTMSource="start_page" />*/}
             <LandingHowItWorks />
             {/*<LandingTestimonials />*/}
             <LandingSponsorship />
