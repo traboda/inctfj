@@ -78,7 +78,7 @@ const RulePage = () => {
                     </ul>
                     <h2>Qualification Rules to Finals</h2>
                     <ul>
-                        <li>Minimum Eligibility Rules:A team should solve at least 5 challenges in-order to qualify for the finals.</li>
+                        <li>Minimum Eligibility Rules: A team should solve at least 5 challenges in-order to qualify for the finals.</li>
                         <li>Scoreboard Toppers - The top 30 teams with minimum eligibility on the scoreboard shall be selected for the finals.</li>
                         <li>Regional Toppers - The top 5 teams with minimum eligibility from each state shall be selected for the finals. This is in-addition to, and does not include teams already qualified as scoreboard toppers.</li>
                         <li>Women in CyberSecurity Initiative - The top 25 women-only teams with minimum eligibility shall be selected for the finals. This is in-addition to, and does not include  women-only teams that qualified as scoreboard toppers and regional toppers from their respective states.</li>
