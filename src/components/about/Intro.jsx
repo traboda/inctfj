@@ -39,8 +39,7 @@ const InctfIntro = () => {
                             <p>
                                 A lot of research have been proven to be the best way to approach this is
                                 Capture the Flag style contests. These contests typically simulate real life scenarios that enable
-                                participants to develop real world security skills. Many of the countries like USA and China have
-                                realized the need for cyber security education and are conducting CTF contests for school students.
+                                participants to develop real world security skills.
                             </p>
                         </Fade>
                         <Fade>
