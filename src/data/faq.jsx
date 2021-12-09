@@ -17,7 +17,7 @@ export default
     },
     {
         "question": "What is a Capture The Flag competition?",
-        "keywords": ["capture", "flag", "competition", "inctf"],
+        "keywords": ["capture", "flag", "competition", "inctf", "ctf"],
         "response": [
             "CTFs (Abbreviation for Capture The Flag) are a type of computer security competition. Contestants are presented with a set of challenges which test their creativity, technical (and googling)"
         ],
@@ -67,6 +67,39 @@ export default
             You would need use techniques and some tools that only are available on a PC/Laptop.
         </>,
         tags: ['requirements']
+    },
+    {
+        "question": "How can I register to InCTF Junior 2021 ?",
+        "keywords": ["register"],
+        "response": [
+            "Registering is a pretty simple process. Click on the following to watch the step by step guide on how to register. "
+        ],
+        "answer": <>
+            Registering is a pretty simple process. Click on the following to watch the step by step guide on how to register. <a href="https://www.youtube.com/watch?v=twS3pzPjRzA" target="_blank">How to register ?</a>
+        </>,
+        tags: ["getting-started", "help"]
+    },
+    {
+        "question": "how to get into the scoreboard ?",
+        "keywords": ["scoreboard", "leaderboard", "scoreboards", "leaderboards"],
+        "response": [
+            "We have a good tutorial on this particular subject. Click on the following link to watch the step by step guide on how to get into the scoreboard."
+        ],
+        "answer": <>
+            We have a good tutorial on this particular subject. Click on the following link to watch the step by step guide on how to get into the scoreboard. <a href="https://www.youtube.com/watch?v=767Y-wtDH5A">How to get into the scoreboard</a>
+        </>,
+        tags: ["getting-started", "help"]
+    },
+    {
+        "question": "Are there any resources or tutorials about web security ?",
+        "keywords": ["getting-started"],
+        "response": [
+            "There are few resources, mainly YouTube videos, that give an introduction to the whole security ecosystem. Click on the following link to view our collection of videos."
+        ],
+        "answers": <>
+            There are few resources, mainly YouTube videos, that give an introduction to the whole security ecosystem. Click on the following link to view our collection of videos. <a href="https://junior.inctf.in/resources">Resources</a>
+        </>,
+        tags: ["getting-started"]
     },
     {
         "question": "How much does it cost to participate in Amrita InCTF Junior?",
