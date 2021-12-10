@@ -161,6 +161,24 @@ const SponsorNote = () => (
                 </ul>
             </div>
         </div> <br/><br/>
+        <div className="flex flex-wrap">
+            <div className="w-full md:w-1/3">
+                <img src={require('../../src/assets/images/sponsors/hrb_horizontal_green.png')}
+                     alt="salesforce" className="w-full rounded-lg" draggable={false}/>
+            </div>
+            <div className="w-full md:w-2/3 md:pl-10 mt-4 md:mt-0">
+                <h6 className="font-semibold text-left">GOLD SPONSOR</h6>
+                <h1 className="font-semibold text-primary text-left">H&R block</h1>
+                <ul className="leading-loose font-medium text-left">
+                    
+                    <li className="mt-2">
+                    H&R Block (<a href="https://www.hrblock.com/"><span className="text-primary">www.hrblock.com</span></a>) is a 3 billion dollar company headquartered in Kansas City, MO, and is the world’s largest assisted tax preparation company with Operations in the US, Australia, Canada and India. H&R Block provides Digital tax services and Retail tax services through more than 12,000 retail offices. H&R Block’s Trivandrum Technopark location serves as the Global Technology Center of H&R Block and consists of approximately 700 full time associates at Trivandrum.
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </div> <br/><br/>
     </div>
 </Wrapper>
 );
