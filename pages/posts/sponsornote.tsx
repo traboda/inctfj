@@ -174,8 +174,6 @@ const SponsorNote = () => (
                     <li className="mt-2">
                     H&R Block (<a href="https://www.hrblock.com/"><span className="text-primary">www.hrblock.com</span></a>) is a 3 billion dollar company headquartered in Kansas City, MO, and is the world’s largest assisted tax preparation company with Operations in the US, Australia, Canada and India. H&R Block provides Digital tax services and Retail tax services through more than 12,000 retail offices. H&R Block’s Trivandrum Technopark location serves as the Global Technology Center of H&R Block and consists of approximately 700 full time associates at Trivandrum.
                     </li>
-                    
-                    
                 </ul>
             </div>
         </div> <br/><br/>
