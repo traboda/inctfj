@@ -39,7 +39,7 @@ const LandingQuickInfo = () => {
         {
             image: require('../../assets/images/icons/calendar.png'), up: true,
             question: "When?", answer: <>
-                Qualifier round - Dec 17 - Dec19, <br/> Finals Jan 7-9, 2022, <br />
+                Qualifier round - Dec 17 - Dec19, <br/>
                 
                 International Conference Jan 21-23, 2022 
             </>
