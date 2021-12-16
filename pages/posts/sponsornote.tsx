@@ -167,7 +167,7 @@ const SponsorNote = () => (
                      alt="salesforce" className="w-full rounded-lg" draggable={false}/>
             </div>
             <div className="w-full md:w-2/3 md:pl-10 mt-4 md:mt-0">
-                <h6 className="font-semibold text-left">GOLD SPONSOR</h6>
+                <h6 className="font-semibold text-left">Silver Sponsor</h6>
                 <h1 className="font-semibold text-primary text-left">H&R block</h1>
                 <ul className="leading-loose font-medium text-left">
                     
