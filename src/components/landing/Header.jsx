@@ -165,6 +165,8 @@ const LandingHeader = ({ UTMSource = null }) => {
                                         <span className="mt-6">
                                             InCTF India's Premier Hacking & Cyber Security contest organized by team bi0s, India's No.1 ranked CTF Team.Participate in this learn & hack CTF contest, win exciting prizes & kick-start your cyber-security career.
                                         </span>
+                                        <br/><br/>
+                                        <b>Take part in Amrita InCTF to get recruited as interns/full-time in security roles in companies such as Salesforce, Zoho, VMware, Schneider and several others. </b>
                                     </p>
                                 </Fade>
                                 <button
