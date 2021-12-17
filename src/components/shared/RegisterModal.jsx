@@ -44,7 +44,7 @@ const RegistrationModal = ({ isOpen, onClose }) => (
             <div className="flex flex-wrap">
                 <div className="md:w-1/2 mb-4 md:mb-0 p-3">
                     <a
-                        href={`https://app.traboda.com/contest/inctf-21-pro/reg-window`}
+                        href={`https://app.traboda.com/contest/inctf-21-pro`}
                         className="block bg-blue-100 hover:bg-blue-200 shadow-xl hover:shadow-lg p-3 rounded-2xl"
                     >
                         <div className="flex flex-wrap md:block items-center justify-center">
@@ -65,7 +65,7 @@ const RegistrationModal = ({ isOpen, onClose }) => (
                 </div>
                 <div className="md:w-1/2 h-full p-2">
                     <a
-                        href={`https://app.traboda.com/contest/inctf-21-qualifiers/reg-window`}
+                        href={`https://app.traboda.com/contest/inctf-21-qualifiers`}
                         className="block bg-red-100 hover:bg-red-200 h-full shadow-xl hover:shadow-lg p-3 rounded-2xl"
                     >
                         <div className="flex flex-wrap md:block items-center justify-center">
