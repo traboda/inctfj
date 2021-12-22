@@ -45,7 +45,7 @@ class MessageParser {
       } else if (lowerCaseMessage.includes("contact")) {
         this.actionProvider.handleContact();
       } else {
-        this.actionProvider.handleDefault();
+        this.actionProvider.handleDefault(message);
       }
 
     }
