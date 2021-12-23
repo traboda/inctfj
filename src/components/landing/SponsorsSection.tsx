@@ -73,8 +73,13 @@ const inCTFSponsors = [
         desg: "Gold Sponsor",
     },
     {
+        image: require('../../assets/images/sponsors/Logo_SE.png'),
+        maxHeight: '40px',
+        desg: "Gold Sponsor",
+    },
+    {
         image: require('../../assets/images/sponsors/h&rblock.png'),
-        maxHeight: '100px',
+        maxHeight: '150px',
         desg: "Silver Sponsor",
     },
     
