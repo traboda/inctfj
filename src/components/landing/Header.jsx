@@ -3,9 +3,6 @@ import styled from "@emotion/styled";
 
 import Pulse from "react-reveal/Pulse";
 import Fade from 'react-reveal/Fade';
-import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
-
-import RegistrationModal from "../shared/RegisterModal";
 
 const HeaderContainer = styled.section`
     position: relative;
@@ -152,7 +149,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                 <div className="container header-container">
                     <div>
                         <div className="flex flex-wrap  mx-0">
-                            <div className="md:w-2/3 px-4">
+                            <div className="md:w-2/3 mb-4 px-4">
                                 <Pulse>
                                     <h1>
                                         <span style={{ color: '#FF6F00'}}>INDIA'S FLAGSHIP CYBER SECURITY CONTEST AND CONFERENCE</span><br/>
@@ -169,22 +166,12 @@ const LandingHeader = ({ UTMSource = null }) => {
                                         <b>Take part in Amrita InCTF to get recruited as interns/full-time in security roles in companies such as Salesforce, Zoho, VMware, Schneider and several others. </b>
                                     </p>
                                 </Fade>
-                                <button
-                                    onClick={() => {
-                                        setShowRegCard(true);
-                                        disableBodyScroll(document.body);
-                                    }}
-                                    className="px-8 py-4 font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl"
+                                <a
+                                    href="/stats"
+                                    className="px-8 py-5 mt-4 font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl"
                                 >
-                                    Register <i className="fa fa-chevron-right"/>
-                                </button>
-                                <RegistrationModal
-                                    isOpen={showRegCard}
-                                    onClose={() => {
-                                        clearAllBodyScrollLocks();
-                                        setShowRegCard(false);
-                                    }}
-                                />
+                                    View Qualified Students <i className="fa fa-chevron-right"/>
+                                </a>
                             </div>
                             <div className="md:w-1/3 my-4 md:my-0 px-3">
                                 <img

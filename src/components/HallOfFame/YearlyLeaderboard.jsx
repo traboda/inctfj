@@ -5,9 +5,8 @@ import shortid from "shortid";
 
 import IndianStates from "../../data/indian-states";
 
-import FameCard from "./FameCard";
-import SchoolLeaderboard from "./SchoolLeaderboard";
 import Fade from "react-reveal/Fade";
+import FameCard from "./FameCard";
 
 const SearchBar = styled.div`
     background: white;
@@ -186,12 +185,13 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
             </div>
         )}</div>
     </div>}
-    {/*<SchoolLeaderboard schools={schools} />
+    {/*<SchoolLeaderboard schools={schools} />*/}
+    {leaderboard?.length > 0 && (
     <div className="py-3">
         <div className="py-2">
-            <h3 style={{ color: '#fd7e14' }} className="mb-1">National-Level Finalists</h3>
+            <h3 style={{ color: '#fd7e14' }} className="mb-1">Teams Qualified for Finals</h3>
             <p style={{ opacity: 0.8 }} className="mb-3">
-                Top participants who qualified for the national-level finals, ranked according to final published scoreboard based on most points earned by capturing the most number of flags in the lowest time.
+                Top participants from the qualifiers round who are selected for the National Finals of InCTF.
             </p>
         </div>
         {leaderboard?.length > 0 ?
@@ -225,7 +225,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
                 </div>
                 <GridHeight className="grid md:grid-cols-2 grid-cols-1 gap-4 mt-3 w-full">
                     {leaderboard.filter((s) =>
-                        (keyword ? (s.name.startsWith(keyword) || s.username.startsWith(keyword)) : true) &&
+                        (keyword ? s.username.startsWith(keyword) : true) &&
                         (state ? s.state === state : true)
                     ).map((l) =>
                         <div>
@@ -236,9 +236,8 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
                     )}
                 </GridHeight>
                 <div style={{ color: '#999', fontSize: '11px' }} className="py-3 p-2">
-                    <li>The leaderboard only includes participants who have earned at-least 1 point in the finale.</li>
-                    <li>Participants with incomplete profile information, and who failed to verify their identity as a school student have been excluded from the listing.</li>
-                    <li>Data before 4th edition may not be complete, or may have inaccuracies due to limitations of available data.</li>
+                    <li>The leaderboard only includes participants who have earned at-least 1 point in the qualifiers.</li>
+                    <li>Participants with incomplete profile information, and who failed to verify their identity as a student have been excluded from the listing.</li>
                 </div>
             </div> :
             <div className="flex items-center justify-center">
@@ -247,7 +246,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
                     <p style={{ fontSize: '13px' }}>We will shortly update the entries here, check back later</p>
                 </div>
             </div>}
-        </div>*/}
+        </div>)}
     </div>;
 };
 

@@ -33,15 +33,13 @@ const FameCardWrap = styled.div`
       color: black;
    }
    .rank {
-      font-size: calc(1.5rem + 1vw);
+      font-size: calc(1.25rem + 0.75vw);
       line-height: 1;
       color: black;
    }
 `;
 
-const FameCard = ({
-  rank, username, name, state, age, points, school, city, isQueen
-}) => {
+const FameCard = ({ rank, username, state, points, institution }) => {
 
     const getStateName = () => {
         if(IndianStates.filter((s) => s.value === state).length > 0){
@@ -51,30 +49,18 @@ const FameCard = ({
     }
 
     return <FameCardWrap>
-        <div className="flex flex-wrap p-2 border rounded-lg h-full items-center">
-            <div className="w-1/5 text-right justify-center items-center flex">
-                {
-                    rank === 1 ? <img src={require('../../assets/images/icons/crown.png')} /> :
-                        rank === 2 ? <img src={require('../../assets/images/icons/viking.png')} /> :
-                            rank === 3 ? <img src={require('../../assets/images/icons/samurai.png')} /> :
-                                isQueen ? <img src={require('../../assets/images/icons/queen.png')} />
-                                    : <div className="rank">{rank}. </div>
-                }
-            </div>
-            <div className="w-4/5 md:w-2/5 pr-4 pl-4 p-1">
-                <h4 className="font-bold">{name}</h4>
-                <div className="mb-2">@{username}</div>
-                {(age || points) &&
+        <div className="flex flex-wrap p-2 border rounded-lg h-full">
+            <div className="w-3/4">
+                <h4 className="mb-2 text-2xl font-bold">
+                    {rank}.  @{username}
+                </h4>
                 <div>
-                    <span className="pr-2"><b>{points}</b> pts</span>
-                    {age && <span><b>{age}</b> Yrs</span>}
-                </div>}
-            </div>
-            <div className="md:w-2/5 pr-4 pl-4 flex p-1">
-                <div>
-                    {school && <div style={{ fontSize: '15px', color: '#333' }} className="line-height-1 mb-1">{school}</div>}
-                    {(city||state) && <div>{city}, {getStateName()}</div>}
+                    {institution && <div style={{ fontSize: '14px', color: '#333' }} className="line-height-1 mb-1">{institution}</div>}
+                    {state && <div>{getStateName()}</div>}
                 </div>
+            </div>
+            <div className="w-1/4 flex items-start justify-end">
+                <span className="text-xl pr-2"><b>{points}</b></span>
             </div>
         </div>
     </FameCardWrap>;
