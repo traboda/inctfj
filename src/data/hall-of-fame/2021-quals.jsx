@@ -237,7 +237,7 @@ export default [
         "institution": "National Institute of Technology (NIT), Tiruchirapalli",
         "state": "IN-TN",
         "points": 7515,
-        "quota": "top30"
+        "quota": "state"
     },
     {
         "rank": 32,

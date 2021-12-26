@@ -199,14 +199,14 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
             <div className="flex flex-wrap">
                 <div className="md:w-full mb-2">
                     <SearchBar className="flex flex-wrap bg-white p-2 mx-0 border">
-                        <div className="md:w-2/4 p-2 flex items-center">
+                        <div className="md:w-1/3 w-full p-2 flex items-center">
                             <input
                                 value={keyword}
                                 onChange={(e) => setKeyword(e.currentTarget.value)}
                                 placeholder="Search for names"
                             />
                         </div>
-                        <div className="md:w-1/4 pr-4 pl-4 p-1 flex items-center">
+                        <div className="md:w-1/3 w-1/2 pr-4 pl-4 p-1 flex items-center">
                             <div className="w-full">
                                 <Select
                                     aria-label="user-state-selector"
@@ -217,12 +217,12 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
                                     menuPlacement="auto"
                                     placeholder="Filter by State/UT"
                                     noOptionsMessage={() => <div>No States/Provinces/UT could be found</div>}
-                                    onChange={(s) => setQuota(s['value'])}
+                                    onChange={(s) => setState(s['value'])}
                                     value={getStateObj()}
                                 />
                             </div>
                         </div>
-                        <div className="md:w-1/4 pr-4 pl-4 p-1 flex items-center">
+                        <div className="md:w-1/3 w-1/2 pr-4 pl-4 p-1 flex items-center">
                             <div className="w-full">
                                 <Select
                                     aria-label="user-quota-selector"
@@ -248,7 +248,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
                     {leaderboard.filter((s) =>
                         (keyword ? s.username.startsWith(keyword) : true) &&
                         (state ? s.state === state : true) &&
-                        (quota ? s.quota === quota['value'] : true)
+                        (quota?.['value'] ? s.quota === quota['value'] : true)
                     ).map((l) =>
                         <div>
                             <Fade>
