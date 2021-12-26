@@ -232,7 +232,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
                                     options={[
                                         { value: null, label: "All Quota"},
                                         { value: 'top30', label: "National Top 30"},
-                                        { value: 'state', label: "State Toppers"},
+                                        { value: 'state', label: "State Top 5"},
                                     ]}
                                     menuPlacement="auto"
                                     placeholder="Filter by Qualification Type"
