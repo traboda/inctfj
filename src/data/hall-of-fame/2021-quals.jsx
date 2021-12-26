@@ -89,14 +89,6 @@ export default [
     },
     {
         "rank": 12,
-        "username": "51ngl3_pl4y3r_t34m",
-        "institution": "",
-        "state": "",
-        "points": 10379,
-        "quota": "top30"
-    },
-    {
-        "rank": 13,
         "username": "1nf1n1ty",
         "institution": "SASTRA University, Thanjavur",
         "state": "IN-TN",
@@ -104,7 +96,7 @@ export default [
         "quota": "top30"
     },
     {
-        "rank": 14,
+        "rank": 13,
         "username": "h45h",
         "institution": "Amrita School of Engineering, Bengaluru",
         "state": "IN-KA",
@@ -112,7 +104,7 @@ export default [
         "quota": "top30"
     },
     {
-        "rank": 15,
+        "rank": 14,
         "username": "c4p7ch4_7h3_f149",
         "institution": "Amrita School of Engineering, Bengaluru",
         "state": "IN-KA",
@@ -120,7 +112,7 @@ export default [
         "quota": "top30"
     },
     {
-        "rank": 16,
+        "rank": 15,
         "username": "greyhats",
         "institution": "Indian Institute of Technology, Madras (IIT-M)",
         "state": "IN-TN",
@@ -128,7 +120,7 @@ export default [
         "quota": "top30"
     },
     {
-        "rank": 17,
+        "rank": 16,
         "username": "iitbhucybersec",
         "institution": "Indian Institute of Technology (IIT-BHU), Varanasi",
         "state": "IN-UP",
@@ -136,7 +128,7 @@ export default [
         "quota": "top30"
     },
     {
-        "rank": 18,
+        "rank": 17,
         "username": "emintros",
         "institution": "Meerut Institute of Engineering and Technology (MIET), Meerut",
         "state": "IN-UP",
@@ -144,7 +136,7 @@ export default [
         "quota": "top30"
     },
     {
-        "rank": 19,
+        "rank": 18,
         "username": "isfcr_pesu",
         "institution": "PES University, Bengaluru",
         "state": "IN-KA",
@@ -152,7 +144,7 @@ export default [
         "quota": "top30"
     },
     {
-        "rank": 20,
+        "rank": 19,
         "username": "1nf1n1ty_alpha",
         "institution": "SASTRA University, Thanjavur",
         "state": "IN-TN",
@@ -160,7 +152,7 @@ export default [
         "quota": "top30"
     },
     {
-        "rank": 21,
+        "rank": 20,
         "username": "1nf1n1ty_zeta",
         "institution": "SASTRA University, Thanjavur",
         "state": "IN-TN",
@@ -168,7 +160,7 @@ export default [
         "quota": "top30"
     },
     {
-        "rank": 22,
+        "rank": 21,
         "username": "l00s3r5",
         "institution": "International Institute of Information Technology (IIIT), Hyderabad",
         "state": "IN-TG",
@@ -176,7 +168,7 @@ export default [
         "quota": "top30"
     },
     {
-        "rank": 23,
+        "rank": 22,
         "username": "mritunjya",
         "institution": "National Institute of Technology (NIT), Tiruchirapalli",
         "state": "IN-TN",
@@ -184,7 +176,7 @@ export default [
         "quota": "top30"
     },
     {
-        "rank": 24,
+        "rank": 23,
         "username": "cryptonite",
         "institution": "Manipal Institute of Technology",
         "state": "IN-KA",
@@ -192,7 +184,7 @@ export default [
         "quota": "top30"
     },
     {
-        "rank": 25,
+        "rank": 24,
         "username": "m1cr0endian",
         "institution": "Indian Institute of Technology, Madras (IIT-M)",
         "state": "IN-TN",
@@ -200,7 +192,7 @@ export default [
         "quota": "top30"
     },
     {
-        "rank": 26,
+        "rank": 25,
         "username": "cabal_of_crackers909",
         "institution": "Chennai Institute of Technology",
         "state": "IN-TN",
@@ -208,7 +200,7 @@ export default [
         "quota": "top30"
     },
     {
-        "rank": 27,
+        "rank": 26,
         "username": "paneer_fry",
         "institution": "National Institute of Technology (NIT), Tiruchirapalli",
         "state": "IN-TN",
@@ -216,7 +208,7 @@ export default [
         "quota": "top30"
     },
     {
-        "rank": 28,
+        "rank": 27,
         "username": "exploitits",
         "institution": "Rajiv Gandhi University of Knowledge Technologies, Nuzvidu",
         "state": "IN-AP",
@@ -224,7 +216,7 @@ export default [
         "quota": "top30"
     },
     {
-        "rank": 30,
+        "rank": 28,
         "username": "4n0nym4u5_x_rootk1t",
         "institution": "Sri Jayachamrajendra Govt Polytechnic, Bengaluru",
         "state": "IN-KA",
@@ -232,23 +224,23 @@ export default [
         "quota": "top30"
     },
     {
-        "rank": 31,
+        "rank": 29,
         "username": "kadai_chicken",
         "institution": "National Institute of Technology (NIT), Tiruchirapalli",
         "state": "IN-TN",
         "points": 7515,
-        "quota": "state"
+        "quota": "top30"
     },
     {
-        "rank": 32,
+        "rank": 30,
         "username": "toman",
         "institution": "Birla Institute of Technology (BITS), Mesra",
         "state": "IN-JH",
         "points": 7077,
-        "quota": "state"
+        "quota": "top30"
     },
     {
-        "rank": 33,
+        "rank": 31,
         "username": "stem_beacon",
         "institution": "University of Madras",
         "state": "IN-TN",
@@ -256,7 +248,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 34,
+        "rank": 32,
         "username": "cyber0ids",
         "institution": "Amrita School of Engineering, Chennai",
         "state": "IN-TN",
@@ -264,7 +256,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 35,
+        "rank": 33,
         "username": "0x00d3c0de",
         "institution": "K J Somaiya College of Engineering (KJSCE), Mumbai",
         "state": "IN-MH",
@@ -272,7 +264,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 36,
+        "rank": 34,
         "username": "randoms090",
         "institution": "Lovely Professional University (LPU), Punjab",
         "state": "IN-PB",
@@ -280,7 +272,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 37,
+        "rank": 35,
         "username": "rec_crew",
         "institution": "Rajalakshmi Engineering College, Chennai",
         "state": "IN-TN",
@@ -288,7 +280,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 38,
+        "rank": 36,
         "username": "___boc",
         "institution": "Indian Institute of Technology (IIT), Kanpur",
         "state": "IN-UP",
@@ -296,7 +288,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 39,
+        "rank": 37,
         "username": "pizza_dosa",
         "institution": "National Institute of Technology (NIT), Tiruchirapalli",
         "state": "IN-TN",
@@ -304,7 +296,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 40,
+        "rank": 38,
         "username": "doofenshmirtz_evil_inc",
         "institution": "Kalinga Institute of Industrial Technology,  Bhubaneswar",
         "state": "IN-OR",
@@ -312,7 +304,15 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 42,
+        "rank": 39,
+        "username": "f.o.g.m.j",
+        "institution": "Manipal Institute of Technology",
+        "state": "IN-KA",
+        "points": 3837,
+        "quota": "state"
+    },
+    {
+        "rank": 40,
         "username": "p4n1c",
         "institution": "National Institute of Technology, Calicut",
         "state": "IN-KL",
@@ -320,15 +320,15 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 43,
+        "rank": 41,
         "username": "___hk",
         "institution": "Self Study",
         "state": "",
         "points": 3323,
-        "quota": "state"
+        "quota": "self"
     },
     {
-        "rank": 44,
+        "rank": 42,
         "username": "hackers253",
         "institution": "National Institute of Technology (NIT), Meghalaya",
         "state": "IN-ML",
@@ -336,15 +336,15 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 45,
+        "rank": 43,
         "username": "n0n4m3",
         "institution": "BITS",
-        "state": "",
+        "state": "IN-RJ",
         "points": 3120,
         "quota": "state"
     },
     {
-        "rank": 46,
+        "rank": 44,
         "username": "sup3rm4n",
         "institution": "Lovely Professional University (LPU), Punjab",
         "state": "IN-PB",
@@ -352,7 +352,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 47,
+        "rank": 45,
         "username": "akshipt",
         "institution": "Acropolis Institute of Technology and Research, Indore",
         "state": "IN-MP",
@@ -360,7 +360,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 48,
+        "rank": 46,
         "username": "kyros",
         "institution": "PES University, Bengaluru",
         "state": "IN-KA",
@@ -368,7 +368,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 49,
+        "rank": 47,
         "username": "powerpuff_girls",
         "institution": "Lovely Professional University (LPU), Punjab",
         "state": "IN-PB",
@@ -376,7 +376,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 50,
+        "rank": 48,
         "username": "cyberexploitme",
         "institution": "M.Kumarasamy College of Engineering, Karur",
         "state": "IN-TN",
@@ -384,23 +384,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 52,
-        "username": "floppies",
-        "institution": "",
-        "state": "",
-        "points": 2383,
-        "quota": "state"
-    },
-    {
-        "rank": 53,
-        "username": "underpants",
-        "institution": "S.A. Engineering college (SAEC), Chennai",
-        "state": "IN-TN",
-        "points": 2245,
-        "quota": "state"
-    },
-    {
-        "rank": 54,
+        "rank": 49,
         "username": "n0t_d3c1ar3d",
         "institution": "Chandigarh University",
         "state": "IN-CH",
@@ -408,7 +392,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 55,
+        "rank": 50,
         "username": "shellpwn",
         "institution": "Visvesvaraya National Institute of Technology, Nagpur",
         "state": "IN-MH",
@@ -416,7 +400,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 56,
+        "rank": 51,
         "username": "4nonymous",
         "institution": "Mukesh Patel School of Technology Management & Engineering (MPSTME), Mumbai",
         "state": "IN-MH",
@@ -424,15 +408,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 57,
-        "username": "reynbow",
-        "institution": "",
-        "state": "",
-        "points": 1950,
-        "quota": "state"
-    },
-    {
-        "rank": 58,
+        "rank": 52,
         "username": "jnuites",
         "institution": "Jawaharlal Nehru University (JNU), Delhi",
         "state": "IN-DL",
@@ -440,15 +416,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 59,
-        "username": "hacker_cells_ase",
-        "institution": "Amrita School of Engineering, Chennai",
-        "state": "IN-TN",
-        "points": 1737,
-        "quota": "state"
-    },
-    {
-        "rank": 60,
+        "rank": 53,
         "username": "s4nd_hanitiz3r",
         "institution": "NSS College of Engineering, Palakkad",
         "state": "IN-KL",
@@ -456,7 +424,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 61,
+        "rank": 54,
         "username": "r3b00t",
         "institution": "Rajiv Gandhi University of Knowledge Technologies, Nuzvidu",
         "state": "IN-AP",
@@ -464,7 +432,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 62,
+        "rank": 55,
         "username": "crypto_risers",
         "institution": "Amrita School of Engineering, Amritapuri",
         "state": "IN-KL",
@@ -472,7 +440,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 63,
+        "rank": 56,
         "username": "learners_",
         "institution": "Narsee Monjee College of Commerce & Economics, Mumbai",
         "state": "IN-MH",
@@ -480,7 +448,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 64,
+        "rank": 57,
         "username": "unholy",
         "institution": "Chandigarh University",
         "state": "IN-CH",
@@ -488,7 +456,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 65,
+        "rank": 58,
         "username": "0b1ivi0n",
         "institution": "Jalpaiguri Government Engineering College",
         "state": "IN-WB",
@@ -496,23 +464,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 66,
-        "username": "___sdf",
-        "institution": "sdfs",
-        "state": "",
-        "points": 1406,
-        "quota": "state"
-    },
-    {
-        "rank": 67,
-        "username": "h4xt3r",
-        "institution": "",
-        "state": "",
-        "points": 1394,
-        "quota": "state"
-    },
-    {
-        "rank": 69,
+        "rank": 59,
         "username": "cli3nt",
         "institution": "Cusrow Wadia Institute of Technology, Pune",
         "state": "IN-MH",
@@ -520,15 +472,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 68,
-        "username": "technoofficial",
-        "institution": "",
-        "state": "",
-        "points": 1384,
-        "quota": "state"
-    },
-    {
-        "rank": 70,
+        "rank": 60,
         "username": "tourists",
         "institution": "Amity University, Haryana",
         "state": "IN-HR",
@@ -536,7 +480,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 71,
+        "rank": 61,
         "username": "partheev",
         "institution": "Amrita School of Engineering, Bengaluru",
         "state": "IN-KA",
@@ -544,39 +488,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 72,
-        "username": "_w4r_l0rdz_",
-        "institution": "Amrita School of Engineering, Coimbatore",
-        "state": "IN-TN",
-        "points": 1124,
-        "quota": "state"
-    },
-    {
-        "rank": 73,
-        "username": "anirudh0x80",
-        "institution": "",
-        "state": "",
-        "points": 1123,
-        "quota": "state"
-    },
-    {
-        "rank": 74,
-        "username": "rockpapercaesar",
-        "institution": "SRM University",
-        "state": "IN-TN",
-        "points": 1082,
-        "quota": "state"
-    },
-    {
-        "rank": 75,
-        "username": "opop",
-        "institution": "Indian Institute of Technology, Bombay (IIT-B)",
-        "state": "IN-MH",
-        "points": 1019,
-        "quota": "state"
-    },
-    {
-        "rank": 76,
+        "rank": 62,
         "username": "ss_team",
         "institution": "Ravenshaw University, Cuttack",
         "state": "IN-OR",
@@ -584,63 +496,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 77,
-        "username": "ultimatrix",
-        "institution": "College of Engineering, Pune",
-        "state": "IN-MH",
-        "points": 906,
-        "quota": "state"
-    },
-    {
-        "rank": 78,
-        "username": "th3_r0ck3rz",
-        "institution": "",
-        "state": "",
-        "points": 863,
-        "quota": "state"
-    },
-    {
-        "rank": 79,
-        "username": "team_vit1",
-        "institution": "Vishwakarma Institute of Technology, Pune",
-        "state": "IN-MH",
-        "points": 841,
-        "quota": "state"
-    },
-    {
-        "rank": 80,
-        "username": "team_vit",
-        "institution": "Vishwakarma Institute of Technology, Pune",
-        "state": "IN-MH",
-        "points": 841,
-        "quota": "state"
-    },
-    {
-        "rank": 81,
-        "username": "cyber_team011",
-        "institution": "Amrita School of Engineering, Chennai",
-        "state": "IN-TN",
-        "points": 832,
-        "quota": "state"
-    },
-    {
-        "rank": 82,
-        "username": "cyber_squad",
-        "institution": "Amrita School of Engineering, Chennai",
-        "state": "IN-TN",
-        "points": 822,
-        "quota": "state"
-    },
-    {
-        "rank": 83,
-        "username": "maars",
-        "institution": "Sathyabama Institute of Science and Technology",
-        "state": "IN-TN",
-        "points": 805,
-        "quota": "state"
-    },
-    {
-        "rank": 84,
+        "rank": 63,
         "username": "pr0ce355_7",
         "institution": "Amrita School of Engineering, Amritapuri",
         "state": "IN-KL",
@@ -648,7 +504,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 85,
+        "rank": 64,
         "username": "7h35ud0",
         "institution": "Chaitanya Bharathi Institute of Technology, Hyderabad",
         "state": "IN-TG",
@@ -656,7 +512,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 86,
+        "rank": 65,
         "username": "kanyarashi",
         "institution": "New Horizon College of Engineering, Bengaluru",
         "state": "IN-KA",
@@ -664,7 +520,7 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 87,
+        "rank": 66,
         "username": "gamestonk",
         "institution": "Indian Institute of Technology, Hyderabad (IIT-H)",
         "state": "IN-TG",
@@ -672,35 +528,91 @@ export default [
         "quota": "state"
     },
     {
-        "rank": 89,
-        "username": "k4sccyb3rm1nd5",
-        "institution": "Kongunadu Arts and Science College, Coimbatore",
-        "state": "IN-TN",
-        "points": 689,
+        "rank": 67,
+        "username": "teamsharky",
+        "institution": "Indian Institute of Technology (IIT-BHU), Varanasi",
+        "state": "IN-UP",
+        "points": 488,
         "quota": "state"
     },
     {
-        "rank": 90,
-        "username": "cyber_knit",
-        "institution": "Amrita School of Engineering, Coimbatore",
-        "state": "IN-TN",
-        "points": 582,
+        "rank": 68,
+        "username": "newb33s",
+        "institution": "Amrita School of Engineering, Amritapuri",
+        "state": "IN-KL",
+        "points": 442,
         "quota": "state"
     },
     {
-        "rank": 91,
-        "username": "adams_family627",
-        "institution": "Amrita School of Engineering, Coimbatore",
-        "state": "IN-TN",
-        "points": 510,
+        "rank": 69,
+        "username": "bluemoon",
+        "institution": "Indira Gandhi Delhi Technical University For Women, Delhi",
+        "state": "IN-DL",
+        "points": 418,
         "quota": "state"
     },
     {
-        "rank": 92,
-        "username": "n00b",
-        "institution": "Vishwakarma Institute of Technology, Pune",
-        "state": "IN-MH",
-        "points": 500,
+        "rank": 70,
+        "username": "chaos",
+        "institution": "CMR College of Engineering and Technology, Hybedabad",
+        "state": "IN-TG",
+        "points": 269,
+        "quota": "state"
+    },
+    {
+        "rank": 71,
+        "username": "power_rangers010",
+        "institution": "Banasthali Vidyapith, Vanasthali",
+        "state": "IN-RJ",
+        "points": 241,
+        "quota": "state"
+    },
+    {
+        "rank": 72,
+        "username": "weimad",
+        "institution": "KL University, Guntur",
+        "state": "IN-AP",
+        "points": 231,
+        "quota": "state"
+    },
+    {
+        "rank": 73,
+        "username": "ledgers",
+        "institution": "Manipal Institute of Technology",
+        "state": "IN-KA",
+        "points": 231,
+        "quota": "state"
+    },
+    {
+        "rank": 74,
+        "username": "team_g3n",
+        "institution": "Self-Study",
+        "state": "",
+        "points": 231,
+        "quota": "self"
+    },
+    {
+        "rank": 75,
+        "username": "3d8s",
+        "institution": "Siddhartha Institute Of Technology and Sciences, Hyderabad",
+        "state": "IN-TG",
+        "points": 139,
+        "quota": "state"
+    },
+    {
+        "rank": 76,
+        "username": "jaisriram",
+        "institution": "Indian Institute of Technology, Hyderabad (IIT-H)",
+        "state": "IN-TG",
+        "points": 139,
+        "quota": "state"
+    },
+    {
+        "rank": 77,
+        "username": "phantom",
+        "institution": "Sardar Vallabhbhai National Institute of Technology (SVNIT), Surat",
+        "state": "IN-GJ",
+        "points": 10,
         "quota": "state"
     }
 ]

@@ -199,14 +199,14 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
             <div className="flex flex-wrap">
                 <div className="md:w-full mb-2">
                     <SearchBar className="flex flex-wrap bg-white p-2 mx-0 border">
-                        <div className="md:w-1/3 w-full p-2 flex items-center">
+                        <div className="md:w-1/3 w-full p-1 flex items-center">
                             <input
                                 value={keyword}
                                 onChange={(e) => setKeyword(e.currentTarget.value)}
                                 placeholder="Search for names"
                             />
                         </div>
-                        <div className="md:w-1/3 w-1/2 pr-4 pl-4 p-1 flex items-center">
+                        <div className="md:w-1/3 w-1/2 p-1 flex items-center">
                             <div className="w-full">
                                 <Select
                                     aria-label="user-state-selector"
@@ -222,7 +222,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
                                 />
                             </div>
                         </div>
-                        <div className="md:w-1/3 w-1/2 pr-4 pl-4 p-1 flex items-center">
+                        <div className="md:w-1/3 w-1/2 p-1 flex items-center">
                             <div className="w-full">
                                 <Select
                                     aria-label="user-quota-selector"
@@ -233,6 +233,7 @@ const YearlyLeaderboard = ({ year, leaderboard, schools, champions, womenHackers
                                         { value: null, label: "All Quota"},
                                         { value: 'top30', label: "National Top 30"},
                                         { value: 'state', label: "State Top 5"},
+                                        { value: 'self', label: "Top 25 Self Study Teams"},
                                     ]}
                                     menuPlacement="auto"
                                     placeholder="Filter by Qualification Type"
