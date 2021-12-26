@@ -1,3 +1,5 @@
+import getResponse from './widgets/NLP';
+
 class ActionProvider {
     constructor(
      createChatBotMessage,
@@ -54,10 +56,13 @@ class ActionProvider {
      this.updateChatbotState(message);
    }
 
-   handleDefault = () => {
-      const message = this.createChatBotMessage("Sorry, I did not understand.", {withAvatar: true,});
-      this.updateChatbotState(message);
-   }
+   handleDefault = (message) => {
+      const res = getResponse(message).then((response) => {
+        const message = this.createChatBotMessage(response.answer,
+        {withAvatar: true,});
+        this.updateChatbotState(message);
+      });
+    }
 
    handleContact = () => {
     const social = this.createChatBotMessage("You can contact us through the following means", 

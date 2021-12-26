@@ -163,6 +163,24 @@ const SponsorNote = () => (
         </div> <br/><br/>
         <div className="flex flex-wrap">
             <div className="w-full md:w-1/3">
+                <img src={require('../../src/assets/images/sponsors/Logo_SE.png')}
+                     alt="salesforce" className="w-full rounded-lg" draggable={false}/>
+            </div>
+            <div className="w-full md:w-2/3 md:pl-10 mt-4 md:mt-0">
+                <h6 className="font-semibold text-left">GOLD SPONSOR</h6>
+                <h1 className="font-semibold text-primary text-left">Schneider Electric</h1>
+                <ul className="leading-loose font-medium text-left">
+                    
+                    <li className="mt-2">
+                    Schneider’s purpos­e is to empower all to make the most of our energy and resources, bridging progress and sustainability for all. We call this Life Is On. Our mission is to be your digital partner for Sustainability and Efficiency. We drive digital transformation by integrating world-leading process and energy technologies, endpoint to cloud connecting products, controls, software, and services, across the entire lifecycle, enabling integrated company management, for homes, buildings, data centres, infrastructure, and industries. We are the most local of global companies. We are advocates of open standards and partnership ecosystems that are passionate about our shared Meaningful Purpose, Inclusive, and Empowered values.                    
+                    </li>
+                   
+                    
+                </ul>
+            </div>
+        </div> <br/><br/>
+        <div className="flex flex-wrap">
+            <div className="w-full md:w-1/3">
                 <img src={require('../../src/assets/images/sponsors/hrb_horizontal_green.png')}
                      alt="salesforce" className="w-full rounded-lg" draggable={false}/>
             </div>
