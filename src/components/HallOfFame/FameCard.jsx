@@ -39,7 +39,7 @@ const FameCardWrap = styled.div`
    }
 `;
 
-const FameCard = ({ rank, username, state, points, institution }) => {
+const FameCard = ({ rank, username, state, points, institution, quota }) => {
 
     const getStateName = () => {
         if(IndianStates.filter((s) => s.value === state).length > 0){
@@ -60,7 +60,10 @@ const FameCard = ({ rank, username, state, points, institution }) => {
                 </div>
             </div>
             <div className="w-1/4 flex items-start justify-end">
-                <span className="text-xl pr-2"><b>{points}</b></span>
+                <div>
+                    <div className="text-xl pr-2"><b>{points}</b></div>
+                    {quota && (<div className="mt-2"><b>{quota === 'state' ? 'State Toppers' : 'Top 30'}</b></div>)}
+                </div>
             </div>
         </div>
     </FameCardWrap>;
