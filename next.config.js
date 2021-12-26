@@ -56,6 +56,11 @@ const customConfig = {
                 source: '/hall-of-fame',
                 destination: '/stats',
                 permanent: true,
+            },
+            {
+                source: '/rankings',
+                destination: '/stats',
+                permanent: false,
             }
         ]
     },

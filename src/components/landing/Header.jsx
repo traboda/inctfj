@@ -167,7 +167,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                                     </p>
                                 </Fade>
                                 <a
-                                    href="/stats"
+                                    href="/rankings"
                                     className="px-8 py-5 mt-4 font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl"
                                 >
                                     View Qualified Students <i className="fa fa-chevron-right"/>

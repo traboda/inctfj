@@ -115,7 +115,7 @@ const Stats = () => {
     return <Base meta={{ title: "Statistics & Rankings" }}>
         <TopBar darkenOnSidebar includeSpace={false} />
         <PageHeader
-            title="Past Statistics & Rankings"
+            title="Statistics & Rankings"
             breadcrumb={[
                 {
                     link: '/championship',
