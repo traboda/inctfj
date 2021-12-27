@@ -62,7 +62,7 @@ const RulePage = () => {
                         Each individual who participates in the competition (“Participant”) in order to be eligible for the finals / prizes must be:
                     </p>
                     <ul>
-                        <li>at least twelve (12) years of age and not more than nineteen (19) years of age upon your date of registration for the Contest on the Contest website.</li>
+                        <li>not more than nineteen (19) years of age upon your date of registration for the Contest on the Contest website.</li>
                         <li>a citizen of the Republic of India</li>
                         <li>must not have completed 12th or equivalent grade of school.</li>
                     </ul>

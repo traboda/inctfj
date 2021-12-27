@@ -45,7 +45,7 @@ export default
             Each individual who participates in the competition in order to be eligible for
             the finals / prizes must be:
             <li>
-                at least thirteen (13) years of age and not more than nineteen (19) years of age
+                not more than nineteen (19) years of age
             </li>
             <li>
                 a citizen of the Republic of India
