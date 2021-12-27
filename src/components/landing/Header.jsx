@@ -147,9 +147,9 @@ const LandingHeader = ({ UTMSource = null }) => {
         <React.Fragment>
             <HeaderContainer>
                 <div className="container header-container">
-                    <div>
-                        <div className="flex flex-wrap  mx-0">
-                            <div className="md:w-2/3 px-4">
+                    <div className="w-full">
+                        <div className="flex flex-wrap">
+                            <div className="w-full md:w-2/3 px-4">
                                 <Pulse>
                                     <h1>
                                         <span style={{ color: '#FF6F00'}}>Young Hackers Are Born Here,</span><br/>
@@ -166,7 +166,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                                         </span>
                                     </p>
                                 </Fade>
-                                <div className="mt-4 px-2">
+                                <div className="mt-4 md:px-2">
                                     <div className="text-3xl mb-2 font-semibold text-primary">
                                         InCTF Jr Qualifiers 2021
                                     </div>

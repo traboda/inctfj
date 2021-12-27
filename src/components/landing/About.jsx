@@ -64,7 +64,7 @@ const LandingAboutInCTF = () => (
             <div className="md:hidden flex justify-center mb-6">
                 <div className="rounded-lg p-2 bg-blue-100" style={{ maxWidth: '100%', width: '1100px' }}>
                     <div className="flex flex-wrap items-center">
-                        <div className="md:w-4/5 px-3">
+                        <div className="w-full md:w-4/5 px-3">
                             Have you got stuck? Need Help? <wbr />
                             <span className="inline-block">
                                 Join our discord server, ask your doubts & get support from our experts.
@@ -99,7 +99,7 @@ const LandingAboutInCTF = () => (
                         and perhaps a platform to showcase their talent and get recognized & rewarded.
                     </p>
                 </div>
-                <div className="md:w-1/3 flex justify-end items-center p-3">
+                <div className="md:w-1/3 flex justify-end items-center p-2">
                     <div>
                         <HighlightFeature>
                             National Level Cyber Security <wbr /> <span>Talent Incubation</span>
