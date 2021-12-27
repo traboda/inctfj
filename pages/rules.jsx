@@ -62,7 +62,7 @@ const RulePage = () => {
                         Each individual who participates in the competition (“Participant”) in order to be eligible for the finals / prizes must be:
                     </p>
                     <ul>
-                        <li>at least thirteen (13) years of age and not more than nineteen (19) years of age upon your date of registration for the Contest on the Contest website.</li>
+                        <li>at least twelve (12) years of age and not more than nineteen (19) years of age upon your date of registration for the Contest on the Contest website.</li>
                         <li>a citizen of the Republic of India</li>
                         <li>must not have completed 12th or equivalent grade of school.</li>
                     </ul>
@@ -96,6 +96,60 @@ const RulePage = () => {
                         learning and practice, however, they shall not be eligible for qualification to the finals
                         or for any prizes.
                     </p>
+                    <h2>Qualification to National Finals</h2>
+                    <p>An eligible participant may qualify for the national-level finals of the InCTF Junior, through following means - </p>
+                    <h3>(1) Automatic Qualification</h3>
+                    <p>
+                        An eligible participant shall automatically qualify for the national-level finals of InCTF Junior,
+                        if she/he completes ANY ONE of the following -
+                    </p>
+                    <ul>
+                        <li><b>Finishes in Top 50</b> - Finishes in the Top 50 of the scoreboard for the qualifiers.</li>
+                        <li><b>100% Completion</b> - Completes (and successfully submits flags for) all challenges in the qualifiers</li>
+                    </ul>
+                    <h3>(2) State/Regional Quota for Qualifications</h3>
+                    <p>
+                        In order to promote diversity and provide equitable opportunities for participants from various regions,
+                        in addition to the participants who qualified through (1), the following
+                        state/regional quota shall be available for eligible participants from each state/regions for
+                        qualifying for the national-level finals -
+                    </p>
+                    <ul>
+                        <li><b>Top 10 in Resident State</b> - Top 10 participants from each state in the
+                            qualifiers in addition to those qualified already through (1)
+                        </li>
+                        <li>
+                            <b>Top 10 in Resident Country (for NRI Students)</b> -
+                            In case of eligible participants (Citizens of India) residing & studying outside India, Top 10 participants from
+                            each country in the qualifiers in addition to those qualified already through (1)
+                        </li>
+                    </ul>
+                    <h3>(3) Shakti25 - Women in CyberSecurity Quota for Qualifications</h3>
+                    <p>
+                        InCTF Junior is committed to inspiring, upskilling, and nurturing young women talents in
+                        cyber-security, and providing them an empowering platform to showcase their talents. To promote
+                        and provide equitable opportunities for women participants,  the following special quota is
+                        available for eligible women participants for qualifying for the national-level finals -
+                    </p>
+                    <ul>
+                        <li>
+                            <b>Shakti25 (Top 25 Women Participants)</b> - Top 25 Women Participants in qualifiers
+                            round in addition to those qualified from (1) & (2)
+                        </li>
+                    </ul>
+                    <h4>(4) Qualification for Home-Schooling & Self-Study Students</h4>
+                    <p>
+                        InCTF Junior is open and inclusive programme, and we encourage all young students to participate in it,
+                        regardless of whether they are enrolled in a traditional schooling system. However, such participants
+                        need to inform the organizers and need to complete verification for being eligible. Once eligible,
+                        these participants will have the following special quota for qualifying for the national-level finals -
+                    </p>
+                    <ul>
+                        <li>
+                            <b>Top 10 Home-Schooling Students</b> - Top 10 home-schooling/private-tutored participants
+                            in the qualifiers in addition to (1), (2) & (3)
+                        </li>
+                    </ul>
                     <h2>Cheating</h2>
                     <ul>
                         <li>

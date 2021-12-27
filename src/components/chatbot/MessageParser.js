@@ -12,13 +12,14 @@ class MessageParser {
       // Function to log question asked by user in supabase.
       const questionAsked = async () => {
         if(message.length !== 0) {
-          const { data, error } = await supabase
-          .from('Questions')
-          .insert([
-            { Questions: message },
-          ], { returning: "minimal" })
-
-          if(error) console.log(error);
+          if(supabase) {
+            const { data, error } = await supabase
+                .from('Questions')
+                .insert([
+                  { Questions: message },
+                ], { returning: "minimal" })
+            if(error) console.log(error);
+          }
         }
       }
 
