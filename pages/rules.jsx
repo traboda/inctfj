@@ -116,12 +116,12 @@ const RulePage = () => {
                     </p>
                     <ul>
                         <li><b>Top 10 in Resident State</b> - Top 10 participants from each state in the
-                            qualifiers in addition to those qualified already through (1)
+                            qualifiers with a minimum of 3500 points in addition to those qualified already through (1)
                         </li>
                         <li>
                             <b>Top 10 in Resident Country (for NRI Students)</b> -
                             In case of eligible participants (Citizens of India) residing & studying outside India, Top 10 participants from
-                            each country in the qualifiers in addition to those qualified already through (1)
+                            each country in the qualifiers with a minimum of 3500 points in addition to those qualified already through (1)
                         </li>
                     </ul>
                     <h3>(3) Shakti25 - Women in CyberSecurity Quota for Qualifications</h3>
@@ -147,7 +147,7 @@ const RulePage = () => {
                     <ul>
                         <li>
                             <b>Top 10 Home-Schooling Students</b> - Top 10 home-schooling/private-tutored participants
-                            in the qualifiers in addition to (1), (2) & (3)
+                            in the qualifiers with a minimum of 3500 points in addition to (1), (2) & (3)
                         </li>
                     </ul>
                     <h2>Cheating</h2>
