@@ -86,6 +86,7 @@ const customConfig = {
             "/organizers": { page: "/organizers" },
             "/championship": { page: "/championship" },
             "/talent-incubation": { page: "/talent-incubation" },
+            "/writeups": { page: "/writeups" },
             ...writeups,
             ...posts
         }
