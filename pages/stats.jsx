@@ -34,15 +34,15 @@ const Stats = () => {
     const [year, setYear] = useState(2021);
 
     const editions = [
-        {
-            year: 2021,
-            stats: {
-                totalRegistrations: 458,
-                totalStates: 16,
-                totalFinalists: 50,
-            },
-            leaderboard: qualifiers21,
-        },
+        // {
+        //     year: 2021,
+        //     stats: {
+        //         totalRegistrations: 458,
+        //         totalStates: 16,
+        //         totalFinalists: 50,
+        //     },
+        //     leaderboard: qualifiers21,
+        // },
         {
             year: 2019,
             stats: {
