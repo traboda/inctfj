@@ -166,6 +166,15 @@ const LandingHeader = ({ UTMSource = null }) => {
                                         </span>
                                     </p>
                                 </Fade>
+                                <div className="mt-4 px-2">
+                                    <div className="text-3xl mb-2 font-semibold text-primary">
+                                        InCTF Jr Qualifiers 2021
+                                    </div>
+                                    <div className="text-3xl font-semibold">6PM, 28th Dec to 6PM, 30th Dec (48 Hrs.)</div>
+                                    <div className="text-2xl mt-2">
+                                        Link to contest will be posted soon.
+                                    </div>
+                                </div>
                             </div>
                             <div className="md:w-1/3 my-4 md:my-0 px-3">
                                 <img
@@ -177,47 +186,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                                 />
                             </div>
                         </div>
-                        <div className="flex flex-wrap mx-0">
-                            <div className="md:w-1/3 pr-4 pl-4 w-full py-5 md:py-0 px-2">
-                                <HowToRegister onClick={() => window.open('https://youtu.be/twS3pzPjRzA', '_blank')}>
-                                    <div className="how_to_register_cover">
-                                        <div className="text-center">
-                                            <div>How to Get Started?</div>
-                                            <img
-                                                alt="Play Video"
-                                                draggable="false" className="inline-block"
-                                                src={require('../../assets/images/icons/play_button.png')}
-                                            />
-                                        </div>
-                                    </div>
-                                    <img
-                                        alt="how to Register"
-                                        draggable="false"
-                                        src={require('../../assets/images/covers/how_to_register.JPG')}
-                                    />
-                                </HowToRegister>
-                            </div>
-                            <div className="md:w-2/3 w-full md:px-2 px-0 py-4">
-                                {iframeError ?
-                                    <div>
-                                        <p>
-                                            Your browser had some issues loading the registration form. So kindly use the links below.
-                                        </p>
-                                        <a id="header-register-button" className="mr-2" href="https://traboda.com/contest/inctfj-21-lr">
-                                            Register for Learning Round
-                                        </a>
-                                        <a id="header-register-button" href="https://traboda.com/contest/inctfj-21-lr">
-                                            Login to Dashboard
-                                        </a>
-                                    </div> :
-                                    <IFrameContainer>
-                                        <Iframe
-                                            onError={() => setIframeError(true)}
-                                            src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame?color=000&primary=F13F17&primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
-                                        />
-                                    </IFrameContainer>}
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </HeaderContainer>

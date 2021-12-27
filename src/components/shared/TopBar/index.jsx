@@ -203,25 +203,37 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                     ))}
                                     <TopBarSearch />
                                 </nav>
-                                <button
-                                    className="px-8 py-4 rounded-lg font-semibold bg-primary hover:bg-blue-800 shadow hover:shadow-xl text-white ml-3"
-                                    onClick={() => setShowRegCard(true)}
-                                >
-                                    Register <i className="fa fa-chevron-right"/>
-                                </button>
+                                <div className="text-right px-2">
+                                    <div className="text-lg font-semibold text-primary">
+                                        InCTF Jr Qualifiers 2021
+                                    </div>
+                                    <div className="font-semibold">28th to 30th Dec (6PM to 6PM, 48 Hrs.)</div>
+                                </div>
+                                {/*<button*/}
+                                {/*    className="px-8 py-4 rounded-lg font-semibold bg-primary hover:bg-blue-800 shadow hover:shadow-xl text-white ml-3"*/}
+                                {/*    onClick={() => setShowRegCard(true)}*/}
+                                {/*>*/}
+                                {/*    Register <i className="fa fa-chevron-right"/>*/}
+                                {/*</button>*/}
                             </TopbarInfoCard>
                         </div>
                     </div>
                 </div>
                 <div className="w-3/4 flex md:hidden items-center justify-end px-1">
-                    <TopbarInfoCard className="mr-3">
-                        <button
-                            onClick={() => setShowRegCard(true)}
-                            className="w-full px-5 py-4 font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl ml-3"
-                        >
-                            Register <i className="fa fa-chevron-right"/>
-                        </button>
-                    </TopbarInfoCard>
+                    <div className="text-right px-2">
+                        <div className="font-semibold text-primary">
+                            InCTF Jr Qualifiers 2021
+                        </div>
+                        <div>Starts 6PM, 28th Dec</div>
+                    </div>
+                    {/*<TopbarInfoCard className="mr-3">*/}
+                    {/*    <button*/}
+                    {/*        onClick={() => setShowRegCard(true)}*/}
+                    {/*        className="w-full px-5 py-4 font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl ml-3"*/}
+                    {/*    >*/}
+                    {/*        Register <i className="fa fa-chevron-right"/>*/}
+                    {/*    </button>*/}
+                    {/*</TopbarInfoCard>*/}
                     <button onClick={onOpen} className="transition" style={{ width: 46, height: 46 }}>
                         <i className={`${showMenu ? 'fa fa-times' : 'fa fa-bars'} text-2xl transition`}/>
                     </button>
