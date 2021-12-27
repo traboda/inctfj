@@ -171,8 +171,15 @@ const LandingHeader = ({ UTMSource = null }) => {
                                         InCTF Jr Qualifiers 2021
                                     </div>
                                     <div className="text-3xl font-semibold">6PM, 28th Dec to 6PM, 30th Dec (48 Hrs.)</div>
-                                    <div className="text-2xl mt-2">
-                                        Link to contest will be posted soon.
+                                    <a
+                                        href="https://app.traboda.com/contest/inctf-jr-21-quals/"
+                                        className="text-2xl px-5 py-4 inline-block font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl my-3"
+                                    >
+                                        Play Qualifiers <i className="fa fa-chevron-right"/>
+                                    </a>
+                                    <div style={{ width: '450px', maxWidth: '100%' }} className="text-sm">
+                                        No separate registration required  those already registered for learning round.
+                                        New participants can register. Registrations close shortly.
                                     </div>
                                 </div>
                             </div>
