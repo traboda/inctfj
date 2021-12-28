@@ -39,7 +39,7 @@ const FameCardWrap = styled.div`
    }
 `;
 
-const FameCard = ({ rank, username, state, points, institution, quota }) => {
+const FameCard = ({ rank, username, state, points, institution, company, quota }) => {
 
     const getStateName = () => {
         if(IndianStates.filter((s) => s.value === state).length > 0){
@@ -55,6 +55,7 @@ const FameCard = ({ rank, username, state, points, institution, quota }) => {
                     {rank}.  @{username}
                 </h4>
                 <div>
+                    {company && <div style={{ fontSize: '14px', color: '#333' }} className="line-height-1 mb-1">{company}</div>}
                     {institution && <div style={{ fontSize: '14px', color: '#333' }} className="line-height-1 mb-1">{institution}</div>}
                     {state && <div>{getStateName()}</div>}
                 </div>

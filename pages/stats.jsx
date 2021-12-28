@@ -5,6 +5,7 @@ import Base from "../src/components/shared/Base";
 import TopBar from "../src/components/shared/TopBar";
 
 import qualifiers21 from '../src/data/hall-of-fame/2021-quals';
+import qualifiersPro21 from '../src/data/hall-of-fame/2021-quals-pro';
 
 import YearlyLeaderboard from "../src/components/HallOfFame/YearlyLeaderboard";
 import Footer from "../src/components/shared/Footer";
@@ -34,15 +35,16 @@ const Stats = () => {
     const [year, setYear] = useState(2021);
 
     const editions = [
-        // {
-        //     year: 2021,
-        //     stats: {
-        //         totalRegistrations: 458,
-        //         totalStates: 16,
-        //         totalFinalists: 50,
-        //     },
-        //     leaderboard: qualifiers21,
-        // },
+        {
+            year: 2021,
+            stats: {
+                totalRegistrations: 458,
+                totalStates: 16,
+                totalFinalists: 50,
+            },
+            leaderboard: qualifiers21,
+            proLeaderboard: qualifiersPro21
+        },
         {
             year: 2019,
             stats: {
