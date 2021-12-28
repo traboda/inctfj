@@ -606,13 +606,5 @@ export default [
         "state": "IN-TG",
         "points": 139,
         "quota": "state"
-    },
-    {
-        "rank": 77,
-        "username": "phantom",
-        "institution": "Sardar Vallabhbhai National Institute of Technology (SVNIT), Surat",
-        "state": "IN-GJ",
-        "points": 10,
-        "quota": "state"
     }
 ]
