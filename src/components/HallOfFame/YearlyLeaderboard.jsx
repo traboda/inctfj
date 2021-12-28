@@ -106,8 +106,8 @@ const YearlyLeaderboard = ({ year, leaderboard, proLeaderboard, schools, champio
         enableQuotaFilter={false}
         enableStateFilter={false}
         labels={{
-            title: 'Teams Qualified for InCTF Pro Finals',
-            description: 'Top participants from the qualifiers round who are selected for the Finals of InCTF Pro.'
+            title: 'Teams Qualified for InCTF Professionals Finals',
+            description: 'Top participants from the qualifiers round who are selected for the Finals of InCTF Professionals.'
         }}
     />
     <Leaderboard
