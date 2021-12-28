@@ -64,7 +64,7 @@ const FameCard = ({ rank, username, state, points, institution, company, quota }
                 <div>
                     <div className="text-xl"><b>{points}</b></div>
                     {quota && (<div className="mt-2">
-                        <b>{quota === 'self' ? 'Self Study Team' : quota === 'state' ? `Top 5 (${getStateName()})` : 'Top 30'}</b>
+                        <b>{quota === 'women' ? 'Women-Only Team' : quota === 'self' ? 'Self Study Team' : quota === 'state' ? `Top 5 (${getStateName()})` : 'Top 30'}</b>
                     </div>)}
                 </div>
             </div>

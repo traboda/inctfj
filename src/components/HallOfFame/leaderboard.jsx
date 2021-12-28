@@ -155,6 +155,7 @@ const Leaderboard = ({ leaderboard, enableStateFilter = true, enableQuotaFilter 
                                         { value: 'top30', label: "National Top 30"},
                                         { value: 'state', label: "State Top 5"},
                                         { value: 'self', label: "Top 25 Self Study Teams"},
+                                        { value: 'women', label: "Top 25 Women-Only Teams"},
                                     ]}
                                     menuPlacement="auto"
                                     placeholder="Filter by Qualification Type"
