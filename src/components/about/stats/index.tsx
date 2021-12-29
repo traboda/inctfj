@@ -44,14 +44,14 @@ const INCTFStats = ({stats}) => {
                 InCTF 21 is one of the world's largest CTF
             </h2>
             <StatsCounter/>
-            <div className="flex flex-wrap items-center">
+            {/* <div className="flex flex-wrap items-center">
                 <div className="md:w-1/3 order-2 md:order-1 w-full">
                     <AboutGender data={stats}/>
                 </div>
                 <div className="md:w-1/3 w-full order-1 md:order-2 md:mt-0 mt-6">
                     <StateWiseRegistrationMap data={stats}/>
                 </div>
-            </div>
+            </div> */}
         </StatsSection>
     );
 
