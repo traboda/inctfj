@@ -1,0 +1,20 @@
+title: Looper
+id: 1072
+category: Pwn
+difficulty: Medium
+content: |
+  **Author**: [1nt3rc3pt0r](https://twitter.com/_1nt3rc3pt0r_)
+
+  #### Initial Analyisis
+
+  Looking at the challenge you can observe it geting redirected `http://gc1.eng.run:32357/index.php?loop=0` to `http://gc1.eng.run:32357/index.php?loop=10` and there exist a encoded flag(`ivyiw{1m5_p3773e_70_h1l3_50i3_71b3}`) and and key `vigenere` is set to 1 at the localstorage of Browser which gives us the hint that used cipher to decode flag is vignere.
+
+  #### solution
+
+  So from our initial analysis we know we have to get a key to decode the `vigenere` cipher and the key is hidden in one of the requests.Now using the burpsuit we can navigate throught each and every requests starting from `/index.php?loop=0` to `/index.php?loop=10` at `/index.php?loop=5` in the Script tag the key getting added to localstorage.
+
+  ```
+  <script>window.localStorage.setItem('key', 'AIWPRTON');window.location.href='index.php?loop=6'</script>
+  ```
+
+  Now we have key and cipher text decoding them gives us the flag.
