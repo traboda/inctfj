@@ -1,4 +1,11 @@
 {
+
+"/writeup/1085": {
+    "page": "/writeup/[id]",
+    "query": { "id": 1085 }
+  }
+,
+
 "/writeup/1030": {
     "page": "/writeup/[id]",
     "query": { "id": 1030 }
@@ -26,6 +33,12 @@
 "/writeup/1034": {
     "page": "/writeup/[id]",
     "query": { "id": 1034 }
+  }
+,
+
+"/writeup/1035": {
+    "page": "/writeup/[id]",
+    "query": { "id": 1035 }
   }
 ,
 
@@ -98,6 +111,12 @@
 "/writeup/1047": {
     "page": "/writeup/[id]",
     "query": { "id": 1047 }
+  }
+,
+
+"/writeup/1048": {
+    "page": "/writeup/[id]",
+    "query": { "id": 1048 }
   }
 ,
 
@@ -191,9 +210,57 @@
   }
 ,
 
+"/writeup/1066": {
+    "page": "/writeup/[id]",
+    "query": { "id": 1066 }
+  }
+,
+
+"/writeup/1067": {
+    "page": "/writeup/[id]",
+    "query": { "id": 1067 }
+  }
+,
+
+"/writeup/1068": {
+    "page": "/writeup/[id]",
+    "query": { "id": 1068 }
+  }
+,
+
 "/writeup/1071": {
     "page": "/writeup/[id]",
     "query": { "id": 1071 }
+  }
+,
+
+"/writeup/1073": {
+    "page": "/writeup/[id]",
+    "query": { "id": 1073 }
+  }
+,
+
+"/writeup/1074": {
+    "page": "/writeup/[id]",
+    "query": { "id": 1074 }
+  }
+,
+
+"/writeup/1075": {
+    "page": "/writeup/[id]",
+    "query": { "id": 1075 }
+  }
+,
+
+"/writeup/1076": {
+    "page": "/writeup/[id]",
+    "query": { "id": 1076 }
+  }
+,
+
+"/writeup/1077": {
+    "page": "/writeup/[id]",
+    "query": { "id": 1077 }
   }
 ,
 
@@ -218,11 +285,5 @@
 "/writeup/1084": {
     "page": "/writeup/[id]",
     "query": { "id": 1084 }
-  }
-,
-
-"/writeup/1085": {
-    "page": "/writeup/[id]",
-    "query": { "id": 1085 }
   }
 }
