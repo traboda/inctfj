@@ -5,7 +5,7 @@ difficulty: Easy
 content: |
   **Author**: [Ad0lphus](https://twitter.com/Ad0lphu5)
 
-  Its a simple implementation of mono alphabetic encryption. We just need to reverse the encrypt to get teh flag
+  Its a simple implementation of mono alphabetic encryption. We just need to reverse the encrypt function to get the flag
 
   ```python=
 
