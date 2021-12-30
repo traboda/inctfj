@@ -1,0 +1,52 @@
+title: Atomic Swap
+id: 1042
+category: Reversing
+difficulty: Medium
+content: |
+  **Author**: [AmunRha](https://twitter.com/amun_rha)
+
+  The first function `shuffle1()` swaps the first half of the flag with the second half of the flag.
+  The second function `shuffle2()` swaps the output of `shuffle1()` further by swapping the the subsequent halfs in a set order.
+  The output of `shuffle2()` is then encrypted using `encrypt()` which just xors it with the given key list.
+  The final output is encoded to bytes and printed out.
+  Reversing the order of the encryption will provide with the flag.
+
+
+  Here is the solver for the challenge
+  ```python=
+  enc_flag = b'@\x13Z1Z\x18:E(\x03\x1b\x18\x18:\x01\x14\x1d\x1a\x0f\x11\x15\x1e\x1aF\x1a\x19Y\x17Z\x02\x02'
+
+  secrets_be_like = [0x74, 0x77, 0x69, 0x6e, 0x6b, 0x6c, 0x65, 0x74, 0x77, 0x69, 0x6e, 0x6b, 0x6c, 0x65, 0x6c, 0x69, 0x74, 0x74, 0x6c, 0x65, 0x73, 0x74, 0x61, 0x72]
+
+  def pepe_gaga(flag):
+      t1 = ""
+      for i in range(len(flag)):
+          t1 += chr(flag[i])
+      return t1.encode('utf8')
+
+  def decrypt(flag):
+      t1 = []
+      for i in range(len(flag)):
+          t1.append(flag[i] ^ secrets_be_like[i%len(secrets_be_like)])
+      return t1
+
+      
+  def deshuffle2(flag):
+      t1 = flag[:len(flag)//2]
+      t2 = flag[len(flag)//2:]
+      t3 = t2[:len(t2)//2] + t1[len(t1)//2:]
+      t4 = t1[:len(t1)//2] + t2[len(t2)//2:]
+      t5 = t4 + t3
+      return t5
+      
+  def deshuffle1(flag):
+      t1 = flag[len(flag)//2+1:] + flag[:len(flag)//2+1]
+      return t1
+
+
+  res = pepe_gaga(deshuffle1(deshuffle2(decrypt(enc_flag))))
+  print(res)
+  ```
+  **Flag**: inctfj{1_just_m4d3_1t_4nn0y1ng}
+
+

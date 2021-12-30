@@ -1,0 +1,9 @@
+title: Roter
+id: 1066
+category: Misc
+difficulty: Easy
+content: |
+  **Author**: [Aneesh](https://twitter.com/mal_f0y)
+
+  The given secret text is encoded using rot algorithm, for getting the flag you can just rotate the letter with key 20
+

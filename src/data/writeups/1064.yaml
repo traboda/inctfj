@@ -1,7 +1,7 @@
 title: Oh_No_Hastad
 id: 1064
 category: Crypto
-difficulty: Beginner
+difficulty: Hard
 content: |
   This challenge is a simple attack which is Hastad's Broadcast attack 
   so bascially CRT (chinese remainder is used to solving congruent equations)

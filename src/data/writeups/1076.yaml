@@ -1,0 +1,15 @@
+title: BT_Encryption
+id: 1076
+category: Misc
+difficulty: Easy
+content: |
+  **Author**: [Ad0lphus](https://twitter.com/Ad0lphu5)
+
+  you can decode the braille text using any online decoder
+
+  ![](https://i.imgur.com/YRz14Hc.png)
+
+  **Flag**: inctfj{BRAILLE_TEXT_IS_EASY_TO_DECRYPT_RIGHT}
+
+
+  

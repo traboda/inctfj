@@ -1,0 +1,17 @@
+title: crackme101
+id: 1048
+category: Reversing
+difficulty: Easy
+content: |
+  **Author**: [Ad0lphus](https://twitter.com/Ad0lphu5)
+
+    when you load the binary in IDA, 
+    ![](https://i.imgur.com/JjUI1UX.png)
+
+    +  authentication input is a string which is splitted and stored in different variables
+    +  add those splitted string parts and give the concatenated string (InCTFj_is_l0v3_<3) as input to get the flag.
+
+    so input should be ``InCTFj_is_l0v3_<3``
+
+
+    ![](https://i.imgur.com/yTJ768j.png)

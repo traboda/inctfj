@@ -1,7 +1,7 @@
 title: Leaky Pipes
 id: 1071
 category: Pwn
-difficulty: Easy
+difficulty: Hard
 content: |
 **Author**: [d1g174l_f0r7r355](https://twitter.com/BhaskaraShravya)
 This was one of the hard challenges I made for inctfj qualifiers. It is based on format strings. I will try to explain all the concepts required and used in this challenge. 

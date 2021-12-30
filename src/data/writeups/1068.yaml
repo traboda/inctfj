@@ -1,0 +1,13 @@
+title: Askey
+id: 1068
+category: Misc
+difficulty: Easy
+content: |
+  **Author**: [Aneesh](https://twitter.com/mal_f0y)
+
+  from the chall file, we can see some binary number, we can convert that into a decimal number, and then we can figure out that these are ascii value
+
+  converting the ASCII to letters gives the flag
+
+
+  
