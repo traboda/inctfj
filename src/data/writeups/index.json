@@ -234,6 +234,12 @@
   }
 ,
 
+"/writeup/1072": {
+    "page": "/writeup/[id]",
+    "query": { "id": 1072 }
+  }
+,
+
 "/writeup/1073": {
     "page": "/writeup/[id]",
     "query": { "id": 1073 }
@@ -285,5 +291,10 @@
 "/writeup/1084": {
     "page": "/writeup/[id]",
     "query": { "id": 1084 }
+  },
+  
+"/writeup/1087": {
+    "page": "/writeup/[id]",
+    "query": { "id": 1087 }
   }
 }

