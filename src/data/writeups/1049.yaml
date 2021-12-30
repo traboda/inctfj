@@ -1,0 +1,34 @@
+title: Hashed
+id: 1049
+category: Reversing
+difficulty: Beginner
+content: |
+  **Author**: [Revathi](https://twitter.com/Revathi01740772)
+
+  There are set of strings. In the first for loop ``1`` is replaced with ``0``.
+
+  In the next for loop, output strings after doing above replacement are combined with ``z`` in between them.
+
+  In the final string, ``z`` is replaced with ``a``. This final string is compared with our input hash.
+
+  ``04a5a2af0eb53473a4a2efb3dafa02df`` is the hash we get. Decrypting that in crackstation we get the string ``mockingbird78209``.
+
+  ```python= 
+  l=["14","5","2","f1eb53473","4","2efb3d","f","12df"]
+  join_char1="z"
+  join_char2=""
+  s=join_char1.join(l)
+  l1=list(s)
+  hash_str=[]
+  for i in l1:
+      if(i=="1"):
+          hash_str.append("0")
+      elif(i=="z"):
+          hash_str.append("a")
+      else:
+          hash_str.append(i)
+  print(join_char2.join(hash_str))
+  ```
+  **Flag**: inctfj{mockingbird78209}
+
+

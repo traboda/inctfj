@@ -1,0 +1,12 @@
+title: Under The Hood
+id: 1057
+category: Web
+difficulty: Easy
+content: |
+  **Author**: [Yaswant](https://twitter.com/Az3z3l)
+
+  At first when we visit the page, we can see the animation of a vehicle. If we view the page source, we can see that they are using a stylesheet `carparts.css`.
+
+  When we check there we can see the flag under the styling of .top .hood.
+
+

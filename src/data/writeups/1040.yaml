@@ -1,0 +1,18 @@
+title: Finding Data
+id: 1040
+category: Forensics
+difficulty: Easy
+content: |
+**Author**: [v1Ru5](https://twitter.com/SrideviKrishn16)
+
+Use 'binwalk' to extract the embedded password protected zip file.
+
+![](https://i.imgur.com/HSmvZRg.png)
+
+Analyze the given image using **exiftool**.
+
+![](https://i.imgur.com/0yAVUXR.png)
+
+Use **w1Nn3Rsn3vERqu1T** as the password of the zip file.
+
+**Flag**: inctfj{Th1S_1s_wh4T_u_w4NT3d}

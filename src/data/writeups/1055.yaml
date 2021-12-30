@@ -1,0 +1,17 @@
+title: Big Shop
+id: 1055
+category: Web
+difficulty: Easy
+content: |
+  **Author**: [Aneesh](https://twitter.com/mal_f0y)
+
+  #### Analysis
+
+  first we have to login and then we can see two products `flag` and `emm` with 200 and 100 price respectively.We can add both the products to the cart but we can't buy `flag` because it shows you have not enough money
+
+  #### Solution
+
+  But there is an idor vulnerablity in the buying requests ,we can change the `pid=1` and it will buy the flag
+  then we can open flag
+
+  **Flag**: inctfj{cl3ver_w4y_t0_g3t_1t}

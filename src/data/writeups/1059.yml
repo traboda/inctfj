@@ -1,0 +1,60 @@
+title: exclusive-OR
+id: 1059
+category: Crypto
+difficulty: Beginner
+content: |
+  **Author**: [Sahith](https://twitter.com/2TAP__)
+
+  Given that the length of the flag is 24 bytes.
+
+  The encryption algorithm in provided in python as a chall.py file:
+
+  ```py
+  from pwn import xor
+  from random import randint
+  from secret import pt
+
+  pt = [pt[i : i + 16].encode() for i in range(0, len(pt), 16)]
+  ct = b''.join([xor(pt[i], chr(randint(0, 256)).encode()) for i in range(len(pt))]).hex()
+
+  with open('output.txt', 'w') as f:
+      f.write(ct)
+
+  ```
+
+  And the output.txt file has the ciphertext
+
+  ```
+  9bfdb1b2aae1e3e1aaffb3fea6b2b4fb59450d4c0d5e44434a41480d4f545948e2ffa7edeeb4b6f5a9f1e2e0aaf1e2b4a4d1a3daf89dabd3a1c9a4d7b9cef3d3757e774d267c764d61237f627e216f
+  ```
+
+  Looking into chall.py, we can see that:
+
+  -> the plaintext has been divided into blocks of 16 bytes each.
+
+  -> and a random single byte has been used as a key to xor against every block.
+
+  Exploit:
+
+  We can convert the given hexstring to bytes and then seperate them into blocks of 16 bytes each.
+
+  Then bruteforce the single byte used for every block and check if the flag format exists in the plaintext.
+
+  Script:
+
+  ```py
+  from pwn import xor
+
+  ct = bytes.fromhex(
+      "9bfdb1b2aae1e3e1aaffb3fea6b2b4fb59450d4c0d5e44434a41480d4f545948e2ffa7edeeb4b6f5a9f1e2e0aaf1e2b4a4d1a3daf89dabd3a1c9a4d7b9cef3d3757e774d267c764d61237f627e216f"
+  )
+  for c in [ct[16 * i : 16 * i + 16] for i in range(len(ct) // 16 + 1)]:
+      for k in [chr(i).encode() for i in range(256)]:
+          x = xor(c, k)
+          if b"inctfj" in x or b"_" in x and b"}" in x:
+              print(x.decode(), end="")
+              break
+  ```
+
+  **Flag**: inctfj{s1ngle_4nd_s1mpl3}
+ 

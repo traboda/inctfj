@@ -1,0 +1,15 @@
+title: ACE
+id: 1030
+category: Crypto
+difficulty: Beginner
+content: |
+  **Author**: Pavani
+
+  nothing much to do...
+  see the given descrption and just google the things ... then u will get to know that it is enigma machine ...
+  Now just use enigma machine to decrypt the text.
+
+  ![](https://i.imgur.com/scHWHbN.png)
+
+  **Flag**: inctfj{QUALIFIED TO BECOME AN ACE}
+

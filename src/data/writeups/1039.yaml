@@ -1,0 +1,20 @@
+title: Corrupt
+id: 1039
+category: Forensics
+difficulty: Easy
+content: |
+**Author**: [Arya Arun](https://twitter.com/aryaarun_)
+
+The given zip file is corrupted.
+On opening the file in a hex editor, we can find the corrupted header.
+![](https://i.imgur.com/LS35etN.png)
+Correct the file header from `70 4B 05 06` to `50 4B 03 04`
+
+Then, on unzipping we get a qr code.
+![](https://i.imgur.com/NKoqU5I.png)
+
+Scanning the qr code will give a b64 encoded text: `aW5jdGZqe3k0eXlfaEVyRSdzX3kwdXJfZkxhR30=`
+
+Decoding it will give the flag.
+
+**Flag**: inctfj{y4yy_hErE’s_y0ur_fLaG}

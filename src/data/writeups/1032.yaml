@@ -1,0 +1,16 @@
+title: Easy Peasy
+id: 1032
+category: Forensics
+difficulty: Easy
+content: |
+**Author**: [Arya Arun](https://twitter.com/aryaarun_)
+
+Given is a jpg file.
+
+Analyse it using jsteg tool.
+`jsteg reveal easy-peasy.jpg`
+
+This will reveal the flag.
+![](https://i.imgur.com/3LPv5J6.png)
+
+**Flag**: inctfj{it_wAs_eAsY_wAsN’t_it??}

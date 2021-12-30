@@ -1,0 +1,15 @@
+title: White House
+id: 1038
+category: Forensics
+difficulty: Easy
+content: |
+**Author**: [P4BLØ](https://twitter.com/GouthamRajesh5)
+
+We are given a text file and a base64 text "am9obiBjZW5hCg==". On decoding the text, we get `john cena`. 
+
+![](https://i.imgur.com/K5kMRw4.png)
+
+Use this as password for stegsnow to get the flag.
+![](https://i.imgur.com/crCbQZU.png)
+
+**Flag**: inctfj{Y0u_C4nT_533_M3}

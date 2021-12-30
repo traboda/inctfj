@@ -1,0 +1,26 @@
+title: Breaking Cookies
+id: 1054
+category: Web
+difficulty: Easy
+content: |
+  **Author**: [Aneesh](https://twitter.com/mal_f0y)
+
+  #### Analysis
+
+  After login in, we can see that its asks for an admin cookie
+  if we check we can see a cookie named ``user`` is there with a base64 encoded value
+
+  #### Solution 
+
+  we just have to decode the cookie we can see a JSON string like this
+
+  ``{"username":"username","admin":"False"}
+  ``
+
+  we just have to make the admin true like this
+
+  ``{"username":"username","admin":"True"}
+  ``
+  then base64 encode it and give it as the cookie value
+
+  

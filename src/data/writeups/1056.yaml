@@ -1,0 +1,12 @@
+title: Vault TF
+id: 1056
+category: Web
+difficulty: Easy
+content: |
+  **Author**: [Rohit](https://twitter.com/RohitNarayana11)
+
+  #### Solving 
+
+  At first you can see a page with `May be the admin is hiding something` written. and below that is a button with `Access Secrets`. When we click on that button, it will show us a message that `Well something tells me that you are not the admin`. If we go to the network tab, we can see that it sends a request to the `/admin` endpoint when we click that button. When we check that request it sends a header with name `Admin` and its value `False`.
+  We can intercept the request and make the value `True` to get the flag
+

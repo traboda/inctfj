@@ -1,0 +1,45 @@
+title: Automated Annoyance
+id: 1044
+category: Reversing
+difficulty: Beginner
+content: |
+  **Author**: [AmunRha](https://twitter.com/amun_rha)
+
+  This is just another string compare challenge, but this time every nibble is checked rather than every byte.
+  And all the checks are inside multiple functions making it harder to navigate in a decompiler/disassembler.
+  Once the player figures out the the elements in the array represent the nibbles of the flag, you can automate the whole process by joining the nibbles to make out bytes, hence retrieving the flag.
+
+  Every `pepega_xx()` check does the same thing with a slight difference on their indexes, this is the template for all `pepega_xx()`,
+  ```cpp=
+  int pepega_X(char byte){
+      uint8_t a = byte >> 4;
+      uint8_t b = byte & 0xF;
+      if (a != final[X*2] || b != final[(X*2)+1]){
+          return 0;
+      }
+      return 1;
+  }
+  ```
+  The function basically takes in a byte like `0xab` and checks if the first nibble is equal to the stored one and if the second nibble is equal to the stored on which is in the array `final`, the two nibbles in this case are `0xa` and `0xb`
+
+  This happens for every byte, write a python script to join all those nibbles together and u get your flag.
+
+  ```python=
+  enc_flag = [0x6, 0x9, 0x6, 0xe, 0x6, 0x3, 0x7, 0x4, 0x6, 0x6, 0x6, 0xa, 0x7, 0xb, 0x6, 0xc, 0x3, 0x3, 0x3, 0x4, 0x7, 0x2, 0x6, 0xe, 0x3, 0x1, 0x6, 0xe, 0x6, 0x7, 0x5, 0xf, 0x6, 0x2, 0x3, 0x1, 0x7, 0x4, 0x5, 0xf, 0x6, 0xd, 0x3, 0x4, 0x6, 0x7, 0x3, 0x1, 0x6, 0x3, 0x5, 0xf, 0x3, 0x1, 0x7, 0x3, 0x5, 0xf, 0x7, 0x5, 0x7, 0x3, 0x3, 0x3, 0x6, 0x6, 0x7, 0x5, 0x6, 0xc, 0x7, 0xd]
+
+
+
+  flag = []
+
+
+  for i in range(0, len(enc_flag), 2):
+      res = (enc_flag[i] << 4) | (enc_flag[i+1])
+      flag.append(chr(res))
+
+  flag = ''.join(flag)
+  print(flag)
+  ```
+
+  **Flag**: inctfj{l34rn1ng_b1t_m4g1c_1s_us3ful}
+
+

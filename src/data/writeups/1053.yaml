@@ -1,0 +1,40 @@
+title: JSOP
+id: 1053
+category: Web
+difficulty: Easy
+content: |
+  **Author**: [Aneesh](https://twitter.com/mal_f0y)
+
+  #### Analysis
+  We were given a flag checker website where can enter flag and it checks if it is right or wrong
+
+  On viewing the source we can see there some javascript code in the  page which is responsible for checking our input
+
+  ```js
+  function check(){
+                  value=input.value;
+                  let alnum='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789{}_'
+                  let index=['0x8', '0x5', '0xd', '0xb', '0x2', '0x0', '0x13', '0x6', '0x5', '0x3e','0x9','0x7', '0x3e', '0x1f', '0xb', '0x0', '0x37', '0xa', '0x37', '0x37', '0x13', '0x40', '0x40', '0x5', '0x9', '0xb', '0x1a', '0x38', '0x15', '0x6', '0x1a', '0x40', '0x12', '0x27', '0x1c', '0xe', '0x11', '0x13', '0x8', '0x37', '0xf', '0x40', '0x13', '0x13', '0x40', '0x7', '0x7', '0x8', '0x37', '0x12', '0x2', '0x40', '0xa', '0x34', '0x37', '0xd', '0x11', '0x37', '0x3f', '0x3f']
+                  flags=['','']
+                  for(i=0;i<60;i++){
+                      if(i%2===0)
+                          flags[0]+=alnum[parseInt(index[i],16)]
+                      else
+                          flags[1]+=alnum[parseInt(index[i],16)]    
+                      
+                    
+                  }
+                  if(flags[0]===value){
+                      alert(`found the flag ${flags[0]}`);
+                  }else{
+                      alert('note the flag')
+                  }
+  ```
+
+  we can see the inside the check() function with the letters it creates two flags and adding them to `flags` array
+  , and at last, it compares our input with the first value in the `flags` array.
+  So just have to find the first element in the flags array
+
+  #### Solution 
+  We can either set a breakpoint inside the check() function after the flags are created  and you can print it in the console or we can just run the js code up to the creation of the flags in the console and get the flag
+
