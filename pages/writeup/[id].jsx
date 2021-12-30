@@ -142,7 +142,7 @@ const WriteUpPage = ({ id }) => {
                     </div>
                     <div className="mt-4">
                         <a
-                            href={`https://app.traboda.com/contest/inctfj-21-lr/challenge/${data?.id}`}
+                            href={`https://app.traboda.com/challenge/${data?.id}`}
                             className="bg-blue-900 hover:bg-primary px-4 py-3 text-white rounded-lg"
                         >
                             Open Challenge <i className="fa fa-external-link ml-1" />
