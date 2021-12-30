@@ -3,8 +3,8 @@ id: 1037
 category: Forensics
 difficulty: Easy
 content: |
-**Author**: [Sai Sampath](https://www.linkedin.com/in/sai-sampath-863a7b1aa/)
-Open the png in stegsolve and view the image in different planes
-![](https://i.imgur.com/PJwJn8J.png)
+  **Author**: [Sai Sampath](https://www.linkedin.com/in/sai-sampath-863a7b1aa/)
+  Open the png in stegsolve and view the image in different planes
+  ![](https://i.imgur.com/PJwJn8J.png)
 
-**Flag**: inctfj{finally_u_found_me}
+  **Flag**: inctfj{finally_u_found_me}

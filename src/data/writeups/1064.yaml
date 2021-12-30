@@ -3,6 +3,7 @@ id: 1064
 category: Crypto
 difficulty: Hard
 content: |
+  **Author**: [careless_finch](https://twitter.com/careless_finch)
   This challenge is a simple attack which is Hastad's Broadcast attack 
   so bascially CRT (chinese remainder is used to solving congruent equations)
   as e=3 we need to solve these these set of equations 

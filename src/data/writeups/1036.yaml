@@ -3,9 +3,9 @@ id: 1036
 category: Forensics
 difficulty: Easy
 content: |
-**Author**: [Sai Sampath](https://www.linkedin.com/in/sai-sampath-863a7b1aa/)
+  **Author**: [Sai Sampath](https://www.linkedin.com/in/sai-sampath-863a7b1aa/)
 
-Follow the tcp stream and decode the base64 cipher
-![](https://i.imgur.com/enCPem4.png)
+  Follow the tcp stream and decode the base64 cipher
+  ![](https://i.imgur.com/enCPem4.png)
 
-**Flag**: inctfj{5n00p1ng_0th3r5_c0nv0_1s_b4d}
+  **Flag**: inctfj{5n00p1ng_0th3r5_c0nv0_1s_b4d}

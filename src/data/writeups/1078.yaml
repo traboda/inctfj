@@ -3,66 +3,66 @@ id: 1078
 category: Pwn
 difficulty: Medium
 content: |
-**Author**: [Srijith](https://twitter.com/__k1R4)
+  **Author**: [Srijith](https://twitter.com/__k1R4)
 
-#### Initial Analysis
+  #### Initial Analysis
 
-This is the main function taken from source code, decompilation of the binary should yield something similar. We have a variable `base_clock` of type `int`, a variable `boost_clock` of type `unsigned int` and a variable `buf` which is a `char` array of length 24. User input of type `unsigned int` is read into `boost_clock`. Then `base_clock` is incremented by `boost_clock`.
+  This is the main function taken from source code, decompilation of the binary should yield something similar. We have a variable `base_clock` of type `int`, a variable `boost_clock` of type `unsigned int` and a variable `buf` which is a `char` array of length 24. User input of type `unsigned int` is read into `boost_clock`. Then `base_clock` is incremented by `boost_clock`.
 
-```c
-int main(int argc, char *argv[]){
-  int base_clock = 10; 
-  unsigned int boost_clock;
-  char buf[24];
-  init();
+  ```c
+  int main(int argc, char *argv[]){
+    int base_clock = 10; 
+    unsigned int boost_clock;
+    char buf[24];
+    init();
 
-  puts("Welcome to 0verclock!");
-  printf("Enter number of MHz by which you want to overclock: ");
-  scanf("%u",&boost_clock);
-  getchar();
-  base_clock = base_clock + boost_clock;
+    puts("Welcome to 0verclock!");
+    printf("Enter number of MHz by which you want to overclock: ");
+    scanf("%u",&boost_clock);
+    getchar();
+    base_clock = base_clock + boost_clock;
 
-  if(base_clock > 24){
-    puts("Too high!");
-    exit(0);
+    if(base_clock > 24){
+      puts("Too high!");
+      exit(0);
+    }
+
+    printf("Enter the name of your processor: ");
+    read(0,buf,base_clock);
+    puts("0verclock success. bye!");
   }
+  ```
 
-  printf("Enter the name of your processor: ");
-  read(0,buf,base_clock);
-  puts("0verclock success. bye!");
-}
-```
+  Then there is a check to make sure `base_clock` is lesser than 24. This is to make sure that the next input being read is always of length lesser than 24 since `buf` is of that size. This check is to make sure that there is no buffer overflow caused.
 
-Then there is a check to make sure `base_clock` is lesser than 24. This is to make sure that the next input being read is always of length lesser than 24 since `buf` is of that size. This check is to make sure that there is no buffer overflow caused.
+  #### Exploitation
 
-#### Exploitation
+  **What is an integer overflow?**
+  Integer overflow occurs when you perform arithmetic (like additon) on a number in such a way that its value cannot be stored in the memory allocated to it. It can cause unintended behaviour and usually leads to other bugs. For example, in `C` on 64 bit, a variable of type `unsigned int` is allocated 4 bytes (32 bits). The maximum value it can store would be `4,294,967,295`(2^32-1) and the minimum, `0`. If you add `1` to a variable with the maximum value, it would just become `0` since it will ignore the 5th byte required to store the larger number.
 
-**What is an integer overflow?**
-Integer overflow occurs when you perform arithmetic (like additon) on a number in such a way that its value cannot be stored in the memory allocated to it. It can cause unintended behaviour and usually leads to other bugs. For example, in `C` on 64 bit, a variable of type `unsigned int` is allocated 4 bytes (32 bits). The maximum value it can store would be `4,294,967,295`(2^32-1) and the minimum, `0`. If you add `1` to a variable with the maximum value, it would just become `0` since it will ignore the 5th byte required to store the larger number.
+  The vulnerability here is that `base_clock` is of type `int`. If we could get `base_clock` to be a negative integer (like `-1`) by causing an integer overflow using the addition with our input, then it would pass the check. However read expects the 3rd parameter (size) to be of type `unsigned int`. Suppose we get `base_clock` to be `-1`, then it will be represented in memory as `0xffffffff` which is `4294967295` when interpreted as `unsigned int`. This would cause a buffer overflow since we will be able to write past the 24 bytes allocated to `buf`. Using the buffer overflow, we can get RIP control to return to the `get_flag` function provided in the binary, which will give us the flag.
 
-The vulnerability here is that `base_clock` is of type `int`. If we could get `base_clock` to be a negative integer (like `-1`) by causing an integer overflow using the addition with our input, then it would pass the check. However read expects the 3rd parameter (size) to be of type `unsigned int`. Suppose we get `base_clock` to be `-1`, then it will be represented in memory as `0xffffffff` which is `4294967295` when interpreted as `unsigned int`. This would cause a buffer overflow since we will be able to write past the 24 bytes allocated to `buf`. Using the buffer overflow, we can get RIP control to return to the `get_flag` function provided in the binary, which will give us the flag.
+  But how do we get `base_clock` to be `-1`?
+  We can abuse the addition done on `base_clock` with our user input. Lets aim to get `base_clock` to be `-1`. Since our input is of size `unsigned int`, we can't give negative numbers, so we will have to cause an integer overflow. Initial value of `base_clock` is `0xa`(10) in hexadecimal. `-1` is represented as `0xffffffff` in hexadecimal. Therefore for `base_clock` to be `-1`, `boost_clock` (our input) will have to be `0xffffffff-0xa` => `0xfffffff5` => `4294967285` (when represented as `unsigned int`).
 
-But how do we get `base_clock` to be `-1`?
-We can abuse the addition done on `base_clock` with our user input. Lets aim to get `base_clock` to be `-1`. Since our input is of size `unsigned int`, we can't give negative numbers, so we will have to cause an integer overflow. Initial value of `base_clock` is `0xa`(10) in hexadecimal. `-1` is represented as `0xffffffff` in hexadecimal. Therefore for `base_clock` to be `-1`, `boost_clock` (our input) will have to be `0xffffffff-0xa` => `0xfffffff5` => `4294967285` (when represented as `unsigned int`).
+  Here is the final exploit:
+  ```py
+  from pwn import *
 
-Here is the final exploit:
-```py
-from pwn import *
+  elf = ELF("./0verclock")
+  p = process("./0verclock")
+  context.log_level = "debug"
+  p.sendlineafter("overclock: ", "4294967285")
+  p.sendlineafter("processor: ", "A"*40 + p64(elf.symbols["get_flag"]))
+  p.interactive()
+  ```
 
-elf = ELF("./0verclock")
-p = process("./0verclock")
-context.log_level = "debug"
-p.sendlineafter("overclock: ", "4294967285")
-p.sendlineafter("processor: ", "A"*40 + p64(elf.symbols["get_flag"]))
-p.interactive()
-```
+  #### Conclusion
 
-#### Conclusion
-
-In summary,
-- cause integer overflow on `boost_clock` abusing the additon with our input.
-- buffer overflow is caused by integer overflow.
-- use buffer overflow to return to `get_flag` which gives us the flag.
+  In summary,
+  - cause integer overflow on `boost_clock` abusing the additon with our input.
+  - buffer overflow is caused by integer overflow.
+  - use buffer overflow to return to `get_flag` which gives us the flag.
 
 
-**Flag**: inctfj{1nt3ger_0verfl0w_w1th_0verclock}
+  **Flag**: inctfj{1nt3ger_0verfl0w_w1th_0verclock}

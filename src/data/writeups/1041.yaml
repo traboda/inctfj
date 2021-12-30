@@ -3,11 +3,11 @@ id: 1041
 category: Forensics
 difficulty: Medium
 content: |
-**Author**: [S Abhishek](https://twitter.com/a3X3k)
+  **Author**: [S Abhishek](https://twitter.com/a3X3k)
 
-- From the challenge description it's evident that the PNG's dimension ( width ) is incorrect.
-- Using `TweakPNG` tool, increase the width by **1** to get the flag.
+  - From the challenge description it's evident that the PNG's dimension ( width ) is incorrect.
+  - Using `TweakPNG` tool, increase the width by **1** to get the flag.
 
-![image](https://user-images.githubusercontent.com/52845731/147435658-24376301-b818-4f92-9b65-8b8ad7226639.png)
+  ![image](https://user-images.githubusercontent.com/52845731/147435658-24376301-b818-4f92-9b65-8b8ad7226639.png)
 
-**Flag**: inctfj{Tw34k1ng_th3_1m4g3_15_c00l_r1ght??}
+  **Flag**: inctfj{Tw34k1ng_th3_1m4g3_15_c00l_r1ght??}

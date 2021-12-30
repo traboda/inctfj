@@ -3,74 +3,74 @@ id: 1031
 category: Forensics
 difficulty: Easy
 content: |
-**Author**: [S Abhishek](https://twitter.com/a3X3k)
+	**Author**: [S Abhishek](https://twitter.com/a3X3k)
 
-- Decode the given QR Code.
+	- Decode the given QR Code.
 
-#### Decoded Result
-```
-Find the missing words and concatenate them in lowercase using underscore to get the flag.  
+	#### Decoded Result
+	```
+	Find the missing words and concatenate them in lowercase using underscore to get the flag.  
 
-https://mega.nz/folder/xIok3bhY#kMN0Rs2DcQjgCwnYDjXDIA
-```
+	https://mega.nz/folder/xIok3bhY#kMN0Rs2DcQjgCwnYDjXDIA
+	```
 
-- The **Mega link** gives **3** more QR Codes 
-  
-| ![1](https://user-images.githubusercontent.com/52845731/147487563-607caea9-1680-4b1f-8128-d9baa7c48c0c.png) | ![2](https://user-images.githubusercontent.com/52845731/147487572-50b4570e-018d-4f5d-bb81-babfd1a4c1ac.png) | ![3](https://user-images.githubusercontent.com/52845731/147491209-c0a19f6e-19a0-4180-87a1-61b498a08d99.png) | 
-|----------------|----------------|----------------|
-| QR Code 1 | QR Code 2 | QR Code 3 |
+	- The **Mega link** gives **3** more QR Codes 
+	  
+	| ![1](https://user-images.githubusercontent.com/52845731/147487563-607caea9-1680-4b1f-8128-d9baa7c48c0c.png) | ![2](https://user-images.githubusercontent.com/52845731/147487572-50b4570e-018d-4f5d-bb81-babfd1a4c1ac.png) | ![3](https://user-images.githubusercontent.com/52845731/147491209-c0a19f6e-19a0-4180-87a1-61b498a08d99.png) | 
+	|----------------|----------------|----------------|
+	| QR Code 1 | QR Code 2 | QR Code 3 |
 
-	
-- From the decoded results of the ideal QR Code, it's evident that finding the **missing** words and **concatenating** them in **lowercase** using **underscore** to gives the flag
+		
+	- From the decoded results of the ideal QR Code, it's evident that finding the **missing** words and **concatenating** them in **lowercase** using **underscore** to gives the flag
 
-#### Decoded Result of QR Code 1
+	#### Decoded Result of QR Code 1
 
-```
-Over hill, over dale,
-Thorough bush, thorough brier,
-Over park, over pale,
-Thorough flood, thorough fire!
-I do wander everywhere,
-Swifter than the moon's sphere;
-And I serve the Fairy _____,
-To dew her orbs upon the green;
-The cowslips tall her pensioners be;
-In their gold coats spots you see;
-Those be rubies, fairy favours;
-In those freckles live their savours;
-I must go seek some dewdrops here,
-And hang a pearl in every cowslip's ear.
-```
-	
-> Missing Word : queen
+	```
+	Over hill, over dale,
+	Thorough bush, thorough brier,
+	Over park, over pale,
+	Thorough flood, thorough fire!
+	I do wander everywhere,
+	Swifter than the moon's sphere;
+	And I serve the Fairy _____,
+	To dew her orbs upon the green;
+	The cowslips tall her pensioners be;
+	In their gold coats spots you see;
+	Those be rubies, fairy favours;
+	In those freckles live their savours;
+	I must go seek some dewdrops here,
+	And hang a pearl in every cowslip's ear.
+	```
+		
+	> Missing Word : queen
 
 
-#### Decoded Result of QR Code 2
+	#### Decoded Result of QR Code 2
 
-```
-The _______,--why, 'twas beautiful and hard,
-Whereto his invised properties did tend;
-The deep-green emerald, in whose fresh regard
-Weak sights their sickly radiance do amend;
-The heaven-hued sapphire and the opal blend
-With objects manifold: each several stone,
-With wit well blazon'd, smiled or made some moan.
-```
+	```
+	The _______,--why, 'twas beautiful and hard,
+	Whereto his invised properties did tend;
+	The deep-green emerald, in whose fresh regard
+	Weak sights their sickly radiance do amend;
+	The heaven-hued sapphire and the opal blend
+	With objects manifold: each several stone,
+	With wit well blazon'd, smiled or made some moan.
+	```
 
-> Missing Word : diamond
+	> Missing Word : diamond
 
-#### Decoded Result of QR Code 3
+	#### Decoded Result of QR Code 3
 
-```
-Thus merely with the _______ of a Grace
-The naked and concealed fiend he cover'd;
-That th' unexperient gave the tempter place,
-Which like a cherubin above them hover'd.
-Who, young and simple, would not be so lover'd?
-Ay me! I fell; and yet do question make
-What I should do again for such a sake.
-```
+	```
+	Thus merely with the _______ of a Grace
+	The naked and concealed fiend he cover'd;
+	That th' unexperient gave the tempter place,
+	Which like a cherubin above them hover'd.
+	Who, young and simple, would not be so lover'd?
+	Ay me! I fell; and yet do question make
+	What I should do again for such a sake.
+	```
 
-> Missing Word : garment
+	> Missing Word : garment
 
-**Flag**: inctfj{queen_diamond_garment}
+	**Flag**: inctfj{queen_diamond_garment}

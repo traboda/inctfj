@@ -3,13 +3,13 @@ id: 1034
 category: Forensics
 difficulty: Easy
 content: |
-**Author**: [v1Ru5](https://twitter.com/SrideviKrishn16)
+  **Author**: [v1Ru5](https://twitter.com/SrideviKrishn16)
 
-Use 'strings' and decode the caesar ciphertext using any online tool to get the flag.
+  Use 'strings' and decode the caesar ciphertext using any online tool to get the flag.
 
-![](https://i.imgur.com/YlVI3Um.png)
+  ![](https://i.imgur.com/YlVI3Um.png)
 
 
-![](https://i.imgur.com/rC4GorK.png)
+  ![](https://i.imgur.com/rC4GorK.png)
 
-**Flag**: inctfj{tHi5_w4S_e4Sy_43561290}
+  **Flag**: inctfj{tHi5_w4S_e4Sy_43561290}
