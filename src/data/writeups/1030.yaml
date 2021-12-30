@@ -3,13 +3,17 @@ id: 1030
 category: Crypto
 difficulty: Easy
 content: |
-  **Author**: Pavani
+  **Author**: [Pavani](https://twitter.com/Paavani21)
 
-  nothing much to do...
-  see the given descrption and just google the things ... then u will get to know that it is enigma machine ...
-  Now just use enigma machine to decrypt the text.
+  This is the easiest challenge in crypto …
+   nothing much to do…
+   If you see the description, we have some conversation over there, It tells you that this machine is some encryption machine which was to in some war, it is nothing but world war.
+   And characters in this conversation are Enigma machine inventors and breakers.
 
-  ![](https://i.imgur.com/scHWHbN.png)
+  However, now you know that it is an Enigma machine…
+  Now, use the enigma machine to decrypt the text.
+  Here we have to select rotors to mount. It is I, II, III if you observe the last line in the conversation.
+
+  ![Imgur](https://i.imgur.com/y9p7Nx9.png)
 
   **Flag**: inctfj{QUALIFIED TO BECOME AN ACE}
-

@@ -3,12 +3,26 @@ id: 1046
 category: Crypto
 difficulty: Medium
 content: |
-  **Author**: Pavani
+  **Author**: [Pavani](https://twitter.com/Paavani21)
 
-  1. If you want flag,you must have ``admin=yes`` in place of ``admin=no!`` 
-  2. Which means, you have to change last three bits to get the flag.
-  3. Use `xor` operation between nth block of ct,pt and n-1th block of ct.  (here change bits of IV to change bits of pt(admin=no!)"
-  4. change bits of n-1th block in such a way that would give ``admin=yes`` in plaintext(pt). 
+  If you see how this server is working, it is giving you some encrypted data in hex and asking you to give some input.
+   Now, let’s see the given script. Here we used `CBC encryption` from `AES`. Here, given plain text is admin=no! . You will get a flag if plain text is `admin=yes`.let `auth_cookie` be `ciphertext(ct)` and `auth_message` be `plaintext(pt)`.
+
+  So now you have to give some input that pretends plaintext has `admin=yes`.
+
+  #### CBC mode decryption
+
+  ![Imgur](https://i.imgur.com/deSa6HW.png)
+  Here plaintext of $n^{th}$ block depends on ciphertext $n-1^{th}$  block and present decrypt(${C_n}$).
+  $$ 
+  {P_n} = C_{n-1} \oplus decrypt(C_{n}) 
+  $$ 
+
+  1.Now you have to change last three bits to get the flag.
+  2. Use xor operation between nth block of ct,pt and n-1th block of ct. (here change bits of IV to change bits of pt(admin=no!)"
+  3.change bits of n-1th block(iv in this challenge) in such a way that would give admin=yes in plaintext(pt).
+
+  Now, try this challenge again. If you didn't get,then look up the script.
 
   ```python=
   from pwn import *
@@ -27,7 +41,7 @@ content: |
   ct = (ct1+ct[16:]).hex()
   io.recvuntil(b"Input authorized information that is required to get the flag: ")
   io.sendline(ct.encode())
-  io.sendline(ct.encode())
+  io.recv()
   io.recv()
   ```
 
