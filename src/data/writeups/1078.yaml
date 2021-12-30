@@ -3,7 +3,7 @@ id: 1078
 category: Pwn
 difficulty: Medium
 content: |
-  **Author**: [Srijith](https://twitter.com/__k1R4)
+  **Author**: [Srijiith](https://twitter.com/__k1R4)
 
   #### Initial Analysis
 
@@ -63,6 +63,3 @@ content: |
   - cause integer overflow on `boost_clock` abusing the additon with our input.
   - buffer overflow is caused by integer overflow.
   - use buffer overflow to return to `get_flag` which gives us the flag.
-
-
-  **Flag**: inctfj{1nt3ger_0verfl0w_w1th_0verclock}

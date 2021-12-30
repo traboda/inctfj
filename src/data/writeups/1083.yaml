@@ -4,19 +4,17 @@ category: Crypto
 difficulty: Hard
 content: |
   **Author**: [careless_finch](https://twitter.com/careless_finch)
+
   As 
-  $$
-  dp= d mod p-1 \\
-  e*dp= e *d mod p-1\\
-  e*dp = e*d + k*(p-1)\\
-  m ^{e*dp}= m ^{e*d + k*(p-1)}\\
-  $$
+
+  ![](https://i.imgur.com/UJIPQkU.png)
+
+
   applying mod p on both sides
-  $$
-  m^{e*dp} mod p = m^ {e*d + k(p-1)} mod p\\
-  m^{e*dp}= m mod p\\ 
-  {m^{e*dp}-m}/k =p 
-  $$
+
+  ![](https://i.imgur.com/Owm8rZB.png)
+
+
   ### script
 
   ```python=
@@ -30,5 +28,4 @@ content: |
   p=gcd(pow(m,e*dp,n)-m,n)
   q=n//p
   print(bytes.fromhex(hex(pow(ct,pow(e,-1,(p-1)*(q-1)),n))[2:]).decode())
-  #inctfj{Y0u_Ar3_g00d_w1th_numb3rs}
   ```

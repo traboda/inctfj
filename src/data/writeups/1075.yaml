@@ -8,9 +8,4 @@ content: |
   - From the challenge name and hints its evident that the secret message is given as spam.
   - [Decoding](https://www.spammimic.com/decodespace.shtml) the space and tab enclosed characters gives the [pastebin](https://pastebin.com/embed_js/0sHZNAj2) link which has the flag. 
 
-  **Flag**: inctfj{sp4mm1m1c_1s_1nt3r3st1ng_1sn't_1t??}
-
- 
-
-
   

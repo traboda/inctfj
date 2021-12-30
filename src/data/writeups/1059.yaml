@@ -55,6 +55,4 @@ content: |
               print(x.decode(), end="")
               break
   ```
-
-  **Flag**: inctfj{s1ngle_4nd_s1mpl3}
  

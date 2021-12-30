@@ -13,5 +13,3 @@ content: |
 
   But there is an idor vulnerablity in the buying requests ,we can change the `pid=1` and it will buy the flag
   then we can open flag
-
-  **Flag**: inctfj{cl3ver_w4y_t0_g3t_1t}

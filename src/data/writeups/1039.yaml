@@ -16,5 +16,3 @@ content: |
   Scanning the qr code will give a b64 encoded text: `aW5jdGZqe3k0eXlfaEVyRSdzX3kwdXJfZkxhR30=`
 
   Decoding it will give the flag.
-
-  **Flag**: inctfj{y4yy_hErE’s_y0ur_fLaG}

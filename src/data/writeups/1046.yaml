@@ -12,11 +12,8 @@ content: |
 
   #### CBC mode decryption
 
-  ![Imgur](https://i.imgur.com/deSa6HW.png)
-  Here plaintext of $n^{th}$ block depends on ciphertext $n-1^{th}$  block and present decrypt(${C_n}$).
-  $$ 
-  {P_n} = C_{n-1} \oplus decrypt(C_{n}) 
-  $$ 
+  ![](https://i.imgur.com/droXUhs.png)
+
 
   1.Now you have to change last three bits to get the flag.
   2. Use xor operation between nth block of ct,pt and n-1th block of ct. (here change bits of IV to change bits of pt(admin=no!)"
@@ -44,6 +41,3 @@ content: |
   io.recv()
   io.recv()
   ```
-
-  **Flag**: inctfj{fl1ppY_HaPpY_Tr33_fr13nds}
-

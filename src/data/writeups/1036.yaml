@@ -7,5 +7,3 @@ content: |
 
   Follow the tcp stream and decode the base64 cipher
   ![](https://i.imgur.com/enCPem4.png)
-
-  **Flag**: inctfj{5n00p1ng_0th3r5_c0nv0_1s_b4d}

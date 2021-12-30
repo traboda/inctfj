@@ -6,10 +6,9 @@ content: |
   **Author**: Abhishek Bharadwaj
 
   Here we were given with a quadratic equation
-  $$
-  x^2 - b*x + n^2 = 0 \\
-  b^2 - 4ac > 0\\ 
-  $$
+  
+  ![](https://i.imgur.com/vEpncdK.png)
+
   it's a perfect square which states that our roots are *perfect squares*,here  `p^2,q^2` are the roots of the quadratic equation.
 
   if a,b are roots of an quadratic equation then the quadratic equation will be `x^2-(a+b)*x+a*b=0`.
@@ -17,13 +16,9 @@ content: |
 
   **solving for p,q** :
   Note:
-  $$
-      n =p*q \\
-      n**2 = p^2 * q^2\\
-      b = (p^2 + q^2) \\
-      (p-q)^2 = b - 2*(p*q) \\
-      (p+q)^2 = (p-q)^2 + 4*p*q \\\
-  $$
+  
+  ![](https://i.imgur.com/MWl1aOj.png)
+
   As we have p+q,p-q we can get p,q	
   #### Exploit
   ```python=
@@ -39,5 +34,4 @@ content: |
   flag=long_to_bytes(pow(ct,d,n))
   print(flag)
   ```
-  **Flag**: inctfj{good_game_on_roots}
 

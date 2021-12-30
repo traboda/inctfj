@@ -39,7 +39,3 @@ content: |
   flag = ''.join(flag)
   print(flag)
   ```
-
-  **Flag**: inctfj{l34rn1ng_b1t_m4g1c_1s_us3ful}
-
-

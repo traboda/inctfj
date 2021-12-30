@@ -52,5 +52,4 @@ content: |
 
   print("inctfj{",kek,"}",sep='')
   ```
-  **Flag**: inctfj{931}
 

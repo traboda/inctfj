@@ -12,6 +12,3 @@ content: |
   #### Solving
 
   So from our initial analysis we know we have to send a request to the server and the server should think that our request is coming from a browser called inctfj. For this we have to set the User-Agent header which is used as a characteristic string that lets servers identify the application, operating system, vendor, and/or version of the client the request is being sent from. To get the flag we have to set the user-agent header to inctfj using curl ``curl -H "User-Agent: inctfj" http://gc1.eng.run:30783/`` or any other tools/extensions.
-
-  **Flag**: inctfj{w3lc0m3_b4ck_ag3nt004}
-

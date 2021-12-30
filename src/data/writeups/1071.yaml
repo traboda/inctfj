@@ -4,6 +4,7 @@ category: Pwn
 difficulty: Hard
 content: |
   **Author**: [d1g174l_f0r7r355](https://twitter.com/BhaskaraShravya)
+  
   This was one of the hard challenges I made for inctfj qualifiers. It is based on format strings. I will try to explain all the concepts required and used in this challenge. 
 
   #### Preliminary checks: 
@@ -116,15 +117,16 @@ content: |
   ```
 
   Firstly, let us look into what main() is doing! 
-    - The main() function takes a character input `choice`. Depending on our the functions `check_leaks()`, `call_plumber` and `buy_repair_kit()` are called respecitively. Another thing to note is, it runs in an infinite while loop; meaning we can each of these functions as many times as possible. 
+  - The main() function takes a character input `choice`. Depending on our input the functions `check_leaks()`, `call_plumber` and `buy_repair_kit()` are called respecitively. Another thing to note is, it runs in an infinite while loop; meaning we can call each of these functions as many times as possible. 
   Now let's analyze what happens when each of the functions are called as we give our input choice. 
 
-  #### check_leaks(): 
+  ##### check_leaks(): 
   Input choice `1` in the main() function, calls for check_leaks(). What happens here and are there any vulnerabilities in this function? If so how can we exploit it? 
-  To answer the above questions, let's look at the `check_leaks()` function in the given source code. As we can see, from the above source code, cheak_leaks() prints out the balance in your account and asks you where you like to check your leaks. Thereafter, fgets reads 100 bytes of user input into `leak` and simply prints out your `leaks` using `printf(leaks)`. Now why is this a vulnerability? To understand that, let's dive into the concept of **format strings**! 
+  To answer the above questions, let's look at the `check_leaks()` function in the given source code. As we can see, from the above source code, cheak_leaks() prints out the balance in your account and asks you where you would like to check your leaks. Thereafter, fgets reads 100 bytes of user input into `leak` and simply prints out your leaks using `printf(leak)`. Now why is this a vulnerability? To understand that, let's dive into the concept of **format strings**! 
 
-  #### Format Strings : 
+  ###### Format Strings : 
   **What are format strings?**
+
   If we look at the manual page of `printf()` function in C, a format strings is defined as:
 
   "The format string is a character string, beginning and ending in its initial shift state, if any.  The format string is composed of zero or more directives: ordinary characters (not %), which are copied unchanged to the output stream; and conversion specifications, each of which results in fetching zero or more subsequent arguments.  Each conversion specification is introduced by the character %,  and  ends  with  a conversion  specifier."
@@ -178,23 +180,23 @@ content: |
 
   We see that, the user inputs data into `inpBuf` and the same character array is passed as an argument to printf() without any format specifiers. Now suppose the user decides to give "%p" or a "%x" as his user buffer in the input stream, what do you think will be printed to the screen? Since the first argument given is a format specifier, the pointer value or the address of whatever is present on the top of the stack will be printed out. In case of a 64-bit system, since if the user decides to give "%p" as his inpBuf, it will print the pointer value in register "rsi" since the second argument will be stored "rsi" after the first argument ("%p") being stored in "rdi". Therefore, a user may decide to leak data from the stack by giving suitable offsets i.e "%4$p" will print the pointer value of the 4th offset on the stack. And this is how printf() is abused. 
 
-  **We will thus how to make use of the above vulnerability to obtain leaks from memory and also write to memory in a similar manner. This will be discussed in the exploitation part of this writeup.**
+  **We will thus make use of the above vulnerability to obtain leaks from memory and also write to memory in a similar manner. This will be discussed in the exploitation part of this writeup.**
 
-  #### call_plumber(): 
+  ##### call_plumber(): 
   Input choice `2` in the main() function, calls for call_plumber(). This function however may not be of much significance to us as it simply prints "Why must you call the plumber when you can fix the leak yourself?". Moving on! 
 
-  #### buy_repair_kit():
+  ##### buy_repair_kit():
   Input choice `3` in the main() function, calls for `buy_repair_kit()`. This function is quite interesting as firstly it checks if `bal == 200`. If the condition is satisfied it will call `use_tapes`. Else it simply prints "You do not have enough balance! :(". If we look at the **global variable** `bal`, we can see that it is initialized to `100`, whereas `bal == 200` in order to pass the check. Which means we need to find a way to overwrite `bal` variable with `200` so that use_tapes() will be called. We will see more of this in the exploitation section of the writeup. For now let's continue with understanding the source code. 
 
-  #### use_tapes():
+  ##### use_tapes():
   This function is only called by `buy_repair_kit` once the condition is satisfied. However we do find that use_tapes() asks for our experience and prints our experience using `printf(experience)`. Another thing to notice in this function is that the flag is read from `flag.txt` into the variable `flag` however it is not printed out. Luckily for us, we observe just another format string vulnerability here, i.e `printf(experience)`. Since we have understood how printf() can be used to leak data from memory, we will use the same concept here to leak the flag! 
 
   #### Exploitation:
   Now that we have understood the binary and a few other concepts related to the challenge, our logic for exploitation is pretty simple: 
-     - call the function `call_plumber` to obtain the address leak for the global variable `bal` with the help of the format string vullnerability. 
-     - call the function `call_plumber` again to change the value in the global variable `bal` from 100 to 200. 
-     - call the function `buy_repair_kit()`, pass the check so that the function `use_tapes()` is called. 
-     - Once `use_tapes` is called, make use of the format string vulnerability to simply leak the flag! 
+  - call the function `check_leaks` to obtain the address leak for the global variable `bal` with the help of the format string vullnerability. 
+  - call the function `check_leaks` again to change the value in the global variable `bal` from 100 to 200. 
+  - call the function `buy_repair_kit()`, pass the check so that the function `use_tapes()` is called. 
+  - Once `use_tapes` is called, make use of the format string vulnerability to simply leak the flag! 
   Let's begin the exploit by going through each of the above four steps. 
 
   ##### Leaking the address of the global variable "bal": 
@@ -248,7 +250,7 @@ content: |
   And so we have have obtained the address for the variable `bal` i.e `0x55efa9bb0560 + 0x2ab0 = 0x000055efa9bb3010` 
 
 
-  #### Overwriting the value of `bal` from 100 to 200: 
+  ### Overwriting the value of `bal` from 100 to 200: 
   Now that we have obtained the address for the global variable `bal`, our task is to overwrite it with `200`. Since there are no other vulnerabilities in the program, we will have to look for a way to overwrite `bal` using format strings only. Thus we will call the function `call_leaks()` again, this time to write to memory. 
   This can be done in 2 ways:
     - Using `fmtstr_payload(offset, {addr : value})` in pwntools.
@@ -288,7 +290,7 @@ content: |
   0x55efa9bb3010 <bal>: 0x00000000000000c8
   ```
 
-  #### Obtain the flag:
+  ##### Obtain the flag:
   Now that we have leaked and written to memory, once the check passes, `use_tapes` will be called where our next task is to simply leak the flag. Similar to as shown above we can either use '%s' or a '%p' format specifier to leak the flag string. If we are making use of '%p' to leak, we need to be use of converting from hex to string! To find the offset let's give a string of '%p' and see where the flag could be on the stack! 
   `payload = '%p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p'`.
   Output: 
@@ -346,78 +348,3 @@ content: |
   info("flag: %s"%flag[:-2])
   p.interactive()
   ```
-
-  **Flag**: inctfj{4ll_y0u_n33d_15_4_l177l3_f0rm4771ng!!}
-
-  ### Breaking Bof - 647
-  **Author**: [NightKing](https://twitter.com/n1ght_k7ng)
-
-  ![](https://i.imgur.com/UFp6GkX.png)
-
-  We have been given a 64bit binary file to work with.
-
-  #### Debugging/Decompiling the Binary 
-
-  Run the chall file on **gdb** and looking into the functions present in it . 
-  {command *info functions*}
-
-  ![](https://i.imgur.com/n1D2OW6.png)
-
-  The functions in this challenge that are useful for us are 
-
-  ![](https://i.imgur.com/OF7Rk8l.png)
-
-  #### Lets look  at the decompiled code in IDA/Ghidra 
-
-  The ***main()*** function calls ***lab()*** first which looks like this. 
-
-  ![](https://i.imgur.com/w0kFQSD.png)
-
-  #### The Vulnerability
-
-  There is a visible buffer overflow here that our string v1[] *(character array == string)* whose buffer length is 32 so we have a *potential buffer overflow here*. 
-
-  To know more about buffer overflows in detail you can watch binary exploitation tutorial videos (Day 1 & Day 2) in the InCTFj Youtube channel [Day 1](https://www.youtube.com/watch?v=yMkyHCR7fqw&list=PLmpHrYT9y1Lyjbpq6LPtKC8RUnSyaf0Te&index=12) and [Day 2](https://www.youtube.com/watch?v=QoRgu0uiyA0&list=PLmpHrYT9y1Lyjbpq6LPtKC8RUnSyaf0Te&index=13)
-
-  We have a *scanf()* vulnerabilty here that we are not checking on the length of the input we will be giving here as input
-
-  ![](https://i.imgur.com/p57OXyF.png)
-
-  **Coming back !!**
-
-  Now lets see the other function that was left to be checked which was **secretFunction()** 
-
-  ![](https://i.imgur.com/n3191Qo.png)
-
-  Oh wow !! So now in this function we see that we are being guven the **flag** if this gets executed. 
-
-  But one thing to observe is its neither called in **main()** nor it is called in **lab()**. 
-
-  So lets use the vulnerabilty found to exploit this program and craft the payload. 
-
-  First we will fill the buffer with the required bytes ie. 32. 
-
-  `payload = b'a'* 32 `
-
-  Then we have to overwrite the *rbp* with another 8 bytes to reach the *rip* in the stack frame .
-  So now the payload would look like. 
-
-  `payload = b'a'*32`
-    `payload += b'b'*8 `
-    
-   Now that we have reached *rip* we will add the address of **secretFunction()** to our payload.
-   
-   So now our final **exploit** would look like 
-   ```
-   from pwn import *
-
-  elf = ELF("./chall")
-  context.binary = elf
-  p = process("./chall")
-
-  p.sendline("A"*40+p64(elf.symbols["secretFunction"]))
-  p.interactive()
-  ```
-
-   
-  **FLAG**: inctfj{W4lt3r_4nd_y0u_f1nd5_th3_f1a4_1d43143}

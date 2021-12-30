@@ -6,9 +6,9 @@ content: |
   **Author**: Abhishek Bharadwaj
 
   given,
-  $$
-  (p+q)^2 = (p-q)^2 + 4*p*q\\
-  $$
+  
+  ![](https://i.imgur.com/zjflKPd.png)
+  
   As we got p+q, p-q we can p,q 
   #### Exploit 
   ```python=
@@ -26,5 +26,4 @@ content: |
   flag=long_to_bytes(pow(ct,d,n))
   print(flag)
   ```
-  **Flag**: inctfj{D0nt_get_mad_learn_t0_4dd:)}
 

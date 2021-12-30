@@ -4,6 +4,7 @@ category: Reversing
 difficulty: Easy
 content: |
   **Author**: [AmunRha](https://twitter.com/amun_rha)
+
   This is yet another xor encryption, a single byte encryption then a multi byte encryption. Once the player figures out the first key, he can find out the second set of keys and that will retrieve the flag.
 
   The first key is `0x1b` and the second set of keys are `[0x4c, 0x3a, 0x25, 0x1a]` where second set of keys are xored according to their indexes, for all index which is divisble by 4 `0x4c` is used, and so on.
@@ -42,7 +43,5 @@ content: |
 
   print(flag)
   ```
-
-  **Flag**: inctfj{1_m34n_3v3ry_ctf_n33ds_4_x0r_r1ght?}
 
 

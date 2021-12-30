@@ -47,6 +47,5 @@ content: |
   res = pepe_gaga(deshuffle1(deshuffle2(decrypt(enc_flag))))
   print(res)
   ```
-  **Flag**: inctfj{1_just_m4d3_1t_4nn0y1ng}
 
 

@@ -3,7 +3,7 @@ id: 1079
 category: Pwn
 difficulty: Easy
 content: |
-  **Author**: [Srijith](https://twitter.com/__k1R4)
+  **Author**: [Srijiith](https://twitter.com/__k1R4)
 
   #### Initial Analysis
 
@@ -67,6 +67,3 @@ content: |
   - we have 2 variables, `username` which is a `char` buffer and `auth` which is an `int` with value `0xcafebabe`.
   - use buffer overflow caused by `scanf` to fill `username` buffer and overwrite `auth` to `0xdeadbeef`.
   - check is passed and we are given a shell with which flag can be obtained.
-
-
-  **Flag**: inctfj{v4riabl3_0verwr1te_t0_4uth3nticat3}

@@ -29,6 +29,5 @@ content: |
           hash_str.append(i)
   print(join_char2.join(hash_str))
   ```
-  **Flag**: inctfj{mockingbird78209}
 
 

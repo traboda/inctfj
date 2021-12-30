@@ -3,14 +3,15 @@ id: 1047
 category: Reversing
 difficulty: Beginner
 content: |
-  **Author**: Barla Abhishek
+  **Author**: Abhishek Barla
+
   The given input array is Xored with 34 and then compared with an array
   We xor the array with 34 and convert it to characters and join them
+  
   #### Exploit
+
   ```python
   brr= [75, 76, 65, 86, 68, 72, 89, 72, 87, 81, 21, 125, 22, 125, 96, 17, 69, 19, 76, 76, 17, 80, 125, 65, 74, 22, 78, 78, 95]
 
   print("".join(chr(i^34) for i in brr))
   ```
-
-  **Flag**: inctfj{jus7_4_B3g1nn3r_ch4ll} 
