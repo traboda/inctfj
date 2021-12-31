@@ -357,7 +357,7 @@ export default [
       "institution": "Acropolis Institute of Technology and Research, Indore",
       "state": "IN-MP",
       "points": 3002,
-      "quota": "women"
+      "quota": "state"
     },
     {
       "rank": 46,
@@ -453,7 +453,7 @@ export default [
       "institution": "Narsee Monjee College of Commerce & Economics, Mumbai",
       "state": "IN-MH",
       "points": 1456,
-      "quota": "women"
+      "quota": "state"
     },
     {
       "rank": 58,
