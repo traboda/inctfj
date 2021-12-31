@@ -1,0 +1,42 @@
+title: Renege
+id: 1088
+category: Cryptography
+difficulty: Medium
+content: |
+  **Author**: Chandu Kona
+  - As the key length is 6 and the key is used to encrypt `inctfj` to `fvddla` we need to pick the first 6 bytes i.e `inctfj` for generating the key 
+  - From this we get the key as `crypti` and as we need to decrypt this vigenere
+  - the lookup matrix above was slightly inverted when compared to the original vigener matrix 
+
+  ![](https://i.imgur.com/CzpeeUI.png)
+
+  #### Exploit 
+  ```python=
+  ct = b'fvddla{ap_efr_lxun_djqkebzf_izmpfb!}'
+  key = b''
+
+
+  lookup = [ list(range(97,123))[-i:] + list(range(97,123))[:-i]for i in range(26 ^ 1) ]
+
+  def check(cb,pb):
+       global key
+       for i in range(27):
+            if lookup[i].index(ord(cb))==ord(pb)-97:
+                 key += bytes([i])
+  check('f','i')
+  check('v','n')
+  check('d','c')
+  check('d','t')
+  check('l','f')
+  check('a','j')
+  flag=b''
+  for j,i in enumerate(ct):
+      if i in range(97,123):
+          flag+=bytes([(i-97+key[j%len(key)])%26+97])
+      else:
+          flag+=bytes([i])
+  print(flag)
+  key=bytes([i+96 for i in key])
+  print(key)
+  ```
+  **key** : crypti 

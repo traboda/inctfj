@@ -296,5 +296,10 @@
 "/writeup/1087": {
     "page": "/writeup/[id]",
     "query": { "id": 1087 }
+  },
+
+"/writeup/1088": {
+    "page": "/writeup/[id]",
+    "query": { "id": 1088 }
   }
 }
