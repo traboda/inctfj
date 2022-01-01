@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "@emotion/styled";
 
 import Base from "../src/components/shared/Base";
@@ -9,6 +9,7 @@ import postsIndex from '../src/data/writeups/index.json';
 import WriteUpCard from "../src/components/writeup/WriteUpCard";
 import PageHeader from "../src/components/PageHeader";
 import PageFooterExplorer from "../src/components/PageFooterExplorer";
+import TagSelector from "../src/components/TagSelector";
 
 export const BlogPage = styled.main`
     display: flex;
@@ -17,6 +18,32 @@ export const BlogPage = styled.main`
 `
 
 const WriteupListingPage = () => {
+
+    const [keyword, setKeyword] = useState('');
+    const [category, setCategory] = useState(null);
+
+    const CHALLENGE_CATEGORIES = [
+        {
+            "label": "Cryptography",
+            "value": "crypto"
+        },
+        {
+            "label": "Forensics",
+            "value": "forensics"
+        },
+        {
+            "label": "Reversing",
+            "value": "reversing"
+        },
+        {
+            "label": "Pwn",
+            "value": "pwn"
+        },
+        {
+            "label": "Web",
+            "value": "web"
+        },
+    ];
 
     const fetchedPosts = (() => {
         const posts = []
@@ -53,9 +80,31 @@ const WriteupListingPage = () => {
         />
         <BlogPage>
             <div className="container px-4 py-6 mx-auto">
+                <div className="flex items-center">
+                    <div className="md:1/2 flex items-center p-2">
+                        <input
+                            type="text"
+                            value={keyword}
+                            onChange={e => setKeyword(e.target.value)}
+                            placeholder="Type to search..."
+                            className="outline-none pl-4 pr-12 py-2 border rounded-t-lg shadow-inner focus:border-yellow-600 w-full rounded-b-lg"
+                        />
+                    </div>
+                    <div className="md:1/2 flex items-center p-2">
+                        <TagSelector
+                            options={CHALLENGE_CATEGORIES}
+                            isClearable
+                            value={category}
+                            onChange={(t) => setCategory(t?.value === category?.value ? null : t)}
+                        />
+                    </div>
+                </div>
                 {fetchedPosts.length > 0 ?
                 <div className="flex flex-wrap">
-                    {fetchedPosts.map((w) =>
+                    {fetchedPosts.filter((v) =>
+                        (category == null || v?.category.toLowerCase() === category.value.toLowerCase()) &&
+                        ((keyword?.length < 1) || (v.title?.toLowerCase().startsWith(keyword.toLowerCase())))
+                    ).map((w) =>
                         <div className="w-full md:w-1/2 lg:w-1/3 p-2">
                             <WriteUpCard {...w} />
                         </div>
