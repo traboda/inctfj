@@ -68,10 +68,10 @@ const RulePage = () => {
                             <li><b>Team should not carry out any attacks on the CTF infrastructure.</b></li> 
                             <li><b>No DoS, DdoS, bruteforcing, automated scans or generating any large amount of traffic by any other means on any challenges and other contest infrastructure. It is not permitted and is never intended in any question.</b></li> 
                             <li><b>No collaboration between different teams and flag sharing is not allowed.</b></li> 
-                            <li><b>Teams are NOT allowed to publish solutions during the course of game (blog, GitHub, YouTube, etc)</b></li> 
-                            <li><b>Any participants found violating the above rules will be disqualified from the contest</b></li> 
+                            <li><b>Participants/Teams are NOT allowed to publish solutions during the course of game (blog, GitHub, YouTube, etc)</b></li> 
+                            <li><b>Any participants/Teams found violating the above rules will be disqualified from the contest</b></li> 
                             <li><b>Team InCTF reserves the right to introduce new rules or modify existing rules during or after the contest. Any such rules will be applicable to all the participants in the contest</b></li> 
-                            <li><b> The decision of Team InCTF will be final</b></li> 
+                            <li><b>The decision of Team InCTF will be final</b></li> 
                             <li> <b>By participating in the contest, you agree that you have read the above rules and fully agree to adhere to them.</b></li> 
                         
                     </ul>
