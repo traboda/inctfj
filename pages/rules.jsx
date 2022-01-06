@@ -97,13 +97,13 @@ const RulePage = () => {
                     <p>All participants should be full-time employees of an incorporated company.</p>
                     <h2>Team Formation Rules</h2>
                     <ul>
-                        <li>Professionals working in India are eligible for prizes Team can have Max of 5 and Min of 2 members.</li>
-                        <li>Teams can be formed in any manner.</li>
-                        <li>Top 20 teams from from the qualifier round will be selected for the finals.</li>
-                        <li>The teams should score above 500 points to qualify for the final selection.</li>
-                        <li>Professional teams cannot club with the student team.</li>
-                        <li>One participant cannot be the member of more than one team.</li>
-                        <li>Teams selected for the finals will be finalised only after professional ID card verification of all the members.</li>
+                        <li><b> Professionals working in India are eligible for prizes Team can have Max of 5 and Min of 2 members.</b></li>
+                        <li><b>Teams can be formed in any manner.</b></li>
+                        <li><b>Top 20 teams from from the qualifier round will be selected for the finals.</b></li>
+                        <li><b>The teams should score above 500 points to qualify for the final selection.</b></li>
+                        <li><b>Professional teams cannot club with the student team.</b></li>
+                        <li><b>One participant cannot be the member of more than one team.</b></li>
+                        <li><b>Teams selected for the finals will be finalised only after professional ID card verification of all the members.</b></li>
                     </ul>
 
                    
