@@ -61,7 +61,7 @@ const RulePage = () => {
                     </p>
                     <h2>Rules for the final contest</h2>
                     <ul>
-                            <li><b>Beginners are only eligible for prizes.((teams with any member having more than 1.5/2 years in CTF is not a beginner)</b></li>
+                            <li><b>Beginners are only eligible for prizes.(teams with any member having more than 1.5/2 years in CTF is not a beginner)</b></li>
                             <li><b>Teams more than one year experience in CTF is not considered as beginner. Note: this is not applicable for inctfpro</b></li>
                             <li><b>Prizes will be distributed within 3 month after the CTF</b></li>
 
