@@ -59,15 +59,21 @@ const RulePage = () => {
                     <p>
                         2.All participants should be a student who has not completed a bachelor's degree.     
                     </p>
-                    <h2>Team Formation Rules</h2>
+                    <h2>Rules for the final contest</h2>
                     <ul>
-                        <li>A team should consist of 2-5 members.</li>
-                        <li>An individual student can only participate in the contest representing one team.</li>
-                        <li>A team should be affiliated to an Indian university/college/educational institution.</li>
-                        <li>All members of the team should be active students pursuing a bachelors/Masters/PhD programme in the team’s affiliated institution.</li>
-                        <li>All team members shall need to provide ID cards showing their active enrollment in the institution for verification upon qualification to the finals.</li>
-                        <li>The state of the team considered for the regional qualification shall be the state of the affiliated institution.</li>
-                        <li>There is no restriction on the number of teams that can register from a single institution.</li>
+                            <li><b>Beginners are only eligible for prizes.((teams with any member having more than 1.5/2 years in CTF is not a beginner)</b></li>
+                            <li><b>Teams more than one year experience in CTF is not considered as beginner. Note: this is not applicable for inctfpro</b></li>
+                            <li><b>Prizes will be distributed within 3 month after the CTF</b></li>
+
+                            <li><b> should not carry out any attacks on the CTF infrastructure.</b></li> 
+                            <li><b>No DoS, DdoS, bruteforcing, automated scans or generating any large amount of traffic by any other means on any challenges and other contest infrastructure. It is not permitted and is never intended in any question.</b></li> 
+                            <li><b>No collaboration between different teams and flag sharing is not allowed.</b></li> 
+                            <li><b>Participants are NOT allowed to publish solutions during the course of game (blog, GitHub, YouTube, etc)</b></li> 
+                            <li><b>Any participants found violating the above rules will be disqualified from the contest</b></li> 
+                            <li><b>Team InCTF reserves the right to introduce new rules or modify existing rules during or after the contest. Any such rules will be applicable to all the participants in the contest</b></li> 
+                            <li><b> The decision of Team InCTF will be final</b></li> 
+                            <li> <b> participating in the contest, you agree that you have read the above rules and fully agree to adhere to them.</b></li> 
+                        
                     </ul>
                     <h2>Rules for Self-Study Students</h2>
                     <ul>
