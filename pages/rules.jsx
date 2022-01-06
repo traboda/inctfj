@@ -65,17 +65,17 @@ const RulePage = () => {
                             <li><b>Teams more than one year experience in CTF is not considered as beginner. Note: this is not applicable for inctf professionals</b></li>
                             <li><b>Prizes will be distributed within 3 month after the CTF</b></li>
 
-                            <li><b> should not carry out any attacks on the CTF infrastructure.</b></li> 
+                            <li><b>Team should not carry out any attacks on the CTF infrastructure.</b></li> 
                             <li><b>No DoS, DdoS, bruteforcing, automated scans or generating any large amount of traffic by any other means on any challenges and other contest infrastructure. It is not permitted and is never intended in any question.</b></li> 
                             <li><b>No collaboration between different teams and flag sharing is not allowed.</b></li> 
-                            <li><b>Participants are NOT allowed to publish solutions during the course of game (blog, GitHub, YouTube, etc)</b></li> 
+                            <li><b>Teams are NOT allowed to publish solutions during the course of game (blog, GitHub, YouTube, etc)</b></li> 
                             <li><b>Any participants found violating the above rules will be disqualified from the contest</b></li> 
                             <li><b>Team InCTF reserves the right to introduce new rules or modify existing rules during or after the contest. Any such rules will be applicable to all the participants in the contest</b></li> 
                             <li><b> The decision of Team InCTF will be final</b></li> 
-                            <li> <b> participating in the contest, you agree that you have read the above rules and fully agree to adhere to them.</b></li> 
+                            <li> <b>By participating in the contest, you agree that you have read the above rules and fully agree to adhere to them.</b></li> 
                         
                     </ul>
-                    <h2>Rules for Self-Study Students</h2>
+                    {/* <h2>Rules for Self-Study Students</h2>
                     <ul>
                         <li>Students who are doing self-study and are not enrolled in any education institution can participate in InCTF individually or as a team.</li>
                         <li>The student, and in case of team formation, the team shall not be affiliated with any institution or state.</li>
@@ -90,7 +90,7 @@ const RulePage = () => {
                         <li>Women in CyberSecurity Initiative - The top 25 women-only teams with minimum eligibility shall be selected for the finals. This is in-addition to, and does not include  women-only teams that qualified as scoreboard toppers and regional toppers from their respective states.</li>
                         <li>Self-Study Students: Top 25 self-study students/student teams with minimum eligibility shall be selected for the finals. This is in-addition, and does not include those already qualified as scoreboard toppers.</li>
                         <li>All team members shall need to submit their ID cards for verification. Teams failing to complete ID card verification of all its members in due time shall be disqualified, and the next eligible team from their quota shall be considered.</li>
-                    </ul>
+                    </ul> */}
                     <h1>Rules for Professionals</h1>
                     <h2>Eligibility for Participation </h2>
                     <p>All participating professionals should be permanent residents and citizens of the Republic of India.</p>
