@@ -167,10 +167,16 @@ const LandingHeader = ({ UTMSource = null }) => {
                                     </p>
                                 </Fade>
                                 <a
-                                   href="https://conference.inctf.in/"
+                                   href="https://app.traboda.com/contest/inctf-21-finals"
                                     className="px-8 py-5 mt-4 font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl"
                                 >
-                                    InCTFCon <i className="fa fa-chevron-right"/>
+                                    InCTF Nationals <i className="fa fa-chevron-right"/>
+                                </a>
+                                <a
+                                   href="https://app.traboda.com/contest/inctf-pro-21-finals"
+                                    className="px-8 py-5 mt-4 font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl"
+                                >
+                                    InCTF Professionals<i className="fa fa-chevron-right"/>
                                 </a>
                                
                             </div>
