@@ -95,7 +95,7 @@ const RulePage = () => {
                     <h2>Eligibility for Participation </h2>
                     <p>All participating professionals should be permanent residents and citizens of the Republic of India.</p>
                     <p>All participants should be full-time employees of an incorporated company.</p>
-                    <h2>Team Formation Rules</h2>
+                    {/* <h2>Team Formation Rules</h2>
                     <ul>
                         <li><b> Professionals working in India are eligible for prizes Team can have Max of 5 and Min of 2 members.</b></li>
                         <li><b>Teams can be formed in any manner.</b></li>
@@ -104,7 +104,7 @@ const RulePage = () => {
                         <li><b>Professional teams cannot club with the student team.</b></li>
                         <li><b>One participant cannot be the member of more than one team.</b></li>
                         <li><b>Teams selected for the finals will be finalised only after professional ID card verification of all the members.</b></li>
-                    </ul>
+                    </ul> */}
 
                    
                 </div>
