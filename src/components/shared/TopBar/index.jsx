@@ -205,9 +205,9 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                 </nav>
                                 <div className="text-right px-2">
                                     <div className="text-lg font-semibold text-primary">
-                                        InCTF Jr Qualifiers 2021
+                                        InCTF Jr Finals 2021
                                     </div>
-                                    <div className="font-semibold">28th to 30th Dec (6PM to 6PM, 48 Hrs.)</div>
+                                    <div className="font-semibold">7th to 9th Dec (6PM to 6PM, 48 Hrs.)</div>
                                 </div>
                                 {/*<button*/}
                                 {/*    className="px-8 py-4 rounded-lg font-semibold bg-primary hover:bg-blue-800 shadow hover:shadow-xl text-white ml-3"*/}
