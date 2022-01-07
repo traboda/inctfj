@@ -39,7 +39,7 @@ const RegistrationModal = ({ isOpen, onClose }) => (
         {isOpen &&
         <div className="text-center bg-white px-3 md:p-4 py-6 items-end rounded-2xl justify-center">
             <div className="text-center mb-3 text-3xl">
-                please select
+                Please Select for Finals
             </div>
             <div className="flex flex-wrap">
                 <div className="md:w-1/2 mb-4 md:mb-0 p-3">
