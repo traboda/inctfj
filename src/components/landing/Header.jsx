@@ -166,18 +166,14 @@ const LandingHeader = ({ UTMSource = null }) => {
                                         <b>Take part in Amrita InCTF to get recruited as interns/full-time in security roles in companies such as Salesforce, Zoho, VMware, Schneider and several others. </b>
                                     </p>
                                 </Fade>
+                                
                                 <a
-                                   href="https://app.traboda.com/contest/inctf-21-finals"
+                                   href="https://conference.inctf.in/"
                                     className="px-8 py-5 mt-4 font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl"
                                 >
-                                    InCTF Nationals <i className="fa fa-chevron-right"/>
+                                    InCTF Conference<i className="fa fa-chevron-right"/>
                                 </a>
-                                <a
-                                   href="https://app.traboda.com/contest/inctf-pro-21-finals"
-                                    className="px-8 py-5 mt-4 font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl"
-                                >
-                                    InCTF Professionals<i className="fa fa-chevron-right"/>
-                                </a>
+                                
                                
                             </div>
                             <div className="md:w-1/3 my-4 md:my-0 px-3">
