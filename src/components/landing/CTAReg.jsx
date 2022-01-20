@@ -29,7 +29,7 @@ const RegCTASection = styled.section`
 
 const CTAReg = ({ UTMSource = null }) => (
     <RegCTASection className="container mx-auto">
-        <div className="flex flex-wrap  mx-0">
+        {/* <div className="flex flex-wrap  mx-0">
             <Fade left>
                 <div className="md:w-2/3 pr-4 pl-4 flex items-center p-2">
                     <img alt="star" className="hidden md:block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />
@@ -47,7 +47,7 @@ const CTAReg = ({ UTMSource = null }) => (
                     />
                 </div>
             </Fade>
-        </div>
+        </div> */}
     </RegCTASection>
 );
 

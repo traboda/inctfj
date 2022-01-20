@@ -82,6 +82,11 @@ const inCTFSponsors = [
         maxHeight: '150px',
         desg: "Silver Sponsor",
     },
+    {
+        image: require('../../assets/images/sponsors/Audius_Logo.png'),
+        maxHeight: '30px',
+        desg: "Prize Sponsor",
+    },
     
 ];
 
