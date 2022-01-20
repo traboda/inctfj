@@ -66,18 +66,6 @@ const customConfig = {
                 source: '/rankings',
                 destination: '/stats',
                 permanent: false,
-            },
-            {
-                source: '/join',
-                destination: 'https://us02web.zoom.us/j/84498173321',
-            },
-            {
-                source: '/join1',
-                destination: 'https://us02web.zoom.us/j/84498173321',
-            },
-            {
-                source: '/join2',
-                destination: 'https://us02web.zoom.us/j/84498173321',
             }
         ]
     },
