@@ -59,13 +59,21 @@ const RulePage = () => {
                     </p>
                     <h2>Eligibility for Participation</h2>
                     <p>
-                        Each individual who participates in the competition (“Participant”) in order to be eligible for the finals / prizes must be:
+                        Each individual who participates in the competition (“Participant”) in order to be eligible for
+                        the finals / prizes must be:
                     </p>
                     <ul>
                         <li>not more than nineteen (19) years of age upon your date of registration for the Contest on the Contest website.</li>
                         <li>a citizen of the Republic of India</li>
                         <li>must not have completed 12th or equivalent grade of school.</li>
                     </ul>
+                    <p>
+                        As the goal of InCTF Junior is to bring and encourage more beginners into cyber security, we
+                        reserve the right to disqualify any participant from prizes who is found to be having experience
+                        in cyber-security. In case of any dispute, the decision of the Organizers will be final and
+                        binding. The actual scoreboard and ranks of all finalists shall be published, however, the
+                        prizes will be awarded only to beginner participants.
+                    </p>
                     <p>
                         A Participant is expected to be enrolled for any pre-university (high school or secondary school)
                         programme when they register. However, in case the Participant is undergoing home/private schooling,
