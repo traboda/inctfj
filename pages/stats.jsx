@@ -110,7 +110,7 @@ const Stats = () => {
                 {
                     "name": "SSOD",
                     "school": "Manipal Institute of Technology",
-                    "title": "Second prize Winners",
+                    "title": "First prize Winners",
                     "members": "Ajay Suresh kumar, G S Nagendran, yuvaraj you_we(UV), Monish Kumar, Johan",
                     "avatar": require('../src/assets/images/champions/women.png')
                 },
