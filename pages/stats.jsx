@@ -62,7 +62,7 @@ const Stats = () => {
                     "school": "Chennai Institute of Technology",
                     "title": "Third Prize Winners",
                     "members": "Sai Sabarish, Roshan Jagadish, Vinay Saran, Abishua Bezalel Raj J, Pavan Kalyan",
-                    "avatar": require('../src/assets/images/champions/ciot.jpeg')
+                    "avatar": require('../src/assets/images/champions/ciot.png')
                 },
             ],
             experienced: [
