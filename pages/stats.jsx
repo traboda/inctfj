@@ -111,14 +111,14 @@ const Stats = () => {
                     "name": "SSOD",
                     "school": "Manipal Institute of Technology",
                     "title": "Second prize Winners",
-                    "members": "Jyothsna Ashok",
+                    "members": "Ajay Suresh kumar, G S Nagendran, yuvaraj you_we(UV), Monish Kumar, Johan",
                     "avatar": require('../src/assets/images/champions/women.png')
                 },
                 {
                     "name": "ValueMentor",
                     "school": "Manipal Institute of Technology",
                     "title": "Second prize Winners",
-                    "members": "Jyothsna Ashok",
+                    "members": "Hemant Boban, Kishor B, Hariharan S, Rishikesh KS",
                     "avatar": require('../src/assets/images/champions/women.png')
                 }
             ],
