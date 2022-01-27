@@ -100,7 +100,7 @@ const Stats = () => {
                 {
                     "name": "f.o.g.m.j",
                     "school": "Manipal Institute of Technology",
-                    "title": "Women CTF Winner",
+                    "title": "Second prize Winners",
                     "members": "Jyothsna Ashok",
                     "avatar": require('../src/assets/images/champions/women.png')
                 }
