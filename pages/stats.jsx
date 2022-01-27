@@ -76,8 +76,8 @@ const Stats = () => {
                 {
                     "name": "Team team_sist",
                     "school": "Sathyabama Institute of Science and Technology",
-                    "title": "Third Prize Winners",
-                    "members": "Sai Sabarish, Roshan Jagadish, Vinay Saran, Abishua Bezalel Raj J, Pavan Kalyan",
+                    "title": "Second Prize Winners",
+                    "members": "Abisheik Magesh, Abhishek Bajpai, jones, Chella dhanush, Hasan Firnas",
                     "avatar": require('../src/assets/images/champions/team.png')
                 },
                 {
