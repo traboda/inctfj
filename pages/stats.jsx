@@ -112,14 +112,14 @@ const Stats = () => {
                     "school": "Company name not specified",
                     "title": "First prize Winners",
                     "members": "Ajay Suresh kumar, G S Nagendran, yuvaraj you_we(UV), Monish Kumar, Johan",
-                    "avatar": require('../src/assets/images/champions/women.png')
+                    "avatar": require('../src/assets/images/champions/professionals.png')
                 },
                 {
                     "name": "Team ValueMentor",
                     "school": "Company name not specified",
                     "title": "Second prize Winners",
                     "members": "Hemant Boban, Kishor B, Hariharan S, Rishikesh KS",
-                    "avatar": require('../src/assets/images/champions/women.png')
+                    "avatar": require('../src/assets/images/champions/professionals.png')
                 }
             ],
             
