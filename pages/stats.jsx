@@ -93,8 +93,15 @@ const Stats = () => {
                 {
                     "name": "Sreesruthi PK",
                     "school": "Amrita Vishwa Vidyapeetham",
-                    "place": "Amritapuri, Kerala",
                     "title": "Women CTF Winner",
+                    "members": "Saravanakumar K, Suriya muthusamy",
+                    "avatar": require('../src/assets/images/champions/sreesruthi.png')
+                },
+                {
+                    "name": "Sreesruthi PK",
+                    "school": "Amrita Vishwa Vidyapeetham",
+                    "title": "Women CTF Winner",
+                    "members": "Saravanakumar K, Suriya muthusamy",
                     "avatar": require('../src/assets/images/champions/sreesruthi.png')
                 }
             ],

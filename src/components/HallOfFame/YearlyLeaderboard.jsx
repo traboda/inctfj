@@ -123,17 +123,23 @@ const YearlyLeaderboard = ({ year, leaderboard, proLeaderboard, schools, champio
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">{womenHackers.map((c, index) =>
             <div className="p-4 bg-white rounded-lg border" key={shortid.generate()}>
                 <Fade up delay={index*250}>
-                    <ChampionCard>
+                <ChampionCard>
                         <div className="flex flex-wrap h-full w-full">
                             <div
-                                style={{ borderRadius: '0.75rem', background: `url(${c.avatar})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                                style={{
+                                    borderRadius: '0.75rem',
+                                    background: `url(${c.avatar})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center'
+                                }}
                                 className="w-1/3 lg:w-1/4 pr-4 pl-4 px-2 md:px-0"
                             />
                             <div className="w-2/3 lg:w-3/4 pr-4 pl-4 flex items-center p-2 md:p-4">
                                 <div>
+                                    <div className="h6 uppercase mb-1">{c.title}</div>
                                     <h5 className="font-bold">{c.name}</h5>
-                                    <div className="h6 mb-1">{c.title}</div>
                                     <div className="school-name">{c.school}</div>
+                                    <div className="members-name">{c.members}</div>
                                     <div>{c.place}</div>
                                 </div>
                             </div>
@@ -152,7 +158,7 @@ const YearlyLeaderboard = ({ year, leaderboard, proLeaderboard, schools, champio
                 The top Professional Hacker of InCTF {year}
             </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">{womenHackers.map((c, index) =>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">{professionals.map((c, index) =>
             <div className="p-4 bg-white rounded-lg border" key={shortid.generate()}>
                 <Fade up delay={index*250}>
                     <ChampionCard>
