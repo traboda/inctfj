@@ -103,7 +103,7 @@ const Stats = () => {
                     "school": "Manipal Institute of Technology",
                     "title": "Second prize Winners",
                     "members": "Jyothsna Ashok",
-                    "avatar": require('../src/assets/images/champions/women.png')
+                    "avatar": require('../src/assets/images/champions/Manipal_University_logo.png')
                 }
             ],
             professionals: [
