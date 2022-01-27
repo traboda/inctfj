@@ -37,12 +37,78 @@ const Stats = () => {
         {
             year: 2021,
             stats: {
-                totalRegistrations: 458,
+                totalRegistrations: 1587,
                 totalStates: 16,
-                totalFinalists: 50,
+                totalFinalists: 190,
             },
-            leaderboard: qualifiers21,
-            proLeaderboard: qualifiersPro21,
+            champions: [
+                {
+                    "name": "Team tce",
+                    "school": "Chandigarh Group of Colleges",
+                    "title": "First Prize Winners",
+                    "members": "Harshit Joshi, Vishek Chaudhary",
+                    "avatar": require('../src/assets/images/champions/team.png')
+                },
+                {
+                    "name": "Team 1nf1n1ty",
+                    "school": "SASTRA University, Thanjavur",
+                    "title": "Second Prize Winners",
+                    "members": "Shyam Sunder Saravanan, Brijesharun Gurumurthy, RAGHUL P S, Vigneshwaran, Hariharan Sundar",
+                    "avatar": require('../src/assets/images/champions/team.png')
+                },
+                {
+                    "name": "Team cabal_of_crackers909",
+                    "school": "Chennai Institute of Technology",
+                    "title": "Third Prize Winners",
+                    "members": "Sai Sabarish, Roshan Jagadish, Vinay Saran, Abishua Bezalel Raj J, Pavan Kalyan",
+                    "avatar": require('../src/assets/images/champions/team.png')
+                },
+            ],
+            experienced: [
+
+                {
+                    "name": "Team iitbreachers",
+                    "school": "Chennai Institute of Technology",
+                    "title": "First Prize Winners",
+                    "members": "Sai Sabarish, Roshan Jagadish, Vinay Saran, Abishua Bezalel Raj J, Pavan Kalyan",
+                    "avatar": require('../src/assets/images/champions/team.png')
+                },
+                {
+                    "name": "Team cabal_of_crackers909",
+                    "school": "Chennai Institute of Technology",
+                    "title": "Third Prize Winners",
+                    "members": "Sai Sabarish, Roshan Jagadish, Vinay Saran, Abishua Bezalel Raj J, Pavan Kalyan",
+                    "avatar": require('../src/assets/images/champions/team.png')
+                },
+                {
+                    "name": "Team cabal_of_crackers909",
+                    "school": "Chennai Institute of Technology",
+                    "title": "Third Prize Winners",
+                    "members": "Sai Sabarish, Roshan Jagadish, Vinay Saran, Abishua Bezalel Raj J, Pavan Kalyan",
+                    "avatar": require('../src/assets/images/champions/team.png')
+                }
+            ],
+            womenHackers: [
+
+                {
+                    "name": "Sreesruthi PK",
+                    "school": "Amrita Vishwa Vidyapeetham",
+                    "place": "Amritapuri, Kerala",
+                    "title": "Women CTF Winner",
+                    "avatar": require('../src/assets/images/champions/sreesruthi.png')
+                }
+            ],
+            professionals: [
+
+                {
+                    "name": "Sreesruthi PK",
+                    "school": "Amrita Vishwa Vidyapeetham",
+                    "place": "Amritapuri, Kerala",
+                    "title": "Women CTF Winner",
+                    "avatar": require('../src/assets/images/champions/sreesruthi.png')
+                }
+            ],
+            
         },
         {
             year: 2019,
