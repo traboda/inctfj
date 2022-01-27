@@ -84,7 +84,7 @@ const Stats = () => {
                     "name": "Team sappi_sippi354",
                     "school": "Government College of Engineering, Srirangam",
                     "title": "Third Prize Winners",
-                    "members": "SARAVANAKUMAR K, suriya muthusamy",
+                    "members": "Saravanakumar K, Suriya muthusamy",
                     "avatar": require('../src/assets/images/champions/team.png')
                 }
             ],
