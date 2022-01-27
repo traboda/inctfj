@@ -84,7 +84,7 @@ const Stats = () => {
                     "name": "Team sappi_sippi354",
                     "school": "Government College of Engineering, Srirangam",
                     "title": "Third Prize Winners",
-                    "members": "Sai Sabarish, Roshan Jagadish, Vinay Saran, Abishua Bezalel Raj J, Pavan Kalyan",
+                    "members": "SARAVANAKUMAR K, suriya muthusamy",
                     "avatar": require('../src/assets/images/champions/team.png')
                 }
             ],
