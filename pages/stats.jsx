@@ -91,14 +91,14 @@ const Stats = () => {
             womenHackers: [
 
                 {
-                    "name": "powerpuff_girls",
+                    "name": "Team powerpuff_girls",
                     "school": "Lovely Professional University (LPU), Punjab",
                     "title": "First Prize Winners",
                     "members": "Manasi Jha, Megha Jha",
                     "avatar": require('../src/assets/images/champions/women.png')
                 },
                 {
-                    "name": "f.o.g.m.j",
+                    "name": "Team f.o.g.m.j",
                     "school": "Manipal Institute of Technology",
                     "title": "Second prize Winners",
                     "members": "Jyothsna Ashok",
