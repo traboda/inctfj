@@ -108,14 +108,14 @@ const Stats = () => {
             professionals: [
 
                 {
-                    "name": "SSOD",
+                    "name": "Team SSOD",
                     "school": "Company name not specified",
                     "title": "First prize Winners",
                     "members": "Ajay Suresh kumar, G S Nagendran, yuvaraj you_we(UV), Monish Kumar, Johan",
                     "avatar": require('../src/assets/images/champions/women.png')
                 },
                 {
-                    "name": "ValueMentor",
+                    "name": "Team ValueMentor",
                     "school": "Company name not specified",
                     "title": "Second prize Winners",
                     "members": "Hemant Boban, Kishor B, Hariharan S, Rishikesh KS",
