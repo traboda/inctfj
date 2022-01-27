@@ -91,18 +91,18 @@ const Stats = () => {
             womenHackers: [
 
                 {
-                    "name": "Sreesruthi PK",
-                    "school": "Amrita Vishwa Vidyapeetham",
-                    "title": "Women CTF Winner",
-                    "members": "Saravanakumar K, Suriya muthusamy",
-                    "avatar": require('../src/assets/images/champions/sreesruthi.png')
+                    "name": "powerpuff_girls",
+                    "school": "Lovely Professional University (LPU), Punjab",
+                    "title": "First Prize Winners",
+                    "members": "Manasi Jha, Megha Jha",
+                    "avatar": require('../src/assets/images/champions/women.png')
                 },
                 {
                     "name": "Sreesruthi PK",
                     "school": "Amrita Vishwa Vidyapeetham",
                     "title": "Women CTF Winner",
                     "members": "Saravanakumar K, Suriya muthusamy",
-                    "avatar": require('../src/assets/images/champions/sreesruthi.png')
+                    "avatar": require('../src/assets/images/champions/women.png')
                 }
             ],
             professionals: [
