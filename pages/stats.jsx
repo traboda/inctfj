@@ -108,11 +108,18 @@ const Stats = () => {
             professionals: [
 
                 {
-                    "name": "Sreesruthi PK",
-                    "school": "Amrita Vishwa Vidyapeetham",
-                    "place": "Amritapuri, Kerala",
-                    "title": "Women CTF Winner",
-                    "avatar": require('../src/assets/images/champions/sreesruthi.png')
+                    "name": "SSOD",
+                    "school": "Manipal Institute of Technology",
+                    "title": "Second prize Winners",
+                    "members": "Jyothsna Ashok",
+                    "avatar": require('../src/assets/images/champions/women.png')
+                },
+                {
+                    "name": "ValueMentor",
+                    "school": "Manipal Institute of Technology",
+                    "title": "Second prize Winners",
+                    "members": "Jyothsna Ashok",
+                    "avatar": require('../src/assets/images/champions/women.png')
                 }
             ],
             
