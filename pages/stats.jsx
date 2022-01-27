@@ -72,21 +72,21 @@ const Stats = () => {
                     "school": "Indian Institute of Technology, Bombay (IIT-B)",
                     "title": "First Prize Winners",
                     "members": "Sahil Jain, Pulkit Agrawal, Girish Srivatsa, Neel Aryan",
-                    "avatar": require('../src/assets/images/champions/team.png')
+                    "avatar": require('../src/assets/images/champions/iitbombay.png')
                 },
                 {
                     "name": "Team team_sist",
                     "school": "Sathyabama Institute of Science and Technology",
                     "title": "Second Prize Winners",
                     "members": "Abisheik Magesh, Abhishek Bajpai, jones, Chella dhanush, Hasan Firnas",
-                    "avatar": require('../src/assets/images/champions/team.png')
+                    "avatar": require('../src/assets/images/champions/sathyabama.png')
                 },
                 {
                     "name": "Team sappi_sippi354",
                     "school": "Government College of Engineering, Srirangam",
                     "title": "Third Prize Winners",
                     "members": "Saravanakumar K, Suriya muthusamy",
-                    "avatar": require('../src/assets/images/champions/team.png')
+                    "avatar": require('../src/assets/images/champions/gcesrirangam.jpeg')
                 }
             ],
             womenHackers: [
@@ -96,7 +96,7 @@ const Stats = () => {
                     "school": "Lovely Professional University (LPU), Punjab",
                     "title": "First Prize Winners",
                     "members": "Manasi Jha, Megha Jha",
-                    "avatar": require('../src/assets/images/champions/women.png')
+                    "avatar": require('../src/assets/images/champions/lovelypu.png')
                 },
                 {
                     "name": "Team f.o.g.m.j",
