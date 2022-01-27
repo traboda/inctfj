@@ -41,7 +41,7 @@ const YearlyLeaderboard = ({ year, leaderboard, proLeaderboard, schools, champio
     {champions?.length > 0 &&
     <div className="py-3">
         <div className="py-2">
-            <h3 style={{ color: '#fd7e14' }} className="mb-1 font-semibold">Beginner level Champions</h3>
+            <h3 style={{ color: '#fd7e14' }} className="mb-1 font-semibold">Top Beginner level Champions</h3>
             <p style={{ opacity: 0.8 }} className="mb-3">
                The InCTF Beginner level {year} champions
             </p>
