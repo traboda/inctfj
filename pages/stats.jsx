@@ -48,21 +48,21 @@ const Stats = () => {
                     "school": "Chandigarh Group of Colleges",
                     "title": "First Prize Winners",
                     "members": "Harshit Joshi, Vishek Chaudhary",
-                    "avatar": require('../src/assets/images/champions/team.png')
+                    "avatar": require('../src/assets/images/champions/cgc.png')
                 },
                 {
                     "name": "Team 1nf1n1ty",
                     "school": "SASTRA University, Thanjavur",
                     "title": "Second Prize Winners",
                     "members": "Shyam Sunder Saravanan, Brijesharun Gurumurthy, RAGHUL P S, Vigneshwaran, Hariharan Sundar",
-                    "avatar": require('../src/assets/images/champions/team.png')
+                    "avatar": require('../src/assets/images/champions/Sastra.png')
                 },
                 {
                     "name": "Team cabal_of_crackers909",
                     "school": "Chennai Institute of Technology",
                     "title": "Third Prize Winners",
                     "members": "Sai Sabarish, Roshan Jagadish, Vinay Saran, Abishua Bezalel Raj J, Pavan Kalyan",
-                    "avatar": require('../src/assets/images/champions/team.png')
+                    "avatar": require('../src/assets/images/champions/ciot.jpeg')
                 },
             ],
             experienced: [
