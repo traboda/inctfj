@@ -81,8 +81,8 @@ const Stats = () => {
                     "avatar": require('../src/assets/images/champions/team.png')
                 },
                 {
-                    "name": "Team cabal_of_crackers909",
-                    "school": "Chennai Institute of Technology",
+                    "name": "Team sappi_sippi354",
+                    "school": "Government College of Engineering, Srirangam",
                     "title": "Third Prize Winners",
                     "members": "Sai Sabarish, Roshan Jagadish, Vinay Saran, Abishua Bezalel Raj J, Pavan Kalyan",
                     "avatar": require('../src/assets/images/champions/team.png')
