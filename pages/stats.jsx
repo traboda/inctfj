@@ -98,10 +98,10 @@ const Stats = () => {
                     "avatar": require('../src/assets/images/champions/women.png')
                 },
                 {
-                    "name": "Sreesruthi PK",
+                    "name": "f.o.g.m.j",
                     "school": "Amrita Vishwa Vidyapeetham",
                     "title": "Women CTF Winner",
-                    "members": "Saravanakumar K, Suriya muthusamy",
+                    "members": "Jyothsna Ashok",
                     "avatar": require('../src/assets/images/champions/women.png')
                 }
             ],
