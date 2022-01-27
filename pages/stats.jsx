@@ -35,6 +35,7 @@ const Stats = () => {
 
     const editions = [
         {
+           
             year: 2021,
             stats: {
                 totalRegistrations: 1587,
@@ -122,6 +123,7 @@ const Stats = () => {
                     "avatar": require('../src/assets/images/champions/professionals.png')
                 }
             ],
+            leaderboard: qualifiers21,
             
         },
         {
