@@ -70,7 +70,7 @@ const Stats = () => {
                     "name": "Team iitbreachers",
                     "school": "Indian Institute of Technology, Bombay (IIT-B)",
                     "title": "First Prize Winners",
-                    "members": "Sai Sabarish, Roshan Jagadish, Vinay Saran, Abishua Bezalel Raj J, Pavan Kalyan",
+                    "members": "Sahil Jain, Pulkit Agrawal, Girish Srivatsa, Neel Aryan",
                     "avatar": require('../src/assets/images/champions/team.png')
                 },
                 {
