@@ -99,7 +99,7 @@ const Stats = () => {
                 },
                 {
                     "name": "f.o.g.m.j",
-                    "school": "Amrita Vishwa Vidyapeetham",
+                    "school": "Manipal Institute of Technology",
                     "title": "Women CTF Winner",
                     "members": "Jyothsna Ashok",
                     "avatar": require('../src/assets/images/champions/women.png')
