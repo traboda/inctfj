@@ -41,19 +41,20 @@ const StatsPage = () => {
 
     const editions = eventStats?.editions;
 
-    return <SiteView meta={{ title: "Statistics & Rankings" }}>
+    return <SiteView meta={{ title: "Results & Statistics" }}>
         <TopBar darkenOnSidebar />
         <PageHeader
-            title="Past Statistics & Rankings"
+            title="Results & Statistics"
+            description="The results and statistics of the InCTF Junior editions showcasing the top cyber-security student talents in the country."
             breadcrumb={[
                 {
                     link: '/championship',
                     title: 'Championship'
                 },
                 {
-                    link: '/organizers',
+                    link: '/stats',
                     isActive: true,
-                    title: 'Organizers'
+                    title: 'Results & Statistics'
                 }
             ]}
         />
