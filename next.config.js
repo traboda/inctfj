@@ -50,18 +50,6 @@ const customConfig = {
             },
         ],
     },
-    async redirects() {
-        return [
-            {
-                source: '/hall-of-fame',
-                destination: '/stats',
-            },
-            {
-                source: '/results',
-                destination: '/stats',
-            }
-        ]
-    },
     env: {
         NEXT_PUBLIC_EVENT_ID: 'inctfj',
         EVENT_ID: 'inctfj',
