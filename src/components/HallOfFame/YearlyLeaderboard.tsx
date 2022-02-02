@@ -161,15 +161,16 @@ const YearlyLeaderboard = ({ data }: YearlyLeaderboard) => {
         )}</div>
     </div>}
     {/*<SchoolLeaderboard schools={schools} />*/}
-    <div className="py-3">
-        <div className="py-6">
-            <h3 style={{ color: '#fd7e14' }} className="text-5xl font-semibold mb-2">National-Level Finalists</h3>
-            <p className="mb-3 opacity-80 text-lg">
-                Top participants who qualified for the national-level finals, ranked according to final published
-                scoreboard based on most points earned by capturing the most number of flags in the lowest time.
-            </p>
-        </div>
-        {data?.results?.finalists?.length > 0 ?
+
+    {data?.results?.finalists?.length > 0 &&
+        <div className="py-3">
+            <div className="py-6">
+                <h3 style={{ color: '#fd7e14' }} className="text-5xl font-semibold mb-2">National-Level Finalists</h3>
+                <p className="mb-3 opacity-80 text-lg">
+                    Top participants who qualified for the national-level finals, ranked according to final published
+                    scoreboard based on most points earned by capturing the most number of flags in the lowest time.
+                </p>
+            </div>
             <div className="flex flex-wrap">
                 <div className="md:w-full mb-2">
                     <SearchBar className="flex flex-wrap bg-white p-2 mx-0 border">
@@ -215,14 +216,9 @@ const YearlyLeaderboard = ({ data }: YearlyLeaderboard) => {
                     <li>Participants with incomplete profile information, and who failed to verify their identity as a school student have been excluded from the listing.</li>
                     <li>Some information may not be complete, or may have inaccuracies due to limitations of available data.</li>
                 </div>
-            </div> :
-            <div className="flex items-center justify-center">
-                <div className="my-5 text-center">
-                    <h4 className="font-bold text-red-600">No Records Currently Available</h4>
-                    <p style={{ fontSize: '13px' }}>We will shortly update the entries here, check back later</p>
-                </div>
-            </div>}
+            </div>
         </div>
+    }
     </div>;
 };
 

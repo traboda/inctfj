@@ -12,7 +12,7 @@ export default <AnnualResult>{
             "avatar": "akhil_menon.png"
         },
         {
-            "title": "Women Hacker",
+            "title": "National Women Champion",
             "name": "Alisha Basa",
             "username": "abha.basa",
             "institution": "DAV Public School, Chandrasekharpur",
