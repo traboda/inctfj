@@ -167,19 +167,12 @@ const LandingHeader = ({ UTMSource = null }) => {
                                     </p>
                                 </Fade>
                                 <div className="mt-4 md:px-2">
-                                    <div className="text-3xl mb-2 font-semibold text-primary">
-                                        InCTF Jr Finals 2021
-                                    </div>
-                                    <div className="text-3xl font-semibold">6PM, 7th Jan to 6PM, 9th Jan (48 Hrs.)</div>
                                     <a
-                                        href="https://app.traboda.com/contest/inctf-jr-21-finals"
+                                        href="/results"
                                         className="text-2xl px-5 py-4 inline-block font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl my-3"
                                     >
-                                        Play Finals <i className="fa fa-chevron-right"/>
+                                        View Results <i className="fa fa-chevron-right"/>
                                     </a>
-                                    <div style={{ width: '450px', maxWidth: '100%' }} className="text-sm">
-                                        Only for qualified participants
-                                    </div>
                                 </div>
                             </div>
                             <div className="md:w-1/3 my-4 md:my-0 px-3">

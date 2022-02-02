@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import {AnimatePresence, AnimateSharedLayout, motion} from "framer-motion";
 import Link from "next/link";
 import {clearAllBodyScrollLocks, disableBodyScroll} from "body-scroll-lock";
+import Logo from "../Logo";
 
 const SearchBar = dynamic(() => import("../../landing/search/SearchBar"), { ssr: false });
 
@@ -43,13 +44,8 @@ const TopBarSearch = () => {
                                  className="container mx-auto flex flex-col items-center justify-center">
                                 <div className="text-center w-full" style={{ maxWidth: 600 }}>
                                     <Link href="/" passHref>
-                                        <a>
-                                            <img
-                                                className="mb-8 inline"
-                                                src={require('../../../assets/images/logos/inctf.png')}
-                                                alt="InCTF Jr"
-                                                style={{ maxHeight: '120px' }}
-                                            />
+                                        <a className="flex justify-center mb-2">
+                                            <Logo isDark maxHeight={120} />
                                         </a>
                                     </Link>
                                     <SearchBar

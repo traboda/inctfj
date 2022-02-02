@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Base from "../src/components/shared/Base";
 import TopBar from "../src/components/shared/TopBar";
 import Footer from "../src/components/shared/Footer";
 import PageHeader from "../src/components/PageHeader";
 import YoutubeVideos from "../src/components/resources/YoutubeVideos";
+import SiteView from "../src/components/SiteView";
 
 const ResourcesPage = () => {
     return (
-        <Base meta={{ title: "Resources InCTF Jr." }}>
+        <SiteView meta={{ title: "Resources InCTF Jr." }}>
             <TopBar />
             <PageHeader
                 breadcrumb={[
@@ -24,7 +24,7 @@ const ResourcesPage = () => {
                 <YoutubeVideos />
             </div>
             <Footer />
-        </Base>
+        </SiteView>
     );
 };
 

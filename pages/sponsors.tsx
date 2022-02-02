@@ -1,15 +1,14 @@
 import React from 'react';
 import TopBar from "../src/components/shared/TopBar";
 import Footer from "../src/components/shared/Footer";
-import Base from "../src/components/shared/Base";
 import SponsorsSection from "../src/components/landing/SponsorsSection";
-import Breadcrumb from "../src/components/shared/Breadcrumb";
 import PageHeader from "../src/components/PageHeader";
 import PageFooterExplorer from "../src/components/PageFooterExplorer";
+import SiteView from "../src/components/SiteView";
 
 const SponsorsPage = () => {
     return (
-        <Base meta={{ title: "Sponsors InCTF Jr." }}>
+        <SiteView meta={{ title: "Sponsors InCTF Jr." }}>
             <TopBar />
             <PageHeader
                 title="Our Sponsors"
@@ -48,7 +47,7 @@ const SponsorsPage = () => {
                 ]}
             />
             <Footer />
-        </Base>
+        </SiteView>
     )
 }
 

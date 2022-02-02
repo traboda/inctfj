@@ -1,5 +1,4 @@
 import React from 'react';
-import Base from "../src/components/shared/Base";
 
 import LandingSponsorship from "../src/components/landing/Sponsorship";
 import LandingTestimonials from "../src/components/landing/Testimonials";
@@ -18,10 +17,11 @@ import LandingPromoVideo from "../src/components/landing/PromoVideo";
 import YoutubeVideosSection from "../src/components/resources/YoutubeVideos";
 import Footer from "../src/components/shared/Footer";
 import LandingSearch from "../src/components/landing/search";
+import SiteView from "../src/components/SiteView";
 
 const StartPage = () => {
 
-    return <Base>
+    return <SiteView>
         <div style={{ overflowX: 'hidden' }} id="landing-page">
             <TopBar darkenOnSidebar includeSpace={false} />
             <LandingHeader UTMSource="start_page" />
@@ -41,7 +41,7 @@ const StartPage = () => {
             <LandingContactsBar />
             <Footer />
         </div>
-    </Base>
+    </SiteView>
 
 };
 

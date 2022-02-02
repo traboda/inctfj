@@ -56,48 +56,23 @@ const customConfig = {
                 source: '/hall-of-fame',
                 destination: '/stats',
                 permanent: true,
+            },
+            {
+                source: '/results',
+                destination: '/stats',
+                permanent: true,
             }
         ]
     },
-    exportPathMap: async function(
-        defaultPathMap,
-        { dev, dir, outDir, distDir, buildId }
-    ) {
-        const posts = require('./src/data/posts');
-        const writeups = require('./src/data/writeups');
-        return {
-            "/": { page: "/" },
-            "/blog": { page: "/blog" },
-            "/about": { page: "/about" },
-            "/stats": { page: "/stats" },
-            "/faq": { page: "/faq" },
-            "/rules": { page: "/rules" },
-            "/branding": { page: "/branding" },
-            "/promote": { page: "/promote" },
-            "/publicize": { page: "/publicize" },
-            "/ssi": { page: "/ssi" },
-            "/start": { page: "/start" },
-            "/resources": { page: "/resources" },
-            "/trainings": { page: "/trainings" },
-            "/advisory-board": { page: "/advisory-board" },
-            "/discord": { page: "/discord" },
-            "/privacy": { page: "/privacy" },
-            "/sponsors": { page: "/sponsors" },
-            "/organizers": { page: "/organizers" },
-            "/championship": { page: "/championship" },
-            "/talent-incubation": { page: "/talent-incubation" },
-            "/writeups": { page: "/writeups" },
-            ...writeups,
-            ...posts
-        }
-    },
     env: {
         domain: 'https://play.inctf.in/junior',
+        NEXT_PUBLIC_EVENT_ID: 'inctfj',
+        EVENT_ID: 'inctfj',
     }
 
 };
 
 module.exports = withPlugins([
     [withVideos],
-    [OptimizedImages],
+    [OptimizedImages, { optimizeImages: false }],
 ], customConfig);

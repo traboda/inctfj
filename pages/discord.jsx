@@ -1,6 +1,6 @@
 import {useEffect} from "react";
 import {useRouter} from "next/router";
-import Base from "../src/components/shared/Base";
+import SiteView from "../src/components/SiteView";
 
 const DiscordRedirect = () => {
 
@@ -10,9 +10,9 @@ const DiscordRedirect = () => {
         router.push('https://discord.gg/QVXewGh7sP')
     }, []);
 
-    return <Base meta={{ title: 'Join InCTF Jr Discord Server' }}>
+    return <SiteView meta={{ title: 'Join InCTF Jr Discord Server' }}>
         <h1>Please wait while we redirect you.</h1>
-    </Base>;
+    </SiteView>;
 };
 
 export default DiscordRedirect;

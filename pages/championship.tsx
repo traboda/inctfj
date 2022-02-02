@@ -1,20 +1,20 @@
 import React from "react";
 import TopBar from "../src/components/shared/TopBar";
 import Footer from "../src/components/shared/Footer";
-import Base from "../src/components/shared/Base";
 
 import LandingHeader from "../src/components/landing/Header";
 import LandingQuickInfo from "../src/components/landing/QuickInfo";
+import SiteView from "../src/components/SiteView";
 
 const ChampionshipPage = () => {
 
     return (
-        <Base meta={{ title: "CTF CyberSecurity Championship" }}>
+        <SiteView meta={{ title: "CTF CyberSecurity Championship" }}>
             <TopBar />
             <LandingHeader />
             <LandingQuickInfo />
             <Footer />
-        </Base>
+        </SiteView>
     );
 
 };

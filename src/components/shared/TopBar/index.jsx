@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import React, {useEffect, useRef, useState} from "react";
+import React, {useContext, useEffect, useRef, useState} from "react";
 import Link from "next/link";
 import Modal from "react-modal";
 import {clearAllBodyScrollLocks} from "body-scroll-lock";
@@ -7,8 +7,8 @@ import {clearAllBodyScrollLocks} from "body-scroll-lock";
 import MobileMenu from "./MobileMenu";
 import TopBarSearch from "./search";
 import TopBarItem from "./item";
-
-import TopbarItems from "./menu.json";
+import ConfigContext from "../../SiteView/context";
+import Logo from "../Logo";
 
 const TopbarContainer = styled.header`
   position: fixed;
@@ -98,6 +98,9 @@ const CloseButton = styled.button`
   }
 `;
 
+const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
+
+
 const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
 
     const [showMenu, setShowMenu] = useState(false);
@@ -108,13 +111,9 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
     const topbarRef = useRef(null)
     const scrollPrevStateRef = useRef(0);
 
-    const onOpen = () => {
-        setShowMenu(!showMenu);
-    };
+    const onOpen = () => setShowMenu(!showMenu);
 
-    const onClose = () => {
-        setShowMenu(false);
-    };
+    const onClose = () => setShowMenu(false);
 
     const onScroll = () => {
         let st = window.pageYOffset || document.documentElement.scrollTop;
@@ -138,83 +137,91 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
         setShowMenu(false);
     }, [scrollDir]);
 
+    const topbarConfig = require(`../../../data/${eventID}/topbar.json`);
+
     return <div>
-        <div style={{ fontSize: '14px' }} className="hidden md:block p-2 bg-blue-800 text-white">
-            <div className="flex items-center justify-between">
-                <div className="px-3">
-                    Have you got stuck? Need Help? <wbr/>
-                    <span className="inline-block">
-                        Join our discord server, ask your doubts & get support from our experts.
-                    </span>
-                </div>
-                <div className="flex items-center md:my-0 px-2 md:px-0 justify-end">
-                    <Link href="/discord" passHref>
-                        <a className="bg-white text-blue-800 mb-0 hover:text-primary rounded-lg px-3 py-2 whitespace-nowrap">
-                            Join Discord Now <i className="fa fa-chevron-right ml-1"/>
-                        </a>
-                    </Link>
+        {topbarConfig?.topbarCTA && (
+            <div style={{ fontSize: '14px' }} className="hidden md:block p-2 bg-blue-800 text-white">
+                <div className="flex items-center justify-between">
+                    <div className="px-3">
+                        {topbarConfig?.topbarCTA?.text}
+                    </div>
+                    <div className="flex items-center md:my-0 px-2 md:px-0 justify-end">
+                        <Link href={topbarConfig?.topbarCTA?.link} passHref>
+                            <a className="bg-white text-blue-800 mb-0 hover:text-primary rounded-lg px-3 py-2 whitespace-nowrap">
+                                {topbarConfig?.topbarCTA?.buttonText} <i className="fa fa-chevron-right ml-1"/>
+                            </a>
+                        </Link>
+                    </div>
                 </div>
             </div>
-        </div>
+        )}
         <TopbarContainer ref={topbarRef} className={scrollDir + ` ${isAtTop ? 'top' : 'floating'}`}>
             <div className="flex flex-wrap justify-center items-center container">
                 <div
-                    className="w-1/4 md:w-1/3 xl:w-1/4 md:text-center flex flex-wrap items-center md:justify-end justify-center px-2"
+                    className="w-1/4 md:w-1/3 xl:w-1/4 md:text-center flex flex-wrap items-center md:justify-start justify-center px-2"
                 >
                     <a className="w-full md:w-1/3" href="/">
-                        <img
-                            className="logo"
-                            src={require('../../../assets/images/logos/inctf.png')}
-                            alt="InCTF Jr"
-                        />
+                        <Logo isDark />
                     </a>
-                    <a
-                        target="_blank"
-                        href="http://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf"
-                        className="w-2/3 pl-2 md:flex hidden flex-col items-start"
-                        title="In association with CBSE"
-                    >
-                        <span
-                            className="uppercase tracking-widest opacity-80"
-                            style={{ fontSize: 8 }}
+                    {topbarConfig?.associate && (
+                        <a
+                            target="_blank"
+                            href={topbarConfig?.associate?.link}
+                            className="w-2/3 pl-2 md:flex hidden flex-col items-start"
+                            title="In association with CBSE"
                         >
-                            In association with
-                        </span>
-                        <img
-                            alt="cbse"
-                            src={require('../../../assets/images/logos/cbse.jpg')}
-                            style={{ position: 'unset', maxHeight: 45, maxWidth: '100%' }}
-                            draggable="false"
-                            className="inline"
-                        />
-                    </a>
+                            <span
+                                className="uppercase tracking-widest opacity-80"
+                                style={{ fontSize: 8 }}
+                            >
+                                In association with
+                            </span>
+                            <img
+                                alt="cbse"
+                                src={require(`../../../data/${eventID}/assets/${topbarConfig?.associate?.logo?.light}`)}
+                                style={{ position: 'unset', maxHeight: 45, maxWidth: '100%' }}
+                                draggable="false"
+                                className="inline"
+                            />
+                        </a>
+                    )}
                 </div>
                 <div className="md:w-2/3 xl:w-3/4 px-1 hidden md:flex items-center">
                     <div className="flex w-full">
                         <div className="w-full pl-4 flex justify-end text-left px-1">
                             <TopbarInfoCard className="items-center flex">
-                                <nav className="flex items-center mr-4">
-                                    {TopbarItems?.map((i) => (
-                                        <TopBarItem
-                                            key={`topbar_menu_link_${i?.link}`}
-                                            item={i}
-                                            isVisible={isVisible()}
-                                        />
-                                    ))}
-                                    <TopBarSearch />
-                                </nav>
-                                <div className="text-right px-2">
-                                    <div className="text-lg font-semibold text-primary">
-                                        InCTF Jr Finals 2021
-                                    </div>
-                                    <div className="font-semibold">7th to 9th Dec (6PM to 6PM, 48 Hrs.)</div>
-                                </div>
-                                {/*<button*/}
-                                {/*    className="px-8 py-4 rounded-lg font-semibold bg-primary hover:bg-blue-800 shadow hover:shadow-xl text-white ml-3"*/}
-                                {/*    onClick={() => setShowRegCard(true)}*/}
-                                {/*>*/}
-                                {/*    Register <i className="fa fa-chevron-right"/>*/}
-                                {/*</button>*/}
+                                {topbarConfig?.menu?.length > 0 && (
+                                    <nav className="flex items-center mr-4">
+                                        {topbarConfig?.menu?.map((i) => (
+                                            <TopBarItem
+                                                key={`topbar_menu_link_${i?.link}`}
+                                                item={i}
+                                                isVisible={isVisible()}
+                                            />
+                                        ))}
+                                        <TopBarSearch />
+                                    </nav>
+                                )}
+                                {topbarConfig?.CTA && (
+                                    <React.Fragment>
+                                        {topbarConfig?.CTA?.type === 'info' && (
+                                            <div className="text-right px-2">
+                                                <div className="text-lg font-semibold text-primary">
+                                                    {topbarConfig?.CTA?.title}
+                                                </div>
+                                                <div className="font-semibold">{topbarConfig?.CTA?.subTitle}</div>
+                                            </div>
+                                        )}
+                                        {topbarConfig?.CTA.type === 'link' && (
+                                            <Link href={topbarConfig?.CTA?.link} passHref>
+                                                <a className="px-8 py-4 rounded-lg font-semibold bg-primary hover:bg-blue-800 shadow hover:shadow-xl text-white ml-3">
+                                                    {topbarConfig?.CTA?.buttonText} <i className="fa fa-chevron-right"/>
+                                                </a>
+                                            </Link>
+                                        )}
+                                    </React.Fragment>
+                                )}
                             </TopbarInfoCard>
                         </div>
                     </div>

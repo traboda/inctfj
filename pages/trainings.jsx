@@ -1,14 +1,14 @@
 import React from "react";
 
-import Base from "../src/components/shared/Base";
 import TopBar from "../src/components/shared/TopBar";
 import Footer from "../src/components/shared/Footer";
 import Schedule from "../src/components/landing/Schedule";
 import PageHeader from "../src/components/PageHeader";
+import SiteView from "../src/components/SiteView";
 
 const TrainingSchedulePage = () => {
     return (
-        <Base meta={{ title: "Training Schedule for InCTF Jr." }}>
+        <SiteView meta={{ title: "Training Schedule for InCTF Jr." }}>
             <TopBar />
             <PageHeader
                 title="Training Workshops"
@@ -28,7 +28,7 @@ const TrainingSchedulePage = () => {
                 <Schedule />
             </div>
             <Footer />
-        </Base>
+        </SiteView>
     );
 };
 

@@ -3,10 +3,10 @@ import ScrollContainer from "react-indiana-drag-scroll";
 import shortid from "shortid";
 import styled from "@emotion/styled";
 
-import Base from "./shared/Base";
 import TopBar from "./shared/TopBar";
 import Breadcrumb from "./shared/Breadcrumb";
 import Footer from "./shared/Footer";
+import SiteView from "./SiteView";
 
 
 const ShareSection = styled.section`
@@ -103,7 +103,7 @@ const PromotePage = () => {
         document.body.removeChild(link);
     };
 
-    return <Base meta={{ title: "Publicize InCTF Jr." }}>
+    return <SiteView meta={{ title: "Publicize InCTF Jr." }}>
         <TopBar includeSpace={false} />
         <div className="px-4 py-8 flex items-end justify-center">
             <div style={{ width: '1000px', maxWidth: '100%'  }}>
@@ -168,7 +168,7 @@ const PromotePage = () => {
             </ScrollContainer>
         </ShareSection>
         <Footer />
-    </Base>;
+    </SiteView>;
 
 };
 

@@ -10,7 +10,7 @@ const PageHeader = ({ title, breadcrumb = null, description = null }) => (
                         <Breadcrumb items={breadcrumb}/>
                     </div>
                 )}
-                <h1 className="text-primary text-5xl lg:text-6xl py-4">{title}</h1>
+                <h1 className="text-primary text-5xl font-semibold lg:text-6xl py-4">{title}</h1>
                 {description?.length > 0 && (
                     <p className="opacity-75 text-sm md:text-base" style={{ maxWidth: '100%', width: '700px' }}>
                         {description}

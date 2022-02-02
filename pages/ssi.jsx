@@ -1,5 +1,4 @@
 import React from 'react';
-import Base from "../src/components/shared/Base";
 
 import LandingSponsorship from "../src/components/landing/Sponsorship";
 import LandingTestimonials from "../src/components/landing/Testimonials";
@@ -16,10 +15,11 @@ import CTAPartners from "../src/components/landing/CTAPartners";
 import LandingHeader from "../src/components/landing/Header";
 import LandingPromoVideo from "../src/components/landing/PromoVideo";
 import Footer from "../src/components/shared/Footer";
+import SiteView from "../src/components/SiteView";
 
 const SSILandingPage = () => {
 
-    return <Base>
+    return <SiteView>
         <div style={{ overflowX: 'hidden', background: '#FAFAFA' }} id="landing-page">
             <TopBar darkenOnSidebar includeSpace={false} />
             <LandingHeader UTMSource="ssi" />
@@ -37,7 +37,7 @@ const SSILandingPage = () => {
             <LandingContactsBar />
             <Footer />
         </div>
-    </Base>;
+    </SiteView>;
 
 };
 

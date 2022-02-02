@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useRouter} from "next/router";
 
-import Base from "../src/components/shared/Base";
+import SiteView from "../src/components/SiteView";
 
 const RegisterPage = () => {
     const router = useRouter();
@@ -10,9 +10,9 @@ const RegisterPage = () => {
         router.push('https://app.traboda.com/contest/inctfj-21-lr');
     }, []);
 
-    return <Base meta={{ title: 'Register for InCTF Junior 2021' }}>
+    return <SiteView meta={{ title: 'Register for InCTF Junior 2021' }}>
         <h1>Please wait while we redirect you.</h1>
-    </Base>;
+    </SiteView>;
 };
 
 export default RegisterPage;

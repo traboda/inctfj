@@ -3,10 +3,10 @@ import styled from "@emotion/styled";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-import Base from "../../src/components/shared/Base";
 import TopBar from "../../src/components/shared/TopBar";
 
 import Footer from "../../src/components/shared/Footer";
+import SiteView from "../../src/components/SiteView";
 
 const BlogWrap = styled.section`
     background: #223;
@@ -41,7 +41,7 @@ const BlogPostPage = ({ slug }) => {
     })();
 
     return data ?
-        <Base meta={{ title: `${data.title} - Blog`, description: data.description }}>
+        <SiteView meta={{ title: `${data.title} - Blog`, description: data.description }}>
             <TopBar darkenOnSidebar />
             <BlogWrap>
                 <TitleArea>
@@ -60,11 +60,11 @@ const BlogPostPage = ({ slug }) => {
                 </div>
             </BlogWrap>
             <Footer />
-        </Base> :
-        <Base meta={{ title: `Blog Post Not Found` }}>
+        </SiteView> :
+        <SiteView meta={{ title: `Blog Post Not Found` }}>
             <TopBar darkenOnSidebar />
             <Footer />
-        </Base>
+        </SiteView>
 }
 
 BlogPostPage.getInitialProps = async ({ query }) => {

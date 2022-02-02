@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from "@emotion/styled";
 
-import Base from "../src/components/shared/Base";
 import TopBar from "../src/components/shared/TopBar";
 import Footer from "../src/components/shared/Footer";
 
 import postsIndex from '../src/data/posts/index.json';
 import PostCard from "../src/components/blog/PostCard";
+import SiteView from "../src/components/SiteView";
 
 export const BlogPage = styled.main`
     display: flex;
@@ -45,34 +45,36 @@ const BlogListingPage = () => {
         return posts;
     })();
 
-    return  <Base meta={{ title: "Blog" }}>
-        <TopBar darkenOnSidebar />
-        <BlogPage>
-            <PageTitleArea className="container-lg px-3">
-                <div>
-                    <h1>InCTF Jr. Blog</h1>
-                    <p style={{ maxWidth: '720px' }}>
-                        Everything from participant experiences, cyberSec news to our case studies & reports,
-                        updates & experiments at InCTF are all jotted down on this blog.
-                    </p>
-                </div>
-            </PageTitleArea>
-            <div className="container-lg px-0">
-                <div className="row mx-0">
-                    {fetchedPosts.length > 0 ?
+    return (
+        <SiteView meta={{ title: "Blog" }}>
+            <TopBar darkenOnSidebar />
+            <BlogPage>
+                <PageTitleArea className="container-lg px-3">
                     <div>
-                        {fetchedPosts.map((p) =>
-                            <div className="col-md-6 p-2">
-                                <PostCard {...p} />
-                            </div>
-                        )}
-                    </div> :
-                    <div>No Posts</div>}
+                        <h1>InCTF Jr. Blog</h1>
+                        <p style={{ maxWidth: '720px' }}>
+                            Everything from participant experiences, cyberSec news to our case studies & reports,
+                            updates & experiments at InCTF are all jotted down on this blog.
+                        </p>
+                    </div>
+                </PageTitleArea>
+                <div className="container-lg px-0">
+                    <div className="row mx-0">
+                        {fetchedPosts.length > 0 ?
+                        <div>
+                            {fetchedPosts.map((p) =>
+                                <div className="col-md-6 p-2">
+                                    <PostCard {...p} />
+                                </div>
+                            )}
+                        </div> :
+                        <div>No Posts</div>}
+                    </div>
                 </div>
-            </div>
-        </BlogPage>
-        <Footer />
-    </Base>
+            </BlogPage>
+            <Footer />
+        </SiteView>
+    );
 
 };
 

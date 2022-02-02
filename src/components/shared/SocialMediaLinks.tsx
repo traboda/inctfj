@@ -1,37 +1,40 @@
-import React from "react";
+import React, {useContext} from "react";
+import ConfigContext from "../SiteView/context";
 
 const SocialMediaLinks = () => {
 
-    const links = [
+    const { socialLinks } = useContext(ConfigContext);
+
+    const links = socialLinks ? [
         {
-            "href": "mailto:inctfj@am.amrita.edu",
+            "href": socialLinks.email,
             "icon": "fa fa-envelope"
         },
         {
-            "href": "https://www.instagram.com/juniorinctf/",
+            "href": socialLinks.instagram,
             "icon": "fab fa-instagram"
         },
         {
-            "href": "https://twitter.com/InCTFj",
+            "href": socialLinks.twitter,
             "icon": "fab fa-twitter"
         },
         {
-            "href": "https://www.facebook.com/InCTFj",
+            "href": socialLinks.facebook,
             "icon": "fab fa-facebook"
         },
         {
-            "href": "https://www.youtube.com/c/InCTFj",
+            "href":  socialLinks.youtube,
             "icon": "fab fa-youtube"
         },
         {
-            "href": "/discord",
+            "href": socialLinks.discord,
             "icon": "fab fa-discord"
         }
-    ];
+    ] : [];
 
     return (
         <div className="flex items-center md:justify-end text-2xl lg:text-3xl xl:text-4xl justify-center md:mb-0 mb-2 p-2">
-            {links.map((l) => (
+            {links.filter((l) => l.href?.length > 0 ).map((l) => (
                 <a
                     className="mx-2 opacity-75 hover:opacity-100"
                     target="_blank"

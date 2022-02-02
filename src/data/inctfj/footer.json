@@ -1,0 +1,17 @@
+{
+  "copyrightText": "Copyright © InCTF Junior 2016-2021. All rights reserved.",
+  "menu": [
+    {
+      "title": "Brand Kit",
+      "link": "/branding"
+    },
+    {
+      "title": "Privacy Policy",
+      "link": "/privacy"
+    },
+    {
+      "title": "Rules",
+      "link": "/rules"
+    }
+  ]
+}

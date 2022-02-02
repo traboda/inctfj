@@ -1,17 +1,17 @@
 import React from "react";
 import TopBar from "../src/components/shared/TopBar";
-import Base from "../src/components/shared/Base";
 
 import { AdvisoryBoard, AdvisoryBoardAlumni } from "../src/data/organizers";
 import ProfileCard from "../src/components/ProfileCard";
 import Footer from "../src/components/shared/Footer";
 import PageHeader from "../src/components/PageHeader";
 import PageFooterExplorer from "../src/components/PageFooterExplorer";
+import SiteView from "../src/components/SiteView";
 
 const AdvisoryBoardPage = () => {
 
     return (
-        <Base meta={{ title: "Advisory Board" }}>
+        <SiteView meta={{ title: "Advisory Board" }}>
             <TopBar darkenOnSidebar />
             <PageHeader
                 breadcrumb={[
@@ -81,7 +81,7 @@ const AdvisoryBoardPage = () => {
                 ]}
             />
             <Footer />
-        </Base>
+        </SiteView>
     )
 };
 

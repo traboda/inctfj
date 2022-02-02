@@ -1,6 +1,6 @@
 import {useRouter} from "next/router";
 import {useEffect} from "react";
-import Base from "../src/components/shared/Base";
+import SiteView from "../src/components/SiteView";
 
 const PrivacyPage = () => {
 
@@ -10,9 +10,11 @@ const PrivacyPage = () => {
         router.push('https://app.traboda.com/priacy')
     }, []);
 
-    return <Base meta={{ title: 'Privacy Policy' }}>
-        <h1>Please wait while we redirect you.</h1>
-    </Base>;
+    return (
+        <SiteView meta={{ title: 'Privacy Policy' }}>
+            <h1>Please wait while we redirect you.</h1>
+        </SiteView>
+    );
 };
 
 export default PrivacyPage;

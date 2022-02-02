@@ -2,7 +2,6 @@ import React from 'react';
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-import Base from "../../src/components/shared/Base";
 import TopBar from "../../src/components/shared/TopBar";
 
 import Footer from "../../src/components/shared/Footer";
@@ -10,6 +9,7 @@ import styled from "@emotion/styled";
 import dynamic from "next/dynamic";
 import Breadcrumb from "../../src/components/shared/Breadcrumb";
 import PageFooterExplorer from "../../src/components/PageFooterExplorer";
+import SiteView from "../../src/components/SiteView";
 
 const CodeBlock = dynamic(() => import("../../src/components/CodeBlock"), { ssr: false });
 
@@ -121,7 +121,7 @@ const WriteUpPage = ({ id }) => {
     })();
 
     return data ?
-        <Base meta={{ title: `${data.title} - ${data?.category} Challenge Solution`}}>
+        <SiteView meta={{ title: `${data.title} - ${data?.category} Challenge Solution`}}>
             <TopBar darkenOnSidebar />
             <div className="px-4 py-8 flex items-end justify-center" style={{ minHeight: '30vh' }}>
                 <div style={{ width: '1000px', maxWidth: '100%'  }}>
@@ -203,12 +203,12 @@ const WriteUpPage = ({ id }) => {
                 ]}
             />
             <Footer />
-        </Base> :
-        <Base meta={{ title: `WriteUp Not Found` }}>
+        </SiteView> :
+        <SiteView meta={{ title: `WriteUp Not Found` }}>
             <TopBar darkenOnSidebar />
             <h1>Writeup not found</h1>
             <Footer />
-        </Base>
+        </SiteView>
 }
 
 WriteUpPage.getInitialProps = async ({ query }) => {

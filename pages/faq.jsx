@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
 
-import Base from "../src/components/shared/Base";
 import TopBar from "../src/components/shared/TopBar";
 
 import faq from '../src/data/faq';
@@ -11,6 +10,7 @@ import Footer from "../src/components/shared/Footer";
 import FAQFilter from "../src/components/faq/Filter";
 import { filteredFAQ } from "../src/components/faq/filterUtils";
 import { Waypoint } from "react-waypoint";
+import SiteView from "../src/components/SiteView";
 
 const FAQSection = styled.section`
   width: 100%;
@@ -79,31 +79,33 @@ const FAQPage = () => {
         );
     }
 
-    return <Base meta={{ title: "Frequently Asked Questions (FAQ)" }}>
-        <TopBar/>
-        <FAQSection>
-            <h1 className="text-primary text-center text-3xl lg:text-6xl py-4">Frequently Asked Questions</h1>
-            <div className="px-6 mx-auto" style={{ maxWidth: 800, minHeight: '50vh' }}>
-                <FAQFilter
-                    search={search}
-                    setSearch={setSearch}
-                    tags={tags}
-                    setTags={setTags}
-                    totalTags={totalTags}
-                />
-                {renderFAQ()}
-                <Waypoint onEnter={() => updateTotalVisible(totalVisible + 4)}>
-                    <div className="my-6 text-center">
-                        <div style={{ color: '#111' }}>Did not find what you were looking for?</div>
-                        <div style={{ color: '#222' }}>
-                            Write to us at <a href="mailto:inctfj@am.amrita.edu">inctfj@am.amrita.edu</a>
+    return (
+        <SiteView meta={{ title: "Frequently Asked Questions (FAQ)" }}>
+            <TopBar/>
+            <FAQSection>
+                <h1 className="text-primary text-center text-3xl lg:text-6xl py-4">Frequently Asked Questions</h1>
+                <div className="px-6 mx-auto" style={{ maxWidth: 800, minHeight: '50vh' }}>
+                    <FAQFilter
+                        search={search}
+                        setSearch={setSearch}
+                        tags={tags}
+                        setTags={setTags}
+                        totalTags={totalTags}
+                    />
+                    {renderFAQ()}
+                    <Waypoint onEnter={() => updateTotalVisible(totalVisible + 4)}>
+                        <div className="my-6 text-center">
+                            <div style={{ color: '#111' }}>Did not find what you were looking for?</div>
+                            <div style={{ color: '#222' }}>
+                                Write to us at <a href="mailto:inctfj@am.amrita.edu">inctfj@am.amrita.edu</a>
+                            </div>
                         </div>
-                    </div>
-                </Waypoint>
-            </div>
-        </FAQSection>
-        <Footer/>
-    </Base>
+                    </Waypoint>
+                </div>
+            </FAQSection>
+            <Footer/>
+        </SiteView>
+    );
 
 };
 

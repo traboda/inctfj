@@ -1,11 +1,11 @@
 import React  from 'react';
 import styled from "@emotion/styled";
 
-import Base from "../src/components/shared/Base";
 import TopBar from "../src/components/shared/TopBar";
 import Footer from "../src/components/shared/Footer";
 import PageHeader from "../src/components/PageHeader";
 import PageFooterExplorer from "../src/components/PageFooterExplorer";
+import SiteView from "../src/components/SiteView";
 
 
 const LogoWrap = styled.div`
@@ -35,57 +35,59 @@ const LogoWrap = styled.div`
 
 const BrandingPage = () => {
 
-    return <Base meta={{ title: "Brand Kit" }}>
-        <TopBar darkenOnSidebar includeSpace={false} />
-        <PageHeader
-            title="Brand Kit"
-            description="Brand Assets & Guidelines for InCTF Junior"
-        />
-        <div style={{ background: '#eee', minHeight: '50vh' }}>
-            <div className="flex justify-center px-1 py-5">
-                <div className="flex flex-wrap mx-0" style={{ maxWidth: '900px' }}>
-                    <div className="md:w-1/3 p-2">
-                        <LogoWrap>
-                             <img src={require('../src/assets/images/branding/colorful.png')} alt="Colorful Logo" />
-                             <a href={require('../src/assets/images/branding/colorful.png')}>PNG</a>
-                        </LogoWrap>
-                    </div>
-                    <div className="md:w-1/3 p-2">
-                        <LogoWrap dark>
-                            <img src={require('../src/assets/images/branding/light_version.png')} alt="Light Logo" />
-                            <a href={require('../src/assets/images/branding/light_version.png')}>PNG</a>
-                        </LogoWrap>
-                    </div>
-                    <div className="md:w-1/3 p-2">
-                        <LogoWrap>
-                            <img src={require('../src/assets/images/branding/full_black.png')} alt="Colorful Logo" />
-                            <a href={require('../src/assets/images/branding/full_black.png')}>PNG</a>
-                        </LogoWrap>
+    return (
+        <SiteView meta={{ title: "Brand Kit" }}>
+            <TopBar darkenOnSidebar includeSpace={false} />
+            <PageHeader
+                title="Brand Kit"
+                description="Brand Assets & Guidelines for InCTF Junior"
+            />
+            <div style={{ background: '#eee', minHeight: '50vh' }}>
+                <div className="flex justify-center px-1 py-5">
+                    <div className="flex flex-wrap mx-0" style={{ maxWidth: '900px' }}>
+                        <div className="md:w-1/3 p-2">
+                            <LogoWrap>
+                                 <img src={require('../src/assets/images/branding/colorful.png')} alt="Colorful Logo" />
+                                 <a href={require('../src/assets/images/branding/colorful.png')}>PNG</a>
+                            </LogoWrap>
+                        </div>
+                        <div className="md:w-1/3 p-2">
+                            <LogoWrap dark>
+                                <img src={require('../src/assets/images/branding/light_version.png')} alt="Light Logo" />
+                                <a href={require('../src/assets/images/branding/light_version.png')}>PNG</a>
+                            </LogoWrap>
+                        </div>
+                        <div className="md:w-1/3 p-2">
+                            <LogoWrap>
+                                <img src={require('../src/assets/images/branding/full_black.png')} alt="Colorful Logo" />
+                                <a href={require('../src/assets/images/branding/full_black.png')}>PNG</a>
+                            </LogoWrap>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <PageFooterExplorer
-            items={[
-                {
-                    "title": "Advisory Board",
-                    "text": "View our elite panel of advisors",
-                    "link": "/advisory-board"
-                },
-                {
-                    "title": "Organizers",
-                    "text": "View our team of organizers",
-                    "link": "/organizers"
-                },
-                {
-                    "title": "Our Reach & Impact",
-                    "text": "See our reach & impact",
-                    "link": "/about#our-reach"
-                },
-            ]}
-        />
-        <Footer />
-    </Base>;
+            <PageFooterExplorer
+                items={[
+                    {
+                        "title": "Advisory Board",
+                        "text": "View our elite panel of advisors",
+                        "link": "/advisory-board"
+                    },
+                    {
+                        "title": "Organizers",
+                        "text": "View our team of organizers",
+                        "link": "/organizers"
+                    },
+                    {
+                        "title": "Our Reach & Impact",
+                        "text": "See our reach & impact",
+                        "link": "/about#our-reach"
+                    },
+                ]}
+            />
+            <Footer />
+        </SiteView>
+    );
 
 };
 

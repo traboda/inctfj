@@ -27,7 +27,11 @@ const FooterLinksBar = styled.nav`
     }
 `;
 
+const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
+
 const Footer = () => {
+
+    const footerConfig = require(`../../data/${eventID}/footer.json`);
 
     return <FooterContainer>
         <div className="container min-w-lg mx-auto sm:px-4 px-1 pt-3">
@@ -37,13 +41,15 @@ const Footer = () => {
                         <img draggable="false" className="inline mb-3" alt="Amrita InCTF Junior" src={require('../../assets/images/branding/light_version.png')} />
                         <div className="md:ml-6 py-3">
                             <div className="line-height-1 opacity-80 my-2 md:mb-1 md:mt-0">
-                                &copy; Amrita InCTF Jr. 2016-2021. <span className="inline-block">All Rights Reserved.</span>
+                                {footerConfig?.copyrightText}
                             </div>
-                            <FooterLinksBar>
-                                <a href="/branding">Brand Kit</a>
-                                <a href="/privacy">Privacy Policy</a>
-                                <a href="/rules">Rules</a>
-                            </FooterLinksBar>
+                            {footerConfig?.length > 0 && (
+                                <FooterLinksBar>
+                                    {footerConfig.map((link, index) => (
+                                        <a key={index} href={link.url}>{link.text}</a>
+                                    ))}
+                                </FooterLinksBar>
+                            )}
                         </div>
                     </div>
                 </div>
