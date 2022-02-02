@@ -168,7 +168,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                                 </Fade>
                                 <div className="mt-4 md:px-2">
                                     <a
-                                        href="/results"
+                                        href="/stats"
                                         className="text-2xl px-5 py-4 inline-block font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl my-3"
                                     >
                                         View Results <i className="fa fa-chevron-right"/>

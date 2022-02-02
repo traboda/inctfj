@@ -55,17 +55,14 @@ const customConfig = {
             {
                 source: '/hall-of-fame',
                 destination: '/stats',
-                permanent: true,
             },
             {
                 source: '/results',
                 destination: '/stats',
-                permanent: true,
             }
         ]
     },
     env: {
-        domain: 'https://play.inctf.in/junior',
         NEXT_PUBLIC_EVENT_ID: 'inctfj',
         EVENT_ID: 'inctfj',
     }
