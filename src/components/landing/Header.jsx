@@ -173,6 +173,12 @@ const LandingHeader = ({ UTMSource = null }) => {
                                     >
                                         View Results <i className="fa fa-chevron-right"/>
                                     </a>
+                                    <a
+                                        href="https://verifycate.com/inctf-jr-2021"
+                                        className="text-2xl px-5 py-4 inline-block font-semibold ml-3 rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl my-3"
+                                    >
+                                        Get Certificates <i className="fa fa-chevron-right"/>
+                                    </a>
                                 </div>
                             </div>
                             <div className="md:w-1/3 my-4 md:my-0 px-3">
