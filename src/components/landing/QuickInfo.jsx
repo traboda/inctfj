@@ -39,7 +39,8 @@ const LandingQuickInfo = () => {
         {
             image: require('../../assets/images/icons/calendar.png'), up: true,
             question: "When?", answer: <>
-                Registrations Open, <br /> Finals January 7-9, 2021
+               2022 Edition, <br />
+               to be announced
             </>
         },
         {
