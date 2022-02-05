@@ -1,0 +1,150 @@
+{
+  "associate": {
+      "logo": {
+          "light": "cbse_logo.jpg",
+          "dark": "cbse_logo.jpg"
+      },
+      "alt": "Central Board of Secondary Education (CBSE)",
+      "link": "http://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf"
+  },
+  "topbarCTA": {
+      "text": "Have you got stuck? Need Help? Join our discord server, ask your doubts & get support from our experts.",
+      "buttonText": "Join Discord Now",
+      "link": "/discord"
+  },
+  "CTA": {
+      "type": "link",
+      "link": "/stats",
+      "buttonText": "View Results"
+  },
+  "menu": [
+    {
+      "label": "About",
+      "link": "/about",
+      "items": [
+        {
+          "label": "What's India CTF Jr?",
+          "link": "/about#what"
+        },
+        {
+          "label": "Why InCTF Jr?",
+          "link": "/about#why"
+        },
+        {
+          "label": "Our Reach & Statistics",
+          "link": "/about#our-reach"
+        },
+        {
+          "label": "Organizing Team",
+          "link": "/organizers"
+        },
+        {
+          "label": "Advisory Board",
+          "link": "/advisory-board"
+        },
+        {
+          "label": "Sponsors",
+          "link": "/sponsors"
+        }
+      ]
+    },
+    {
+      "label": "Talent Incubation",
+      "link": "/talent-incubation",
+      "items": [
+        {
+          "label": "The CTF Pedagogy",
+          "link": "/talent-incubation#pedagogy"
+        },
+        {
+          "label": "CyberSafety Education",
+          "link": "/talent-incubation#programmes"
+        },
+        {
+          "label": "Indian Cyber League",
+          "link": "/talent-incubation#indian-cyber-league"
+        },
+        {
+          "label": "Diversity Initiatives",
+          "link": "/talent-incubation#diversity"
+        },
+        {
+          "label": "Success Stories",
+          "link": "/about#impact"
+        }
+      ]
+    },
+    {
+      "label": "Championship",
+      "link": "/championship",
+      "items": [
+        {
+          "label": "Why Participate?",
+          "link": "/championship#why-participate"
+        },
+        {
+          "label": "Contest Timeline",
+          "link": "/championship#timeline"
+        },
+        {
+          "label": "Guidelines & Rules",
+          "link": "/rules"
+        },
+        {
+          "label": "Prizes",
+          "badge": "3 Lks+",
+          "badgeColor": "bg-green-100",
+          "link": "championship/#prizes"
+        },
+        {
+          "label": "Past Winners",
+          "link": "/stats"
+        }
+      ]
+    },
+    {
+      "label": "Get Started",
+      "link": "/resources",
+      "items": [
+        {
+          "label": "Cyber Workshops",
+          "badge": "free",
+          "link": "/trainings"
+        },
+        {
+          "label": "Videos & Guides",
+          "link": "/resources#videos"
+        },
+        {
+          "label": "FAQ",
+          "badge": "get answers",
+          "link": "/faq"
+        },
+        {
+          "label": "bi0s Wiki",
+          "link": "https://wiki.bi0s.in/"
+        },
+        {
+          "label": "Practice Challenges",
+          "link": "https://app.traboda.com/"
+        },
+        {
+          "label": "Writeups",
+          "badge": "new",
+          "badgeColor": "bg-yellow-100",
+          "link": "/writeups"
+        },
+        {
+          "label": "Promote InCTF",
+          "link": "/promote"
+        },
+        {
+          "label": "Get Help",
+          "badge": "discord",
+          "badgeColor": "bg-blue-100",
+          "link": "/discord"
+        }
+      ]
+    }
+  ]
+}

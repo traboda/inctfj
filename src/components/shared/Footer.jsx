@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from "@emotion/styled";
 import SocialMediaLinks from "./SocialMediaLinks";
+import ConfigContext from "../SiteView/context";
 
 const FooterContainer = styled.footer`
     background: #222640;
@@ -31,6 +32,7 @@ const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 
 const Footer = () => {
 
+    const { assets } = useContext(ConfigContext);
     const footerConfig = require(`../../data/${eventID}/footer.json`);
 
     return <FooterContainer>
@@ -38,15 +40,15 @@ const Footer = () => {
             <div className="flex flex-wrap  mx-0">
                 <div className="md:w-2/3 order-2 md:order-1 text-center md:text-left px-1">
                     <div className="md:flex items-center block">
-                        <img draggable="false" className="inline mb-3" alt="Amrita InCTF Junior" src={require('../../assets/images/branding/light_version.png')} />
+                        <img draggable="false" className="inline" alt="Amrita InCTF Junior" src={require(`../../data/${eventID}/assets/${assets?.logo.light}`)} />
                         <div className="md:ml-6 py-3">
                             <div className="line-height-1 opacity-80 my-2 md:mb-1 md:mt-0">
                                 {footerConfig?.copyrightText}
                             </div>
-                            {footerConfig?.length > 0 && (
+                            {footerConfig?.menu?.length > 0 && (
                                 <FooterLinksBar>
-                                    {footerConfig.map((link, index) => (
-                                        <a key={index} href={link.url}>{link.text}</a>
+                                    {footerConfig?.menu.map((link, index) => (
+                                        <a key={index} href={link.link}>{link.title}</a>
                                     ))}
                                 </FooterLinksBar>
                             )}

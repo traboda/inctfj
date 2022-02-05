@@ -1,0 +1,17 @@
+{
+  "copyrightText": "© Amrita InCTF 2010-2021. All Rights Reserved.",
+  "menu": [
+    {
+      "title": "Brand Kit",
+      "link": "/branding"
+    },
+    {
+      "title": "Privacy Policy",
+      "link": "/privacy"
+    },
+    {
+      "title": "Rules",
+      "link": "/rules"
+    }
+  ]
+}

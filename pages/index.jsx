@@ -8,7 +8,7 @@ import LandingReasonsToParticipate from "../src/components/landing/WhyParticipat
 import CTAReg from "../src/components/landing/CTAReg";
 import LandingQuickInfo from "../src/components/landing/QuickInfo";
 import LandingAboutInCTF from "../src/components/landing/About";
-import LandingStatsBar from "../src/components/landing/StatsCounter";
+// import LandingStatsBar from "../src/components/landing/StatsCounter";
 import LandingHowItWorks from "../src/components/landing/HowItWorks";
 import LandingContactsBar from "../src/components/landing/ContactsBar";
 import TopBar from "../src/components/shared/TopBar";
