@@ -4,6 +4,9 @@ import styled from "@emotion/styled";
 import Pulse from "react-reveal/Pulse";
 import Fade from 'react-reveal/Fade';
 
+const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
+const eventAbout = require(`../../data/${eventID}/about`).default;
+const data = require(`../../data/${eventID}/index.json`);
 
 const HeaderContainer = styled.section`
     position: relative;
@@ -29,7 +32,7 @@ const HeaderContainer = styled.section`
       line-height: 1.25;
       font-size: calc(1.75rem + 1.25vw);
       margin-bottom: 1rem;
-      max-width: 900px;
+      max-width: 800px;
     }
     p {
       max-width: 700px;
@@ -39,6 +42,7 @@ const HeaderContainer = styled.section`
         display: inline-block;
         font-size: 108%;
         color: #F13F17;
+        margin-bottom: 1.25rem;
       }
       margin-bottom: 1.25rem;
     }
@@ -152,40 +156,37 @@ const LandingHeader = ({ UTMSource = null }) => {
                             <div className="w-full md:w-2/3 px-4">
                                 <Pulse>
                                     <h1>
-                                        <span style={{ color: '#FF6F00'}}>Young Hackers Are Born Here,</span><br/>
-                                        Become the Next Cyber Security Warrior.
+                                        <span style={{ color: '#FF6F00'}}>{data.Landingheader}</span><br/>
+                                        {data.date}
                                     </h1>
                                 </Pulse>
                                 <Fade up>
                                     <p>
-                                        InCTF Junior is India's First & Premier Hacking & Cyber Security Contest for High School Students,
-                                        organized by team bi0s, India's No.1 ranked CTF Team.
-                                        <span className="mt-6">
-                                            Every year the brightest young hackers from all across India participate in this the learn & hack CTF contest,
-                                            win exciting prizes & kick-start their cyber-security career.
-                                        </span>
+                                    <span className="mt-6">
+                                        {data.Desc}
+                                    </span>
+                                            {data.subDesc}
                                     </p>
                                 </Fade>
                                 <div className="mt-4 md:px-2">
+                                    {data.button.map((button, index) => (
+
+
                                     <a
-                                        href="/stats"
-                                        className="text-2xl px-5 py-4 inline-block font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl my-3"
-                                    >
-                                        View Results <i className="fa fa-chevron-right"/>
-                                    </a>
-                                    <a
-                                        href="https://verifycate.com/inctf-jr-2021"
+                                        href={button.link}
                                         className="text-2xl px-5 py-4 inline-block font-semibold ml-3 rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl my-3"
                                     >
-                                        Get Certificates <i className="fa fa-chevron-right"/>
+                                        {button.text} <i className="fa fa-chevron-right"/>
                                     </a>
+                                    ))}
+                                    
                                 </div>
                             </div>
                             <div className="md:w-1/3 my-4 md:my-0 px-3">
                                 <img
                                     alt="InCTF Jr"
                                     id="landing-header-cover-image"
-                                    src={require('../../assets/images/covers/landing-cover-image.png')}
+                                    src={require(`../../data/${eventID}/${data.LandingCoverImage}`)}
                                     style={{ position: 'unset', maxHeight: '500px', maxWidth: '100%' }}
                                     draggable="false"
                                 />

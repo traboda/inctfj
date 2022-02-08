@@ -3,6 +3,9 @@ import styled from "@emotion/styled";
 import ReactPlayer from "react-player";
 
 
+const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
+const data = require(`../../data/${eventID}/index.json`);
+
 const LandingPromoVideoSection = styled('section')`
     display: flex;
     align-items: center;
@@ -24,7 +27,7 @@ const LandingPromoVideoSection = styled('section')`
 const LandingPromoVideo = () => (
     <LandingPromoVideoSection className="container mx-auto">
         <div className="promo-video-container p-0 md:p-3">
-            <ReactPlayer url="https://www.youtube.com/watch?v=sxRZ06Rbh_c" width="100%" height="100%" />
+            <ReactPlayer url={data.LandingpromoVideo} width="100%" height="100%" />
         </div>
     </LandingPromoVideoSection>
 );

@@ -8,9 +8,15 @@ import UNSDGSection from "../src/components/about/unsdg";
 // import { data } from '../src/components/about/stats/66';
 import Parallax from "../src/components/Parallax";
 import SiteView from "../src/components/SiteView";
+const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
+const data = require(`../src/data/${eventID}/about.json`);
 
-const AboutPage = () => {
-
+const AboutPage = () => { 
+    const getAvatar = (path) => {
+        if(eventID && path)
+            return require(`../src/data/inctfj/assets/organizers/${path}`);
+        return null;
+    }
     // const [stats, setStats] = useState();
 
     // const fetchStats = () => {
@@ -24,16 +30,16 @@ const AboutPage = () => {
     //
     // useEffect(fetchStats, [])
 
-    return <SiteView meta={{ title: "About InCTF Jr." }}>
+    return <SiteView meta={{ title: "About " }}>
         <TopBar includeSpace={false} />
         <div style={{ background: '#FAFAFA' }}>
             <Parallax
-                background={require('../src/assets/images/covers/inctfj_mountains.jpg')}
+                background={require(`../src/data/${eventID}/${data.coverImage1}`)}
                 height="600px"
             />
             <InctfIntro />
             <div className="text-center pt-6">
-                <img draggable="false" src={require('../src/assets/images/photos/standing_as_inctf.jpg')} />
+                <img draggable="false" src={require(`../src/data/${eventID}/${data.CoverImage2}`)} />
             </div>
             <AboutAchievements />
             <UNSDGSection />

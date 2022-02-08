@@ -1,0 +1,125 @@
+{
+    "header":[
+        "CTFs are not just a contest.",
+        "It’s probably among",
+        "the best pedagogy for learning,",
+        "especially for beginner students to learn complex concepts."
+    ],
+    "subHeader": [
+        "It is a well-established & proven pedagogy to teach students, especially beginners, to learn cyber-security, which is usually challenging to teach due to its interdisciplinary nature.",
+        "There are over 24k active CTF teams globally today.",
+        "Winning the most popular CTF – DEFCON, is as hard as winning an Olympics Gold. Our team bi0s currently ranked 14th globally."
+    ],
+    "graphs":[
+        {
+            "Header":"Number of Participants",
+            "labels": [2015, 2016, 2017, 2018, 2019],
+            "datasets": [{
+                "label": "Number of Participants",
+                "data": [690, 873, 1159, 2719, 3145],
+                "backgroundColor": "#4472c4"
+            }]
+        },
+        {
+            "Header":"Number of Schools",
+            "labels": [2015, 2016, 2017, 2018, 2019],
+            "datasets": [{
+                "label": "Number of Schools",
+                "data": [45, 67, 95, 128, 214],
+                "backgroundColor": "#4472c4"
+            }]
+        }
+    ],
+    "subhead0":{
+        "header": "Indian Cyber League",
+        "subHeader": "Keeping Interests High",
+        "CTFs":[
+            "India CTF (InCTF) Nationals",
+            "India CTF (InCTF) Regional & State-Levels",
+            "School Franchise CTFs",
+            "School-Level CTFs"
+        ],
+        "texts":[
+            "To make even more students attracted and to keep their interests high even after a InCTF, we are planning to host more CTFs for school students collaborating with schools & other institutions – Indian Cyber League, that shall build a CTF ecosystem in Indian schools.",
+            "As a first, we hosted the first Amrita Techie Challenge, an inter-school CTF for Amrita Vidyalayams in May, and are exploring other school franchises for such an opportunity.",
+            "By having rewarding CTFs more regularly and making students participating in it with one's school mates in teams mentored by senior students, we hope to emulate the success of team bi0s which too had started, and still runs like this."
+        ]
+    },
+    "subhead1":{
+        "header": "How CTF works",
+        "texts": [
+            "In Capture-The-Flag (CTF) game format, the players are tasked to do some activity, upon completion they receive a flag which they submit as proof of work.",
+            "In our CTFs, these challenges usually involve learning some cybersecurity topics, tools & exploiting some vulnerabilities, hands-on using their critical thinking & problem-solving skills.",
+            "Challenges present scenarios that make students learn fundamental concepts in secure programming, cryptography, reverse engineering, forensics, and web security.",
+            "Players need to analyze problems, devise strategies, tinker with tools & browse resources, use creative & critical thinking to find out solutions, often working together with a team."
+        ],
+        "image": "assets/images/talent-incubation/works.png"
+    },
+    "subhead2":{
+        "header": "Building Self-Sustaining Cyber Clubs in Schools",
+        "texts": [
+            "Due to the absence of an ecosystem or peer group, the students often get stuck and don't continue learning cyber-security after the InCTF as often they have no idea or motivation to continue until the next InCTF.",
+            "To address this, since the last few years, we have been working closely with Amrita Vidyalayams across the country helping to set up cyber-security clubs at their school for forming peer groups of these enthusiasts with the help of their teachers.",
+            "We have seen that schools with such peer-group or clubs send students every year, who often come out as winners."
+        ]
+    },
+    "subhead3":{
+        "header": "Features of Cyber Clubs",
+        "texts": [
+            "The club members will play CTFs together. Therefore, they will also learn & prepare for it together creating ecosystem for shared learning, collaboration, team-work, accountability & leadership.",
+            "Senior member students will mentor juniors for growing their cyber-skills, by passing down their knowledge.",
+            "The club members will also promote cyber-awareness, cyber-safety etc. at their schools, through events & sessions.",
+            "Club members will have access to learning platform & resources. They also attend workshops, talks etc. as part of the Indian Cyber League ecosystem.",
+            "A dedicated school faculty, and mentors from bi0s/partners will mentor & guide students."    
+        ]
+    },
+    "subhead4":{
+        "header": "Women in CyberSecurity",
+        "texts":[
+            "There is a disproportionate representation of women pursuing careers in Computing, and especially in Cyber-Security industry.",
+            "Women comprise only about 20% of cyber-security workforce today.",
+            "“Women often don’t see cybersecurity as viable career paths because they’re often considered masculine professions.” - Jessica Ortega, SiteLock",
+            "We are impassioned & committed to promoting aspiring girls in Cyber-Security.",
+            "By presenting to them the broad & exciting possibilities in cyber-security when young, we hope to create a lasting impact on them right from school."
+        ],
+        "image": "assets/images/talent-incubation/women_in_cyberrsecurity.jpg"
+    },
+    "subhead5":{
+        "header": "Our Initiatives for Women In CyberSecurity",
+        "texts":[
+            "Earlier this year, we hosted the first-ever ShaktiCon - cyber-security conference & training programme exclusively for Women, bringing in over 50 distinguished speakers & trainers for the 3-day conference.",
+            "We have been recognizing & giving special prizes to the top-ranked women hackers and special scholarships & training programmes for promising girl talents through team Shakti.",
+            "We have seen the proportion of women participants grow from 10% to above 20% over the years and are working towards our target of achieving 50% women participants by 2025."
+        ],
+        "image": "assets/images/talent-incubation/top_women_hackers.png"
+    },
+    "subhead6":{
+        "header": "Making Learning Cyber Security Accessible Everywhere",
+        "texts":[
+            "A reason why we started InCTF is to make learning CyberSecurity accessible in the unprivileged sections of society.",
+            "From our own experience running the bi0s community, we have found that high-quality cyber-security training and resources don't come cheap and thus are out of reach for many.",
+            "With InCTF Junior & our initiatives, we are constantly striving to bridge this gap and provide this platform of equal opportunities for everyone."
+        ],
+        "labels": [2015, 2016, 2017, 2018, 2019],
+        "datasets": [
+            {
+                "label": "Rural",
+                "data": [87, 247, 370, 800, 1276],
+                "backgroundColor": "#4472c4"
+            },
+            {
+                "label": "Urban",
+                "data": [603, 626, 789, 1919, 1869],
+                "backgroundColor": "#ed7d31"
+            }
+        ]
+    },
+    "subhead7":{
+        "header": "Our Initiatives to Bridge the Gap.",
+        "texts":[
+            "We have been focusing to further penetrate this opportunity to the government-run schools and those in the tier-3 cities & rural regions of India and have managed to bring participants from several new schools every year.",
+            "For this, we conduct free workshops & training specially for these schools, often actively involving their teachers and parents, and try to set up a cyber-security club/community there."
+        ],
+        "image": "assets/images/talent-incubation/bridge_the_gap.png"
+    }
+}

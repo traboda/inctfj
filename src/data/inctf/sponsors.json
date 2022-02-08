@@ -1,0 +1,87 @@
+{
+    "pastSponsors": 
+    [
+        {
+            "name": "amazon",
+            "logo": "../../assets/images/sponsors/amazon.png",
+            "url": "https://www.amazon.in/"
+            
+        },
+        {
+            "name": "cisco",
+            "logo": "../../assets/images/sponsors/cisco.png",
+            "url": "https://www.cisco.com/"
+        },
+        {
+            "name": "vmware",
+            "logo": "../../assets/images/sponsors/vmware.png",
+            "url": "https://www.vmware.com/"
+        },
+        {
+            "name": "nciipc",
+            "logo": "../../assets/images/sponsors/nciipc.png",
+            "url": "https://www.nciipc.com/"
+        },
+        {
+            "name": "audius",
+            "logo": "../../assets/images/sponsors/audius.png",
+            "url": "https://www.audius.com/"
+        }
+    ],
+    "inCTFSponsors":
+    [
+        {
+            "name": "salesforce",
+            "logo": "../../assets/images/sponsors/salesforce.png",
+            "url": "https://www.salesforce.com/",
+            "desg": "Event Sponsor"
+        },
+        {
+            "name": "zoho",
+            "logo": "../../assets/images/sponsors/zoho.png",
+            "url": "https://www.zoho.com/",
+            "desg": "Diamond Sponsor"
+        },
+        {
+            "name": "vmware",
+            "logo": "../../assets/images/sponsors/vmware.png",
+            "url": "https://www.vmware.com/",
+            "desg": "Diamond Sponsor"
+        },
+        {
+            "name": "crowdstrike",
+            "logo": "../../assets/images/sponsors/crowdstrike.png",
+            "url": "https://www.crowdstrike.com/",
+            "desg": "Platinum Sponsor"
+        },
+        {
+            "name": "cred",
+            "logo": "../../assets/images/sponsors/cred.png",
+            "url": "https://www.cred.com/",
+            "desg": "Gold Sponsor"
+        },
+        {
+            "name": "h&rblock",
+            "logo": "../../assets/images/sponsors/h&rblock.png",
+            "url": "https://www.h&rblock.com/",
+            "desg": "Silver Sponsor"
+        }
+    ],
+    "inCTFjrSponsors":
+    [
+        {
+            "name": "traboda",
+            "logo": ".../../assets/images/sponsors/traboda.png",
+            "url": "https://traboda.com/",
+            "desg": "Platform Sponsor"
+        },
+        {
+            "name": "jnanamarga",
+            "logo": "../../assets/images/sponsors/jnanamarga.png",
+            "url": "https://jnanamarga.com/",
+            "desg": "Silver Sponsor"
+        }
+    ]
+        
+    
+}

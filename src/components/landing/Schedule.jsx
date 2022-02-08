@@ -1,112 +1,26 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 
+const data = require(`../../data/training.json`);
+
 const Schedule = () => {
 
-    const timeline = [
-        {
-            "date": "Oct 21",
-            "timing": "06:00 - 08:00 PM",
-            "event": "Introduction to CTF",
-            "presenter": "Namitha & Revathi",
-            "link": "https://youtu.be/-PvKBido90I",
-        },
-        {
-            "date": "Oct 22",
-            "timing": "06:00 - 08:00 PM",
-            "event": "Basics of Web",
-            "presenter": "Rohit, Rahul & Aneesh",
-            "link": "https://youtu.be/clcfThE2UIg",
-        },
-        {
-            "date": "Oct 23",
-            "timing": "06:00 - 08:00 PM",
-            "event": "Introduction to Web Exploitation (Day 1)",
-            "presenter": "Yadhu & Sayooj",
-            "link": "https://youtu.be/uHiLpyfEhpw",
-        },
-        {
-            "date": "Oct 24",
-            "timing": "06:00 - 08:00 PM",
-            "event": "Introduction to Web Exploitation (Day 2)",
-            "presenter": "Yadhu & Sayooj",
-            "link": "https://youtu.be/LlOnd4wbTI4",
-        },
-        {
-            "date": "Oct 25",
-            "timing": "06:00 - 08:00 PM",
-            "event": "Introduction to Cryptography (Day 1)",
-            "presenter": "Abhishek & Sahith",
-            "link": "https://youtu.be/RtY8RFA95Qk",
-        },
-        {
-            "date": "Oct 26",
-            "timing": "06:00 - 08:00 PM",
-            "event": "Introduction to Cryptography (Day 2)",
-            "presenter": "Abhishek & Sahith",
-            "link": "https://youtu.be/RMWo6HtND9M",
-        },
-        {
-            "date": "Oct 27",
-            "timing": "06:00 - 08:00 PM",
-            "event": "Introduction to Cyber Forensics (Day 1)",
-            "presenter": "Sridevi, Abhishek, Pranav",
-            "link": "https://youtu.be/OwN76dCekAM",
-        },
-        {
-            "date": "Oct 28",
-            "timing": "06:00 - 08:00 PM",
-            "event": "Introduction to Cyber Forensics (Day 2)",
-            "presenter": "Sridevi, Abhishek, Pranav",
-            "link": "https://youtu.be/sc1uiHCJDJo",
-        },
-        {
-            "date": "Oct 29",
-            "timing": "06:00 - 08:00 PM",
-            "event": "Introduction to Reverse Engineering (Day 1)",
-            "presenter": "Barla Abhishek, Simran",
-            "link": "https://youtu.be/ZWJ6X6alAaQ",
-        },
-        {
-            "date": "Oct 30",
-            "timing": "06:00 - 08:00 PM",
-            "event": "Introduction to Reverse Engineering (Day 2)",
-            "presenter": "Barla Abhishek, Simran",
-            "link": "https://youtu.be/fHqTXYdrqlk",
-        },
-        {
-            "date": "Oct 31",
-            "timing": "06:00 - 08:00 PM",
-            "event": "Introduction to Binary Exploitation (Day 1)",
-            "presenter": "Adithya, Nikhil, Hrishikesh",
-            "link": "https://youtu.be/yMkyHCR7fqw",
-        },
-        {
-            "date": "Nov 01",
-            "timing": "06:00 - 08:00 PM",
-            "event": "Introduction to Binary Exploitation (Day 2)",
-            "presenter": "Adithya, Nikhil, Hrishikesh",
-            "link": "https://youtu.be/QoRgu0uiyA0"
-        }
-    ]
 
     return <div>
         <div className="container min-w-lg mx-auto sm:px-4 lg:px-8 py-10">
             <div className="flex justify-center">
                 <div style={{ maxWidth: '100%', width: '1000px' }}>
                     <div className="px-4 py-8 mb-8">
-                        <p className="mb-2">
-                            All Trainings will be publicly made available for free through live-streaming on
-                            our official Youtube channel. Students can ask their doubts through the live
-                            chat, and we will have a team of experts available to assist you.
-                        </p>
-                        <p className="mb-4">
-                            You can find more resourceful videos & live-stream all our trainings through
-                            our channel. So please subscribe & share it with your friends.
-                        </p>
+                        {data.trainingDesc.map((item, index) => {
+                            return <div key={index}>
+                                <p className="mb-4">{item}</p>
+                            </div>
+
+                        }
+                        )}
                         <a
                             className="px-4 py-3 inline-block font-semibold bg-primary hover:bg-red-700 text-white rounded-lg"
-                            href="https://www.youtube.com/c/InCTFj"
+                            href={data.youtubeChannel}
                             target="_blank"
                             rel="noopener nofollow"
                         >
@@ -124,7 +38,8 @@ const Schedule = () => {
                             Link
                         </div>
                     </div>
-                    {timeline.map((t, index) =>
+
+                    {data.schedule.map((t, index) =>
                         <Fade delay={index*220}>
                             <div className="flex flex-wrap  mx-0 py-2 border-b">
                                 <div className="md:w-1/6 w-full flex items-center px-1">

@@ -8,7 +8,7 @@ import SiteView from "../src/components/SiteView";
 
 const ResourcesPage = () => {
     return (
-        <SiteView meta={{ title: "Resources InCTF Jr." }}>
+        <SiteView meta={{ title: "Resources" }}>
             <TopBar />
             <PageHeader
                 breadcrumb={[

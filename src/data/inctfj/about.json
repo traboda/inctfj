@@ -1,0 +1,56 @@
+{
+    "header" : "Why InCTF Junior?",
+    "coverImage1": "assets/images/covers/inctfj_mountains.jpg",
+    "description": [
+        "A recent report has revealed that a miniscule 0.6% of graduate students are currently working in cyber security while cyber attacks and breaches are rapidly increasing world-wide. In order to encourage the youth to participate, they need to be taught at a young age about the importance of computer security.",
+        "A lot of research have been proven to be the best way to approach this is Capture the Flag style contests. These contests typically simulate real life scenarios that enable participants to develop real world security skills. Many of the countries like USA and China have realized the need for cyber security education and are conducting CTF contests for school students.",
+        "Having realized the dire need for such a training culture in India, team bi0s, the cyber security student community of Amrita Vishwa Vidyapeetham is organizing Amrita InCTF Junior, an online Capture the Flag style contest specifically designed to introduce cyber security awareness and training in high school students."
+    ],
+    "participants" : [
+        "assets/images/photos/participants/1.jpg",
+        "assets/images/photos/participants/2.jpg",
+        "assets/images/photos/participants/3.jpg",
+        "assets/images/photos/participants/4.jpg"
+    ],
+    "AchievementsHeader" : "Recent Achievements of InCTF Participants",
+    "CoverImage2": "assets/images/photos/standing_as_inctf.jpg",
+    "Achievements" : [
+        {
+            "image": "assets/images/achievements/zhero.png",
+            "title": "Zhero",
+            "subTitle": " ",
+            "content": "A CTF team founded by a group of school student participants at InCTF Junior 2019 is now ranked 48th globally among 24k teams."
+        },
+        {
+            "image": "assets/images/achievements/nilabha.jpg",
+            "title": "Nilabha Saha",
+            "subTitle": "2018, 2019, 2020 Participant",
+            "content":"won Gold medal in NSUCRYPTO, Russian Cryptography Olympiad 2020 in School Students category"
+        },
+        {
+            "image": "assets/images/achievements/rajvardhan.jpg",
+            "title": "Rajvardhan Agarwal",
+            "subTitle": "2020 Winner, 2018, 2019 Participant",
+            "content": "received the renowned Offensive Security Certified Professional (OSCP) certification in class 11"
+        },
+        {
+            "image": "assets/images/achievements/vishnu_dev.jpeg",
+            "title": "Vishnu Dev",
+            "subTitle": "2016 Participant, team bi0s member",
+            "content": "found security bugs in popular software like QEMU, VirtualBox and FreeBSD and got assigned with multiple CVEs(CV 2020 7030, 2929, 7454, 7455)"
+        }
+    ],
+    "CoverImage3": {
+    "header": "Amrita InCTF Junior proudly supports the",
+    "headerImage": "assets/images/unsdg_logo.png",
+    "subImages":[
+
+            "assets/images/ungsdg4.png",
+            "assets/images/ungsdg5.png",
+            "assets/images/ungsdg8.png",
+            "assets/images/ungsdg10.png"
+    ]
+    }
+
+    
+}

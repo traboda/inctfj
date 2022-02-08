@@ -2,6 +2,9 @@ import React from 'react';
 import styled from "@emotion/styled";
 import Fade from "react-reveal/Fade";
 
+const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
+const data = require(`../../data/${eventID}/index.json`);
+
 const RegCTASection = styled.section`
    @media (min-width: 768px){
      padding: 3vh 5vw;
@@ -34,7 +37,7 @@ const CTAReg = ({ UTMSource = null }) => (
                 <div className="md:w-2/3 pr-4 pl-4 flex items-center p-2">
                     <img alt="star" className="hidden md:block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />
                     <h3>
-                        InCTF Jr is your perfect entry to CyberSec & Hacking before college.
+                        {data.CTAreg.message}
                     </h3>
                 </div>
             </Fade>
@@ -43,7 +46,7 @@ const CTAReg = ({ UTMSource = null }) => (
                     <iframe
                         className="border-0"
                         style={{ width: '400px', maxWidth: '100vw', height: '190px', overflow: 'auto' }}
-                        src={`https://app.traboda.com/contest/inctfj-21-lr/reg-frame?color=000&primary=F13F17&primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
+                        src={`${data.CTAreg.button.url}/reg-frame?color=000&primary=F13F17&primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
                     />
                 </div>
             </Fade>

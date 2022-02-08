@@ -1,0 +1,23 @@
+{
+    "header" : "INDIA'S FLAGSHIP CYBER SECURITY CONTEST AND CONFERENCE",
+    "date" : "SEP 2021 TO JAN 2022.",
+    "Desc" : "InCTF India's Premier Hacking & Cyber Security contest organized by team bi0s, India's No.1 ranked CTF Team.Participate in this learn & hack CTF contest, win exciting prizes & kick-start your cyber-security career.",
+    "subDesc" : "Take part in Amrita InCTF to get recruited as interns/full-time in security roles in companies such as Salesforce, Zoho, VMware, Schneider and several others.",
+    "LandingCoverImage": "assets/images/covers/Untitled_design.png",
+    "button" : 
+    [
+        {
+            "text" : "InCTF Conference",
+            "link" : "https://conference.inctf.in/"
+        },
+        {
+            "text" : "Get Certificates",
+            "link" : "https://verifycate.com/inctf-jr-2021"
+        }
+    ],
+
+    "what":"Cyber Security Training & Capture The Flag (CTF) Championship", 
+    "when" : "April 15th, 2022",
+    "forWhom": "College Students and Professionals"
+
+}

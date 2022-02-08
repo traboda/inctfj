@@ -1,0 +1,64 @@
+{
+    "rule": [
+    {
+        "tag": "h1",
+        "text": [
+            "Rules for Student Participants"
+        ]
+    },
+    {
+        "tag": "h2",
+        "text": [
+            "Eligibility for Participation"
+        ]
+    },
+    {
+        "tag": "ol",
+        "text": [
+            "All participating students should be permanent residents and citizens of the Republic of India.",
+            "All participants should be a student who has not completed a bachelor's degree."
+        ]
+    },
+    {
+        "tag": "h2",
+        "text": [
+            "Rules for the final contest"
+        ]
+    },
+    {
+        "tag": "ul",
+        "text": [
+            "Beginners are only eligible for prizes.",
+            "Teams with any member having more than 1.5/2 years in CTF is not a beginner Note: this is not applicable for inctf professionals",
+            "Prizes will be distributed within 3 month after the CTF",
+            "Team should not carry out any attacks on the CTF infrastructure.",
+            "No DoS, DdoS, bruteforcing, automated scans or generating any large amount of traffic by any other means on any challenges and other contest infrastructure. It is not permitted and is never intended in any question.",
+            "No collaboration between different teams and flag sharing is not allowed.",
+            "Participants/Teams are NOT allowed to publish solutions during the course of game (blog, GitHub, YouTube, etc)",
+            "Any participants/Teams found violating the above rules will be disqualified from the contest",
+            "Team InCTF reserves the right to introduce new rules or modify existing rules during or after the contest. Any such rules will be applicable to all the participants in the contest",
+            "The decision of Team InCTF will be final",
+            "By participating in the contest, you agree that you have read the above rules and fully agree to adhere to them."
+        ]
+    },
+    {
+        "tag": "h1",
+        "text": [
+            "Rules for Professionals"
+        ]
+    },
+    {
+        "tag": "h2",
+        "text": [
+            "Eligibility for Participation"
+        ]
+    },
+    {
+        "tag": "ul",
+        "text": [
+            "All participating professionals should be permanent residents and citizens of the Republic of India.",
+            "All participants should be full-time employees of an incorporated company."
+        ]
+    }
+    ]
+}

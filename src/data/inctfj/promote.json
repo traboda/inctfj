@@ -1,0 +1,23 @@
+{
+    "promoteHeader": "Promote InCTF Jr",
+    "downloadHeader": "Download Posters",
+    "desc": "Click on the image to download the poster, and feel free to share them anywhere! (Drag to view more posters)",
+    "promotionalImages":[
+        "assets/images/posters/p1.JPG",
+        "assets/images/posters/p2.JPG",
+        "assets/images/posters/p3.JPG",
+        "assets/images/posters/p4.JPG",
+        "assets/images/posters/p5.jpg"
+    ],
+    "promotionalVideosHeader": "Promotional Videos",
+    "promotionalVideos":[
+        {
+            "cover": "assets/images/covers/videos/2020_promo_1.jpg",
+            "link": "https://www.youtube.com/watch?v=AO4p6M4l-VA&feature=youtu.be"
+        },
+        {
+            "cover": "assets/images/covers/videos/2019_highlights.jpg",
+            "link": "https://www.youtube.com/watch?v=sxRZ06Rbh_c"
+        }
+    ]
+}

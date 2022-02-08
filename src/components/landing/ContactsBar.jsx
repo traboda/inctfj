@@ -2,6 +2,10 @@ import React from 'react';
 import styled from "@emotion/styled";
 import Fade from 'react-reveal/Fade';
 
+
+const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
+const data = require(`../../data/${eventID}/index.json`);
+
 const ContactsBarSection = styled.section`
     padding: 5vh 3vw;
     background: #222640;
@@ -46,34 +50,16 @@ const LandingContactsBar = () => {
     return <ContactsBarSection>
         <div className="flex flex-wrap">
             <div className="w-full flex justify-center flex-wrap">
-                <Fade left>
-                    <div className="md:w-1/4 p-2 mb-4 flex items-center justify-center text-center">
-                        <PoweredByTraboda>
-                            <div>In Association with the CBSE</div>
-                            <a href="http://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf">
-                                <img
-                                    src={require('../../assets/images/logos/cbse.jpg')}
-                                    alt="CBSE" draggable="false"
-                                />
-                            </a>
-                        </PoweredByTraboda>
-                    </div>
-                </Fade>
-                <Fade right>
-                    <div className="md:w-1/4 p-2 mb-4 flex items-center justify-center text-center">
-                        <PoweredByTraboda>
-                            <div>Powered By Traboda</div>
-                            <a href="https://app.traboda.com">
-                                <img
-                                    src={require('../../assets/images/logos/traboda_light.png')}
-                                    alt="Traboda" draggable="false"
-                                />
-                            </a>
-                        </PoweredByTraboda>
-                    </div>
-                </Fade>
+                {data.LandingPoweredby.map((item, index) => {
+                    return <Fade left>  <PoweredByTraboda key={index}>
+                        <div>{item.header}</div>
+                        <img src={require(`../../data/${eventID}/${item.logo}`)} />
+                    </PoweredByTraboda></Fade>
+                })}
             </div>
-        </div>
+                
+                
+            </div>
     </ContactsBarSection>
 
 };

@@ -2,6 +2,9 @@ import React from 'react';
 import styled from "@emotion/styled";
 import Fade from 'react-reveal/Fade';
 
+const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
+const data = require(`../../data/${eventID}/index.json`);
+
 const HowItWorksSection = styled.section`
   text-align: center;
   img {
@@ -11,6 +14,14 @@ const HowItWorksSection = styled.section`
      padding: 0;
      margin-bottom: 10px;
   }
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    }
   h3 {
       text-transform: uppercase;
       font-weight: 900;
@@ -41,51 +52,23 @@ const HowItWorksSection = styled.section`
 const LandingHowItWorks = () => {
 
     const steps = [
-        {
-            "title": "Learn", "icon": require('../../assets/images/icons/learn.png'),
-            "delay": 100, "left": true,
-            "content": <>
-                Students can dive into cyber security using the world class resources that team bi0s has made available.
-                Learn new concepts using the bi0s wiki and our YouTube channel and practice them at the challenge archive!
-            </>,
-            "links": [
-                {
-                    "title": "learn from bi0s wiki", "url": "https://wiki.bi0s.in/"
-                },
-                {
-                    "title": "practice on Traboda", "url": "https://app.traboda.com/"
-                }
-            ]
-
-        },
-        {
-            "title": "Hack", "icon": require('../../assets/images/icons/hack.png'),
-            "delay": 500, "top": true,
-            "content": <>
-                Students now participate in the Capture The Flag contest, a gamified approach to learning
-                cyber-security. Start by solving simple challenges that test your knowledge and work up
-                to real world situations where you will need a true hacker's skills to succeed!
-            </>,
-            "links": [
-                {
-                    "title": "watch how it is played", "url": "https://www.youtube.com/watch?v=9Je6USf7CG0"
-                }
-            ]
-        },
-        {
-            "title": "Win", "icon": require('../../assets/images/icons/win.png'),
-            "delay": 1000, "right": true,
-            "content": <>
-                Students finishing at top of the CTF leaderboard will be awarded with exciting goodies
-                and prizes, and they will also get access to exclusive online cyber-security training
-                following the contest. All other participants will also receive certificates.
-            </>,
-            "links": [
-                {
-                    "title": "stats & rankings", "url": "/stats"
-                }
-            ]
-        }
+        
+        ...data.Captions.map((caption, index) => {
+            return {
+                "title": caption.title, "icon": require('../../assets/images/icons/' + caption.icon),
+                "delay": (index + 1) * 100, "left": true,
+                "content": <>
+                    {caption.content}
+                </>,
+                "links": [
+                    ...caption.links.map((link, index) => {
+                        return {
+                            "title": link.title, "url": link.url
+                        }
+                    })
+                ]
+            }
+        })
     ]
 
     return <HowItWorksSection className="motto-cards flex flex-wrap py-5 mx-0 container mx-auto">

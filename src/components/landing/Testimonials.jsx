@@ -6,7 +6,8 @@ import Pulse from 'react-reveal/Pulse';
 import Modal from 'react-modal';
 
 const ReactPlayer = dynamic(() => import('react-player/youtube'))
-
+const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
+const data = require(`../../data/${eventID}/index.json`);
 
 import {disableBodyScroll, clearAllBodyScrollLocks} from "body-scroll-lock";
 
@@ -51,27 +52,6 @@ const CloseButton = styled.button`
 
 const LandingTestimonials = () => {
 
-    const participants = [
-        {
-            image: require('../../assets/images/covers/testimonials/yashodan_ahm.png'),
-        },
-        {
-            image: require('../../assets/images/covers/testimonials/megha_blr.png'),
-        },
-        {
-            image: require('../../assets/images/covers/testimonials/vishwa_pdy.png'),
-        },
-        {
-            image: require('../../assets/images/covers/testimonials/tarunjith_pdy.png'),
-        },
-        {
-            image: require('../../assets/images/covers/testimonials/nilabha_kol.png'),
-        },
-        {
-            image: require('../../assets/images/covers/testimonials/prajwal_kl.png'),
-        },
-    ];
-
     const [showPlayer, setShowPlayer] = useState(false);
 
     const openVideo = () => {
@@ -82,16 +62,18 @@ const LandingTestimonials = () => {
 
     return <TestimonialSection className="container mx-auto">
         <Pulse>
+            {data.LandingTestimonialsHeader &&
             <div className="testimonial-title mb-3">
                 <img src={require('../../assets/images/icons/play_button.png')} alt="View Video Testimonials"/>
-                Hear it from the hackers
+                {data?.LandingTestimonialsHeader}
             </div>
+            }
         </Pulse>
         <div className="flex flex-wrap  mx-0">
-            {participants.map((p, index) => <div className="w-1/2 md:w-1/3 lg:w-1/6 p-1">
+            {data.LandingTestimonials?.map((p, index) => <div className="w-1/2 md:w-1/3 lg:w-1/6 p-1">
                 <Fade delay={index*200}>
                     <a onClick={openVideo}>
-                        <img alt="testimonial student" draggable="false" src={p.image} />
+                        <img alt="testimonial student" draggable="false" src={require(`../../data/${eventID}/${p}`)} />
                     </a>
                 </Fade>
             </div>)}

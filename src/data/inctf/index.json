@@ -1,0 +1,215 @@
+{
+    "Landingheader" : "INDIA'S FLAGSHIP CYBER SECURITY CONTEST AND CONFERENCE",
+    "date" : "SEP 2021 TO JAN 2022.",
+    "Desc" : "InCTF India's Premier Hacking & Cyber Security contest organized by team bi0s, India's No.1 ranked CTF Team.Participate in this learn & hack CTF contest, win exciting prizes & kick-start your cyber-security career.",
+    "subDesc" : "Take part in Amrita InCTF to get recruited as interns/full-time in security roles in companies such as Salesforce, Zoho, VMware, Schneider and several others.",
+    "LandingCoverImage": "assets/images/covers/Untitled_design.png",
+    "button" : 
+    [
+        {
+            "text" : "InCTF Conference",
+            "link" : "https://conference.inctf.in/"
+        }
+    ],
+
+    "what":"Cyber Security Training & Capture The Flag (CTF) Championship", 
+    "when" : "April 15th, 2022",
+    "forWhom": "College Students and Professionals",
+
+    "participants" : [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg"
+    ],
+    "LandingAboutInCTF": [
+        "India's CyberSecurity Championship &",
+        "Talent Incubation Programme ",
+        "for College Students & Professionals"
+    ],
+    "LandingDescINCTF": [
+        "InCTF is a National level Ethical Hacking contest organized annually by Team bi0s in association with Amrita Vishwa Vidyapeetham and Amrita Centre for Cyber Security. The contest is exclusively for students enrolled in an Indian university and aimed at students who have no prior exposure to computer security and for the working professionals. Started in 2010 and so far over 15,000 university students across India from 22 states have taken part.",
+        "It presents them exciting opportunities of getting mentored, peer-networking, and perhaps a platform to showcase their talent and get recognized & rewarded."
+    ],
+    "LandingHighlights": [
+        "5-month Long Completely Free, End-to-End Programme",
+        "Organized by India's No.1 Ranked CTF CyberSecurity Team - bi0s"
+    ],
+    "LandingpromoVideo": "https://youtu.be/MICFZTmNOog",
+    "whyPacrticipate":[
+        {
+            "video":"assets/videos/hands_on_learning.mp4",
+            "text": [
+                "Learn Hands-On,",
+                "& Get a Head Start to CyberSec."
+            ]
+        },
+        {
+            "video":"assets/videos/excitement.mp4",
+            "text": [
+                "Win Exciting Prizes",
+                "for Learning Cool New Things"
+            ]
+        },
+        {
+            "video":"assets/videos/new_friends.mp4",
+            "text": [
+                "Make new friends,",
+                "become part of our community"
+            ]
+        },
+        {
+            "video":"assets/videos/meet_the_experts.mp4",
+            "text": [
+                "Get to Meet & Interact with Top Engineers from the",
+                "from the Industry"
+            ]
+        }
+    ],
+    "CTAreg":{
+        "icon": "shooting_star.png",
+        "message": "InCTF is your perfect entry to CyberSec & Hacking.",
+        "button": {
+            "label": "Register",
+            "url": "https://app.traboda.com/contest/inctf-21-lr"
+        }
+
+    },
+    "Captions": [
+        {
+            "title": "LEARN",
+            "icon": "learn.png",
+            "content": "Students can dive into cyber security using the world class resources that team bi0s has made available. Learn new concepts using the bi0s wiki and our YouTube channel and practice them at the challenge archive!",
+            "links":[ 
+                {
+                    "title": "bi0s Wiki",
+                    "link": "https://wiki.bi0s.in/"
+                },
+                {
+                    "title": "Traboda",
+                    "link": "https://app.traboda.com/"
+                }
+            ]
+        },
+        {
+            "title": "HACK",
+            "icon": "hack.png",
+            "content": "Students now participate in the Capture The Flag contest, a gamified approach to learning cyber-security. Start by solving simple challenges that test your knowledge and work up to real world situations where you will need a true hacker's skills to succeed!",
+            "links":[ 
+                {
+                    "title": "watch how it is played",
+                    "link": "https://www.youtube.com/watch?v=9Je6USf7CG0"
+                }
+                
+            ]
+        },
+        {
+            "title": "WIN",
+            "icon": "win.png",
+            "content": "Students finishing at top of the CTF leaderboard will be awarded with exciting goodies and prizes, and they will also get access to exclusive online cyber-security training following the contest. All other participants will also receive certificates.",
+            "links": [
+                {
+                    "title": "stats & rankings",
+                    "link": "/stats"
+                }
+            ]
+        }
+    ],
+    "LandingTestimonialsHeaderdemo": "HEAR IT FROM THE HACKERS",
+    "LandingTestimonialsdemo":[
+        "assets/images/covers/testimonials/yashodan_ahm.png",
+        "assets/images/covers/testimonials/megha_blr.png",
+        "assets/images/covers/testimonials/vishwa_pdy.png",
+        "assets/images/covers/testimonials/tarunjith_pdy.png",
+        "assets/images/covers/testimonials/nilabha_kol.png",
+        "assets/images/covers/testimonials/prajwal_kl.png"
+    ],
+    "forNewSponsors": {
+        "title": "Today You Can Help Us to Make CyberSec Warriors of Tomorrow",
+        "description": [
+            "InCTF is India's first cyber security & CTF hacking championship for college students and professionals, having helped over 20000 student participants from 23 states of India for the last 5 years. We are offering a limited number of exclusive sponsorship opportunities to companies & organizations.",
+            "Help us & take part in shaping cyber security warriors of tomorrow!"
+        ],
+        "button": "Contact Us",
+        "url": "mailto:inctf@am.amrita.edu"
+    },
+    "officialPartnersdemo":[
+        {
+            "name": "CBSE",
+            "logo": "assets/images/logos/cbse.jpg",
+            "url": "http://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf"
+        },
+        {
+            "name": "Science Society Of India",
+            "logo": "assets/images/logos/ssi_logo.jpg",
+            "url": "http://www.sciencesociety.in/"
+        }
+    ],
+    "CTAPartnersdemo": 
+    {
+        "message": "InCTF is looking for school partners for our National Cyber Security League and International Conference.",
+        "button": {
+            "label": "Register as School Partner",
+            "url": "https://forms.gle/PvCLzE35ZFKEQ96D6"
+        }
+    },
+    "Organizers": [
+        {
+            "name": "Amrita Vishwa Vidyapeetham",
+            "logo": "assets/images/logos/amritapuri_dark.png",
+            "header": "India's No.1 Ranked Private University",
+            "desc" : "Amrita Vishwa Vidyapeetham, founded in 1994, within the next 2 decades has emerged among the leading universities in India, and has been conferred the status of Institute of Eminence by the Govt. of India. It is ranked as the fourth best university in the NIRF Ranking 2020, and has been swiftly establishing itself as a world class teaching and research institution."
+        },
+        {
+            "name": "bi0s",
+            "logo": "assets/images/logos/bi0s_dark.png",
+            "header": "India's No.1 Ranked CTF Hacking Team",
+            "desc": "Team bi0s is a community of college student focusing on cyber security, and actively participating in CTF contests worldwide. For several years now, team bi0s has consistently been the No.1 CTF team in India. The team members also actively involve in security research projects, organizing training programs & CTFs, and developing security tools."
+
+        },
+        {
+            "name": "Amrita Center for Cyber Security Systems and Networks",
+            "logo": "assets/images/logos/amrita_cyber.png",
+            "header": "India's Leading CyberSec. Researchers",
+            "desc": "Amrita Center for Cyber Security Systems and Networks promote partnership between industry, academia and the government to foster innovative research and education in Cyber Security, thus enhancing knowledge, deriving solutions, benefiting society and mitigating risks. The Center is supported by the Government of India throught many of its Departments and Mission REACH programs. The Center has been designated as a Center of Relevance and Excellence (CORE) for Cyber Security in India."
+        }
+    ],
+    "SocialMediaHandles": [
+        {
+            "label": "Twitter",
+            "url": "https://twitter.com/InCTF"
+        },
+        {
+            "label": "Discord",
+            "url": "https://discord.com/invite/uZ2yahXyMd"
+        },
+        {
+            "label": "Facebook",
+            "url": "https://www.facebook.com/InCTF"
+        },
+        {
+            "label": "Instagram",
+            "url": "https://www.instagram.com/inctf.in"
+        },
+        {
+            "label": "Youtube",
+            "url": "https://www.youtube.com/c/InCTF"
+        },
+        {
+            "label": "Email",
+            "url": "mailto:inctf@am.amrita.edu"
+        }
+
+    ],
+    "LandingPoweredby": [
+        
+        {
+            "name": "Traboda",
+            "logo": "assets/images/logos/traboda_light.png",
+            "header": "Powered by Traboda",
+            "url": "https://traboda.com/"
+        }
+        
+    ],
+    "DiscordInvite": "https://discord.com/invite/uZ2yahXyMd"
+}

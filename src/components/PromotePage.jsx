@@ -8,6 +8,8 @@ import Breadcrumb from "./shared/Breadcrumb";
 import Footer from "./shared/Footer";
 import SiteView from "./SiteView";
 
+const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
+const data = require(`../data/${eventID}/promote.json`);
 
 const ShareSection = styled.section`
   padding: 3.5vh 1rem;
@@ -103,7 +105,7 @@ const PromotePage = () => {
         document.body.removeChild(link);
     };
 
-    return <SiteView meta={{ title: "Publicize InCTF Jr." }}>
+    return <SiteView meta={{ title: "Publicize " }}>
         <TopBar includeSpace={false} />
         <div className="px-4 py-8 flex items-end justify-center">
             <div style={{ width: '1000px', maxWidth: '100%'  }}>
@@ -124,7 +126,7 @@ const PromotePage = () => {
                                 ]}
                             />
                         </div>
-                        <h1 className="text-primary text-5xl lg:text-6xl py-4">Promote InCTF Jr</h1>
+                        <h1 className="text-primary text-5xl lg:text-6xl py-4">{data.promoteHeader}</h1>
                     </div>
                 </div>
             </div>
@@ -132,15 +134,15 @@ const PromotePage = () => {
         <ShareSection>
             <div className="flex justify-center text-center py-2">
                 <div>
-                    <h3>Download Posters</h3>
-                    <p>Click on the image to download the poster, and feel free to share them anywhere! (Drag to view more posters)</p>
+                    <h3>{data.downloadHeader}</h3>
+                    <p>{data.desc}</p>
                 </div>
             </div>
             <ScrollContainer vertical className="scroll-container p-6 container mx-auto sm:px-4 flex w-full">
-                {posters.map((p) =>
+                {data.promotionalImages.map((p) =>
                 <div key={shortid.generate()} className="flex items-center justify-center p-1">
-                    <button onClick={() => handlePosterDownload(p)}>
-                        <img alt="download poster" className="inctf_poster" src={p} />
+                    <button onClick={() => handlePosterDownload(`../data/${eventID}/${p}`)}>
+                        <img alt="download poster" className="inctf_poster" src={require(`../data/${eventID}/${p}`)} />
                         <div className="download_icon">
                             <img src={require('../assets/images/icons/download.png')} alt="download" />
                         </div>
@@ -151,14 +153,14 @@ const PromotePage = () => {
         <ShareSection>
             <div className="flex items-center justify-center text-center">
                 <div>
-                    <h3>Promotional Videos</h3>
+                    <h3>{data.promotionalVideosHeader}</h3>
                 </div>
             </div>
             <ScrollContainer vertical className="scroll-container p-6 container mx-auto sm:px-4 flex w-full">
-                {videos.map(({ cover, link }) =>
+                {data.promotionalVideos.map(({ cover, link }) =>
                     <div key={shortid.generate()} className="flex items-center justify-center p-1">
                         <a href={link} target="_blank">
-                            <img alt="download poster" className="inctf_video_cover" src={cover} />
+                            <img alt="download poster" className="inctf_video_cover" src={require(`../data/${eventID}/${cover}`)} />
                             <div className="youtube_icon">
                                 <img src={require('../assets/images/icons/play_button.png')} alt="download" />
                             </div>

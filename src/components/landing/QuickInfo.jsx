@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from "@emotion/styled";
 import Fade from "react-reveal/Fade";
+const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
+const data = require(`../../data/${eventID}/championship.json`);
 
 const QuickInfoSection = styled.section`
       padding: 2vh 2vw;
@@ -34,21 +36,17 @@ const LandingQuickInfo = () => {
     const landingInfo = [
         {
             image: require('../../assets/images/icons/trophy.png'), left: true,
-            question: "What?", answer: <>Cyber-Security Training & <br /> Capture The Flag (CTF) Championship</>
+            question: "What?", answer: <>{data.what}</>
         },
         {
             image: require('../../assets/images/icons/calendar.png'), up: true,
-            question: "When?", answer: <>
-               2022 Edition, <br />
-               to be announced
-            </>
+            question: "When?", answer: <> {data.when}</>
         },
+            
         {
             image: require('../../assets/images/icons/backpack.png'), right: true,
-            question: "For Whom?", answer: <>
-                Grade 07-12 <br/>
-                School Students
-            </>,
+            question: "For Whom?", answer: <> {data.forWhom}</>
+                
         }
     ]
 
