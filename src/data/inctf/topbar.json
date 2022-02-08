@@ -1,5 +1,5 @@
 {
-  "associate": {
+  "associatedemo": {
       "logo": {
           "light": "cbse_logo.jpg",
           "dark": "cbse_logo.jpg"
@@ -23,11 +23,11 @@
       "link": "/about",
       "items": [
         {
-          "label": "What's India CTF Jr?",
+          "label": "What's India CTF?",
           "link": "/about#what"
         },
         {
-          "label": "Why InCTF Jr?",
+          "label": "Why InCTF?",
           "link": "/about#why"
         },
         {

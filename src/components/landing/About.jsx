@@ -2,6 +2,9 @@ import React from 'react';
 import styled from "@emotion/styled";
 import Zoom from 'react-reveal/Zoom';
 
+const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
+const data = require(`../../data/${eventID}/index.json`);
+
 const AboutInCTFSection = styled.section`
     padding: 8vh 2.5vw;
     img {
@@ -50,7 +53,7 @@ const AboutInCTFSection = styled.section`
 `;
 
 const HighlightFeature = styled('div')`
-    margin-bottom: 1.75rem;
+    margin-bottom: -5.5rem;
     line-height: 1.3;
     font-size: calc(1.2rem + 0.15vw);
     span {
@@ -81,38 +84,32 @@ const LandingAboutInCTF = () => (
             <div className="flex flex-wrap  mx-0">
                 <div className="md:w-2/3 p-2">
                     <h2 className="mt-2">
-                        India's CyberSecurity Championship & <wbr />
-                        <span>Talent Incubation Programme</span> <wbr />
-                        for School Students
+                        {data.LandingAboutInCTF[0]}& <wbr />
+                        <span>{data.LandingAboutInCTF[1]}</span> <wbr />
+                        {data.LandingAboutInCTF[2]}
                     </h2>
                     <p>
-                        Democratizing cyber-security education by making it accessible to everyone at a very
-                        young age and anchoring them on the track for excellent careers is what Amrita's India
-                        Capture The Flag (InCTF) Junior programme is all about.
-                    </p>
-                    <p>
-                        Today, InCTF Junior is a Cyber-Security talent incubator that exposes participants to
-                        the cyber-security world, helping them to learn & grow their skills hands-on.
-                    </p>
-                    <p>
-                        It presents them exciting opportunities of getting mentored, peer-networking,
-                        and perhaps a platform to showcase their talent and get recognized & rewarded.
+                        { data.LandingDescINCTF.map((item, index) => (
+                            <span key={index}>
+                                {item}
+                                <br />
+                                <br />
+                            </span>
+                        ))}
+
                     </p>
                 </div>
                 <div className="md:w-1/3 flex justify-end items-center p-2">
                     <div>
                         <HighlightFeature>
-                            National Level Cyber Security <wbr /> <span>Talent Incubation</span>
-                        </HighlightFeature>
-                        <HighlightFeature>
-                            5-month Long Completely Free, <wbr /> <span>End-to-End Programme</span>
-                        </HighlightFeature>
-                        <HighlightFeature>
-                            Beginner Friendly & <wbr /> <span>Exclusively for School Students</span>
-                        </HighlightFeature>
-                        <HighlightFeature>
-                            Organized by India's No.1 Ranked <wbr />
-                            <span>CTF CyberSecurity Team - bi0s</span>
+                            { data.LandingHighlights.map((item, index) => (
+                                <span key={index}>
+                                    {item}
+                                    <br />
+                                    <br />
+                                </span>
+                            ))
+                            }
                         </HighlightFeature>
                     </div>
                 </div>

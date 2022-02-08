@@ -3,6 +3,9 @@ import styled from "@emotion/styled";
 import Fade from 'react-reveal/Fade';
 import SponsorsSection from "./SponsorsSection";
 
+const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
+const data = require(`../../data/${eventID}/index.json`);
+
 const SponsorshipArea = styled.section`
     justify-content: center;
     padding: 5vh 0;
@@ -75,53 +78,45 @@ const LogoWall = styled.div`
 
 const LandingSponsorship = () => {
 
-    const inCTFJrPartners = [
-        {
-            image: require('../../assets/images/logos/cbse.jpg'),
-            link: "http://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf",
-        },
-        {
-            image: require('../../assets/images/logos/ssi_logo.jpg'),
-        },
-    ]
-
     return <SponsorshipArea className="flex flex-wrap mx-auto container md:px-0 px-4">
         <Fade left>
             <div className="lg:w-1/2 p-0 lg:px-4">
                 <div>
-                    <div className="mb-2">Not a Student?</div>
-                    <h2>
-                        Today You Can Help Us to
-                        Make CyberSec Warriors of Tomorrow
-                    </h2>
-                    <p>
-                        InCTFj is India's first & only cyber security & CTF hacking championship for school students, having
-                        helped over 20000 student participants from 23 states of India for the last 5 years.
-                        We are offering a limited number of exclusive sponsorship opportunities to companies & organizations.
-                        <div className="text-lg mt-3">Help us & take part in shaping cyber security warriors of tomorrow!</div>
-                    </p>
-                    <div className="mt-2 mx-0 mb-8">
-                        {/*<a className="sponsorship-brochure-button" href="/sponsor">Sponsorship Brochure</a>*/}
-                        <a className="contact-us-button" href="mailto:inctfj@am.amrita.edu">Contact Us</a>
-                    </div>
+                    {data.forNewSponsors && 
+                        <div>
+                            <h2>
+                            {data.forNewSponsors.title}
+                        </h2>
+                        <p>
+                            {data.forNewSponsors.description[0]}
+                            <div className="text-lg mt-3">{data.forNewSponsors.description[1]}</div>
+                        </p>
+                        <div className="mt-2 mx-0 mb-8">
+                            {/*<a className="sponsorship-brochure-button" href="/sponsor">Sponsorship Brochure</a>*/}
+                            <a className="contact-us-button" href={data.forNewSponsors.url}>{data.forNewSponsors.button}</a>
+                        </div>
+                        </div>
+                    }                        
                 </div>
                 <LogoWall style={{ width: '100%', maxWidth: '700px' }}>
+                    {data.officialPartners && data.officialPartners.length > 0 &&
                     <div className="bg-white rounded-xl shadow-md p-0 my-6 md:p-6">
                         <div className="flex flex-wrap">
                             <div className="inctfj-sponsors text-red-500 w-full p-0 mt-3 mb-3 opacity-80 text-lg text-center">
                                 InCTF Jr 2021 - Official Partners
                             </div>
-                            {inCTFJrPartners.map((s) =>
+                            {data.officialPartners.map((s) =>
                                 <div className="md:w-1/2 p-1 w-full flex items-center">
                                     <Fade>
                                         <a href={s.link} target="_blank">
-                                            <img draggable="false" alt="Sponsor Logo" src={s.image} />
+                                            <img draggable="false" alt="Sponsor Logo" src={require(`../../data/${eventID}/${s.logo}`)} />
                                         </a>
                                     </Fade>
                                 </div>
                             )}
                         </div>
                     </div>
+                    }
                 </LogoWall>
             </div>
         </Fade>

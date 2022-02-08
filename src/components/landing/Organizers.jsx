@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from "@emotion/styled";
 import Fade from 'react-reveal/Fade';
+import { data } from 'autoprefixer';
+
+const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
+const Data = require(`../../data/${eventID}/index.json`);
 
 const OrganizersSection = styled.section`
     user-select: none;
@@ -46,58 +50,52 @@ const LandingOrganizers = () => {
             <h3>Organized By</h3>
             <div className="flex flex-wrap  mx-0">
                 <Fade left>
-                    <div className="w-full md:w-1/3 pr-4 pl-4 md:order-1 order-2 md:text-right text-center amrita">
+                    <div className="w-full md:w-1/3 pr-4 pl-4 md:order-1 order-2 md:text-right text-center ">
                         <a href="https://amrita.edu">
                             <img alt="Amrita Vishwa Vidyapeetham"
-                                 src={require('../../assets/images/logos/amritapuri_dark.png')}
+                                 src={require(`../../data/${eventID}/${Data.Organizers[0].logo}`)}
                                  className="md:ml-auto md:mr-0 mx-auto" />
                         </a>
-                        <h4>India's No.1 Ranked Private University</h4>
+                        <h4>
+                            {Data.Organizers[0].header}
+                        </h4>
                         <div className="flex md:justify-end justify-center">
                             <p>
-                                Amrita Vishwa Vidyapeetham, founded in 1994, within the next 2 decades has emerged among the
-                                leading universities in India, and has been conferred the status of Institute of Eminence by the
-                                Govt. of India. It is ranked as the fourth best university in the NIRF Ranking 2020, and has been
-                                swiftly establishing itself as a world class teaching and research institution.
+                            {Data.Organizers[0].desc}
                             </p>
                         </div>
                     </div>
                 </Fade>
                 <Fade up>
-                    <div className="w-full md:w-1/3 pr-4 pl-4 bi0s text-center md:order-2 order-1">
+                    <div className="w-full md:w-1/3 pr-4 pl-4 text-center md:order-2 order-1">
                         <a href="https://bi0s.in">
-                            <img alt="Team bi0s" src={require('../../assets/images/logos/bi0s_dark.png')}
+                            <img alt="Team bi0s" src={require(`../../data/${eventID}/${Data.Organizers[1].logo}`)}
                                  className="mx-auto" />
                         </a>
-                        <h4>India's No.1 Ranked CTF Hacking Team</h4>
+                        <h4>
+                            {Data.Organizers[1].header}
+                        </h4>
                         <div className="flex justify-center">
                             <p>
-                                Team bi0s is a community of college student focusing on cyber security,
-                                and actively participating in CTF contests worldwide. For several years now,
-                                team bi0s has consistently been the No.1 CTF team in India. The team
-                                members also actively involve in security research projects, organizing training
-                                programs & CTFs, and developing security tools.
+                            {Data.Organizers[1].desc}
                             </p>
                         </div>
                     </div>
                 </Fade>
                 <Fade right>
-                    <div className="w-full md:w-1/3 pr-4 pl-4 cyber md:order-2 order-1 md:text-left text-center">
+                    <div className="w-full md:w-1/3 pr-4 pl-4 md:order-2 order-1 md:text-left text-center">
                         <a href="https://www.amrita.edu/center/cyber-security">
                             <img
                                 alt="Amrita Center for Cyber Security Systems & Networks"
-                                src={require('../../assets/images/logos/amrita_cyber.png')} className="inline"
+                                src={require(`../../data/${eventID}/${Data.Organizers[2].logo}`)} className="inline"
                             />
                         </a>
-                        <h4>India's Leading CyberSec. Researchers</h4>
+                        <h4>
+                            {Data.Organizers[2].header}
+                        </h4>
                         <div className="flex md:justify-start justify-center">
                             <p>
-                                Amrita Center for Cyber Security Systems and Networks promote partnership between
-                                industry, academia and the government to foster innovative research and education
-                                in Cyber Security, thus enhancing knowledge, deriving solutions, benefiting society
-                                and mitigating risks. The Center is supported by the Government of India throught
-                                many of its Departments and Mission REACH programs. The Center has been designated
-                                as a Center of Relevance and Excellence (CORE) for Cyber Security in India.
+                            {Data.Organizers[2].desc}
                             </p>
                         </div>
                     </div>

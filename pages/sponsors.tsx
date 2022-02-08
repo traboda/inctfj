@@ -8,7 +8,7 @@ import SiteView from "../src/components/SiteView";
 
 const SponsorsPage = () => {
     return (
-        <SiteView meta={{ title: "Sponsors InCTF Jr." }}>
+        <SiteView meta={{ title: "Sponsors " }}>
             <TopBar />
             <PageHeader
                 title="Our Sponsors"

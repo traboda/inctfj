@@ -2,6 +2,9 @@ import React from 'react';
 import styled from "@emotion/styled";
 import Fade from 'react-reveal/Fade';
 
+const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
+const data = require(`../../data/${eventID}/index.json`);
+
 const DiscussionPortals = styled.a`
     min-height: 30vmin;
     padding: 2.5vh 5vw;
@@ -54,7 +57,7 @@ const LandingJoinDiscussion = () => {
 
     return <div className="flex flex-wrap">
         <div className="md:w-1/2 w-full">
-            <TwitterDiscussion href="https://twitter.com/InCTFj" rel="noopener noreferrer" target="_blank">
+            <TwitterDiscussion href={data.SocialMediaHandles.find(handle => handle.label === 'Twitter').url} target="_blank" rel="noopener noreferrer">
                 <Fade left>
                     <div>
                         <img src={require('../../assets/images/logos/twitter.png')} alt="Follow us on Twitter<" />
@@ -65,7 +68,7 @@ const LandingJoinDiscussion = () => {
         </div>
 
         <div className="md:w-1/2 w-full">
-            <DiscordDiscussion href="https://discord.gg/rkyDM6p3m2" rel="noopener noreferrer" target="_blank">
+            <DiscordDiscussion href={data.SocialMediaHandles.find(handle => handle.label === 'Discord').url} rel="noopener noreferrer" target="_blank">
                 <Fade right>
                     <div>
                         <img src={require('../../assets/images/logos/discord.png')} alt="Join Discord Server" />

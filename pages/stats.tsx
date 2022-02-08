@@ -33,7 +33,7 @@ const TabButton = styled.button<TabButton>`
 `;
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
-const eventStats = require(`../src/data/${eventID}/stats`).default;
+const eventStats = require(`../src/data/${eventID}/stats/index`).default;
 
 const StatsPage = () => {
 

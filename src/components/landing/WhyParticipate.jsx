@@ -3,6 +3,9 @@ import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import Zoom from "react-reveal/Zoom";
 
+const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
+const data = require(`../../data/${eventID}/index.json`);
+
 const VideoRotationAnimation = keyframes`
   0%{ transform: rotateZ(1deg); }
   25%{ transform: rotateZ(2deg); }
@@ -39,25 +42,6 @@ const ReasonsSection = styled.section`
 
 const LandingReasonsToParticipate = () => {
 
-    const reasons = [
-        {
-            "video": require('../../assets/videos/hands_on_learning.mp4'),
-            "title": <>Learn Hands-On, <br /> & Get a Head Start to CyberSec.</>
-        },
-        {
-            "video":  require('../../assets/videos/excitement.mp4'),
-            "title": <>Win Exciting Prizes <br /> for Learning Cool New Things</>
-        },
-        {
-            "video": require('../../assets/videos/new_friends.mp4'),
-            "title": <>Make new friends,<br /> become part of our community</>
-        },
-        {
-            "video": require('../../assets/videos/meet_the_experts.mp4'),
-            "title": <>Get to Meet & Interact with Top Engineers from the Industry</>
-        },
-    ];
-
     return <ReasonsSection className="container mx-auto">
         <h2 className="text-center">
             <div className="flex justify-center">
@@ -66,11 +50,15 @@ const LandingReasonsToParticipate = () => {
             Why Participate?
         </h2>
         <div className="flex flex-wrap  mx-0">
-        {reasons.map((r, index) =>
+        {data.whyPacrticipate.map((r, index) =>
             <Zoom up={index%2} left={!index%2}>
                 <div className="w-full md:w-1/2 lg:w-1/4 text-center mb-6 md:mb-0 p-2">
-                    <video autoPlay loop muted src={r.video} />
-                    <div>{r.title}</div>
+                    <video autoPlay loop muted src={require(`../../data/${eventID}/${r.video}`)} />
+                    <div>
+                        {r.text.map((text, index) =>
+                            <p key={index}>{text}</p>
+                        )}
+                    </div>
                 </div>
             </Zoom>
         )}

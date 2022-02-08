@@ -8,7 +8,7 @@ import SiteView from "../src/components/SiteView";
 
 const TrainingSchedulePage = () => {
     return (
-        <SiteView meta={{ title: "Training Schedule for InCTF Jr." }}>
+        <SiteView meta={{ title: "Training Schedule" }}>
             <TopBar />
             <PageHeader
                 title="Training Workshops"

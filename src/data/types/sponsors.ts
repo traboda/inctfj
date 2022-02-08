@@ -1,18 +1,16 @@
 
 export type Sponsor = {
     name: string,
-    logo: string,
-    url: string,
-    description: string
+    path: string,
+    link: string,
+    desg: string
 };
 
 export type SponsorshipTier = {
     label: string,
-    message: string,
+    desc: string,
+    type: string,
     sponsors: Sponsor[]
 }
 
-export type SponsorshipConfig = {
-    tiers: SponsorshipTier[],
-    pastSponsors: SponsorshipTier[],
-}
+export type SponsorshipConfig = SponsorshipTier[]
