@@ -30,9 +30,9 @@ const RulesContainer = styled('div')`
     }
 `;
 
-const RulePage = () => {
+const DeclarationPage = () => {
 
-    return <Base meta={{ title: 'Rules' }}>
+    return <Base meta={{ title: 'Self Declaration' }}>
         <TopBar darkenOnSidebar includeSpace />
         <PageHeader
             title="Self Declaration for Winners"
@@ -54,10 +54,9 @@ const RulePage = () => {
                     <div style={{ width: '100%', maxWidth: '600px' }}>
                         <div>
                             <p>
-                                Please send us a signed copy the following self-declaration filling
-                                your bank account details, and in a PDF format. You must send us
-                                the declaration to -  inctf@am.amrita.edu, from the registered email
-                                of any 1 member of your team.
+                                Please send us a signed copy the following self-declaration filling your bank account
+                                details change to <b>any one bank account of the team member</b>.
+                                (agreed by all the team members)
                             </p>
                         </div>
                         <div className="bg-yellow-50 shadow p-4 md:p-6 xl:p-8 rounded-xl">
@@ -112,4 +111,4 @@ const RulePage = () => {
     </Base>
 }
 
-export default RulePage;
+export default DeclarationPage;
