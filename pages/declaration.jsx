@@ -54,9 +54,8 @@ const DeclarationPage = () => {
                     <div style={{ width: '100%', maxWidth: '600px' }}>
                         <div>
                             <p>
-                                Please send us a signed copy the following self-declaration filling your bank account
-                                details change to <b>any one bank account of the team member</b>.
-                                (agreed by all the team members)
+                                Please send us a signed copy the following self-declaration form filling
+                                the bank account details any one of the team member. (agreed by all the team members)
                             </p>
                         </div>
                         <div className="bg-yellow-50 shadow p-4 md:p-6 xl:p-8 rounded-xl">
