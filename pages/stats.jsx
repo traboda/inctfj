@@ -71,7 +71,7 @@ const Stats = () => {
                     "name": "Team iitbreachers",
                     "school": "Indian Institute of Technology, Bombay (IIT-B)",
                     "title": "First Prize Winners",
-                    "members": "Sahil Jain, Pulkit Agrawal, Girish Srivatsa, Neel Aryan",
+                    "members": "Sahil Jain, Pulkit Agrawal, Girish Srivatsa, Neel Aryan,Aman Singh",
                     "avatar": require('../src/assets/images/champions/iitbombay.png')
                 },
                 {
