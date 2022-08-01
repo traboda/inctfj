@@ -16,20 +16,7 @@ export default <ConfigContextType>{
             dark: "logo_dark.png"
         }
     },
-    sponsors: [
-        {
-            name: 'Salesforce',
-            logo: '/assets/sponsors/salesforce.png',
-        },
-        {
-            name: 'Zoho',
-            logo: '/assets/sponsors/zoho.png'
-        },
-        {
-            name: 'VMWare',
-            logo: '/assets/sponsors/vmware.png'
-        }
-    ],
+    sponsors: [],
     socialLinks: {
         facebook: "https://www.facebook.com/InCTFj",
         twitter: "https://twitter.com/InCTFj",

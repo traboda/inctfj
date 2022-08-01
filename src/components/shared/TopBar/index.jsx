@@ -229,9 +229,9 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                 <div className="w-3/4 flex md:hidden items-center justify-end px-1">
                     <div className="text-right px-2">
                         <div className="font-semibold text-primary">
-                            InCTF Jr Qualifiers 2021
+                            InCTF Jr 2022
                         </div>
-                        <div>Starts 6PM, 28th Dec</div>
+                        <div>August - November, 2022</div>
                     </div>
                     {/*<TopbarInfoCard className="mr-3">*/}
                     {/*    <button*/}

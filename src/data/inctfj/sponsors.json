@@ -26,10 +26,7 @@
             "name": "audius",
             "logo": "../../assets/images/sponsors/audius.png",
             "url": "https://www.audius.com/"
-        }
-    ],
-    "inCTFSponsors":
-    [
+        },
         {
             "name": "salesforce",
             "logo": "../../assets/images/sponsors/salesforce.png",
@@ -67,21 +64,12 @@
             "desg": "Silver Sponsor"
         }
     ],
-    "inCTFjrSponsors":
-    [
+    "inCTFjrSponsors": [
         {
             "name": "traboda",
             "path": "traboda.png",
             "url": "https://traboda.com/",
             "desg": "Platform Sponsor"
-        },
-        {
-            "name": "jnanamarga",
-            "path": "jnanamarga.png",
-            "url": "https://jnanamarga.com/",
-            "desg": "Silver Sponsor"
         }
     ]
-        
-    
 }

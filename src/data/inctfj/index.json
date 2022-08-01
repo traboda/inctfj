@@ -1,25 +1,13 @@
 {
     "Landingheader" : "Young Hackers Are Born Here,Become the Next Cyber Security Warrior.",
-    "date" : "SEP 2021 TO JAN 2022.",
+    "date" : "August - November 2022",
     "Desc" : "InCTF Junior is India's First & Premier Hacking & Cyber Security Contest for High School Students, organized by team bi0s, India's No.1 ranked CTF Team.",
     "subDesc" : "Every year the brightest young hackers from all across India participate in this the learn & hack CTF contest, win exciting prizes & kick-start their cyber-security career.",
     "LandingCoverImage": "assets/images/covers/landing-cover-image.png",
-    "button" : 
-    [
-        {
-            "text" : "View Results",
-            "link" : "/stats"
-        },
-        {
-            "text" : "Get Certificates",
-            "link" : "https://verifycate.com/inctf-jr-2021"
-        }
-    ],
-
+    "button" : [],
     "what":"Cyber Security Training & Capture The Flag (CTF) Championship", 
-    "when" : "2022 Edition to be announced",
+    "when" : "August - November, 2022",
     "forWhom": "Grade 07-12 School Students",
-
     "participants" : [
         "1.jpg",
         "2.jpg",
@@ -145,14 +133,8 @@
             "name": "CBSE",
             "logo": "assets/images/logos/cbse.jpg",
             "url": "http://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf"
-        },
-        {
-            "name": "Science Society Of India",
-            "logo": "assets/images/logos/ssi_logo.jpg",
-            "url": "http://www.sciencesociety.in/"
         }
     ],
-
     "CTAPartners": 
     {
         "message": "InCTF Jr is looking for school partners for our National Cyber Security League and International Conference.",

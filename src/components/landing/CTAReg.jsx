@@ -41,15 +41,15 @@ const CTAReg = ({ UTMSource = null }) => (
                     </h3>
                 </div>
             </Fade>
-            <Fade right>
-                <div className="md:w-1/3 px-0 md:px-2 flex items-center justify-center w-full">
-                    <iframe
-                        className="border-0"
-                        style={{ width: '400px', maxWidth: '100vw', height: '190px', overflow: 'auto' }}
-                        src={`${data.CTAreg.button.url}/reg-frame?color=000&primary=F13F17&primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
-                    />
-                </div>
-            </Fade>
+            {/*<Fade right>*/}
+            {/*    <div className="md:w-1/3 px-0 md:px-2 flex items-center justify-center w-full">*/}
+            {/*        <iframe*/}
+            {/*            className="border-0"*/}
+            {/*            style={{ width: '400px', maxWidth: '100vw', height: '190px', overflow: 'auto' }}*/}
+            {/*            src={`${data.CTAreg.button.url}/reg-frame?color=000&primary=F13F17&primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}*/}
+            {/*        />*/}
+            {/*    </div>*/}
+            {/*</Fade>*/}
         </div>
     </RegCTASection>
 );
