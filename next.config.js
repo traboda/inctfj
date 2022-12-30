@@ -49,12 +49,7 @@ const customConfig = {
                 },
             },
         ],
-    },
-    env: {
-        NEXT_PUBLIC_EVENT_ID: 'inctfj',
-        EVENT_ID: 'inctfj',
     }
-
 };
 
 module.exports = withPlugins([
