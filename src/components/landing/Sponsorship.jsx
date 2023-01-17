@@ -72,7 +72,7 @@ const LogoWall = styled.div`
        display: inline;
        max-height: 80px;
        min-height: 79px ;
-       max-width: 150px;
+       width: 150px;
        object-fit: contain;
     }
 `
