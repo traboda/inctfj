@@ -65,14 +65,15 @@ const LogoWall = styled.div`
     }
     .inctfj-sponsors {
       img {
-        height: 90px!important;
+        height: 79px;
       }
     }
     img {
        display: inline;
-       max-height: 90px;
-       width: auto;
-       max-width: 100%;
+       max-height: 80px;
+       min-height: 79px ;
+       max-width: 150px;
+       object-fit: contain;
     }
 `
 
@@ -106,9 +107,9 @@ const LandingSponsorship = () => {
                                 InCTF Jr 2021 - Official Partners
                             </div>
                             {data.officialPartners.map((s) =>
-                                <div className="md:w-1/2 p-1 w-full flex items-center">
+                                <div className="md:w-1/2 p-1 w-full flex items-center" style={{display:'flex',flex:'1 1 30%',flexWrap:'wrap',alignItems:'center',justifyContent:'space-between'}}>
                                     <Fade>
-                                        <a href={s.link} target="_blank">
+                                        <a href={s.link} target="_blank" style={{display:'block'}}>
                                             <img draggable="false" alt="Sponsor Logo" src={require(`../../data/${eventID}/${s.logo}`)} />
                                         </a>
                                     </Fade>
