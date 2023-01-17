@@ -69,11 +69,11 @@ const LogoWall = styled.div`
       }
     }
     img {
-       display: inline;
-       max-height: 80px;
-       min-height: 79px ;
-       max-width: 150px;
-       object-fit: contain;
+        display: inline;
+       max-height: 80px !important;
+       min-height: 79px !important;
+       width: 147px !important;
+       object-fit: contain !important;
     }
 `
 
@@ -110,7 +110,7 @@ const LandingSponsorship = () => {
                                 <div className="md:w-1/2 p-1 w-full flex items-center" style={{display:'flex',flex:'1 1 30%',flexWrap:'wrap',alignItems:'center',justifyContent:'space-between'}}>
                                     <Fade>
                                         <a href={s.link} target="_blank" style={{display:'block'}}>
-                                            <img draggable="false" alt="Sponsor Logo" src={require(`../../data/${eventID}/${s.logo}`)} />
+                                            <img draggable="false" alt="Sponsor Logo" src={require(`../../data/${eventID}/${s.logo}`)} style={{maxHeight:'80px',minHeight:'79px',width:'150px',objectFit:'contain'}}/>
                                         </a>
                                     </Fade>
                                 </div>
