@@ -69,11 +69,11 @@ const LogoWall = styled.div`
       }
     }
     img {
-       display: inline;
-       max-height: 80px;
-       min-height: 79px ;
-       width: 150px;
-       object-fit: contain;
+        display: inline;
+       max-height: 80px !important;
+       min-height: 79px !important;
+       width: 147px !important;
+       object-fit: contain !important;
     }
 `
 
