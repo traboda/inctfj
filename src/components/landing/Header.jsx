@@ -176,7 +176,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                                         href={button.link}
                                         className="text-2xl px-5 py-4 inline-block font-semibold ml-3 rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl my-3"
                                     >
-                                        {button.text} <i className="fa fa-chevron-right"/>
+                                        Coming Soon <i className="fa fa-chevron-right"/>
                                     </a>
                                     ))}
                                     
