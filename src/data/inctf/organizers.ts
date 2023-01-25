@@ -94,11 +94,11 @@ export default <OrganizerConfig>[
                 name: "Shogil Babu",
                 role: "Youtube Channel"
             },
-            {
-                avatar: 'prajwal.jpg',
-                name: "Prajwal CP",
-                role: "DevOps"
-            },
+            // {
+            //     avatar: 'prajwal.jpg',
+            //     name: "Prajwal CP",
+            //     role: "DevOps"
+            // },
             {
                 avatar: 'rahul.jpg',
                 name: "Rahul Manneri",

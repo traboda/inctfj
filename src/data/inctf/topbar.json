@@ -14,7 +14,7 @@
   },
   "CTA": {
       "type": "link",
-      "link": "/stats",
+      "link": "/",
       "buttonText": "View Results"
   },
   "menu": [
@@ -24,11 +24,11 @@
       "items": [
         {
           "label": "What's India CTF?",
-          "link": "/about#what"
+          "link": "/"
         },
         {
           "label": "Why InCTF?",
-          "link": "/about#why"
+          "link": "/"
         },
         {
           "label": "Our Reach & Statistics",
@@ -98,7 +98,7 @@
         },
         {
           "label": "Past Winners",
-          "link": "/stats"
+          "link": "/"
         }
       ]
     },

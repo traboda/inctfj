@@ -297,7 +297,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                         alt="InCTF Jr"
                         style={{ height: '72px' }}
                         className="inline"
-                        src={require('../../../assets/images/branding/colorful.png')}
+                        src={require('../../../assets/images/conference/inctf_logo.png')}
                     />
                 </a>
             </Link>

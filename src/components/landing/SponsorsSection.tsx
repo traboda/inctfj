@@ -22,10 +22,14 @@ const Wrapper = styled.div`
     }
   }
   img {
-    display: inline;
+    display: flex;
     max-height: 90px;
+    min-height: 89px;
     width: auto;
-    max-width: 100%;
+    max-width: 150px;
+    min-width: 149px;
+    object-fit: contain;
+   
   }
 `;
 
@@ -46,10 +50,10 @@ const SponsorsSection = () => {
                 </div> 
                 {sponsor.sponsors.map((sponsor, index) => {
                     return (
-                        <div className="flex flex-wrap">
-                            <div className="w-full flex justify-center">
+                        <div className="flex flex-wrap" style={{display:'flex',flex:'1 1 50%',justifyContent:'space-between',flexWrap:'wrap'}}>
+                            <div className="w-full flex justify-center" >
                                 <Fade bottom>
-                                    <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+                                    <a href={sponsor.link} target="_blank" rel="noopener noreferrer" style={{display:'block'}}>
                                         <img src={require(`../../data/inctf/${sponsor.path}`)} draggable="false" alt="Sponsor Logo"  />
                                         {sponsor?.desg && (<div className="text-sm mt-3 font-light">{sponsor.desg}</div>)}
                                     </a>

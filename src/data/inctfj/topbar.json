@@ -14,7 +14,7 @@
   },
   "CTA": {
       "type": "link",
-      "link": "/stats",
+      "link": "/",
       "buttonText": "View Results"
   },
   "menu": [
