@@ -29,122 +29,130 @@
 .maincampusinnertextdiv img{
     z-index: -1;
     position: absolute;
-    top: 15%;
+    top: 50%;
     left:-20%;
 }
-
-.maincampusaboutdiv1{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    width: 80%;
-    margin: 5vh auto;
-}
-.maincampusaboutdiv1innerwrapper{
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
-}
-.div2img{
-    width:50%
-}
-.div2text{
-    display: flex;
-    align-items: center;
-    width: 50%;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-}
-.div2text h1{
-    padding:1rem;
-    font-size:2.3rem;
-    padding-bottom:2rem;
-    padding-left:0;
-}
-.div2text p{
-    color: white;
-    line-height: 2.5rem;
-    font-size: 1.4rem;
-    opacity: 0.8;
-}
-.section3{
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-.section3 h2{
-    color:#F13F17;
-    font-weight:600;
-    font-size:1.8rem;
-    padding-top:1.8rem;
-    text-align:center;
-    opacity:0.8
-}
-.section3 h1{
-    text-transform:capitalize;
-    font-size:35px;
-    font-weight:600;
-    padding-top:2rem;
-    text-align:center;
-    width:50%;
-    margin:0 auto;
-    padding-bottom:2rem;
-}
-.section3innerdisplayflex{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-.section3textdiv{
-    width: 50%;
-    display: flex;
-    align-items: center;
-}
-.section3imgdiv{
-    width: 50%;
-}
-.section3textdiv li{
-    font-size: 1.4rem;
-    line-height: 2.5rem;
-    opacity: 0.8;
-    margin: 1rem 0;
-}
-.section3textdiv ul{
-    list-style: none;
-}
-.section4{
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
-.section4 h1{
-    text-transform:capitalize;
-    font-size:35px;
-    font-weight:600;padding-top:2rem;
-    text-align:left;
-    width:50%;
-    padding-bottom:2rem;
-}
-.section4imgdiv{
-    width: 40%;
-}
-.section4textdiv{
+.campusaccordion{
     width: 60%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    font-size: 1.1rem;
 }
-.section4textdiv li{
-    font-size: 1.4rem;
-    line-height: 2.5rem;
+.campusperkssection{
+    width:70%;
+    /* border: 1px solid #FF6F00; */
+    margin: 2rem auto;
+    position: relative;
+}
+.absoluteimg{
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    z-index: -1;
+}
+.campusperkssectionflex{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.campusperkssectionflexdiv1{
+    width: 45%;
+    /* border-right: 1px solid #FF6F00; */
+}
+.campusperkssectionflexdiv2{
+    width: 50%;
+    
+}
+.leafshapeddiv{
+    height: 178px;
+    width: 178px;
+    background: #FFF0E1;
+    border-radius: 100px 0px 0px 0px;
+    position: relative;
+}
+.leafshapeddiv h2{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+    padding-top: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.leafshapeddivpara{
+    margin: 2rem auto;
+    /* border: 1px solid #FF6F00; */
+}
+.leafshapeddivpara p{
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 2rem;
+    letter-spacing: 0em;
+    text-align: left;
     opacity: 0.8;
-    margin: 1rem 0;
+    color: rgb(55, 55, 55);
 }
-.section4textdiv ul{
-    list-style: none;
+.campusperksgrid{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 1rem;
+    width: 100%;
+    /* border: 1px solid green; */
 }
-.section4imgdiv img{
+.griditem{
+    /* border: 1px solid #FF6F00; */
+}
+.griditem img{
+    width: 100%;
+    
+}
+.whatwillwedosection{
+    padding: 10vh 0;
+    background: #FF80000F;
+}
+.whatwillheadingdiv{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 10vh;
+}
+.whatwillflexdiv{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex: 1 1 20%;
+    justify-content: space-between;
+}
+.whatwillflexdivinner{
+    width: 20%;
+}
+.whatwillflexdivinner img{
+    width: 100%;
+    object-fit: contain;
+}
+.whatwillflexdivinner h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.whatwillflexdivinner p{
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 1rem;
+    opacity: 0.8;
     width: 100%;
 }
-
+.campusfaqdivheading{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 10vh auto;
+    margin-bottom: 0;
+}
 /* media query */
 @media (max-width:650px) {
     .maincampusdiv{
@@ -161,50 +169,13 @@
     .maincampusinnertextdiv h1{
         font-size: 2.5rem;
     }
-    .maincampusaboutdiv1innerwrapper{
-        flex-direction: column;
+    .dotimage{
+        display:none;
     }
-    .div2img{
-        width: 100%;
+    .maincampusinnertextdiv img{
+        display:none;
     }
-    .div2text{
-        width: 100%;
-    }
-    .div2text h1{
-        font-size: 2rem;
-        padding-bottom: 1rem;
-    }
-    .section3{
-        flex-direction: column;
-    }
-    .section3 h1{
-        width: 100%;
-    }
-    .section3innerdisplayflex{
-        flex-direction: column;
-    }
-    .section3textdiv{
-        width: 100%;
-    }
-    .section3textdiv ol{
-        padding-left: 1rem;
-    }
-    .section3imgdiv{
-        width: 100%;
-    }
-    .section4{
-        flex-direction: column;
-    }
-    .section4 h1{
-        width: 100%;
-    }
-    .section4imgdiv{
-        width: 100%;
-    }
-    .section4textdiv{
-        width: 100%;
-    }
-    .section3textdiv ol{
-        padding-left: 1rem;
+    .campusaccordion{
+        width: 90%;
     }
 }

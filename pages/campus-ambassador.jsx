@@ -1,15 +1,16 @@
 import React from 'react'
 import classes from './campus.module.css'
 import Herogirl from '../src/assets/images/campus/hero-girl.png'
-import Backgroundabout from '../src/assets/images/campus/about-bg.png'
-import Aboutboygirl from '../src/assets/images/campus/about-img.png'
-import Benefitimg1 from '../src/assets/images/campus/benifit-img-2.png'
-import Bullet from '../src/assets/images/campus/bullet.png'
-import Benefitimg2 from '../src/assets/images/campus/benifit-img.png'
 import TopBar from "../src/components/shared/TopBar";
 import Footer from "../src/components/shared/Footer";
 import SiteView from "../src/components/SiteView";
 import Dots from '../src/assets/images/campus/dots.png'
+import Perkback from '../src/assets/images/campus/Rectangle-24.png'
+import Gridimg1 from '../src/assets/images/campus/Frame 69.png'
+import Gridimg2 from '../src/assets/images/campus/Frame 67.png'
+import Gridimg3 from '../src/assets/images/campus/Frame 66.png'
+import Gridimg4 from '../src/assets/images/campus/Frame 65.png'
+import Whiteimg from '../src/assets/images/campus/image 16.png'
 
 import { Disclosure } from '@headlessui/react';
 import { ChevronUpIcon } from '@heroicons/react/solid';
@@ -46,12 +47,18 @@ const faqdata = [
         numbers:'05'
     },
 ];
-
+const backgroundStyle = {
+    backgroundImage: `url(${Perkback})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+  };
 function Campus() {
     return (
         <SiteView meta={{ title: "Campus " }}>
             <TopBar />
-            <div>
+            <>
+                {/* first section starts here */}
                 <section className={classes.maincampusdiv}>
                     <div className={classes.maincampustextdiv}>
                         <div className={classes.maincampusinnertextdiv}>
@@ -72,72 +79,73 @@ function Campus() {
                         <img src={Herogirl} alt="hero-girl image campus ambassador" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                     </div>
                 </section>
+            </>
 
+            {/* second section starts here */}
 
-                {/* <section className={classes.maincampusaboutdiv1} style={{ backgroundImage: `url(${Backgroundabout})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
-                    <div className={classes.maincampusaboutdiv1innerwrapper}>
-                        <div className={classes.div2img}>
-                            <img src={Aboutboygirl}></img>
+            <section className={classes.campusperkssection} style={backgroundStyle}>
+                <div className={classes.absoluteimg}>
+                    <img src={Dots} alt="background-dots" />
+                </div>
+                <div className={classes.campusperkssectionflex}>
+                    <div className={classes.campusperkssectionflexdiv1}>
+                        <div className={classes.leafshapeddiv}>
+                            <h2>Perks</h2>
                         </div>
-                        <div className={classes.div2text} style={{ backgroundColor: '#F13F17', padding: '2rem', borderRadius: '25px' }}>
-                            <div>
-                                <h1 className='text-white'>About inCTF Campus Ambassador</h1>
-                                <p>
-                                    The ICA (InCTF Campus Ambassador) Programme is designed to help
-                                    participants develop their interpersonal skills and compete on a
-                                    leaderboard through a series of challenges. As they progress
-                                    through the Programme, ICA's will have the opportunity to earn
-                                    points and unlock rewards along the way</p>
+                        <div className={classes.leafshapeddivpara} style={{marginLeft:'2rem'}}>
+                            <p>We build readymade websites, mobile applications, and elaborate online business services.</p>
+                        </div>
+                    </div>
+                    <div className={classes.campusperkssectionflexdiv2}>
+                        <div className={classes.campusperksgrid}>
+                            <div className={classes.griditem} style={{marginTop:'10vh'}}>
+                                <img src={Gridimg4} alt="icon1" />
+                                <img src={Gridimg3} alt="icon2" />
+                            </div>
+                            <div className={classes.griditem}>
+                                <img src={Gridimg1} alt="icon3" />
+                                <img src={Gridimg2} alt="icon4" />
                             </div>
                         </div>
                     </div>
-                </section> */}
+                </div>
+            </section>
 
-                {/* <section className={classes.section3}>
-                    <div style={{ width: '100%' }}>
-                        <h2>BENEFITS</h2>
-                        <h1>
-                            Enhance Your Abilities as an Amrita InCTF <span style={{ color: '#F13F17' }}>Campus Ambassador</span>
-                        </h1>
-                    </div>
-                    <div className={classes.section3innerdisplayflex}>
-                        <div className={classes.section3imgdiv}>
-                            <img src={Benefitimg1} alt="" />
-                        </div>
-                        <div className={classes.section3textdiv}>
-                            <div>
-                                <ol className='list-outside list-decimal'>
-                                    <li>Opportunity to develop your leadership, communication, and marketing skills</li>
-                                    <li>Chance to network and build public relations at the national level.</li>
-                                    <li>Internship and Placement offers awaits the top Campus Ambassador</li>
-                                    <li>Be a part of a network of thousands of students across the country and collaborate with them.</li>
-                                    <li>chance to provide a valuable opportunity for the technical, managerial, and literary clubs at your college to showcase their skills among 500+ other colleges.</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+            <section className={classes.whatwillwedosection}>
 
-                <section className={classes.section4}>
-                    <div className={classes.section4textdiv}>
-                        <h1>Responsibility</h1>
-                        <ol className='list-outside list-decimal'>
-                            <li>Identifying potential participants for InCTF on your campus.</li>
-                            <li>Spreading the word in your campus about events and workshops conducted by InCTF.</li>
-                            <li>Acting as our in-house representative for the outreach events conducted by InCTF</li>
-                            <li>Displaying posters sent by InCTF on your college noticeboard.</li>
-                            <li>Coordinating with InCTF organizers.</li>
-                        </ol>
+                <div className={classes.whatwillheadingdiv}>
+                    <h1>What will You Do ?</h1>
+                </div>
+                <div className={classes.whatwillflexdiv}>
+                    <div className={classes.whatwillflexdivinner}>
+                        <img src={Whiteimg} alt="white-image"/>
+                        <h1>Represent</h1>
+                        <p>Inctf at your college and act as a link between the students of your college and Inctf.</p>
                     </div>
-                    <div className={classes.section4imgdiv}>
-                        <img src={Benefitimg2} alt="" />
+                    <div className={classes.whatwillflexdivinner}>
+                        <img src={Whiteimg} alt="white-image"/>
+                        <h1>Promote</h1>
+                        <p>Ideate, plan, organise and promote the events of Techfest through various mediums and channels</p>
                     </div>
-                </section> */}
-            </div>
+                    <div className={classes.whatwillflexdivinner}>
+                        <img src={Whiteimg} alt="white-image"/>
+                        <h1>Innovate</h1>
+                        <p>Strategize and experiment with innovative marketing and publicity strategies to drive up student participation</p>
+                    </div>
+                    <div className={classes.whatwillflexdivinner}>
+                        <img src={Whiteimg} alt="white-image"/>
+                        <h1>Ideate</h1>
+                        <p>Engage in discussions with the other CAs and the Techfest Coordinators to bring new ideas to the fest</p>
+                    </div>
+                </div>
+            </section>
 
             <section>
+                <div className={classes.campusfaqdivheading}>
+                    <h1>Frequently Asked Questions :</h1>
+                </div>
             <Container className="!p-0">
-                <div className=" p-2 mx-auto rounded-2xl" style={{width:'50%',fontSize:'1.1rem'}}>
+                <div className={classes.campusaccordion}>
                     {faqdata.map((item, index) => (
                         <div key={item.question} className="mb-5">
                             <Disclosure>
