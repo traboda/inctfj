@@ -1,17 +1,24 @@
 .maincampusdiv{
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    height: 80vh;
+    height: 70vh;
 }
 .maincampustextdiv{
     width: 60%;
     display: flex;
-    align-items: end;
+    align-items: center;
+    position: relative;
 }
 .maincampusimgdiv{
     width: 38%;
+    position: relative;
+}
+.dotimage{
+    position: absolute;
+    top: 0;
+    right: -32%;
 }
 .maincampusinnertextdiv h1{
     color: #FF6F00;
@@ -19,14 +26,23 @@
     font-size:44px;
     font-weight:600;
 }
+.maincampusinnertextdiv img{
+    z-index: -1;
+    position: absolute;
+    top: 15%;
+    left:-20%;
+}
+
 .maincampusaboutdiv1{
     padding-top: 2rem;
     padding-bottom: 2rem;
+    width: 80%;
+    margin: 5vh auto;
 }
 .maincampusaboutdiv1innerwrapper{
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
 .div2img{
@@ -51,7 +67,7 @@
     opacity: 0.8;
 }
 .section3{
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -97,7 +113,7 @@
     list-style: none;
 }
 .section4{
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
