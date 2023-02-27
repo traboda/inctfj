@@ -11,6 +11,10 @@ import Gridimg2 from '../src/assets/images/campus/Frame 67.png'
 import Gridimg3 from '../src/assets/images/campus/Frame 66.png'
 import Gridimg4 from '../src/assets/images/campus/Frame 65.png'
 import Whiteimg from '../src/assets/images/campus/image 16.png'
+import Ideate from '../src/assets/images/campus/Ideate.jpeg'
+import Promote from '../src/assets/images/campus/Promote.jpeg'
+import Innovate from '../src/assets/images/campus/Innovate.jpeg'
+import Represent from '../src/assets/images/campus/Represent.jpeg'
 
 import { Disclosure } from '@headlessui/react';
 import { ChevronUpIcon } from '@heroicons/react/solid';
@@ -49,9 +53,9 @@ const faqdata = [
 ];
 const backgroundStyle = {
     backgroundImage: `url(${Perkback})`,
-    backgroundSize: 'cover',
+    backgroundSize: '70%',
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
+    backgroundPosition: 'right 35% bottom 35%',
   };
 function Campus() {
     return (
@@ -65,13 +69,12 @@ function Campus() {
                             <img src={Dots} alt="" />
                             <h1 className="leading-tight tracking-tight main-amb-heading dark:text-white "
                             >Campus Ambassador Program</h1>
-                            <p className="py-8 "
-                                style={{ color: '#F13F17', lineHeight: '2.2rem', fontSize: '1.4rem', maxWidth: '700px' }}>
+                            <p className="py-8 ">
                                 In addition to the challenges and rewards, the ICA program
                                 provides a chance for participants to i mprove their professional
                                 skills and stand out in their careers. Internship and Placement
                                 offers awaits the top Campus Ambassador</p>
-                            <button className='text-2xl px-10 py-5 inline-block font-semibold ml-3 rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl mt-10'>Apply Now</button>
+                            <button className='text-xl px-10 py-5 inline-block font-semibold ml-3 rounded-lg bg-black text-white hover:bg-blue-800 shadow hover:shadow-xl mt-5'>Apply Now</button>
                         </div>
                     </div>
                     <div className={classes.maincampusimgdiv}>
@@ -118,22 +121,22 @@ function Campus() {
                 </div>
                 <div className={classes.whatwillflexdiv}>
                     <div className={classes.whatwillflexdivinner}>
-                        <img src={Whiteimg} alt="white-image"/>
+                        <img src={Represent} alt="white-image"/>
                         <h1>Represent</h1>
                         <p>Inctf at your college and act as a link between the students of your college and Inctf.</p>
                     </div>
                     <div className={classes.whatwillflexdivinner}>
-                        <img src={Whiteimg} alt="white-image"/>
+                        <img src={Promote} alt="white-image"/>
                         <h1>Promote</h1>
                         <p>Ideate, plan, organise and promote the events of Techfest through various mediums and channels</p>
                     </div>
                     <div className={classes.whatwillflexdivinner}>
-                        <img src={Whiteimg} alt="white-image"/>
+                        <img src={Innovate} alt="white-image"/>
                         <h1>Innovate</h1>
                         <p>Strategize and experiment with innovative marketing and publicity strategies to drive up student participation</p>
                     </div>
                     <div className={classes.whatwillflexdivinner}>
-                        <img src={Whiteimg} alt="white-image"/>
+                        <img src={Ideate} alt="white-image"/>
                         <h1>Ideate</h1>
                         <p>Engage in discussions with the other CAs and the Techfest Coordinators to bring new ideas to the fest</p>
                     </div>
