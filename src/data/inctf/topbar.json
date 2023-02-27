@@ -15,7 +15,7 @@
   "CTA": {
       "type": "link",
       "link": "/",
-      "buttonText": "View Results"
+      "buttonText": "Coming soon"
   },
   "menu": [
     {
@@ -54,7 +54,7 @@
       "items": [
         {
           "label": "The CTF Pedagogy",
-          "link": "/talent-incubation#pedagogy"
+          "link": "/"
         },
         {
           "label": "CyberSafety Education",
