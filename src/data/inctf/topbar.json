@@ -54,23 +54,23 @@
       "items": [
         {
           "label": "The CTF Pedagogy",
-          "link": "/"
+          "link": "#"
         },
         {
           "label": "CyberSafety Education",
-          "link": "/talent-incubation#programmes"
+          "link": "#"
         },
         {
           "label": "Indian Cyber League",
-          "link": "/talent-incubation#indian-cyber-league"
+          "link": "#"
         },
         {
           "label": "Diversity Initiatives",
-          "link": "/talent-incubation#diversity"
+          "link": "#"
         },
         {
           "label": "Success Stories",
-          "link": "/about#impact"
+          "link": "#"
         }
       ]
     },
