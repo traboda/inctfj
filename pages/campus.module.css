@@ -1,9 +1,10 @@
 .maincampusdiv{
     width: 70%;
-    margin: 10vh auto;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     height: 70vh;
+    margin-bottom: 10vh;
 }
 .maincampustextdiv{
     width: 60%;
