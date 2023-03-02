@@ -6,18 +6,18 @@ import Footer from "../src/components/shared/Footer";
 import SiteView from "../src/components/SiteView";
 import Dots from '../src/assets/images/campus/dots.png'
 import Perkback from '../src/assets/images/campus/Rectangle-24.png'
-import Gridimg1 from '../src/assets/images/campus/Frame 69.png'
-import Gridimg2 from '../src/assets/images/campus/Frame 67.png'
-import Gridimg3 from '../src/assets/images/campus/Frame 66.png'
-import Gridimg4 from '../src/assets/images/campus/Frame 65.png'
-import Whiteimg from '../src/assets/images/campus/image 16.png'
+import Gridimg1 from '../src/assets/images/campus/Frame 69 .png'
+import Gridimg2 from '../src/assets/images/campus/Frame 67 .png'
+import Gridimg3 from '../src/assets/images/campus/Frame 66 .png'
+import Gridimg4 from '../src/assets/images/campus/Frame 65 .png'
 import Ideate from '../src/assets/images/campus/Ideate.jpeg'
 import Promote from '../src/assets/images/campus/Promote.jpeg'
 import Innovate from '../src/assets/images/campus/Innovate.jpeg'
 import Represent from '../src/assets/images/campus/Represent.jpeg'
-
+import AOS from 'aos';
 import { Disclosure } from '@headlessui/react';
 import { ChevronUpIcon } from '@heroicons/react/solid';
+import { useEffect } from 'react';
 
 
 import Container from './container';
@@ -58,6 +58,12 @@ const backgroundStyle = {
     backgroundPosition: 'right 35% bottom 35%',
   };
 function Campus() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+        });
+    }, []);
     return (
         <SiteView meta={{ title: "Campus " }}>
             <TopBar />
@@ -65,21 +71,16 @@ function Campus() {
                 {/* first section starts here */}
                 <section className={classes.maincampusdiv}>
                     <div className={classes.maincampustextdiv}>
-                        <div className={classes.maincampusinnertextdiv}>
-                            <img src={Dots} alt="" />
+                        <div className={classes.maincampusinnertextdiv} data-aos="zoom-in">
                             <h1 className="leading-tight tracking-tight main-amb-heading dark:text-white "
                             >Campus Ambassador Program</h1>
-                            <p className="py-8 ">
-                                In addition to the challenges and rewards, the ICA program
-                                provides a chance for participants to i mprove their professional
-                                skills and stand out in their careers. Internship and Placement
-                                offers awaits the top Campus Ambassador</p>
+                            <p className="py-8 " data-aos="zoom-in">Make your mark and stand out in your career by becoming a InCTF Campus Ambassador. Gain practical skills, unlock exclusive opportunities, and represent our brand on your campus and beyond. Join our program now and take your career to the next level.</p>
                             <button className='text-xl px-10 py-5 inline-block font-semibold ml-3 rounded-lg bg-black text-white hover:bg-blue-800 shadow hover:shadow-xl mt-5'>Apply Now</button>
                         </div>
                     </div>
-                    <div className={classes.maincampusimgdiv}>
+                    <div className={classes.maincampusimgdiv} data-aos="zoom-in">
                     <img src={Dots} alt="" className={classes.dotimage}/>
-                        <img src={Herogirl} alt="hero-girl image campus ambassador" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                        <img src={Herogirl} alt="hero-girl image campus ambassador" style={{ width: '100%', height: '100%'}} className={classes.herogirl}/>
                     </div>
                 </section>
             </>
@@ -87,7 +88,7 @@ function Campus() {
             {/* second section starts here */}
 
             <section className={classes.campusperkssection} style={backgroundStyle}>
-                <div className={classes.absoluteimg}>
+                <div className={classes.absoluteimg} data-aos="zoom-in">
                     <img src={Dots} alt="background-dots" />
                 </div>
                 <div className={classes.campusperkssectionflex}>
@@ -96,18 +97,18 @@ function Campus() {
                             <h2>Perks</h2>
                         </div>
                         <div className={classes.leafshapeddivpara} style={{marginLeft:'2rem'}}>
-                            <p>We build readymade websites, mobile applications, and elaborate online business services.</p>
+                            <p data-aos="zoom-in">Being an ICA, will help in  gaining practical skills by promoting the event, while also networking with industry professionals to make valuable connections.</p>
                         </div>
                     </div>
                     <div className={classes.campusperkssectionflexdiv2}>
                         <div className={classes.campusperksgrid}>
-                            <div className={classes.griditem} style={{marginTop:'10vh'}}>
-                                <img src={Gridimg4} alt="icon1" />
-                                <img src={Gridimg3} alt="icon2" />
+                            <div className={classes.griditem} style={{marginTop:'5vh'}}>
+                                <img src={Gridimg4} alt="icon1" data-aos="fade-up" />
+                                <img src={Gridimg3} alt="icon2" data-aos="fade-up" />
                             </div>
-                            <div className={classes.griditem}>
-                                <img src={Gridimg1} alt="icon3" />
-                                <img src={Gridimg2} alt="icon4" />
+                            <div className={classes.griditem} >
+                                <img src={Gridimg1} alt="icon3" data-aos="fade-up"/>
+                                <img src={Gridimg2} alt="icon4" data-aos="fade-up"/>
                             </div>
                         </div>
                     </div>
@@ -116,29 +117,29 @@ function Campus() {
 
             <section className={classes.whatwillwedosection}>
 
-                <div className={classes.whatwillheadingdiv}>
+                <div className={classes.whatwillheadingdiv} data-aos="zoom-in">
                     <h1>What will You Do ?</h1>
                 </div>
                 <div className={classes.whatwillflexdiv}>
                     <div className={classes.whatwillflexdivinner}>
                         <img src={Represent} alt="white-image"/>
                         <h1>Represent</h1>
-                        <p>Inctf at your college and act as a link between the students of your college and Inctf.</p>
+                        <p data-aos="zoom-in"> Be the face of InCTF, as an ICA at your college and bridge the gap between students and us. </p>
                     </div>
                     <div className={classes.whatwillflexdivinner}>
                         <img src={Promote} alt="white-image"/>
                         <h1>Promote</h1>
-                        <p>Ideate, plan, organise and promote the events of Techfest through various mediums and channels</p>
+                        <p data-aos="zoom-in"> Create, organise, and promote tejh event with your own twist using a variety of marketing channels and mediums as a part of ICA.</p>
                     </div>
                     <div className={classes.whatwillflexdivinner}>
                         <img src={Innovate} alt="white-image"/>
                         <h1>Innovate</h1>
-                        <p>Strategize and experiment with innovative marketing and publicity strategies to drive up student participation</p>
+                        <p data-aos="zoom-in">Unleash your creativity and experiment with cutting-edge marketing and publicity strategies as an ICA to ignite student engagement and participation.</p>
                     </div>
                     <div className={classes.whatwillflexdivinner}>
                         <img src={Ideate} alt="white-image"/>
                         <h1>Ideate</h1>
-                        <p>Engage in discussions with the other CAs and the Techfest Coordinators to bring new ideas to the fest</p>
+                        <p data-aos="zoom-in">Join the Techfest revolution and brainstorm with other ICA's to bring new ideas and make the festival even more thrilling and unforgettable.</p>
                     </div>
                 </div>
             </section>
