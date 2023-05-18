@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import dynamic from 'next/dynamic'
 import styled from "@emotion/styled";
 import Fade from 'react-awesome-reveal';
-import { Pulse } from 'react-awesome-reveal';
 import Modal from 'react-modal';
 
 const ReactPlayer = dynamic(() => import('react-player/youtube'))
@@ -61,14 +60,14 @@ const LandingTestimonials = () => {
     };
 
     return <TestimonialSection className="container mx-auto">
-        <Pulse>
+        <Fade>
             {data.LandingTestimonialsHeader &&
             <div className="testimonial-title mb-3">
                 <img src={'/assets/images/icons/play_button.png'} alt="View Video Testimonials"/>
                 {data?.LandingTestimonialsHeader}
             </div>
             }
-        </Pulse>
+        </Fade>
         <div className="flex flex-wrap  mx-0">
             {data.LandingTestimonials?.map((p, index) => <div className="w-1/2 md:w-1/3 lg:w-1/6 p-1">
                 <Fade delay={index*200}>

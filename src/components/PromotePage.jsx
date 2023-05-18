@@ -69,32 +69,6 @@ const ShareSection = styled.section`
 
 const PromotePage = () => {
 
-    const posters = [
-        '/assets/images/posters/p1.jpg',
-        '/assets/images/posters/p2.jpg',
-        '/assets/images/posters/p3.jpg',
-        '/assets/images/posters/p4.jpg',
-        '/assets/images/posters/p5.jpg',
-        // require('../assets/images/posters/1.jpg',
-        // require('../assets/images/posters/2.jpg',
-        // require('../assets/images/posters/3.jpg',
-        // require('../assets/images/posters/4.jpg',
-        // require('../assets/images/posters/5.jpg',
-        // require('../assets/images/posters/6.jpg',
-    ];
-
-
-    const videos = [
-        {
-            "cover": '/assets/images/covers/videos/2020_promo_1.jpg',
-            "link": "https://www.youtube.com/watch?v=AO4p6M4l-VA&feature=youtu.be"
-        },
-        {
-            "cover": '/assets/images/covers/videos/2019_highlights.jpg',
-            "link": "https://www.youtube.com/watch?v=sxRZ06Rbh_c"
-        }
-    ]
-
     const handlePosterDownload = (p) => {
         const link = document.createElement('a');
         link.href = p;
@@ -141,7 +115,7 @@ const PromotePage = () => {
             <ScrollContainer vertical className="scroll-container p-6 container mx-auto sm:px-4 flex w-full">
                 {data.promotionalImages.map((p) =>
                 <div key={shortid.generate()} className="flex items-center justify-center p-1">
-                    <button onClick={() => handlePosterDownload(`../data/${eventID}/${p}`)}>
+                    <button onClick={() => handlePosterDownload(`/${eventID}/${p}`)}>
                         <img alt="download poster" className="inctf_poster" src={`/${eventID}/${p}`} />
                         <div className="download_icon">
                             <img src={'/assets/images/icons/download.png'} alt="download" />
