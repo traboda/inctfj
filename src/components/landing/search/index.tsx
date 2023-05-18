@@ -12,7 +12,7 @@ const LandingSearch = () => (
         <img
             alt="amritapuri vector illustration"
             draggable="false"
-            src={require('../../../assets/images/logos/amritapuri_vector.png')}
+            src={'/assets/images/logos/amritapuri_vector.png'}
         />
     </div>
 );

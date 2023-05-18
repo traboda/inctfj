@@ -53,7 +53,7 @@ const LandingContactsBar = () => {
                 {data.LandingPoweredby.map((item, index) => {
                     return <Fade left>  <PoweredByTraboda key={index}>
                         <div>{item.header}</div>
-                        <img src={require(`../../data/${eventID}/${item.logo}`)} />
+                        <img src={`/${eventID}/${item.logo}`} />
                     </PoweredByTraboda></Fade>
                 })}
             </div>

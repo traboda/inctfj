@@ -64,7 +64,7 @@ const LandingTestimonials = () => {
         <Pulse>
             {data.LandingTestimonialsHeader &&
             <div className="testimonial-title mb-3">
-                <img src={require('../../assets/images/icons/play_button.png')} alt="View Video Testimonials"/>
+                <img src={'/assets/images/icons/play_button.png'} alt="View Video Testimonials"/>
                 {data?.LandingTestimonialsHeader}
             </div>
             }
@@ -73,7 +73,7 @@ const LandingTestimonials = () => {
             {data.LandingTestimonials?.map((p, index) => <div className="w-1/2 md:w-1/3 lg:w-1/6 p-1">
                 <Fade delay={index*200}>
                     <a onClick={openVideo}>
-                        <img alt="testimonial student" draggable="false" src={require(`../../data/${eventID}/${p}`)} />
+                        <img alt="testimonial student" draggable="false" src={`/${eventID}/${p}`} />
                     </a>
                 </Fade>
             </div>)}
@@ -97,7 +97,7 @@ const LandingTestimonials = () => {
                 className="px-4 border-0 rounded"
                 onClick={() => { clearAllBodyScrollLocks(); setShowPlayer(false)}}
             >
-                <img alt="close" src={require('../../assets/images/icons/close.png')} />
+                <img alt="close" src={'/assets/images/icons/close.png'} />
             </CloseButton>
             {showPlayer && <ReactPlayer url="https://www.youtube.com/watch?v=U5zVYdYJBwQ" autoplay width="100%" height="80vmin" />}
         </Modal>

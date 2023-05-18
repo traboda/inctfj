@@ -8,7 +8,7 @@ const Logo = ({ isDark = false, maxHeight = 150 }) => {
     return (
         <img
             className="logo"
-            src={require(`../../data/${id}/assets/${isDark ? assets?.logo?.dark : assets?.logo.light}`)}
+            src={`/${id}/assets/${isDark ? assets?.logo?.dark : assets?.logo.light}`}
             alt={meta.title}
             style={{ maxHeight }}
         />

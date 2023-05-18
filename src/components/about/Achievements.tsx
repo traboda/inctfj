@@ -5,14 +5,14 @@ const data = require(`../../data/${eventID}/about.json`);
 
 const achievements = [
     {
-        image: require('../../assets/images/achievements/zhero.png'),
+        image: require('../../../public/assets/images/achievements/zhero.png'),
         title: 'Zhero',
         subTitle: " ",
         content: <>A CTF team founded by a <span className="text-primary">group of school student participants </span>
             at InCTF Junior 2019 is now ranked <strong>48<sup>th</sup> globally</strong> among 24k teams.</>
     },
     {
-        image: require('../../assets/images/achievements/nilabha.jpg'),
+        image: require('../../../public/assets/images/achievements/nilabha.jpg'),
         title: 'Nilabha Saha',
         subTitle: '2018, 2019, 2020 Participant',
         content: <>
@@ -21,7 +21,7 @@ const achievements = [
         </>
     },
     {
-        image: require('../../assets/images/achievements/rajvardhan.jpg'),
+        image: require('../../../public/assets/images/achievements/rajvardhan.jpg'),
         title: 'Rajvardhan Agarwal',
         subTitle: '2020 Winner, 2018, 2019 Participant',
         content: <>
@@ -30,7 +30,7 @@ const achievements = [
         </>
     },
     {
-        image: require('../../assets/images/achievements/vishnu_dev.jpeg'),
+        image: require('../../../public/assets/images/achievements/vishnu_dev.jpeg'),
         title: 'Vishnu Dev',
         subTitle: '2016 Participant, team bi0s member',
         content: <>
@@ -55,7 +55,7 @@ const AboutAchievements = () => {
                     <div key={i} className="flex flex-col items-center text-center">
                         <div className="opacity-80 mb-5 text-sm">{a.subTitle}</div>
                         <img
-                            src={require(`../../data/${eventID}/${a.image}`)}
+                            src={`/${eventID}/${a.image}`}
                             alt={a.title}
                             style={{ height: '180px' }}
                             className="rounded-lg shadow-lg"

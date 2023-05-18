@@ -37,7 +37,12 @@ const InctfIntro = () => {
                 <div className="md:w-1/3 pr-4 pl-4 p-2">
                     <div className="flex flex-wrap  mx-0">{data.participants.map((i,index) =>
                         <Fade delay={index*150}>
-                            <div className="w-1/2 p-1"><img draggable="false" style={{ maxWidth: '100%' }} src={require(`../../data/${eventID}/${i}`)} alt="INCTF participant" /></div>
+                            <div className="w-1/2 p-1">
+                                <img
+                                    draggable="false"
+                                    style={{ maxWidth: '100%' }}
+                                    src={`/${eventID}/${i}`} alt="INCTF participant" />
+                            </div>
                         </Fade>
                     )}</div>
                 </div>

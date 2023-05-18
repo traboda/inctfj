@@ -61,13 +61,13 @@ const SideBarMenu = styled.div`
 const MobileMenu = ({ onClose }) => {
 
     const sidebarLinks = [
-        { "icon": require('../../../assets/images/icons/home.png'), "title": "Home", "href": "/" },
-        { "icon": require('../../../assets/images/icons/star_glowing.png'), "title": "About", "href": "/about" },
-        { "icon": require('../../../assets/images/icons/learn.png'), "title": "Resources", "href": "/resources"},
-        { "icon": require('../../../assets/images/icons/learn.png'), "title": "Trainings", "href": "/trainings" },
-        { "icon": require('../../../assets/images/icons/trophy.png'), "title": "Past Stats", "href": "/stats" },
-        { "icon": require('../../../assets/images/icons/faq.png'), "title": "FAQ", "href": "/faq" },
-        { "icon": require('../../../assets/images/icons/faq.png'), "title": "Get Help", "href": "/discord" },
+        { "icon": '/assets/images/icons/home.png', "title": "Home", "href": "/" },
+        { "icon": '/assets/images/icons/star_glowing.png', "title": "About", "href": "/about" },
+        { "icon": '/assets/images/icons/learn.png', "title": "Resources", "href": "/resources"},
+        { "icon": '/assets/images/icons/learn.png', "title": "Trainings", "href": "/trainings" },
+        { "icon": '/assets/images/icons/trophy.png', "title": "Past Stats", "href": "/stats" },
+        { "icon": '/assets/images/icons/faq.png', "title": "FAQ", "href": "/faq" },
+        { "icon": '/assets/images/icons/faq.png', "title": "Get Help", "href": "/discord" },
     ];
 
     return <div onClick={onClose}>

@@ -55,9 +55,9 @@ const FameCard = ({
         <div className="flex flex-wrap p-2 border rounded-lg h-full items-center">
             <div className="w-1/5 text-right justify-center items-center flex">
                 {
-                    rank === 1 ? <img src={require('../../assets/images/icons/crown.png')} /> :
-                        rank === 2 ? <img src={require('../../assets/images/icons/viking.png')} /> :
-                            rank === 3 ? <img src={require('../../assets/images/icons/samurai.png')} /> :
+                    rank === 1 ? <img src={'/assets/images/icons/crown.png'} /> :
+                        rank === 2 ? <img src={'/assets/images/icons/viking.png'} /> :
+                            rank === 3 ? <img src={'/assets/images/icons/samurai.png'} /> :
                              <div className="rank">{rank}. </div>
                 }
             </div>

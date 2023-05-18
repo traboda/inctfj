@@ -12,9 +12,10 @@ const customConfig = {
         )
         return config
     },
+
 };
 
 module.exports = withPlugins([
     [withVideos],
-    // [OptimizedImages, { optimizeImages: false }],
+    [OptimizedImages, { optimizeImages: false }],
 ], customConfig);

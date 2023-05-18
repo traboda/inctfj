@@ -53,7 +53,7 @@ const EducationAccessibility = () => (
 
         <div className="mt-32 mb-12 flex flex-wrap">
             <div className="w-full md:w-1/4">
-                <img src={require(`../../../data/${eventID}/${data.subhead7.image}`)} alt="Bridge the gap"
+                <img src={`/${eventID}/${data.subhead7.image}`} alt="Bridge the gap"
                      className="w-full"/>
             </div>
             <div className="w-full md:w-1/2 md:pl-12">

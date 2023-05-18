@@ -55,7 +55,7 @@ const LandingHowItWorks = () => {
         
         ...data.Captions.map((caption, index) => {
             return {
-                "title": caption.title, "icon": require('../../assets/images/icons/' + caption.icon),
+                "title": caption.title, "icon": '/assets/images/icons/' + caption.icon,
                 "delay": (index + 1) * 100, "left": true,
                 "content": <>
                     {caption.content}
@@ -77,7 +77,7 @@ const LandingHowItWorks = () => {
                 <img
                     draggable="false"
                     alt="How it Works?"
-                    src={require('../../assets/images/icons/thinking.png')}
+                    src={'/assets/images/icons/thinking.png'}
                     className="mr-2 my-0 p-0 shadow-none inline-block"
                     style={{ width: '64px' }}
                 />

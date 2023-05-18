@@ -3,7 +3,7 @@ export const AdvisoryBoard = [
         name: "Mathan Babu Kasilingam",
         desg: "CISO",
         org: "Vodafone Idea (Vi)",
-        photo: require('../../src/assets/images/people/mathan-kasilingam.jpg'),
+        photo: require('../../public/assets/images/people/mathan-kasilingam.jpg'),
         linkedIn: "https://www.linkedin.com/in/mathan-babu-kasilingam-4bb4564/",
         twitter: "https://twitter.com/luciuslobo"
     },
@@ -11,27 +11,27 @@ export const AdvisoryBoard = [
         name: "Ambarish Kumar Singh",
         desg: "CISO",
         org: "Godrej & Boyce",
-        photo: require('../../src/assets/images/people/ambarish-kumar-singh.jpg'),
+        photo: require('../../public/assets/images/people/ambarish-kumar-singh.jpg'),
         linkedIn: "https://www.linkedin.com/in/ambarish-singh-02835119/"
     },
     {
         name: "Dr. Durga Prasad Dube",
         desg: "Senior VP, & Global CISO",
-        photo: require('../../src/assets/images/people/durga-prasad-dube.jpg'),
+        photo: require('../../public/assets/images/people/durga-prasad-dube.jpg'),
         linkedIn: "https://www.linkedin.com/in/dr-durga-prasad-dube-ph-d-072a407/"
     },
     {
         name: "Dr. Lopa Mudraa Basuu",
         desg: "VP-ISM CyberSecurity",
         org: "JP Morgan Chase",
-        photo: require('../../src/assets/images/people/lopa-mudraa-basuu.jpg'),
+        photo: require('../../public/assets/images/people/lopa-mudraa-basuu.jpg'),
         linkedIn: "https://www.linkedin.com/in/drlopamudraabasuu/"
     },
     {
         name: "Lucius Lobo",
         desg: "CISO",
         org: "Tech Mahindra",
-        photo: require('../../src/assets/images/people/lucius-lobo.jpg'),
+        photo: require('../../public/assets/images/people/lucius-lobo.jpg'),
         linkedIn: "https://www.linkedin.com/in/luciuslobo/",
         twitter: "https://twitter.com/luciuslobo"
     },
@@ -39,28 +39,28 @@ export const AdvisoryBoard = [
         name: "Anuprita Daga",
         desg: "President, CISO",
         org: "Yes Bank",
-        photo: require('../../src/assets/images/people/anuprita-daga.jpg'),
+        photo: require('../../public/assets/images/people/anuprita-daga.jpg'),
         linkedIn: "https://www.linkedin.com/in/anuprita-daga-6a6b691/"
     },
     {
         name: "Dilip Panjwani",
         desg: "CISO & IT Controller",
         org: "Larsen & Toubro Infotech",
-        photo: require('../../src/assets/images/people/dilip-panjwani.jpg'),
+        photo: require('../../public/assets/images/people/dilip-panjwani.jpg'),
         linkedIn: "https://www.linkedin.com/in/diliptp/"
     },
     {
         name: "Satyavathi Divadari",
         desg: "CyberRes Cloud CTO",
         org: "Micro Focus",
-        photo: require('../../src/assets/images/people/satyavathi-divadri.jpg'),
+        photo: require('../../public/assets/images/people/satyavathi-divadri.jpg'),
         linkedIn: "https://www.linkedin.com/in/satyad/"
     },
     {
         name: "Bipin K Chaudhary",
         desg: "Chief Information Officer",
         org: "Cinepolis India",
-        photo: require('../../src/assets/images/people/bipin-chaudhary.jpeg'),
+        photo: require('../../public/assets/images/people/bipin-chaudhary.jpeg'),
         linkedIn: "https://www.linkedin.com/in/bipin-k-chaudhary-18b6757/"
     }
 ];
@@ -70,21 +70,21 @@ export const AdvisoryBoardAlumni = [
         name: "Soorraj VS",
         desg: "MD & Chief Executive",
         org: "Benow",
-        photo: require('../../src/assets/images/people/soorraj-vs.jpg'),
+        photo: require('../../public/assets/images/people/soorraj-vs.jpg'),
         linkedIn: "https://www.linkedin.com/in/soorraj-vs-ab905b9/"
     },
     {
         name: "Nithin Manoharan",
         desg: "Director",
         org: "Philip Morris International",
-        photo: require('../../src/assets/images/people/nithin-manoharan.jpeg'),
+        photo: require('../../public/assets/images/people/nithin-manoharan.jpeg'),
         linkedIn: "https://www.linkedin.com/in/nmanohar/"
     },
     {
         name: "Hari Mukundhan",
         desg: "VP - Cyber Security Product Manager",
         org: "JP Morgan Chase",
-        photo: require('../../src/assets/images/people/hari-mukundan.jpeg'),
+        photo: require('../../public/assets/images/people/hari-mukundan.jpeg'),
         linkedIn: "https://www.linkedin.com/in/harimukundhan/"
     }
 ];
@@ -93,7 +93,7 @@ export const OrganizingTeamChiefs = [
     {
         name: "Dr. Krishnasree Achuthan",
         desg: "Chief Coordinator",
-        photo: require('../../src/assets/images/people/krishnasree.jpg'),
+        photo: require('../../public/assets/images/people/krishnasree.jpg'),
         extraDesg: <>
             <div>Director, Amrita Center for CyberSecurity Systems & Networks</div>
             <div>Dean of PG Programs, School of Engineering, Amritapuri</div>
@@ -112,7 +112,7 @@ export const OrganizingTeamChiefs = [
     {
         name: "Prof. Jay Misra",
         desg: "Chief Evangelist",
-        photo: require('../../src/assets/images/people/jay-misra.jpg'),
+        photo: require('../../public/assets/images/people/jay-misra.jpg'),
         extraDesg: <>
             <div>Director, Special Initiatives, Amrita Vishwa Vidyapeetham</div>
             <div>Former Adjunct Faculty, Stanford University</div>
@@ -134,7 +134,7 @@ export const OrganizingTeamChiefs = [
     {
         name: "Vipin Pavithran",
         desg: "Founder & Chief Organizer",
-        photo: require('../../src/assets/images/people/vipin.jpg'),
+        photo: require('../../public/assets/images/people/vipin.jpg'),
         extraDesg: <>
             <div>Founder & Chief Mentor, team bi0s, amFOSS & Shakti</div>
             <div>Managing Director, Traboda CyberLabs</div>
@@ -156,7 +156,7 @@ export const OrganizingTeamTier2 = [
     {
         name: "Sreepriya Chalakkal",
         desg: "Executive Head - Diversity Initiatives",
-        photo: require('../../src/assets/images/people/sreepriya.jpg'),
+        photo: require('../../public/assets/images/people/sreepriya.jpg'),
         description: <>
             Sreepriya Chalakkal heads the diversity initiatives for InCTF & ShaktiCon, especially passionate about
             making cyber-security accessible to women & empowering women in cyber-security. She presently works as a
@@ -171,42 +171,42 @@ export const OrganizingTeamTier2 = [
 
 export const OrganizingTeamTier3 = [
     {
-        photo: require('../assets/images/people/aravind_bl.jpg'),
+        photo: require('../../public/assets/images/people/aravind_bl.jpg'),
         name: "Aravind B.L.",
         desg: "Publicity, Sponsorships & Industry Relations"
     },
     {
-        photo: require('../assets/images/people/advaith.jpg'),
+        photo: require('../../public/assets/images/people/advaith.jpg'),
         name: "Advaith A.J.",
         desg: "Website & CTF Platform Development"
     },
     {
-        photo: require('../assets/images/people/shogil.jpg'),
+        photo: require('../../public/assets/images/people/shogil.jpg'),
         name: "Shogil Babu",
         desg: "Youtube Channel"
     },
     {
-        photo: require('../assets/images/people/prajwal.jpg'),
+        photo: require('../../public/assets/images/people/prajwal.jpg'),
         name: "Prajwal CP",
         desg: "DevOps"
     },
     {
-        photo: require('../assets/images/people/rahul.jpg'),
+        photo: require('../../public/assets/images/people/rahul.jpg'),
         name: "Rahul Manneri",
         desg: "Support & Emails"
     },
     {
-        photo: require('../assets/images/people/aditya_vardhan.jpg'),
+        photo: require('../../public/assets/images/people/aditya_vardhan.jpg'),
         name: "Aditya Vardhan Padala",
         desg: "CTF Admin"
     },
     {
-        photo: require('../assets/images/people/nihith.jpg'),
+        photo: require('../../public/assets/images/people/nihith.jpg'),
         name: "Bolisetty Krishna Sai Nihith",
         desg: "CTF Admin"
     },
     {
-        photo: require('../assets/images/people/jaswanth_bommidi.jpg'),
+        photo: require('../../public/assets/images/people/jaswanth_bommidi.jpg'),
         name: "Jaswanth Bommidi",
         desg: "CTF Admin"
     },
@@ -214,62 +214,62 @@ export const OrganizingTeamTier3 = [
 
 export const OrganizingTeamMembers = [
     {
-        photo: require('../assets/images/people/nikhil_nair.jpg'),
+        photo: require('../../public/assets/images/people/nikhil_nair.jpg'),
         name: "Nikhil T Nair",
         desg: "Challenge Author"
     },
     {
-        photo: require('../assets/images/people/yaswanth.jpg'),
+        photo: require('../../public/assets/images/people/yaswanth.jpg'),
         name: "Yaswant R",
         desg: "Category Lead"
     },
     {
-        photo: require('../assets/images/people/yadhu_krishna.jpeg'),
+        photo: require('../../public/assets/images/people/yadhu_krishna.jpeg'),
         name: "Yadhu Krishna M",
         desg: "Social Media"
     },
     {
-        photo: require('../assets/images/people/sayooj_b_kumar.jpg'),
+        photo: require('../../public/assets/images/people/sayooj_b_kumar.jpg'),
         name: "Sayooj B Kumar",
         desg: "Trainer"
     },
     {
-        photo: require('../assets/images/people/s_abhishek.jpg'),
+        photo: require('../../public/assets/images/people/s_abhishek.jpg'),
         name: "S Abhishek",
         desg: "Trainer, Challenge Author - Forensics"
     },
     {
-        photo: require('../assets/images/people/arya_arun.jpg'),
+        photo: require('../../public/assets/images/people/arya_arun.jpg'),
         name: "Arya Arun",
         desg: "Challenge Author - Forensics"
     },
     {
-        photo: require('../assets/images/people/sai_sampath.jpg'),
+        photo: require('../../public/assets/images/people/sai_sampath.jpg'),
         name: "Ganta Sai Sampath",
         desg: "Challenge Author - Forensics"
     },
     {
-        photo: require('../assets/images/people/goutham_rajesh.jpg'),
+        photo: require('../../public/assets/images/people/goutham_rajesh.jpg'),
         name: "Goutham Rajesh",
         desg: "Challenge Author - Forensics"
     },
     {
-        photo: require('../assets/images/people/aneesh_nadh.jpeg'),
+        photo: require('../../public/assets/images/people/aneesh_nadh.jpeg'),
         name: "Aneesh Nadh R",
         desg: "bi0s Web"
     },
     {
-        photo: require('../assets/images/people/rohit_narayanan.jpeg'),
+        photo: require('../../public/assets/images/people/rohit_narayanan.jpeg'),
         name: "Rohit Narayanan M",
         desg: "Challenge Author"
     },
     {
-        photo: require('../assets/images/people/sahith_m.jpeg'),
+        photo: require('../../public/assets/images/people/sahith_m.jpeg'),
         name: "Sahith Chowdary Madamanchi",
         desg: "bi0s Cryptography"
     },
     {
-        photo: require('../assets/images/people/rahul_sunder.jpg'),
+        photo: require('../../public/assets/images/people/rahul_sunder.jpg'),
         name: "Rahul Sunder",
         desg: "bi0s Web"
     }

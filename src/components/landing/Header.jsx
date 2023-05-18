@@ -186,7 +186,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                                 <img
                                     alt="InCTF Jr"
                                     id="landing-header-cover-image"
-                                    src={require(`../../data/${eventID}/${data.LandingCoverImage}`)}
+                                    src={`/${eventID}/${data.LandingCoverImage}`}
                                     style={{ position: 'unset', maxHeight: '500px', maxWidth: '100%' }}
                                     draggable="false"
                                 />

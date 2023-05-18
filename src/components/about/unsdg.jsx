@@ -15,7 +15,7 @@ const UNSDGSection = () => (
             <h3 className="text-lg lg:text-2xl text-white mb-2">{data.CoverImage3.header}</h3>
             <img
                 alt="United Nations Sustainable Development Goals"
-                src={require(`../../data/${eventID}/${data.CoverImage3.headerImage}`)}
+                src={`${eventID}/${data.CoverImage3.headerImage}`}
                 draggable="false"
                 style={{ maxHeight: '150px' }}
                 className="inline"
@@ -28,7 +28,7 @@ const UNSDGSection = () => (
                         <div className="w-1/2 md:w-1/4 p-2">
                         <img
                             alt={img.alt}
-                            src={require(`../../data/${eventID}/${img}`)}
+                            src={`/${eventID}/${img}`}
                             draggable="false"
                             className="inline shadow-md rounded-lg"
                         />

@@ -12,7 +12,7 @@ const TopBarSearch = () => {
     const [showSearchModal, setSearchModal] = useState(false);
 
     return (
-        <AnimateSharedLayout type="crossfade">
+        <div>
             {!showSearchModal &&
             <motion.button
                 layoutId="search-button"
@@ -58,7 +58,7 @@ const TopBarSearch = () => {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </AnimateSharedLayout>
+        </div>
     );
 
 };

@@ -52,9 +52,9 @@ const SponsorsSection = () => {
                     return (
                         <div className="flex flex-wrap" style={{display:'flex',flex:'1 1 50%',justifyContent:'space-between',flexWrap:'wrap'}}>
                             <div className="w-full flex justify-center" >
-                                <Fade bottom>
+                                <Fade>
                                     <a href={sponsor.link} target="_blank" rel="noopener noreferrer" style={{display:'block'}}>
-                                        <img src={require(`../../data/inctf/${sponsor.path}`)} draggable="false" alt="Sponsor Logo"  />
+                                        <img src={`/inctf/${sponsor.path}`} draggable="false" alt="Sponsor Logo"  />
                                         {sponsor?.desg && (<div className="text-sm mt-3 font-light">{sponsor.desg}</div>)}
                                     </a>
                                 </Fade>

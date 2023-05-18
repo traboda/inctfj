@@ -179,7 +179,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                             </span>
                             <img
                                 alt="cbse"
-                                src={require(`../../../data/${eventID}/assets/${topbarConfig?.associate?.logo?.light}`)}
+                                src={`/${eventID}/assets/${topbarConfig?.associate?.logo?.light}`}
                                 style={{ position: 'unset', maxHeight: 45, maxWidth: '100%' }}
                                 draggable="false"
                                 className="inline"
@@ -272,7 +272,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                     setShowRegCard(false)
                 }}
             >
-                <img alt="close" src={require('../../../assets/images/icons/close.png')}/>
+                <img alt="close" src={'/assets/images/icons/close.png'}/>
             </CloseButton>
             {showRegCard &&
             <div
@@ -297,7 +297,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                         alt="InCTF Jr"
                         style={{ height: '72px' }}
                         className="inline"
-                        src={require('../../../assets/images/conference/inctf_logo.png')}
+                        src={'/assets/images/conference/inctf_logo.png'}
                     />
                 </a>
             </Link>

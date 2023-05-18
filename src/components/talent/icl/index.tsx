@@ -6,7 +6,7 @@ const data = require(`../../../data/${eventID}/talentIncubation.json`);
 const IndianCyberLeague = () => (
     <div id="indian-cyber-league" className="container mx-auto pb-12 pt-8 px-4">
         <div className="w-full flex flex-col items-center my-8 text-center">
-            <img src={require('../../../assets/images/icons/trophy.jpeg')} alt="Trophy" width={100}/>
+            <img src={'/assets/images/icons/trophy.jpeg'} alt="Trophy" width={100}/>
             <h1 className="font-semibold text-primary mt-4">{data.subhead0.header}</h1>
             <h3>{data.subhead0.subHeader}</h3>
 

@@ -27,18 +27,18 @@ const PastSpeakersSection = styled.section`
 const PastINCTFSpeakers = () => {
 
     const speakers = [
-        { "image": require('../../assets/images/photos/speakers/1.jpg') },
-        { "image": require('../../assets/images/photos/speakers/2.jpg') },
-        { "image": require('../../assets/images/photos/speakers/11.jpg') },
-        { "image": require('../../assets/images/photos/speakers/3.jpg') },
-        { "image": require('../../assets/images/photos/speakers/4.jpg') },
-        { "image": require('../../assets/images/photos/speakers/5.jpg') },
-        { "image": require('../../assets/images/photos/speakers/6.jpg') },
-        { "image": require('../../assets/images/photos/speakers/7.jpg') },
-        { "image": require('../../assets/images/photos/speakers/8.jpg') },
-        { "image": require('../../assets/images/photos/speakers/9.jpg') },
-        { "image": require('../../assets/images/photos/speakers/10.jpg') },
-        { "image": require('../../assets/images/photos/speakers/12.jpg') },
+        { "image": require('../../../public/assets/images/photos/speakers/1.jpg') },
+        { "image": require('../../../public/assets/images/photos/speakers/2.jpg') },
+        { "image": require('../../../public/assets/images/photos/speakers/11.jpg') },
+        { "image": require('../../../public/assets/images/photos/speakers/3.jpg') },
+        { "image": require('../../../public/assets/images/photos/speakers/4.jpg') },
+        { "image": require('../../../public/assets/images/photos/speakers/5.jpg') },
+        { "image": require('../../../public/assets/images/photos/speakers/6.jpg') },
+        { "image": require('../../../public/assets/images/photos/speakers/7.jpg') },
+        { "image": require('../../../public/assets/images/photos/speakers/8.jpg') },
+        { "image": require('../../../public/assets/images/photos/speakers/9.jpg') },
+        { "image": require('../../../public/assets/images/photos/speakers/10.jpg') },
+        { "image": require('../../../public/assets/images/photos/speakers/12.jpg') },
     ];
 
     const [currHighlight, setHighlight] = useState(0);

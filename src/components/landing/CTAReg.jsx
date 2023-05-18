@@ -35,7 +35,7 @@ const CTAReg = ({ UTMSource = null }) => (
         <div className="flex flex-wrap  mx-0">
             <Fade left>
                 <div className="md:w-2/3 pr-4 pl-4 flex items-center p-2">
-                    <img alt="star" className="hidden md:block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />
+                    <img alt="star" className="hidden md:block mr-2" src={'/assets/images/icons/shooting_star.png'} />
                     <h3>
                         {data.CTAreg.message}
                     </h3>

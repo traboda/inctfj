@@ -35,16 +35,16 @@ const LandingQuickInfo = () => {
 
     const landingInfo = [
         {
-            image: require('../../assets/images/icons/trophy.png'), left: true,
+            image: '/assets/images/icons/trophy.png', left: true,
             question: "What?", answer: <>{data.what}</>
         },
         {
-            image: require('../../assets/images/icons/calendar.png'), up: true,
+            image: 'assets/images/icons/calendar.png', up: true,
             question: "When?", answer: <> {data.when}</>
         },
             
         {
-            image: require('../../assets/images/icons/backpack.png'), right: true,
+            image: '/assets/images/icons/backpack.png', right: true,
             question: "For Whom?", answer: <> {data.forWhom}</>
                 
         }

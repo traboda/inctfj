@@ -44,7 +44,7 @@ const CTFPedagogy = () => (
                 </ul>
             </div>
             <div className="w-full md:w-1/2 mt-4 md:mt-0">
-                <img src={require(`../../data/${eventID}/${data.subhead1.image}`)}
+                <img src={`/${eventID}/${data.subhead1.image}`}
                      alt="How it works" className="w-full rounded-lg" draggable={false}/>
             </div>
         </div>

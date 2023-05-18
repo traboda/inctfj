@@ -45,7 +45,7 @@ const LandingReasonsToParticipate = () => {
     return <ReasonsSection className="container mx-auto">
         <h2 className="text-center">
             <div className="flex justify-center">
-                <img className="mr-2" style={{ width: '64px'}} alt="Why Participate?" src={require('../../assets/images/icons/heart.png')} />
+                <img className="mr-2" style={{ width: '64px'}} alt="Why Participate?" src={'/assets/images/icons/heart.png'} />
             </div>
             Why Participate?
         </h2>
@@ -53,7 +53,7 @@ const LandingReasonsToParticipate = () => {
         {data.whyPacrticipate.map((r, index) =>
             <Zoom up={index%2} left={!index%2}>
                 <div className="w-full md:w-1/2 lg:w-1/4 text-center mb-6 md:mb-0 p-2">
-                    <video autoPlay loop muted src={require(`../../data/${eventID}/${r.video}`)} />
+                    <video autoPlay loop muted src={`/${eventID}/${r.video}`} />
                     <div>
                         {r.text.map((text, index) =>
                             <p key={index}>{text}</p>
