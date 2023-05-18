@@ -33,17 +33,15 @@ type Breadcrumb = {
 const Breadcrumb = ({ items }: Breadcrumb) => (
     <BreadcrumbWrapper>
         <li>
-            <Link passHref href="/">
-                <a className="hover:text-primary">
-                    <i className="fa fa-home" />
-                </a>
+            <Link legacyBehavior href="/" className="hover:text-primary">
+                <i className="fa fa-home" />
             </Link>
         </li>
         {items.length > 0 &&
         items.map((i) =>
             <li key={shortid.generate()}>
                 {i.isActive ? i.title : (
-                    <Link passHref href={i?.link||'#'}>
+                    <Link legacyBehavior passHref href={i?.link||'#'}>
                         <a className="hover:text-primary">
                             {i.title}
                         </a>

@@ -147,7 +147,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                         {topbarConfig?.topbarCTA?.text}
                     </div>
                     <div className="flex items-center md:my-0 px-2 md:px-0 justify-end">
-                        <Link href={topbarConfig?.topbarCTA?.link} passHref>
+                        <Link legacyBehavior href={topbarConfig?.topbarCTA?.link} passHref>
                             <a className="bg-white text-blue-800 mb-0 hover:text-primary rounded-lg px-3 py-2 whitespace-nowrap">
                                 {topbarConfig?.topbarCTA?.buttonText} <i className="fa fa-chevron-right ml-1"/>
                             </a>
@@ -214,7 +214,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
                                             </div>
                                         )}
                                         {topbarConfig?.CTA.type === 'link' && (
-                                            <Link href={topbarConfig?.CTA?.link} passHref>
+                                            <Link legacyBehavior href={topbarConfig?.CTA?.link} passHref>
                                                 <a className="px-8 py-4 rounded-lg font-semibold bg-primary hover:bg-blue-800 shadow hover:shadow-xl text-white ml-3">
                                                     {topbarConfig?.CTA?.buttonText} <i className="fa fa-chevron-right"/>
                                                 </a>
@@ -291,7 +291,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
         />}
         <div style={{ height: topbarRef.current?.offsetHeight ?? 90 }} className="hidden md:block"/>
         <div className="block md:hidden text-center pt-6 px-2 pb-4">
-            <Link passHref href="/">
+            <Link legacyBehavior passHref href="/">
                 <a>
                     <img
                         alt="InCTF Jr"

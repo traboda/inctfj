@@ -8,7 +8,7 @@ const ResourcesFAQ = () => {
                 <div className="font-bold text-2xl mb-2">
                     Checkout Frequently Asked Questions
                 </div>
-                <Link href="/faq" passHref>
+                <Link legacyBehavior href="/faq" passHref>
                     <a>
                         Open FAQ <i className="fa fa-chevron-right ml-1" />
                     </a>

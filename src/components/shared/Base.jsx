@@ -1,8 +1,5 @@
 import React, {useEffect} from 'react';
 import Head from "next/head";
-import config from 'react-reveal/globals';
-
-config({ ssrFadeout: true });
 
 const seoTags = {
     "siteName": "InCTF Jr",

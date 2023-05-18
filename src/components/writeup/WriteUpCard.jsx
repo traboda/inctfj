@@ -33,7 +33,7 @@ const PostCardWrapper = styled.a`
 const WriteUpCard = ({ title, id, category, difficulty }) => {
 
     return (
-        <Link href={`/writeup/${id}`} passHref>
+        <Link legacyBehavior href={`/writeup/${id}`} passHref>
             <PostCardWrapper className="shadow-lg hover:shadow">
                 <h4>{title}</h4>
                 <div className="mt-2">

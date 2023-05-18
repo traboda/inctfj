@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import Zoom from "react-reveal/Zoom";
+import Zoom from "react-awesome-reveal";
 import CountUp from "react-countup";
 import StateWiseRegistrationMap from "./map";
 import AboutGender from "./gender";

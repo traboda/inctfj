@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import Zoom from 'react-reveal/Zoom';
+import Zoom from 'react-awesome-reveal';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);

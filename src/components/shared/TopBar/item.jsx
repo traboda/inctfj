@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import styled from "@emotion/styled";
-import Fade from "react-reveal/Fade";
+import Fade from "react-awesome-reveal";
 
 const ItemDropDown = styled('div')`
     position: absolute;

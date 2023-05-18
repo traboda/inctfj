@@ -1,5 +1,5 @@
 import React from 'react';
-import Fade from "react-reveal/Fade";
+import Fade from "react-awesome-reveal";
 import styled from "@emotion/styled";
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;

@@ -7,7 +7,7 @@ import IndianStates from "../../data/indian-states";
 
 import FameCard from "./FameCard";
 // import SchoolLeaderboard from "./SchoolLeaderboard";
-import Fade from "react-reveal/Fade";
+import Fade from "react-awesome-reveal";
 import {EditionStats} from "../../data/types/stats";
 import ChampionCard from "./ChampionCard";
 

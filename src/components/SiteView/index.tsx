@@ -1,9 +1,6 @@
 import React from "react";
 import ConfigContext from "./context";
 import SiteViewHeadTags, { PageMeta } from "./head";
-import config from 'react-reveal/globals';
-
-config({ ssrFadeout: true });
 
 type AppView = {
     children: (React.ReactElement | React.ReactNode),

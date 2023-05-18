@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import Fade from "react-reveal/Fade";
+import Fade from "react-awesome-reveal";
 import SocialMediaLinks from "../SocialMediaLinks";
 
 const SideBarMenu = styled.div`

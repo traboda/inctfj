@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from "@emotion/styled";
-import Fade from "react-reveal/Fade";
+import Fade from "react-awesome-reveal";
 
 const PastSpeakersSection = styled.section`
     padding: 5vh 5vw;

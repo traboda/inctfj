@@ -43,7 +43,7 @@ const TopBarSearch = () => {
                             <div style={{ padding: '5vh 1rem 15vh 1rem' }}
                                  className="container mx-auto flex flex-col items-center justify-center">
                                 <div className="text-center w-full" style={{ maxWidth: 600 }}>
-                                    <Link href="/" passHref>
+                                    <Link legacyBehavior href="/" passHref>
                                         <a className="flex justify-center mb-2">
                                             <Logo isDark maxHeight={120} />
                                         </a>
