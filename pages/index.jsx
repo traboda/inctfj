@@ -17,6 +17,7 @@ import LandingPromoVideo from "../src/components/landing/PromoVideo";
 import LandingSearch from "../src/components/landing/search";
 import Footer from "../src/components/shared/Footer";
 import SiteView from "../src/components/SiteView";
+import LandingPrizeDetails from "../src/components/landing/Prizes";
 
 const LandingPage = () => {
 
@@ -29,6 +30,7 @@ const LandingPage = () => {
                 <LandingAboutInCTF />
                 {/*<LandingStatsBar />*/}
                 <LandingPromoVideo />
+                <LandingPrizeDetails />
                 <LandingReasonsToParticipate />
                 <CTAReg />
                 <LandingHowItWorks />

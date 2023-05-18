@@ -236,7 +236,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
             <div className="font-semibold text-primary">
               InCTF Jr 2022
             </div>
-            <div>August - November, 2022</div>
+            <div>May - August, 2023</div>
           </div>
           {/*<TopbarInfoCard className="mr-3">*/}
           {/*    <button*/}

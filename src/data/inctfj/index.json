@@ -1,12 +1,12 @@
 {
     "Landingheader" : "Young Hackers Are Born Here,Become the Next Cyber Security Warrior.",
-    "date" : "August - November 2023",
+    "date" : "May - August 2023",
     "Desc" : "InCTF Junior is India's First & Premier Hacking & Cyber Security Contest for High School Students, organized by team bi0s, India's No.1 ranked CTF Team.",
     "subDesc" : "Every year the brightest young hackers from all across India participate in this the learn & hack CTF contest, win exciting prizes & kick-start their cyber-security career.",
     "LandingCoverImage": "assets/images/covers/landing-cover-image.png",
     "button" : [],
     "what":"Cyber Security Training & Capture The Flag (CTF) Championship", 
-    "when" : "August - November, 2022",
+    "when" : "May - August, 2023",
     "forWhom": "Grade 07-12 School Students",
     "participants" : [
         "1.jpg",
@@ -28,9 +28,15 @@
         "National Level Cyber Security Talent Incubation",
         "5-month Long Completely Free, End-to-End Programme",
         "Beginner Friendly & Exclusively for School Students",
-        "Organized by India's No.1 Ranked CTF CyberSecurity Team - bi0s"
+        "Organized by India's No.1 Ranked CTF CyberSecurity Team - bi0s",
+        "Prize Pool of Rs. 3 Lakh and Exciting Goodies"
     ],
     "LandingpromoVideo": "https://www.youtube.com/watch?v=sxRZ06Rbh_c",
+    "prizes": {
+        "first": "₹1,00,000",
+        "second": "₹50,000",
+        "third": "₹25,000"
+    },
     "whyPacrticipate":[
         {
             "video":"assets/videos/hands_on_learning.mp4",
