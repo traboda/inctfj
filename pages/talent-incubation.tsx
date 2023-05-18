@@ -1,4 +1,5 @@
 import React from 'react';
+import { Chart as ChartJS, registerables } from 'chart.js';
 
 import TopBar from '../src/components/shared/TopBar';
 import Footer from '../src/components/shared/Footer';
@@ -10,11 +11,10 @@ import CyberClubsInSchools from '../src/components/talent/clubs';
 import CTFPedagogy from '../src/components/talent/HowCTFWorks';
 import SiteView from '../src/components/SiteView';
 
-import { Chart as ChartJS, registerables } from 'chart.js';
 
 const TalentIncubation = () => {
 
-    ChartJS.register(...registerables);
+  ChartJS.register(...registerables);
 
   return (
     <SiteView meta={{ title: 'CyberSecurity Talent Incubation' }}>

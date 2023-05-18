@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 
 const PostCardWrapper = styled.a`
     display: block;
@@ -29,23 +29,33 @@ const PostCardWrapper = styled.a`
         color: #fd7e14;
       }
     }
-`
+`;
 
 const PostCard = ({
-    title, date, slug, category, tags, description,
+  title, date, slug, category, tags, description,
 }) => {
 
-    return <PostCardWrapper href={`/posts/${slug}`}>
-        <h4>{title}</h4>
-        <div>
-            <i className="far fa-calendar" /> {date?.toDateString()}
-            <span className="px-1">|</span>
-            <span><i className="far fa-album-collection" /> {category}</span>
-            <span className="px-1">|</span>
-            <span><i className="far fa-tags" /> {tags}</span>
-        </div>
-        <p>{description}</p>
-    </PostCardWrapper>
+  return (<PostCardWrapper href={`/posts/${slug}`}>
+    <h4>{title}</h4>
+    <div>
+      <i className="far fa-calendar" /> 
+      {' '}
+      {date?.toDateString()}
+      <span className="px-1">|</span>
+      <span>
+        <i className="far fa-album-collection" /> 
+        {' '}
+        {category}
+      </span>
+      <span className="px-1">|</span>
+      <span>
+        <i className="far fa-tags" /> 
+        {' '}
+        {tags}
+      </span>
+    </div>
+    <p>{description}</p>
+  </PostCardWrapper>);
 };
 
 export default PostCard;

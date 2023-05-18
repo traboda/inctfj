@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProfileSummaryCard = ({
-  name, avatar, role = '', designation, description, org = null, linkedIn = null,
+  name, avatar, role = '', designation, description, org:_ = null, linkedIn = null,
 }) => (
   <div className="shadow h-full rounded-xl bg-white py-5 px-3">
     <div className="text-center p-2">

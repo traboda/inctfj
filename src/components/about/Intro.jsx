@@ -1,6 +1,6 @@
 import React from 'react';
-import { Fade } from "react-awesome-reveal";
-import styled from "@emotion/styled";
+import { Fade } from 'react-awesome-reveal';
+import styled from '@emotion/styled';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/about.json`);
@@ -15,38 +15,46 @@ const IntroSectionWrap = styled.div`
 
 const InctfIntro = () => {
     
-    return <IntroSectionWrap>
-        <div className="container min-w-lg mx-auto sm:px-4 py-12 px-1">
-            <div className="flex flex-wrap">
-                <div className="md:w-2/3 pr-4 pl-4 flex items-center p-6">
-                    <div>
-                        <Fade direction="up"><h1 className='font-bold mb-6'>{data.header}</h1></Fade>
-                        <Fade>
-                            <p>
-                                {data.description.map((item, index) => {
-                                    return <span key={index}>{item}<br/><br></br></span>
-                                })}
+  return (<IntroSectionWrap>
+    <div className="container min-w-lg mx-auto sm:px-4 py-12 px-1">
+      <div className="flex flex-wrap">
+        <div className="md:w-2/3 pr-4 pl-4 flex items-center p-6">
+          <div>
+            <Fade direction="up"><h1 className="font-bold mb-6">{data.header}</h1></Fade>
+            <Fade>
+              <p>
+                {data.description.map((item, index) => {
+                  return (<span key={index}>
+                    {item}
+                    <br />
+                    <br></br>
+                  </span>);
+                })}
 
-                            </p>
-                        </Fade>
+              </p>
+            </Fade>
                         
-                    </div>
-                </div>
-                <div className="md:w-1/3 pr-4 pl-4 p-2">
-                    <div className="flex grid grid-cols-2 flex-wrap  mx-0">{data.participants.map((i,index) =>
-                        <Fade delay={index*150}>
-                            <div className="p-1">
-                                <img
-                                    draggable="false"
-                                    style={{ maxWidth: '100%' }}
-                                    src={`/${eventID}/${i}`} alt="INCTF participant" />
-                            </div>
-                        </Fade>
-                    )}</div>
-                </div>
-            </div>
+          </div>
         </div>
-    </IntroSectionWrap>;
+        <div className="md:w-1/3 pr-4 pl-4 p-2">
+          <div className="flex grid grid-cols-2 flex-wrap  mx-0">
+            {data.participants.map((i, index) =>
+              (<Fade delay={index * 150}>
+                <div className="p-1">
+                  <img
+                    draggable="false"
+                    style={{ maxWidth: '100%' }}
+                    src={`/${eventID}/${i}`}
+                    alt="INCTF participant"
+                  />
+                </div>
+              </Fade>),
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  </IntroSectionWrap>);
 
 };
 

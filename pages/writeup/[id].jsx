@@ -1,17 +1,16 @@
 import React from 'react';
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import styled from '@emotion/styled';
+import dynamic from 'next/dynamic';
 
-import TopBar from "../../src/components/shared/TopBar";
+import TopBar from '../../src/components/shared/TopBar';
+import Footer from '../../src/components/shared/Footer';
+import Breadcrumb from '../../src/components/shared/Breadcrumb';
+import PageFooterExplorer from '../../src/components/PageFooterExplorer';
+import SiteView from '../../src/components/SiteView';
 
-import Footer from "../../src/components/shared/Footer";
-import styled from "@emotion/styled";
-import dynamic from "next/dynamic";
-import Breadcrumb from "../../src/components/shared/Breadcrumb";
-import PageFooterExplorer from "../../src/components/PageFooterExplorer";
-import SiteView from "../../src/components/SiteView";
-
-const CodeBlock = dynamic(() => import("../../src/components/CodeBlock"), { ssr: false });
+const CodeBlock = dynamic(() => import('../../src/components/CodeBlock'), { ssr: false });
 
 const Markdown = styled.div`
   overflow-wrap: anywhere;
@@ -112,108 +111,120 @@ const Markdown = styled.div`
 `;
 
 const WriteUpPage = ({ id }) => {
-    const data = (() => {
-        try {
-            return require(`../../src/data/writeups/${id}.yaml`);
-        } catch (e) {
-            return null;
-        }
-    })();
+  const data = (() => {
+    try {
+      return require(`../../src/data/writeups/${id}.yaml`);
+    } catch (e) {
+      return null;
+    }
+  })();
 
-    return data ?
-        <SiteView meta={{ title: `${data.title} - ${data?.category} Challenge Solution`}}>
-            <TopBar darkenOnSidebar />
-            <div className="px-4 py-8 flex items-end justify-center" style={{ minHeight: '30vh' }}>
-                <div style={{ width: '1000px', maxWidth: '100%'  }}>
-                    <div className="mb-6">
-                        <Breadcrumb
-                            items={[
-                                {
-                                    link: '/writeups',
-                                    title: 'Writeups'
-                                }
-                            ]}
-                        />
-                    </div>
-                    <h1 className="text-primary mb-2 text-3xl lg:text-6xl">{data.title}</h1>
-                    <div className="font-semibold opacity-75 text-base pb-6 pt-2">
-                        <span><i className="far fa-fire"/> {data?.difficulty} </span>
-                        <span className="ml-2"><i className="far fa-album-collection"/> {data?.category}</span>
-                    </div>
-                    <div className="mt-4">
-                        <a
-                            href={`https://app.traboda.com/challenge/${data?.id}`}
-                            className="bg-blue-900 hover:bg-primary px-4 py-3 text-white rounded-lg"
-                        >
-                            Open Challenge <i className="fa fa-external-link ml-1" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div className="py-4 flex justify-center bg-gray-50">
-                <div className="py-8 px-3" style={{ minHeight: '50vh', width: '1000px', maxWidth: '100%' }}>
-                    <Markdown className="leading-relaxed">
-                        <ReactMarkdown
-                            plugins={[remarkGfm]}
-                            children={data?.content}
-                            renderers={{
-                                code: CodeBlock
-                            }}
-                        />
-                    </Markdown>
-                </div>
-            </div>
-            <PageFooterExplorer
-                items={[
-                    {
-                        "title": "Workshops",
-                        "text": "Attend Free Training Workshops",
-                        "link": "/trainings"
-                    },
-                    {
-                        "title": "FAQ",
-                        "text": "Answers to common questions",
-                        "link": "/faq"
-                    },
-                    {
-                        "title": "Videos",
-                        "text": "Videos to help get started",
-                        "link": "/resources#videos"
-                    },
-                    {
-                        "title": "bi0s Wiki",
-                        "text": "Learn fundamental concepts",
-                        "link": "https://wiki.bi0s.in"
-                    },
-                    {
-                        "title": "Practice Challenges",
-                        "text": "Prepare solving challenges",
-                        "link": "https://app.traboda.com/challenges"
-                    },
-                    {
-                        "title": "Promote",
-                        "text": "Promote InCTF Junior",
-                        "link": "/promote"
-                    },
-                    {
-                        "title": "Join Discord Server",
-                        "text": "Get help from our community",
-                        "link": "/discord"
-                    },
-                ]}
+  return data ?
+    <SiteView meta={{ title: `${data.title} - ${data?.category} Challenge Solution` }}>
+      <TopBar darkenOnSidebar />
+      <div className="px-4 py-8 flex items-end justify-center" style={{ minHeight: '30vh' }}>
+        <div style={{ width: '1000px', maxWidth: '100%' }}>
+          <div className="mb-6">
+            <Breadcrumb
+              items={[
+                {
+                  link: '/writeups',
+                  title: 'Writeups',
+                },
+              ]}
             />
-            <Footer />
-        </SiteView> :
-        <SiteView meta={{ title: `WriteUp Not Found` }}>
-            <TopBar darkenOnSidebar />
-            <h1>Writeup not found</h1>
-            <Footer />
-        </SiteView>
-}
+          </div>
+          <h1 className="text-primary mb-2 text-3xl lg:text-6xl">{data.title}</h1>
+          <div className="font-semibold opacity-75 text-base pb-6 pt-2">
+            <span>
+              <i className="far fa-fire" /> 
+              {' '}
+              {data?.difficulty}
+              {' '}
+            </span>
+            <span className="ml-2">
+              <i className="far fa-album-collection" /> 
+              {' '}
+              {data?.category}
+            </span>
+          </div>
+          <div className="mt-4">
+            <a
+              href={`https://app.traboda.com/challenge/${data?.id}`}
+              className="bg-blue-900 hover:bg-primary px-4 py-3 text-white rounded-lg"
+            >
+              Open Challenge 
+              {' '}
+              <i className="fa fa-external-link ml-1" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="py-4 flex justify-center bg-gray-50">
+        <div className="py-8 px-3" style={{ minHeight: '50vh', width: '1000px', maxWidth: '100%' }}>
+          <Markdown className="leading-relaxed">
+            <ReactMarkdown
+              plugins={[remarkGfm]}
+              renderers={{
+                code: CodeBlock,
+              }}
+            >
+              {data?.content}
+            </ReactMarkdown>
+          </Markdown>
+        </div>
+      </div>
+      <PageFooterExplorer
+        items={[
+          {
+            'title': 'Workshops',
+            'text': 'Attend Free Training Workshops',
+            'link': '/trainings',
+          },
+          {
+            'title': 'FAQ',
+            'text': 'Answers to common questions',
+            'link': '/faq',
+          },
+          {
+            'title': 'Videos',
+            'text': 'Videos to help get started',
+            'link': '/resources#videos',
+          },
+          {
+            'title': 'bi0s Wiki',
+            'text': 'Learn fundamental concepts',
+            'link': 'https://wiki.bi0s.in',
+          },
+          {
+            'title': 'Practice Challenges',
+            'text': 'Prepare solving challenges',
+            'link': 'https://app.traboda.com/challenges',
+          },
+          {
+            'title': 'Promote',
+            'text': 'Promote InCTF Junior',
+            'link': '/promote',
+          },
+          {
+            'title': 'Join Discord Server',
+            'text': 'Get help from our community',
+            'link': '/discord',
+          },
+        ]}
+      />
+      <Footer />
+    </SiteView> :
+    <SiteView meta={{ title: 'WriteUp Not Found' }}>
+      <TopBar darkenOnSidebar />
+      <h1>Writeup not found</h1>
+      <Footer />
+    </SiteView>;
+};
 
 WriteUpPage.getInitialProps = async ({ query }) => {
-    const id = query.id;
-    return { id }
+  const id = query.id;
+  return { id };
 };
 
 

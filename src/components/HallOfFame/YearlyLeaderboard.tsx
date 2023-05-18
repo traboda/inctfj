@@ -8,8 +8,6 @@ import IndianStates from '../../data/indian-states';
 import { EditionStats } from '../../data/types/stats';
 
 import FameCard from './FameCard';
-// import SchoolLeaderboard from "./SchoolLeaderboard";
-
 import ChampionCard from './ChampionCard';
 
 const SearchBar = styled.div`
@@ -93,7 +91,8 @@ const YearlyLeaderboard = ({ data }: YearlyLeaderboard) => {
 
   const applicableStates = () => {
     const leaderboard = data?.results?.finalists;
-    let flags = [], output = [], l = leaderboard.length, i;
+    const flags = [], output = [], l = leaderboard.length;
+    let i;
     for (i = 0; i < l; i++) {
       if (flags[leaderboard[i].state]) continue;
       flags[leaderboard[i].state] = true;
@@ -127,7 +126,7 @@ const YearlyLeaderboard = ({ data }: YearlyLeaderboard) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {data.results.champions.map((c, index) =>
           (<div className="p-4 bg-white rounded-lg border" key={shortid.generate()}>
-            <Fade  delay={index * 250}>
+            <Fade delay={index * 250}>
               <ChampionCard {...c} />
             </Fade>
           </div>),

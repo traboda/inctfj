@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 import Fade from 'react-awesome-reveal';
 
 
@@ -47,20 +47,23 @@ const PoweredByTraboda = styled('div')`
 
 const LandingContactsBar = () => {
 
-    return <ContactsBarSection>
-        <div className="flex flex-wrap">
-            <div className="w-full flex justify-center flex-wrap">
-                {data.LandingPoweredby.map((item, index) => {
-                    return <Fade direction="left">  <PoweredByTraboda key={index}>
-                        <div>{item.header}</div>
-                        <img src={`/${eventID}/${item.logo}`} />
-                    </PoweredByTraboda></Fade>
-                })}
-            </div>
+  return (<ContactsBarSection>
+    <div className="flex flex-wrap">
+      <div className="w-full flex justify-center flex-wrap">
+        {data.LandingPoweredby.map((item, index) => {
+          return (<Fade direction="left">  
+            {' '}
+            <PoweredByTraboda key={index}>
+              <div>{item.header}</div>
+              <img src={`/${eventID}/${item.logo}`} alt="Logo Image" />
+            </PoweredByTraboda>
+          </Fade>);
+        })}
+      </div>
                 
                 
-            </div>
-    </ContactsBarSection>
+    </div>
+  </ContactsBarSection>);
 
 };
 
