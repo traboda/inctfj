@@ -50,67 +50,67 @@ const TagSelectorContainer = styled.div`
 `;
 
 type ValueType = {
-    value: string,
-    label: string,
-}
+  value: string,
+  label: string,
+};
 
 type TagSelectorProps = {
-    value: ValueType[],
-    onChange: (val: ValueType | ValueType[]) => void,
-    small?: boolean,
-    options: ValueType[],
-    isClearable?: boolean,
-    multiple?: boolean,
-    fullWidth?: boolean
-}
+  value: ValueType[],
+  onChange: (val: ValueType | ValueType[]) => void,
+  small?: boolean,
+  options: ValueType[],
+  isClearable?: boolean,
+  multiple?: boolean,
+  fullWidth?: boolean
+};
 
 const TagSelector = (props: TagSelectorProps) => {
-    const [tags, setTags] = useState([]);
+  const [tags, setTags] = useState([]);
 
-    const handleTagClick = (_tag) => {
-        if(props.multiple) {
-            if(tags.includes(_tag.value)) {
-                const _tags = [...tags];
-                const index = tags.indexOf(_tag.value);
-                _tags.splice(index, index + 1);
-                setTags(_tags);
-                props.onChange(_tags);
-            } else {
-                const _tags = [...tags, _tag.value];
-                setTags(_tags);
-                props.onChange(_tags);
-            }
-        } else if(props.isClearable &&  !props.value && _tag.value === props.value) {
-            props.onChange(props.options[0]);
-            props.onChange(props.options[0]);
-        } else {
-            props.onChange(_tag);
-            props.onChange(_tag);
-        }
-    };
+  const handleTagClick = (_tag) => {
+    if (props.multiple) {
+      if (tags.includes(_tag.value)) {
+        const _tags = [...tags];
+        const index = tags.indexOf(_tag.value);
+        _tags.splice(index, index + 1);
+        setTags(_tags);
+        props.onChange(_tags);
+      } else {
+        const _tags = [...tags, _tag.value];
+        setTags(_tags);
+        props.onChange(_tags);
+      }
+    } else if (props.isClearable && !props.value && _tag.value === props.value) {
+      props.onChange(props.options[0]);
+      props.onChange(props.options[0]);
+    } else {
+      props.onChange(_tag);
+      props.onChange(_tag);
+    }
+  };
 
-    const generateClassName = ({ value: val }) => {
-        let _class = props.small ? 'small' : '';
-        if(!props.fullWidth) _class += ' shadow-sm';
-        if(props.multiple && tags.includes(val)) _class += ' active';
-        // @ts-ignore
-        if(!props.multiple && props.value?.value === val) _class += ' active';
-        return _class;
-    };
+  const generateClassName = ({ value: val }) => {
+    let _class = props.small ? 'small' : '';
+    if (!props.fullWidth) _class += ' shadow-sm';
+    if (props.multiple && tags.includes(val)) _class += ' active';
+    // @ts-ignore
+    if (!props.multiple && props.value?.value === val) _class += ' active';
+    return _class;
+  };
 
-    return <TagSelectorContainer className={props.fullWidth ? 'fullWidth' : ''}>
-        <div className={`tag-container ${props.fullWidth ? 'shadow-sm' : ''}`}>
-            {props.options.map(opt =>
-                <div
-                    key={opt.value}
-                    className={`tag ${generateClassName(opt)}`}
-                    onClick={() => handleTagClick(opt)}
-                >
-                    {opt.label}
-                </div>
-            )}
-        </div>
-    </TagSelectorContainer>;
+  return (<TagSelectorContainer className={props.fullWidth ? 'fullWidth' : ''}>
+    <div className={`tag-container ${props.fullWidth ? 'shadow-sm' : ''}`}>
+      {props.options.map(opt =>
+        (<div
+          key={opt.value}
+          className={`tag ${generateClassName(opt)}`}
+          onClick={() => handleTagClick(opt)}
+        >
+          {opt.label}
+        </div>),
+      )}
+    </div>
+  </TagSelectorContainer>);
 };
 
 export default TagSelector;

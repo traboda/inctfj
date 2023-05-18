@@ -39,7 +39,7 @@ const AboutPage = () => {
             />
             <InctfIntro />
             <div className="text-center pt-6">
-                <img draggable="false" src={`/${eventID}/${data.CoverImage2`} />
+                <img draggable="false" src={`/${eventID}/${data.CoverImage2}`} />
             </div>
             <AboutAchievements />
             <UNSDGSection />

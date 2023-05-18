@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 
 const ImageParallax = styled('div')`
   background-attachment: fixed;
@@ -15,14 +15,14 @@ const ImageParallax = styled('div')`
 
 const Parallax = ({ background, height = '450px' }) => {
 
-    return (
-        <ImageParallax
-            style={{
-                minHeight: height,
-                backgroundImage: `url(${background})`
-            }}
-        />
-    )
+  return (
+    <ImageParallax
+      style={{
+        minHeight: height,
+        backgroundImage: `url(${background})`,
+      }}
+    />
+  );
 
 };
 

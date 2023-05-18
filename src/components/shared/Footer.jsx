@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
-import styled from "@emotion/styled";
-import SocialMediaLinks from "./SocialMediaLinks";
-import ConfigContext from "../SiteView/context";
+import styled from '@emotion/styled';
+
+import ConfigContext from '../SiteView/context';
+
+import SocialMediaLinks from './SocialMediaLinks';
 
 const FooterContainer = styled.footer`
     background: #222640;
@@ -32,35 +34,35 @@ const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 
 const Footer = () => {
 
-    const { assets } = useContext(ConfigContext);
-    const footerConfig = require(`../../data/${eventID}/footer.json`);
+  const { assets } = useContext(ConfigContext);
+  const footerConfig = require(`../../data/${eventID}/footer.json`);
 
-    return <FooterContainer>
-        <div className="container min-w-lg mx-auto sm:px-4 px-1 pt-3">
-            <div className="flex flex-wrap  mx-0">
-                <div className="md:w-2/3 order-2 md:order-1 text-center md:text-left px-1">
-                    <div className="md:flex items-center block">
-                        <img draggable="false" className="inline" alt="Amrita InCTF Junior" src={`/${eventID}/assets/${assets?.logo.light}`} />
-                        <div className="md:ml-6 py-3">
-                            <div className="line-height-1 opacity-80 my-2 md:mb-1 md:mt-0">
-                                {footerConfig?.copyrightText}
-                            </div>
-                            {footerConfig?.menu?.length > 0 && (
-                                <FooterLinksBar>
-                                    {footerConfig?.menu.map((link, index) => (
-                                        <a key={index} href={link.link}>{link.title}</a>
-                                    ))}
-                                </FooterLinksBar>
-                            )}
-                        </div>
-                    </div>
-                </div>
-                <div className="social-bar md:w-1/3 py-4 md:py-0 w-full order-1 md:order-2 text-white flex items-center md:justify-end justify-center px-1">
-                    <SocialMediaLinks />
-                </div>
+  return (<FooterContainer>
+    <div className="container min-w-lg mx-auto sm:px-4 px-1 pt-3">
+      <div className="flex flex-wrap  mx-0">
+        <div className="md:w-2/3 order-2 md:order-1 text-center md:text-left px-1">
+          <div className="md:flex items-center block">
+            <img draggable="false" className="inline" alt="Amrita InCTF Junior" src={`/${eventID}/assets/${assets?.logo.light}`} />
+            <div className="md:ml-6 py-3">
+              <div className="line-height-1 opacity-80 my-2 md:mb-1 md:mt-0">
+                {footerConfig?.copyrightText}
+              </div>
+              {footerConfig?.menu?.length > 0 && (
+              <FooterLinksBar>
+                {footerConfig?.menu.map((link, index) => (
+                  <a key={index} href={link.link}>{link.title}</a>
+                ))}
+              </FooterLinksBar>
+              )}
             </div>
+          </div>
         </div>
-    </FooterContainer>
+        <div className="social-bar md:w-1/3 py-4 md:py-0 w-full order-1 md:order-2 text-white flex items-center md:justify-end justify-center px-1">
+          <SocialMediaLinks />
+        </div>
+      </div>
+    </div>
+  </FooterContainer>);
 
 };
 

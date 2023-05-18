@@ -1,5 +1,6 @@
-import { createContext } from "react";
-import {ConfigContextType} from "../../data/types/context";
+import { createContext } from 'react';
+
+import { ConfigContextType } from '../../data/types/context';
 
 const ConfigContext = createContext<Partial<ConfigContextType>>({});
 

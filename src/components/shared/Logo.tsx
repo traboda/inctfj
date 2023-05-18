@@ -1,18 +1,19 @@
-import React, {useContext} from "react";
-import ConfigContext from "../SiteView/context";
+import React, { useContext } from 'react';
+
+import ConfigContext from '../SiteView/context';
 
 const Logo = ({ isDark = false, maxHeight = 150 }) => {
 
-    const { id, meta, assets } = useContext(ConfigContext);
+  const { id, meta, assets } = useContext(ConfigContext);
 
-    return (
-        <img
-            className="logo"
-            src={`/${id}/assets/${isDark ? assets?.logo?.dark : assets?.logo.light}`}
-            alt={meta.title}
-            style={{ maxHeight }}
-        />
-    );
+  return (
+    <img
+      className="logo"
+      src={`/${id}/assets/${isDark ? assets?.logo?.dark : assets?.logo.light}`}
+      alt={meta.title}
+      style={{ maxHeight }}
+    />
+  );
 
 };
 
