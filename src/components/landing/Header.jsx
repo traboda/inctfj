@@ -99,7 +99,6 @@ const LandingHeader = () => {
                     <i className="fa fa-chevron-right" />
                   </a>
                 ))}
-
               </div>
             </div>
             <div className="md:w-1/3 my-4 md:my-0 px-3">
