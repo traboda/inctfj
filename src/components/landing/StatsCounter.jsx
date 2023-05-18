@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styled from "@emotion/styled";
 import CountUp from 'react-countup';
-import Zoom from 'react-reveal/Zoom';
+import { Zoom } from 'react-awesome-reveal';
 
 
 const StatsContainer = styled.section`
@@ -22,14 +22,14 @@ const LandingStatsBar = () => {
     const fetchStats = () => {
         try {
             fetch('https://app.traboda.com/api/contest/stats/66').then(async (response) => {
-                if(response.ok && response.status == 200)
+                if(response.ok && response.status === 200)
                     return await response.json();
                 else
                     return null;
             }).then((data) => {
                 setStats(data);
             }).catch((e) => {
-
+                console.error(e);
             })
         } catch (e) {
 

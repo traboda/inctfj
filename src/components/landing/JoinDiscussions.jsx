@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import Fade from 'react-reveal/Fade';
+import Fade from 'react-awesome-reveal';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
@@ -45,10 +45,6 @@ const DiscordDiscussion = styled(DiscussionPortals)`
     background: #7289DA;
 `;
 
-const TelegramDiscussion = styled(DiscussionPortals)`
-    background: #0088cc ;
-`;
-
 const TwitterDiscussion = styled(DiscussionPortals)`
     background: #14171A ;
 `;
@@ -58,9 +54,9 @@ const LandingJoinDiscussion = () => {
     return <div className="flex flex-wrap">
         <div className="md:w-1/2 w-full">
             <TwitterDiscussion href={data.SocialMediaHandles.find(handle => handle.label === 'Twitter').url} target="_blank" rel="noopener noreferrer">
-                <Fade left>
+                <Fade direction="left">
                     <div>
-                        <img src={require('../../assets/images/logos/twitter.png')} alt="Follow us on Twitter<" />
+                        <img src={'/assets/images/logos/twitter.png'} alt="Follow us on Twitter<" />
                         <h5>Follow us on Twitter</h5>
                     </div>
                 </Fade>
@@ -69,9 +65,9 @@ const LandingJoinDiscussion = () => {
 
         <div className="md:w-1/2 w-full">
             <DiscordDiscussion href={data.SocialMediaHandles.find(handle => handle.label === 'Discord').url} rel="noopener noreferrer" target="_blank">
-                <Fade right>
+                <Fade direction="right">
                     <div>
-                        <img src={require('../../assets/images/logos/discord.png')} alt="Join Discord Server" />
+                        <img src={'/assets/images/logos/discord.png'} alt="Join Discord Server" />
                         <h5>Join the Discord Server</h5>
                     </div>
                 </Fade>

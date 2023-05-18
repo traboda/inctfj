@@ -1,7 +1,8 @@
 import React from 'react';
-import styled from "@emotion/styled";
-import Fade from "react-reveal/Fade";
-import SocialMediaLinks from "../SocialMediaLinks";
+import styled from '@emotion/styled';
+import Fade from 'react-awesome-reveal';
+
+import SocialMediaLinks from '../SocialMediaLinks';
 
 const SideBarMenu = styled.div`
   position: fixed;
@@ -60,42 +61,44 @@ const SideBarMenu = styled.div`
 
 const MobileMenu = ({ onClose }) => {
 
-    const sidebarLinks = [
-        { "icon": require('../../../assets/images/icons/home.png'), "title": "Home", "href": "/" },
-        { "icon": require('../../../assets/images/icons/star_glowing.png'), "title": "About", "href": "/about" },
-        { "icon": require('../../../assets/images/icons/learn.png'), "title": "Resources", "href": "/resources"},
-        { "icon": require('../../../assets/images/icons/learn.png'), "title": "Trainings", "href": "/trainings" },
-        { "icon": require('../../../assets/images/icons/trophy.png'), "title": "Past Stats", "href": "/stats" },
-        { "icon": require('../../../assets/images/icons/faq.png'), "title": "FAQ", "href": "/faq" },
-        { "icon": require('../../../assets/images/icons/faq.png'), "title": "Get Help", "href": "/discord" },
-    ];
+  const sidebarLinks = [
+    { 'icon': '/assets/images/icons/home.png', 'title': 'Home', 'href': '/' },
+    { 'icon': '/assets/images/icons/star_glowing.png', 'title': 'About', 'href': '/about' },
+    { 'icon': '/assets/images/icons/learn.png', 'title': 'Resources', 'href': '/resources' },
+    { 'icon': '/assets/images/icons/learn.png', 'title': 'Trainings', 'href': '/trainings' },
+    { 'icon': '/assets/images/icons/trophy.png', 'title': 'Past Stats', 'href': '/stats' },
+    { 'icon': '/assets/images/icons/faq.png', 'title': 'FAQ', 'href': '/faq' },
+    { 'icon': '/assets/images/icons/faq.png', 'title': 'Get Help', 'href': '/discord' },
+  ];
 
-    return <div onClick={onClose}>
-        <SideBarMenu onClick={(e) => { e.stopPropagation() }}>
-            <div style={{ position: 'absolute', right: '0.25rem', top: '0.25rem' }}>
-                <button onClick={onClose}>
-                    <i className="fa fa-times" />
-                </button>
-            </div>
-            <ol className="pl-0 mt-3">{sidebarLinks.map((l, index) =>
-                <Fade delay={index*250}>
-                    <li>
-                        {l.href ?
-                        <a href={l.href} className="w-full">
-                            {l.title}
-                        </a> :
-                        <button onClick={l.onClick} className="w-full">
-                            {l.title}
-                        </button>}
-                    </li>
-                </Fade>
-            )}</ol>
-            <div style={{ opacity: 0.8 }} className="text-center pt-4">
-                follow us on
-            </div>
-            <SocialMediaLinks />
-        </SideBarMenu>
-    </div>;
+  return (<div onClick={onClose}>
+    <SideBarMenu onClick={(e) => { e.stopPropagation(); }}>
+      <div style={{ position: 'absolute', right: '0.25rem', top: '0.25rem' }}>
+        <button onClick={onClose}>
+          <i className="fa fa-times" />
+        </button>
+      </div>
+      <ol className="pl-0 mt-3">
+        {sidebarLinks.map((l, index) =>
+          (<Fade delay={index * 250}>
+            <li>
+              {l.href ?
+                <a href={l.href} className="w-full">
+                  {l.title}
+                </a> :
+                <button onClick={l.onClick} className="w-full">
+                  {l.title}
+                </button>}
+            </li>
+          </Fade>),
+        )}
+      </ol>
+      <div style={{ opacity: 0.8 }} className="text-center pt-4">
+        follow us on
+      </div>
+      <SocialMediaLinks />
+    </SideBarMenu>
+  </div>);
 
 };
 

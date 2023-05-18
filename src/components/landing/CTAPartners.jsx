@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
 
 const RegCTASection = styled.section`
-   padding: 5vh 5vw;
    h3 {
       font-size: 24px;
       font-weight: 700;
@@ -31,19 +30,19 @@ const RegCTASection = styled.section`
 
 const CTAPartners = () => {
 
-    return <RegCTASection className="container mx-auto">
+    return <RegCTASection className="container mx-auto px-4 py-8">
         {data.CTAPartners && 
-        <div className="flex flex-wrap  mx-0">
-            <Fade left>
-                <div className="md:w-3/4 pr-4 pl-4 flex items-center p-2">
+        <div className="grid md:grid-cols-4 items-center gap-6">
+            <Fade direction="left" className="md:col-span-3">
+                <div className="flex items-center">
                     {/*<img alt="star" className="hidden md:block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />*/}
                     <h3 style={{ maxWidth: '800px' }}>
                         {data.CTAPartners.message}
                     </h3>
                 </div>
             </Fade>
-            <Fade right>
-                <div className="md:w-1/4 pr-4 pl-4 flex items-center justify-center p-2">
+            <Fade direction="right">
+                <div className="flex items-center justify-center">
                     <a rel="nofollow noref" href={data.CTAPartners.button.url}>{data.CTAPartners.button.label}</a>
                 </div>
             </Fade>

@@ -47,20 +47,20 @@ const BrandingPage = () => {
                     <div className="flex flex-wrap mx-0" style={{ maxWidth: '900px' }}>
                         <div className="md:w-1/3 p-2">
                             <LogoWrap>
-                                 <img src={require('../src/assets/images/branding/colorful.png')} alt="Colorful Logo" />
-                                 <a href={require('../src/assets/images/branding/colorful.png')}>PNG</a>
+                                 <img src={`/assets/images/branding/colorful.png`} alt="Colorful Logo" />
+                                 <a href={`/assets/images/branding/colorful.png`}>PNG</a>
                             </LogoWrap>
                         </div>
                         <div className="md:w-1/3 p-2">
                             <LogoWrap dark>
-                                <img src={require('../src/assets/images/branding/light_version.png')} alt="Light Logo" />
-                                <a href={require('../src/assets/images/branding/light_version.png')}>PNG</a>
+                                <img src={`assets/images/branding/light_version.png`} alt="Light Logo" />
+                                <a href={`assets/images/branding/light_version.png`}>PNG</a>
                             </LogoWrap>
                         </div>
                         <div className="md:w-1/3 p-2">
                             <LogoWrap>
-                                <img src={require('../src/assets/images/branding/full_black.png')} alt="Colorful Logo" />
-                                <a href={require('../src/assets/images/branding/full_black.png')}>PNG</a>
+                                <img src={'/assets/images/branding/full_black.png'} alt="Colorful Logo" />
+                                <a href={'/assets/images/branding/full_black.png'}>PNG</a>
                             </LogoWrap>
                         </div>
                     </div>

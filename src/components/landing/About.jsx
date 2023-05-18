@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import Zoom from 'react-reveal/Zoom';
+import { Zoom } from 'react-awesome-reveal';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
 
 const AboutInCTFSection = styled.section`
-    padding: 8vh 2.5vw;
     img {
       max-width: 100%;
       padding: 0.5rem;
@@ -62,54 +61,52 @@ const HighlightFeature = styled('div')`
 `;
 
 const LandingAboutInCTF = () => (
-    <AboutInCTFSection className="container mx-auto">
-        <Zoom up>
+    <AboutInCTFSection className="container mx-auto py-16 px-4">
+        <Zoom direction="up">
             <div className="md:hidden flex justify-center mb-6">
-                <div className="rounded-lg p-2 bg-blue-100" style={{ maxWidth: '100%', width: '1100px' }}>
+                <div className="rounded-lg p-2 bg-blue-100">
                     <div className="flex flex-wrap items-center">
-                        <div className="w-full md:w-4/5 px-3">
+                        <div className="w-full md:w-4/5">
                             Have you got stuck? Need Help? <wbr />
                             <span className="inline-block">
                                 Join our discord server, ask your doubts & get support from our experts.
                             </span>
                         </div>
-                        <div className="md:w-1/5 flex items-center md:my-0 my-3 px-2 md:px-0 justify-end">
-                            <a href="/discord" className="bg-blue-800 mb-0 px-4 py-3">
+                        <div className="md:w-1/5 flex items-center md:my-0 my-3 md:px-0 justify-end">
+                            <a href="/discord" className="bg-blue-800 mb-0 py-3">
                                 Join Discord Now <i className="fa fa-chevron-right ml-1" />
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="flex flex-wrap  mx-0">
-                <div className="md:w-2/3 p-2">
+            <div className="flex flex-wrap mx-0">
+                <div className="md:w-2/3">
                     <h2 className="mt-2">
                         {data.LandingAboutInCTF[0]}& <wbr />
                         <span>{data.LandingAboutInCTF[1]}</span> <wbr />
                         {data.LandingAboutInCTF[2]}
                     </h2>
                     <p>
-                        { data.LandingDescINCTF.map((item, index) => (
+                        {data.LandingDescINCTF.map((item, index) => (
                             <span key={index}>
                                 {item}
                                 <br />
                                 <br />
                             </span>
                         ))}
-
                     </p>
                 </div>
-                <div className="md:w-1/3 flex justify-end items-center p-2">
+                <div className="md:w-1/3 flex justify-end items-center">
                     <div>
                         <HighlightFeature>
-                            { data.LandingHighlights.map((item, index) => (
+                            {data.LandingHighlights.map((item, index) => (
                                 <span key={index}>
                                     {item}
                                     <br />
                                     <br />
                                 </span>
-                            ))
-                            }
+                            ))}
                         </HighlightFeature>
                     </div>
                 </div>

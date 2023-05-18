@@ -26,7 +26,7 @@ const LandingPromoVideoSection = styled('section')`
 
 const LandingPromoVideo = () => (
     <LandingPromoVideoSection className="container mx-auto">
-        <div className="promo-video-container p-0 md:p-3">
+        <div className="promo-video-container p-0 md:p-4">
             <ReactPlayer url={data.LandingpromoVideo} width="100%" height="100%" />
         </div>
     </LandingPromoVideoSection>

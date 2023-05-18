@@ -1,12 +1,11 @@
-import React, {useState} from 'react';
-import styled from "@emotion/styled";
+import React, { useState } from 'react';
+import styled from '@emotion/styled';
 
-import TopBar from "../src/components/shared/TopBar";
-import SiteView from "../src/components/SiteView";
-
-import YearlyLeaderboard from "../src/components/HallOfFame/YearlyLeaderboard";
-import Footer from "../src/components/shared/Footer";
-import PageHeader from "../src/components/PageHeader";
+import TopBar from '../src/components/shared/TopBar';
+import SiteView from '../src/components/SiteView';
+import YearlyLeaderboard from '../src/components/HallOfFame/YearlyLeaderboard';
+import Footer from '../src/components/shared/Footer';
+import PageHeader from '../src/components/PageHeader';
 
 
 const PageWrap = styled.div`
@@ -17,8 +16,8 @@ const PageWrap = styled.div`
 `;
 
 type TabButton = {
-    isActive: boolean
-}
+  isActive: boolean
+};
 
 const TabButton = styled.button<TabButton>`
       padding: 0.5rem 1rem 0.5rem 0;
@@ -26,7 +25,7 @@ const TabButton = styled.button<TabButton>`
       background: none;
       border: none;
       font-weight: 600;
-      color: ${({isActive}) => isActive ? `#fd7e14` : '#333'};
+      color: ${({ isActive }) => isActive ? '#fd7e14' : '#333'};
       &:hover, &:focus {
         outline: none!important;
       }
@@ -37,45 +36,45 @@ const eventStats = require(`../src/data/${eventID}/stats/index`).default;
 
 const StatsPage = () => {
 
-    const [year, setYear] = useState(eventStats?.editions[0].year);
+  const [year, setYear] = useState(eventStats?.editions[0].year);
 
-    const editions = eventStats?.editions;
+  const editions = eventStats?.editions;
 
-    return <SiteView meta={{ title: "Results & Statistics" }}>
-        <TopBar darkenOnSidebar />
-        <PageHeader
-            title="Results & Statistics"
-            description="The results and statistics of the InCTF Junior editions showcasing the top cyber-security student talents in the country."
-            breadcrumb={[
-                {
-                    link: '/championship',
-                    title: 'Championship'
-                },
-                {
-                    link: '/stats',
-                    isActive: true,
-                    title: 'Results & Statistics'
-                }
-            ]}
-        />
-        <PageWrap>
-            <div style={{ maxWidth: '1100px', width: '100%' }}>
-                <div className="d-flex align-items-center">
-                    <div className="container-lg mt-6 px-4">
-                        {editions.map((y) =>
-                            <TabButton isActive={y.year===year} onClick={() => setYear(y.year)}>{y.year}</TabButton>
-                        )}
-                    </div>
-                </div>
-                <div className="container-lg px-4 py-5">
-                    {editions.filter((y) => y.year === year).map((y) =>
-                        <YearlyLeaderboard data={y} />
-                    )}
-                </div>
-            </div>
-        </PageWrap>
-        <Footer />
-    </SiteView>;
+  return (<SiteView meta={{ title: 'Results & Statistics' }}>
+    <TopBar darkenOnSidebar />
+    <PageHeader
+      title="Results & Statistics"
+      description="The results and statistics of the InCTF Junior editions showcasing the top cyber-security student talents in the country."
+      breadcrumb={[
+        {
+          link: '/championship',
+          title: 'Championship',
+        },
+        {
+          link: '/stats',
+          isActive: true,
+          title: 'Results & Statistics',
+        },
+      ]}
+    />
+    <PageWrap>
+      <div style={{ maxWidth: '1100px', width: '100%' }}>
+        <div className="d-flex align-items-center">
+          <div className="container-lg mt-6 px-4">
+            {editions.map((y) =>
+              <TabButton isActive={y.year === year} onClick={() => setYear(y.year)}>{y.year}</TabButton>,
+            )}
+          </div>
+        </div>
+        <div className="container-lg px-4 py-5">
+          {editions.filter((y) => y.year === year).map((y) =>
+            <YearlyLeaderboard data={y} />,
+          )}
+        </div>
+      </div>
+    </PageWrap>
+    <Footer />
+  </SiteView>);
 
 };
 

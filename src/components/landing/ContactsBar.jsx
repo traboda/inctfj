@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import Fade from 'react-reveal/Fade';
+import Fade from 'react-awesome-reveal';
 
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
@@ -51,9 +51,9 @@ const LandingContactsBar = () => {
         <div className="flex flex-wrap">
             <div className="w-full flex justify-center flex-wrap">
                 {data.LandingPoweredby.map((item, index) => {
-                    return <Fade left>  <PoweredByTraboda key={index}>
+                    return <Fade direction="left">  <PoweredByTraboda key={index}>
                         <div>{item.header}</div>
-                        <img src={require(`../../data/${eventID}/${item.logo}`)} />
+                        <img src={`/${eventID}/${item.logo}`} />
                     </PoweredByTraboda></Fade>
                 })}
             </div>

@@ -23,34 +23,32 @@ const BreadcrumbWrapper = styled.ul`
 `;
 
 type Breadcrumb = {
-    items: {
-        link?: string,
-        title?: string,
-        isActive?: boolean
-    }[]
+  items: {
+    link?: string,
+    title?: string,
+    isActive?: boolean
+  }[]
 };
 
 const Breadcrumb = ({ items }: Breadcrumb) => (
-    <BreadcrumbWrapper>
-        <li>
-            <Link passHref href="/">
-                <a className="hover:text-primary">
-                    <i className="fa fa-home" />
-                </a>
-            </Link>
-        </li>
-        {items.length > 0 &&
+  <BreadcrumbWrapper>
+    <li>
+      <Link legacyBehavior href="/" className="hover:text-primary">
+        <i className="fa fa-home" />
+      </Link>
+    </li>
+    {items.length > 0 &&
         items.map((i) =>
-            <li key={shortid.generate()}>
-                {i.isActive ? i.title : (
-                    <Link passHref href={i?.link||'#'}>
-                        <a className="hover:text-primary">
-                            {i.title}
-                        </a>
-                    </Link>
-                )}
-            </li>
+          (<li key={shortid.generate()}>
+            {i.isActive ? i.title : (
+              <Link legacyBehavior passHref href={i?.link || '#'}>
+                <a className="hover:text-primary">
+                  {i.title}
+                </a>
+              </Link>
+            )}
+          </li>),
         )}
-    </BreadcrumbWrapper>);
+  </BreadcrumbWrapper>);
 
 export default Breadcrumb;

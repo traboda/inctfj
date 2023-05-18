@@ -1,14 +1,11 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
 
 const RegCTASection = styled.section`
-   @media (min-width: 768px){
-     padding: 3vh 5vw;
-   }
    h3 {
       font-size: 22px;
       font-weight: 700;
@@ -31,17 +28,17 @@ const RegCTASection = styled.section`
 `
 
 const CTAReg = ({ UTMSource = null }) => (
-    <RegCTASection className="container mx-auto">
-        <div className="flex flex-wrap  mx-0">
-            <Fade left>
-                <div className="md:w-2/3 pr-4 pl-4 flex items-center p-2">
-                    <img alt="star" className="hidden md:block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />
+    <RegCTASection className="container mx-auto px-4 md:py-10">
+        <div className="flex flex-wrap">
+            <Fade direction="left">
+                <div className="md:w-2/3 flex items-center py-2">
+                    <img alt="star" className="hidden md:block mr-2" src={'/assets/images/icons/shooting_star.png'} />
                     <h3>
                         {data.CTAreg.message}
                     </h3>
                 </div>
             </Fade>
-            {/*<Fade right>*/}
+            {/*<Fade direction="right">*/}
             {/*    <div className="md:w-1/3 px-0 md:px-2 flex items-center justify-center w-full">*/}
             {/*        <iframe*/}
             {/*            className="border-0"*/}
