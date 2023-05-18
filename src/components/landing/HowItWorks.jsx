@@ -61,7 +61,7 @@ const LandingHowItWorks = () => {
                     {caption.content}
                 </>,
                 "links": [
-                    ...caption.links.map((link, index) => {
+                    ...caption.links.map((link) => {
                         return {
                             "title": link.title, "url": link.url
                         }
@@ -84,30 +84,32 @@ const LandingHowItWorks = () => {
                 How Does it Work?
             </h2>
         </div>
-        {steps.map((s) =>
-            <Fade left={s.left} right={s.right} top={s.top} delay={s.delay}>
-                <div className="md:w-1/3 pr-4 pl-4 px-3">
-                    <div className="flex flex-wrap  mx-0">
-                        <div className="md:w-full pr-4 pl-4 flex items-center justify-center w-1/4 p-1 md:p-0">
-                            <img draggable="false" alt={s.title} src={s.icon} />
-                        </div>
-                        <div className="md:w-full pr-4 pl-4 w-3/4 text-left md:text-center p-2 md:p-0">
-                            <h3>{s.title}</h3>
-                        </div>
-                        <div className="w-full text-left md:text-center">
-                            <p>{s.content}</p>
-                            {(s.links && s.links.length > 0) &&
-                            <div className="w-full mt-3 mb-4">{s.links.map((l) =>
-                                <a className="inline-block mx-2 py-2 px-3 mb-2" target="_blank" href={l.url}>
-                                    <i className="fa fa-external-link mr-2" />
-                                    {l.title}
-                                </a>
-                            )}</div>}
+        <div className="grid md:grid-cols-3">
+            {steps.map((s) =>
+                <Fade left={s.left} right={s.right} top={s.top} delay={s.delay}>
+                    <div className="pr-4 pl-4 px-3">
+                        <div className="flex flex-wrap  mx-0">
+                            <div className="md:w-full pr-4 pl-4 flex items-center justify-center w-1/4 p-1 md:p-0">
+                                <img draggable="false" alt={s.title} src={s.icon} />
+                            </div>
+                            <div className="md:w-full pr-4 pl-4 w-3/4 text-left md:text-center p-2 md:p-0">
+                                <h3>{s.title}</h3>
+                            </div>
+                            <div className="w-full text-left md:text-center">
+                                <p>{s.content}</p>
+                                {(s.links && s.links.length > 0) &&
+                                    <div className="w-full mt-3 mb-4">{s.links.map((l) =>
+                                        <a className="inline-block mx-2 py-2 px-3 mb-2" target="_blank" href={l.url}>
+                                            <i className="fa fa-external-link mr-2" />
+                                            {l.title}
+                                        </a>
+                                    )}</div>}
+                            </div>
                         </div>
                     </div>
-                </div>
-            </Fade>
-        )}
+                </Fade>
+            )}
+        </div>
     </HowItWorksSection>
 
 };
