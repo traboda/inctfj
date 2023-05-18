@@ -36,7 +36,7 @@ const LandingQuickInfo = () => {
   const landingInfo = [
     {
       image: '/assets/images/icons/trophy.png', left: true,
-      question: 'What?', answer: <>{data.what}</>,
+      question: 'What?', answer: data.what,
     },
     {
       image: 'assets/images/icons/calendar.png', up: true,
@@ -56,28 +56,29 @@ const LandingQuickInfo = () => {
     },
   ];
 
-  return (<QuickInfoSection>
-    <div className="flex flex-wrap container mx-auto">
-      {landingInfo.map((l) =>
-        (<div className="md:w-1/3 w-full pr-4 pl-4 p-2">
-          <Fade left={l.left} right={l.right} up={l.up}>
-            <div className="flex flex-wrap w-full mx-0">
-              <div className="flex items-center justify-center w-1/4 p-2 md:p-0">
-                <img draggable="false" alt={l.question} src={l.image} />
-              </div>
-              <div className="w-3/4 flex items-center px-2">
-                <div>
-                  <div className="qs">{l.question}</div>
-                  <div className="ans">{l.answer}</div>
+  return (
+    <QuickInfoSection>
+      <div className="flex flex-wrap container mx-auto px-4">
+        {landingInfo.map((l, i) => (
+          <div className="md:w-1/3 w-full py-2" key={i}>
+            <Fade left={l.left} right={l.right} up={l.up}>
+              <div className="flex flex-wrap w-full mx-0">
+                <div className="flex items-center justify-center w-1/4">
+                  <img draggable="false" alt={l.question} src={l.image} />
+                </div>
+                <div className="w-3/4 flex items-center">
+                  <div>
+                    <div className="qs">{l.question}</div>
+                    <div className="ans">{l.answer}</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Fade>
-        </div>),
-      )}
-    </div>
-  </QuickInfoSection>);
-
+            </Fade>
+          </div>
+        ))}
+      </div>
+    </QuickInfoSection>
+  );
 };
 
 export default LandingQuickInfo;

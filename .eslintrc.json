@@ -9,7 +9,7 @@
   },
   "overrides": [
     {
-      "files": ["pages/**/*.tsx", "src/**/*.tsx"],
+      "files": ["pages/**/*.tsx", "src/**/*.tsx", "pages/**/*.jsx", "src/**/*.jsx"],
       "rules": {
         "import/no-unused-modules": "off"
       }

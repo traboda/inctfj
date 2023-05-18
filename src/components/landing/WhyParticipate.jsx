@@ -41,29 +41,28 @@ const ReasonsSection = styled.section`
 `;
 
 const LandingReasonsToParticipate = () => {
-
-    return <ReasonsSection className="container mx-auto">
-        <h2 className="text-center">
-            <div className="flex justify-center">
-                <img className="mr-2" style={{ width: '64px'}} alt="Why Participate?" src={'/assets/images/icons/heart.png'} />
-            </div>
-            Why Participate?
-        </h2>
-        <div className="flex flex-wrap  mx-0">
-        {data.whyPacrticipate.map((r, index) =>
-            <Zoom up={index%2} left={!index%2}>
-                <div className="w-full md:w-1/2 lg:w-1/4 text-center mb-6 md:mb-0 p-2">
-                    <video autoPlay loop muted src={`/${eventID}/${r.video}`} />
-                    <div>
-                        {r.text.map((text, index) =>
-                            <p key={index}>{text}</p>
-                        )}
-                    </div>
+    return (
+        <ReasonsSection className="container mx-auto px-4">
+            <h2 className="text-center">
+                <div className="flex justify-center">
+                    <img className="mr-2" style={{ width: '64px'}} alt="Why Participate?" src={'/assets/images/icons/heart.png'} />
                 </div>
-            </Zoom>
-        )}
-        </div>
-    </ReasonsSection>
+                Why Participate?
+            </h2>
+            <div className="grid lg:grid-cols-4 md:grid-cols-2">
+                {data.whyPacrticipate.map((r, index) => (
+                    <Zoom up={index%2} left={!index%2}>
+                    <div className="w-full text-center mb-6 md:mb-0 p-2">
+                        <video autoPlay loop muted src={`/${eventID}/${r.video}`} />
+                        <div>
+                            {r.text.map((text, index) => <p key={index}>{text}</p>)}
+                        </div>
+                    </div>
+                </Zoom>
+            ))}
+            </div>
+        </ReasonsSection>
+    );
 
 };
 

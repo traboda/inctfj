@@ -1,7 +1,6 @@
 import React from 'react';
-import styled from "@emotion/styled";
-
-import { Fade } from "react-awesome-reveal";
+import styled from '@emotion/styled';
+import { Fade } from 'react-awesome-reveal';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
@@ -12,7 +11,6 @@ const HeaderContainer = styled.section`
     align-items: center;
     justify-content: center;
     .header-container {
-        padding: 3.5vh 1rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -67,59 +65,58 @@ const HeaderContainer = styled.section`
     }
 `;
 
-const LandingHeader = ({ UTMSource = null }) => {
+const LandingHeader = () => {
+ 
+  return (
+    <HeaderContainer>
+      <div className="container header-container">
+        <div className="w-full">
+          <div className="flex flex-wrap">
+            <div className="w-full md:w-2/3 px-4">
+              <Fade>
+                <h1>
+                  <span style={{ color: '#FF6F00' }}>{data.Landingheader}</span>
+                  <br />
+                  {data.date}
+                </h1>
+              </Fade>
+              <Fade direction="up">
+                <p>
+                  <span className="mt-6">
+                    {data.Desc}
+                  </span>
+                  {data.subDesc}
+                </p>
+              </Fade>
+              <div className="mt-4 md:px-2">
+                {data.button.map((button) => (
+                  <a
+                    href={button.link}
+                    className="text-2xl px-5 py-4 inline-block font-semibold ml-3 rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl my-3"
+                  >
+                    Coming Soon 
+                    {' '}
+                    <i className="fa fa-chevron-right" />
+                  </a>
+                ))}
 
-    return (
-        <React.Fragment>
-            <HeaderContainer>
-                <div className="container header-container">
-                    <div className="w-full">
-                        <div className="flex flex-wrap">
-                            <div className="w-full md:w-2/3 px-4">
-                                <Fade>
-                                    <h1>
-                                        <span style={{ color: '#FF6F00'}}>{data.Landingheader}</span><br/>
-                                        {data.date}
-                                    </h1>
-                                </Fade>
-                                <Fade direction="up">
-                                    <p>
-                                    <span className="mt-6">
-                                        {data.Desc}
-                                    </span>
-                                            {data.subDesc}
-                                    </p>
-                                </Fade>
-                                <div className="mt-4 md:px-2">
-                                    {data.button.map((button) => (
+              </div>
+            </div>
+            <div className="md:w-1/3 my-4 md:my-0 px-3">
+              <img
+                alt="InCTF Jr"
+                id="landing-header-cover-image"
+                src={`/${eventID}/${data.LandingCoverImage}`}
+                style={{ position: 'unset', maxHeight: '500px', maxWidth: '100%' }}
+                draggable="false"
+              />
+            </div>
+          </div>
 
-
-                                    <a
-                                        href={button.link}
-                                        className="text-2xl px-5 py-4 inline-block font-semibold ml-3 rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl my-3"
-                                    >
-                                        Coming Soon <i className="fa fa-chevron-right"/>
-                                    </a>
-                                    ))}
-                                    
-                                </div>
-                            </div>
-                            <div className="md:w-1/3 my-4 md:my-0 px-3">
-                                <img
-                                    alt="InCTF Jr"
-                                    id="landing-header-cover-image"
-                                    src={`/${eventID}/${data.LandingCoverImage}`}
-                                    style={{ position: 'unset', maxHeight: '500px', maxWidth: '100%' }}
-                                    draggable="false"
-                                />
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </HeaderContainer>
-        </React.Fragment>
-    );
+        </div>
+      </div>
+    </HeaderContainer>
+  );
 
 
 };

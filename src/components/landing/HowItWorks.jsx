@@ -52,7 +52,6 @@ const HowItWorksSection = styled.section`
 const LandingHowItWorks = () => {
 
     const steps = [
-        
         ...data.Captions.map((caption, index) => {
             return {
                 "title": caption.title, "icon": '/assets/images/icons/' + caption.icon,
@@ -71,24 +70,24 @@ const LandingHowItWorks = () => {
         })
     ]
 
-    return <HowItWorksSection className="motto-cards flex flex-wrap py-5 mx-0 container mx-auto">
-        <div className="w-full flex justify-center p-0 mb-12 px-4">
-            <h2 className="md:px-4 px-1 py-2 rounded-r mt-4 mb-2 md:flex inline-block items-center font-bold text-center mb-0">
-                <img
-                    draggable="false"
-                    alt="How it Works?"
-                    src={'/assets/images/icons/thinking.png'}
-                    className="mr-2 my-0 p-0 shadow-none inline-block"
-                    style={{ width: '64px' }}
-                />
-                How Does it Work?
-            </h2>
-        </div>
-        <div className="grid md:grid-cols-3">
-            {steps.map((s) =>
-                <Fade left={s.left} right={s.right} top={s.top} delay={s.delay}>
-                    <div className="pr-4 pl-4 px-3">
-                        <div className="flex flex-wrap  mx-0">
+    return (
+        <HowItWorksSection className="motto-cards flex flex-wrap py-5 container mx-auto px-4">
+            <div className="w-full flex justify-center p-0 mb-12">
+                <h2 className="py-2 rounded-r mt-4 mb-2 md:flex inline-block items-center font-bold text-center">
+                    <img
+                        draggable="false"
+                        alt="How it Works?"
+                        src={'/assets/images/icons/thinking.png'}
+                        className="mr-2 my-0 p-0 shadow-none inline-block"
+                        style={{ width: '64px' }}
+                    />
+                    How Does it Work?
+                </h2>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4">
+                {steps.map((s) =>
+                    <Fade left={s.left} right={s.right} top={s.top} delay={s.delay}>
+                        <div className="flex flex-wrap">
                             <div className="md:w-full pr-4 pl-4 flex items-center justify-center w-1/4 p-1 md:p-0">
                                 <img draggable="false" alt={s.title} src={s.icon} />
                             </div>
@@ -106,11 +105,11 @@ const LandingHowItWorks = () => {
                                     )}</div>}
                             </div>
                         </div>
-                    </div>
-                </Fade>
-            )}
-        </div>
-    </HowItWorksSection>
+                    </Fade>
+                )}
+            </div>
+        </HowItWorksSection>
+    )
 
 };
 

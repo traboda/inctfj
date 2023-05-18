@@ -44,7 +44,7 @@ const SponsorsSection = () => {
           <div className="flex flex-wrap">
             <div className="inctfj-sponsors text-red-500 w-full p-0 mt-3 mb-3 opacity-80 text-lg text-center">{sponsor.label}</div>
             <div className="w-full flex justify-center">
-              <p className="text-center opacity-8 mb-3" style={{ maxWidth: '100%', fontSize: '95%', lineHeight: 1.4, width: '450px' }}>
+              <p className="text-center opacity-8 mb-3">
                 {sponsor.desc}
               </p>
             </div> 

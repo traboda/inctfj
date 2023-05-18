@@ -11,7 +11,6 @@ const data = require(`../../data/${eventID}/index.json`);
 import {disableBodyScroll, clearAllBodyScrollLocks} from "body-scroll-lock";
 
 const TestimonialSection = styled.section`
-    padding: 8vh 1rem;
     .testimonial-title {
       font-weight: 700;
       text-transform: uppercase;
@@ -59,48 +58,50 @@ const LandingTestimonials = () => {
         setShowPlayer(true);
     };
 
-    return <TestimonialSection className="container mx-auto">
-        <Fade>
-            {data.LandingTestimonialsHeader &&
-            <div className="testimonial-title mb-3">
-                <img src={'/assets/images/icons/play_button.png'} alt="View Video Testimonials"/>
-                {data?.LandingTestimonialsHeader}
+    return (
+        <TestimonialSection className="container mx-auto px-4 py-10">
+            <Fade>
+                {data.LandingTestimonialsHeader && (
+                    <div className="testimonial-title mb-3">
+                        <img src={'/assets/images/icons/play_button.png'} alt="View Video Testimonials"/>
+                        {data?.LandingTestimonialsHeader}
+                    </div>
+                )}
+            </Fade>
+            <div className="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-2">
+                {data.LandingTestimonials?.map((p, index) => (
+                    <Fade delay={index*200}>
+                        <a onClick={openVideo}>
+                            <img alt="testimonial student" draggable="false" src={`/${eventID}/${p}`} />
+                        </a>
+                    </Fade>
+                ))}
             </div>
-            }
-        </Fade>
-        <div className="flex flex-wrap  mx-0">
-            {data.LandingTestimonials?.map((p, index) => <div className="w-1/2 md:w-1/3 lg:w-1/6 p-1">
-                <Fade delay={index*200}>
-                    <a onClick={openVideo}>
-                        <img alt="testimonial student" draggable="false" src={`/${eventID}/${p}`} />
-                    </a>
-                </Fade>
-            </div>)}
-        </div>
-        <Modal
-            isOpen={showPlayer}
-            onRequestClose={() => { clearAllBodyScrollLocks(); setShowPlayer(false); }}
-            style={{
-                overlay: {
-                    zIndex: 9000, background: 'rgba(0,0,0,0.8)',
-                    height: '100vh',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                },
-                content: {
-                    position: 'unset', top: 0, left: 0, right: 0, padding: '5px',
-                    border: 'none', background: 'none',  width: '100%',
-                }
-            }}
-        >
-            <CloseButton
-                className="px-4 border-0 rounded"
-                onClick={() => { clearAllBodyScrollLocks(); setShowPlayer(false)}}
+            <Modal
+                isOpen={showPlayer}
+                onRequestClose={() => { clearAllBodyScrollLocks(); setShowPlayer(false); }}
+                style={{
+                    overlay: {
+                        zIndex: 9000, background: 'rgba(0,0,0,0.8)',
+                        height: '100vh',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    },
+                    content: {
+                        position: 'unset', top: 0, left: 0, right: 0, padding: '5px',
+                        border: 'none', background: 'none',  width: '100%',
+                    }
+                }}
             >
-                <img alt="close" src={'/assets/images/icons/close.png'} />
-            </CloseButton>
-            {showPlayer && <ReactPlayer url="https://www.youtube.com/watch?v=U5zVYdYJBwQ" autoplay width="100%" height="80vmin" />}
-        </Modal>
-    </TestimonialSection>
+                <CloseButton
+                    className="px-4 border-0 rounded"
+                    onClick={() => { clearAllBodyScrollLocks(); setShowPlayer(false)}}
+                >
+                    <img alt="close" src={'/assets/images/icons/close.png'} />
+                </CloseButton>
+                {showPlayer && <ReactPlayer url="https://www.youtube.com/watch?v=U5zVYdYJBwQ" autoplay width="100%" height="80vmin" />}
+            </Modal>
+        </TestimonialSection>
+    )
 };
 
 export default LandingTestimonials;
