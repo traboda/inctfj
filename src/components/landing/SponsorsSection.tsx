@@ -39,32 +39,31 @@ const Wrapper = styled.div`
 const SponsorsSection = () => {
   return (
     <Wrapper>
-      {data.map((sponsor, index) => {
-        return (
-          <div className="flex flex-wrap">
-            <div className="inctfj-sponsors text-red-500 w-full p-0 mt-3 mb-3 opacity-80 text-lg text-center">{sponsor.label}</div>
-            <div className="w-full flex justify-center">
-              <p className="text-center opacity-8 mb-3">
-                {sponsor.desc}
-              </p>
-            </div> 
-            {sponsor.sponsors.map((sponsor, index) => {
-              return (
-                <div className="flex flex-wrap" style={{ display:'flex', flex:'1 1 50%', justifyContent:'space-between', flexWrap:'wrap' }}>
-                  <div className="w-full flex justify-center" >
-                    <Fade>
-                      <a href={sponsor.link} target="_blank" rel="noopener noreferrer" style={{ display:'block' }}>
-                        <img src={`/inctf/${sponsor.path}`} draggable="false" alt="Sponsor Logo" />
-                        {sponsor?.desg && (<div className="text-sm mt-3 font-light">{sponsor.desg}</div>)}
-                      </a>
-                    </Fade>
-                  </div>
+      {data.map((sponsor, index) => (
+        <div className="flex flex-wrap" key={index}>
+          <div className="inctfj-sponsors text-red-500 w-full p-0 mt-3 mb-3 opacity-80 text-lg text-center">{sponsor.label}</div>
+          <div className="w-full flex justify-center">
+            <p className="text-center opacity-8 mb-3">
+              {sponsor.desc}
+            </p>
+          </div> 
+          {sponsor.sponsors.map((sponsor, index) => {
+            return (
+              <div className="flex flex-wrap" key={index} style={{ display:'flex', flex:'1 1 50%', justifyContent:'space-between', flexWrap:'wrap' }}>
+                <div className="w-full flex justify-center" >
+                  <Fade>
+                    <a href={sponsor.link} target="_blank" rel="noopener noreferrer" style={{ display:'block' }}>
+                      <img src={`/inctf/${sponsor.path}`} draggable="false" alt="Sponsor Logo" />
+                      {sponsor?.desg && (<div className="text-sm mt-3 font-light">{sponsor.desg}</div>)}
+                    </a>
+                  </Fade>
                 </div>
-              );
-            })}
-          </div>
-        );
-      })}  
+              </div>
+            );
+          })}
+        </div>
+      ),
+      )}  
     </Wrapper>
   );
 };

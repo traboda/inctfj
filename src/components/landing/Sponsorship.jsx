@@ -1,7 +1,8 @@
 import React from 'react';
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 import { Fade } from 'react-awesome-reveal';
-import SponsorsSection from "./SponsorsSection";
+
+import SponsorsSection from './SponsorsSection';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
@@ -74,58 +75,58 @@ const LogoWall = styled.div`
         width: 147px !important;
         object-fit: contain !important;
     }
-`
+`;
 
 const LandingSponsorship = () => {
 
-    return (
-        <SponsorshipArea className="grid lg:grid-cols-2 mx-auto container px-4 py-10 gap-8">
+  return (
+    <SponsorshipArea className="grid lg:grid-cols-2 mx-auto container px-4 py-10 gap-8">
+      <div>
+        <Fade direction="left">
+          {data.forNewSponsors && (
             <div>
-                <Fade direction="left">
-                    {data.forNewSponsors && (
-                        <div>
-                            <h2>{data.forNewSponsors.title}</h2>
-                            <p>
-                                {data.forNewSponsors.description[0]}
-                                <div className="text-lg mt-3">{data.forNewSponsors.description[1]}</div>
-                            </p>
-                            <div className="mt-2 mx-0 mb-8">
-                                {/*<a className="sponsorship-brochure-button" href="/sponsor">Sponsorship Brochure</a>*/}
-                                <a className="contact-us-button" href={data.forNewSponsors.url}>{data.forNewSponsors.button}</a>
-                            </div>
-                        </div>
-                    )}
-                    <LogoWall>
-                        {data.officialPartners && data.officialPartners.length > 0 && (
-                            <div className="bg-white rounded-xl shadow-md my-6">
-                                <div className="flex flex-wrap">
-                                    <div className="inctfj-sponsors text-red-500 w-full p-0 mt-3 mb-3 opacity-80 text-lg text-center">
-                                        InCTF Jr 2021 - Official Partners
-                                    </div>
-                                    {data.officialPartners.map((s) =>
-                                        <div className="md:w-1/2 w-full flex items-center" style={{display:'flex',flex:'1 1 30%',flexWrap:'wrap',alignItems:'center',justifyContent:'space-between'}}>
-                                            <Fade>
-                                                <a href={s.link} target="_blank" style={{display:'block'}}>
-                                                    <img draggable="false" alt="Sponsor Logo" src={`/${eventID}/${s.logo}`} style={{maxHeight:'80px',minHeight:'79px',width:'150px',objectFit:'contain'}}/>
-                                                </a>
-                                            </Fade>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-                        )}
-                    </LogoWall>
-                </Fade>
+              <h2>{data.forNewSponsors.title}</h2>
+              <p>
+                {data.forNewSponsors.description[0]}
+                <div className="text-lg mt-3">{data.forNewSponsors.description[1]}</div>
+              </p>
+              <div className="mt-2 mx-0 mb-8">
+                {/*<a className="sponsorship-brochure-button" href="/sponsor">Sponsorship Brochure</a>*/}
+                <a className="contact-us-button" href={data.forNewSponsors.url}>{data.forNewSponsors.button}</a>
+              </div>
             </div>
-            <Fade direction="right">
-                <LogoWall>
-                    <div className="bg-white rounded-xl shadow-md px-2 py-8 md:p-4">
-                        <SponsorsSection />
-                    </div>
-                </LogoWall>
-            </Fade>
+          )}
+          <LogoWall>
+            {data.officialPartners && data.officialPartners.length > 0 && (
+            <div className="bg-white rounded-xl shadow-md my-6">
+              <div className="flex flex-wrap">
+                <div className="inctfj-sponsors text-red-500 w-full p-0 mt-3 mb-3 opacity-80 text-lg text-center">
+                  InCTF Jr 2021 - Official Partners
+                </div>
+                {data.officialPartners.map((s) =>
+                  (<div className="md:w-1/2 w-full flex items-center" style={{ display:'flex', flex:'1 1 30%', flexWrap:'wrap', alignItems:'center', justifyContent:'space-between' }}>
+                    <Fade>
+                      <a href={s.link} target="_blank" style={{ display:'block' }}>
+                        <img draggable="false" alt="Sponsor Logo" src={`/${eventID}/${s.logo}`} style={{ maxHeight:'80px', minHeight:'79px', width:'150px', objectFit:'contain' }} />
+                      </a>
+                    </Fade>
+                  </div>),
+                )}
+              </div>
+            </div>
+            )}
+          </LogoWall>
+        </Fade>
+      </div>
+      <Fade direction="right">
+        <LogoWall>
+          <div className="bg-white rounded-xl shadow-md px-2 py-8 md:p-4">
+            <SponsorsSection />
+          </div>
+        </LogoWall>
+      </Fade>
     </SponsorshipArea>
-    );
+  );
 };
 
 export default LandingSponsorship;

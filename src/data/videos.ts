@@ -1,4 +1,4 @@
-export default [
+const videos = [
   {
     title: 'Introduction to CTFs',
     videoID: '-PvKBido90I',
@@ -76,3 +76,5 @@ export default [
     tags: ['chall-solution'],
   },
 ];
+
+export default videos;

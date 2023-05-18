@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 import Fade from 'react-awesome-reveal';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
@@ -44,64 +44,70 @@ const OrganizersSection = styled.section`
 const LandingOrganizers = () => {
 
 
-    return <OrganizersSection>
-        <div className="content-container">
-            <h3>Organized By</h3>
-            <div className="flex flex-wrap grid md:grid-cols-3 mx-0">
-                <Fade direction="left">
-                    <div className="w-full pr-4 pl-4 md:order-1 order-2 md:text-right text-center ">
-                        <a href="https://amrita.edu">
-                            <img alt="Amrita Vishwa Vidyapeetham"
-                                 src={`/${eventID}/${Data.Organizers[0].logo}`}
-                                 className="md:ml-auto md:mr-0 mx-auto" />
-                        </a>
-                        <h4>
-                            {Data.Organizers[0].header}
-                        </h4>
-                        <div className="flex md:justify-end justify-center">
-                            <p>
-                            {Data.Organizers[0].desc}
-                            </p>
-                        </div>
-                    </div>
-                </Fade>
-                <Fade direction="up">
-                    <div className="w-full pr-4 pl-4 text-center md:order-2 order-1">
-                        <a href="https://bi0s.in">
-                            <img alt="Team bi0s" src={`/${eventID}/${Data.Organizers[1].logo}`}
-                                 className="mx-auto" />
-                        </a>
-                        <h4>
-                            {Data.Organizers[1].header}
-                        </h4>
-                        <div className="flex justify-center">
-                            <p>
-                            {Data.Organizers[1].desc}
-                            </p>
-                        </div>
-                    </div>
-                </Fade>
-                <Fade direction="right">
-                    <div className="w-full pr-4 pl-4 md:order-2 order-1 md:text-left text-center">
-                        <a href="https://www.amrita.edu/center/cyber-security">
-                            <img
-                                alt="Amrita Center for Cyber Security Systems & Networks"
-                                src={`/${eventID}/${Data.Organizers[2].logo}`} className="inline"
-                            />
-                        </a>
-                        <h4>
-                            {Data.Organizers[2].header}
-                        </h4>
-                        <div className="flex md:justify-start justify-center">
-                            <p>
-                            {Data.Organizers[2].desc}
-                            </p>
-                        </div>
-                    </div>
-                </Fade>
+  return (<OrganizersSection>
+    <div className="content-container">
+      <h3>Organized By</h3>
+      <div className="flex flex-wrap grid md:grid-cols-3 mx-0">
+        <Fade direction="left">
+          <div className="w-full pr-4 pl-4 md:order-1 order-2 md:text-right text-center ">
+            <a href="https://amrita.edu">
+              <img
+                alt="Amrita Vishwa Vidyapeetham"
+                src={`/${eventID}/${Data.Organizers[0].logo}`}
+                className="md:ml-auto md:mr-0 mx-auto"
+              />
+            </a>
+            <h4>
+              {Data.Organizers[0].header}
+            </h4>
+            <div className="flex md:justify-end justify-center">
+              <p>
+                {Data.Organizers[0].desc}
+              </p>
             </div>
-        </div>
-    </OrganizersSection>;
+          </div>
+        </Fade>
+        <Fade direction="up">
+          <div className="w-full pr-4 pl-4 text-center md:order-2 order-1">
+            <a href="https://bi0s.in">
+              <img
+                alt="Team bi0s"
+                src={`/${eventID}/${Data.Organizers[1].logo}`}
+                className="mx-auto"
+              />
+            </a>
+            <h4>
+              {Data.Organizers[1].header}
+            </h4>
+            <div className="flex justify-center">
+              <p>
+                {Data.Organizers[1].desc}
+              </p>
+            </div>
+          </div>
+        </Fade>
+        <Fade direction="right">
+          <div className="w-full pr-4 pl-4 md:order-2 order-1 md:text-left text-center">
+            <a href="https://www.amrita.edu/center/cyber-security">
+              <img
+                alt="Amrita Center for Cyber Security Systems & Networks"
+                src={`/${eventID}/${Data.Organizers[2].logo}`}
+                className="inline"
+              />
+            </a>
+            <h4>
+              {Data.Organizers[2].header}
+            </h4>
+            <div className="flex md:justify-start justify-center">
+              <p>
+                {Data.Organizers[2].desc}
+              </p>
+            </div>
+          </div>
+        </Fade>
+      </div>
+    </div>
+  </OrganizersSection>);
 
 };
 

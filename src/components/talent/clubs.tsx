@@ -11,7 +11,7 @@ const CyberClubsInSchools = () => (
       </h1>
       <ul className="leading-loose font-medium mt-6 md:mr-10">
         {data.subhead2.texts.map((text, index) => (
-          <li>
+          <li key={index}>
             {text}
           </li>
         ))}
@@ -21,7 +21,7 @@ const CyberClubsInSchools = () => (
       <h3 className="font-semibold text-primary">{data.subhead3.header}</h3>
       <ul className="mt-4 leading-loose font-medium">
         {data.subhead3.texts.map((text, index) => (
-          <li>
+          <li key={index}>
             {text}
           </li>
         ))}

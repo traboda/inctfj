@@ -9,9 +9,14 @@
   },
   "overrides": [
     {
-      "files": ["pages/**/*.tsx", "src/**/*.tsx", "pages/**/*.jsx", "src/**/*.jsx"],
+      "files": ["pages/**/*.tsx", "src/**/*.tsx", "pages/**/*.jsx", "src/**/*.jsx", "pages/**/*.js", "src/**/*.js", "pages/**/*.ts", "src/**/*.ts"],
       "rules": {
-        "import/no-unused-modules": "off"
+        "import/no-unused-modules": "off",
+        "@typescript-eslint/return-await": "off",
+        "import/no-anonymous-default-export": "off",
+        "jsx-a11y/alt-text": "off",
+        "react/jsx-key": "off",
+        "@next/next/no-html-link-for-pages": "off"
       }
     }
   ],

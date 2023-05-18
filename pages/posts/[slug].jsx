@@ -1,12 +1,11 @@
 import React from 'react';
-import styled from "@emotion/styled";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import styled from '@emotion/styled';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
-import TopBar from "../../src/components/shared/TopBar";
-
-import Footer from "../../src/components/shared/Footer";
-import SiteView from "../../src/components/SiteView";
+import TopBar from '../../src/components/shared/TopBar';
+import Footer from '../../src/components/shared/Footer';
+import SiteView from '../../src/components/SiteView';
 
 const BlogWrap = styled.section`
     background: #223;
@@ -29,47 +28,57 @@ const TitleArea = styled.div`
     div {
         color: #AAA;
     }
-`
+`;
 
 const BlogPostPage = ({ slug }) => {
-    const data = (() => {
-        try {
-            return require(`../../src/data/posts/${slug}.yaml`);
-        } catch (e) {
-            return null;
-        }
-    })();
+  const data = (() => {
+    try {
+      return require(`../../src/data/posts/${slug}.yaml`);
+    } catch (e) {
+      return null;
+    }
+  })();
 
-    return data ?
-        <SiteView meta={{ title: `${data.title} - Blog`, description: data.description }}>
-            <TopBar darkenOnSidebar />
-            <BlogWrap>
-                <TitleArea>
-                    <div className="container-lg p-4" style={{ maxWidth: '900px' }}>
-                        <h1>{data.title}</h1>
-                        <div>
-                            <div className="mr-3 d-inline-block my-1"><i className="far fa-calendar-alt mr-1" /> {data.date.toDateString()}</div>
-                            <div className="d-inline-block my-1"><i className="far fa-user mr-1" /> {data.author}</div>
-                        </div>
-                    </div>
-                </TitleArea>
-                <div className="container-lg py-4 px-3" style={{ maxWidth: '900px' }}>
-                    <div>
-                        <ReactMarkdown plugins={[remarkGfm]} children={data?.content} />
-                    </div>
-                </div>
-            </BlogWrap>
-            <Footer />
-        </SiteView> :
-        <SiteView meta={{ title: `Blog Post Not Found` }}>
-            <TopBar darkenOnSidebar />
-            <Footer />
-        </SiteView>
-}
+  return data ?
+    <SiteView meta={{ title: `${data.title} - Blog`, description: data.description }}>
+      <TopBar darkenOnSidebar />
+      <BlogWrap>
+        <TitleArea>
+          <div className="container-lg p-4" style={{ maxWidth: '900px' }}>
+            <h1>{data.title}</h1>
+            <div>
+              <div className="mr-3 d-inline-block my-1">
+                <i className="far fa-calendar-alt mr-1" /> 
+                {' '}
+                {data.date.toDateString()}
+              </div>
+              <div className="d-inline-block my-1">
+                <i className="far fa-user mr-1" /> 
+                {' '}
+                {data.author}
+              </div>
+            </div>
+          </div>
+        </TitleArea>
+        <div className="container-lg py-4 px-3" style={{ maxWidth: '900px' }}>
+          <div>
+            <ReactMarkdown plugins={[remarkGfm]}>
+              {data?.content}
+            </ReactMarkdown>
+          </div>
+        </div>
+      </BlogWrap>
+      <Footer />
+    </SiteView> :
+    <SiteView meta={{ title: 'Blog Post Not Found' }}>
+      <TopBar darkenOnSidebar />
+      <Footer />
+    </SiteView>;
+};
 
 BlogPostPage.getInitialProps = async ({ query }) => {
-    const slug = query.slug;
-    return { slug }
+  const slug = query.slug;
+  return { slug };
 };
 
 

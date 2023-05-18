@@ -18,7 +18,7 @@ const WomenInCyberSecuritySection = () => (
         <h1 className="font-semibold text-primary">{data.subhead4.header}</h1>
         <ul className="leading-loose font-medium">
           {data.subhead4.texts.map((text, index) => (
-            <li>
+            <li key={index}>
               <br />
               {text}
               <br />
@@ -32,7 +32,7 @@ const WomenInCyberSecuritySection = () => (
         <h1 className="font-semibold text-primary">{data.subhead5.header}</h1>
         <ul className="mt-6 leading-loose font-medium">
           {data.subhead5.texts.map((text, index) => (
-            <li>
+            <li key={index}>
               <br />
               {text}
               <br />

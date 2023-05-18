@@ -1,7 +1,7 @@
 import React from 'react';
-import { keyframes } from "@emotion/react";
-import styled from "@emotion/styled";
-import { Zoom } from "react-awesome-reveal";
+import { keyframes } from '@emotion/react';
+import styled from '@emotion/styled';
+import { Zoom } from 'react-awesome-reveal';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
@@ -12,7 +12,7 @@ const VideoRotationAnimation = keyframes`
   50%{ transform: rotateZ(3deg); }
   75%{ transform: rotateZ(4deg); }
   100%{ transform: rotateZ(6deg); }
-`
+`;
 
 const ReasonsSection = styled.section`
   padding: 8vh 2vw;
@@ -41,28 +41,28 @@ const ReasonsSection = styled.section`
 `;
 
 const LandingReasonsToParticipate = () => {
-    return (
-        <ReasonsSection className="container mx-auto px-4">
-            <h2 className="text-center">
-                <div className="flex justify-center">
-                    <img className="mr-2" style={{ width: '64px'}} alt="Why Participate?" src={'/assets/images/icons/heart.png'} />
-                </div>
-                Why Participate?
-            </h2>
-            <div className="grid lg:grid-cols-4 md:grid-cols-2">
-                {data.whyPacrticipate.map((r, index) => (
-                    <Zoom up={index%2} left={!index%2}>
-                    <div className="w-full text-center mb-6 md:mb-0 p-2">
-                        <video autoPlay loop muted src={`/${eventID}/${r.video}`} />
-                        <div>
-                            {r.text.map((text, index) => <p key={index}>{text}</p>)}
-                        </div>
-                    </div>
-                </Zoom>
-            ))}
+  return (
+    <ReasonsSection className="container mx-auto px-4">
+      <h2 className="text-center">
+        <div className="flex justify-center">
+          <img className="mr-2" style={{ width: '64px' }} alt="Why Participate?" src="/assets/images/icons/heart.png" />
+        </div>
+        Why Participate?
+      </h2>
+      <div className="grid lg:grid-cols-4 md:grid-cols-2">
+        {data.whyPacrticipate.map((r, index) => (
+          <Zoom up={index % 2} left={!index % 2}>
+            <div className="w-full text-center mb-6 md:mb-0 p-2">
+              <video autoPlay loop muted src={`/${eventID}/${r.video}`} />
+              <div>
+                {r.text.map((text, index) => <p key={index}>{text}</p>)}
+              </div>
             </div>
-        </ReasonsSection>
-    );
+          </Zoom>
+        ))}
+      </div>
+    </ReasonsSection>
+  );
 
 };
 

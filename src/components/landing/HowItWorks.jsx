@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 import Fade from 'react-awesome-reveal';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
@@ -51,65 +51,70 @@ const HowItWorksSection = styled.section`
 
 const LandingHowItWorks = () => {
 
-    const steps = [
-        ...data.Captions.map((caption, index) => {
+  const steps = [
+    ...data.Captions.map((caption, index) => {
+      return {
+        'title': caption.title, 'icon': '/assets/images/icons/' + caption.icon,
+        'delay': (index + 1) * 100, 'left': true,
+        'content': (
+        // eslint-disable-next-line react/jsx-no-useless-fragment
+          <>
+            {caption.content}
+          </>
+        ),
+        'links': [
+          ...caption.links.map((link) => {
             return {
-                "title": caption.title, "icon": '/assets/images/icons/' + caption.icon,
-                "delay": (index + 1) * 100, "left": true,
-                "content": <>
-                    {caption.content}
-                </>,
-                "links": [
-                    ...caption.links.map((link) => {
-                        return {
-                            "title": link.title, "url": link.url
-                        }
-                    })
-                ]
-            }
-        })
-    ]
+              'title': link.title, 'url': link.url,
+            };
+          }),
+        ],
+      };
+    }),
+  ];
 
-    return (
-        <HowItWorksSection className="motto-cards flex flex-wrap py-5 container mx-auto px-4">
-            <div className="w-full flex justify-center p-0 mb-12">
-                <h2 className="py-2 rounded-r mt-4 mb-2 md:flex inline-block items-center font-bold text-center">
-                    <img
-                        draggable="false"
-                        alt="How it Works?"
-                        src={'/assets/images/icons/thinking.png'}
-                        className="mr-2 my-0 p-0 shadow-none inline-block"
-                        style={{ width: '64px' }}
-                    />
-                    How Does it Work?
-                </h2>
+  return (
+    <HowItWorksSection className="motto-cards flex flex-wrap py-5 container mx-auto px-4">
+      <div className="w-full flex justify-center p-0 mb-12">
+        <h2 className="py-2 rounded-r mt-4 mb-2 md:flex inline-block items-center font-bold text-center">
+          <img
+            draggable="false"
+            alt="How it Works?"
+            src="/assets/images/icons/thinking.png"
+            className="mr-2 my-0 p-0 shadow-none inline-block"
+            style={{ width: '64px' }}
+          />
+          How Does it Work?
+        </h2>
+      </div>
+      <div className="grid md:grid-cols-3 gap-4">
+        {steps.map((s) =>
+          (<Fade left={s.left} right={s.right} top={s.top} delay={s.delay}>
+            <div className="flex flex-wrap">
+              <div className="md:w-full pr-4 pl-4 flex items-center justify-center w-1/4 p-1 md:p-0">
+                <img draggable="false" alt={s.title} src={s.icon} />
+              </div>
+              <div className="md:w-full mb-4 pr-4 pl-4 w-3/4 text-left md:text-center p-2 md:p-0">
+                <div className="text-3xl font-semibold">{s.title}</div>
+              </div>
+              <div className="w-full text-left md:text-center">
+                <p>{s.content}</p>
+                {(s.links && s.links.length > 0) &&
+                <div className="w-full mt-3 mb-4">
+                  {s.links.map((l) =>
+                    (<a className="inline-block mx-2 py-2 px-3 mb-2" target="_blank" href={l.url}>
+                      <i className="fa fa-external-link mr-2" />
+                      {l.title}
+                    </a>),
+                  )}
+                </div>}
+              </div>
             </div>
-            <div className="grid md:grid-cols-3 gap-4">
-                {steps.map((s) =>
-                    <Fade left={s.left} right={s.right} top={s.top} delay={s.delay}>
-                        <div className="flex flex-wrap">
-                            <div className="md:w-full pr-4 pl-4 flex items-center justify-center w-1/4 p-1 md:p-0">
-                                <img draggable="false" alt={s.title} src={s.icon} />
-                            </div>
-                            <div className="md:w-full mb-4 pr-4 pl-4 w-3/4 text-left md:text-center p-2 md:p-0">
-                                <div className="text-3xl font-semibold">{s.title}</div>
-                            </div>
-                            <div className="w-full text-left md:text-center">
-                                <p>{s.content}</p>
-                                {(s.links && s.links.length > 0) &&
-                                    <div className="w-full mt-3 mb-4">{s.links.map((l) =>
-                                        <a className="inline-block mx-2 py-2 px-3 mb-2" target="_blank" href={l.url}>
-                                            <i className="fa fa-external-link mr-2" />
-                                            {l.title}
-                                        </a>
-                                    )}</div>}
-                            </div>
-                        </div>
-                    </Fade>
-                )}
-            </div>
-        </HowItWorksSection>
-    )
+          </Fade>),
+        )}
+      </div>
+    </HowItWorksSection>
+  );
 
 };
 

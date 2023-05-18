@@ -22,7 +22,7 @@ const CTFPedagogy = () => (
 
       <ul className="w-full md:w-2/3 leading-loose font-medium md:ml-4">
         {data.subHeader.map((subHeader, index) => (
-          <li>
+          <li key={index}>
             <div>
               {subHeader}
             </div>
@@ -38,7 +38,7 @@ const CTFPedagogy = () => (
         </h1>
         <ul className="leading-loose font-medium">
           {data.subhead1.texts.map((text, index) => (
-            <li>
+            <li key={index}>
               {text}
             </li>
           ))}

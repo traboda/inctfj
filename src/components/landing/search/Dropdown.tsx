@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import reactStringReplace from 'react-string-replace';
 
-import { filteredFAQ } from '../../faq/filterUtils';
+import filteredFAQ from '../../faq/filterUtils';
 
-const Dropdown = ({ search, setSearch = (question: string) => {} }) => {
+const Dropdown = ({ search, setSearch = (_: string) => {} }) => {
   const faq = () => filteredFAQ(search, new Set(), 5);
 
   return (
