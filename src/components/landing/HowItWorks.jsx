@@ -91,8 +91,8 @@ const LandingHowItWorks = () => {
                             <div className="md:w-full pr-4 pl-4 flex items-center justify-center w-1/4 p-1 md:p-0">
                                 <img draggable="false" alt={s.title} src={s.icon} />
                             </div>
-                            <div className="md:w-full pr-4 pl-4 w-3/4 text-left md:text-center p-2 md:p-0">
-                                <h3>{s.title}</h3>
+                            <div className="md:w-full mb-4 pr-4 pl-4 w-3/4 text-left md:text-center p-2 md:p-0">
+                                <div className="text-3xl font-semibold">{s.title}</div>
                             </div>
                             <div className="w-full text-left md:text-center">
                                 <p>{s.content}</p>
