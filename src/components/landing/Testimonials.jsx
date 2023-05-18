@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import dynamic from 'next/dynamic'
 import styled from "@emotion/styled";
 import Fade from 'react-awesome-reveal';
-import Pulse from 'react-awesome-reveal';
+import { Pulse } from 'react-awesome-reveal';
 import Modal from 'react-modal';
 
 const ReactPlayer = dynamic(() => import('react-player/youtube'))

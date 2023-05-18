@@ -1,7 +1,6 @@
 import React from 'react';
 import shortid from "shortid";
-import styled from "@emotion/styled";
-import Fade from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 const SchoolLeaderboard = ({ schools }) => {
 
@@ -27,7 +26,7 @@ const SchoolLeaderboard = ({ schools }) => {
                 </div>
             </div>
             {schools.map((s, index) =>
-                <Fade up>
+                <Fade direction="up">
                     <div key={shortid.generate()} className="flex flex-wrap p-2 bg-white">
                         <div style={{ fontSize: 'calc(12px + 0.35vw)' }} className="w-2/4 pr-4 pl-4 px-2">
                             <b>{index+1}.</b> {s.name}

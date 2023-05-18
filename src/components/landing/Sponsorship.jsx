@@ -80,7 +80,7 @@ const LogoWall = styled.div`
 const LandingSponsorship = () => {
 
     return <SponsorshipArea className="flex flex-wrap mx-auto container md:px-0 px-4">
-        <Fade left>
+        <Fade direction="left">
             <div className="lg:w-1/2 p-0 lg:px-4">
                 <div>
                     {data.forNewSponsors && 
@@ -121,7 +121,7 @@ const LandingSponsorship = () => {
                 </LogoWall>
             </div>
         </Fade>
-        <Fade right>
+        <Fade direction="right">
             <div className="w-full md:px-4 lg:w-1/2">
                 <LogoWall>
                     <div className="bg-white rounded-xl shadow-md px-2 py-8 md:p-4">

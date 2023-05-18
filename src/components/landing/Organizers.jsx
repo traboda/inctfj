@@ -48,7 +48,7 @@ const LandingOrganizers = () => {
         <div className="content-container">
             <h3>Organized By</h3>
             <div className="flex flex-wrap grid md:grid-cols-3 mx-0">
-                <Fade left>
+                <Fade direction="left">
                     <div className="w-full pr-4 pl-4 md:order-1 order-2 md:text-right text-center ">
                         <a href="https://amrita.edu">
                             <img alt="Amrita Vishwa Vidyapeetham"
@@ -65,7 +65,7 @@ const LandingOrganizers = () => {
                         </div>
                     </div>
                 </Fade>
-                <Fade up>
+                <Fade direction="up">
                     <div className="w-full pr-4 pl-4 text-center md:order-2 order-1">
                         <a href="https://bi0s.in">
                             <img alt="Team bi0s" src={`/${eventID}/${Data.Organizers[1].logo}`}
@@ -81,7 +81,7 @@ const LandingOrganizers = () => {
                         </div>
                     </div>
                 </Fade>
-                <Fade right>
+                <Fade direction="right">
                     <div className="w-full pr-4 pl-4 md:order-2 order-1 md:text-left text-center">
                         <a href="https://www.amrita.edu/center/cyber-security">
                             <img

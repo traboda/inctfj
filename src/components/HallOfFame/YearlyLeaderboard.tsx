@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Select from 'react-select';
 import styled from '@emotion/styled';
 import shortid from 'shortid';
-import Fade from 'react-awesome-reveal';
+import { Fade } from 'react-awesome-reveal';
 
 import IndianStates from '../../data/indian-states';
 import { EditionStats } from '../../data/types/stats';
@@ -84,7 +84,7 @@ type YearlyLeaderboard = {
   data: EditionStats
 };
 
-const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
+// const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 
 const YearlyLeaderboard = ({ data }: YearlyLeaderboard) => {
 
@@ -127,7 +127,7 @@ const YearlyLeaderboard = ({ data }: YearlyLeaderboard) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {data.results.champions.map((c, index) =>
           (<div className="p-4 bg-white rounded-lg border" key={shortid.generate()}>
-            <Fade up delay={index * 250}>
+            <Fade  delay={index * 250}>
               <ChampionCard {...c} />
             </Fade>
           </div>),
@@ -148,7 +148,7 @@ const YearlyLeaderboard = ({ data }: YearlyLeaderboard) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
         {data.results.top10.map((c, index) =>
           (<div className="p-4 bg-white rounded-lg border" key={shortid.generate()}>
-            <Fade up delay={index * 250}>
+            <Fade direction="up" delay={index * 250}>
               <ChampionCard {...c} />
             </Fade>
           </div>),
@@ -168,7 +168,7 @@ const YearlyLeaderboard = ({ data }: YearlyLeaderboard) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
         {data.results.topWomen.map((c, index) =>
           (<div className="p-4 bg-white rounded-lg border" key={shortid.generate()}>
-            <Fade up delay={index * 250}>
+            <Fade direction="up" delay={index * 250}>
               <ChampionCard {...c} />
             </Fade>
           </div>),

@@ -12,11 +12,11 @@ const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../src/data/${eventID}/about.json`);
 
 const AboutPage = () => { 
-    const getAvatar = (path) => {
-        if(eventID && path)
-            return require(`../src/data/inctfj/assets/organizers/${path}`);
-        return null;
-    }
+    // const getAvatar = (path) => {
+    //     if(eventID && path)
+    //         return `/inctfj/assets/organizers/${path}`;
+    //     return null;
+    // }
     // const [stats, setStats] = useState();
 
     // const fetchStats = () => {
@@ -34,7 +34,7 @@ const AboutPage = () => {
         <TopBar includeSpace={false} />
         <div style={{ background: '#FAFAFA' }}>
             <Parallax
-                background={require(`../src/data/${eventID}/${data.coverImage1}`)}
+                background={`/${eventID}/${data.coverImage1}`}
                 height="600px"
             />
             <InctfIntro />

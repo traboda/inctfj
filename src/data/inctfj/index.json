@@ -112,12 +112,12 @@
     ],
     "LandingTestimonialsHeader": "HEAR IT FROM THE HACKERS",
     "LandingTestimonials":[
-        "assets/images/covers/testimonials/yashodan_ahm.png",
-        "assets/images/covers/testimonials/megha_blr.png",
-        "assets/images/covers/testimonials/vishwa_pdy.png",
-        "assets/images/covers/testimonials/tarunjith_pdy.png",
-        "assets/images/covers/testimonials/nilabha_kol.png",
-        "assets/images/covers/testimonials/prajwal_kl.png"
+        "/assets/images/covers/testimonials/yashodan_ahm.png",
+        "/assets/images/covers/testimonials/megha_blr.png",
+        "/assets/images/covers/testimonials/vishwa_pdy.png",
+        "/assets/images/covers/testimonials/tarunjith_pdy.png",
+        "/assets/images/covers/testimonials/nilabha_kol.png",
+        "/assets/images/covers/testimonials/prajwal_kl.png"
     ],
     "forNewSponsors": {
         "title": "Today You Can Help Us to Make CyberSec Warriors of Tomorrow",

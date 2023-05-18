@@ -51,7 +51,7 @@ const LandingContactsBar = () => {
         <div className="flex flex-wrap">
             <div className="w-full flex justify-center flex-wrap">
                 {data.LandingPoweredby.map((item, index) => {
-                    return <Fade left>  <PoweredByTraboda key={index}>
+                    return <Fade direction="left">  <PoweredByTraboda key={index}>
                         <div>{item.header}</div>
                         <img src={`/${eventID}/${item.logo}`} />
                     </PoweredByTraboda></Fade>

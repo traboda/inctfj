@@ -28,7 +28,7 @@ const ChampionCardContainer = styled.div`
 const ChampionCard = ({ title, state, username, name, avatar, rank, institution } : Champion) => {
 
   const getAvatarURL = (path) => {
-    return path ? require(`../../data/${eventID}/assets/participants/${path}`) : null;
+    return path ? `/${eventID}/assets/participants/${path}` : null;
   };
 
   const getStateName = () => {

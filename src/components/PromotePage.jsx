@@ -70,27 +70,27 @@ const ShareSection = styled.section`
 const PromotePage = () => {
 
     const posters = [
-        require('../../public/assets/images/posters/p1.JPG'),
-        require('../../public/assets/images/posters/p2.JPG'),
-        require('../../public/assets/images/posters/p3.JPG'),
-        require('../../public/assets/images/posters/p4.JPG'),
-        require('../../public/assets/images/posters/p5.jpg'),
-        // require('../assets/images/posters/1.jpg'),
-        // require('../assets/images/posters/2.jpg'),
-        // require('../assets/images/posters/3.jpg'),
-        // require('../assets/images/posters/4.jpg'),
-        // require('../assets/images/posters/5.jpg'),
-        // require('../assets/images/posters/6.jpg'),
+        '/assets/images/posters/p1.jpg',
+        '/assets/images/posters/p2.jpg',
+        '/assets/images/posters/p3.jpg',
+        '/assets/images/posters/p4.jpg',
+        '/assets/images/posters/p5.jpg',
+        // require('../assets/images/posters/1.jpg',
+        // require('../assets/images/posters/2.jpg',
+        // require('../assets/images/posters/3.jpg',
+        // require('../assets/images/posters/4.jpg',
+        // require('../assets/images/posters/5.jpg',
+        // require('../assets/images/posters/6.jpg',
     ];
 
 
     const videos = [
         {
-            "cover": require('../../public/assets/images/covers/videos/2020_promo_1.jpg'),
+            "cover": '/assets/images/covers/videos/2020_promo_1.jpg',
             "link": "https://www.youtube.com/watch?v=AO4p6M4l-VA&feature=youtu.be"
         },
         {
-            "cover": require('../../public/assets/images/covers/videos/2019_highlights.jpg'),
+            "cover": '/assets/images/covers/videos/2019_highlights.jpg',
             "link": "https://www.youtube.com/watch?v=sxRZ06Rbh_c"
         }
     ]

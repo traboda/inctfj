@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from "@emotion/styled";
-import Fade from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 const PastSpeakersSection = styled.section`
     padding: 5vh 5vw;
@@ -27,19 +27,18 @@ const PastSpeakersSection = styled.section`
 const PastINCTFSpeakers = () => {
 
     const speakers = [
-        { "image": require('../../../public/assets/images/photos/speakers/1.jpg') },
-        { "image": require('../../../public/assets/images/photos/speakers/2.jpg') },
-        { "image": require('../../../public/assets/images/photos/speakers/11.jpg') },
-        { "image": require('../../../public/assets/images/photos/speakers/3.jpg') },
-        { "image": require('../../../public/assets/images/photos/speakers/4.jpg') },
-        { "image": require('../../../public/assets/images/photos/speakers/5.jpg') },
-        { "image": require('../../../public/assets/images/photos/speakers/6.jpg') },
-        { "image": require('../../../public/assets/images/photos/speakers/7.jpg') },
-        { "image": require('../../../public/assets/images/photos/speakers/8.jpg') },
-        { "image": require('../../../public/assets/images/photos/speakers/9.jpg') },
-        { "image": require('../../../public/assets/images/photos/speakers/10.jpg') },
-        { "image": require('../../../public/assets/images/photos/speakers/12.jpg') },
-    ];
+        { "image": '/assets/images/photos/speakers/1.jpg' },
+        { "image": '/assets/images/photos/speakers/2.jpg' },
+        { "image": '/assets/images/photos/speakers/11.jpg' },
+        { "image": '/assets/images/photos/speakers/3.jpg' },
+        { "image": '/assets/images/photos/speakers/4.jpg' },
+        { "image": '/assets/images/photos/speakers/5.jpg' },
+        { "image": '/assets/images/photos/speakers/6.jpg' },
+        { "image": '/assets/images/photos/speakers/7.jpg' },
+        { "image": '/assets/images/photos/speakers/8.jpg' },
+        { "image": '/assets/images/photos/speakers/9.jpg' },
+        { "image": '/assets/images/photos/speakers/10.jpg' },
+        { "image": '/assets/images/photos/speakers/12.jpg' },];
 
     const [currHighlight, setHighlight] = useState(0);
 

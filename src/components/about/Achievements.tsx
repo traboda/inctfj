@@ -3,65 +3,6 @@ import React from 'react';
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/about.json`);
 
-const achievements = [
-  {
-    image: require('../../../public/assets/images/achievements/zhero.png'),
-    title: 'Zhero',
-    subTitle: ' ',
-    content: <>
-      A CTF team founded by a
-      <span className="text-primary">group of school student participants </span>
-      at InCTF Junior 2019 is now ranked 
-      {' '}
-      <strong>
-        48
-        <sup>th</sup>
-        {' '}
-        globally
-      </strong>
-      {' '}
-      among 24k teams.
-    </>,
-  },
-  {
-    image: require('../../../public/assets/images/achievements/nilabha.jpg'),
-    title: 'Nilabha Saha',
-    subTitle: '2018, 2019, 2020 Participant',
-    content: <>
-      won Gold medal in NSUCRYPTO, 
-      {' '}
-      <span className="text-primary">Russian Cryptography Olympiad</span>
-      {' '}
-      2020
-      in School Students category
-    </>,
-  },
-  {
-    image: require('../../../public/assets/images/achievements/rajvardhan.jpg'),
-    title: 'Rajvardhan Agarwal',
-    subTitle: '2020 Winner, 2018, 2019 Participant',
-    content: <>
-      received the renowned Offensive Security Certified Professional (
-      <span className="text-primary">OSCP</span>
-      )
-      certification in
-      <span className="text-primary">class 11</span>
-    </>,
-  },
-  {
-    image: require('../../../public/assets/images/achievements/vishnu_dev.jpeg'),
-    title: 'Vishnu Dev',
-    subTitle: '2016 Participant, team bi0s member',
-    content: <>
-      found security bugs in popular software like QEMU, VirtualBox and
-      FreeBSD and got assigned with 
-      {' '}
-      <span className="text-primary">multiple CVEs</span>
-      (CV 2020 7030, 2929, 7454, 7455)
-    </>,
-  },
-];
-
 const AboutAchievements = () => {
   if (!data.Achievements) {
     return null;

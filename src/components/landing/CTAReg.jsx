@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import Fade from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
@@ -33,7 +33,7 @@ const RegCTASection = styled.section`
 const CTAReg = ({ UTMSource = null }) => (
     <RegCTASection className="container mx-auto">
         <div className="flex flex-wrap  mx-0">
-            <Fade left>
+            <Fade direction="left">
                 <div className="md:w-2/3 pr-4 pl-4 flex items-center p-2">
                     <img alt="star" className="hidden md:block mr-2" src={'/assets/images/icons/shooting_star.png'} />
                     <h3>
@@ -41,7 +41,7 @@ const CTAReg = ({ UTMSource = null }) => (
                     </h3>
                 </div>
             </Fade>
-            {/*<Fade right>*/}
+            {/*<Fade direction="right">*/}
             {/*    <div className="md:w-1/3 px-0 md:px-2 flex items-center justify-center w-full">*/}
             {/*        <iframe*/}
             {/*            className="border-0"*/}

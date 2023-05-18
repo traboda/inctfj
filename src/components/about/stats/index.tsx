@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Zoom from 'react-awesome-reveal';
+import { Zoom } from 'react-awesome-reveal';
 import CountUp from 'react-countup';
 
 import StateWiseRegistrationMap from './map';
@@ -50,7 +50,7 @@ const INCTFJStats = ({ stats }) => {
       <StatsContainer className="flex flex-wrap py-8 text-center mx-0">
         {statsPreviewer().map((s) =>
           (<div className="w-1/2 md:w-1/3 p-3">
-            <Zoom mountOnEnter effect="fadeInUp">
+            <Zoom direction="up">
               <h2 className="text-blue-600 mb-0 mb-3 font-bold">
                 <CountUp delay={0.5} duration={4.5} end={s.value} />
               </h2>

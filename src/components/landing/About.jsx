@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import Zoom from 'react-awesome-reveal';
+import { Zoom } from 'react-awesome-reveal';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
@@ -63,7 +63,7 @@ const HighlightFeature = styled('div')`
 
 const LandingAboutInCTF = () => (
     <AboutInCTFSection className="container mx-auto">
-        <Zoom up>
+        <Zoom direction="up">
             <div className="md:hidden flex justify-center mb-6">
                 <div className="rounded-lg p-2 bg-blue-100" style={{ maxWidth: '100%', width: '1100px' }}>
                     <div className="flex flex-wrap items-center">

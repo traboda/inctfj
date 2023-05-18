@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import Pulse from 'react-awesome-reveal';
-import Fade from 'react-awesome-reveal';
+import { Fade } from 'react-awesome-reveal';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const eventAbout = require(`../../data/${eventID}/about`).default;
@@ -159,7 +158,7 @@ const LandingHeader = ({ UTMSource = null }) => {
                   {data.date}
                 </h1>
               </Pulse>
-              <Fade up>
+              <Fade direction="up">
                 <p>
                   <span className="mt-6">
                     {data.Desc}
