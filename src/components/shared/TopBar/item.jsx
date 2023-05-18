@@ -1,6 +1,6 @@
-import React, {useState} from "react";
-import styled from "@emotion/styled";
-import Fade from "react-awesome-reveal";
+import React, { useState } from 'react';
+import styled from '@emotion/styled';
+import Fade from 'react-awesome-reveal';
 
 const ItemDropDown = styled('div')`
     position: absolute;
@@ -28,29 +28,29 @@ const ItemDropDown = styled('div')`
 
 const TopBarItem = ({ item, isVisible }) => {
 
-    const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
-    return (
-        <Fade delay={0}>
-            <div className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-                <a href={item.link}>{item.label}</a>
-                {(item?.items?.length > 0) && (
-                    <ItemDropDown className={isOpen && isVisible ? 'c-visible' : ''}>
-                        {item.items.map((i) =>
-                            <a href={i.link} className="block">
-                                {i.label}
-                                {i?.badge && (
-                                    <div className={`${i?.badgeColor ? i.badgeColor : 'bg-green-100'} px-2 py-1 ml-1 inline rounded text-sm`}>
-                                        {i.badge}
-                                    </div>
-                                )}
-                            </a>
-                        )}
-                    </ItemDropDown>
-                )}
-            </div>
-        </Fade>
-    )
+  return (
+    <Fade delay={0}>
+      <div className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+        <a href={item.link}>{item.label}</a>
+        {(item?.items?.length > 0) && (
+        <ItemDropDown className={isOpen && isVisible ? 'c-visible' : ''}>
+          {item.items.map((i) =>
+            (<a href={i.link} className="block">
+              {i.label}
+              {i?.badge && (
+              <div className={`${i?.badgeColor ? i.badgeColor : 'bg-green-100'} px-2 py-1 ml-1 inline rounded text-sm`}>
+                {i.badge}
+              </div>
+              )}
+            </a>),
+          )}
+        </ItemDropDown>
+        )}
+      </div>
+    </Fade>
+  );
 
 };
 
