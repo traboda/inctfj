@@ -6,35 +6,35 @@ const SocialMediaLinks = () => {
 
   const { socialLinks } = useContext(ConfigContext);
 
-  const links = socialLinks ? [
+  const links = [
     {
       'href': socialLinks.email,
-      'icon': 'fa fa-envelope',
+      'icon': 'email',
     },
     {
       'href': socialLinks.instagram,
-      'icon': 'fab fa-instagram',
+      'icon': 'instagram',
     },
     {
       'href': socialLinks.twitter,
-      'icon': 'fab fa-twitter',
+      'icon': 'twitter',
     },
     {
       'href': socialLinks.facebook,
-      'icon': 'fab fa-facebook',
+      'icon': 'facebook',
     },
     {
       'href':  socialLinks.youtube,
-      'icon': 'fab fa-youtube',
+      'icon': 'youtube',
     },
     {
       'href': socialLinks.discord,
-      'icon': 'fab fa-discord',
+      'icon': 'discord',
     },
-  ] : [];
+  ];
 
   return (
-    <div className="flex items-center md:justify-end text-2xl lg:text-3xl xl:text-4xl justify-center md:mb-0 mb-2 p-2">
+    <div className="flex items-center md:justify-end  justify-center md:mb-0 mb-2 p-2">
       {links.filter((l) => l.href?.length > 0).map((l) => (
         <a
           className="mx-2 opacity-75 hover:opacity-100"
@@ -42,7 +42,7 @@ const SocialMediaLinks = () => {
           rel="noopener noreferrer"
           href={l.href}
         >
-          <i className={l.icon} />
+          {l.icon}
         </a>
       ))}
     </div>
