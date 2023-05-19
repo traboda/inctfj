@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
+
+import animation from '@/src/animation';
 
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
@@ -28,7 +31,12 @@ const RegCTASection = styled.section`
 `;
 
 const CTAReg = ({ UTMSource: _ = null }) => (
-  <div className="bg-white">
+  <motion.div
+    className="bg-white"
+    variants={animation}
+    initial="fade"
+    whileInView="animated"
+  >
     <RegCTASection className="container mx-auto px-4 md:py-10">
       <div className="flex flex-wrap">
         <div>
@@ -50,7 +58,7 @@ const CTAReg = ({ UTMSource: _ = null }) => (
         {/*</div>*/}
       </div>
     </RegCTASection>
-  </div>
+  </motion.div>
 );
 
 export default CTAReg;

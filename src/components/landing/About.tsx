@@ -1,5 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+import animation from '@/src/animation';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
@@ -28,7 +31,12 @@ const LandingAboutInCTF = () => (
         </div>
       </div>
       <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-        <div className="w-full md:col-span-2">
+        <motion.div
+          variants={animation}
+          initial="slideInLeft"
+          whileInView="animated"
+          className="w-full md:col-span-2"
+        >
           <h2 className="mb-6 text-4xl">
             {data.LandingAboutInCTF[0]}
             <div className="text-primary">{data.LandingAboutInCTF[1]}</div>
@@ -39,8 +47,13 @@ const LandingAboutInCTF = () => (
               {item}
             </p>
           ))}
-        </div>
-        <div className="flex justify-start items-center p-2">
+        </motion.div>
+        <motion.div
+          variants={animation}
+          initial="slideInRight"
+          whileInView="animated"
+          className="flex justify-start items-center p-2"
+        >
           <ul className="flex flex-col text-lg font-semibold gap-3">
             {data.LandingHighlights.map((item, index) => (
               <li key={index}>
@@ -48,7 +61,7 @@ const LandingAboutInCTF = () => (
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
       </div>
     </div>
   </section>

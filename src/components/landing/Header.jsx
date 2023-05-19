@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
+
+import animations from '../../animation';
 
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
@@ -39,12 +42,17 @@ const LandingHeader = () => (
   <HeaderContainer>
     <div className="container mx-auto px-2 py-12">
       <div className="flex flex-wrap">
-        <div className="w-full md:w-2/3 px-4 flex flex-col justify-center">
+        <motion.div
+          variants={animations}
+          initial="slideInBottomLeft"
+          whileInView="animated"
+          className="w-full md:w-2/3 px-4 flex flex-col justify-center"
+        >
           <div className="max-w-full w-[640px]">
             <h1 className="text-3xl md:text-4xl lg:text-5xl mb-6">
               {data.Landingheader}
             </h1>
-            <div className="text-justify">
+            <div>
               <p className="text-primary font-semibold text-xl mb-3">
                 {data.Desc}
               </p>
@@ -66,8 +74,13 @@ const LandingHeader = () => (
               </a>
             ))}
           </div>
-        </div>
-        <div className="md:w-1/3 my-4 md:my-0 px-3">
+        </motion.div>
+        <motion.div
+          variants={animations}
+          initial="slideInBottomRight"
+          whileInView="animated"
+          className="md:w-1/3 my-4 md:my-0 px-3"
+        >
           <img
             alt="InCTF Jr"
             id="landing-header-cover-image"
@@ -75,7 +88,7 @@ const LandingHeader = () => (
             style={{ position: 'unset', maxHeight: '500px', maxWidth: '100%' }}
             draggable="false"
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   </HeaderContainer>

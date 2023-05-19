@@ -77,6 +77,7 @@
             "title": "LEARN",
             "icon": "learn.png",
             "content": "Students can dive into cyber security using the world class resources that team bi0s has made available. Learn new concepts using the bi0s wiki and our YouTube channel and practice them at the challenge archive!",
+            "animate": "slideInBottomLeft",
             "links":[ 
                 {
                     "title": "bi0s Wiki",
@@ -92,7 +93,8 @@
             "title": "HACK",
             "icon": "hack.png",
             "content": "Students now participate in the Capture The Flag contest, a gamified approach to learning cyber-security. Start by solving simple challenges that test your knowledge and work up to real world situations where you will need a true hacker's skills to succeed!",
-            "links":[ 
+            "animate": "slideInBottom",
+            "links":[
                 {
                     "title": "watch how it is played",
                     "link": "https://www.youtube.com/watch?v=9Je6USf7CG0"
@@ -104,6 +106,7 @@
             "title": "WIN",
             "icon": "win.png",
             "content": "Students finishing at top of the CTF leaderboard will be awarded with exciting goodies and prizes, and they will also get access to exclusive online cyber-security training following the contest. All other participants will also receive certificates.",
+            "animate": "slideInBottomRight",
             "links": [
                 {
                     "title": "stats & rankings",
@@ -150,20 +153,22 @@
             "name": "Amrita Vishwa Vidyapeetham",
             "logo": "assets/images/logos/amritapuri_dark.png",
             "header": "India's No.1 Ranked Private University",
-            "desc" : "Amrita Vishwa Vidyapeetham, founded in 1994, within the next 2 decades has emerged among the leading universities in India, and has been conferred the status of Institute of Eminence by the Govt. of India. It is ranked as the fourth best university in the NIRF Ranking 2020, and has been swiftly establishing itself as a world class teaching and research institution."
+            "desc" : "Amrita Vishwa Vidyapeetham, founded in 1994, within the next 2 decades has emerged among the leading universities in India, and has been conferred the status of Institute of Eminence by the Govt. of India. It is ranked as the fourth best university in the NIRF Ranking 2020, and has been swiftly establishing itself as a world class teaching and research institution.",
+            "animate": "slideInLeft"
         },
         {
             "name": "bi0s",
             "logo": "assets/images/logos/bi0s_dark.png",
             "header": "India's No.1 Ranked CTF Hacking Team",
-            "desc": "Team bi0s is a community of college student focusing on cyber security, and actively participating in CTF contests worldwide. For several years now, team bi0s has consistently been the No.1 CTF team in India. The team members also actively involve in security research projects, organizing training programs & CTFs, and developing security tools."
-
+            "desc": "Team bi0s is a community of college student focusing on cyber security, and actively participating in CTF contests worldwide. For several years now, team bi0s has consistently been the No.1 CTF team in India. The team members also actively involve in security research projects, organizing training programs & CTFs, and developing security tools.",
+            "animate": "slideInBottom"
         },
         {
             "name": "Amrita Center for Cyber Security Systems and Networks",
             "logo": "assets/images/logos/amrita_cyber.png",
             "header": "India's Leading CyberSec. Researchers",
-            "desc": "Amrita Center for Cyber Security Systems and Networks promote partnership between industry, academia and the government to foster innovative research and education in Cyber Security, thus enhancing knowledge, deriving solutions, benefiting society and mitigating risks. The Center is supported by the Government of India throught many of its Departments and Mission REACH programs. The Center has been designated as a Center of Relevance and Excellence (CORE) for Cyber Security in India."
+            "desc": "Amrita Center for Cyber Security Systems and Networks promote partnership between industry, academia and the government to foster innovative research and education in Cyber Security, thus enhancing knowledge, deriving solutions, benefiting society and mitigating risks. The Center is supported by the Government of India throught many of its Departments and Mission REACH programs. The Center has been designated as a Center of Relevance and Excellence (CORE) for Cyber Security in India.",
+            "animate": "slideInRight"
         }
     ],
     "SocialMediaHandles": [

@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
-
+import { motion } from 'framer-motion';
 
 import SponsorsSection from './SponsorsSection';
+
+import animation from '@/src/animation';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
@@ -34,29 +36,39 @@ const SponsorshipArea = styled.section`
 
 const LandingSponsorship = () => (
   <SponsorshipArea className="grid lg:grid-cols-2 mx-auto container px-4 py-10 gap-8">
-    <div>
+    <motion.div
+      variants={animation}
+      initial="slideInBottomLeft"
+      whileInView="animated"
+    >
       <div>
         {data.forNewSponsors && (
-        <div>
-          <h2>{data.forNewSponsors.title}</h2>
-          <p className="mt-4">
-            {data.forNewSponsors.description[0]}
-            <div className="text-lg mt-3">{data.forNewSponsors.description[1]}</div>
-          </p>
-          <div className="mt-4 mb-8">
-            {/*<a className="sponsorship-brochure-button" href="/sponsor">Sponsorship Brochure</a>*/}
-            <a 
-              className="contact-us-button px-3 py-2 rounded-lg text-white bg-primary"
-              href={data.forNewSponsors.url}
-            >
-              {data.forNewSponsors.button}
-            </a>
+          <div>
+            <h2>{data.forNewSponsors.title}</h2>
+            <p className="mt-4">
+              {data.forNewSponsors.description[0]}
+              <div className="text-lg mt-3">{data.forNewSponsors.description[1]}</div>
+            </p>
+            <div className="mt-4 mb-8">
+              {/*<a className="sponsorship-brochure-button" href="/sponsor">Sponsorship Brochure</a>*/}
+              <a 
+                className="contact-us-button px-3 py-2 rounded-lg text-white bg-primary"
+                href={data.forNewSponsors.url}
+              >
+                {data.forNewSponsors.button}
+              </a>
+            </div>
           </div>
-        </div>
         )}
       </div>
-    </div>
-    <SponsorsSection />
+    </motion.div>
+    <motion.div
+      variants={animation}
+      initial="slideInBottomRight"
+      whileInView="animated"
+    >
+      <SponsorsSection />
+    </motion.div>
   </SponsorshipArea>
 );
 

@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
+
+import animation from '@/src/animation';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/championship.json`);
@@ -37,6 +40,7 @@ const LandingQuickInfo = () => {
     {
       image: '/assets/images/icons/trophy.png', left: true,
       question: 'What?', answer: data.what,
+      animate: 'slideInBottomLeft',
     },
     {
       image: 'assets/images/icons/calendar.png', up: true,
@@ -44,6 +48,7 @@ const LandingQuickInfo = () => {
         {' '}
         {data.when}
       </>,
+      animate: 'slideInBottom',
     },
             
     {
@@ -52,7 +57,7 @@ const LandingQuickInfo = () => {
         {' '}
         {data.forWhom}
       </>,
-                
+      animate: 'slideInBottomRight',
     },
   ];
 
@@ -60,7 +65,13 @@ const LandingQuickInfo = () => {
     <QuickInfoSection className="my-8">
       <div className="flex flex-wrap container mx-auto px-4">
         {landingInfo.map((l, i) => (
-          <div className="md:w-1/3 w-full py-2" key={i}>
+          <motion.div
+            variants={animation}
+            initial={l.animate}
+            whileInView="animated"
+            className="md:w-1/3 w-full py-2"
+            key={i}
+          >
             <div left={l.left} right={l.right} up={l.up}>
               <div className="flex flex-wrap w-full mx-0">
                 <div className="flex items-center justify-center w-1/4">
@@ -74,7 +85,7 @@ const LandingQuickInfo = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </QuickInfoSection>

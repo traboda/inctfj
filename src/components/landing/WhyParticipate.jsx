@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
+
+import animation from '@/src/animation';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
@@ -27,13 +30,23 @@ const ReasonsSection = styled.section`
 const LandingReasonsToParticipate = () => {
   return (
     <ReasonsSection className="container mx-auto px-4">
-      <h2 className="text-center">
+      <motion.h2
+        variants={animation}
+        initial="fade"
+        whileInView="animated"
+        className="text-center"
+      >
         <div className="flex justify-center">
           <img className="mr-2" style={{ width: '64px' }} alt="Why Participate?" src="/assets/images/icons/heart.png" />
         </div>
         Why Participate?
-      </h2>
-      <div className="grid lg:grid-cols-4 md:grid-cols-2">
+      </motion.h2>
+      <motion.div
+        variants={animation}
+        initial="slideInBottom"
+        whileInView="animated"
+        className="grid lg:grid-cols-4 md:grid-cols-2"
+      >
         {data.whyPacrticipate.map((r, i) => (
           <div className="w-full text-center mb-6 md:mb-0 p-2" key={i}>
             <video
@@ -46,7 +59,7 @@ const LandingReasonsToParticipate = () => {
             {r.text.map((text, index) => <div className="text-base" key={index}>{text}</div>)}
           </div>
         ))}
-      </div>
+      </motion.div>
     </ReasonsSection>
   );
 };

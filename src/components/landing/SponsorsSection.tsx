@@ -17,27 +17,24 @@ const SponsorsSection = () => {
             </p>
           </div> 
           <div className="flex flex-wrap mx-0">
-            {sponsor.sponsors.map((sponsor, index) => {
-              return (
-                <div className="w-1/3 items-center flex justify-center p-1 md:p-3" key={index}>
-                  <a href={sponsor.link} target="_blank" rel="noopener noreferrer" style={{ display:'block' }}>
-                    <Image 
-                      src={`/inctf/${sponsor.path}`}
-                      draggable="false"
-                      alt="Sponsor Logo"
-                      className="h-16 md:h-28 max-w-full object-contain"
-                      height={200}
-                      width={300}
-                    />
-                    {sponsor?.desg && (<div className="text-sm mt-3 font-light">{sponsor.desg}</div>)}
-                  </a>
-                </div>
-              );
-            })}
+            {sponsor.sponsors.map((sponsor, index) => (
+              <div className="w-1/3 items-center flex justify-center p-1 md:p-3" key={index}>
+                <a href={sponsor.link} target="_blank" rel="noopener noreferrer" style={{ display:'block' }}>
+                  <Image
+                    src={`/inctf/${sponsor.path}`}
+                    draggable="false"
+                    alt="Sponsor Logo"
+                    className="h-16 md:h-28 max-w-full object-contain"
+                    height={200}
+                    width={300}
+                  />
+                  {sponsor?.desg && (<div className="text-sm mt-3 font-light">{sponsor.desg}</div>)}
+                </a>
+              </div>
+            ))}
           </div>
         </div>
-      ),
-      )}  
+      ))}
     </div>
   );
 };

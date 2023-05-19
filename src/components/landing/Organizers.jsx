@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 
+import animation from '@/src/animation';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const Data = require(`../../data/${eventID}/index.json`);
@@ -43,10 +45,21 @@ const OrganizersSection = styled.section`
 const LandingOrganizers = () => (
   <OrganizersSection>
     <div className="container mx-auto content-container">
-      <h3>Organized By</h3>
+      <motion.h3
+        variants={animation}
+        initial="fade"
+        whileInView="animated"
+      >
+        Organized By
+      </motion.h3>
       <div className="flex flex-wrap grid md:grid-cols-3 gap-8">
         {Data.Organizers.map((org, index) => (
-          <div key={`${org.name}_${index}`}>
+          <motion.div
+            variants={animation}
+            initial={org.animate}
+            whileInView="animated"
+            key={`${org.name}_${index}`}
+          >
             <div className="w-full md:order-2 order-1 md:text-center">
               <a href="https://www.amrita.edu/center/cyber-security" className="flex md:justify-center">
                 <img
@@ -62,9 +75,8 @@ const LandingOrganizers = () => (
                 {org.desc}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
-
       </div>
     </div>
   </OrganizersSection>

@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
+
+import animation from '@/src/animation';
 
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
@@ -49,31 +52,22 @@ const HowItWorksSection = styled.section`
 const LandingHowItWorks = () => {
 
   const steps = [
-    ...data.Captions.map((caption, index) => {
-      return {
-        'title': caption.title, 'icon': '/assets/images/icons/' + caption.icon,
-        'delay': (index + 1) * 100, 'left': true,
-        'content': (
-        // eslint-disable-next-line react/jsx-no-useless-fragment
-          <>
-            {caption.content}
-          </>
-        ),
-        'links': [
-          ...caption.links.map((link) => {
-            return {
-              'title': link.title, 'url': link.url,
-            };
-          }),
-        ],
-      };
-    }),
+    ...data.Captions.map((caption, index) => ({
+      ...caption,
+      'title': caption.title, 'icon': '/assets/images/icons/' + caption.icon,
+      'delay': (index + 1) * 100, 'left': true,
+    })),
   ];
 
   return (
     <HowItWorksSection className="motto-cards flex flex-wrap py-8 container mx-auto px-4">
       <div className="w-full flex justify-center p-0 mb-12">
-        <h2 className="py-2 rounded-r mt-4 mb-2 md:flex inline-block items-center font-bold text-center">
+        <motion.h2
+          variants={animation}
+          initial="fade"
+          whileInView="animated"
+          className="py-2 rounded-r mt-4 mb-2 md:flex inline-block items-center font-bold text-center"
+        >
           <img
             draggable="false"
             alt="How it Works?"
@@ -82,11 +76,16 @@ const LandingHowItWorks = () => {
             style={{ width: '64px' }}
           />
           How Does it Work?
-        </h2>
+        </motion.h2>
       </div>
       <div className="grid md:grid-cols-3 gap-6">
         {steps.map((s, index) => (
-          <div key={`${s.icon}_${index}`}>
+          <motion.div
+            variants={animation}
+            initial={s.animate}
+            whileInView="animated"
+            key={`${s.icon}_${index}`}
+          >
             <div className="flex flex-wrap">
               <div className="md:w-full flex items-center justify-center w-1/4 p-1 md:p-0">
                 <img draggable="false" alt={s.title} src={s.icon} />
@@ -98,7 +97,7 @@ const LandingHowItWorks = () => {
                 {s.content}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </HowItWorksSection>

@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import styled from '@emotion/styled';
-// eslint-disable-next-line import/order
 import Modal from 'react-modal';
+import { motion } from 'framer-motion';
 
 const ReactPlayer = dynamic(() => import('react-player/youtube'));
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
 
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+
+import animation from '@/src/animation';
 
 const TestimonialSection = styled.section`
     .testimonial-title {
@@ -62,21 +64,35 @@ const LandingTestimonials = () => {
     <TestimonialSection className="container mx-auto px-4 py-10">
       <div>
         {data.LandingTestimonialsHeader && (
-        <div className="testimonial-title mb-3">
-          <img src="/assets/images/icons/play_button.png" alt="View Video Testimonials" />
-          {data?.LandingTestimonialsHeader}
-        </div>
+          <motion.div
+            variants={animation}
+            initial="fade"
+            whileInView="animated"
+            className="testimonial-title mb-3"
+          >
+            <img src="/assets/images/icons/play_button.png" alt="View Video Testimonials" />
+            {data?.LandingTestimonialsHeader}
+          </motion.div>
         )}
       </div>
-      <div className="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-2">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { staggerChildren: 0.1 } }}
+        className="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-2"
+      >
         {data.LandingTestimonials?.map((p, i) => (
-          <div key={i}>
+          <motion.div
+            variants={animation}
+            initial="slideInBottom"
+            whileInView="animated"
+            key={i}
+          >
             <a onClick={openVideo}>
               <img alt="testimonial student" draggable="false" src={`/${eventID}/${p}`} />
             </a>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
       <Modal
         isOpen={showPlayer}
         onRequestClose={() => { clearAllBodyScrollLocks(); setShowPlayer(false); }}

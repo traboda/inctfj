@@ -46,17 +46,11 @@ export default <SponsorshipConfig>[
         'name': 'amazon',
         'path': 'assets/images/sponsors/amazon.png',
         'link': 'https://www.amazon.in/',
-                
       },
       {
         'name': 'cisco',
         'path': 'assets/images/sponsors/cisco.png',
         'link': 'https://www.cisco.com/',
-      },
-      {
-        'name': 'vmware',
-        'path': 'assets/images/sponsors/vmware.png',
-        'link': 'https://www.vmware.com/',
       },
       {
         'name': 'nciipc',

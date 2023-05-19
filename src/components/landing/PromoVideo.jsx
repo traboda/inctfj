@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import ReactPlayer from 'react-player';
+import { motion } from 'framer-motion';
+
+import animation from '@/src/animation';
 
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
@@ -25,11 +28,17 @@ const LandingPromoVideoSection = styled('section')`
 `;
 
 const LandingPromoVideo = () => (
-  <LandingPromoVideoSection className="container mx-auto">
-    <div className="promo-video-container p-0 md:p-4">
-      <ReactPlayer url={data.LandingpromoVideo} width="100%" height="100%" />
-    </div>
-  </LandingPromoVideoSection>
+  <motion.div
+    variants={animation}
+    initial="fade"
+    whileInView="animated"
+  >
+    <LandingPromoVideoSection className="container mx-auto">
+      <div className="promo-video-container p-0 md:p-4">
+        <ReactPlayer url={data.LandingpromoVideo} width="100%" height="100%" />
+      </div>
+    </LandingPromoVideoSection>
+  </motion.div>
 );
 
 export default LandingPromoVideo;

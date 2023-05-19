@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 
+import animation from '@/src/animation';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
@@ -31,7 +33,12 @@ const RegCTASection = styled.section`
 const CTAPartners = () => {
 
   return (
-    <div className="bg-white mt-10 mb-20">
+    <motion.div
+      variants={animation}
+      initial="fade"
+      whileInView="animated"
+      className="bg-white mt-10 mb-20"
+    >
       <RegCTASection className="container mx-auto px-4 py-8">
         {data.CTAPartners && (
         <div className="grid md:grid-cols-4 items-center gap-6">
@@ -51,7 +58,7 @@ const CTAPartners = () => {
         </div>
         )}
       </RegCTASection>
-    </div>
+    </motion.div>
   );
 
 };
