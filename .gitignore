@@ -3,7 +3,5 @@ node_modules/
 .next/
 .env.local
 sample.env
-package-lock.json
 .env
 .DS_Store
-out

@@ -1,7 +1,7 @@
 import { SponsorshipConfig } from '../types/sponsors';
 export default <SponsorshipConfig>[
   // {
-  //     label: "InCTF Jr 2022 Sponsors",
+  //     label: "InCTF Jr 2023 Sponsors",
   //     type: "InCTFjrsponsor",
   //     desc: "We thank these organizations for believing that  CyberSecurity Education Should Start From School.",
   //     sponsors: [

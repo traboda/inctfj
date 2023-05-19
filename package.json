@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build2": "next build",
-    "build": "next build && next export",
+    "build": "next build",
+    "build-ssg": "next build && next export",
     "export": "next export",
     "dev": "next",
     "start": "next start -p 80",
