@@ -40,8 +40,8 @@ const AdvisoryBoardPage = () => {
         <div className="py-5">
           <h2 className="text-3xl text-primary mb-4 text-center">Industry Experts</h2>
           <div className="flex flex-wrap">
-            {AdvisoryBoard.map((a) => (
-              <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 py-3 sm:p-3">
+            {AdvisoryBoard.map((a, i) => (
+              <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 py-3 sm:p-3" key={i}>
                 <ProfileCard {...a} />
               </div>
             ))}
@@ -49,16 +49,16 @@ const AdvisoryBoardPage = () => {
         </div>
         )}
         {AdvisoryBoardAlumni?.length > 0 && (
-        <div className="py-5">
-          <h2 className="text-3xl mb-5 text-primary text-center">Amrita Alumni & Industry Experts</h2>
-          <div className="flex flex-wrap">
-            {AdvisoryBoardAlumni.map((a) => (
-              <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 py-3 sm:p-3">
-                <ProfileCard {...a} />
-              </div>
-            ))}
+          <div className="py-5">
+            <h2 className="text-3xl mb-5 text-primary text-center">Amrita Alumni & Industry Experts</h2>
+            <div className="flex flex-wrap">
+              {AdvisoryBoardAlumni.map((a, i) => (
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 py-3 sm:p-3" key={i}>
+                  <ProfileCard {...a} />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
         )}
       </div>
       <PageFooterExplorer

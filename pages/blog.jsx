@@ -61,11 +61,11 @@ const BlogListingPage = () => {
           <div className="row mx-0">
             {fetchedPosts.length > 0 ?
               <div>
-                {fetchedPosts.map((p) =>
-                  (<div className="col-md-6 p-2">
+                {fetchedPosts.map((p, i) => (
+                  <div className="col-md-6 p-2" key={i}>
                     <PostCard {...p} />
-                  </div>),
-                )}
+                  </div>
+                ))}
               </div> :
               <div>No Posts</div>}
           </div>

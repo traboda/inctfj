@@ -23,9 +23,7 @@ const ProfileSummaryCard = ({
     <div className="p-2">
       {designation &&
         <div className="text-center mb-2">
-          {typeof designation == 'object' ? designation.map((d) => (
-            <div>{d}</div>
-          )) : designation}
+          {typeof designation == 'object' ? designation.map((d, i) => <div key={i}>{d}</div>) : designation}
         </div>}
       <div style={{ fontSize: '13px' }}>
         {description}

@@ -28,27 +28,29 @@ const RegCTASection = styled.section`
 `;
 
 const CTAReg = ({ UTMSource: _ = null }) => (
-  <RegCTASection className="container mx-auto px-4 md:py-10">
-    <div className="flex flex-wrap">
-      <div>
-        <div className="md:w-2/3 flex items-center py-2">
-          <img alt="star" className="hidden md:block mr-2" src="/assets/images/icons/shooting_star.png" />
-          <h3>
-            {data.CTAreg.message}
-          </h3>
+  <div className="bg-white">
+    <RegCTASection className="container mx-auto px-4 md:py-10">
+      <div className="flex flex-wrap">
+        <div>
+          <div className="md:w-2/3 flex items-center py-2">
+            <img alt="star" className="hidden md:block mr-2" src="/assets/images/icons/shooting_star.png" />
+            <h3>
+              {data.CTAreg.message}
+            </h3>
+          </div>
         </div>
+        {/*<div>*/}
+        {/*    <div className="md:w-1/3 px-0 md:px-2 flex items-center justify-center w-full">*/}
+        {/*        <iframe*/}
+        {/*            className="border-0"*/}
+        {/*            style={{ width: '400px', maxWidth: '100vw', height: '190px', overflow: 'auto' }}*/}
+        {/*            src={`${data.CTAreg.button.url}/reg-frame?color=000&primary=F13F17&primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}*/}
+        {/*        />*/}
+        {/*    </div>*/}
+        {/*</div>*/}
       </div>
-      {/*<div>*/}
-      {/*    <div className="md:w-1/3 px-0 md:px-2 flex items-center justify-center w-full">*/}
-      {/*        <iframe*/}
-      {/*            className="border-0"*/}
-      {/*            style={{ width: '400px', maxWidth: '100vw', height: '190px', overflow: 'auto' }}*/}
-      {/*            src={`${data.CTAreg.button.url}/reg-frame?color=000&primary=F13F17&primary_text=fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}*/}
-      {/*        />*/}
-      {/*    </div>*/}
-      {/*</div>*/}
-    </div>
-  </RegCTASection>
+    </RegCTASection>
+  </div>
 );
 
 export default CTAReg;

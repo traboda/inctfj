@@ -3,8 +3,7 @@
     "date" : "SEP 2021 TO JAN 2022.",
     "Desc" : "InCTF Junior is India's First & Premier Hacking & Cyber Security Contest for High School Students, organized by team bi0s, India's No.1 ranked CTF Team.",
     "subDesc" : "Every year the brightest young hackers from all across India participate in this the learn & hack CTF contest, win exciting prizes & kick-start their cyber-security career.",
-    "button" : 
-    [
+    "button" : [
         {
             "text" : "View Results",
             "link" : "/stats"

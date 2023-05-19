@@ -22,7 +22,7 @@ const LandingStatsBar = () => {
     try {
       fetch('https://app.traboda.com/api/contest/stats/66').then(async (response) => {
         if (response.ok && response.status === 200)
-          return await response.json();
+          return response.json();
         else
           return null;
       }).then((data) => {
@@ -44,8 +44,8 @@ const LandingStatsBar = () => {
   ];
 
   return (<StatsContainer className="container mx-auto flex flex-wrap text-center">
-    {statsPreviewer().map((s) =>
-      (<div className="w-1/2 md:w-1/3 p-4">
+    {statsPreviewer().map((s, i) => (
+      <div className="w-1/2 md:w-1/3 p-4" key={i}>
         <div mountOnEnter effect="fadeInUp">
           <div className="text-blue-600 h2 mb-2 font-bold">
             <CountUp delay={0.5} duration={4.5} end={s.value} />
@@ -53,8 +53,8 @@ const LandingStatsBar = () => {
           </div>
           <div className="h5 mb-0">{s.title}</div>
         </div>
-      </div>),
-    )}
+      </div>
+    ))}
   </StatsContainer>);
 
 };

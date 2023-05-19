@@ -57,7 +57,7 @@ const LandingQuickInfo = () => {
   ];
 
   return (
-    <QuickInfoSection>
+    <QuickInfoSection className="my-8">
       <div className="flex flex-wrap container mx-auto px-4">
         {landingInfo.map((l, i) => (
           <div className="md:w-1/3 w-full py-2" key={i}>

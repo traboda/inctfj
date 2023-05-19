@@ -1,5 +1,4 @@
 import React from 'react';
-import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
@@ -35,17 +34,16 @@ const LandingReasonsToParticipate = () => {
         Why Participate?
       </h2>
       <div className="grid lg:grid-cols-4 md:grid-cols-2">
-        {data.whyPacrticipate.map((r, index) => (
-          <div>
-            <div className="w-full text-center mb-6 md:mb-0 p-2">
-              <video
-                  autoPlay
-                  loop muted
-                  src={`/${eventID}/${r.video}`}
-                  className="mb-4"
-              />
-              {r.text.map((text, index) => <div className="text-base" key={index}>{text}</div>)}
-            </div>
+        {data.whyPacrticipate.map((r, i) => (
+          <div className="w-full text-center mb-6 md:mb-0 p-2" key={i}>
+            <video
+              autoPlay
+              loop
+              muted
+              src={`/${eventID}/${r.video}`}
+              className="mb-4"
+            />
+            {r.text.map((text, index) => <div className="text-base" key={index}>{text}</div>)}
           </div>
         ))}
       </div>

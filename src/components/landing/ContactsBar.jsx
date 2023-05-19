@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-
-
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
 
@@ -47,24 +45,22 @@ const PoweredByTraboda = styled('div')`
 
 const LandingContactsBar = () => {
 
-  return (<ContactsBarSection>
-    <div className="flex flex-wrap">
-      <div className="w-full flex justify-center flex-wrap">
-        {data.LandingPoweredby.map((item, index) => {
-          return (
-            <div>
+  return (
+    <ContactsBarSection>
+      <div className="flex flex-wrap">
+        <div className="w-full flex justify-center flex-wrap">
+          {data.LandingPoweredby.map((item, index) => (
+            <div key={index}>
               <PoweredByTraboda className="p-4" key={index}>
                 <div className="mb-2">{item.header}</div>
                 <img src={`/${eventID}/${item.logo}`} alt="Traboda" />
               </PoweredByTraboda>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
-                
-                
-    </div>
-  </ContactsBarSection>);
+    </ContactsBarSection>
+  );
 
 };
 

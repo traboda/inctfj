@@ -47,16 +47,16 @@ const INCTFJStats = ({ stats }) => {
         InCTF Jr 21 is one of the world's largest CTF
       </h2>
       <StatsContainer className="flex flex-wrap py-8 text-center mx-0">
-        {statsPreviewer().map((s) =>
-          (<div className="w-1/2 md:w-1/3 p-3">
+        {statsPreviewer().map((s, i) => (
+          <div className="w-1/2 md:w-1/3 p-3" key={i}>
             <div>
               <h2 className="text-blue-600 mb-0 mb-3 font-bold">
                 <CountUp delay={0.5} duration={4.5} end={s.value} />
               </h2>
               <h4 className="mb-0">{s.title}</h4>
             </div>
-          </div>),
-        )}
+          </div>
+        ))}
       </StatsContainer>
       <div className="flex flex-wrap items-center">
         <div className="md:w-1/3 order-2 md:order-1 w-full">

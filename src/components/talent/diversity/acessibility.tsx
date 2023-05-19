@@ -62,8 +62,8 @@ const EducationAccessibility = () => (
       <div className="w-full md:w-1/2 md:pl-12">
         <h1 className="font-semibold text-primary">{data.subhead7.header}</h1>
         <ul className="col-span-2 leading-loose font-medium mt-4">
-          {data.subhead7.texts.map((text) => (
-            <li>
+          {data.subhead7.texts.map((text, i) => (
+            <li key={i}>
               <br />
               {text}
               <br />

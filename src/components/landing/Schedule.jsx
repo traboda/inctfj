@@ -41,33 +41,31 @@ const Schedule = () => {
             </div>
           </div>
 
-          {data.schedule.map((t) =>
-            (<div>
-              <div className="flex flex-wrap  mx-0 py-2 border-b">
-                <div className="md:w-1/6 w-full flex items-center px-1">
-                  <div>
-                    <div className="font-semibold text-xl">{t.date}</div>
-                    <span>{t.timing}</span>
-                  </div>
+          {data.schedule.map((t, i) => (
+            <div className="flex flex-wrap py-2 border-b" key={i}>
+              <div className="md:w-1/6 w-full flex items-center px-1">
+                <div>
+                  <div className="font-semibold text-xl">{t.date}</div>
+                  <span>{t.timing}</span>
                 </div>
-                <div className="md:w-4/6 flex items-center px-1 pb-1">
-                  <div>
-                    <div className="text-xl font-semibold" style={{ color: '#4A148C' }}>{t.event}</div>
-                    {t?.presenter && <div className="text-lg mt-1">{t.presenter}</div>}
-                  </div>
+              </div>
+              <div className="md:w-4/6 flex items-center px-1 pb-1">
+                <div>
+                  <div className="text-xl font-semibold" style={{ color: '#4A148C' }}>{t.event}</div>
+                  {t?.presenter && <div className="text-lg mt-1">{t.presenter}</div>}
                 </div>
-                <div className="md:w-1/6 w-full flex items-center mb-2 md:mb-0 px-1">
-                  {t?.link && (
+              </div>
+              <div className="md:w-1/6 w-full flex items-center mb-2 md:mb-0 px-1">
+                {t?.link && (
                   <a href={t.link} target="_blank" className="hover:text-primary">
                     <i className="fab fa-youtube text-red-600 mr-1" />
                     {' '}
                     Watch
                   </a>
-                  )}
-                </div>
+                )}
               </div>
-            </div>),
-          )}
+            </div>
+          ))}
         </div>
       </div>
     </div>

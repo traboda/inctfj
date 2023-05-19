@@ -3,7 +3,7 @@ import fetch from 'isomorphic-fetch';
 const domain = process.env.domain || 'https://play.inctf.in/junior';
 const queryURL = domain + '/query';
 
-const GraphQLFetch = async ({
+const GraphQLFetch = ({
   query, variables = null, endpoint,
 }) => {
 
@@ -16,7 +16,7 @@ const GraphQLFetch = async ({
     body: JSON.stringify({ query, variables }),
   };
 
-  return await fetch(endpoint, APIConfig).then((response) => {
+  return fetch(endpoint, APIConfig).then((response) => {
     const contentType = response.headers.get('content-type');
     if (response.ok) {
       if (contentType && contentType.indexOf('application/json') !== -1)
@@ -43,7 +43,7 @@ const GraphQLFetch = async ({
 export const APIFetch = async ({
   query, variables = null, endpoint = queryURL,
 }) => {
-  return await GraphQLFetch({ query, variables, endpoint }).then(r => {
+  return GraphQLFetch({ query, variables, endpoint }).then(r => {
     if (r && !Object.prototype.hasOwnProperty.call(r, 'errors'))
       return { success: true, data: r.data };
     return { success: false, response: r, errors: r ? r.errors : null };

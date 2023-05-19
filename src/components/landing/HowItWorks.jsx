@@ -71,7 +71,7 @@ const LandingHowItWorks = () => {
   ];
 
   return (
-    <HowItWorksSection className="motto-cards flex flex-wrap py-5 container mx-auto px-4">
+    <HowItWorksSection className="motto-cards flex flex-wrap py-8 container mx-auto px-4">
       <div className="w-full flex justify-center p-0 mb-12">
         <h2 className="py-2 rounded-r mt-4 mb-2 md:flex inline-block items-center font-bold text-center">
           <img
@@ -84,18 +84,18 @@ const LandingHowItWorks = () => {
           How Does it Work?
         </h2>
       </div>
-      <div className="grid md:grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-3 gap-6">
         {steps.map((s, index) => (
           <div key={`${s.icon}_${index}`}>
             <div className="flex flex-wrap">
-              <div className="md:w-full pr-4 pl-4 flex items-center justify-center w-1/4 p-1 md:p-0">
+              <div className="md:w-full flex items-center justify-center w-1/4 p-1 md:p-0">
                 <img draggable="false" alt={s.title} src={s.icon} />
               </div>
-              <div className="md:w-full mb-4 pr-4 pl-4 w-3/4 text-left md:text-center p-2 md:p-0">
-                <div className="text-3xl font-semibold">{s.title}</div>
+              <div className="md:w-full mb-4 w-3/4 text-left md:text-center p-2 md:p-0 flex items-center">
+                <div className="text-3xl font-bold tracking-wider mt-2 md:mx-auto">{s.title}</div>
               </div>
-              <p className="w-full text-base text-left md:text-justify p-2">
-               {s.content}
+              <p className="w-full text-base text-left md:text-center">
+                {s.content}
               </p>
             </div>
           </div>

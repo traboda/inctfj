@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Image from 'next/image';
 
 import IndianStates from '../../data/indian-states';
 import { ParticipantProfile } from '../../data/types/stats';
@@ -54,16 +55,15 @@ const FameCard = ({
   return (<FameCardWrap>
     <div className="flex flex-wrap p-2 border rounded-lg h-full items-center">
       <div className="w-1/5 text-right justify-center items-center flex">
-        {
-                    rank === 1 ? <img src="/assets/images/icons/crown.png" /> :
-                      rank === 2 ? <img src="/assets/images/icons/viking.png" /> :
-                        rank === 3 ? <img src="/assets/images/icons/samurai.png" /> :
-                        <div className="rank">
-                          {rank}
-                          .
-                          {' '}
-                        </div>
-                }
+        {rank === 1 ? <Image fill src="/assets/images/icons/crown.png" alt="Crown" /> :
+          rank === 2 ? <Image alt="viking" src="/assets/images/icons/viking.png" /> :
+            rank === 3 ? <Image alt="Samurai" src="/assets/images/icons/samurai.png" /> : (
+              <div className="rank">
+                {rank}
+                .
+                {' '}
+              </div>
+            )}
       </div>
       <div className="w-4/5 md:w-2/5 pr-4 pl-4 p-1">
         <h4 className="font-bold">{name}</h4>

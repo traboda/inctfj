@@ -1,4 +1,4 @@
-export default {
+const categoryIcons = {
   'crypto': {
     'icon': '/assets/images/icons/categories/crypto.svg',
     'label': 'Cryptography',
@@ -24,3 +24,5 @@ export default {
     'label': 'Misc',
   },
 };
+
+export default categoryIcons;

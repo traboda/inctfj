@@ -217,13 +217,11 @@ const YearlyLeaderboard = ({ data }: YearlyLeaderboard) => {
           {data.results?.finalists.filter((s) =>
             (keyword ? (s.name.startsWith(keyword) || s.username.startsWith(keyword)) : true) &&
                         (state ? s.state === state : true),
-          ).map((l) =>
-            (<div>
-              <div>
-                <FameCard {...l} key={shortid.generate()} />
-              </div>
-            </div>),
-          )}
+          ).map((l, i) => (
+            <div key={i}>
+              <FameCard {...l} key={shortid.generate()} />
+            </div>
+          ))}
         </GridHeight>
         <div style={{ color: '#999', fontSize: '11px' }} className="py-3 p-2">
           <li>The leaderboard only includes participants who have earned at-least 1 point in the finale.</li>

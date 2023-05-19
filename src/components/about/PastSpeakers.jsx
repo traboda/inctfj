@@ -48,15 +48,15 @@ const PastINCTFSpeakers = () => {
     }, 1000);
   }, []);
 
-  return (<PastSpeakersSection>
-    <div className="py-3">
-      <h4>Talks & Sessions</h4>
-      <h5>By Leading Professionals & Security Researchers</h5>
-    </div>
-    <div className="flex flex-wrap  mx-0 speakers-list">
-      {speakers.map((s, index) =>
-        (<div className="w-1/3 md:w-1/5 pr-4 pl-4 p-0">
-          <div>
+  return (
+    <PastSpeakersSection>
+      <div className="py-3">
+        <h4>Talks & Sessions</h4>
+        <h5>By Leading Professionals & Security Researchers</h5>
+      </div>
+      <div className="flex flex-wrap  mx-0 speakers-list">
+        {speakers.map((s, index) => (
+          <div className="w-1/3 md:w-1/5 pr-4 pl-4 p-0" key={index}>
             <div>
               <img
                 alt="Speaker"
@@ -66,10 +66,10 @@ const PastINCTFSpeakers = () => {
               />
             </div>
           </div>
-        </div>),
-      )}
-    </div>
-  </PastSpeakersSection>);
+        ))}
+      </div>
+    </PastSpeakersSection>
+  );
 
 };
 

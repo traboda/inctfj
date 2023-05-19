@@ -1,7 +1,6 @@
 import React from 'react';
 
-export default
-[
+const questions = [
   {
     'question': 'Is this a quiz?',
     'keywords': ['quiz'],
@@ -446,3 +445,5 @@ export default
     tags: ['certificate'],
   },
 ];
+
+export default questions;

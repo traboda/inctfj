@@ -44,25 +44,25 @@ const LandingOrganizers = () => (
   <OrganizersSection>
     <div className="container mx-auto content-container">
       <h3>Organized By</h3>
-      <div className="flex flex-wrap grid md:grid-cols-3 mx-0">
+      <div className="flex flex-wrap grid md:grid-cols-3 gap-8">
         {Data.Organizers.map((org, index) => (
-            <div key={`${org.name}_${index}`}>
-              <div className="w-full pr-4 pl-4 md:order-2 order-1 md:text-left text-center">
-                <a href="https://www.amrita.edu/center/cyber-security">
-                  <img
-                      alt={org.name}
-                      src={`/${eventID}/${org.logo}`}
-                      className="inline"
-                  />
-                </a>
-                <h4>
-                  {org.header}
-                </h4>
-                <p className="text-sm text-justify">
-                  {org.desc}
-                </p>
-              </div>
+          <div key={`${org.name}_${index}`}>
+            <div className="w-full md:order-2 order-1 md:text-center">
+              <a href="https://www.amrita.edu/center/cyber-security" className="flex md:justify-center">
+                <img
+                  alt={org.name}
+                  src={`/${eventID}/${org.logo}`}
+                  className="inline"
+                />
+              </a>
+              <h4>
+                {org.header}
+              </h4>
+              <p className="text-sm">
+                {org.desc}
+              </p>
             </div>
+          </div>
         ))}
 
       </div>

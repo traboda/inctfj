@@ -15,7 +15,7 @@ const SimplePost = async ({
     body: JSON.stringify(data),
   };
 
-  return await fetch(domain + endpoint, APIConfig).then((response) => {
+  return fetch(domain + endpoint, APIConfig).then((response) => {
     const contentType = response.headers.get('content-type');
     if (response.ok) {
       if (contentType && contentType.indexOf('application/json') !== -1)

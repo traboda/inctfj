@@ -104,11 +104,11 @@ const WriteupListingPage = () => {
               {fetchedPosts.filter((v) =>
                 (category == null || v?.category.toLowerCase() === category.value.toLowerCase()) &&
                             ((keyword?.length < 1) || (v.title?.toLowerCase().startsWith(keyword.toLowerCase()))),
-              ).map((w) =>
-                (<div className="w-full md:w-1/2 lg:w-1/3 p-2">
+              ).map((w, i) => (
+                <div className="w-full md:w-1/2 lg:w-1/3 p-2" key={i}>
                   <WriteUpCard {...w} />
-                </div>),
-              )}
+                </div>
+              ))}
             </div> :
             <div>No WriteUps</div>}
         </div>

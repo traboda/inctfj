@@ -164,9 +164,9 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
         <div
           className="w-1/4 md:w-1/3 xl:w-1/4 md:text-center flex flex-wrap items-center md:justify-start justify-center px-2"
         >
-          <a className="w-full md:w-1/3" href="/">
+          <Link className="w-full md:w-1/3" href="/">
             <Logo isDark />
-          </a>
+          </Link>
           {topbarConfig?.associate && (
           <a
             target="_blank"
@@ -297,15 +297,13 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
     />}
     <div style={{ height: topbarRef.current?.offsetHeight ?? 90 }} className="hidden md:block" />
     <div className="block md:hidden text-center pt-6 px-2 pb-4">
-      <Link legacyBehavior passHref href="/">
-        <a>
-          <img
-            alt="InCTF Jr"
-            style={{ height: '72px' }}
-            className="inline"
-            src="/assets/images/conference/inctf_logo.png"
-          />
-        </a>
+      <Link href="/">
+        <img
+          alt="InCTF Jr"
+          style={{ height: '72px' }}
+          className="inline"
+          src="/assets/images/conference/inctf_logo.png"
+        />
       </Link>
     </div>
   </div>);

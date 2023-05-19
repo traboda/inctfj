@@ -1,4 +1,4 @@
-export default [
+const schools = [
   {
     'name': 'Suguna PIP School, Coimbatore',
     'participants': 4,
@@ -50,3 +50,5 @@ export default [
     'points': 2500,
   },
 ];
+
+export default schools;

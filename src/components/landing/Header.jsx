@@ -36,48 +36,49 @@ const HeaderContainer = styled.section`
 `;
 
 const LandingHeader = () => (
-    <HeaderContainer>
-      <div className="container mx-auto px-2 py-12">
-          <div className="flex flex-wrap">
-            <div className="w-full md:w-2/3 px-4">
-              <div className="max-w-full w-[640px]">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl mb-6">
-                  {data.Landingheader}
-                </h1>
-                <div className="text-justify">
-                  <p className="text-primary font-semibold text-xl mb-3">
-                    {data.Desc}
-                  </p>
-                  <p>
-                    {data.subDesc}
-                  </p>
-                </div>
-              </div>
-              <div className="mt-4 md:px-2">
-                {data.button.map((button) => (
-                  <a
-                    href={button.link}
-                    className="text-2xl px-5 py-4 inline-block font-semibold ml-3 rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl my-3"
-                  >
-                    Coming Soon 
-                    {' '}
-                    <i className="fa fa-chevron-right" />
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div className="md:w-1/3 my-4 md:my-0 px-3">
-              <img
-                alt="InCTF Jr"
-                id="landing-header-cover-image"
-                src={`/${eventID}/${data.LandingCoverImage}`}
-                style={{ position: 'unset', maxHeight: '500px', maxWidth: '100%' }}
-                draggable="false"
-              />
+  <HeaderContainer>
+    <div className="container mx-auto px-2 py-12">
+      <div className="flex flex-wrap">
+        <div className="w-full md:w-2/3 px-4 flex flex-col justify-center">
+          <div className="max-w-full w-[640px]">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl mb-6">
+              {data.Landingheader}
+            </h1>
+            <div className="text-justify">
+              <p className="text-primary font-semibold text-xl mb-3">
+                {data.Desc}
+              </p>
+              <p>
+                {data.subDesc}
+              </p>
             </div>
           </div>
+          <div className="mt-4 md:px-2">
+            {data.button.map((button, i) => (
+              <a
+                key={i}
+                href={button.link}
+                className="text-2xl px-5 py-4 inline-block font-semibold ml-3 rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl my-3"
+              >
+                Coming Soon 
+                {' '}
+                <i className="fa fa-chevron-right" />
+              </a>
+            ))}
+          </div>
+        </div>
+        <div className="md:w-1/3 my-4 md:my-0 px-3">
+          <img
+            alt="InCTF Jr"
+            id="landing-header-cover-image"
+            src={`/${eventID}/${data.LandingCoverImage}`}
+            style={{ position: 'unset', maxHeight: '500px', maxWidth: '100%' }}
+            draggable="false"
+          />
+        </div>
       </div>
-    </HeaderContainer>
+    </div>
+  </HeaderContainer>
 );
 
 export default LandingHeader;

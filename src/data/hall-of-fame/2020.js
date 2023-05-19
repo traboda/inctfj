@@ -1,4 +1,4 @@
-export default [
+const winners = [
   {
     'rank': 1,
     'username': 'rajvardhan',
@@ -1310,3 +1310,5 @@ export default [
     'school': 'Mata Gujri Convent School',
   },
 ];
+
+export default winners;

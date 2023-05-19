@@ -30,25 +30,29 @@ const RegCTASection = styled.section`
 
 const CTAPartners = () => {
 
-  return (<RegCTASection className="container mx-auto px-4 py-8">
-    {data.CTAPartners && 
-    <div className="grid md:grid-cols-4 items-center gap-6">
-      <div className="md:col-span-3">
-        <div className="flex items-center">
-          {/*<img alt="star" className="hidden md:block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />*/}
-          <h3 style={{ maxWidth: '800px' }}>
-            {data.CTAPartners.message}
-          </h3>
+  return (
+    <div className="bg-white mt-10 mb-20">
+      <RegCTASection className="container mx-auto px-4 py-8">
+        {data.CTAPartners && (
+        <div className="grid md:grid-cols-4 items-center gap-6">
+          <div className="md:col-span-3">
+            <div className="flex items-center">
+              {/*<img alt="star" className="hidden md:block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />*/}
+              <h3 style={{ maxWidth: '800px' }}>
+                {data.CTAPartners.message}
+              </h3>
+            </div>
+          </div>
+          <div>
+            <div className="flex items-center justify-center">
+              <a rel="nofollow noref" href={data.CTAPartners.button.url}>{data.CTAPartners.button.label}</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div>
-        <div className="flex items-center justify-center">
-          <a rel="nofollow noref" href={data.CTAPartners.button.url}>{data.CTAPartners.button.label}</a>
-        </div>
-      </div>
+        )}
+      </RegCTASection>
     </div>
-        }
-  </RegCTASection>);
+  );
 
 };
 

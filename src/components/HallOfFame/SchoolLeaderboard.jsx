@@ -25,8 +25,8 @@ const SchoolLeaderboard = ({ schools }) => {
             Total Points
           </div>
         </div>
-        {schools.map((s, index) =>
-          (<div>
+        {schools.map((s, index) => (
+          <div key={index}>
             <div key={shortid.generate()} className="flex flex-wrap p-2 bg-white">
               <div style={{ fontSize: 'calc(12px + 0.35vw)' }} className="w-2/4 pr-4 pl-4 px-2">
                 <b>
@@ -43,8 +43,8 @@ const SchoolLeaderboard = ({ schools }) => {
                 {s.points}
               </div>
             </div>
-          </div>),
-        )}
+          </div>
+        ))}
       </div>
       <div style={{ opacity: 0.8, fontSize: '11px' }} className="py-3 p-2">
         <li>InCTF Jr. is an individual event, and the points for schools are calculated by adding up scores of all students from the school</li>

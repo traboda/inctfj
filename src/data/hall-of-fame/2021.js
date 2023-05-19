@@ -1,4 +1,4 @@
-export default [
+const winners = [
   {
     'rank': 1,
     'username': 'the_crazyman',
@@ -665,3 +665,5 @@ export default [
     'points': 201,
   },
 ];
+
+export default winners;

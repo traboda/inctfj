@@ -61,14 +61,20 @@ const StatsPage = () => {
       <div style={{ maxWidth: '1100px', width: '100%' }}>
         <div className="d-flex align-items-center">
           <div className="container-lg mt-6 px-4">
-            {editions.map((y) =>
-              <TabButton isActive={y.year === year} onClick={() => setYear(y.year)}>{y.year}</TabButton>,
-            )}
+            {editions.map((y, i) => (
+              <TabButton
+                key={i}
+                isActive={y.year === year}
+                onClick={() => setYear(y.year)}
+              >
+                {y.year}
+              </TabButton>
+            ))}
           </div>
         </div>
         <div className="container-lg px-4 py-5">
-          {editions.filter((y) => y.year === year).map((y) =>
-            <YearlyLeaderboard data={y} />,
+          {editions.filter((y) => y.year === year).map((y, i) =>
+            <YearlyLeaderboard data={y} key={i} />,
           )}
         </div>
       </div>

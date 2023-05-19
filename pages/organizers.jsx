@@ -39,12 +39,12 @@ const OrganizersPage = () => {
       />
       {eventOrganizers?.length > 0 && (
         <div className="py-6 px-2" style={{ background: '#FAFAFA' }}>
-          {eventOrganizers?.filter((f) => f.type === 'profile').map((p) => (
-            <div className="py-5">
+          {eventOrganizers?.filter((f) => f.type === 'profile').map((p, i) => (
+            <div className="py-5" key={i}>
               <h2 className="text-3xl mb-4 text-center">{p.label}</h2>
               <div className="flex flex-wrap">
-                {p?.members.map((a) => (
-                  <div className="w-full md:w-1/3 p-3">
+                {p?.members.map((a, i) => (
+                  <div className="w-full md:w-1/3 p-3" key={i}>
                     <ProfileSummaryCard
                       {...a}
                       avatar={getAvatar(a.avatar)}
@@ -54,12 +54,12 @@ const OrganizersPage = () => {
               </div>
             </div>
           ))}
-          {eventOrganizers?.filter((f) => f.type === 'badge').map((p) => (
-            <div className="py-5">
+          {eventOrganizers?.filter((f) => f.type === 'badge').map((p, i) => (
+            <div className="py-5" key={i}>
               <h2 className="text-3xl mb-4 text-center">{p.label}</h2>
               <div className="flex flex-wrap">
-                {p?.members.map((a) => (
-                  <div className="w-full md:w-1/3 p-3">
+                {p?.members.map((a, i) => (
+                  <div className="w-full md:w-1/3 p-3" key={i}>
                     <ProfileMicroCard
                       {...a}
                       avatar={getAvatar(a.avatar)}

@@ -69,8 +69,8 @@ const LandingTestimonials = () => {
         )}
       </div>
       <div className="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-2">
-        {data.LandingTestimonials?.map((p) => (
-          <div>
+        {data.LandingTestimonials?.map((p, i) => (
+          <div key={i}>
             <a onClick={openVideo}>
               <img alt="testimonial student" draggable="false" src={`/${eventID}/${p}`} />
             </a>

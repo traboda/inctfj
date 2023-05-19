@@ -36,16 +36,16 @@ const TopBarItem = ({ item, isVisible }) => {
         <a href={item.link}>{item.label}</a>
         {(item?.items?.length > 0) && (
         <ItemDropDown className={isOpen && isVisible ? 'c-visible' : ''}>
-          {item.items.map((i) =>
-            (<a href={i.link} className="block">
+          {item.items.map((i, index) => (
+            <a key={index} href={i.link} className="block">
               {i.label}
               {i?.badge && (
-              <div className={`${i?.badgeColor ? i.badgeColor : 'bg-green-100'} px-2 py-1 ml-1 inline rounded text-sm`}>
-                {i.badge}
-              </div>
+                <div className={`${i?.badgeColor ? i.badgeColor : 'bg-green-100'} px-2 py-1 ml-1 inline rounded text-sm`}>
+                  {i.badge}
+                </div>
               )}
-            </a>),
-          )}
+            </a>
+          ))}
         </ItemDropDown>
         )}
       </div>

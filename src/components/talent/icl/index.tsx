@@ -11,8 +11,11 @@ const IndianCyberLeague = () => (
       <h3>{data.subhead0.subHeader}</h3>
 
       <div className="grid md:grid-cols-4 grid-cols-2 gap-4 mt-8 w-full">
-        {data.subhead0.CTFs.map((ctf) => (
-          <div className="bg-gray-100 rounded-lg p-4 flex justify-center items-center text-center font-semibold">
+        {data.subhead0.CTFs.map((ctf, i) => (
+          <div
+            key={i}
+            className="bg-gray-100 rounded-lg p-4 flex justify-center items-center text-center font-semibold"
+          >
             {ctf}
           </div>
         ))}
@@ -20,8 +23,8 @@ const IndianCyberLeague = () => (
     </div>
 
     <ul className="leading-loose font-medium">
-      {data.subhead0.texts.map((text) => (
-        <li>
+      {data.subhead0.texts.map((text, i) => (
+        <li key={i}>
           {text}
         </li>
       ))}
