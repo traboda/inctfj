@@ -1,6 +1,6 @@
 import React from 'react';
 import shortid from 'shortid';
-import { Fade } from 'react-awesome-reveal';
+import Fade from 'react-reveal';
 
 const SchoolLeaderboard = ({ schools }) => {
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Select from 'react-select';
 import styled from '@emotion/styled';
 import shortid from 'shortid';
-import { Fade } from 'react-awesome-reveal';
+import Fade from 'react-reveal';
 
 import IndianStates from '../../data/indian-states';
 import { EditionStats } from '../../data/types/stats';

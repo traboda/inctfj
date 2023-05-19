@@ -12,7 +12,6 @@ const customConfig = {
     );
     return config;
   },
-
 };
 
 module.exports = withPlugins([

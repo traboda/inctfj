@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import styled from '@emotion/styled';
-import Fade from 'react-awesome-reveal';
+import Fade from 'react-reveal';
 // eslint-disable-next-line import/order
 import Modal from 'react-modal';
 const ReactPlayer = dynamic(() => import('react-player/youtube'));

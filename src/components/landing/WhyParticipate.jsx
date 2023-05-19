@@ -1,7 +1,7 @@
 import React from 'react';
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
-import { Zoom } from 'react-awesome-reveal';
+import Zoom from 'react-reveal';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
@@ -63,7 +63,6 @@ const LandingReasonsToParticipate = () => {
       </div>
     </ReasonsSection>
   );
-
 };
 
 export default LandingReasonsToParticipate;

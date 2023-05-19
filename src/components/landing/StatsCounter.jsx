@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import CountUp from 'react-countup';
-import { Zoom } from 'react-awesome-reveal';
+import Zoom from 'react-reveal';
 
 
 const StatsContainer = styled.section`

@@ -1,5 +1,5 @@
 import React from 'react';
-import Fade from 'react-awesome-reveal';
+import Fade from 'react-reveal';
 import styled from '@emotion/styled';
 
 
