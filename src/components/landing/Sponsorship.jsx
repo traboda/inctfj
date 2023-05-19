@@ -32,9 +32,7 @@ const SponsorshipArea = styled.section`
     }
 `;
 
-const LandingSponsorship = () => {
-
-  return (
+const LandingSponsorship = () => (
     <SponsorshipArea className="grid lg:grid-cols-2 mx-auto container px-4 py-10 gap-8">
       <div>
         <div>
@@ -45,7 +43,7 @@ const LandingSponsorship = () => {
                 {data.forNewSponsors.description[0]}
                 <div className="text-lg mt-3">{data.forNewSponsors.description[1]}</div>
               </p>
-              <div className="mt-2 mb-8">
+              <div className="mt-4 mb-8">
                 {/*<a className="sponsorship-brochure-button" href="/sponsor">Sponsorship Brochure</a>*/}
                 <a 
                   className="contact-us-button px-3 py-2 rounded-lg text-white bg-primary"
@@ -56,31 +54,10 @@ const LandingSponsorship = () => {
               </div>
             </div>
           )}
-          <div>
-            {data.officialPartners && data.officialPartners.length > 0 && (
-            <div className="bg-white rounded-xl shadow-md my-6">
-              <div className="flex flex-wrap">
-                <div className="inctfj-sponsors text-red-500 w-full p-0 mt-3 mb-3 opacity-80 text-lg text-center">
-                  InCTF Jr 2021 - Official Partners
-                </div>
-                {data.officialPartners.map((s) =>
-                  (<div className="md:w-1/2 w-full flex items-center" style={{ display:'flex', flex:'1 1 30%', flexWrap:'wrap', alignItems:'center', justifyContent:'space-between' }}>
-                    <div>
-                      <a href={s.link} target="_blank" style={{ display:'block' }}>
-                        <img draggable="false" alt="Sponsor Logo" src={`/${eventID}/${s.logo}`} style={{ maxHeight:'80px', minHeight:'79px', width:'150px', objectFit:'contain' }} />
-                      </a>
-                    </div>
-                  </div>),
-                )}
-              </div>
-            </div>
-            )}
-          </div>
         </div>
       </div>
       <SponsorsSection />
     </SponsorshipArea>
-  );
-};
+);
 
 export default LandingSponsorship;

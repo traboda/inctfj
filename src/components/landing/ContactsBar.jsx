@@ -51,13 +51,14 @@ const LandingContactsBar = () => {
     <div className="flex flex-wrap">
       <div className="w-full flex justify-center flex-wrap">
         {data.LandingPoweredby.map((item, index) => {
-          return (<div>  
-            {' '}
-            <PoweredByTraboda key={index}>
-              <div>{item.header}</div>
-              <img src={`/${eventID}/${item.logo}`} alt="Logo Image" />
-            </PoweredByTraboda>
-          </div>);
+          return (
+            <div>
+              <PoweredByTraboda className="p-4" key={index}>
+                <div className="mb-2">{item.header}</div>
+                <img src={`/${eventID}/${item.logo}`} alt="Traboda" />
+              </PoweredByTraboda>
+            </div>
+          );
         })}
       </div>
                 

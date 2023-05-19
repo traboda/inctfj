@@ -5,12 +5,6 @@ const LandingPrizeDetails = () => {
   return (
     <div className="landing-prize-details">
       <div className="container mx-auto py-12 px-4">
-        <div className="text-6xl font-semibold">
-          <span className="text-primary">Prizes</span>
-          {' '}
-          and Awards
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center mt-20 gap-8">
           <div className="w-full rounded-md bg-gradient-to-r from-primary via-red-500 to-yellow-500 p-1 shadow-xl order-2 md:order-1">
             <div className="flex w-full items-center justify-center flex-col bg-white back h-[240px]">

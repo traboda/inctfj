@@ -29,9 +29,6 @@ const HowItWorksSection = styled.section`
         box-shadow: none!important;
       }
   }
-  p {
-    font-size: 14px;
-  } 
   a {
       text-decoration: none!important;
       display: inline-flex;
@@ -88,8 +85,8 @@ const LandingHowItWorks = () => {
         </h2>
       </div>
       <div className="grid md:grid-cols-3 gap-4">
-        {steps.map((s) =>
-          (<div left={s.left} right={s.right} top={s.top} delay={s.delay}>
+        {steps.map((s, index) => (
+          <div key={`${s.icon}_${index}`}>
             <div className="flex flex-wrap">
               <div className="md:w-full pr-4 pl-4 flex items-center justify-center w-1/4 p-1 md:p-0">
                 <img draggable="false" alt={s.title} src={s.icon} />
@@ -97,21 +94,12 @@ const LandingHowItWorks = () => {
               <div className="md:w-full mb-4 pr-4 pl-4 w-3/4 text-left md:text-center p-2 md:p-0">
                 <div className="text-3xl font-semibold">{s.title}</div>
               </div>
-              <div className="w-full text-left md:text-center">
-                <p>{s.content}</p>
-                {(s.links && s.links.length > 0) &&
-                <div className="w-full mt-3 mb-4">
-                  {s.links.map((l) =>
-                    (<a className="inline-block mx-2 py-2 px-3 mb-2" target="_blank" href={l.url}>
-                      <i className="fa fa-external-link mr-2" />
-                      {l.title}
-                    </a>),
-                  )}
-                </div>}
-              </div>
+              <p className="w-full text-base text-left md:text-justify p-2">
+               {s.content}
+              </p>
             </div>
-          </div>),
-        )}
+          </div>
+        ))}
       </div>
     </HowItWorksSection>
   );
