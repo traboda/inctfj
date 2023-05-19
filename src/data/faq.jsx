@@ -69,7 +69,7 @@ export default
     tags: ['requirements'],
   },
   {
-    'question': 'How can I register to InCTF Junior 2021 ?',
+    'question': 'How can I register to InCTF Junior 2023 ?',
     'keywords': ['register'],
     'response': [
       'Registering is a pretty simple process. Click on the following to watch the step by step guide on how to register. ',
