@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Fade from 'react-reveal';
+
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const Data = require(`../../data/${eventID}/index.json`);
@@ -48,7 +48,7 @@ const LandingOrganizers = () => {
     <div className="content-container">
       <h3>Organized By</h3>
       <div className="flex flex-wrap grid md:grid-cols-3 mx-0">
-        <Fade direction="left">
+        <div>
           <div className="w-full pr-4 pl-4 md:order-1 order-2 md:text-right text-center ">
             <a href="https://amrita.edu">
               <img
@@ -66,8 +66,8 @@ const LandingOrganizers = () => {
               </p>
             </div>
           </div>
-        </Fade>
-        <Fade direction="up">
+        </div>
+        <div>
           <div className="w-full pr-4 pl-4 text-center md:order-2 order-1">
             <a href="https://bi0s.in">
               <img
@@ -85,8 +85,8 @@ const LandingOrganizers = () => {
               </p>
             </div>
           </div>
-        </Fade>
-        <Fade direction="right">
+        </div>
+        <div>
           <div className="w-full pr-4 pl-4 md:order-2 order-1 md:text-left text-center">
             <a href="https://www.amrita.edu/center/cyber-security">
               <img
@@ -104,7 +104,7 @@ const LandingOrganizers = () => {
               </p>
             </div>
           </div>
-        </Fade>
+        </div>
       </div>
     </div>
   </OrganizersSection>);

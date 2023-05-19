@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Fade from 'react-reveal';
+
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
@@ -73,21 +73,19 @@ const LandingHeader = () => {
         <div className="w-full">
           <div className="flex flex-wrap">
             <div className="w-full md:w-2/3 px-4">
-              <Fade>
+              <div>
                 <h1>
                   <span style={{ color: '#FF6F00' }}>{data.Landingheader}</span>
-                  <br />
-                  {data.date}
                 </h1>
-              </Fade>
-              <Fade direction="up">
+              </div>
+              <div>
                 <p>
                   <span className="mt-6">
                     {data.Desc}
                   </span>
                   {data.subDesc}
                 </p>
-              </Fade>
+              </div>
               <div className="mt-4 md:px-2">
                 {data.button.map((button) => (
                   <a

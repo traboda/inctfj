@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Select from 'react-select';
 import styled from '@emotion/styled';
 import shortid from 'shortid';
-import Fade from 'react-reveal';
+
 
 import IndianStates from '../../data/indian-states';
 import { EditionStats } from '../../data/types/stats';
@@ -124,11 +124,11 @@ const YearlyLeaderboard = ({ data }: YearlyLeaderboard) => {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {data.results.champions.map((c, index) =>
+        {data.results.champions.map((c) =>
           (<div className="p-4 bg-white rounded-lg border" key={shortid.generate()}>
-            <Fade delay={index * 250}>
+            <div>
               <ChampionCard {...c} />
-            </Fade>
+            </div>
           </div>),
         )}
       </div>
@@ -145,11 +145,11 @@ const YearlyLeaderboard = ({ data }: YearlyLeaderboard) => {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-        {data.results.top10.map((c, index) =>
+        {data.results.top10.map((c) =>
           (<div className="p-4 bg-white rounded-lg border" key={shortid.generate()}>
-            <Fade direction="up" delay={index * 250}>
+            <div>
               <ChampionCard {...c} />
-            </Fade>
+            </div>
           </div>),
         )}
       </div>
@@ -165,11 +165,11 @@ const YearlyLeaderboard = ({ data }: YearlyLeaderboard) => {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-        {data.results.topWomen.map((c, index) =>
+        {data.results.topWomen.map((c) =>
           (<div className="p-4 bg-white rounded-lg border" key={shortid.generate()}>
-            <Fade direction="up" delay={index * 250}>
+            <div>
               <ChampionCard {...c} />
-            </Fade>
+            </div>
           </div>),
         )}
       </div>
@@ -219,9 +219,9 @@ const YearlyLeaderboard = ({ data }: YearlyLeaderboard) => {
                         (state ? s.state === state : true),
           ).map((l) =>
             (<div>
-              <Fade>
+              <div>
                 <FameCard {...l} key={shortid.generate()} />
-              </Fade>
+              </div>
             </div>),
           )}
         </GridHeight>

@@ -1,5 +1,4 @@
 import React from 'react';
-import Fade from 'react-reveal';
 import styled from '@emotion/styled';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
@@ -20,8 +19,8 @@ const InctfIntro = () => {
       <div className="flex flex-wrap">
         <div className="md:w-2/3 pr-4 pl-4 flex items-center p-6">
           <div>
-            <Fade direction="up"><h1 className="font-bold mb-6">{data.header}</h1></Fade>
-            <Fade>
+            <div><h1 className="font-bold mb-6">{data.header}</h1></div>
+            <div>
               <p>
                 {data.description.map((item, index) => {
                   return (<span key={index}>
@@ -32,14 +31,14 @@ const InctfIntro = () => {
                 })}
 
               </p>
-            </Fade>
+            </div>
                         
           </div>
         </div>
         <div className="md:w-1/3 pr-4 pl-4 p-2">
           <div className="flex grid grid-cols-2 flex-wrap  mx-0">
             {data.participants.map((i, index) =>
-              (<Fade delay={index * 150}>
+              (<div key={index}>
                 <div className="p-1">
                   <img
                     draggable="false"
@@ -48,7 +47,7 @@ const InctfIntro = () => {
                     alt="INCTF participant"
                   />
                 </div>
-              </Fade>),
+              </div>),
             )}
           </div>
         </div>

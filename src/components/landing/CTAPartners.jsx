@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Fade from 'react-reveal';
+
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
@@ -33,19 +33,19 @@ const CTAPartners = () => {
   return (<RegCTASection className="container mx-auto px-4 py-8">
     {data.CTAPartners && 
     <div className="grid md:grid-cols-4 items-center gap-6">
-      <Fade direction="left" className="md:col-span-3">
+      <div className="md:col-span-3">
         <div className="flex items-center">
           {/*<img alt="star" className="hidden md:block mr-2" src={require('../../assets/images/icons/shooting_star.png')} />*/}
           <h3 style={{ maxWidth: '800px' }}>
             {data.CTAPartners.message}
           </h3>
         </div>
-      </Fade>
-      <Fade direction="right">
+      </div>
+      <div>
         <div className="flex items-center justify-center">
           <a rel="nofollow noref" href={data.CTAPartners.button.url}>{data.CTAPartners.button.label}</a>
         </div>
-      </Fade>
+      </div>
     </div>
         }
   </RegCTASection>);

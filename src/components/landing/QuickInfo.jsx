@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Fade from 'react-reveal';
+
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/championship.json`);
 
@@ -61,7 +61,7 @@ const LandingQuickInfo = () => {
       <div className="flex flex-wrap container mx-auto px-4">
         {landingInfo.map((l, i) => (
           <div className="md:w-1/3 w-full py-2" key={i}>
-            <Fade left={l.left} right={l.right} up={l.up}>
+            <div left={l.left} right={l.right} up={l.up}>
               <div className="flex flex-wrap w-full mx-0">
                 <div className="flex items-center justify-center w-1/4">
                   <img draggable="false" alt={l.question} src={l.image} />
@@ -73,7 +73,7 @@ const LandingQuickInfo = () => {
                   </div>
                 </div>
               </div>
-            </Fade>
+            </div>
           </div>
         ))}
       </div>

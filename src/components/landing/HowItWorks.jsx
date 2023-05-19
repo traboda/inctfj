@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Fade from 'react-reveal';
+
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
@@ -89,7 +89,7 @@ const LandingHowItWorks = () => {
       </div>
       <div className="grid md:grid-cols-3 gap-4">
         {steps.map((s) =>
-          (<Fade left={s.left} right={s.right} top={s.top} delay={s.delay}>
+          (<div left={s.left} right={s.right} top={s.top} delay={s.delay}>
             <div className="flex flex-wrap">
               <div className="md:w-full pr-4 pl-4 flex items-center justify-center w-1/4 p-1 md:p-0">
                 <img draggable="false" alt={s.title} src={s.icon} />
@@ -110,7 +110,7 @@ const LandingHowItWorks = () => {
                 </div>}
               </div>
             </div>
-          </Fade>),
+          </div>),
         )}
       </div>
     </HowItWorksSection>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Fade from 'react-reveal';
+
 
 import SocialMediaLinks from '../SocialMediaLinks';
 
@@ -80,7 +80,7 @@ const MobileMenu = ({ onClose }) => {
       </div>
       <ol className="pl-0 mt-3">
         {sidebarLinks.map((l, index) =>
-          (<Fade delay={index * 250}>
+          (<div key={index}>
             <li>
               {l.href ?
                 <a href={l.href} className="w-full">
@@ -90,7 +90,7 @@ const MobileMenu = ({ onClose }) => {
                   {l.title}
                 </button>}
             </li>
-          </Fade>),
+          </div>),
         )}
       </ol>
       <div style={{ opacity: 0.8 }} className="text-center pt-4">

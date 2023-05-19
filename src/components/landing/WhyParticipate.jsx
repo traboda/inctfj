@@ -1,7 +1,6 @@
 import React from 'react';
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
-import Zoom from 'react-reveal';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
@@ -51,14 +50,14 @@ const LandingReasonsToParticipate = () => {
       </h2>
       <div className="grid lg:grid-cols-4 md:grid-cols-2">
         {data.whyPacrticipate.map((r, index) => (
-          <Zoom up={index % 2} left={!index % 2}>
+          <div up={index % 2} left={!index % 2}>
             <div className="w-full text-center mb-6 md:mb-0 p-2">
               <video autoPlay loop muted src={`/${eventID}/${r.video}`} />
               <div>
                 {r.text.map((text, index) => <p key={index}>{text}</p>)}
               </div>
             </div>
-          </Zoom>
+          </div>
         ))}
       </div>
     </ReasonsSection>

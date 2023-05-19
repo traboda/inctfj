@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import Fade from 'react-reveal';
+
 
 const ItemDropDown = styled('div')`
     position: absolute;
@@ -31,7 +31,7 @@ const TopBarItem = ({ item, isVisible }) => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <Fade delay={0}>
+    <div>
       <div className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
         <a href={item.link}>{item.label}</a>
         {(item?.items?.length > 0) && (
@@ -49,7 +49,7 @@ const TopBarItem = ({ item, isVisible }) => {
         </ItemDropDown>
         )}
       </div>
-    </Fade>
+    </div>
   );
 
 };

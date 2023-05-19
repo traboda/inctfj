@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
-import Fade from 'react-reveal';
+
 
 const PastSpeakersSection = styled.section`
     padding: 5vh 5vw;
@@ -56,7 +56,7 @@ const PastINCTFSpeakers = () => {
     <div className="flex flex-wrap  mx-0 speakers-list">
       {speakers.map((s, index) =>
         (<div className="w-1/3 md:w-1/5 pr-4 pl-4 p-0">
-          <Fade delay={index * 150}>
+          <div>
             <div>
               <img
                 alt="Speaker"
@@ -65,7 +65,7 @@ const PastINCTFSpeakers = () => {
                 style={{ transform: index === currHighlight ? 'scale(1.15)' : null }}
               />
             </div>
-          </Fade>
+          </div>
         </div>),
       )}
     </div>

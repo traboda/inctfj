@@ -1,6 +1,6 @@
 import React from 'react';
 import shortid from 'shortid';
-import Fade from 'react-reveal';
+
 
 const SchoolLeaderboard = ({ schools }) => {
 
@@ -26,7 +26,7 @@ const SchoolLeaderboard = ({ schools }) => {
           </div>
         </div>
         {schools.map((s, index) =>
-          (<Fade direction="up">
+          (<div>
             <div key={shortid.generate()} className="flex flex-wrap p-2 bg-white">
               <div style={{ fontSize: 'calc(12px + 0.35vw)' }} className="w-2/4 pr-4 pl-4 px-2">
                 <b>
@@ -43,7 +43,7 @@ const SchoolLeaderboard = ({ schools }) => {
                 {s.points}
               </div>
             </div>
-          </Fade>),
+          </div>),
         )}
       </div>
       <div style={{ opacity: 0.8, fontSize: '11px' }} className="py-3 p-2">

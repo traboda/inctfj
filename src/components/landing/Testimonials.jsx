@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import styled from '@emotion/styled';
-import Fade from 'react-reveal';
 // eslint-disable-next-line import/order
 import Modal from 'react-modal';
+
 const ReactPlayer = dynamic(() => import('react-player/youtube'));
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
@@ -60,21 +60,21 @@ const LandingTestimonials = () => {
 
   return (
     <TestimonialSection className="container mx-auto px-4 py-10">
-      <Fade>
+      <div>
         {data.LandingTestimonialsHeader && (
         <div className="testimonial-title mb-3">
           <img src="/assets/images/icons/play_button.png" alt="View Video Testimonials" />
           {data?.LandingTestimonialsHeader}
         </div>
         )}
-      </Fade>
+      </div>
       <div className="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-2">
-        {data.LandingTestimonials?.map((p, index) => (
-          <Fade delay={index * 200}>
+        {data.LandingTestimonials?.map((p) => (
+          <div>
             <a onClick={openVideo}>
               <img alt="testimonial student" draggable="false" src={`/${eventID}/${p}`} />
             </a>
-          </Fade>
+          </div>
         ))}
       </div>
       <Modal

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import CountUp from 'react-countup';
-import Zoom from 'react-reveal';
 
 
 const StatsContainer = styled.section`
@@ -47,13 +46,13 @@ const LandingStatsBar = () => {
   return (<StatsContainer className="container mx-auto flex flex-wrap text-center">
     {statsPreviewer().map((s) =>
       (<div className="w-1/2 md:w-1/3 p-4">
-        <Zoom mountOnEnter effect="fadeInUp">
+        <div mountOnEnter effect="fadeInUp">
           <div className="text-blue-600 h2 mb-2 font-bold">
             <CountUp delay={0.5} duration={4.5} end={s.value} />
             {s.suffix}
           </div>
           <div className="h5 mb-0">{s.title}</div>
-        </Zoom>
+        </div>
       </div>),
     )}
   </StatsContainer>);

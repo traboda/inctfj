@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Zoom from 'react-reveal';
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
@@ -11,15 +10,6 @@ const AboutInCTFSection = styled.section`
       padding: 0.5rem;
       border-radius: 8px;
       box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.3);
-    }
-    h2 {
-        font-weight: 700;
-        line-height: 1.2;
-        font-size: calc(1.25rem + 1.2vw);
-        margin-bottom: 1.75rem;
-        span {
-          color: #E65100;
-        }
     }
     p {
         font-size: calc(1.1rem + 0.2vw);
@@ -53,7 +43,6 @@ const AboutInCTFSection = styled.section`
 
 const HighlightFeature = styled('div')`
     margin-bottom: -5.5rem;
-    line-height: 1.3;
     font-size: calc(1.2rem + 0.15vw);
     span {
         display: inline-block;
@@ -62,7 +51,7 @@ const HighlightFeature = styled('div')`
 
 const LandingAboutInCTF = () => (
   <AboutInCTFSection className="container mx-auto py-16 px-4">
-    <Zoom direction="up">
+    <div>
       <div className="md:hidden flex justify-center mb-6">
         <div className="rounded-lg p-2 bg-blue-100">
           <div className="flex flex-wrap items-center">
@@ -86,13 +75,11 @@ const LandingAboutInCTF = () => (
       </div>
       <div className="flex flex-wrap mx-0">
         <div className="md:w-2/3">
-          <h2 className="mt-2">
+          <h2 className="mb-6 text-5xl">
             {data.LandingAboutInCTF[0]}
-            &
-            <wbr />
-            <span>{data.LandingAboutInCTF[1]}</span> 
-            {' '}
-            <wbr />
+            <br />
+            <span className="text-primary">{data.LandingAboutInCTF[1]}</span>
+            <br />
             {data.LandingAboutInCTF[2]}
           </h2>
           <p>
@@ -119,7 +106,7 @@ const LandingAboutInCTF = () => (
           </div>
         </div>
       </div>
-    </Zoom>
+    </div>
   </AboutInCTFSection>
 );
 

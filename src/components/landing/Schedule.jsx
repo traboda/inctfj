@@ -1,5 +1,5 @@
 import React from 'react';
-import Fade from 'react-reveal';
+
 
 const data = require('../../data/training.json');
 
@@ -41,8 +41,8 @@ const Schedule = () => {
             </div>
           </div>
 
-          {data.schedule.map((t, index) =>
-            (<Fade delay={index * 220}>
+          {data.schedule.map((t) =>
+            (<div>
               <div className="flex flex-wrap  mx-0 py-2 border-b">
                 <div className="md:w-1/6 w-full flex items-center px-1">
                   <div>
@@ -66,7 +66,7 @@ const Schedule = () => {
                   )}
                 </div>
               </div>
-            </Fade>),
+            </div>),
           )}
         </div>
       </div>
