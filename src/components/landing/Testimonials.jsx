@@ -88,9 +88,9 @@ const LandingTestimonials = () => {
             whileInView="animated"
             key={i}
           >
-            <a onClick={openVideo}>
-              <img alt="testimonial student" draggable="false" src={`/${eventID}/${p}`} />
-            </a>
+            <button className="cursor-pointer" onClick={openVideo}>
+              <img alt="testimonial student" draggable="false" src={`/${eventID}/${p}`} loading="lazy" />
+            </button>
           </motion.div>
         ))}
       </motion.div>
@@ -100,7 +100,7 @@ const LandingTestimonials = () => {
         style={{
           overlay: {
             zIndex: 9000, background: 'rgba(0,0,0,0.8)',
-            height: '100vh',
+            height: '100dvh',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
           },
           content: {

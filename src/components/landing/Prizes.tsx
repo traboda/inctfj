@@ -17,7 +17,7 @@ const LandingPrizeDetails = () => {
             className="w-full rounded-md bg-gradient-to-r from-primary via-red-500 to-yellow-500 p-1 shadow-xl order-2 md:order-1"
           >
             <div className="flex w-full items-center justify-center flex-col bg-white back h-[240px]">
-              <div className="text-5xl font-semibold">{data?.prizes.second}</div>
+              <div className="text-4xl lg:text-5xl font-semibold">{data?.prizes.second}</div>
               <div className="text-2xl text-center mt-4 font-semibold opacity-70">2nd Prize</div>
             </div>
           </motion.div>
@@ -29,7 +29,7 @@ const LandingPrizeDetails = () => {
           >
             <div className="w-full rounded-md bg-gradient-to-r from-primary via-red-500 to-yellow-500 p-1 shadow-xl transform md:scale-125 relative z-10">
               <div className="flex w-full items-center justify-center flex-col back h-[240px] text-white">
-                <div className="text-6xl font-semibold">{data?.prizes.first}</div>
+                <div className="text-5xl md:text-4xl lg:text-6xl font-semibold">{data?.prizes.first}</div>
                 <div className="text-2xl text-center mt-4 font-semibold opacity-90">1st Prize</div>
               </div>
             </div>
@@ -41,7 +41,7 @@ const LandingPrizeDetails = () => {
             className="w-full rounded-md bg-gradient-to-r from-primary via-red-500 to-yellow-500 p-1 order-3 shadow-xl"
           >
             <div className="flex w-full items-center justify-center flex-col bg-white back h-[240px]">
-              <div className="text-5xl font-semibold">{data?.prizes.third}</div>
+              <div className="text-4xl lg:text-5xl font-semibold">{data?.prizes.third}</div>
               <div className="text-2xl text-center mt-4 font-semibold opacity-70">3rd Prize</div>
             </div>
           </motion.div>

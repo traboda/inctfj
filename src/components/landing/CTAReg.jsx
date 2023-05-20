@@ -39,15 +39,15 @@ const CTAReg = ({ UTMSource = null }) => (
   >
     <RegCTASection className="container mx-auto px-4 md:py-10">
       <div className="flex flex-wrap">
-        <div className="md:w-2/3 flex items-center py-2">
+        <div className="lg:w-2/3 flex items-center py-2">
           <img alt="star" className="hidden md:block mr-2" src="/assets/images/icons/shooting_star.png" />
           <h3>
             {data.CTAreg.message}
           </h3>
         </div>
-        <div className="md:w-1/3 px-0 md:px-2 flex items-center justify-center w-full">
+        <div className="lg:w-1/3 px-0 md:px-2 flex items-center justify-center w-full">
           <iframe
-            className="border-0 w-full"
+            className="border-0 w-full -mx-2"
             style={{ height: '80px', overflow: 'auto' }}
             src={`${data.CTAreg.button.url}/reg-frame?background=%23fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
           />

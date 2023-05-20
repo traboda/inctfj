@@ -20,7 +20,7 @@ import SiteView from '../src/components/SiteView';
 const SSILandingPage = () => {
 
   return (<SiteView>
-    <div style={{ overflowX: 'hidden', background: '#FAFAFA' }} id="landing-page">
+    <div style={{ background: '#FAFAFA' }} id="landing-page">
       <TopBar darkenOnSidebar includeSpace={false} />
       <LandingHeader UTMSource="ssi" />
       <LandingQuickInfo />

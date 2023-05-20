@@ -21,6 +21,7 @@ const SponsorsSection = () => {
               <div className="w-1/3 items-center flex justify-center p-1 md:p-3" key={index}>
                 <a href={sponsor.link} target="_blank" rel="noopener noreferrer" style={{ display:'block' }}>
                   <Image
+                    loading="lazy"
                     src={`/inctf/${sponsor.path}`}
                     draggable="false"
                     alt="Sponsor Logo"

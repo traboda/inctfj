@@ -40,7 +40,7 @@ const HeaderContainer = styled.section`
 
 const LandingHeader = () => (
   <HeaderContainer>
-    <div className="container mx-auto px-2 py-12">
+    <div className="container mx-auto px-2 py-20">
       <div className="flex flex-wrap">
         <motion.div
           variants={animations}
@@ -60,7 +60,7 @@ const LandingHeader = () => (
                 {data.subDesc}
               </p>
             </div>
-            <div>
+            <div className="-mx-2 mt-4">
               <iframe id="register" src="https://inctfjr.ctf.eng.run/reg-frame?background=%23fafafa" className="w-full" height="80px" />
             </div>
           </div>

@@ -23,7 +23,7 @@ const LandingPage = () => {
 
   return (
     <SiteView>
-      <div style={{ overflowX: 'hidden', background: '#FAFAFA' }} id="landing-page">
+      <div style={{ background: '#FAFAFA' }} id="landing-page">
         <TopBar darkenOnSidebar includeSpace={false} />
         <LandingHeader />
         <LandingQuickInfo />

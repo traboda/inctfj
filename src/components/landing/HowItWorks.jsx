@@ -74,6 +74,7 @@ const LandingHowItWorks = () => {
             src="/assets/images/icons/thinking.png"
             className="mr-2 my-0 p-0 shadow-none inline-block"
             style={{ width: '64px' }}
+            loading="lazy"
           />
           How Does it Work?
         </motion.h2>
@@ -88,7 +89,7 @@ const LandingHowItWorks = () => {
           >
             <div className="flex flex-wrap">
               <div className="md:w-full flex items-center justify-center w-1/4 p-1 md:p-0">
-                <img draggable="false" alt={s.title} src={s.icon} />
+                <img draggable="false" alt={s.title} src={s.icon} loading="lazy" />
               </div>
               <div className="md:w-full mb-4 w-3/4 text-left md:text-center p-2 md:p-0 flex items-center">
                 <div className="text-3xl font-bold tracking-wider mt-2 md:mx-auto">{s.title}</div>

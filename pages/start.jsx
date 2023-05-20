@@ -22,7 +22,7 @@ import SiteView from '../src/components/SiteView';
 const StartPage = () => {
 
   return (<SiteView>
-    <div style={{ overflowX: 'hidden' }} id="landing-page">
+    <div id="landing-page">
       <TopBar darkenOnSidebar includeSpace={false} />
       <LandingHeader UTMSource="start_page" />
       <LandingQuickInfo />
