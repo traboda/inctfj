@@ -60,6 +60,9 @@ const LandingHeader = () => (
                 {data.subDesc}
               </p>
             </div>
+            {/*<div>*/}
+            {/*  <iframe src="https://inctfjr.ctf.eng.run/reg-frame" />*/}
+            {/*</div>*/}
           </div>
           <div className="mt-4 md:px-2">
             {data.button.map((button, i) => (

@@ -14,8 +14,8 @@
   },
   "CTA": {
       "type": "link",
-      "link": "/",
-      "buttonText": "View Results"
+      "link": "/#register",
+      "buttonText": "Register Now"
   },
   "menu": [
     {

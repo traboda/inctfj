@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import styled from '@emotion/styled';
 import Modal from 'react-modal';
+// eslint-disable-next-line import/order
 import { motion } from 'framer-motion';
 
 const ReactPlayer = dynamic(() => import('react-player/youtube'));
