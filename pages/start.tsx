@@ -23,8 +23,8 @@ const StartPage = () => {
 
   return (<SiteView>
     <div id="landing-page">
-      <TopBar darkenOnSidebar includeSpace={false} />
-      <LandingHeader UTMSource="start_page" />
+      <TopBar />
+      <LandingHeader />
       <LandingQuickInfo />
       <YoutubeVideosSection />
       <LandingAboutInCTF />

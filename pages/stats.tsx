@@ -41,7 +41,7 @@ const StatsPage = () => {
   const editions = eventStats?.editions;
 
   return (<SiteView meta={{ title: 'Results & Statistics' }}>
-    <TopBar darkenOnSidebar />
+    <TopBar />
     <PageHeader
       title="Results & Statistics"
       description="The results and statistics of the InCTF Junior editions showcasing the top cyber-security student talents in the country."

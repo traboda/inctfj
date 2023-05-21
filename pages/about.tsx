@@ -31,7 +31,7 @@ const AboutPage = () => {
   // useEffect(fetchStats, [])
 
   return (<SiteView meta={{ title: 'About ' }}>
-    <TopBar includeSpace={false} />
+    <TopBar />
     <div style={{ background: '#FAFAFA' }}>
       <Parallax
         background={`/${eventID}/${data.coverImage1}`}

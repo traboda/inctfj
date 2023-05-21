@@ -121,7 +121,7 @@ const WriteUpPage = ({ id }) => {
 
   return data ?
     <SiteView meta={{ title: `${data.title} - ${data?.category} Challenge Solution` }}>
-      <TopBar darkenOnSidebar />
+      <TopBar />
       <div className="px-4 py-8 flex items-end justify-center" style={{ minHeight: '30vh' }}>
         <div style={{ width: '1000px', maxWidth: '100%' }}>
           <div className="mb-6">
@@ -216,7 +216,7 @@ const WriteUpPage = ({ id }) => {
       <Footer />
     </SiteView> :
     <SiteView meta={{ title: 'WriteUp Not Found' }}>
-      <TopBar darkenOnSidebar />
+      <TopBar />
       <h1>Writeup not found</h1>
       <Footer />
     </SiteView>;

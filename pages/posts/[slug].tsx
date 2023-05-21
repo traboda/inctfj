@@ -41,7 +41,7 @@ const BlogPostPage = ({ slug }) => {
 
   return data ?
     <SiteView meta={{ title: `${data.title} - Blog`, description: data.description }}>
-      <TopBar darkenOnSidebar />
+      <TopBar />
       <BlogWrap>
         <TitleArea>
           <div className="container-lg p-4" style={{ maxWidth: '900px' }}>
@@ -71,7 +71,7 @@ const BlogPostPage = ({ slug }) => {
       <Footer />
     </SiteView> :
     <SiteView meta={{ title: 'Blog Post Not Found' }}>
-      <TopBar darkenOnSidebar />
+      <TopBar />
       <Footer />
     </SiteView>;
 };

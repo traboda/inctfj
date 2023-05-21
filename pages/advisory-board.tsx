@@ -12,7 +12,7 @@ const AdvisoryBoardPage = () => {
 
   return (
     <SiteView meta={{ title: 'Advisory Board' }}>
-      <TopBar darkenOnSidebar />
+      <TopBar />
       <PageHeader
         breadcrumb={[
           {

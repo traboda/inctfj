@@ -9,15 +9,12 @@ import SiteView from '../src/components/SiteView';
 
 
 const LogoWrap = styled.div`
-      background-color: ${({ dark }) => dark ? '#333' : 'white'};
+  background-color: #333;
       padding: 2rem;
       border-radius: 1rem;
       background-size: 30px 30px;
       background-position: 0 0,45px 45px;
-      background-image: ${({ dark }) =>
-    dark ?
-      'linear-gradient(45deg,#222427 25%,transparent 0,transparent 75%,#222427 0,#222427),linear-gradient(45deg,#222427 25%,transparent 0,transparent 75%,#222427 0,#222427);' :
-      'linear-gradient(45deg,#f6f6f6 25%,transparent 0,transparent 75%,#f6f6f6 0,#f6f6f6),linear-gradient(45deg,#f6f6f6 25%,transparent 0,transparent 75%,#f6f6f6 0,#f6f6f6)'
+      background-image: linear-gradient(45deg,#222427 25%,transparent 0,transparent 75%,#222427 0,#222427),linear-gradient(45deg,#222427 25%,transparent 0,transparent 75%,#222427 0,#222427)
 };
     img {
       max-width: 100%;
@@ -37,7 +34,7 @@ const BrandingPage = () => {
 
   return (
     <SiteView meta={{ title: 'Brand Kit' }}>
-      <TopBar darkenOnSidebar includeSpace={false} />
+      <TopBar />
       <PageHeader
         title="Brand Kit"
         description="Brand Assets & Guidelines for InCTF Junior"
@@ -52,7 +49,7 @@ const BrandingPage = () => {
               </LogoWrap>
             </div>
             <div className="md:w-1/3 p-2">
-              <LogoWrap dark>
+              <LogoWrap>
                 <img src="/assets/images/branding/light_version.png" alt="Light Logo" />
                 <a href="/assets/images/branding/light_version.png">PNG</a>
               </LogoWrap>

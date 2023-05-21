@@ -24,7 +24,7 @@ const LandingPage = () => {
   return (
     <SiteView>
       <div style={{ background: '#FAFAFA' }} id="landing-page">
-        <TopBar darkenOnSidebar includeSpace={false} />
+        <TopBar />
         <LandingHeader />
         <LandingQuickInfo />
         <LandingAboutInCTF />

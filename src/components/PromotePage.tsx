@@ -80,7 +80,7 @@ const PromotePage = () => {
   };
 
   return (<SiteView meta={{ title: 'Publicize ' }}>
-    <TopBar includeSpace={false} />
+    <TopBar />
     <div className="px-4 py-8 flex items-end justify-center">
       <div style={{ width: '1000px', maxWidth: '100%' }}>
         <div className="flex items-center py-5" style={{ minHeight: '30vh' }}>

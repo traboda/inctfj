@@ -21,8 +21,8 @@ const SSILandingPage = () => {
 
   return (<SiteView>
     <div style={{ background: '#FAFAFA' }} id="landing-page">
-      <TopBar darkenOnSidebar includeSpace={false} />
-      <LandingHeader UTMSource="ssi" />
+      <TopBar />
+      <LandingHeader />
       <LandingQuickInfo />
       <LandingAboutInCTF />
       <LandingStatsBar />

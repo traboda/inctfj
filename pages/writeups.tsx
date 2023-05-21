@@ -59,7 +59,7 @@ const WriteupListingPage = () => {
 
   return (
     <SiteView meta={{ title: 'Challenge Solution WriteUps' }}>
-      <TopBar darkenOnSidebar />
+      <TopBar />
       <PageHeader
         title="Challenge Solutions"
         breadcrumb={[
@@ -95,7 +95,7 @@ const WriteupListingPage = () => {
                 options={CHALLENGE_CATEGORIES}
                 isClearable
                 value={category}
-                onChange={(t) => setCategory(t?.value === category?.value ? null : t)}
+                onChange={(t) => setCategory((Array.isArray(t) ? {} : t)?.value === category?.value ? null : t)}
               />
             </div>
           </div>

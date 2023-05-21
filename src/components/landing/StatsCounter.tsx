@@ -16,7 +16,7 @@ const StatsContainer = styled.section`
 
 const LandingStatsBar = () => {
 
-  const [stats, setStats] = useState();
+  const [stats, setStats] = useState(null);
 
   const fetchStats = () => {
     try {
@@ -37,22 +37,19 @@ const LandingStatsBar = () => {
 
   useEffect(fetchStats, []);
 
-  const statsPreviewer = () => [
+  const statsPreviewer = [
     { value: stats?.registrations || 0, title: 'Total Participants' },
     { value: stats?.regToday || 0, title: 'Registrations Today' },
     { value: stats?.totalInstitutions || 0, title: 'Schools Participating' },
   ];
 
   return (<StatsContainer className="container mx-auto flex flex-wrap text-center">
-    {statsPreviewer().map((s, i) => (
+    {statsPreviewer.map((s, i) => (
       <div className="w-1/2 md:w-1/3 p-4" key={i}>
-        <div mountOnEnter effect="fadeInUp">
-          <div className="text-blue-600 h2 mb-2 font-bold">
-            <CountUp delay={0.5} duration={4.5} end={s.value} />
-            {s.suffix}
-          </div>
-          <div className="h5 mb-0">{s.title}</div>
+        <div className="text-blue-600 h2 mb-2 font-bold">
+          <CountUp delay={0.5} duration={4.5} end={s.value} />
         </div>
+        <div className="h5 mb-0">{s.title}</div>
       </div>
     ))}
   </StatsContainer>);

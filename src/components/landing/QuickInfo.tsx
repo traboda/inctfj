@@ -72,16 +72,14 @@ const LandingQuickInfo = () => {
             className="md:w-1/3 w-full py-2"
             key={i}
           >
-            <div left={l.left} right={l.right} up={l.up}>
-              <div className="flex flex-wrap w-full mx-0">
-                <div className="flex items-center justify-center w-1/4">
-                  <img draggable="false" alt={l.question} src={l.image} />
-                </div>
-                <div className="w-3/4 flex items-center">
-                  <div>
-                    <div className="qs">{l.question}</div>
-                    <div className="ans">{l.answer}</div>
-                  </div>
+            <div className="flex flex-wrap w-full mx-0">
+              <div className="flex items-center justify-center w-1/4">
+                <img draggable="false" alt={l.question} src={l.image} />
+              </div>
+              <div className="w-3/4 flex items-center">
+                <div>
+                  <div className="qs">{l.question}</div>
+                  <div className="ans">{l.answer}</div>
                 </div>
               </div>
             </div>

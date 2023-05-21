@@ -96,7 +96,7 @@ const CloseButton = styled.button`
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 
 
-const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
+const TopBar = ({ UTMSource = null }) => {
 
   const [showMenu, setShowMenu] = useState(false);
   const [showRegCard, setShowRegCard] = useState(false);
@@ -286,10 +286,7 @@ const TopBar = ({ darkenOnSidebar = false, UTMSource = null }) => {
           </div>}
       </Modal>
       {isVisible() && showMenu &&
-        <MobileMenu
-          darkenOnSidebar={darkenOnSidebar}
-          onClose={onClose}
-        />}
+        <MobileMenu onClose={onClose} />}
       <div className="block md:hidden text-center pt-6 px-2 pb-4">
         <Link href="/">
           <img

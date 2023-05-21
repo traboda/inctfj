@@ -44,7 +44,7 @@ const FAQPage = () => {
   useEffect(() => {
     if (!router.isReady) return;
     const { q } = router.query;
-    setSearch(q ?? '');
+    setSearch(q as string ?? '');
   }, [router.isReady]);
 
   useEffect(() => {
@@ -57,16 +57,16 @@ const FAQPage = () => {
   const renderFAQ = () => {
     const items = filteredFAQ(search, tags, totalVisible);
     return items?.length > 0 ? (
-      items.map((q, i) =>
-        (
-          <QuestionCard
-            search={search}
-            {...q}
-            isOpen={i === openQ}
-            onClick={() => setOpen(i !== openQ ? i : null)}
-            key={i}
-          />
-        ),
+      items.map((q, i) => (
+        <QuestionCard
+          question={q.question}
+          answer={q.answer}
+          search={search}
+          isOpen={i === openQ}
+          onClick={() => setOpen(i !== openQ ? i : null)}
+          key={i}
+        />
+      ),
       )
     ) : (
       <div className="py-5 text-center">

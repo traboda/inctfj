@@ -22,7 +22,7 @@ const OrganizersPage = () => {
 
   return (
     <SiteView meta={{ title: 'Organizers' }}>
-      <TopBar darkenOnSidebar />
+      <TopBar />
       <PageHeader
         title="Organizers"
         breadcrumb={[

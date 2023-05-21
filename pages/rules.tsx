@@ -49,7 +49,7 @@ const RulePage = () => {
 
   return (
     <SiteView meta={{ title: 'Rules' }}>
-      <TopBar darkenOnSidebar includeSpace />
+      <TopBar />
       <PageHeader
         title="Rules"
         breadcrumb={[

@@ -13,7 +13,8 @@
     "dev-deploy": "next build && next start",
     "build-export": "npm run build && npm run export",
     "lint": "eslint ./ --ext .ts,.tsx,.js,.jsx",
-    "lint-fix": "eslint ./ --ext .ts,.tsx,.js,.jsx --fix"
+    "lint-fix": "eslint ./ --ext .ts,.tsx,.js,.jsx --fix",
+    "type-check": "tsc --noEmit --emitDeclarationOnly false"
   },
   "author": "aswinshenoy <aswinshenoy65@gmail.com>",
   "license": "MIT",

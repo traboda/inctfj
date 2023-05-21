@@ -46,7 +46,7 @@ const BlogListingPage = () => {
 
   return (
     <SiteView meta={{ title: 'Blog' }}>
-      <TopBar darkenOnSidebar />
+      <TopBar />
       <BlogPage>
         <PageTitleArea className="container-lg px-3">
           <div>

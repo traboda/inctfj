@@ -82,13 +82,9 @@ const MobileMenu = ({ onClose }) => {
         {sidebarLinks.map((l, index) =>
           (<div key={index}>
             <li>
-              {l.href ?
-                <a href={l.href} className="w-full">
-                  {l.title}
-                </a> :
-                <button onClick={l.onClick} className="w-full">
-                  {l.title}
-                </button>}
+              <a href={l.href} className="w-full">
+                {l.title}
+              </a>
             </li>
           </div>),
         )}

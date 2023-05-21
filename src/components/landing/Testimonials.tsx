@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import styled from '@emotion/styled';
-import Modal from 'react-modal';
-// eslint-disable-next-line import/order
 import { motion } from 'framer-motion';
+import Modal from 'react-modal';
+import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+
+import animation from '@/src/animation';
 
 const ReactPlayer = dynamic(() => import('react-player/youtube'));
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
 const data = require(`../../data/${eventID}/index.json`);
-
-import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
-
-import animation from '@/src/animation';
 
 const TestimonialSection = styled.section`
     .testimonial-title {
@@ -115,7 +113,15 @@ const LandingTestimonials = () => {
         >
           <img alt="close" src="/assets/images/icons/close.png" />
         </CloseButton>
-        {showPlayer && <ReactPlayer url="https://www.youtube.com/watch?v=U5zVYdYJBwQ" autoplay width="100%" height="80vmin" />}
+        {showPlayer && (
+          <ReactPlayer
+            // @ts-ignore
+            url="https://www.youtube.com/watch?v=U5zVYdYJBwQ"
+            autoplay
+            width="100%"
+            height="80vmin"
+          />
+        )}
       </Modal>
     </TestimonialSection>
   );
