@@ -48,8 +48,8 @@ const CTAReg = ({ UTMSource = null }) => (
         <div className="lg:w-1/3 px-0 md:px-2 flex items-center justify-center w-full">
           <iframe
             className="border-0 w-full -mx-2"
-            style={{ height: '160px', overflow: 'auto' }}
-            src={`${data.CTAreg.button.url}/reg-frame?background=%23fff${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
+            style={{ height: '250px', overflow: 'auto' }}
+            src={`${data.CTAreg.button.url}/reg-frame?background=%23fff&showLogin=true${UTMSource ? `&utm_source=${UTMSource}` : ''}`}
           />
         </div>
       </div>
