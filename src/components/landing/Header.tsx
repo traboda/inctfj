@@ -62,10 +62,9 @@ const LandingHeader = () => (
             </div>
             <div className="-mx-2 mt-4">
               <iframe
-                  id="register"
-                  src="https://inctfjr.ctf.eng.run/reg-frame?background=%23fafafa&showLogin=true"
-                  className="w-full"
-                  height="200px"
+                id="register"
+                src="https://inctfjr.ctf.eng.run/reg-frame?background=%23fafafa&showLogin=true"
+                className="w-full lg:h-[200px] h-[250px]"
               />
             </div>
           </div>

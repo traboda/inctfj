@@ -44,7 +44,7 @@ const OrganizersSection = styled.section`
 
 const LandingOrganizers = () => (
   <OrganizersSection>
-    <div className="container mx-auto content-container">
+    <div className="container mx-auto content-container px-4">
       <motion.h3
         variants={animation}
         initial="fade"

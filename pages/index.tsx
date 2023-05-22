@@ -25,21 +25,23 @@ const LandingPage = () => {
     <SiteView>
       <div style={{ background: '#FAFAFA' }} id="landing-page">
         <TopBar />
-        <LandingHeader />
-        <LandingQuickInfo />
-        <LandingAboutInCTF />
-        {/*<LandingStatsBar />*/}
-        <LandingPrizeDetails />
-        <LandingPromoVideo />
-        <LandingReasonsToParticipate />
-        <CTAReg />
-        <LandingHowItWorks />
-        <LandingTestimonials />
-        <LandingSponsorship />
-        <CTAPartners />
-        <LandingOrganizers />
-        <LandingSearch />
-        <LandingContactsBar />
+        <div className="overflow-x-hidden">
+          <LandingHeader />
+          <LandingQuickInfo />
+          <LandingAboutInCTF />
+          {/*<LandingStatsBar />*/}
+          <LandingPrizeDetails />
+          <LandingPromoVideo />
+          <LandingReasonsToParticipate />
+          <CTAReg />
+          <LandingHowItWorks />
+          <LandingTestimonials />
+          <LandingSponsorship />
+          <CTAPartners />
+          <LandingOrganizers />
+          <LandingSearch />
+          <LandingContactsBar />
+        </div>
       </div>
       <Footer />
     </SiteView>

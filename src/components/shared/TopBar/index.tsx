@@ -40,6 +40,7 @@ const TopbarContainer = styled.header`
   }
 
   @media screen and (max-width: 768px) {
+    position: fixed;
     border-top: 2px solid #FF6F00;
     border-bottom: none !important;
     background: white;
@@ -241,8 +242,8 @@ const TopBar = ({ UTMSource = null }) => {
             {/*        Register <i className="fa fa-chevron-right"/>*/}
             {/*    </button>*/}
             {/*</TopbarInfoCard>*/}
-            <button onClick={onOpen} className="transition" style={{ width: 46, height: 46 }}>
-              <i className={`${showMenu ? 'fa fa-times' : 'fa fa-bars'} text-2xl transition`} />
+            <button onClick={onOpen} className="transition">
+              <img src={`/assets/icons/${showMenu ? 'times' : 'menu'}.svg`} alt="Sidebar" className="w-[46px] h-[46px]" />
             </button>
           </div>
         </div>

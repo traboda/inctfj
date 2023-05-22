@@ -17,7 +17,7 @@ const SiteView = ({ meta, children }: AppView) => {
   return (
     <ConfigContext.Provider value={eventConfig}>
       <SiteViewHeadTags meta={meta} />
-      <main className="overflow-hidden">
+      <main>
         {children}
       </main>
     </ConfigContext.Provider>

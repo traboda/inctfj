@@ -39,8 +39,8 @@ const Footer = () => {
 
   return (<FooterContainer>
     <div className="container min-w-lg mx-auto sm:px-4 px-1 pt-3">
-      <div className="flex flex-wrap  mx-0">
-        <div className="md:w-2/3 order-2 md:order-1 text-center md:text-left px-1">
+      <div className="flex md:justify-between md:flex-row flex-col">
+        <div className="order-2 md:order-1 text-center md:text-left px-1">
           <div className="md:flex items-center block">
             <img draggable="false" className="inline" alt="Amrita InCTF Junior" src={`/${eventID}/assets/${assets?.logo.light}`} />
             <div className="md:ml-6 py-3">
@@ -57,7 +57,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="social-bar md:w-1/3 py-4 md:py-0 w-full order-1 md:order-2 text-white flex items-center md:justify-end justify-center px-1">
+        <div className="social-bar py-4 md:py-0 order-1 md:order-2 text-white flex items-center md:justify-end justify-center px-1">
           <SocialMediaLinks />
         </div>
       </div>

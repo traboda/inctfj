@@ -34,7 +34,7 @@ const SocialMediaLinks = () => {
   ];
 
   return (
-    <div className="flex items-center md:justify-end  justify-center md:mb-0 mb-2 p-2">
+    <div className="flex items-center md:justify-end justify-center md:mb-0 mb-2 p-2 flex-wrap">
       {links.filter((l) => l.href?.length > 0).map((l, i) => (
         <a
           key={i}
