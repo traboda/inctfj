@@ -61,21 +61,13 @@ const LandingHeader = () => (
               </p>
             </div>
             <div className="-mx-2 mt-4">
-              <iframe id="register" src="https://inctfjr.ctf.eng.run/reg-frame?background=%23fafafa" className="w-full" height="80px" />
+              <iframe
+                  id="register"
+                  src="https://inctfjr.ctf.eng.run/reg-frame?background=%23fafafa"
+                  className="w-full"
+                  height="150px"
+              />
             </div>
-          </div>
-          <div className="mt-4 md:px-2">
-            {data.button.map((button, i) => (
-              <a
-                key={i}
-                href={button.link}
-                className="text-2xl px-5 py-4 inline-block font-semibold ml-3 rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl my-3"
-              >
-                Coming Soon 
-                {' '}
-                <i className="fa fa-chevron-right" />
-              </a>
-            ))}
           </div>
         </motion.div>
         <motion.div
