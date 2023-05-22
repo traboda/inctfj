@@ -65,7 +65,7 @@ const LandingHeader = () => (
                   id="register"
                   src="https://inctfjr.ctf.eng.run/reg-frame?background=%23fafafa"
                   className="w-full"
-                  height="150px"
+                  height="160px"
               />
             </div>
           </div>
