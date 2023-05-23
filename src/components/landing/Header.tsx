@@ -62,10 +62,10 @@ const LandingHeader = () => (
             </div>
             <div className="-mx-2 mt-4">
               <iframe
-                id="traboda-arena-reg-iframe"
-                className="w-full lg:h-[200px] h-[250px]"
-                src="https://inctfjr.ctf.eng.run/reg-frame?background=%23fafafa&showLogin=true"
-                sandbox="allow-scripts allow-same-origin allow-top-navigation allow-forms allow-popups allow-pointer-lock allow-popups-to-escape-sandbox"
+                  id="traboda-arena-reg-iframe"
+                  className="w-full lg:h-[200px] h-[250px]"
+                  src="https://play.inctf.in/reg-frame?background=%23fafafa&showLogin=true"
+                  sandbox="allow-scripts allow-same-origin allow-top-navigation allow-forms allow-popups allow-pointer-lock allow-popups-to-escape-sandbox"
               />
             </div>
           </div>
