@@ -30,7 +30,7 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script src="https://inctfjr.ctf.eng.run/sdk.js" />
+          <script src="https://play.inctf.in/sdk.js" />
         </body>
       </Html>
     );
