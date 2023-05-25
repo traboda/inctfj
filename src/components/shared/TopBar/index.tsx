@@ -216,7 +216,7 @@ const TopBar = ({ UTMSource = null }) => {
                         <div>
                           <iframe
                             id="traboda-arena-reg-iframe"
-                            className="h-12 w-36"
+                            className="h-12 w-56"
                             src="https://play.inctf.in/reg-frame?background=%23fafafa&buttonOnlyView=true"
                             sandbox="allow-scripts allow-same-origin allow-top-navigation allow-forms allow-popups allow-pointer-lock allow-popups-to-escape-sandbox"
                           />
