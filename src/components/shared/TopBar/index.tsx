@@ -163,7 +163,7 @@ const TopBar = ({ UTMSource = null }) => {
             <Link className="w-full md:w-1/3" href="/">
               <Logo isDark />
             </Link>
-            {topbarConfig?.associate && (
+            {topbarConfig?.associate?.link && (
               <a
                 target="_blank"
                 href={topbarConfig?.associate?.link}
