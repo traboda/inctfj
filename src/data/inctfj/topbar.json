@@ -1,12 +1,4 @@
 {
-  "associate": {
-      "logo": {
-          "light": "cbse_logo.jpg",
-          "dark": "cbse_logo.jpg"
-      },
-      "alt": "Central Board of Secondary Education (CBSE)",
-      "link": "http://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf"
-  },
   "topbarCTA": {
       "text": "Have you got stuck? Need Help? Join our discord server, ask your doubts & get support from our experts.",
       "buttonText": "Join Discord Now",
@@ -20,21 +12,7 @@
   "menu": [
     {
       "label": "About",
-      "link": "/about",
-      "items": [
-        {
-          "label": "Organizing Team",
-          "link": "/organizers"
-        },
-        {
-          "label": "Advisory Board",
-          "link": "/advisory-board"
-        },
-        {
-          "label": "Sponsors",
-          "link": "/sponsors"
-        }
-      ]
+      "link": "/about"
     },
     {
       "label": "Get Started",
