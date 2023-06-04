@@ -198,21 +198,5 @@
         }
 
     ],
-    "LandingPoweredby": [
-        
-        {
-            "name": "Traboda",
-            "logo": "assets/images/logos/traboda_light.png",
-            "header": "Powered by Traboda",
-            "url": "https://traboda.com/"
-        },
-        {
-            "name": "CBSE",
-            "logo": "assets/images/logos/cbse_logo.png",
-            "header": "In Association with CBSE",
-            "url": "http://cbseacademic.nic.in/web_material/Circulars/2021/93_Circular_2021.pdf"
-        }
-        
-    ],
     "DiscordInvite": "https://discord.com/invite/QVXewGh7sP"
 }

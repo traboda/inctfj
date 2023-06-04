@@ -49,7 +49,7 @@ const LandingContactsBar = () => {
     <ContactsBarSection>
       <div className="flex flex-wrap">
         <div className="w-full flex justify-center flex-wrap">
-          {data.LandingPoweredby.map((item, index) => (
+          {data?.LandingPoweredby?.map((item, index) => (
             <div key={index}>
               <PoweredByTraboda className="p-4" key={index}>
                 <div className="mb-2">{item.header}</div>

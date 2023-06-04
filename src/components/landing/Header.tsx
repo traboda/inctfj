@@ -63,7 +63,7 @@ const LandingHeader = () => (
             <div className="mt-4">
               <iframe
                   id="traboda-arena-reg-iframe"
-                  className="w-full lg:h-[200px] h-[250px]"
+                  className="w-full md:h-[200px] h-[250px]"
                   src="https://play.inctf.in/reg-frame?background=%23fafafa&showLogin=true"
                   sandbox="allow-scripts allow-same-origin allow-top-navigation allow-forms allow-popups allow-pointer-lock allow-popups-to-escape-sandbox"
               />
