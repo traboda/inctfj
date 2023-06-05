@@ -8,7 +8,7 @@ export default <ConfigContextType>{
     description: "India's First & Only CTF & Cyber Security Championship & Talent Incubation Programme exclusively for High School Students, organized by team bi0s, India's No.1 ranked CTF Team.",
   },
   analytics: {
-    gTag: 'UA-120910433-1',
+    gTag: 'G-XYWG82LV7L',
   },
   assets: {
     logo: {
