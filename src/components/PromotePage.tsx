@@ -105,25 +105,25 @@ const PromotePage = () => {
         </div>
       </div>
     </div>
-    <ShareSection>
-      <div className="flex justify-center text-center py-2">
-        <div>
-          <h3>{data.downloadHeader}</h3>
-          <p>{data.desc}</p>
-        </div>
-      </div>
-      <ScrollContainer vertical className="scroll-container p-6 container mx-auto sm:px-4 flex w-full">
-        {data.promotionalImages.map((p) =>
-          (<div key={shortid.generate()} className="flex items-center justify-center p-1">
-            <button onClick={() => handlePosterDownload(`/${eventID}/${p}`)}>
-              <img alt="download poster" className="inctf_poster" src={`/${eventID}/${p}`} />
-              <div className="download_icon">
-                <img src="/assets/images/icons/download.png" alt="download" />
-              </div>
-            </button>
-          </div>))}
-      </ScrollContainer>
-    </ShareSection>
+    {/*<ShareSection>*/}
+    {/*  <div className="flex justify-center text-center py-2">*/}
+    {/*    <div>*/}
+    {/*      <h3>{data.downloadHeader}</h3>*/}
+    {/*      <p>{data.desc}</p>*/}
+    {/*    </div>*/}
+    {/*  </div>*/}
+    {/*  <ScrollContainer vertical className="scroll-container p-6 container mx-auto sm:px-4 flex w-full">*/}
+    {/*    {data.promotionalImages.map((p) =>*/}
+    {/*      (<div key={shortid.generate()} className="flex items-center justify-center p-1">*/}
+    {/*        <button onClick={() => handlePosterDownload(`/${eventID}/${p}`)}>*/}
+    {/*          <img alt="download poster" className="inctf_poster" src={`/${eventID}/${p}`} />*/}
+    {/*          <div className="download_icon">*/}
+    {/*            <img src="/assets/images/icons/download.png" alt="download" />*/}
+    {/*          </div>*/}
+    {/*        </button>*/}
+    {/*      </div>))}*/}
+    {/*  </ScrollContainer>*/}
+    {/*</ShareSection>*/}
     <ShareSection>
       <div className="flex items-center justify-center text-center">
         <div>

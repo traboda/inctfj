@@ -23,14 +23,6 @@
       "link": "/about",
       "items": [
         {
-          "label": "What's India CTF?",
-          "link": "/"
-        },
-        {
-          "label": "Why InCTF?",
-          "link": "/"
-        },
-        {
           "label": "Our Reach & Statistics",
           "link": "/about#our-reach"
         },
@@ -43,37 +35,12 @@
           "link": "/advisory-board"
         },
         {
-          "label": "Sponsors",
+          "label": "Past Sponsors",
           "link": "/sponsors"
         }
       ]
     },
-    {
-      "label": "Talent Incubation",
-      "link": "/talent-incubation",
-      "items": [
-        {
-          "label": "The CTF Pedagogy",
-          "link": "#"
-        },
-        {
-          "label": "CyberSafety Education",
-          "link": "#"
-        },
-        {
-          "label": "Indian Cyber League",
-          "link": "#"
-        },
-        {
-          "label": "Diversity Initiatives",
-          "link": "#"
-        },
-        {
-          "label": "Success Stories",
-          "link": "#"
-        }
-      ]
-    },
+
     {
       "label": "Championship",
       "link": "/championship",
@@ -81,10 +48,6 @@
         {
           "label": "Why Participate?",
           "link": "/championship#why-participate"
-        },
-        {
-          "label": "Contest Timeline",
-          "link": "/championship#timeline"
         },
         {
           "label": "Guidelines & Rules",

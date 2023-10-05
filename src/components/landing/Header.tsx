@@ -52,21 +52,45 @@ const LandingHeader = () => (
             <h1 className="text-3xl md:text-4xl lg:text-5xl mb-6">
               {data.Landingheader}
             </h1>
+            {eventID === 'inctf' && (
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primary mb-8">
+              {data.date}
+            </h2>
+            )}
             <div>
-              <p className="text-primary font-semibold text-xl mb-3">
-                {data.Desc}
-              </p>
-              <p>
-                {data.subDesc}
-              </p>
+              {eventID === 'inctf' ? (
+                <p className="text-primary text-xl mb-3">
+                  {data.Desc}
+                </p>
+              ) : (
+                <>
+                  <p className="text-primary font-semibold text-xl mb-3">
+                    {data.Desc}
+                  </p>
+                  <p>
+                    {data.subDesc}
+                  </p>
+                </>
+              )}
             </div>
             <div className="mt-4">
-              <iframe
+              {eventID === 'inctfj' ? (
+                <iframe
                   id="traboda-arena-reg-iframe"
                   className="w-full md:h-[200px] h-[250px]"
                   src="https://play.inctf.in/reg-frame?background=%23fafafa&showLogin=true"
                   sandbox="allow-scripts allow-same-origin allow-top-navigation allow-forms allow-popups allow-pointer-lock allow-popups-to-escape-sandbox"
-              />
+                />
+              ) : (
+                <button
+                  id="header-register-button"
+                  rel="noopener noreferrer"
+                  className="!px-8 !py-4 !w-fit rounded-lg font-semibold bg-primary hover:!bg-blue-800 shadow hover:shadow-xl text-white hover:!text-white"
+                >
+                  Coming Soon
+                </button>
+              )}
+                      
             </div>
           </div>
         </motion.div>

@@ -242,7 +242,7 @@ const TopBar = ({ UTMSource = null }) => {
               <div className="font-semibold text-primary">
                 InCTF Jr 2023
               </div>
-              <div>May - August, 2023</div>
+              <div>October - December, 2023</div>
             </div>
             {/*<TopbarInfoCard className="mr-3">*/}
             {/*    <button*/}

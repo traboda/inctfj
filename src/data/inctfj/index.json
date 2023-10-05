@@ -1,12 +1,12 @@
 {
     "Landingheader" : "Become the Face of India's Cyber Security Force.",
-    "date" : "May - August 2023",
+    "date" : "October - December 2023",
     "Desc" : "InCTF Junior is India's First & Premier Hacking & Cyber Security Contest for High School Students, organized by team bi0s, India's No.1 ranked CTF Team.",
     "subDesc" : "Every year the brightest young hackers from all across India participate in this the learn & hack CTF contest, win exciting prizes & kick-start their cyber-security career.",
     "LandingCoverImage": "assets/images/covers/landing-cover-image.png",
     "button" : [],
     "what":"Cyber Security Training & Capture The Flag (CTF) Championship", 
-    "when" : "May - August, 2023",
+    "when" : "October - December, 2023",
     "forWhom": "Grade 07-12 School Students",
     "participants" : [
         "1.jpg",
@@ -195,6 +195,16 @@
         {
             "label": "Email",
             "url": "mailto:inctf@am.amrita.edu"
+        }
+
+    ],
+    "LandingPoweredby": [
+
+        {
+            "name": "Traboda",
+            "logo": "assets/images/logos/traboda_light.png",
+            "header": "Powered by Traboda",
+            "url": "https://traboda.com/"
         }
 
     ],

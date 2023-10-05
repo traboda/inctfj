@@ -71,7 +71,7 @@ const LandingOrganizers = () => (
               <h4>
                 {org.header}
               </h4>
-              <p className="text-sm">
+              <p className="text-sm text-justify">
                 {org.desc}
               </p>
             </div>
