@@ -382,41 +382,41 @@ const questions = [
     </>,
     tags: ['eligibility'],
   },
-  {
-    'question': 'Is changing profile information possible after registration?',
-    'keywords': ['profile', 'information'],
-    'response': [
-      'Until the qualifier CTF starts, participants are allowed to change some of their profile information such as name, school etc.',
-    ],
-    'answer': <>
-      Until the qualifier CTF starts, participants are allowed to change some of their profile information
-      such as name, school etc. You can perform this by going to 
-      {' '}
-      <a href="https://app.traboda.com/profile/edit">app.traboda.com/profile/edit</a>
-      .
-      However, some information such as your email address used to register the account cannot be changed.
-    </>,
-    tags: ['traboda', 'help'],
-  },
-  {
-    'question': 'I forgot my password, what can I do?',
-    'keywords': ['password', 'forgot'],
-    'response': [
-      'There is a password reset functionality available on Traboda.',
-    ],
-    'answer': <>
-      <p>
-        There is a password reset functionality available on Traboda. You can go to the login page/login popup,
-        and click on "forgot password" option. Upon entering your registered email address, you shall be emailed
-        a password reset link, using which you can change your password.
-      </p>
-      <p>
-        If you have used a gmail (google) email address to register, you can also use the login with google
-        option and get access to your account without needing a password (or password reset).
-      </p>
-    </>,
-    tags: ['traboda', 'help', 'password'],
-  },
+  // {
+  //   'question': 'Is changing profile information possible after registration?',
+  //   'keywords': ['profile', 'information'],
+  //   'response': [
+  //     'Until the qualifier CTF starts, participants are allowed to change some of their profile information such as name, school etc.',
+  //   ],
+  //   'answer': <>
+  //     Until the qualifier CTF starts, participants are allowed to change some of their profile information
+  //     such as name, school etc. You can perform this by going to
+  //     {' '}
+  //     <a href="https://app.traboda.com/profile/edit">app.traboda.com/profile/edit</a>
+  //     .
+  //     However, some information such as your email address used to register the account cannot be changed.
+  //   </>,
+  //   tags: ['traboda', 'help'],
+  // },
+  // {
+    // 'question': 'I forgot my password, what can I do?',
+    // 'keywords': ['password', 'forgot'],
+    // 'response': [
+    //   'There is a password reset functionality available on Traboda.',
+    // ],
+    // 'answer': <>
+    //   <p>
+    //     There is a password reset functionality available on Traboda. You can go to the login page/login popup,
+    //     and click on "forgot password" option. Upon entering your registered email address, you shall be emailed
+    //     a password reset link, using which you can change your password.
+    //   </p>
+    //   <p>
+    //     If you have used a gmail (google) email address to register, you can also use the login with google
+    //     option and get access to your account without needing a password (or password reset).
+    //   </p>
+    // </>,
+    // tags: ['traboda', 'help', 'password'],
+  // },
   {
     'question': 'What are the different types of Certificates I can get?',
     keywords: ['certificate', 'types'],
