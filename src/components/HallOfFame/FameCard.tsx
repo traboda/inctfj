@@ -55,7 +55,7 @@ const FameCard = ({
   return (<FameCardWrap>
     <div className="flex flex-wrap p-2 border rounded-lg h-full items-center">
       <div className="w-1/5 text-right justify-center items-center flex">
-        {rank === 1 ? <Image fill src="/assets/images/icons/crown.png" alt="Crown" /> :
+        {rank === 1 ? <Image src="/assets/images/icons/crown.png" alt="Crown" /> :
           rank === 2 ? <Image alt="viking" src="/assets/images/icons/viking.png" /> :
             rank === 3 ? <Image alt="Samurai" src="/assets/images/icons/samurai.png" /> : (
               <div className="rank">

@@ -46,88 +46,8 @@
     {
         "tag": "p",
         "text": [
-            "The Organizers may request for the proofs upon a Participant’s qualification to the finals, and these shall be thoroughly verified if you win any prizes. Any refusal or failure to timely provide such proof may result in disqualification of the Participant from the Contest.",
+            "The Organizers may request for the proofs when a Participant wins a prize, and these shall be thoroughly verified. Any refusal or failure to timely provide such proof may result in disqualification of the Participant from the Contest.",
             "An individual not meeting the eligibility criteria is welcomed to participate in the contest for learning and practice, however, they shall not be eligible for qualification to the finals or for any prizes."
-        ]
-    },
-    {
-        "tag": "h2",
-        "text": [
-            "Qualification to National Finals"
-        ]
-    },
-    {
-        "tag": "h3",
-        "text": [
-            "(1) Automatic Qualification"
-        ]
-    },
-    {
-        "tag":"p",
-        "text":[
-            "An eligible participant shall automatically qualify for the national-level finals of InCTF Junior, if she/he completes ANY ONE of the following -"    
-        ]
-    },
-    {
-        "tag":"ul",
-        "text":[
-            "Finishes in Top 50 - Finishes in the Top 50 of the scoreboard for the qualifiers.",
-            "100% Completion - Completes (and successfully submits flags for) all challenges in the qualifiers"   
-        ]
-    },
-    {
-        "tag":"h3",
-        "text":[
-            "(2) State/Regional Quota for Qualifications"    
-        ]
-    },
-    {
-        "tag":"p",
-        "text":[
-            "In order to promote diversity and provide equitable opportunities for participants from various regions, in addition to the participants who qualified through (1), the following state/regional quota shall be available for eligible participants from each state/regions for qualifying for the national-level finals -"    
-        ]
-    },
-    {
-        "tag":"ul",
-        "text":[
-            "Top 10 in Resident State - Top 10 participants from each state in the qualifiers with a minimum of 3500 points in addition to those qualified already through (1)",
-            "Top 10 in Resident Country (for NRI Students) - In case of eligible participants (Citizens of India) residing & studying outside India, Top 10 participants from each country in the qualifiers with a minimum of 3500 points in addition to those qualified already through (1)"    
-        ]
-    },
-    {
-        "tag":"h3",
-        "text":[
-            "(3) Shakti25 - Women in CyberSecurity Quota for Qualifications"    
-        ]
-    },
-    {
-        "tag":"p",
-        "text":[
-            "InCTF Junior is committed to inspiring, upskilling, and nurturing young women talents in cyber-security, and providing them an empowering platform to showcase their talents. To promote and provide equitable opportunities for women participants, the following special quota is available for eligible women participants for qualifying for the national-level finals -"    
-        ]
-    },
-    {
-        "tag":"ul",
-        "text":[
-            "Shakti25 (Top 25 Women Participants) - Top 25 Women Participants in qualifiers round in addition to those qualified from (1) & (2)"    
-        ]
-    },
-    {
-        "tag":"h3",
-        "text":[
-            "(4) Qualification for Home-Schooling & Self-Study Students"    
-        ]
-    },
-    {
-        "tag":"p",
-        "text":[
-            "InCTF Junior is open and inclusive programme, and we encourage all young students to participate in it, regardless of whether they are enrolled in a traditional schooling system. However, such participants need to inform the organizers and need to complete verification for being eligible. Once eligible, these participants will have the following special quota for qualifying for the national-level finals -"    
-        ]
-    },
-    {
-        "tag":"ul",
-        "text":[
-            "Top 10 Home-Schooling Students - Top 10 home-schooling/private-tutored participants in the qualifiers with a minimum of 3500 points in addition to (1), (2) &"    
         ]
     },
     {
@@ -186,7 +106,6 @@
         "text":[
             "Participation Certificate - shall be issued to all eligible Participants who have at least solved 1 challenge in the Contest qualifiers round. This shall be a digital certificate, and shall be emailed at the end of the Contest.",
             "Certificate of Appreciation - shall be issued to all eligible Participants who have at least completed solving 35% of challenges released during the Contest qualifiers round. This shall be a digital certificate, and shall be emailed at the end of the Contest.",
-            "Certificate of Excellence - shall be issued to all eligible Participants who have qualified for the national level finals of the Contest. This shall be a physical certificate, and shall be mailed to the address provided by the Participant.",
             "Certificate of Achievement - shall be issued to eligible Participants who are winners of some prize/award at the national level finals of the Contest. This shall be a physical certificate, and shall be mailed to the address provided by the Participant."
         ]
     },

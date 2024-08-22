@@ -212,17 +212,18 @@ const TopBar = ({ UTMSource = null }) => {
                         <div className="font-semibold">{topbarConfig?.CTA?.subTitle}</div>
                       </div>
                       )}
-                      {eventID === 'inctfj' ? (
-                        <div>
-                          <iframe
-                            id="traboda-arena-reg-iframe"
-                            className="h-12 w-56"
-                            src="https://play.inctf.in/reg-frame?background=%23fafafa&buttonOnlyView=true"
-                            sandbox="allow-scripts allow-same-origin allow-top-navigation allow-forms allow-popups allow-pointer-lock allow-popups-to-escape-sandbox"
-                          />
-                          {' '}
-                        </div>
-                      ) : topbarConfig?.CTA.type === 'link' && (
+                      {/*{eventID === 'inctfj' ? (*/}
+                      {/*  <div>*/}
+                      {/*    <iframe*/}
+                      {/*      id="traboda-arena-reg-iframe"*/}
+                      {/*      className="h-12 w-56"*/}
+                      {/*      src="https://play.inctf.in/reg-frame?background=%23fafafa&buttonOnlyView=true"*/}
+                      {/*      sandbox="allow-scripts allow-same-origin allow-top-navigation allow-forms allow-popups allow-pointer-lock allow-popups-to-escape-sandbox"*/}
+                      {/*    />*/}
+                      {/*    {' '}*/}
+                      {/*  </div>*/}
+                      {/*) : */}
+                      {topbarConfig?.CTA.type === 'link' && (
                       <Link legacyBehavior href={topbarConfig?.CTA?.link} passHref>
                         <a className="px-8 py-4 rounded-lg font-semibold bg-primary hover:bg-blue-800 shadow hover:shadow-xl text-white ml-3">
                           {topbarConfig?.CTA?.buttonText} 
@@ -240,9 +241,9 @@ const TopBar = ({ UTMSource = null }) => {
           <div className="w-3/4 flex md:hidden items-center justify-end px-1">
             <div className="text-right px-2">
               <div className="font-semibold text-primary">
-                InCTF Jr 2023
+                InCTF Jr 2024
               </div>
-              <div>October - December, 2023</div>
+              <div>Coming Soon</div>
             </div>
             {/*<TopbarInfoCard className="mr-3">*/}
             {/*    <button*/}

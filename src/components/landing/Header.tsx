@@ -74,14 +74,14 @@ const LandingHeader = () => (
               )}
             </div>
             <div className="mt-4">
-              {eventID === 'inctfj' ? (
-                <iframe
-                  id="traboda-arena-reg-iframe"
-                  className="w-full md:h-[200px] h-[250px]"
-                  src="https://play.inctf.in/reg-frame?background=%23fafafa&showLogin=true"
-                  sandbox="allow-scripts allow-same-origin allow-top-navigation allow-forms allow-popups allow-pointer-lock allow-popups-to-escape-sandbox"
-                />
-              ) : (
+              {/*{eventID === 'inctfj' ? (*/}
+              {/*  <iframe*/}
+              {/*    id="traboda-arena-reg-iframe"*/}
+              {/*    className="w-full md:h-[200px] h-[250px]"*/}
+              {/*    src="https://play.inctf.in/reg-frame?background=%23fafafa&showLogin=true"*/}
+              {/*    sandbox="allow-scripts allow-same-origin allow-top-navigation allow-forms allow-popups allow-pointer-lock allow-popups-to-escape-sandbox"*/}
+              {/*  />*/}
+              {/*) : (*/}
                 <button
                   id="header-register-button"
                   rel="noopener noreferrer"
@@ -89,7 +89,7 @@ const LandingHeader = () => (
                 >
                   Coming Soon
                 </button>
-              )}
+              {/*)}*/}
                       
             </div>
           </div>

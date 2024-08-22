@@ -33,6 +33,10 @@
           "link": "/faq"
         },
         {
+          "label": "Rules",
+          "link": "/rules"
+        },
+        {
           "label": "bi0s Wiki",
           "link": "https://wiki.bi0s.in/"
         },
