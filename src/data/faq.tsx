@@ -31,6 +31,10 @@ const questions = [
         CTFs are a great way to learn a wide array of computer security skills in a safe, legal environment,
         and are hosted and played by many security groups around the world for fun and practice.
       </p>
+      <br />
+      <a target="_blank" href="https://www.youtube.com/watch?v=8ev9ZX9J45A">
+        Check out this video to learn more. <span className="text-blue-500">What is a CTF?</span>
+      </a>
     </>,
     tags: ['getting-started'],
   },
@@ -67,45 +71,45 @@ const questions = [
     </>,
     tags: ['requirements'],
   },
-  {
-    'question': 'How can I register to InCTF Junior 2023 ?',
-    'keywords': ['register'],
-    'response': [
-      'Registering is a pretty simple process. Click on the following to watch the step by step guide on how to register. ',
-    ],
-    'answer': <>
-      Registering is a pretty simple process. Click on the following to watch the step by step guide on how to register. 
-      {' '}
-      <a href="https://www.youtube.com/watch?v=twS3pzPjRzA" target="_blank">How to register ?</a>
-    </>,
-    tags: ['getting-started', 'help'],
-  },
-  {
-    'question': 'how to get into the scoreboard ?',
-    'keywords': ['scoreboard', 'leaderboard', 'scoreboards', 'leaderboards'],
-    'response': [
-      'We have a good tutorial on this particular subject. Click on the following link to watch the step by step guide on how to get into the scoreboard.',
-    ],
-    'answer': <>
-      We have a good tutorial on this particular subject. Click on the following link to watch the step by step guide on how to get into the scoreboard. 
-      {' '}
-      <a href="https://www.youtube.com/watch?v=767Y-wtDH5A">How to get into the scoreboard</a>
-    </>,
-    tags: ['getting-started', 'help'],
-  },
-  {
-    'question': 'Are there any resources or tutorials about web security ?',
-    'keywords': ['getting-started'],
-    'response': [
-      'There are few resources, mainly YouTube videos, that give an introduction to the whole security ecosystem. Click on the following link to view our collection of videos.',
-    ],
-    'answers': <>
-      There are few resources, mainly YouTube videos, that give an introduction to the whole security ecosystem. Click on the following link to view our collection of videos. 
-      {' '}
-      <a href="https://junior.inctf.in/resources">Resources</a>
-    </>,
-    tags: ['getting-started'],
-  },
+  // {
+  //   'question': 'How can I register to InCTF Junior 2023 ?',
+  //   'keywords': ['register'],
+  //   'response': [
+  //     'Registering is a pretty simple process. Click on the following to watch the step by step guide on how to register. ',
+  //   ],
+  //   'answer': <>
+  //     Registering is a pretty simple process. Click on the following to watch the step by step guide on how to register.
+  //     {' '}
+  //     <a href="https://www.youtube.com/watch?v=twS3pzPjRzA" target="_blank">How to register ?</a>
+  //   </>,
+  //   tags: ['getting-started', 'help'],
+  // },
+  // {
+  //   'question': 'how to get into the scoreboard ?',
+  //   'keywords': ['scoreboard', 'leaderboard', 'scoreboards', 'leaderboards'],
+  //   'response': [
+  //     'We have a good tutorial on this particular subject. Click on the following link to watch the step by step guide on how to get into the scoreboard.',
+  //   ],
+  //   'answer': <>
+  //     We have a good tutorial on this particular subject. Click on the following link to watch the step by step guide on how to get into the scoreboard.
+  //     {' '}
+  //     <a href="https://www.youtube.com/watch?v=767Y-wtDH5A">How to get into the scoreboard</a>
+  //   </>,
+  //   tags: ['getting-started', 'help'],
+  // },
+  // {
+  //   'question': 'Are there any resources or tutorials about web security ?',
+  //   'keywords': ['getting-started'],
+  //   'response': [
+  //     'There are few resources, mainly YouTube videos, that give an introduction to the whole security ecosystem. Click on the following link to view our collection of videos.',
+  //   ],
+  //   'answers': <>
+  //     There are few resources, mainly YouTube videos, that give an introduction to the whole security ecosystem. Click on the following link to view our collection of videos.
+  //     {' '}
+  //     <a href="https://junior.inctf.in/resources">Resources</a>
+  //   </>,
+  //   tags: ['getting-started'],
+  // },
   {
     'question': 'How much does it cost to participate in Amrita InCTF Junior?',
     'keywords': ['cost', 'participate'],
@@ -177,7 +181,7 @@ const questions = [
     ],
     'answer': <>
       Full participation in the competition requires only -
-      <ul className="mx-1">
+      <ul className="mx-1 list-disc">
         <li>a computer (preferably running Linux operating system)</li>
         <li>a modern web browser</li>
         <li>the ability to install applications</li>
@@ -248,8 +252,18 @@ const questions = [
       'There are a few CTF’s that are intended to help high school students gain some experience',
     ],
     'answer': <>
-      There are a few CTF’s that are intended to help high school students gain some experience such as
-      picoCTF, EasyCTF, HSCTF etc. You may try out the challenges from these CTF’s if available.
+      There are a few CTF’s that are intended to help high school students gain some experience such as picoCTF, HSCTF
+      etc.
+      You may try out the challenges from these CTF’s.
+
+      <br/>
+      <br/>
+      <a href="https://picoctf.org/index.html#picogym" target="_blank" className="text-blue-500">picoCTF practice</a>
+
+      <br/>
+      <br/>
+      <a href="https://github.com/sajjadium/ctf-archives/tree/main/ctfs/HSCTF" target="_blank"
+         className="text-blue-500">HSCTF practice</a>
     </>,
     tags: ['getting-started'],
   },
@@ -257,16 +271,16 @@ const questions = [
     'question': 'I have some doubts, where can I ask?',
     'keywords': ['doubt', 'doubts'],
     'response': [
-      'You can contact us through our discord community or email us.',
+      'You can contact us directly through our [discord server](https://discord.gg/NJG6VrCCyB). Or you can always email us at [inctfj@am.amrita.edu](mailto:inctfj@am.amrita.edu).',
     ],
     'answer': <>
-      You can contact us through our discord community 
+      You can contact us through our
       {' '}
-      <a href="/discord" target="_blank">(Join)</a>
+      <a href="https://discord.gg/NJG6VrCCyB" target="_blank" className="text-blue-500">discord server</a>.
       {' '}
-      for priority reply
-      or email us at
-      <a href="mailto:inctfj@am.amrita.edu">inctfj@am.amrita.edu</a>
+      Or you can always email us at
+      {' '}
+      <a href="mailto:inctfj@am.amrita.edu" className="text-blue-500">inctfj@am.amrita.edu</a>
       .
     </>,
     tags: ['support'],
