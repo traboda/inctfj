@@ -224,12 +224,12 @@ const TopBar = ({ UTMSource = null }) => {
                       {/*  </div>*/}
                       {/*) : */}
                       {topbarConfig?.CTA.type === 'link' && (
-                      <Link legacyBehavior href={topbarConfig?.CTA?.link} passHref>
-                        <a className="px-8 py-4 rounded-lg font-semibold bg-primary hover:bg-blue-800 shadow hover:shadow-xl text-white ml-3">
+                      <Link href={topbarConfig?.CTA?.link} target="_blank">
+                        <button className="px-8 py-4 rounded-lg font-semibold bg-primary hover:bg-blue-800 shadow hover:shadow-xl text-white ml-3">
                           {topbarConfig?.CTA?.buttonText} 
                           {' '}
                           <i className="fa fa-chevron-right" />
-                        </a>
+                        </button>
                       </Link>
                       )}
                     </React.Fragment>

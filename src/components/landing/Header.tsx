@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 
 import animations from '../../animation';
+import Link from "next/link";
 
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
@@ -74,22 +75,31 @@ const LandingHeader = () => (
               )}
             </div>
             <div className="mt-8">
-              {/*{eventID === 'inctfj' ? (*/}
-              {/*  <iframe*/}
-              {/*    id="traboda-arena-reg-iframe"*/}
-              {/*    className="w-full md:h-[200px] h-[250px]"*/}
-              {/*    src="https://play.inctf.in/reg-frame?background=%23fafafa&showLogin=true"*/}
-              {/*    sandbox="allow-scripts allow-same-origin allow-top-navigation allow-forms allow-popups allow-pointer-lock allow-popups-to-escape-sandbox"*/}
-              {/*  />*/}
-              {/*) : (*/}
-                <button
-                  id="header-register-button"
-                  rel="noopener noreferrer"
-                  className="!px-8 !py-4 !w-fit rounded-lg font-semibold bg-primary hover:!bg-blue-800 shadow hover:shadow-xl text-white hover:!text-white"
-                >
-                  Coming Soon
-                </button>
-              {/*)}*/}
+              {eventID === 'inctfj' ? (
+                  <Link href="https://inctfj.eng.run" target="_blank">
+                      <button
+                          id="header-register-button"
+                          rel="noopener noreferrer"
+                          className="!px-8 !py-4 !w-fit rounded-lg font-semibold bg-primary hover:!bg-blue-800 shadow hover:shadow-xl text-white hover:!text-white"
+                      >
+                          Register Now
+                      </button>
+                      {/*<iframe*/}
+                      {/*id="traboda-arena-reg-iframe"*/}
+                      {/*className="w-full md:h-[200px] h-[250px]"*/}
+                      {/*src="https://play.inctf.in/reg-frame?background=%23fafafa&showLogin=true"*/}
+                      {/*sandbox="allow-scripts allow-same-origin allow-top-navigation allow-forms allow-popups allow-pointer-lock allow-popups-to-escape-sandbox"*/}
+                      {/*/>*/}
+                  </Link>
+              ) : (
+                  <button
+                      id="header-register-button"
+                      rel="noopener noreferrer"
+                      className="!px-8 !py-4 !w-fit rounded-lg font-semibold bg-primary hover:!bg-blue-800 shadow hover:shadow-xl text-white hover:!text-white"
+                  >
+                      Coming Soon
+                  </button>
+              )}
                       
             </div>
           </div>
