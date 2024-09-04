@@ -6,7 +6,7 @@
   },
   "CTA": {
       "type": "link",
-      "link": "/#register",
+      "link": "https://inctfj.eng.run",
       "buttonText": "Register Now"
   },
   "menu": [

@@ -43,6 +43,7 @@ const LandingQuickInfo = () => {
       animate: 'slideInBottomLeft',
     },
     {
+      isHidden: eventID === 'inctfj',
       image: 'assets/images/icons/calendar.png', up: true,
       question: 'When?', answer: <> 
         {' '}
@@ -50,7 +51,15 @@ const LandingQuickInfo = () => {
       </>,
       animate: 'slideInBottom',
     },
-            
+    {
+        isHidden: eventID === 'inctf',
+        image: '/inctfj/assets/icons/why.png', up: true,
+        question: 'Why?', answer: <>
+          {' '}
+          {data.when}
+        </>,
+        animate: 'slideInBottom',
+    },
     {
       image: '/assets/images/icons/backpack.png', right: true,
       question: 'For Whom?', answer: <> 
@@ -61,10 +70,28 @@ const LandingQuickInfo = () => {
     },
   ];
 
+  const ContestDates = [
+    {
+      image: '/inctfj/assets/icons/learning.webp', left: true,
+      question: 'Learning Round', answer: data.learningRoundDate,
+      animate: 'slideInBottomLeft',
+    },
+    {
+      image: '/inctfj/assets/icons/training.webp', up: true,
+      question: 'Training', answer: data.trainingDate,
+      animate: 'slideInBottom',
+    },
+    {
+      image: '/inctfj/assets/icons/contest.webp', right: true,
+      question: 'Contest', answer: data.contestDate,
+      animate: 'slideInBottomRight',
+    },
+  ]
+
   return (
     <QuickInfoSection className="my-8">
       <div className="flex flex-wrap container mx-auto px-4">
-        {landingInfo.map((l, i) => (
+        {landingInfo.filter(a => !a?.isHidden).map((l, i) => (
           <motion.div
             variants={animation}
             initial={l.animate}
@@ -86,6 +113,31 @@ const LandingQuickInfo = () => {
           </motion.div>
         ))}
       </div>
+      {eventID === 'inctfj' && (
+        <div className="flex flex-wrap container mx-auto px-4 mt-12">
+          {ContestDates.map((l, i) => (
+            <motion.div
+              variants={animation}
+              initial={l.animate}
+              whileInView="animated"
+              className="md:w-1/3 w-full py-2"
+              key={i}
+            >
+              <div className="flex flex-wrap w-full mx-0">
+                <div className="flex items-center justify-center w-1/4">
+                  <img draggable="false" alt={l.question} src={l.image} />
+                </div>
+                <div className="w-3/4 flex items-center">
+                  <div>
+                    <div className="qs">{l.question}</div>
+                    <div className="ans">{l.answer}</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      )}
     </QuickInfoSection>
   );
 };
