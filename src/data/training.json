@@ -6,84 +6,77 @@
     "youtubeChannel": "https://www.youtube.com/c/InCTFj",
     "schedule": [
         {
-            "date": "",
+            "date": "04th Nov",
             "timing": "",
             "event": "Introduction to CTF",
             "presenter": "Namitha & Revathi",
             "link": "https://youtu.be/-PvKBido90I"
         },
         {
-            "date": "",
-            "timing": "",
-            "event": "Basics of Web",
-            "presenter": "Rohit, Rahul & Aneesh",
-            "link": "https://youtu.be/clcfThE2UIg"
-        },
-        {
-            "date": "",
+            "date": " 05th Nov",
             "timing": "",
             "event": "Introduction to Web Exploitation (Day 1)",
             "presenter": "Yadhu & Sayooj",
             "link": "https://youtu.be/uHiLpyfEhpw"
         },
         {
-            "date": "",
+            "date": "06th Nov",
             "timing": "",
             "event": "Introduction to Web Exploitation (Day 2)",
             "presenter": "Yadhu & Sayooj",
             "link": "https://youtu.be/LlOnd4wbTI4"
         },
         {
-            "date": "",
-            "timing": "",
-            "event": "Introduction to Cryptography (Day 1)",
-            "presenter": "Abhishek & Sahith",
-            "link": "https://youtu.be/RtY8RFA95Qk"
-        },
-        {
-            "date": "",
-            "timing": "",
-            "event": "Introduction to Cryptography (Day 2)",
-            "presenter": "Abhishek & Sahith",
-            "link": "https://youtu.be/RMWo6HtND9M"
-        },
-        {
-            "date": "",
+            "date": "08th Nov",
             "timing": "",
             "event": "Introduction to Cyber Forensics (Day 1)",
             "presenter": "Sridevi, Abhishek, Pranav",
             "link": "https://youtu.be/OwN76dCekAM"
         },
         {
-            "date": "",
+            "date": "09th Nov",
             "timing": "",
             "event": "Introduction to Cyber Forensics (Day 2)",
             "presenter": "Sridevi, Abhishek, Pranav",
             "link": "https://youtu.be/sc1uiHCJDJo"
         },
         {
-            "date": "",
+            "date": "11th Nov",
+            "timing": "",
+            "event": "Introduction to Cryptography (Day 1)",
+            "presenter": "Abhishek & Sahith",
+            "link": "https://youtu.be/RtY8RFA95Qk"
+        },
+        {
+            "date": "12th Nov",
+            "timing": "",
+            "event": "Introduction to Cryptography (Day 2)",
+            "presenter": "Abhishek & Sahith",
+            "link": "https://youtu.be/RMWo6HtND9M"
+        },
+        {
+            "date": "14th Nov",
             "timing": "",
             "event": "Introduction to Reverse Engineering (Day 1)",
             "presenter": "Barla Abhishek, Simran",
             "link": "https://youtu.be/ZWJ6X6alAaQ"
         },
         {
-            "date": "",
+            "date": "15th Nov",
             "timing": "",
             "event": "Introduction to Reverse Engineering (Day 2)",
             "presenter": "Barla Abhishek, Simran",
             "link": "https://youtu.be/fHqTXYdrqlk"
         },
         {
-            "date": "",
+            "date": "18th Nov",
             "timing": "",
             "event": "Introduction to Binary Exploitation (Day 1)",
             "presenter": "Adithya, Nikhil, Hrishikesh",
             "link": "https://youtu.be/yMkyHCR7fqw"
         },
         {
-            "date": "",
+            "date": "19th Nov",
             "timing": "",
             "event": "Introduction to Binary Exploitation (Day 2)",
             "presenter": "Adithya, Nikhil, Hrishikesh",

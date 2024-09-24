@@ -36,34 +36,34 @@ const Schedule = () => {
             <div className="md:w-4/6 pr-4 pl-4 flex items-center p-1">
               Workshop
             </div>
-            <div className="md:w-1/6 pr-4 pl-4 p-1">
-              Link
-            </div>
+            {/*<div className="md:w-1/6 pr-4 pl-4 p-1">*/}
+            {/*  Link*/}
+            {/*</div>*/}
           </div>
 
           {data.schedule.map((t, i) => (
             <div className="flex flex-wrap py-2 border-b" key={i}>
               <div className="md:w-1/6 w-full flex items-center px-1">
-                <div>
-                  <div className="font-semibold text-xl">{t.date}</div>
+                <div className="opacity-70">
+                  <div className="font-semibold font-mono text-xl">{t.date}</div>
                   <span>{t.timing}</span>
                 </div>
               </div>
               <div className="md:w-4/6 flex items-center px-1 pb-1">
                 <div>
                   <div className="text-xl font-semibold" style={{ color: '#4A148C' }}>{t.event}</div>
-                  {t?.presenter && <div className="text-lg mt-1">{t.presenter}</div>}
+                  {/*{t?.presenter && <div className="text-lg mt-1">{t.presenter}</div>}*/}
                 </div>
               </div>
-              <div className="md:w-1/6 w-full flex items-center mb-2 md:mb-0 px-1">
-                {t?.link && (
-                  <a href={t.link} target="_blank" className="hover:text-primary">
-                    <i className="fab fa-youtube text-red-600 mr-1" />
-                    {' '}
-                    Watch
-                  </a>
-                )}
-              </div>
+              {/*<div className="md:w-1/6 w-full flex items-center mb-2 md:mb-0 px-1">*/}
+              {/*  {t?.link && (*/}
+              {/*    <a href={t.link} target="_blank" className="hover:text-primary">*/}
+              {/*      <i className="fab fa-youtube text-red-600 mr-1" />*/}
+              {/*      {' '}*/}
+              {/*      Watch*/}
+              {/*    </a>*/}
+              {/*  )}*/}
+              {/*</div>*/}
             </div>
           ))}
         </div>

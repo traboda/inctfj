@@ -195,17 +195,15 @@
             "label": "Email",
             "url": "mailto:inctf@am.amrita.edu"
         }
-
     ],
     "LandingPoweredby": [
-
         {
             "name": "Traboda",
             "logo": "assets/images/logos/traboda_light.png",
             "header": "Powered by Traboda",
             "url": "https://traboda.com/"
         }
-
     ],
-    "DiscordInvite": "https://discord.com/invite/QVXewGh7sP"
+    "DiscordInvite": "https://discord.com/invite/QVXewGh7sP",
+    "TelegramInvite": "https://t.me/+J0IhRkqW5G0zMGU1"
 }
