@@ -1,9 +1,13 @@
 {
-  "topbarCTA": {
-      "text": "Have you got stuck? Need Help? Join our discord server, ask your doubts & get support from our experts.",
+  "topbarCTA": [{
       "buttonText": "Join Discord Now",
       "link": "/discord"
-  },
+    }, {
+      "buttonText": "Join Telegram Now",
+      "link": "/telegram"
+    }
+  ],
+  "topbarCTAText": "Have you got stuck? Need Help? Join our discord server, ask your doubts & get support from our experts.",
   "CTA": {
       "type": "link",
       "link": "https://inctfj.eng.run",

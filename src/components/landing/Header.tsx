@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 import animations from '../../animation';
 import Link from "next/link";
+import Image from "next/image";
 
 
 const eventID = process.env.EVENT_ID || process.env.NEXT_PUBLIC_EVENT_ID;
@@ -58,6 +59,17 @@ const LandingHeader = () => (
               {data.date}
             </h2>
             )}
+              {eventID === "inctfj" && (
+                  <div className="my-5">
+                    <div className="text-3xl font-bold flex gap-2 items-center">
+                      <Image alt="InCTF Junior" src={`/inctf/assets/logo_dark.png`} height="200" width="130"/>
+                      <div className="text-primary text-5xl">Junior 2024</div>
+                    </div>
+                    <div className="bg-primary w-min">
+                      <div className="animate-pulse duration-300 text-white p-2 w-max font-extrabold text-4xl">Registrations Open!</div>
+                    </div>
+                  </div>
+              )}
             <div>
               {eventID === 'inctf' ? (
                 <p className="text-primary text-xl mb-3">
