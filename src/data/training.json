@@ -1,8 +1,10 @@
 {
     "trainingDesc": [
         "All Trainings will be publicly made available for free through live-streaming on our official Youtube channel. Students can ask their doubts through the live chat, and we will have a team of experts available to assist you.",
-        "You can find more resourceful videos & live-stream all our trainings through our channel. So please subscribe & share it with your friends."
+        "You can find more resourceful videos & live-stream all our trainings through our channel. So please subscribe & share it with your friends.",
+        "Watch the live-stream at 6:00 PM IST on the respective dates."
     ],
+    "liveStreamLink": "https://www.youtube.com/@InCTFj/live",
     "youtubeChannel": "https://www.youtube.com/c/InCTFj",
     "schedule": [
         {
