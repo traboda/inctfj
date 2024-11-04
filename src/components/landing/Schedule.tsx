@@ -18,6 +18,16 @@ const Schedule = () => {
 
             },
             )}
+            {data?.liveStreamLink && (
+            <a
+              className="px-4 py-3 inline-block font-semibold bg-primary hover:bg-red-700 text-white rounded-lg mr-3"
+              href={data.liveStreamLink}
+              target="_blank"
+              rel="noopener nofollow"
+            >
+                Join Live Stream
+            </a>
+            )}
             <a
               className="px-4 py-3 inline-block font-semibold bg-primary hover:bg-red-700 text-white rounded-lg"
               href={data.youtubeChannel}
