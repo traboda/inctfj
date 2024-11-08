@@ -15,32 +15,32 @@
             "link": "https://youtu.be/-PvKBido90I"
         },
         {
-            "date": " 05th Nov",
-            "timing": "",
-            "event": "Introduction to Web Exploitation (Day 1)",
-            "presenter": "Yadhu & Sayooj",
-            "link": "https://youtu.be/uHiLpyfEhpw"
-        },
-        {
-            "date": "06th Nov",
-            "timing": "",
-            "event": "Introduction to Web Exploitation (Day 2)",
-            "presenter": "Yadhu & Sayooj",
-            "link": "https://youtu.be/LlOnd4wbTI4"
-        },
-        {
-            "date": "08th Nov",
+            "date": "05th Nov",
             "timing": "",
             "event": "Introduction to Cyber Forensics (Day 1)",
             "presenter": "Sridevi, Abhishek, Pranav",
             "link": "https://youtu.be/OwN76dCekAM"
         },
         {
-            "date": "09th Nov",
+            "date": "06th Nov",
             "timing": "",
             "event": "Introduction to Cyber Forensics (Day 2)",
             "presenter": "Sridevi, Abhishek, Pranav",
             "link": "https://youtu.be/sc1uiHCJDJo"
+        },
+        {
+            "date": " 08th Nov",
+            "timing": "",
+            "event": "Introduction to Web Exploitation (Day 1)",
+            "presenter": "Yadhu & Sayooj",
+            "link": "https://youtu.be/uHiLpyfEhpw"
+        },
+        {
+            "date": "09th Nov",
+            "timing": "",
+            "event": "Introduction to Web Exploitation (Day 2)",
+            "presenter": "Yadhu & Sayooj",
+            "link": "https://youtu.be/LlOnd4wbTI4"
         },
         {
             "date": "11th Nov",
