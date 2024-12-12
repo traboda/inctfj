@@ -52,13 +52,13 @@ const LandingQuickInfo = () => {
       animate: 'slideInBottom',
     },
     {
-        isHidden: eventID === 'inctf',
-        image: '/inctfj/assets/icons/why.png', up: true,
-        question: 'Why?', answer: <>
-          {' '}
-          {data.when}
-        </>,
-        animate: 'slideInBottom',
+      isHidden: eventID === 'inctf',
+      image: '/inctfj/assets/icons/why.png', up: true,
+      question: 'Why?', answer: <>
+        {' '}
+        {data.when}
+      </>,
+      animate: 'slideInBottom',
     },
     {
       image: '/assets/images/icons/backpack.png', right: true,
@@ -86,7 +86,7 @@ const LandingQuickInfo = () => {
       question: 'Contest', answer: data.contestDate,
       animate: 'slideInBottomRight',
     },
-  ]
+  ];
 
   return (
     <QuickInfoSection className="my-8">

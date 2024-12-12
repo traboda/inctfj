@@ -33,7 +33,9 @@ const questions = [
       </p>
       <br />
       <a target="_blank" href="https://www.youtube.com/watch?v=8ev9ZX9J45A">
-        Check out this video to learn more. <span className="text-blue-500">What is a CTF?</span>
+        Check out this video to learn more. 
+        {' '}
+        <span className="text-blue-500">What is a CTF?</span>
       </a>
     </>,
     tags: ['getting-started'],
@@ -255,14 +257,19 @@ const questions = [
       etc.
       You may try out the challenges from these CTF’s.
 
-      <br/>
-      <br/>
+      <br />
+      <br />
       <a href="https://picoctf.org/index.html#picogym" target="_blank" className="text-blue-500">picoCTF practice</a>
 
-      <br/>
-      <br/>
-      <a href="https://github.com/sajjadium/ctf-archives/tree/main/ctfs/HSCTF" target="_blank"
-         className="text-blue-500">HSCTF practice</a>
+      <br />
+      <br />
+      <a
+        href="https://github.com/sajjadium/ctf-archives/tree/main/ctfs/HSCTF"
+        target="_blank"
+        className="text-blue-500"
+      >
+        HSCTF practice
+      </a>
     </>,
     tags: ['getting-started'],
   },
@@ -275,7 +282,8 @@ const questions = [
     'answer': <>
       You can contact us through our
       {' '}
-      <a href="https://discord.gg/NJG6VrCCyB" target="_blank" className="text-blue-500">discord server</a>.
+      <a href="https://discord.gg/NJG6VrCCyB" target="_blank" className="text-blue-500">discord server</a>
+      .
       {' '}
       Or you can always email us at
       {' '}
@@ -398,23 +406,23 @@ const questions = [
   //   tags: ['traboda', 'help'],
   // },
   // {
-    // 'question': 'I forgot my password, what can I do?',
-    // 'keywords': ['password', 'forgot'],
-    // 'response': [
-    //   'There is a password reset functionality available on Traboda.',
-    // ],
-    // 'answer': <>
-    //   <p>
-    //     There is a password reset functionality available on Traboda. You can go to the login page/login popup,
-    //     and click on "forgot password" option. Upon entering your registered email address, you shall be emailed
-    //     a password reset link, using which you can change your password.
-    //   </p>
-    //   <p>
-    //     If you have used a gmail (google) email address to register, you can also use the login with google
-    //     option and get access to your account without needing a password (or password reset).
-    //   </p>
-    // </>,
-    // tags: ['traboda', 'help', 'password'],
+  // 'question': 'I forgot my password, what can I do?',
+  // 'keywords': ['password', 'forgot'],
+  // 'response': [
+  //   'There is a password reset functionality available on Traboda.',
+  // ],
+  // 'answer': <>
+  //   <p>
+  //     There is a password reset functionality available on Traboda. You can go to the login page/login popup,
+  //     and click on "forgot password" option. Upon entering your registered email address, you shall be emailed
+  //     a password reset link, using which you can change your password.
+  //   </p>
+  //   <p>
+  //     If you have used a gmail (google) email address to register, you can also use the login with google
+  //     option and get access to your account without needing a password (or password reset).
+  //   </p>
+  // </>,
+  // tags: ['traboda', 'help', 'password'],
   // },
   {
     'question': 'What are the different types of Certificates I can get?',
