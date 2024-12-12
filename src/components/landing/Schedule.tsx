@@ -25,7 +25,7 @@ const Schedule = () => {
               target="_blank"
               rel="noopener nofollow"
             >
-                Join Live Stream
+              Join Live Stream
             </a>
             )}
             <a
