@@ -3,7 +3,7 @@ import { ConfigContextType } from '../types/context';
 export default <ConfigContextType>{
   id: 'inctf',
   meta: {
-    title: 'InCTF 2023',
+    title: 'InCTF 2025',
     tagLine: 'India’s First Ethical Hacking contest.',
     description: 'Capture the Flag contest. India’s first hacking competition. Play CTFs, win prizes and get placed with our sponsors.',
   },
