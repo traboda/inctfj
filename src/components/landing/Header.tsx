@@ -67,7 +67,7 @@ const LandingHeader = () => (
                     height="200"
                     width="130"
                   />
-                  <div className="text-primary text-5xl">Junior 2024</div>
+                  <div className="text-primary text-5xl">Junior 2025</div>
                 </div>
                 {/* <div className="bg-primary w-min">
                       <div className="animate-pulse duration-300 text-white p-2 w-max font-extrabold text-4xl">Registrations Open!</div>
@@ -76,7 +76,10 @@ const LandingHeader = () => (
             )}
             <div>
               {eventID === 'inctf' ? (
+                <>
                 <p className="text-primary text-xl mb-3">{data.Desc}</p>
+                <p  className="font-bold mb-4 text-xl block">{data.subDesc}</p>
+                </>
               ) : (
                 <>
                   <p className="text-primary font-semibold text-xl mb-3">
@@ -84,10 +87,10 @@ const LandingHeader = () => (
                   </p>
                   <p>
                     <div className="font-semibold text-xl">
-                      <span className="font-bold mb-4 text-4xl block">
-                        Onsite Finals
+                      <span className="font-bold mb-4 text-xl block">
+                        Registration Opening Soon
                       </span>
-                      <span className="block">
+                      {/* <span className="block">
                         Date: 
                         {' '}
                         <strong>January 10 - 11</strong>
@@ -103,7 +106,7 @@ const LandingHeader = () => (
                         Prize Pool: 
                         {' '}
                         <strong>1 Lakh Rupees</strong>
-                      </span>
+                      </span> */}
                     </div>
                   </p>
                 </>
