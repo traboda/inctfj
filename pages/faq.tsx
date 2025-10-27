@@ -48,7 +48,12 @@ const FAQPage = () => {
   }, [router.isReady]);
 
   useEffect(() => {
-    setOpen(0);
+    const items = filteredFAQ(search, tags);
+    if (items.length > 0) {
+      setOpen(0); // Open first question if results exist
+    } else {
+      setOpen(null); // No questions to open if no results
+    }
   }, [search, tags]);
 
   const updateTotalVisible = (value) =>
@@ -63,7 +68,7 @@ const FAQPage = () => {
           answer={q.answer}
           search={search}
           isOpen={i === openQ}
-          onClick={() => setOpen(i !== openQ ? i : null)}
+          onClick={() => setOpen(i === openQ ? null : i)}
           key={i}
         />
       ),
@@ -76,9 +81,9 @@ const FAQPage = () => {
           You could try rephrasing the question in a different way, or
           can join our 
           {' '}
-          <a href="/discord" target="_blank" className="hover:text-blue-600">
+          <a href="/discord" target="_blank" className="text-blue-600 hover:text-blue-800 hover:underline">
             discord community
-            <i className="fa fa-external-link mr-1" />
+            <i className="fa fa-external-link ml-1" />
             {' '}
           </a>
           {' '}
@@ -108,7 +113,12 @@ const FAQPage = () => {
               <div style={{ color: '#222' }}>
                 Write to us at 
                 {' '}
-                <a href="mailto:inctfj@am.amrita.edu">inctfj@am.amrita.edu</a>
+                <a 
+                  href="mailto:inctfj@am.amrita.edu" 
+                  className="text-blue-600 hover:text-blue-800 hover:underline"
+                >
+                  inctfj@am.amrita.edu
+                </a>
               </div>
             </div>
           </Waypoint>

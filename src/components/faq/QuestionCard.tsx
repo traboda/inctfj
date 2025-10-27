@@ -56,7 +56,7 @@ const QuestionCard = ({ question, answer, isOpen, onClick = () => {}, search }) 
   const copy = event => {
     event.preventDefault();
     event.stopPropagation();
-    navigator.clipboard.writeText(encodeURI(`${location.origin}/faq?q=${question}`));
+    navigator.clipboard.writeText(`${location.origin}/faq?q=${encodeURIComponent(question)}`);
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), 1000);
   };

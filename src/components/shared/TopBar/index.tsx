@@ -245,16 +245,27 @@ const TopBar = ({ UTMSource = null }) => {
               <div className="font-semibold text-primary">
                 InCTF Jr 2025
               </div>
-              <div>Coming Soon</div>
+{topbarConfig?.CTA?.type === 'link' && (
+      <a 
+        href={topbarConfig?.CTA?.link} 
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className="px-4 py-2 mt-2 rounded-lg font-semibold bg-primary hover:bg-blue-800 text-white text-sm whitespace-nowrap">
+          {topbarConfig?.CTA?.buttonText}
+          {' '}
+          <i className="fa fa-chevron-right" />
+        </button>
+      </a> )}
             </div>
-            {/*<TopbarInfoCard className="mr-3">*/}
+            {/* <TopbarInfoCard className="mr-3">*/}
             {/*    <button*/}
             {/*        onClick={() => setShowRegCard(true)}*/}
             {/*        className="w-full px-5 py-4 font-semibold rounded-lg bg-primary text-white hover:bg-blue-800 shadow hover:shadow-xl ml-3"*/}
             {/*    >*/}
             {/*        Register <i className="fa fa-chevron-right"/>*/}
             {/*    </button>*/}
-            {/*</TopbarInfoCard>*/}
+            {/*</TopbarInfoCard> */}
             <button onClick={onOpen} className="transition">
               <img src={`/assets/icons/${showMenu ? 'times' : 'menu'}.svg`} alt="Sidebar" className="w-[46px] h-[46px]" />
             </button>

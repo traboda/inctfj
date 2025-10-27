@@ -88,9 +88,9 @@ const LandingHeader = () => (
                   </p>
                   <p>
                     <div className="font-semibold text-xl">
-                      <span className="font-bold mb-4 text-xl block">
+                      {/* <span className="font-bold mb-4 text-xl block">
                         Registration Opening Soon
-                      </span>
+                      </span> */}
                       {/* <span className="block">
                         Date: 
                         {' '}

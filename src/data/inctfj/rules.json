@@ -1,121 +1,190 @@
 {
     "rule": [
-    {
-        "tag": "p",
-        "text": [
-            "The India Capture The Flag Junior (“InCTF Jr”, “InCTFj”, “Contest”) is annual cyber-security championship organized for school students in India by Amrita Vishwa Vidyapeetham in association with team bi0s & Traboda CyberLabs Private Limited (“Organizers”). By participating in the Contest, all Participants agree to the following rules -"
-        ]
-    },
-    {
-        "tag": "h2",
-        "text": [
-            "Eligibility for Participation"
-        ]
-    },
-    {
-        "tag": "p",
-        "text": [
-            "Each individual who participates in the competition (“Participant”) in order to be eligible for the finals / prizes must be:"
-        ]
-    },
-    {
-        "tag": "ul",
-        "text": [
-            "not more than nineteen (19) years of age upon your date of registration for the Contest on the Contest website.",
-            "a citizen of the Republic of India",
-            "must not have completed 12th or equivalent grade of school."
-        ]
-    },
-    {
-        "tag": "p",
-        "text": [
-            "As the goal of InCTF Junior is to bring and encourage more beginners into cyber security, we reserve the right to disqualify any participant from prizes who is found to be having experience in cyber-security. In case of any dispute, the decision of the Organizers will be final and binding. The actual scoreboard and ranks of all finalists shall be published, however, the prizes will be awarded only to beginner participants.",
-            "A Participant is expected to be enrolled for any pre-university (high school or secondary school) programme when they register. However, in case the Participant is undergoing home/private schooling, distant education or other non-traditional programmes of schooling, they are required to inform the organizers about the same through emailing inctfj@am.amrita.edu. Such a claim shall be manually verified by the Organizers, and unless approved, the Participant shall not be considered eligible.",
-            "If the Participant is under the age of eighteen (18) years, they must obtain the consent of their parent or legal guardian to participate.",
-            "The Organizers reserve the right to verify a Participant’s eligibility and to adjudicate on any dispute that may arise at any time. Participants agree to provide the Organizers with the following proof of eligibility upon request by the Organizers -"
-
-        ]
-    },
-    {
-        "tag": "ul",
-        "text": [
-            "Aadhar Card (UIDAI) / Indian Passport",
-            "School ID Card"
-        ]
-    },
-    {
-        "tag": "p",
-        "text": [
-            "The Organizers may request for the proofs when a Participant wins a prize, and these shall be thoroughly verified. Any refusal or failure to timely provide such proof may result in disqualification of the Participant from the Contest.",
-            "An individual not meeting the eligibility criteria is welcomed to participate in the contest for learning and practice, however, they shall not be eligible for qualification to the finals or for any prizes."
-        ]
-    },
-    {
-        "tag":"h3",
-        "text":[
-            "Cheating"    
-        ]
-    },
-    {
-        "tag":"ul",
-        "text":[
-            "InCTF Jr is an Individual competition. Participants are strictly forbidden to help or obtain help from anyone through any medium, directly or indirectly, during the Contest.",
-            "If found to be cheating, the Participant shall be disqualified from the Contest, with immediate effect."    
-        ]
-    },
-    {
-        "tag":"h3",
-        "text":[
-            "Sharing of Flag/Solution to Others"    
-        ]
-    },
-    {
-        "tag":"ul",
-        "text":[
-            "Answers, solutions, write ups or overly-revealing hints to any challenges should not be publicly posted or otherwise shared with anyone until the Contest is over.",
-            "Sharing the flags, or providing overly-revealing hints with anyone through any medium during the period of the Contest shall be considered as cheating."    
-        ]
-    },
-    {
-        "tag":"h3",
-        "text":[
-            "Accepting Flag/Solution From Other"    
-        ]
-    },
-    {
-        "tag":"ul",
-        "text":[
-            "Accepting direct assistance, receiving a flag or solution to a challenge from anyone is considered cheating, and is strictly prohibited during the Contest.",
-            "While using tools, references and snippets publicly available on the Internet is allowed, a participant shall not ask people, forums etc. on the internet for help for solving a challenge."    
-        ]
-    },
-    {
-        "tag":"h3",
-        "text":[
-            "Certificates"    
-        ]
-    },
-    {
-        "tag":"p",
-        "text":[
-            "A Participant may be eligible for the following types of certificates -"    
-        ]
-    },
-    {
-        "tag":"ul",
-        "text":[
-            "Participation Certificate - shall be issued to all eligible Participants who have at least solved 1 challenge in the Contest qualifiers round. This shall be a digital certificate, and shall be emailed at the end of the Contest.",
-            "Certificate of Appreciation - shall be issued to all eligible Participants who have at least completed solving 35% of challenges released during the Contest qualifiers round. This shall be a digital certificate, and shall be emailed at the end of the Contest.",
-            "Certificate of Achievement - shall be issued to eligible Participants who are winners of some prize/award at the national level finals of the Contest. This shall be a physical certificate, and shall be mailed to the address provided by the Participant."
-        ]
-    },
-    {
-        "tag":"p",
-        "text":[
-            "The certificates will be generated/printed based on the profile information provided by the Participant during their registration. It is the sole responsibility of the Participant to ensure that this information is correct, and the Organizers shall not be liable for any mistakes after the certificates have been generated/printed.",
-            "A Participant is requested to ensure that the information provided by them during the registration is correct, and they shall get the opportunity to edit it until the Contest starts. Once the Contest has started, the profile information of the user shall be locked. In case any changes are required, the Participant must inform the Organizers via inctfj@am.amrita.edu so that they can be corrected. Requests for correction in profile information shall be entertained for a maximum of 7 days after the end of the Contest, and any such corrections shall be accepted/made at the sole discretion of the Organizers."    
-        ]
-    }
-
+        {
+            "tag": "h1",
+            "text": [
+                "InCTF Junior 2025 – Official Rules"
+            ]
+        },
+        {
+            "tag": "p",
+            "text": [
+                "India Capture The Flag Junior (\"InCTF Jr\", \"InCTFj\", \"Contest\") is an annual national-level cybersecurity championship exclusively for school students in India, organized by Amrita Vishwa Vidyapeetham, in association with Team bi0s and Traboda CyberLabs Private Limited (collectively, \"Organizers\").",
+                "By registering for and participating in the Contest, each participant (\"Participant\") agrees to be bound by the following rules and conditions:"
+            ]
+        },
+        {
+            "tag": "h2",
+            "text": [
+                "Eligibility for Participation"
+            ]
+        },
+        {
+            "tag": "p",
+            "text": [
+                "To be eligible to qualify for the national finals and to receive prizes or awards, each Participant must:"
+            ]
+        },
+        {
+            "tag": "ul",
+            "text": [
+                "Be not more than 19 years of age as of the date of registration.",
+                "Be a citizen of the Republic of India.",
+                "Not have completed the 12th grade or its equivalent by the time of registration."
+            ]
+        },
+        {
+            "tag": "h3",
+            "text": [
+                "Beginner-Only Policy"
+            ]
+        },
+        {
+            "tag": "ul",
+            "text": [
+                "InCTF Jr is intended to encourage cybersecurity beginners.",
+                "Participants found to have prior CTF backgrounds may be disqualified from the Beginner category prizes",
+                "The final scoreboard and ranks will be published for transparency, but prizes will only be awarded to eligible beginner participants."
+            ]
+        },
+        {
+            "tag": "h3",
+            "text": [
+                "Experienced Participant Policy"
+            ]
+        },
+        {
+            "tag": "ul",
+            "text": [
+                "While InCTF Junior is primarily aimed at encouraging beginners, we recognize and welcome the participation of school students who already have prior experience in cybersecurity.",
+                "Participants who are still in school (i.e., eligible by age and grade) but have prior cybersecurity knowledge or competitive CTF experience (e.g., internships, workshops, advanced courses, past CTF wins, club involvement) are allowed to participate.",
+                "The final scoreboard and ranks will be published for transparency. Prize winners under the General Category will be indicated on the scoreboard, allowing all participants to view their rankings."
+            ]
+        },
+        {
+            "tag": "h3",
+            "text": [
+                "Educational Background"
+            ]
+        },
+        {
+            "tag": "ul",
+            "text": [
+                "Participants should be enrolled in a pre-university program (high school, secondary school, etc.).",
+                "Students pursuing home schooling, private schooling, distance education, or non-traditional programs must:",
+                "Notify the Organizers by email (inctfj@am.amrita.edu).",
+                "Undergo a manual eligibility verification process by the Organizers."
+            ]
+        },
+        {
+            "tag": "h3",
+            "text": [
+                "Documents for Verification"
+            ]
+        },
+        {
+            "tag": "ul",
+            "text": [
+                "Participants may be required to provide the following proof of eligibility, especially when selected for prizes:",
+                "Aadhaar Card or Indian Passport",
+                "School ID Card",
+                "Refusal or failure to provide valid proof within the required timeframe may result in disqualification.",
+                "Note: Those who do not meet eligibility criteria may still participate for learning purposes, but will not be eligible for prizes or qualification for the finals."
+            ]
+        },
+        {
+            "tag": "h2",
+            "text": [
+                "Cheating & Code of Conduct"
+            ]
+        },
+        {
+            "tag": "p",
+            "text": [
+                "InCTF Jr is an individual event. Collaboration of any kind is strictly prohibited."
+            ]
+        },
+        {
+            "tag": "h3",
+            "text": [
+                "Strictly Prohibited Actions:"
+            ]
+        },
+        {
+            "tag": "ul",
+            "text": [
+                "Collaboration with others or seeking/receiving help.",
+                "Sharing or publishing any flags, solutions, or challenge hints.",
+                "Asking for help on public platforms, forums, or communities during the Contest.",
+                "Using or accepting flags/solutions from other individuals.",
+                "Using publicly available resources (tools, documentation, blogs, tutorials) is permitted, provided the Participant is not directly seeking or receiving help from others.",
+                "Any Participant found engaging in such prohibited activities will be disqualified immediately, and possibly barred from future editions of the Contest."
+            ]
+        },
+        {
+            "tag": "h2",
+            "text": [
+                "Certificates"
+            ]
+        },
+        {
+            "tag": "p",
+            "text": [
+                "All certificates will be automatically generated based on the profile information entered by the Participant at the time of registration."
+            ]
+        },
+        {
+            "tag": "h3",
+            "text": [
+                "Types of Certificates:"
+            ]
+        },
+        {
+            "tag": "ul",
+            "text": [
+                "Participation Certificate",
+                "Eligibility: Awarded to all participants who appear on the scoreboard with a non-zero score (i.e., have solved at least one challenge in the Qualifiers round).",
+                "Format: Digital (PDF)",
+                "Mode of delivery: Emailed after the Contest ends.",
+                "Certificate of Appreciation",
+                "Eligibility: Awarded to all participants who appear on the scoreboard and have scored above a predefined threshold (X points) in the Qualifiers round.",
+                "(The value of X will be determined by the Organizers based on challenge difficulty and overall performance distribution.)",
+                "Format: Digital (PDF)",
+                "Mode of delivery: Emailed after the Contest ends.",
+                "Certificate of Achievement",
+                "Eligibility: Winners of national-level awards/prizes during the finals.",
+                "Format: Physical certificate",
+                "Mode of delivery: Mailed to the provided postal address."
+            ]
+        },
+        {
+            "tag": "h3",
+            "text": [
+                "Profile Information Responsibility"
+            ]
+        },
+        {
+            "tag": "ul",
+            "text": [
+                "Participants must ensure that all information provided during registration is accurate and up to date.",
+                "Profile editing will be allowed only until the start of the Contest.",
+                "After the Contest starts, the profile will be locked.",
+                "Any corrections must be requested by email (inctfj@am.amrita.edu) within 7 days of the Contest's conclusion.",
+                "The Organizers reserve the right to accept or deny such requests."
+            ]
+        },
+        {
+            "tag": "h2",
+            "text": [
+                "Contact & Support"
+            ]
+        },
+        {
+            "tag": "p",
+            "text": [
+                "For all eligibility clarifications, registration queries, or profile corrections, please email:",
+                "<a href=\"mailto:inctfj@am.amrita.edu\">📧 inctfj@am.amrita.edu</a>"
+            ]
+        }
     ]
 }
