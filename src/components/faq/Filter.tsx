@@ -6,9 +6,22 @@ import Dropdown from '../landing/search/Dropdown';
 const FAQFilter = ({ search, setSearch, tags, setTags, totalTags }) => {
   const [searchFocus, setSearchFocus] = useState(false);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSearchFocus(false);
+    // The search is already handled by the input onChange, so just blur the input
+    if (e.target.querySelector('input')) {
+      e.target.querySelector('input').blur();
+    }
+  };
+
   return (
     <div className="mx-4 mb-8">
-      <form className="w-full transition relative" style={{ height: 'fit-content' }}>
+      <form 
+        className="w-full transition relative" 
+        style={{ height: 'fit-content' }}
+        onSubmit={handleSubmit}
+      >
         <input
           type="text"
           value={search}
@@ -16,7 +29,7 @@ const FAQFilter = ({ search, setSearch, tags, setTags, totalTags }) => {
           placeholder="Enter your question here..."
           className={`outline-none pl-4 pr-12 py-2 border rounded-t-lg shadow-inner focus:border-yellow-600 w-full ${searchFocus ? '' : 'rounded-b-lg'}`}
           onFocus={() => setSearchFocus(true)}
-          onBlur={() => setTimeout(() => setSearchFocus(false), 100)}
+          onBlur={() => setTimeout(() => setSearchFocus(false), 200)}
         />
         <div
           className="absolute right-0 mr-4"

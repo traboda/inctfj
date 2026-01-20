@@ -243,9 +243,16 @@ const TopBar = ({ UTMSource = null }) => {
           <div className="w-3/4 flex md:hidden items-center justify-end px-1">
             <div className="text-right px-2">
               <div className="font-semibold text-primary">
-                InCTF Jr 2025
+                InCTF Jr 2026
               </div>
-              <div>Coming Soon</div>
+              {/* <div>Coming Soon</div> */}
+                {topbarConfig?.CTA?.type === 'link' && (
+      <Link href={topbarConfig?.CTA?.link}>
+        <button className="px-4 py-2 mt-2 rounded-lg font-semibold bg-primary text-white text-sm">
+          {topbarConfig?.CTA?.buttonText}
+        </button>
+      </Link>
+    )}
             </div>
             {/*<TopbarInfoCard className="mr-3">*/}
             {/*    <button*/}

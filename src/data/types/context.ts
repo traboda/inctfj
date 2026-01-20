@@ -16,6 +16,7 @@ export type ConfigContextType = {
   },
   analytics: {
     gTag: string
+    gtmContainerId?: string // gtag manager container ID
   },
   sponsors: {
     name: string,

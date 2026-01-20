@@ -69,7 +69,13 @@ const RulePage = () => {
           <div style={{ width: '100%', maxWidth: '900px' }}>
             {rules.rule.map((rule, index) => {
               if (rule.tag === 'p') {
-                return <p key={index}>{rule.text}</p>;
+                return (
+                  <p key={index}>
+                    {rule.text.map((text, textIndex) => (
+                      <span key={textIndex} dangerouslySetInnerHTML={{ __html: text }} />
+                    ))}
+                  </p>
+                );
               } else if (rule.tag === 'h1') {
                 return <h1 key={index}>{rule.text}</h1>;
               } else if (rule.tag === 'h2') {
@@ -78,14 +84,14 @@ const RulePage = () => {
                 return <h3 key={index}>{rule.text}</h3>;
               } else if (rule.tag === 'ul') {
                 return (<ul key={index}>
-                  {rule.text.map((text, index) => {
-                    return <li key={index}>{text}</li>;
+                  {rule.text.map((text, textIndex) => {
+                    return <li key={textIndex} dangerouslySetInnerHTML={{ __html: text }} />;
                   })}
                 </ul>);
               } else if (rule.tag === 'ol') {
                 return (<ol key={index}>
-                  {rule.text.map((text, index) => {
-                    return <li key={index}>{text}</li>;
+                  {rule.text.map((text, textIndex) => {
+                    return <li key={textIndex} dangerouslySetInnerHTML={{ __html: text }} />;
                   })}
                 </ol>);
               }

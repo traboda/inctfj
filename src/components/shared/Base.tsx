@@ -10,7 +10,7 @@ const seoTags = {
 const Base = ({ children, meta }) => {
 
   const title = `${meta && meta.title ? `${meta.title} |` : '' } ${seoTags.siteName} - ${seoTags.tagLine}`;
-  const GoogleAnalyticsID = 'G-XYWG82LV7L';
+  // const GoogleAnalyticsID = 'G-XYWG82LV7L';
 
   useEffect(() => {
     navigator.serviceWorker.getRegistrations().then((registrations) => {
@@ -22,6 +22,18 @@ const Base = ({ children, meta }) => {
 
   return (<React.Fragment>
     <Head>
+      {/* Google Tag Manager */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N7TQWNCN');`,
+        }}
+      />
+      {/* End Google Tag Manager */}
+      
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="theme-color" content="#E65100" />
@@ -41,16 +53,27 @@ const Base = ({ children, meta }) => {
       <link href="/images/icons/icon-384x384.png" rel="icon" type="image/png" sizes="384x384" />
       <link rel="apple-touch-icon" href="/images/icons/icon-512x512.png" />
       <link rel="shortcut icon" href="/images/icons/icon-72x72.png" />
-      { GoogleAnalyticsID && <React.Fragment>
+      {/* { GoogleAnalyticsID && <React.Fragment>
         <script rel="preconnect" async src={`https://www.googletagmanager.com/gtag/js?id=${GoogleAnalyticsID}`} />
         <script
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${GoogleAnalyticsID}');`,
           }}
         />
-      </React.Fragment>}
+      </React.Fragment>} */}
     </Head>
     <div className="app">
+      {/* Google Tag Manager (noscript) */}
+      <noscript>
+        <iframe 
+          src="https://www.googletagmanager.com/ns.html?id=GTM-N7TQWNCN"
+          height="0" 
+          width="0" 
+          style={{display:'none',visibility:'hidden'}}
+        />
+      </noscript>
+      {/* End Google Tag Manager (noscript) */}
+      
       {children}
       {/*<SupportDesk />*/}
     </div>

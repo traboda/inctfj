@@ -10,8 +10,8 @@
   "topbarCTAText": "Have you got stuck? Need Help? Join our discord server, ask your doubts & get support from our experts.",
   "CTA": {
       "type": "link",
-      "link": "https://inctfj.eng.run",
-      "buttonText": "Coming Soon"
+      "link": "https://quals.junior.inctf.in/login",
+      "buttonText": "Register Now"
   },
   "menu": [
     {

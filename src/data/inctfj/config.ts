@@ -3,12 +3,14 @@ import { ConfigContextType } from '../types/context';
 export default <ConfigContextType>{
   id: 'inctfj',
   meta: {
-    title: 'InCTF Jr 2025',
+    title: 'InCTF Jr 2026',
     tagLine: "India's First & Only CTF CyberSecurity Championship for School Students",
     description: "India's First & Only CTF & Cyber Security Championship & Talent Incubation Programme exclusively for High School Students, organized by team bi0s, India's No.1 ranked CTF Team.",
   },
   analytics: {
-    gTag: 'G-XYWG82LV7L',
+    gTag: '',
+    gtmContainerId: 'GTM-N7TQWNCN', // Add this line
+
   },
   assets: {
     logo: {

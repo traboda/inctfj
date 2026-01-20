@@ -15,7 +15,7 @@ const Dropdown = ({ search, setSearch = (_: string) => {} }) => {
       {faq().length ? (
         <div>
           {faq().map((f, i) => (
-            <Link key={i} href={`/faq?q=${encodeURI(f.question)}`} passHref legacyBehavior>
+            <Link key={i} href={`/faq?q=${encodeURIComponent(f.question)}`} passHref legacyBehavior>
               <a className="px-6 py-2 hover:bg-gray-100 flex" onClick={() => setSearch(f.question)}>
                 <div>
                   {reactStringReplace(f.question, search, match => (

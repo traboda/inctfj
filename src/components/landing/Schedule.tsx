@@ -40,9 +40,9 @@ const Schedule = () => {
             </a>
           </div>
           <div className="flex flex-wrap  hidden md:flex font-bold mx-0 py-2 border-b">
-            <div className="md:w-1/6 pr-4 pl-4  flex items-center p-1">
+            {/* <div className="md:w-1/6 pr-4 pl-4  flex items-center p-1">
               Schedule
-            </div>
+            </div> */}
             <div className="md:w-4/6 pr-4 pl-4 flex items-center p-1">
               Workshop
             </div>
@@ -53,12 +53,12 @@ const Schedule = () => {
 
           {data.schedule.map((t, i) => (
             <div className="flex flex-wrap py-2 border-b" key={i}>
-              <div className="md:w-1/6 w-full flex items-center px-1">
-                <div className="opacity-70">
-                  <div className="font-semibold font-mono text-xl">{t.date}</div>
-                  <span>{t.timing}</span>
+              {/* <div className="md:w-1/6 w-full flex items-center px-1">
+                <div className="opacity-70"> */}
+                  {/* <div className="font-semibold font-mono text-xl">{t.date}</div> */}
+                  {/* <span>{t.timing}</span>
                 </div>
-              </div>
+              </div> */}
               <div className="md:w-4/6 flex items-center px-1 pb-1">
                 <div>
                   <div className="text-xl font-semibold" style={{ color: '#4A148C' }}>{t.event}</div>
